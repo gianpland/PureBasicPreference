@@ -22,7 +22,8 @@ The OutputID of the currently used screen to perform 2D rendering operations on 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
 On Linux and OS X, ScreenOutput() copies the whole screen buffer back to main memory to do 2D drawing operations 
-(OpenGL doesn't allow direct buffer access). Therefore drawing on a screen is very slow and should be avoided. 
+(OpenGL doesn&apos;t allow direct buffer access). Therefore drawing on a screen is very slow and should be avoided. 
+ScreenOutput() has to be called in the same thread where <a href="openscreen.html">OpenScreen()</a> was called. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
@@ -31,6 +32,6 @@ On Linux and OS X, ScreenOutput() copies the whole screen buffer back to main me
 <font color="#006666">  StopDrawing</font>()
 </font></pre>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=screenmodewidth.html>ScreenModeWidth()</a> - <a href=index.html>Screen Index</a> - <a href=screenwidth.html>ScreenWidth()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=screenmodewidth.html>ScreenModeWidth()</a> - <a href=index.html>Screen Index</a> - <a href=screenwidth.html>ScreenWidth()</a> -><br><br>
 
 </body></html>

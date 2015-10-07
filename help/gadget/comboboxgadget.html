@@ -24,12 +24,12 @@ be used to auto-generate this number.
 <tr><td><i>x, y, Width, Height</i></td>
 <td> 
 The position and dimensions of the new gadget. 
-<b>Note</b>: on OS X, the height of a combobox can't be changed and this parameter will be ignored. 
+<b>Note</b>: on OS X, the height of a combobox can&apos;t be changed and this parameter will be ignored. 
 
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
 <td> 
-Flags to modify the gadget behavior. It can be composed (using the '|' operator) of one of the following constants: 
+Flags to modify the gadget behavior. It can be composed (using the &apos;|&apos; operator) of one of the following constants: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_ComboBox_Editable</font>  : Makes the ComboBox editable
   <font color="#924B72">#PB_ComboBox_LowerCase</font> : All text entered in the ComboBox will be converted to lower case.
   <font color="#924B72">#PB_ComboBox_UpperCase</font> : All text entered in the ComboBox will be converted to upper case.
@@ -45,7 +45,7 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to act on the list contents: 
@@ -89,18 +89,18 @@ ComboBoxGadget() supports the following events reported by <a href="../window/ev
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  UsePNGImageDecoder</font>()
-<font color="#006666">  LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/world.png")
+<font color="#006666">  LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/world.png&quot;)
   
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 270, 180, "ComboBoxGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 270, 180, &quot;ComboBoxGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">    ComboBoxGadget</font>(0, 10, 10, 250, 21, <font color="#924B72">#PB_ComboBox_Editable</font>)
-<font color="#006666">      AddGadgetItem</font>(0, -1, "ComboBox editable...")
+<font color="#006666">      AddGadgetItem</font>(0, -1, &quot;ComboBox editable...&quot;)
 
 <font color="#006666">    ComboBoxGadget</font>(1, 10, 40, 250, 21, <font color="#924B72">#PB_ComboBox_Image</font>)
-<font color="#006666">      AddGadgetItem</font>(1, -1, "ComboBox item with image",<font color="#006666"> ImageID</font>(0))
+<font color="#006666">      AddGadgetItem</font>(1, -1, &quot;ComboBox item with image&quot;,<font color="#006666"> ImageID</font>(0))
 
 <font color="#006666">    ComboBoxGadget</font>(2, 10, 70, 250, 21)
       <b><font color="#006666">For</font></b> a = 1 <b><font color="#006666">To</font></b> 5
-<font color="#006666">        AddGadgetItem</font>(2, -1,"ComboBox item " +<font color="#006666"> Str</font>(a))
+<font color="#006666">        AddGadgetItem</font>(2, -1,&quot;ComboBox item &quot; +<font color="#006666"> Str</font>(a))
       <b><font color="#006666">Next</font></b>
 
 <font color="#006666">    SetGadgetState</font>(0, 0)
@@ -120,6 +120,6 @@ ComboBoxGadget() supports the following events reported by <a href="../window/ev
 <a href="getgadgetitemtext.html">GetGadgetItemText()</a>, <a href="setgadgetitemtext.html">SetGadgetItemText()</a>, <a href="setgadgetitemimage.html">SetGadgetItemImage()</a> 
 <a href="getgadgetitemdata.html">GetGadgetItemData()</a>, <a href="setgadgetitemdata.html">SetGadgetItemData()</a>, <a href="explorercombogadget.html">ExplorerComboGadget()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=closegadgetlist.html>CloseGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=containergadget.html>ContainerGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=closegadgetlist.html>CloseGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=containergadget.html>ContainerGadget()</a> -><br><br>
 
 </body></html>

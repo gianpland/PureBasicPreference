@@ -14,8 +14,8 @@ over the network.
 <br>
 <br>
 
-To enable the debugger for your program, you can select "Use Debugger" from the debugger 
-menu, or set it in your programs Compiler options. By using the "Compile with Debugger" 
+To enable the debugger for your program, you can select &quot;Use Debugger&quot; from the debugger 
+menu, or set it in your programs Compiler options. By using the &quot;Compile with Debugger&quot; 
 command from the Compiler menu, you can enable the debugger for just one compilation. 
 
 <br>
@@ -158,7 +158,7 @@ This executes one line of source code and then stops the execution again.
 <br>
 <br>
 
-<b>Step &#060;n&#062;</b> 
+<b>Step &lt;n&gt;</b> 
 <br>
 This will execute a number of steps that you can specify and then stop the execution again. 
 
@@ -167,9 +167,9 @@ This will execute a number of steps that you can specify and then stop the execu
 
 <b>Step Over</b> 
 <br>
-This will execute the current line in the source and then stop again, just like the normal 'Step'. 
+This will execute the current line in the source and then stop again, just like the normal &apos;Step&apos;. 
 The difference is that if the current line contains calls to <a href="../reference/procedures.html">procedures</a>, the execution will not 
-stop inside these procedures like it does with the normal 'Step', but it will execute the whole 
+stop inside these procedures like it does with the normal &apos;Step&apos;, but it will execute the whole 
 procedure and stop after it returned. This allows to quickly skip procedures in step mode. 
 
 <br>
@@ -178,7 +178,7 @@ procedure and stop after it returned. This allows to quickly skip procedures in 
 <b>Step Out</b> 
 <br>
 This will execute the remaining code inside the current <a href="../reference/procedures.html">procedure</a> and stop again after the procedure 
-has returned. If the current line is not in any procedure, a normal 'Step' will be done. 
+has returned. If the current line is not in any procedure, a normal &apos;Step&apos; will be done. 
 
 </blockquote>
 <p><b>Line Breakpoints</b></p><blockquote>
@@ -203,7 +203,7 @@ of the Program control commands to continue/end the execution.
 <br>
 
 Breakpoints can be set and removed dynamically, while your program is running, 
-or while you are editing your source code. With the "Clear Breakpoints" command, you 
+or while you are editing your source code. With the &quot;Clear Breakpoints&quot; command, you 
 can clear all breakpoints in a source file. 
 
 <br>
@@ -232,13 +232,13 @@ for getting the OS identifiers for an object are also available.
 <br>
 <br>
 Example conditions: 
-<pre><font face="Courier New, Courier, mono"size="2">  MyVariable$ &#060;&#062; "Hello" <b><font color="#006666">Or</font></b> Counter &#060; 0  <font color="#006666">; halt if MyVariable$ changes from "Hello" or if the Counter falls below zero</font>
-<font color="#006666">  PeekL</font>(*SomeAddress+500) &#060;&#062; 0           <font color="#006666">; halt if the long value at the given memory location is not equal to zero</font>
+<pre><font face="Courier New, Courier, mono"size="2">  MyVariable$ &lt;&gt; &quot;Hello&quot; <b><font color="#006666">Or</font></b> Counter &lt; 0  <font color="#006666">; halt if MyVariable$ changes from &quot;Hello&quot; or if the Counter falls below zero</font>
+<font color="#006666">  PeekL</font>(*SomeAddress+500) &lt;&gt; 0           <font color="#006666">; halt if the long value at the given memory location is not equal to zero</font>
 </font></pre>
 
 Data breakpoints can be added using the Data Breakpoint option from the Debugger menu. 
 They can be limited to a specific <a href="../reference/procedures.html">procedure</a> or they can be added for all code. The special 
-"Main" entry of the procedure selection specifies that the data breakpoint should only 
+&quot;Main&quot; entry of the procedure selection specifies that the data breakpoint should only 
 be checked when the execution is not in any procedure. 
 
 <br>
@@ -306,7 +306,7 @@ cases, this may lead to further errors, as simply continuing just ignores the di
 <br>
 <br>
 
-After an error (even fatal ones), you have to use the "Kill Program" command to end 
+After an error (even fatal ones), you have to use the &quot;Kill Program&quot; command to end 
 the program and continue editing the source code. The reason why the program is not 
 automatically ended is that this would not allow to use the other debugger features 
 (like variable display) to find the cause of the error. 
@@ -343,7 +343,7 @@ and a message logged for it.
 <br>
 <br>
 
-The "Error log" submenu of the Debugger menu provides functions for that: 
+The &quot;Error log&quot; submenu of the Debugger menu provides functions for that: 
 
 <br>
 <br>
@@ -373,7 +373,7 @@ Copies the contents of the error log to the clipboard.
 <br>
 After you have killed the program, any error mark in the source file will remain. 
 This is to help you identify the line that caused the problem and solve it. The 
-"Clear error Marks" command can be used to remove these marks. 
+&quot;Clear error Marks&quot; command can be used to remove these marks. 
 <br>
 <br>
 You can also configure the IDE to automatically clean the error marks when the 
@@ -392,8 +392,8 @@ The standalone debugger is very similar to the one in the IDE, and will be expla
 <br>
 <br>
 On the Debugger window, you have control buttons to carry out the basic program control, 
-as described above. The "Step" button carries out as many steps as are set in the edit 
-field next to it. Closing the Debugger with "Quit" or the close button will also 
+as described above. The &quot;Step&quot; button carries out as many steps as are set in the edit 
+field next to it. Closing the Debugger with &quot;Quit&quot; or the close button will also 
 kill the debugged program. 
 
 <br>
@@ -406,8 +406,8 @@ to make the debugger window smaller.
 <br>
 
 The code view is used to display the currently executed code line as well as any errors 
-or breakpoints. Use the combo box above it to select the included file to view. The "Set Breakpoint", 
-"Remove Breakpoint" and "Clear Breakpoints" can be used to manage breakpoints in the 
+or breakpoints. Use the combo box above it to select the included file to view. The &quot;Set Breakpoint&quot;, 
+&quot;Remove Breakpoint&quot; and &quot;Clear Breakpoints&quot; can be used to manage breakpoints in the 
 currently displayed source file. The code view also provides the mouse-over feature from the integrated 
 debugger to quickly view the content of a variable. 
 
@@ -435,7 +435,7 @@ call the debugger like this:
 <br>
 <br>
 
-pbdebugger &#060;executable file&#062; &#060;executable command-line&#062; 
+pbdebugger &lt;executable file&gt; &lt;executable command-line&gt; 
 
 <br>
 <br>
@@ -469,8 +469,8 @@ The following command-line parameters control the network capabilities of the st
   pbdebugger.exe /LISTEN[=interface][:port]  [/PASSWORD=password]
 </font></pre>
 
-The "connect" mode connects the debugger as a client to an executable which must have been started as a server before. 
-The "listen" mode creates a server and waits for an incoming connection from an executable. 
+The &quot;connect&quot; mode connects the debugger as a client to an executable which must have been started as a server before. 
+The &quot;listen&quot; mode creates a server and waits for an incoming connection from an executable. 
 If an the IP address of a local network interface is specified, the server will only listen on that specific interface. 
 Otherwise it will listen on all network interfaces for connections on the specified port. 
 If no port is specified, the default port (port 10101) is used. 
@@ -514,15 +514,15 @@ The command-line debugger is not a part of the IDE and therefore not explained i
 <br>
 <br>
 While the program is running, hit Ctrl+C in the console to open a debugger console prompt. 
-In this prompt type "help" to get an overview of all available commands. 
-Type "help &#060;commandname&#062;" for a more detailed description of the command. 
+In this prompt type &quot;help&quot; to get an overview of all available commands. 
+Type &quot;help &lt;commandname&gt;&quot; for a more detailed description of the command. 
 
 
 </blockquote>
 <p><b>Debugging threaded programs:</b></p><blockquote>
 
 
-To use the debugger with a program that creates <a href="../thread/index.html">threads</a>, the 'Create thread-safe executable' Option must be set in the 
+To use the debugger with a program that creates <a href="../thread/index.html">threads</a>, the &apos;Create thread-safe executable&apos; Option must be set in the 
 <a href="../reference/ide_compiler.html">Compiler options</a>, as otherwise the information displayed by the debugger concerning 
 line numbers, errors, local variables and such could be wrong due to the multiple threads. 
 
@@ -538,7 +538,7 @@ While the program is running, the variable viewer, callstack display or assembly
 display information on the main thread only. When the program is stopped, they display information 
 on the thread they were stopped in. So to examine local variables or the callstack of a thread, 
 the execution must be halted within that thread (by putting a breakpoint or a <b><font color="#006666">CallDebugger</font></b> statement there). 
-The various 'Step' options always apply to the thread where the execution was last stopped in. 
+The various &apos;Step&apos; options always apply to the thread where the execution was last stopped in. 
 <br>
 If an error occurs, the execution is halted within that thread, so any information displayed by the 
 variable viewer or callstack display is of the thread that caused the error. 

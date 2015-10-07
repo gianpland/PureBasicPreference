@@ -49,7 +49,7 @@ If a structure element does not have a corresponding node in the XML, it is left
 <br>
 <br>
 The XML nodes must have the form described in the <a href="insertxmlstructure.html">InsertXMLStructure()</a> function. Namely, 
-each node must be named after a structure member with any '*' or '$' characters stripped 
+each node must be named after a structure member with any &apos;*&apos; or &apos;$&apos; characters stripped 
 from the name. If a node for the same structure element exists multiple times, the 
 first node will be used. 
 
@@ -60,7 +60,7 @@ first node will be used.
     Age.l
   <b><font color="#006666">EndStructure</font></b>
   
-  Xml$ = "&#060;Person&#062;&#060;Name&#062;John Smith&#060;/Name&#062;&#060;Age&#062;42&#060;/Age&#062;&#060;/Person&#062;"
+  Xml$ = &quot;&lt;Person&gt;&lt;Name&gt;John Smith&lt;/Name&gt;&lt;Age&gt;42&lt;/Age&gt;&lt;/Person&gt;&quot;
 
   <b><font color="#006666">If</font></b> <font color="#006666">ParseXML</font>(0, Xml$) <b><font color="#006666">And</font></b> <font color="#006666">XMLStatus</font>(0) = <font color="#924B72">#PB_XML_Success</font>
     <b><font color="#006666">Define</font></b> P.Person
@@ -77,5 +77,5 @@ first node will be used.
 
 <a href="insertxmlstructure.html">InsertXMLStructure()</a>, <a href="extractxmlarray.html">ExtractXMLArray()</a>, <a href="extractxmllist.html">ExtractXMLList()</a>, <a href="extractxmlmap.html">ExtractXMLMap()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=extractxmlmap.html>ExtractXMLMap()</a> - <a href=index.html>XML Index</a> - <a href=formatxml.html>FormatXML()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=extractxmlmap.html>ExtractXMLMap()</a> - <a href=index.html>XML Index</a> - <a href=formatxml.html>FormatXML()</a> -><br><br>
 </body></html>

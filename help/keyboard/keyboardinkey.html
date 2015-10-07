@@ -20,20 +20,20 @@ The last typed character.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() <b><font color="#006666">And</font></b> <font color="#006666">InitKeyboard</font>() <b><font color="#006666">And</font></b> <font color="#006666">OpenScreen</font>(800, 600, 32, "")
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() <b><font color="#006666">And</font></b> <font color="#006666">InitKeyboard</font>() <b><font color="#006666">And</font></b> <font color="#006666">OpenScreen</font>(800, 600, 32, &quot;&quot;)
     <b><font color="#006666">Repeat</font></b>
 <font color="#006666">      FlipBuffers</font>()
 <font color="#006666">      ClearScreen</font>(<font color="#006666">RGB</font>(0, 0, 0))
      
 <font color="#006666">      ExamineKeyboard</font>()
      
-      <font color="#006666">; If we press the 'Back' key, we will delete the last character</font>
+      <font color="#006666">; If we press the &apos;Back&apos; key, we will delete the last character</font>
       <font color="#006666">;</font>
       <b><font color="#006666">If</font></b> <font color="#006666">KeyboardReleased</font>(<font color="#924B72">#PB_Key_Back</font>)
         FullText$ =<font color="#006666"> Left</font>(FullText$,<font color="#006666"> Len</font>(FullText$)-1)
       <b><font color="#006666">Else</font></b>
         result$=<font color="#006666">KeyboardInkey</font>()
-        <b><font color="#006666">If</font></b> <font color="#006666">FindString</font>("1234567890 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", result$) <font color="#006666">; Or your chosen valid characters</font>
+        <b><font color="#006666">If</font></b> <font color="#006666">FindString</font>(&quot;1234567890 &apos;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;, result$) <font color="#006666">; Or your chosen valid characters</font>
           FullText$ + result$
         <b><font color="#006666">EndIf</font></b> <font color="#006666">; Add the new text to the current one (if any)</font>
       <b><font color="#006666">EndIf</font></b>
@@ -43,7 +43,7 @@ The last typed character.
       <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">ScreenOutput</font>())
 <font color="#006666">          DrawingMode</font>(1)
 <font color="#006666">          FrontColor</font>(<font color="#006666">RGB</font>(128, 255, 0))
-<font color="#006666">          DrawText</font>(20, 20, "Just type some text...:")
+<font color="#006666">          DrawText</font>(20, 20, &quot;Just type some text...:&quot;)
 <font color="#006666">          DrawText</font>(20, 40, FullText$)
 <font color="#006666">        StopDrawing</font>()
       <b><font color="#006666">EndIf</font></b>
@@ -55,6 +55,6 @@ The last typed character.
 
 <a href="examinekeyboard.html">ExamineKeyboard()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=initkeyboard.html>InitKeyboard()</a> - <a href=index.html>Keyboard Index</a> - <a href=keyboardmode.html>KeyboardMode()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=initkeyboard.html>InitKeyboard()</a> - <a href=index.html>Keyboard Index</a> - <a href=keyboardmode.html>KeyboardMode()</a> -><br><br>
 
 </body></html>

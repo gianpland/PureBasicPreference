@@ -9,7 +9,7 @@ Result = <font color="#006666"><b>OpenWindowedScreen</b></font>(WindowID, x, y, 
 
 Open a new screen area according to given parameters on the given Window, which must be 
 opened before using <a href="../window/openwindow.html">OpenWindow()</a>. <a href="../sprite/initsprite.html">InitSprite()</a> has to be called successfully before using this command. 
-The "windowed screen" is able to use the hardware acceleration the same way than 
+The &quot;windowed screen&quot; is able to use the hardware acceleration the same way than 
 full-size <a href="openscreen.html">OpenScreen()</a> function. As a window is opened, the window events have to be processed with <a href="../window/windowevent.html">WindowEvent()</a> 
 to have the correct behaviour. All the events needs to be processed before flipping the buffers (see the examples 
 below). 
@@ -48,14 +48,14 @@ Define the margin on the right and bottom of the window, in pixels (for <a href=
 </td></tr>
 <tr><td><i>FlipMode (optional)</i></td>
 <td> 
-Sets the screen synchronization methods used when flipping buffers (also known as 'Vertical blank synchronization'). 
+Sets the screen synchronization methods used when flipping buffers (also known as &apos;Vertical blank synchronization&apos;). 
 It can have one of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">   <font color="#924B72">#PB_Screen_NoSynchronization</font>   : disable synchronization 
    <font color="#924B72">#PB_Screen_WaitSynchronization</font> : enable synchronization (default value)
-   <font color="#924B72">#PB_Screen_SmartSynchronization</font>: enable synchronization, with a CPU saver routine when the program doesn't consume
+   <font color="#924B72">#PB_Screen_SmartSynchronization</font>: enable synchronization, with a CPU saver routine when the program doesn&apos;t consume
        all the CPU time (full screen mode only)
 </font></pre>
-Waiting for the screen synchronization allows the flip to be perfect (no 'tearing' 
+Waiting for the screen synchronization allows the flip to be perfect (no &apos;tearing&apos; 
 or other visible artifacts) because the flip is performed when the screen has been fully drawn (and when the 
 screen spot is outside of visible screen area). This also link the flip frequence to the actual screen refresh, ie: for 60Hz screen it 
 could have at most 60 flip per seconds, etc. 
@@ -72,17 +72,17 @@ Nonzero if the screen has been successfully opened, zero otherwise.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-Only one windowed screen can be opened at one time. The screen dimension can't be greater than the window size or artefacts can occurs. 
+Only one windowed screen can be opened at one time. The screen dimension can&apos;t be greater than the window size or artefacts can occurs. 
 
 </blockquote><p><b>Example:</b> Fixed screen size with gadgets</p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() = 0
-<font color="#006666">    MessageRequester</font>("Error", "Can't open screen & sprite environment!", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open screen &amp; sprite environment!&quot;, 0)
     <b><font color="#006666">End</font></b>
   <b><font color="#006666">EndIf</font></b>
   
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 220, 160, "A screen in a window...", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    ButtonGadget</font>(0, 170, 135, 45, 20, "Quit")
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 220, 160, &quot;A screen in a window...&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    ButtonGadget</font>(0, 170, 135, 45, 20, &quot;Quit&quot;)
 
     <b><font color="#006666">If</font></b> <font color="#006666">OpenWindowedScreen</font>(<font color="#006666">WindowID</font>(0), 0, 0, 160, 160)
 <font color="#006666">      CreateSprite</font>(0, 20, 20)
@@ -92,14 +92,14 @@ Only one windowed screen can be opened at one time. The screen dimension can't b
 <font color="#006666">        StopDrawing</font>()
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Else</font></b>
-<font color="#006666">      MessageRequester</font>("Error", "Can't open windowed screen!", 0)
+<font color="#006666">      MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open windowed screen!&quot;, 0)
       <b><font color="#006666">End</font></b>
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">EndIf</font></b>
   
   direction = 2
   <b><font color="#006666">Repeat</font></b>
-    <font color="#006666">; It's very important to process all the events remaining in the queue at each frame</font>
+    <font color="#006666">; It&apos;s very important to process all the events remaining in the queue at each frame</font>
     <font color="#006666">;</font>
     <b><font color="#006666">Repeat</font></b>
       Event =<font color="#006666"> WindowEvent</font>()
@@ -119,8 +119,8 @@ Only one windowed screen can be opened at one time. The screen dimension can't b
 <font color="#006666">    ClearScreen</font>(<font color="#006666">RGB</font>(0, 0, 0))
 <font color="#006666">    DisplaySprite</font>(0, x, x)
     x + direction
-    <b><font color="#006666">If</font></b> x &#062; 140 : direction = -2 : <b><font color="#006666">EndIf</font></b>
-    <b><font color="#006666">If</font></b> x &#060; 0   : direction =  2 : <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">If</font></b> x &gt; 140 : direction = -2 : <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">If</font></b> x &lt; 0   : direction =  2 : <b><font color="#006666">EndIf</font></b>
 <font color="#006666">    Delay</font>(1)
   <b><font color="#006666">ForEver</font></b>
 </font></pre>
@@ -129,22 +129,22 @@ Only one windowed screen can be opened at one time. The screen dimension can't b
 </blockquote><p><b>Example:</b> Screen with enabled auto-stretch and bottom-offset feature</p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() = 0
-<font color="#006666">    MessageRequester</font>("Error", "Can't open screen & sprite environment!", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open screen &amp; sprite environment!&quot;, 0)
     <b><font color="#006666">End</font></b>
   <b><font color="#006666">EndIf</font></b>
   
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 320, 200, "A screen in a window...", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 320, 200, &quot;A screen in a window...&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">    CreateStatusBar</font>(0,<font color="#006666"> WindowID</font>(0))
 <font color="#006666">      AddStatusBarField</font>(320)
       
-<font color="#006666">    StatusBarText</font>(0, 0, "Automatically zoomed screen area when changing window size...")
+<font color="#006666">    StatusBarText</font>(0, 0, &quot;Automatically zoomed screen area when changing window size...&quot;)
     
     <b><font color="#006666">If</font></b> <font color="#006666">OpenWindowedScreen</font>(<font color="#006666">WindowID</font>(0), 0, 0, 320, 200, <font color="#924B72">#True</font>, 0, 20)
   
 <font color="#006666">      CreateSprite</font>(0, 50, 50) <font color="#006666">; Create an empty sprite, will be whole black</font>
         
       <b><font color="#006666">Repeat</font></b>
-        <font color="#006666">; It's very important to process all the events remaining in the queue at each frame</font>
+        <font color="#006666">; It&apos;s very important to process all the events remaining in the queue at each frame</font>
         <font color="#006666">;</font>
         <b><font color="#006666">Repeat</font></b>
           Event =<font color="#006666"> WaitWindowEvent</font>(10)
@@ -162,7 +162,7 @@ Only one windowed screen can be opened at one time. The screen dimension can't b
       <b><font color="#006666">ForEver</font></b>
       
     <b><font color="#006666">Else</font></b>
-<font color="#006666">      MessageRequester</font>("Error", "Can't open windowed screen!", 0)
+<font color="#006666">      MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open windowed screen!&quot;, 0)
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
@@ -175,6 +175,6 @@ For a more detailed example look at </blockquote><p><b>Example</b></p><blockquot
 
 <a href="openscreen.html">OpenScreen()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=openscreen.html>OpenScreen()</a> - <a href=index.html>Screen Index</a> - <a href=screendepth.html>ScreenDepth()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=openscreen.html>OpenScreen()</a> - <a href=index.html>Screen Index</a> - <a href=screendepth.html>ScreenDepth()</a> -><br><br>
 
 </body></html>

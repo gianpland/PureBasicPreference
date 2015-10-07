@@ -32,7 +32,7 @@ Specifies the directory that will then be the current directory for the launched
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
 <td> 
-It can be a combination (using '|' OR operator) of the following values: 
+It can be a combination (using &apos;|&apos; OR operator) of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Program_Wait</font>   : Wait until the launched program quits
   <font color="#924B72">#PB_Program_Hide</font>   : Launch the program in invisible mode
   <font color="#924B72">#PB_Program_Open</font>   : Open the program to communicate with it or get information about it.
@@ -40,17 +40,20 @@ It can be a combination (using '|' OR operator) of the following values:
   <font color="#924B72">#PB_Program_Write</font>  : Write to the input of the program. (stdin)
   <font color="#924B72">#PB_Program_Error</font>  : Read the error output of the program. (stderr)
   <font color="#924B72">#PB_Program_Connect</font>: Connect another programs output to this programs input.
+  <font color="#924B72">#PB_Program_Ascii</font>  : Default read/write operation are in ASCII mode (default in ASCII mode).
+  <font color="#924B72">#PB_Program_Unicode</font>: Default read/write operation are in Unicode mode.
+  <font color="#924B72">#PB_Program_UTF8</font>   : Default read/write operation are in UTF8 mode (default in unicode mode).
 </font></pre>
 
 A program executed with <font color="#924B72">#PB_Program_Open</font> must be closed with <a href="closeprogram.html">CloseProgram()</a>. 
-The 'Read', 'Write', 'Error' and 'Connect' flags require the <font color="#924B72">#PB_Program_Open</font> flag to be set as well. 
+The &apos;Read&apos;, &apos;Write&apos;, &apos;Error&apos; and &apos;Connect&apos; flags require the <font color="#924B72">#PB_Program_Open</font> flag to be set as well. 
 <br>
 <br>
 When using the <font color="#924B72">#PB_Program_Connect</font> flag, another program must have been started before with 
 <font color="#924B72">#PB_Program_Open</font> and <font color="#924B72">#PB_Program_Read</font>. The number returned when running this 
-program must be passed as the 'SenderProgram' parameter to RunProgram(). The output of the sender program will 
+program must be passed as the &apos;SenderProgram&apos; parameter to RunProgram(). The output of the sender program will 
 be sent directly to the input of the now executed program. Several programs may be connected in this way, 
-to 'pipe' data through that group of connected programs. 
+to &apos;pipe&apos; data through that group of connected programs. 
 <br>
 <br>
 The following functions may be used with a program that has been executed with the <font color="#924B72">#PB_Program_Open</font> flag: 
@@ -71,7 +74,7 @@ The following functions may be used with a program that has been executed with t
 - <a href="closeprogram.html">CloseProgram()</a>: close the connection to the program. 
 <br>
 <br>
-The following functions may be used for programs executed with the 'Read', 'Write' and 'Error' flags: 
+The following functions may be used for programs executed with the &apos;Read&apos;, &apos;Write&apos; and &apos;Error&apos; flags: 
 <br>
 <br>
 - <a href="availableprogramoutput.html">AvailableProgramOutput()</a>: check if the programs output is available. 
@@ -101,10 +104,10 @@ or other functions mentioned above.
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Executes the PB compiler with the /? option and displays the output (windows version)</font>
-  <font color="#006666">; For Linux/MacOS change the "/?" to "-h".</font>
+  <font color="#006666">; For Linux/MacOS change the &quot;/?&quot; to &quot;-h&quot;.</font>
   <font color="#006666">;</font>
-  Compiler =<font color="#006666"> RunProgram</font>(<font color="#924B72">#PB_Compiler_Home</font>+"/Compilers/pbcompiler", "/?", "", <font color="#924B72">#PB_Program_Open</font> | <font color="#924B72">#PB_Program_Read</font>)
-  Output$ = ""
+  Compiler =<font color="#006666"> RunProgram</font>(<font color="#924B72">#PB_Compiler_Home</font>+&quot;/Compilers/pbcompiler&quot;, &quot;/?&quot;, &quot;&quot;, <font color="#924B72">#PB_Program_Open</font> | <font color="#924B72">#PB_Program_Read</font>)
+  Output$ = &quot;&quot;
   <b><font color="#006666">If</font></b> Compiler
     <b><font color="#006666">While</font></b> <font color="#006666">ProgramRunning</font>(Compiler)
       <b><font color="#006666">If</font></b> <font color="#006666">AvailableProgramOutput</font>(Compiler)
@@ -112,18 +115,18 @@ or other functions mentioned above.
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Wend</font></b>
     Output$ +<font color="#006666"> Chr</font>(13) +<font color="#006666"> Chr</font>(13)
-    Output$ + "Exitcode: " +<font color="#006666"> Str</font>(<font color="#006666">ProgramExitCode</font>(Compiler))
+    Output$ + &quot;Exitcode: &quot; +<font color="#006666"> Str</font>(<font color="#006666">ProgramExitCode</font>(Compiler))
     
 <font color="#006666">    CloseProgram</font>(Compiler) <font color="#006666">; Close the connection to the program</font>
   <b><font color="#006666">EndIf</font></b>
   
-<font color="#006666">  MessageRequester</font>("Output", Output$)
+<font color="#006666">  MessageRequester</font>(&quot;Output&quot;, Output$)
 </font></pre>
 
 On Windows RunProgram() uses the default application associated with the file type of the given file. 
-An example: RunProgram("Test.html") will open the web browser, which is generally used for displaying 
+An example: RunProgram(&quot;Test.html&quot;) will open the web browser, which is generally used for displaying 
 web sites on your system. 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removeenvironmentvariable.html>RemoveEnvironmentVariable()</a> - <a href=index.html>Process Index</a> - <a href=setenvironmentvariable.html>SetEnvironmentVariable()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removeenvironmentvariable.html>RemoveEnvironmentVariable()</a> - <a href=index.html>Process Index</a> - <a href=setenvironmentvariable.html>SetEnvironmentVariable()</a> -><br><br>
 
 </body></html>

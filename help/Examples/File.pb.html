@@ -10,27 +10,27 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<font color="#006666">MessageRequester</font>("PureBasic", "Welcome !"+<font color="#006666">Chr</font>(13)+"PureBasic will write a file named: PureBasicTestFile.pb", 0)
+<font color="#006666">MessageRequester</font>(&quot;PureBasic&quot;, &quot;Welcome !&quot;+<font color="#006666">Chr</font>(13)+&quot;PureBasic will write a file named: PureBasicTestFile.pb&quot;, 0)
 
-<b><font color="#006666">If</font></b> <font color="#006666">CreateFile</font>(0, "PureBasicTestFile.txt")
-<font color="#006666">  WriteStringN</font>(0, "         This is a PureBasic file test")
-<font color="#006666">  WriteString</font>(0, "Now it's on ")
-<font color="#006666">  WriteString</font>(0, "the same line.")
+<b><font color="#006666">If</font></b> <font color="#006666">CreateFile</font>(0, &quot;PureBasicTestFile.txt&quot;)
+<font color="#006666">  WriteStringN</font>(0, &quot;         This is a PureBasic file test&quot;)
+<font color="#006666">  WriteString</font>(0, &quot;Now it&apos;s on &quot;)
+<font color="#006666">  WriteString</font>(0, &quot;the same line.&quot;)
 
 <font color="#006666">  CloseFile</font>(0)
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("PureBasic", "Error: can't write the file", 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic&quot;, &quot;Error: can&apos;t write the file&quot;, 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
-<b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0, "PureBasicTestFile.txt")
+<b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0, &quot;PureBasicTestFile.txt&quot;)
 
   First$ =<font color="#006666">  Trim</font>(<font color="#006666">ReadString</font>(0))
-<font color="#006666">  MessageRequester</font>("PureBasic", "Line read: "+First$, 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic&quot;, &quot;Line read: &quot;+First$, 0)
   
 <font color="#006666">  CloseFile</font>(0)
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("PureBasic", "Error: Can't read the file", 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic&quot;, &quot;Error: Can&apos;t read the file&quot;, 0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>

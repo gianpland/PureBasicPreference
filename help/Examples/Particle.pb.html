@@ -18,13 +18,13 @@
 <font color="#924B72">#MaxSpeedFactor</font> = 10
 <font color="#924B72">#MinSpeedFactor</font> = 0
 
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY, speedFactor = 1.0, percent = 0.01
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
 
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
   
 <font color="#006666">  InitSprite</font>()
 <font color="#006666">  InitKeyboard</font>()
@@ -32,7 +32,7 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    LoadTexture</font>(0, "flare.png")
+<font color="#006666">    LoadTexture</font>(0, &quot;flare.png&quot;)
     
 <font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> TextureID</font>(0))
 <font color="#006666">      DisableMaterialLighting</font>(0, 1)
@@ -111,7 +111,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;, 0)
 <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">End</font></b></font></pre>

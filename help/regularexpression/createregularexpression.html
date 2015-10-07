@@ -29,10 +29,10 @@ The regular expression which will be applied to the string to match, extract or 
 <tr><td><i>Flags (optional)</i></td>
 <td> 
 It can be a combination of the following values: 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_RegularExpression_DotAll</font>    : '.' matches anything including newlines.
-  <font color="#924B72">#PB_RegularExpression_Extended</font>  : whitespace and '#' comments will be ignored.
-  <font color="#924B72">#PB_RegularExpression_MultiLine</font> : '^' and '$' match newlines within data.
-  <font color="#924B72">#PB_RegularExpression_AnyNewLine</font>: recognize 'CR', 'LF', and 'CRLF' as newline sequences.
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_RegularExpression_DotAll</font>    : &apos;.&apos; matches anything including newlines.
+  <font color="#924B72">#PB_RegularExpression_Extended</font>  : whitespace and &apos;#&apos; comments will be ignored.
+  <font color="#924B72">#PB_RegularExpression_MultiLine</font> : &apos;^&apos; and &apos;$&apos; match newlines within data.
+  <font color="#924B72">#PB_RegularExpression_AnyNewLine</font>: recognize &apos;CR&apos;, &apos;LF&apos;, and &apos;CRLF&apos; as newline sequences.
   <font color="#924B72">#PB_RegularExpression_NoCase</font>    : comparison and matching will be case-insensitive
 </font></pre>
 
@@ -47,16 +47,16 @@ information about the error, see <a href="regularexpressionerror.html">RegularEx
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-If a regular expression isn't used anymore, use <a href="freeregularexpression.html">FreeRegularExpression()</a> to free up some resources. 
+If a regular expression isn&apos;t used anymore, use <a href="freeregularexpression.html">FreeRegularExpression()</a> to free up some resources. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; This expression will match every word of 3 letter which begin by a lower case letter,</font>
-  <font color="#006666">; followed with the character 'b' and which ends with an uppercase letter. ex: abC</font>
+  <font color="#006666">; followed with the character &apos;b&apos; and which ends with an uppercase letter. ex: abC</font>
   <font color="#006666">;    </font>
-  <b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, "[a-z]b[A-Z]")
-    <b><font color="#006666">Debug</font></b> <font color="#006666">MatchRegularExpression</font>(0, "abC") <font color="#006666">; Will print 1</font>
-    <b><font color="#006666">Debug</font></b> <font color="#006666">MatchRegularExpression</font>(0, "abc") <font color="#006666">; Will print 0</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, &quot;[a-z]b[A-Z]&quot;)
+    <b><font color="#006666">Debug</font></b> <font color="#006666">MatchRegularExpression</font>(0, &quot;abC&quot;) <font color="#006666">; Will print 1</font>
+    <b><font color="#006666">Debug</font></b> <font color="#006666">MatchRegularExpression</font>(0, &quot;abc&quot;) <font color="#006666">; Will print 0</font>
   <b><font color="#006666">Else</font></b>
     <b><font color="#006666">Debug</font></b> <font color="#006666">RegularExpressionError</font>()
   <b><font color="#006666">EndIf</font></b>
@@ -67,6 +67,6 @@ If a regular expression isn't used anymore, use <a href="freeregularexpression.h
 
 <a href="regularexpressionerror.html">RegularExpressionError()</a>, <a href="freeregularexpression.html">FreeRegularExpression()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=countregularexpressiongroups.html>CountRegularExpressionGroups()</a> - <a href=index.html>RegularExpression Index</a> - <a href=examineregularexpression.html>ExamineRegularExpression()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=countregularexpressiongroups.html>CountRegularExpressionGroups()</a> - <a href=index.html>RegularExpression Index</a> - <a href=examineregularexpression.html>ExamineRegularExpression()</a> -><br><br>
 
 </body></html>

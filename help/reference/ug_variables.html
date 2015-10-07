@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">UserGuide - Variables and Processing of variables</font></b></p>
 
-<b>A</b> is an integer - but note that you can't declare <a href="../reference/variables.html">variables</a> 
+<b>A</b> is an integer - but note that you can&apos;t declare <a href="../reference/variables.html">variables</a> 
 this way if you use the <a href="../reference/compilerdirectives.html">EnableExplicit</a> directive. 
 Outside of a <a href="../reference/procedures.html">procedure</a> A will exist at Main scope, within 
 a procedure it will become local. 
@@ -23,11 +23,11 @@ constants. Notice too the alternative syntax of <a href="../reference/define.htm
 </font></pre>
 
 So is <b>G$</b>, however, if you declare strings this way, you must always use the $ notation. 
-<pre><font face="Courier New, Courier, mono"size="2">  G$ = "Hello, "
+<pre><font face="Courier New, Courier, mono"size="2">  G$ = &quot;Hello, &quot;
 </font></pre>
 
-This won't work. (G becomes a new integer variable and a compiler error occurs). 
-<pre><font face="Courier New, Courier, mono"size="2">  G = "Goodbye, World!"
+This won&apos;t work. (G becomes a new integer variable and a compiler error occurs). 
+<pre><font face="Courier New, Courier, mono"size="2">  G = &quot;Goodbye, World!&quot;
 </font></pre>
 
 <b>H</b> is an <a href="../reference/dim.html">array</a> of 20 strings, array indexing begins at zero. 
@@ -54,7 +54,7 @@ changes are minimized.
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">NewMap</font></b> <font color="#006666">M</font>.s()
 </font></pre>
 
-Note that you can't use the alternative syntax of the <a href="../reference/define.html">Define</a> 
+Note that you can&apos;t use the alternative syntax of the <a href="../reference/define.html">Define</a> 
 keyword with <a href="../reference/newlist.html">NewList</a> or <a href="../reference/newmap.html">NewMap</a> 
 though. A compiler error will result. 
 <br>
@@ -85,23 +85,23 @@ Using <a href="../reference/variables.html">operators</a> on variables:
   A | 21
   
   <font color="#006666">; Bitwise And with 1 (A will become 1)</font>
-  A & 1
+  A &amp; 1
   
   <font color="#006666">; Arithmetic shift left (A will become 2, that is 10 in binary).</font>
-  A &#060;&#060; 1
+  A &lt;&lt; 1
 </font></pre>
 
 String concatenation: 
-<pre><font face="Courier New, Courier, mono"size="2">  G$ + "World!"
+<pre><font face="Courier New, Courier, mono"size="2">  G$ + &quot;World!&quot;
 </font></pre>
 
 Add an element to the K list: 
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  AddElement</font>(<font color="#006666">K</font>())
-<font color="#006666">  K</font>() = "List element one"
+<font color="#006666">  K</font>() = &quot;List element one&quot;
 </font></pre>
 
 Add an element to the M map: 
-<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  M</font>("one") = "Map element one"
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  M</font>(&quot;one&quot;) = &quot;Map element one&quot;
 </font></pre>
 
 

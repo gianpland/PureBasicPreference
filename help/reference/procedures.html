@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">Procedures</font></b></p>
 
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Procedure</font></b>[.&#060;type&#062;] name(&#060;parameter1[.&#060;type&#062;]&#062; [, &#060;parameter2[.&#060;type&#062;] [= DefaultValue]&#062;, ...]) 
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Procedure</font></b>[.&lt;type&gt;] name(&lt;parameter1[.&lt;type&gt;]&gt; [, &lt;parameter2[.&lt;type&gt;] [= DefaultValue]&gt;, ...]) 
   ...
   [<b><font color="#006666">ProcedureReturn</font></b> value]
 <b><font color="#006666">EndProcedure</font></b> 
@@ -11,7 +11,7 @@
 
 
 A <b><font color="#006666">Procedure</font></b> is a part of code independent from the main code which can have any parameters 
-and it's own <a href="../reference/variables.html">variables</a>. In PureBasic, a recurrence is fully supported for the procedures 
+and it&apos;s own <a href="../reference/variables.html">variables</a>. In PureBasic, a recurrence is fully supported for the procedures 
 and any procedure can call it itself. At each call of the procedure the variables inside 
 will start with a value of 0 (null). To access main code variables, they have to be shared 
 them by using <a href="../reference/shared.html">Shared</a> or <a href="../reference/global.html">Global</a> keywords 
@@ -30,7 +30,7 @@ A procedure can return a value or a string if necessary. You have to set the typ
 and use the <b><font color="#006666">ProcedureReturn</font></b> keyword at any moment inside the procedure. 
 A call of <b><font color="#006666">ProcedureReturn</font></b> exits immediately the procedure, even when its called inside a loop. 
 <br>
-<b><font color="#006666">ProcedureReturn</font></b> can't be used to return an <a href="../reference/dim.html">array</a>, <a href="../reference/newlist.html">list</a> or a <a href="../reference/newmap.html">map</a>. 
+<b><font color="#006666">ProcedureReturn</font></b> can&apos;t be used to return an <a href="../reference/dim.html">array</a>, <a href="../reference/newlist.html">list</a> or a <a href="../reference/newmap.html">map</a>. 
 For this purpose pass the array, the list or the map as parameter to the procedure. 
 <br>
 <br>
@@ -39,7 +39,7 @@ If no value is specified for <b><font color="#006666">ProcedureReturn</font></b>
 <br>
 <br>
 Note: To return strings from DLLs, see <a href="../reference/dll.html">DLLs</a>. For advanced programmers <b><font color="#006666">ProcedureC</font></b> is available 
-and will declare the procedure using 'CDecl' instead of 'StandardCall' calling convention. 
+and will declare the procedure using &apos;CDecl&apos; instead of &apos;StandardCall&apos; calling convention. 
 <br>
 <br>
 Selected procedures can be executed asynchronously to the main program by using of <a href="../thread/index.html">threads</a>. 
@@ -49,7 +49,7 @@ Selected procedures can be executed asynchronously to the main program by using 
 
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">Maximum</font>(nb1, nb2)
-    <b><font color="#006666">If</font></b> nb1 &#062; nb2
+    <b><font color="#006666">If</font></b> nb1 &gt; nb2
       Result = nb1
     <b><font color="#006666">Else</font></b>
       Result = nb2
@@ -67,10 +67,10 @@ Selected procedures can be executed asynchronously to the main program by using 
 
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b>.s <font color="#006666">Attach</font>(String1$, String2$)
-    <b><font color="#006666">ProcedureReturn</font></b> String1$+" "+String2$
+    <b><font color="#006666">ProcedureReturn</font></b> String1$+&quot; &quot;+String2$
   <b><font color="#006666">EndProcedure</font></b> 
 
-  Result$ =<font color="#006666"> Attach</font>("PureBasic", "Coder")
+  Result$ =<font color="#006666"> Attach</font>(&quot;PureBasic&quot;, &quot;Coder&quot;)
   <b><font color="#006666">Debug</font></b> Result$
 </font></pre>
 
@@ -102,7 +102,7 @@ Selected procedures can be executed asynchronously to the main program by using 
 <font color="#006666">    ParameterList</font>()\x = 3
 
     <b><font color="#006666">ForEach</font></b> <font color="#006666">ParameterList</font>()
-<font color="#006666">      MessageRequester</font>("List",<font color="#006666"> Str</font>(<font color="#006666">ParameterList</font>()\x))
+<font color="#006666">      MessageRequester</font>(&quot;List&quot;,<font color="#006666"> Str</font>(<font color="#006666">ParameterList</font>()\x))
     <b><font color="#006666">Next</font></b>
  
   <b><font color="#006666">EndProcedure</font></b>
@@ -127,25 +127,25 @@ Selected procedures can be executed asynchronously to the main program by using 
 
 <font color="#006666">  TestIt</font>(10,<font color="#006666"> Table</font>())
 
-<font color="#006666">  MessageRequester</font>("Table",<font color="#006666"> Str</font>(<font color="#006666">Table</font>(1, 2)\x))
+<font color="#006666">  MessageRequester</font>(&quot;Table&quot;,<font color="#006666"> Str</font>(<font color="#006666">Table</font>(1, 2)\x))
 </font></pre>
 
 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Declare</font></b>[.&#060;type&#062;] name(&#060;parameter1[.&#060;type&#062;]&#062; [, &#060;parameter2[.&#060;type&#062;] [= DefaultValue]&#062;, ...])
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Declare</font></b>[.&lt;type&gt;] name(&lt;parameter1[.&lt;type&gt;]&gt; [, &lt;parameter2[.&lt;type&gt;] [= DefaultValue]&gt;, ...])
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
 
-Sometimes a procedure need to call another procedure which isn't declared before its definition. 
-This is annoying because the compiler will complain 'Procedure &#060;name&#062; not found'. <b><font color="#006666">Declare</font></b> can help 
+Sometimes a procedure need to call another procedure which isn&apos;t declared before its definition. 
+This is annoying because the compiler will complain &apos;Procedure &lt;name&gt; not found&apos;. <b><font color="#006666">Declare</font></b> can help 
 in this particular case by declaring only the header of the procedure. Nevertheless, the <b><font color="#006666">Declare</font></b> 
 and real <b><font color="#006666">Procedure</font></b> declaration must be identical (including the correct type and optional parameters, if any). 
 <br>
 <br>
-For advanced programmers <b><font color="#006666">DeclareC</font></b> is available and will declare the procedure using 'CDecl' 
-instead of 'StandardCall' calling convention. 
+For advanced programmers <b><font color="#006666">DeclareC</font></b> is available and will declare the procedure using &apos;CDecl&apos; 
+instead of &apos;StandardCall&apos; calling convention. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 

@@ -7,15 +7,15 @@
 
 To declare a variable in PureBasic, simply type its name. You can also specify the type 
 you want this variable to be. Variables do not need to be explicitly declared, as they 
-can be used as "variables on-the-fly". The <a href="../reference/define.html">Define</a> keyword can be used to declare 
-multiple variables in one statement. If you don't assign an initial value to the variable, their 
+can be used as &quot;variables on-the-fly&quot;. The <a href="../reference/define.html">Define</a> keyword can be used to declare 
+multiple variables in one statement. If you don&apos;t assign an initial value to the variable, their 
 value will be 0. 
 
 <p><b>Example</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  a.b         <font color="#006666">; Declare a variable called 'a' from byte (.b) type.</font>
-  c.l = a*d.w <font color="#006666">; 'd' is declared here within the expression !</font>
+<pre><font face="Courier New, Courier, mono"size="2">  a.b         <font color="#006666">; Declare a variable called &apos;a&apos; from byte (.b) type.</font>
+  c.l = a*d.w <font color="#006666">; &apos;d&apos; is declared here within the expression !</font>
 </font></pre>
 
 <u>Notes:</u> 
@@ -24,14 +24,14 @@ value will be 0.
 Variable names must not start with a number (0,1,...), contain operators (+,-,...) or special characters (ß,ä,ö,ü,...). 
 <br>
 <br>
-The variables in PureBasic are not case sensitive, so "pure" and "PURE" are the same variable. 
+The variables in PureBasic are not case sensitive, so &quot;pure&quot; and &quot;PURE&quot; are the same variable. 
 <br>
 <br>
-If you don't need to change the content of a variable during the program flow (e.g. you're using fixed 
-values for ID's etc.), you can also take a look at <a href="../reference/general_rules.html">constants</a> as an alternative. 
+If you don&apos;t need to change the content of a variable during the program flow (e.g. you&apos;re using fixed 
+values for ID&apos;s etc.), you can also take a look at <a href="../reference/general_rules.html">constants</a> as an alternative. 
 <br>
 <br>
-To avoid typing errors etc. it's possible to force the PureBasic compiler to always want a declaration 
+To avoid typing errors etc. it&apos;s possible to force the PureBasic compiler to always want a declaration 
 of variables, before they are first used. Just use <a href="../reference/compilerdirectives.html">EnableExplicit</a> 
 keyword in your source code to enable this feature. 
 </blockquote>
@@ -156,14 +156,14 @@ Purebasic offers native support for unsigned variables with byte and word types 
 The character (.c) type is an unsigned byte in ascii and unsigned word in <a href="../reference/unicode.html">unicode</a> that may be used as an unsigned type. 
 <br>
 <br>
-<b>Notation of string variables</b>: it is possible to use the '$' as last char of a variable name to 
-mark it as string. This way you can use 'a$' and 'a.s' as different string variables. Please note, that 
-the '$' belongs to the variable name and must be always attached, unlike the '.s' which is only needed 
+<b>Notation of string variables</b>: it is possible to use the &apos;$&apos; as last char of a variable name to 
+mark it as string. This way you can use &apos;a$&apos; and &apos;a.s&apos; as different string variables. Please note, that 
+the &apos;$&apos; belongs to the variable name and must be always attached, unlike the &apos;.s&apos; which is only needed 
 when the string variable is declared the first time. 
-<pre><font face="Courier New, Courier, mono"size="2">  a.s = "One string"
-  a$ = "Another string"
-  <b><font color="#006666">Debug</font></b> a   <font color="#006666">; will give "One string"</font>
-  <b><font color="#006666">Debug</font></b> a$  <font color="#006666">; will give "Another string"</font>
+<pre><font face="Courier New, Courier, mono"size="2">  a.s = &quot;One string&quot;
+  a$ = &quot;Another string&quot;
+  <b><font color="#006666">Debug</font></b> a   <font color="#006666">; will give &quot;One string&quot;</font>
+  <b><font color="#006666">Debug</font></b> a$  <font color="#006666">; will give &quot;Another string&quot;</font>
 </font></pre>
 
 <br>
@@ -458,7 +458,7 @@ RHS = Right Hand Side). <br>
     <font face="Courier New, Courier, mono">
     a=%1011 &lt;&lt; 1 <font color="#006666">; The value of a will be %10110. %1011=11, %10110=22</font><br>
     b=%111 &lt;&lt; 4 <font color="#006666">; The value of b will be %1110000. %111=7, %1110000=112</font><br>
-    c.l=$8000000 &lt;&lt; 1 <font color="#006666">; The value of c will be 0. Bits that are shifted off the left edge of the result are lost.</font><br>
+    c.l=$80000000 &lt;&lt; 1 <font color="#006666">; The value of c will be 0. Bits that are shifted off the left edge of the result are lost.</font><br>
     </font></font></td>
 </tr>
 
@@ -496,15 +496,15 @@ Every math operators can be used in a shorthand form.
 
 <pre><font face="Courier New, Courier, mono"size="2">  Value + 1  <font color="#006666">; The same as: Value = Value + 1</font>
   Value * 2  <font color="#006666">; The same as: Value = Value * 2</font>
-  Value &#060;&#060; 1 <font color="#006666">; The same as: Value = Value &#060;&#060; 1</font>
+  Value &lt;&lt; 1 <font color="#006666">; The same as: Value = Value &lt;&lt; 1</font>
 </font></pre>
 
-Note: this can lead to 'unexpected' results is some rare cases, if the assignment is modified before the affection. 
+Note: this can lead to &apos;unexpected&apos; results is some rare cases, if the assignment is modified before the affection. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Dim</font></b> <font color="#006666">MyArray</font>(10)
-<font color="#006666">  MyArray</font>(<font color="#006666">Random</font>(10)) + 1 <font color="#006666">; The same as: MyArray(Random(10)) = MyArray(Random(10)) + 1, but here Random() won't return the same value for each call.</font>
+<font color="#006666">  MyArray</font>(<font color="#006666">Random</font>(10)) + 1 <font color="#006666">; The same as: MyArray(Random(10)) = MyArray(Random(10)) + 1, but here Random() won&apos;t return the same value for each call.</font>
 </font></pre>
 
 </blockquote>
@@ -514,11 +514,11 @@ Note: this can lead to 'unexpected' results is some rare cases, if the assignmen
 <pre><font face="Courier New, Courier, mono"size="2">  Priority Level |     Operators
   ---------------+---------------------
        8 (high)  |      ~, -
-       7         |    &#060;&#060;, &#062;&#062;, %, !
-       6         |       |, &
+       7         |    &lt;&lt;, &gt;&gt;, %, !
+       6         |       |, &amp;
        5         |       *, /
        4         |       +, -
-       3         | &#062;, &#062;=, &#060;, &#060;=, =, &#060;&#062;
+       3         | &gt;, &gt;=, &lt;, &lt;=, =, &lt;&gt;
        2         |       Not
        1 (low)   |  And, Or, XOr
 </font></pre>
@@ -534,14 +534,14 @@ can be found in the <a href="../reference/structures.html">structures chapter</a
 <p><b>Pointer types</b></p><blockquote>
 
 
-Pointers are declared with a '*' in front of the variable name. More information 
+Pointers are declared with a &apos;*&apos; in front of the variable name. More information 
 can be found in the <a href="../reference/memory.html">pointers chapter</a>. 
 
 </blockquote>
 <p><b>Special information about Floats and Doubles</b></p><blockquote>
 
 
-A floating-point number is stored in a way that makes the binary point "float" around the number, 
+A floating-point number is stored in a way that makes the binary point &quot;float&quot; around the number, 
 so that it is possible to store very large numbers or very small numbers. However, you cannot 
 store very large numbers with very high accuracy (big and small numbers at the same time, so to speak). 
 <br>
@@ -571,6 +571,6 @@ Float: +- 1.175494e-38 till +- 3.402823e+38  <br>
 Double: +- 2.2250738585072013e-308 till +- 1.7976931348623157e+308 
 </blockquote>
 
-More information about the 'IEEE 754' standard you can get on 
+More information about the &apos;IEEE 754&apos; standard you can get on 
 <a href="http://en.wikipedia.org/wiki/IEEE_754">Wikipedia</a>. 
 </body></html>

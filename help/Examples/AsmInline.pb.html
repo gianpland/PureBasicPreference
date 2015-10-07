@@ -10,8 +10,8 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_Processor</font> &#060;&#062; <font color="#924B72">#PB_Processor_x86</font> <b><font color="#006666">And</font></b> <font color="#924B72">#PB_Compiler_Processor</font> &#060;&#062; <font color="#924B72">#PB_Processor_x64</font>
-  <b><font color="#006666">CompilerError</font></b> "This example only works on x86 or x64 processors"
+<b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_Processor</font> &lt;&gt; <font color="#924B72">#PB_Processor_x86</font> <b><font color="#006666">And</font></b> <font color="#924B72">#PB_Compiler_Processor</font> &lt;&gt; <font color="#924B72">#PB_Processor_x64</font>
+  <b><font color="#006666">CompilerError</font></b> &quot;This example only works on x86 or x64 processors&quot;
 <b><font color="#006666">CompilerEndIf</font></b>
 
 Value.l = 10  <font color="#006666">; Declare our own variable
@@ -21,6 +21,6 @@ Value.l = 10  <font color="#006666">; Declare our own variable
 </font>  INC Value
 <b><font color="#006666">DisableASM</font></b>
 
-<font color="#006666">MessageRequester</font>("ASM Example", "Should be 21: " + Value)
+<font color="#006666">MessageRequester</font>(&quot;ASM Example&quot;, &quot;Should be 21: &quot; + Value)
 </font></pre>
 </body></html>

@@ -29,21 +29,21 @@ and <a href="../2ddrawing/blue.html">Blue()</a> can be used.
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  Color =<font color="#006666"> ColorRequester</font>()
-  <b><font color="#006666">If</font></b> Color &#062; -1
-    a$ = "You have selected following color value:" +<font color="#006666"> Chr</font>(10)  <font color="#006666">; Chr(10) only needed</font>
-    a$ + "24 Bit value: " +<font color="#006666"> Str</font>(Color)              +<font color="#006666"> Chr</font>(10)  <font color="#006666">; for line-feed</font>
-    a$ + "Red value:    " +<font color="#006666"> Str</font>(<font color="#006666">Red</font>(Color))         +<font color="#006666"> Chr</font>(10)
-    a$ + "Green value:  " +<font color="#006666"> Str</font>(<font color="#006666">Green</font>(Color))       +<font color="#006666"> Chr</font>(10)
-    a$ + "Blue value:   " +<font color="#006666"> Str</font>(<font color="#006666">Blue</font>(Color))
+  <b><font color="#006666">If</font></b> Color &gt; -1
+    a$ = &quot;You have selected following color value:&quot; +<font color="#006666"> Chr</font>(10)  <font color="#006666">; Chr(10) only needed</font>
+    a$ + &quot;24 Bit value: &quot; +<font color="#006666"> Str</font>(Color)              +<font color="#006666"> Chr</font>(10)  <font color="#006666">; for line-feed</font>
+    a$ + &quot;Red value:    &quot; +<font color="#006666"> Str</font>(<font color="#006666">Red</font>(Color))         +<font color="#006666"> Chr</font>(10)
+    a$ + &quot;Green value:  &quot; +<font color="#006666"> Str</font>(<font color="#006666">Green</font>(Color))       +<font color="#006666"> Chr</font>(10)
+    a$ + &quot;Blue value:   &quot; +<font color="#006666"> Str</font>(<font color="#006666">Blue</font>(Color))
   <b><font color="#006666">Else</font></b>  
-    a$ = "The requester was canceled."
+    a$ = &quot;The requester was canceled.&quot;
   <b><font color="#006666">EndIf</font></b>
-<font color="#006666">  MessageRequester</font>("Information", a$, 0)
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, a$, 0)
   <b><font color="#006666">End</font></b>
 </font></pre>
 <br>
 <p><img src="../HelpPictures/colorrequester.png"></p>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Requester Index</a> - <a href=fontrequester.html>FontRequester()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Requester Index</a> - <a href=fontrequester.html>FontRequester()</a> -><br><br>
 
 </body></html>

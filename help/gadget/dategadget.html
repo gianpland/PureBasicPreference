@@ -29,8 +29,8 @@ The position and dimensions of the new gadget.
 <tr><td><i>Mask$ (optional)</i></td>
 <td> 
 The format in which the date can be entered. See <a href="../date/formatdate.html">FormatDate()</a> for the format of 
-this mask. Important note: The gadget does not support the display of seconds, so if you specify "%ss" in the Mask$ parameter, it will simply be ignored! 
-If you don't specify the mask or specify an empty string, a default mask will be chosen. The mask can be modified with the <a href="setgadgettext.html">SetGadgetText()</a> function. 
+this mask. Important note: The gadget does not support the display of seconds, so if you specify &quot;%ss&quot; in the Mask$ parameter, it will simply be ignored! 
+If you don&apos;t specify the mask or specify an empty string, a default mask will be chosen. The mask can be modified with the <a href="setgadgettext.html">SetGadgetText()</a> function. 
 
 </td></tr>
 <tr><td><i>Date (optional)</i></td>
@@ -50,7 +50,7 @@ gadget. This option is only available on Windows.
 <br>
 <br>
 If you specify #PB_Date_Checkbox in the Flags parameter, the Gadget will have a checkbox with which the user can set the 
-Gadget to 'no date' (if the checkbox is unchecked). While the checkbox is unchecked, <a href="getgadgetstate.html">GetGadgetState()</a> will return 0. 
+Gadget to &apos;no date&apos; (if the checkbox is unchecked). While the checkbox is unchecked, <a href="getgadgetstate.html">GetGadgetState()</a> will return 0. 
 To change the state of the checkbox, use <a href="setgadgetstate.html">SetGadgetState()</a> with either 0 (=checkbox unchecked) or any valid date (=checkbox checked). 
 
 </td></tr>
@@ -66,7 +66,7 @@ This gadget uses the same date format for its functions as used by the <a href="
 display the results you get from <a href="getgadgetstate.html">GetGadgetState()</a> in a proper format. 
 <br>
 <br>
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used for this gadget: 
@@ -97,7 +97,7 @@ The following events are supported through <a href="../window/eventtype.html">Ev
 
 <br>
 This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
-the following values as 'ColorType' to color the dropdown calendar (the edit area cannot be colored): 
+the following values as &apos;ColorType&apos; to color the dropdown calendar (the edit area cannot be colored): 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_BackColor</font>      : backgroundcolor
   <font color="#924B72">#PB_Gadget_FrontColor</font>     : textcolor for displayed days
   <font color="#924B72">#PB_Gadget_TitleBackColor</font> : backgroundcolor of the month title
@@ -107,8 +107,8 @@ the following values as 'ColorType' to color the dropdown calendar (the edit are
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 250, "DateGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    DateGadget</font>(0, 10, 10, 180, 25, "Date: %mm/%dd/%yyyy Time: %hh:%ii")
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 250, &quot;DateGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    DateGadget</font>(0, 10, 10, 180, 25, &quot;Date: %mm/%dd/%yyyy Time: %hh:%ii&quot;)
     <b><font color="#006666">Repeat</font></b>
     <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
@@ -121,6 +121,6 @@ the following values as 'ColorType' to color the dropdown calendar (the edit are
 <a href="getgadgetstate.html">GetGadgetState()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgettext.html">GetGadgetText()</a>, <a href="setgadgettext.html">SetGadgetText()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, 
 <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a>, <a href="calendargadget.html">CalendarGadget()</a>, <a href="../date/date.html">Date()</a>, <a href="../date/formatdate.html">FormatDate()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=creategadgetlist.html>CreateGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=disablegadget.html>DisableGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=creategadgetlist.html>CreateGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=disablegadget.html>DisableGadget()</a> -><br><br>
 
 </body></html>

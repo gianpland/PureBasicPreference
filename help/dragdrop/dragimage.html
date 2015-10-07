@@ -7,7 +7,7 @@ Result = <font color="#006666"><b>DragImage</b></font>(ImageID [, Actions])</blo
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Starts a Drag & Drop operation with image data. 
+Starts a Drag &amp; Drop operation with image data. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -22,9 +22,9 @@ The image to drag. <a href="../image/imageid.html">ImageID()</a> can be used to 
 </td></tr>
 <tr><td><i>Actions (optional)</i></td>
 <td> 
-A combination of the Drag & Drop actions that should be allowed for the image. 
+A combination of the Drag &amp; Drop actions that should be allowed for the image. 
 If the parameter is not specified, <font color="#924B72">#PB_Drag_Copy</font> will be the only allowed action. 
-Possible actions are: (they can be combined with '|') 
+Possible actions are: (they can be combined with &apos;|&apos;) 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drag_Copy</font>: The image can be copied
   <font color="#924B72">#PB_Drag_Move</font>: The image can be moved
   <font color="#924B72">#PB_Drag_Link</font>: The image can be linked
@@ -38,8 +38,8 @@ that can really be taken also depend on the actions allowed by the drop target.
 </table>
 </blockquote><p><b>Return value</b></p><blockquote>
 
-Returns one of the above Drag & Drop action values to indicate what action the user took, or 
-<font color="#924B72">#PB_Drag_None</font> if the user aborted the Drag & Drop operation. 
+Returns one of the above Drag &amp; Drop action values to indicate what action the user took, or 
+<font color="#924B72">#PB_Drag_None</font> if the user aborted the Drag &amp; Drop operation. 
 <br>
 <br>
 Note that if <font color="#924B72">#PB_Drag_Move</font> is returned, it is your responsibility to remove the 
@@ -47,17 +47,17 @@ dragged image from your application.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-Drag & Drop can basically be started any time, but the 
+Drag &amp; Drop can basically be started any time, but the 
 left mouse button should be currently pressed as otherwise the operation will end immediately without success. 
-The usual time to start a Drag & Drop operation is when a <a href="../gadget/index.html">Gadget</a> reported an event with 
+The usual time to start a Drag &amp; Drop operation is when a <a href="../gadget/index.html">Gadget</a> reported an event with 
 <a href="../window/eventtype.html">EventType()</a> of <font color="#924B72">#PB_EventType_DragStart</font>. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Drag the image to an application that can accept images like an office or graphic program.</font>
   <font color="#006666">;</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(1, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/data/PureBasicLogo.bmp")
-    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(1, 200, 200, 400, 90, "Drag & Drop", <font color="#924B72">#PB_Window_SystemMenu</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(1, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/data/PureBasicLogo.bmp&quot;)
+    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(1, 200, 200, 400, 90, &quot;Drag &amp; Drop&quot;, <font color="#924B72">#PB_Window_SystemMenu</font>)
 <font color="#006666">      ImageGadget</font>(1, 10, 10, 380, 70,<font color="#006666"> ImageID</font>(1))
     
       <b><font color="#006666">Repeat</font></b>
@@ -75,6 +75,6 @@ The usual time to start a Drag & Drop operation is when a <a href="../gadget/ind
 <a href="dragfiles.html">DragFiles()</a>, <a href="dragtext.html">DragText()</a>, <a href="dragprivate.html">DragPrivate()</a>, <a href="dragosformats.html">DragOSFormats()</a>, 
 <a href="setdragcallback.html">SetDragCallback()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=dragfiles.html>DragFiles()</a> - <a href=index.html>DragDrop Index</a> - <a href=dragosformats.html>DragOSFormats()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=dragfiles.html>DragFiles()</a> - <a href=index.html>DragDrop Index</a> - <a href=dragosformats.html>DragOSFormats()</a> -><br><br>
 
 </body></html>

@@ -13,8 +13,8 @@
 
 <font color="#006666">UsePNGImageDecoder</font>()
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 800, 600, "Alphachannel demo", <font color="#924B72">#PB_Window_SystemMenu</font>|<font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">  LoadFont</font>(0, "Impact", 30)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 800, 600, &quot;Alphachannel demo&quot;, <font color="#924B72">#PB_Window_SystemMenu</font>|<font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">  LoadFont</font>(0, &quot;Impact&quot;, 30)
 <font color="#006666">  CatchImage</font>(2, ?TestImage)
 
   <font color="#006666">; Alphachannel output image
@@ -45,15 +45,15 @@
     <font color="#006666">; Some DrawText stuff
 </font>    <font color="#006666">;
 </font><font color="#006666">    DrawingFont</font>(<font color="#006666">FontID</font>(0))
-    w =<font color="#006666"> TextWidth</font>("Alphachannel demo")
-    h =<font color="#006666"> TextHeight</font>("Alphachannel demo")
+    w =<font color="#006666"> TextWidth</font>(&quot;Alphachannel demo&quot;)
+    h =<font color="#006666"> TextHeight</font>(&quot;Alphachannel demo&quot;)
    
 <font color="#006666">    DrawingMode</font>(<font color="#924B72">#PB_2DDrawing_AlphaBlend</font> | <font color="#924B72">#PB_2DDrawing_Transparent</font>)
    
     <font color="#006666">; draw the text semi-transparent
-</font><font color="#006666">    DrawText</font>(25, 275, "Alphachannel demo", $40FF0000)
-<font color="#006666">    DrawText</font>(50, 300, "Alphachannel demo", $80FF0000)
-<font color="#006666">    DrawText</font>(75, 325, "Alphachannel demo", $A0FF0000)
+</font><font color="#006666">    DrawText</font>(25, 275, &quot;Alphachannel demo&quot;, $40FF0000)
+<font color="#006666">    DrawText</font>(50, 300, &quot;Alphachannel demo&quot;, $80FF0000)
+<font color="#006666">    DrawText</font>(75, 325, &quot;Alphachannel demo&quot;, $A0FF0000)
             
    
     <font color="#006666">; Show the difference between the drawing modes
@@ -66,11 +66,11 @@
     <b><font color="#006666">Next</font></b> i
    
 <font color="#006666">    DrawingFont</font>(<font color="#924B72">#PB_Default</font>)
-<font color="#006666">    DrawText</font>( 50, 380, "Default",      $FF000000, $00000000)
-<font color="#006666">    DrawText</font>(150, 380, "AlphaBlend",   $FF000000, $00000000)
-<font color="#006666">    DrawText</font>(250, 380, "AlphaClip",    $FF000000, $00000000)
-<font color="#006666">    DrawText</font>(350, 380, "AlphaChannel", $FF000000, $00000000)
-<font color="#006666">    DrawText</font>(450, 380, "AllChannels",  $FF000000, $00000000)
+<font color="#006666">    DrawText</font>( 50, 380, &quot;Default&quot;,      $FF000000, $00000000)
+<font color="#006666">    DrawText</font>(150, 380, &quot;AlphaBlend&quot;,   $FF000000, $00000000)
+<font color="#006666">    DrawText</font>(250, 380, &quot;AlphaClip&quot;,    $FF000000, $00000000)
+<font color="#006666">    DrawText</font>(350, 380, &quot;AlphaChannel&quot;, $FF000000, $00000000)
+<font color="#006666">    DrawText</font>(450, 380, &quot;AllChannels&quot;,  $FF000000, $00000000)
    
 <font color="#006666">    DrawingMode</font>(<font color="#924B72">#PB_2DDrawing_Default</font>)
 <font color="#006666">    DrawImage</font>(<font color="#006666">ImageID</font>(2), 50, 410)
@@ -92,13 +92,13 @@
 </font>    <font color="#006666">;
 </font><font color="#006666">    DrawingFont</font>(<font color="#006666">FontID</font>(0))
 <font color="#006666">    DrawingMode</font>(<font color="#924B72">#PB_2DDrawing_AlphaBlend</font>|<font color="#924B72">#PB_2DDrawing_Transparent</font>|<font color="#924B72">#PB_2DDrawing_Gradient</font>)   
-<font color="#006666">    LinearGradient</font>(310, 10, 310+<font color="#006666">TextWidth</font>("Alphachannel Gradient demo"), 10+<font color="#006666">TextHeight</font>("Alphachannel Gradient demo"))
+<font color="#006666">    LinearGradient</font>(310, 10, 310+<font color="#006666">TextWidth</font>(&quot;Alphachannel Gradient demo&quot;), 10+<font color="#006666">TextHeight</font>(&quot;Alphachannel Gradient demo&quot;))
 <font color="#006666">    GradientColor</font>(0.0,  $80FF0000)
 <font color="#006666">    GradientColor</font>(0.25, $FF00FF00)
 <font color="#006666">    GradientColor</font>(0.50, $8000FFFF)
 <font color="#006666">    GradientColor</font>(0.75, $FF0000FF)
 <font color="#006666">    GradientColor</font>(1.0,  $80FF0000)
-<font color="#006666">    DrawText</font>(310, 10, "Alphachannel Gradient demo")
+<font color="#006666">    DrawText</font>(310, 10, &quot;Alphachannel Gradient demo&quot;)
 
 <font color="#006666">    DrawingMode</font>(<font color="#924B72">#PB_2DDrawing_AlphaBlend</font>|<font color="#924B72">#PB_2DDrawing_Outlined</font>)
 <font color="#006666">    Box</font>(350, 75, 400, 150, $FF0000FF)   

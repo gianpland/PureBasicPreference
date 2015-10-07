@@ -10,11 +10,11 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<font color="#006666">OpenHelp</font>(<font color="#924B72">#PB_Compiler_Home</font> + "PureBasic.chm", "MainGuide\history.html")
+<font color="#006666">OpenHelp</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;PureBasic.chm&quot;, &quot;MainGuide\history.html&quot;)
 
-<font color="#006666">MessageRequester</font>("Information", "Click to close the PureBasic help and open another old .hlp file", 0)
+<font color="#006666">MessageRequester</font>(&quot;Information&quot;, &quot;Click to close the PureBasic help and open another old .hlp file&quot;, 0)
 <font color="#006666">CloseHelp</font>()
 
-<font color="#006666">OpenHelp</font>(<font color="#006666">OpenFileRequester</font>("Choose an .hlp file", "", "WinHelp files (*.hlp)|*.hlp", 0), "")
+<font color="#006666">OpenHelp</font>(<font color="#006666">OpenFileRequester</font>(&quot;Choose an .hlp file&quot;, &quot;&quot;, &quot;WinHelp files (*.hlp)|*.hlp&quot;, 0), &quot;&quot;)
 </font></pre>
 </body></html>

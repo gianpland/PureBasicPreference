@@ -44,37 +44,37 @@ Drawing the wave forms - demonstrates the <a href="../2ddrawing/linexy.html">Lin
   <b><font color="#006666">Procedure</font></b> <font color="#006666">CreateWindow</font>()
     <font color="#006666">; Creates the window and gadgets.  </font>
     
-    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(<font color="#924B72">#WinHarmonic</font>, 30, 30, <font color="#924B72">#imgPlotW</font> + 20, <font color="#924B72">#imgPlotH</font> + 55, "Harmonics", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
+    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(<font color="#924B72">#WinHarmonic</font>, 30, 30, <font color="#924B72">#imgPlotW</font> + 20, <font color="#924B72">#imgPlotH</font> + 55, &quot;Harmonics&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
       
       <font color="#006666">; This is a non-visual gadget used to draw the image, later its contents will be displayed in #imgPlot.</font>
 <font color="#006666">      CreateImage</font>(<font color="#924B72">#drgPlot</font>, <font color="#924B72">#imgPlotW</font> - 5, <font color="#924B72">#imgPlotH</font> - 5, 24)
       
       <font color="#006666">; Label for the Plot 1 combo.</font>
-<font color="#006666">      TextGadget</font>(<font color="#924B72">#txtPlot1</font>, 2, 5, 50, 25, "Plot 1:")
+<font color="#006666">      TextGadget</font>(<font color="#924B72">#txtPlot1</font>, 2, 5, 50, 25, &quot;Plot 1:&quot;)
       
       <font color="#006666">; The Plot 1 combo.</font>
 <font color="#006666">      ComboBoxGadget</font>(<font color="#924B72">#cboPlot1</font>, 55, 5, 150, 25)
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 0, "Sin(X)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 1, "Sin(X * 2)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 2, "Sin(X * 3)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 3, "Sin(X * 4)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 4, "Sin(X * 5)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 5, "Sin(X * 6)")
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 0, &quot;Sin(X)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 1, &quot;Sin(X * 2)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 2, &quot;Sin(X * 3)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 3, &quot;Sin(X * 4)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 4, &quot;Sin(X * 5)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot1</font>, 5, &quot;Sin(X * 6)&quot;)
       
       <font color="#006666">; Select Sin(X)</font>
 <font color="#006666">      SetGadgetState</font>(<font color="#924B72">#cboPlot1</font>, 0)
       
       <font color="#006666">; Label for the Plot 2 combo.</font>
-<font color="#006666">      TextGadget</font>(<font color="#924B72">#txtPlot2</font>, 230, 5, 50, 25, "Plot 2:")
+<font color="#006666">      TextGadget</font>(<font color="#924B72">#txtPlot2</font>, 230, 5, 50, 25, &quot;Plot 2:&quot;)
       
       <font color="#006666">; The Plot 2 combo.</font>
 <font color="#006666">      ComboBoxGadget</font>(<font color="#924B72">#cboPlot2</font>, 280, 5, 150, 25)
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 0, "Sin(X)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 1, "Sin(X * 2)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 2, "Sin(X * 3)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 3, "Sin(X * 4)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 4, "Sin(X * 5)")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 5, "Sin(X * 6)")
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 0, &quot;Sin(X)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 1, &quot;Sin(X * 2)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 2, &quot;Sin(X * 3)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 3, &quot;Sin(X * 4)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 4, &quot;Sin(X * 5)&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#cboPlot2</font>, 5, &quot;Sin(X * 6)&quot;)
       
       <font color="#006666">; Select Sin(X * 2), otherwise the initial display is a bit uninteresting.</font>
 <font color="#006666">      SetGadgetState</font>(<font color="#924B72">#cboPlot2</font>, 1)
@@ -110,22 +110,22 @@ Drawing the wave forms - demonstrates the <a href="../2ddrawing/linexy.html">Lin
     
     <font color="#006666">; Set label text 1.</font>
     <b><font color="#006666">If</font></b> alngPlot1 = 0 
-      strFunc1 = "Sin(X)"
+      strFunc1 = &quot;Sin(X)&quot;
     <b><font color="#006666">Else</font></b>
-      strFunc1 = "Sin(X * " +<font color="#006666"> StrU</font>(alngPlot1 + 1) + ")"
+      strFunc1 = &quot;Sin(X * &quot; +<font color="#006666"> StrU</font>(alngPlot1 + 1) + &quot;)&quot;
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Set label text 2.</font>
     <b><font color="#006666">If</font></b> alngPlot2 = 0 
-      strFunc2 = "Sin(X)"
+      strFunc2 = &quot;Sin(X)&quot;
     <b><font color="#006666">Else</font></b>
-      strFunc2 = "Sin(X * " +<font color="#006666"> StrU</font>(alngPlot2 + 1) + ")"
+      strFunc2 = &quot;Sin(X * &quot; +<font color="#006666"> StrU</font>(alngPlot2 + 1) + &quot;)&quot;
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Set label text.</font>
-    strLabel1 = "Y = " + strFunc1
-    strLabel2 = "Y = " + strFunc2
-    strLabel3 = "Y = " + strFunc1 + " + " + strFunc2 
+    strLabel1 = &quot;Y = &quot; + strFunc1
+    strLabel2 = &quot;Y = &quot; + strFunc2
+    strLabel3 = &quot;Y = &quot; + strFunc1 + &quot; + &quot; + strFunc2 
     
     <font color="#006666">; Draw legend.</font>
 <font color="#006666">    StartDrawing</font>(<font color="#006666">ImageOutput</font>(<font color="#924B72">#drgPlot</font>))

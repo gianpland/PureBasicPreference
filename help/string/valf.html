@@ -8,7 +8,7 @@ Result.f = <font color="#006666"><b>ValF</b></font>(String$)</blockquote>
 <b>Description</b><br><blockquote>
 
 Converts a string into a float value. The string must be a float in 
-decimal format. The number parsing stops at the first non numeric character. 
+decimal or in scientific (exponent) format. The number parsing stops at the first non numeric character. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -32,13 +32,14 @@ Strings holding an integer can also be converted with <a href="val.html">Val()</
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">ValF</font>("10.24") <font color="#006666">; Will display 10.24.</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">ValF</font>(&quot;10.24&quot;)     <font color="#006666">; will display 10.24</font>
+  <b><font color="#006666">Debug</font></b> <font color="#006666">ValF</font>(&quot;1.2345e+3&quot;) <font color="#006666">; will display 1234.5</font>
 </font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="vald.html">ValD()</a>, <a href="val.html">Val()</a>, <a href="str.html">Str()</a>, <a href="strf.html">StrF()</a>, <a href="strd.html">StrD()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=vald.html>ValD()</a> - <a href=index.html>String Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=vald.html>ValD()</a> - <a href=index.html>String Index</a><br><br>
 
 </body></html>

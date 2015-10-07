@@ -7,7 +7,7 @@ Result$ = <font color="#006666"><b>ReplaceRegularExpression</b></font>(#RegularE
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Replaces all strings matching the #RegularExpression with 'ReplaceString$'. 
+Replaces all strings matching the #RegularExpression with &apos;ReplaceString$&apos;. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -33,7 +33,7 @@ The string to use to replace the matched expression.
 </table>
 </blockquote><p><b>Return value</b></p><blockquote>
 
-Returns a new string with all matched expressions replaced with 'ReplaceString$'. 
+Returns a new string with all matched expressions replaced with &apos;ReplaceString$&apos;. 
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
@@ -43,11 +43,11 @@ combined with <a href="../string/replacestring.html">ReplaceString()</a> should 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; This expression will match every word of 3 letter which begin by a lower case letter,</font>
-  <font color="#006666">; followed with the character 'b' and which ends with an uppercase letter. ex: abC</font>
+  <font color="#006666">; followed with the character &apos;b&apos; and which ends with an uppercase letter. ex: abC</font>
   <font color="#006666">;    </font>
-  <b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, "[a-z]b[A-Z]")
-    Result$ =<font color="#006666"> ReplaceRegularExpression</font>(0, "abC ABc zbA abc", "---")
-    <b><font color="#006666">Debug</font></b> Result$ <font color="#006666">; Will print "--- ABc --- abc"</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, &quot;[a-z]b[A-Z]&quot;)
+    Result$ =<font color="#006666"> ReplaceRegularExpression</font>(0, &quot;abC ABc zbA abc&quot;, &quot;---&quot;)
+    <b><font color="#006666">Debug</font></b> Result$ <font color="#006666">; Will print &quot;--- ABc --- abc&quot;</font>
   <b><font color="#006666">Else</font></b>
     <b><font color="#006666">Debug</font></b> <font color="#006666">RegularExpressionError</font>()
   <b><font color="#006666">EndIf</font></b>
@@ -57,6 +57,6 @@ combined with <a href="../string/replacestring.html">ReplaceString()</a> should 
 
 <a href="createregularexpression.html">CreateRegularExpression()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=regularexpressionnamedgroupposition.html>RegularExpressionNamedGroupPosition()</a> - <a href=index.html>RegularExpression Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=regularexpressionnamedgroupposition.html>RegularExpressionNamedGroupPosition()</a> - <a href=index.html>RegularExpression Index</a><br><br>
 
 </body></html>

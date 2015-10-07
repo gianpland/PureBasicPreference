@@ -42,10 +42,10 @@ a <a href="../reference/memory.html">pointer</a> to the new element data.
 
   <font color="#006666">; This shows how to use the return-value of InsertElement</font>
   <b><font color="#006666">NewList</font></b> <font color="#006666">advanced</font>.l()
-  <b><font color="#006666">If</font></b> <font color="#006666">InsertElement</font>(<font color="#006666">advanced</font>()) &#060;&#062; 0
+  <b><font color="#006666">If</font></b> <font color="#006666">InsertElement</font>(<font color="#006666">advanced</font>()) &lt;&gt; 0
 <font color="#006666">    advanced</font>() = 12345
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error!", "Unable to allocate memory for new element", <font color="#924B72">#PB_MessageRequester_OK</font>)
+<font color="#006666">    MessageRequester</font>(&quot;Error!&quot;, &quot;Unable to allocate memory for new element&quot;, <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">EndIf</font></b>
 
 
@@ -58,11 +58,11 @@ a <a href="../reference/memory.html">pointer</a> to the new element data.
   <b><font color="#006666">NewList</font></b> <font color="#006666">Programmers</font>.Programmer()  <font color="#006666">; The list for storing the elements</font>
 
   *Element.Programmer =<font color="#006666"> InsertElement</font>(<font color="#006666">Programmers</font>())
-  <b><font color="#006666">If</font></b> *Element&#060;&#062;0
-    *Element\Name = "Dave"
+  <b><font color="#006666">If</font></b> *Element&lt;&gt;0
+    *Element\Name = &quot;Dave&quot;
     *Element\Strength = 3   <font color="#006666">; Wow, super-strong geek! ;)</font>
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error!", "Unable to allocate memory for new element", <font color="#924B72">#PB_MessageRequester_OK</font>)
+<font color="#006666">    MessageRequester</font>(&quot;Error!&quot;, &quot;Unable to allocate memory for new element&quot;, <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -70,6 +70,6 @@ a <a href="../reference/memory.html">pointer</a> to the new element data.
 
 <a href="addelement.html">AddElement()</a>, <a href="deleteelement.html">DeleteElement()</a>, <a href="clearlist.html">ClearList()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=freelist.html>FreeList()</a> - <a href=index.html>List Index</a> - <a href=lastelement.html>LastElement()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=freelist.html>FreeList()</a> - <a href=index.html>List Index</a> - <a href=lastelement.html>LastElement()</a> -><br><br>
 
 </body></html>

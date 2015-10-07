@@ -2,13 +2,13 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">Prototypes</font></b></p>
 
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Prototype</font></b>.&#060;type&#062; name(&#060;parameter&#062;, [, &#060;parameter&#062; [= DefaultValue]...])
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Prototype</font></b>.&lt;type&gt; name(&lt;parameter&gt;, [, &lt;parameter&gt; [= DefaultValue]...])
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
 
 For advanced programmers. <b><font color="#006666">Prototype</font></b> allows to declare a type which will map 
-a function. It's useful when used with a variable, to do a function pointer (the 
+a function. It&apos;s useful when used with a variable, to do a function pointer (the 
 variable value will be the address the function to call, and can be changed at will). 
 <br>
 <br>
@@ -39,13 +39,13 @@ value.
 <pre><font face="Courier New, Courier, mono"size="2">
   <b><font color="#006666">Prototype</font></b>.i <font color="#006666">ProtoMessageBox</font>(Window.i, Body$, Title$, Flags.i = 0)
 
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, "User32.dll")
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, &quot;User32.dll&quot;)
    
-    <font color="#006666">; 'MsgBox' is a variable with a 'ProtoMessageBox' type</font>
+    <font color="#006666">; &apos;MsgBox&apos; is a variable with a &apos;ProtoMessageBox&apos; type</font>
     <font color="#006666">;</font>
-    MsgBox.ProtoMessageBox =<font color="#006666"> GetFunction</font>(0, "MessageBoxA")
+    MsgBox.ProtoMessageBox =<font color="#006666"> GetFunction</font>(0, &quot;MessageBoxA&quot;)
     
-<font color="#006666">    MsgBox</font>(0, "Hello", "World") <font color="#006666">; We don't specify the flags</font>
+<font color="#006666">    MsgBox</font>(0, &quot;Hello&quot;, &quot;World&quot;) <font color="#006666">; We don&apos;t specify the flags</font>
   <b><font color="#006666">EndIf</font></b>
     
 </font></pre>
@@ -54,19 +54,19 @@ value.
 </blockquote><p><b>Example:</b> With pseudotypes</p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; We use the 'p-unicode' pseudotype for the string parameters, as</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; We use the &apos;p-unicode&apos; pseudotype for the string parameters, as</font>
   <font color="#006666">; MessageBoxW() is an unicode only function. The compiler will </font>
   <font color="#006666">; automatically converts the strings to unicode when needed.</font>
   <font color="#006666">;</font>
   <b><font color="#006666">Prototype</font></b>.i <font color="#006666">ProtoMessageBoxW</font>(Window.i, Body.p-unicode, Title.p-unicode, Flags.i = 0)
 
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, "User32.dll")
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, &quot;User32.dll&quot;)
    
-    <font color="#006666">; 'MsgBox' is a variable with a 'ProtoMessageBoxW' type</font>
+    <font color="#006666">; &apos;MsgBox&apos; is a variable with a &apos;ProtoMessageBoxW&apos; type</font>
     <font color="#006666">;</font>
-    MsgBox.ProtoMessageBoxW =<font color="#006666"> GetFunction</font>(0, "MessageBoxW")
+    MsgBox.ProtoMessageBoxW =<font color="#006666"> GetFunction</font>(0, &quot;MessageBoxW&quot;)
     
-<font color="#006666">    MsgBox</font>(0, "Hello", "World") <font color="#006666">; We don't specify the flags</font>
+<font color="#006666">    MsgBox</font>(0, &quot;Hello&quot;, &quot;World&quot;) <font color="#006666">; We don&apos;t specify the flags</font>
   <b><font color="#006666">EndIf</font></b>
     
 </font></pre>

@@ -12,17 +12,17 @@
 </font>
 <font color="#006666">;Speed animation = PageUp and PageDown 
 </font>
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY, Speed = 0.3
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
   
     
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Scripts", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Scripts&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
 <font color="#006666">  Parse3DScripts</font>()
   
 <font color="#006666">  InitSprite</font>()
@@ -35,14 +35,14 @@
     
     <font color="#006666">;Ground
 </font>    <font color="#006666">;
-</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Dirt.jpg"))
+</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, &quot;Dirt.jpg&quot;))
 <font color="#006666">    CreatePlane</font>(0, 1500, 1500, 40, 40, 15, 15)
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666">MeshID</font>(0),<font color="#006666">MaterialID</font>(0))
 <font color="#006666">    EntityRenderMode</font>(0, 0)
     
     <font color="#006666">;Mesh
 </font>    <font color="#006666">;
-</font><font color="#006666">    LoadMesh</font>(1, "robot.mesh")
+</font><font color="#006666">    LoadMesh</font>(1, &quot;robot.mesh&quot;)
     
     <font color="#006666">; Entity
 </font>    <font color="#006666">;
@@ -50,11 +50,11 @@
     
     <font color="#006666">; Animation
 </font>    <font color="#006666">;
-</font><font color="#006666">    StartEntityAnimation</font>(1, "Walk", <font color="#924B72">#PB_EntityAnimation_Manual</font>)
+</font><font color="#006666">    StartEntityAnimation</font>(1, &quot;Walk&quot;, <font color="#924B72">#PB_EntityAnimation_Manual</font>)
      
     <font color="#006666">; SkyBox
 </font>    <font color="#006666">;
-</font><font color="#006666">    SkyBox</font>("Desert07.jpg")
+</font><font color="#006666">    SkyBox</font>(&quot;Desert07.jpg&quot;)
     
     <font color="#006666">; Camera
 </font>    <font color="#006666">;
@@ -93,15 +93,15 @@
           KeyY = 0
         <b><font color="#006666">EndIf</font></b>
         
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Speed &#060; 2.0
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Speed &lt; 2.0
           Speed + 0.05
-        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &#062; 0.1 
+        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &gt; 0.1 
           Speed - 0.05
         <b><font color="#006666">EndIf</font></b>
                 
       <b><font color="#006666">EndIf</font></b>
 
-<font color="#006666">      AddEntityAnimationTime</font>(1, "Walk", TimeSinceLastFrame * Speed)
+<font color="#006666">      AddEntityAnimationTime</font>(1, &quot;Walk&quot;, TimeSinceLastFrame * Speed)
                 
 <font color="#006666">      RotateCamera</font>(0, MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)
 <font color="#006666">      MoveCamera  </font>(0, KeyX, 0, KeyY)
@@ -113,7 +113,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">End</font></b></font></pre>

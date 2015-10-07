@@ -134,7 +134,7 @@ the way those collections work.
     <b><font color="#006666">Protected</font></b>.i ThisWindow
     <b><font color="#006666">Protected</font></b>.s ThisKey
     
-    ThisWindow =<font color="#006666"> OpenWindow</font>(<font color="#924B72">#PB_Any</font>, 50, 50, 300, 300, "Polygon", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)  
+    ThisWindow =<font color="#006666"> OpenWindow</font>(<font color="#924B72">#PB_Any</font>, 50, 50, 300, 300, &quot;Polygon&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)  
     
 <font color="#006666">    WindowBounds</font>(ThisWindow, 250, 250, <font color="#924B72">#PB_Ignore</font>, <font color="#924B72">#PB_Ignore</font>)
     
@@ -147,25 +147,25 @@ the way those collections work.
       
       <font color="#006666">; Create the menu bar.</font>
 <font color="#006666">      ActiveWindows</font>(ThisKey)\Menu =<font color="#006666"> CreateMenu</font>(<font color="#924B72">#PB_Any</font>,<font color="#006666"> WindowID</font>(ThisWindow))
-<font color="#006666">      MenuTitle</font>("Window")
-<font color="#006666">      MenuItem</font>(<font color="#924B72">#MenuNew</font>, "New Window")
-<font color="#006666">      MenuItem</font>(<font color="#924B72">#MenuClose</font>, "Close Window")
+<font color="#006666">      MenuTitle</font>(&quot;Window&quot;)
+<font color="#006666">      MenuItem</font>(<font color="#924B72">#MenuNew</font>, &quot;New Window&quot;)
+<font color="#006666">      MenuItem</font>(<font color="#924B72">#MenuClose</font>, &quot;Close Window&quot;)
       
       <font color="#006666">; Create the child gadgets and store their references in the map.</font>
       <b><font color="#006666">With</font></b> <font color="#006666">ActiveWindows</font>()
         <font color="#006666">; A label for the combo.</font>
-        \LabelSides =<font color="#006666"> TextGadget</font>(<font color="#924B72">#PB_Any</font>, 5, 5, 150, 20, "Number of Sides:")
+        \LabelSides =<font color="#006666"> TextGadget</font>(<font color="#924B72">#PB_Any</font>, 5, 5, 150, 20, &quot;Number of Sides:&quot;)
         
         <font color="#006666">; The Sides combo.</font>
         \ComboSides =<font color="#006666"> ComboBoxGadget</font>(<font color="#924B72">#PB_Any</font>, 160, 5, 100, 25)
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 0, "Triangle")
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 1, "Diamond")
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 2, "Pentagon")
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 3, "Hexagon")
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 4, "Heptagon")
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 5, "Octagon")
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 6, "Nonagon")
-<font color="#006666">        AddGadgetItem</font>(\ComboSides, 7, "Decagon")
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 0, &quot;Triangle&quot;)
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 1, &quot;Diamond&quot;)
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 2, &quot;Pentagon&quot;)
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 3, &quot;Hexagon&quot;)
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 4, &quot;Heptagon&quot;)
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 5, &quot;Octagon&quot;)
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 6, &quot;Nonagon&quot;)
+<font color="#006666">        AddGadgetItem</font>(\ComboSides, 7, &quot;Decagon&quot;)
         
         <font color="#006666">; Select Triangle.</font>
 <font color="#006666">        SetGadgetState</font>(\ComboSides, 0)
@@ -235,7 +235,7 @@ the way those collections work.
     Height =<font color="#006666"> GadgetHeight</font>(ThisImage) - 4
     OriginX = Width/2
     OriginY = Height/2
-    <b><font color="#006666">If</font></b> Width &#060; Height
+    <b><font color="#006666">If</font></b> Width &lt; Height
       Radius = OriginX - 50
     <b><font color="#006666">Else</font></b>
       Radius = OriginY - 50
@@ -326,7 +326,7 @@ the way those collections work.
         <b><font color="#006666">EndIf</font></b>
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Repaint</font>
-        <font color="#006666">; A window's content has been invalidated.</font>
+        <font color="#006666">; A window&apos;s content has been invalidated.</font>
 <font color="#006666">        PlotPolygon</font>(EventWindow)
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_SizeWindow</font>

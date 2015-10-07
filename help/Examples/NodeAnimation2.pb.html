@@ -10,10 +10,10 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 
-</font><font color="#006666">; Try to play with 'Weight' (and look at cylinder with red ribbon)
+</font><font color="#006666">; Try to play with &apos;Weight&apos; (and look at cylinder with red ribbon)
 </font><font color="#924B72">#Weight</font> = 1 <font color="#006666">; try different values btw 0 to 1
 
-</font><b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+</font><b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Declare</font></b> <font color="#006666">AddPath0</font>(No)
 <b><font color="#006666">Declare</font></b> <font color="#006666">AddPath1</font>(No)
@@ -27,17 +27,17 @@
 <font color="#006666">  InitMouse</font>()
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data"                , <font color="#924B72">#PB_3DArchive_FileSystem</font>)    
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures"        , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models"          , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Scripts"         , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/skybox.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data&quot;                , <font color="#924B72">#PB_3DArchive_FileSystem</font>)    
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;        , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;          , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Scripts&quot;         , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/skybox.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
 <font color="#006666">    Parse3DScripts</font>()
     
 <font color="#006666">    WorldShadows</font>(<font color="#924B72">#PB_Shadow_Additive</font>)
     
     <font color="#006666">;- Ground
-</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Dirt.jpg"))
+</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, &quot;Dirt.jpg&quot;))
 <font color="#006666">    CreatePlane</font>(0, 1200, 1200, 1, 1, 5, 5)
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666"> MeshID</font>(0),<font color="#006666"> MaterialID</font>(0), 500, 0, -500)
 
@@ -81,7 +81,7 @@
     
     <font color="#006666">;create 3 ribbon trails, just For fun
 </font>    <font color="#006666">;
-</font><font color="#006666">    GetScriptMaterial</font>(1, "Examples/LightRibbonTrail")
+</font><font color="#006666">    GetScriptMaterial</font>(1, &quot;Examples/LightRibbonTrail&quot;)
 <font color="#006666">    CreateRibbonEffect</font>(0,<font color="#006666"> MaterialID</font>(1), 1, 80, 1800)
 <font color="#006666">    RibbonEffectColor</font>(0, 0,<font color="#006666"> RGBA</font>(255*0.8, 255*0.8, 0, 255),<font color="#006666"> RGBA</font>(1, 255, 255, 5))
 <font color="#006666">    RibbonEffectWidth</font>(0, 0, 8, 3) 
@@ -129,7 +129,7 @@
     
   <b><font color="#006666">EndIf</font></b> 
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error","Can't initialize engine3D")
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;,&quot;Can&apos;t initialize engine3D&quot;)
 <b><font color="#006666">EndIf</font></b> 
 
 <b><font color="#006666">Procedure</font></b> <font color="#006666">AddPath0</font>(NodeAnimation)

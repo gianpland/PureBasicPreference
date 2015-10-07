@@ -2,8 +2,8 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">Working with different number bases</font></b></p>
 
-(Note: These examples use the ^ symbol to mean 'raised to the power of' - this is only for convenience in this document, 
-PureBasic does not currently have a power-of operator! Use the PureBasic command Pow() from the "Math" Library instead.) 
+(Note: These examples use the ^ symbol to mean &apos;raised to the power of&apos; - this is only for convenience in this document, 
+PureBasic does not currently have a power-of operator! Use the PureBasic command Pow() from the &quot;Math&quot; Library instead.) 
 
 <p><b>Introduction</b></p><blockquote>
 
@@ -24,7 +24,7 @@ understand this (for example, when using logical operators, bit masks, etc).
 <p><b>Decimal System</b></p><blockquote>
 
 
-Think of a decimal number, and then think of it split into columns. We'll take the example number 1234. 
+Think of a decimal number, and then think of it split into columns. We&apos;ll take the example number 1234. 
 Splitting this into columns gives us: 
 
 <pre><font face="Courier New, Courier, mono"size="2">  1   2   3   4
@@ -46,15 +46,15 @@ We can see that the number 1234 is made up out of
   Total   =1234
 </font></pre>
 
-If we also look at the column headings, you'll see that each time you move one column to the left we 
+If we also look at the column headings, you&apos;ll see that each time you move one column to the left we 
 multiply by 10, which just so happens to be the number base. Each time you move one column to the right, 
 you divide by 10. The headings of the columns can be called the weights, since to get the total number 
 we need to multiply the digits in each column by the weight. We can express the weights using indices. 
-For example 10^2 means '10 raised to the power of two' or 1*10*10 (=100). Similarly, 10^4 means 
+For example 10^2 means &apos;10 raised to the power of two&apos; or 1*10*10 (=100). Similarly, 10^4 means 
 1*10*10*10*10 (=10000). Notice the pattern that whatever the index value is, is how many times we multiply 
 the number being raised. 10^0 means 1 (since we multiply by 10 no times). Using negative numbers shows 
 that we need to divide, so for example 10^-2 means 1/10/10 (=0.01). The index values make more sense when 
-we give each column a number - you'll often see things like 'bit 0' which really means 'binary digit in column 0'. 
+we give each column a number - you&apos;ll often see things like &apos;bit 0&apos; which really means &apos;binary digit in column 0&apos;. 
 
 <pre><font face="Courier New, Courier, mono"size="2">  In this example, ^ means raised to the power of, so 10^2 means 10 raised to the power of 2.
   Column number              3     2     1     0
@@ -69,12 +69,12 @@ number to its decimal value:
 
 <pre><font face="Courier New, Courier, mono"size="2">  B = Value of number base
   
-  1) Separate the number in whatever base you have into it's columns. For
-     example, if we had the value 'abcde' in our fictional number base 'B',
+  1) Separate the number in whatever base you have into it&apos;s columns. For
+     example, if we had the value &apos;abcde&apos; in our fictional number base &apos;B&apos;,
      the columns would be:   a   b   c   d   e
   
   2) Multiply each symbol by the weight for that column (the weight being
-     calculated by 'B' raised to the power of the column number):
+     calculated by &apos;B&apos; raised to the power of the column number):
        a * B^4 = a * B * B * B * B
        b * B^3 = b * B * B * B
        c * B^2 = c * B * B
@@ -86,15 +86,15 @@ number to its decimal value:
      result and do the calculation (if we are converting into decimal).
 </font></pre>
 
-Converting in the opposite direction (from decimal to the number base 'B') is done using division 
+Converting in the opposite direction (from decimal to the number base &apos;B&apos;) is done using division 
 instead of multiplication: 
 
 <pre><font face="Courier New, Courier, mono"size="2">  1) Start with the decimal number you want to convert (e.g. 1234).
   
-  2) Divide by the target number base ('B') and keep note of the result and the
+  2) Divide by the target number base (&apos;B&apos;) and keep note of the result and the
      remainder.
   
-  3) Divide the result of (2) by the target number base ('B') and keep note of
+  3) Divide the result of (2) by the target number base (&apos;B&apos;) and keep note of
      the result and the remainder.
   
   4) Keep dividing like this until you end up with a result of 0.
@@ -110,13 +110,13 @@ More specific examples will be given in the sections about the specific number b
 <p><b>Binary System</b></p><blockquote>
 
 
-Everything in a computer is stored in binary (base 2, so giving symbols of '0' or '1') but 
+Everything in a computer is stored in binary (base 2, so giving symbols of &apos;0&apos; or &apos;1&apos;) but 
 working with binary numbers follows the same rules as decimal. Each symbol in a binary 
 number is called a bit, short for binary digit. Generally, you will be working with bytes (8-bit), 
-words (16-bit) or longwords (32-bit) as these are the default sizes of PureBasic's built in types. 
+words (16-bit) or longwords (32-bit) as these are the default sizes of PureBasic&apos;s built in types. 
 The weights for a byte are shown: 
 
-<pre><font face="Courier New, Courier, mono"size="2">  (^ means 'raised to the power of', number base is 2 for binary)
+<pre><font face="Courier New, Courier, mono"size="2">  (^ means &apos;raised to the power of&apos;, number base is 2 for binary)
   Bit/column number         7     6     5     4     3     2     1     0
   Weight (index)          2^7   2^6   2^5   2^4   2^3   2^2   2^1   2^0
   Weight (actual value)   128    64    32    16     8     4     2     1
@@ -152,13 +152,13 @@ An example of converting back would be if we wanted to write the value 69 in bin
 Another thing to consider when working with binary numbers is the representation of negative numbers. 
 In everyday use, we would simply put a negative symbol in front of the decimal number. 
 We cannot do this in binary, but there is a way (after all, PureBasic works mainly with signed numbers, 
-and so must be able to handle negative numbers). This method is called 'twos complement' and apart 
-from all the good features this method has (and won't be explained here, to save some confusion) the simplest 
+and so must be able to handle negative numbers). This method is called &apos;twos complement&apos; and apart 
+from all the good features this method has (and won&apos;t be explained here, to save some confusion) the simplest 
 way to think of it is the weight of the most significant bit (the MSb is the bit number with the highest weight, 
-in the case of a byte, it would be bit 7) is actually a negative value. So for a two's complement system, the 
+in the case of a byte, it would be bit 7) is actually a negative value. So for a two&apos;s complement system, the 
 bit weights are changed to: 
 
-<pre><font face="Courier New, Courier, mono"size="2">  (^ means 'raised to the power of', number base is 2 for binary)
+<pre><font face="Courier New, Courier, mono"size="2">  (^ means &apos;raised to the power of&apos;, number base is 2 for binary)
   Bit/column number         7     6     5     4     3     2     1     0
   Weight (index)         -2^7   2^6   2^5   2^4   2^3   2^2   2^1   2^0
   Weight (actual value)  -128    64    32    16     8     4     2     1
@@ -168,21 +168,21 @@ and you would do the conversion from binary to decimal in exactly the same way a
 of weights. So, for example, the number 10000000 (Base 2) is -128, and 10101010 (Base 2) is -86. <br>
 <br>
 To convert from a positive binary number to a negative binary number and vice versa, you invert all the bits and 
-then add 1. For example, 00100010 would be made negative by inverting -&#062; 11011101 and adding 1 -&#062; 11011110. <br>
+then add 1. For example, 00100010 would be made negative by inverting -&gt; 11011101 and adding 1 -&gt; 11011110. <br>
 <br>
 This makes converting from decimal to binary easier, as you can convert negative decimal numbers as their positive 
 equivalents (using the method shown above) and then make the binary number negative at the end. <br>
 <br>
 Binary numbers are written in PureBasic with a percent symbol in front of them, and obviously all the bits in the number 
-must be a '0' or a '1'. For example, you could use the value %110011 in PureBasic to mean 51. Note that you do not need 
-to put in the leading '0's (that number would really be %00110011) but it might help the readability of your source if 
+must be a &apos;0&apos; or a &apos;1&apos;. For example, you could use the value %110011 in PureBasic to mean 51. Note that you do not need 
+to put in the leading &apos;0&apos;s (that number would really be %00110011) but it might help the readability of your source if 
 you put in the full amount of bits. 
 
 </blockquote>
 <p><b>Hexadecimal System</b></p><blockquote>
 
 
-Hexadecimal (for base 16, symbols '0'-'9' then 'A'-'F') is a number base which is most commonly used when dealing with computers, 
+Hexadecimal (for base 16, symbols &apos;0&apos;-&apos;9&apos; then &apos;A&apos;-&apos;F&apos;) is a number base which is most commonly used when dealing with computers, 
 as it is probably the easiest of the non-base 10 number bases for humans to understand, and you do not end up with 
 long strings of symbols for your numbers (as you get when working in binary). <br>
 <br>

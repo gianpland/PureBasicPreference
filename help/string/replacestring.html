@@ -7,8 +7,8 @@ String$ = <font color="#006666"><b>ReplaceString</b></font>(String$, StringToFin
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Try to find any occurrences of 'StringToFind$' in the given 'String$' and replace them 
-with 'ReplacementString$'. 
+Try to find any occurrences of &apos;StringToFind$&apos; in the given &apos;String$&apos; and replace them 
+with &apos;ReplacementString$&apos;. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -37,7 +37,7 @@ It can be a combination of the following values:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_String_CaseSensitive</font> : Case sensitive search (a=a) (default)
   <font color="#924B72">#PB_String_NoCase</font> : Case insensitive search (A=a)
   <font color="#924B72">#PB_String_InPlace</font>: In-place replacing. This means that the string is replaced directly in the memory.
-                      The 'StringToFind$' and 'ReplacementString$' parameter must have the same length. This is
+                      The &apos;StringToFind$&apos; and &apos;ReplacementString$&apos; parameter must have the same length. This is
                       a dangerous option, for advanced users only. The advantage is the very high speed of the
                       replacement. When using this option, the result of ReplaceString() has to be ignored (and
                       not affected to something, as this is the string passed in parameter which is changed).
@@ -63,11 +63,11 @@ A new string with the replaced strings (see the <font color="#924B72">#PB_String
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">ReplaceString</font>("This is Art", " is", " was") <font color="#006666">; Will display "This was Art"</font>
-  <b><font color="#006666">Debug</font></b> <font color="#006666">ReplaceString</font>("Hello again, hello again", "HELLO", "oh no...", 1, 10) <font color="#006666">; Will display "Hello again, oh no... again"</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">ReplaceString</font>(&quot;This is Art&quot;, &quot; is&quot;, &quot; was&quot;) <font color="#006666">; Will display &quot;This was Art&quot;</font>
+  <b><font color="#006666">Debug</font></b> <font color="#006666">ReplaceString</font>(&quot;Hello again, hello again&quot;, &quot;HELLO&quot;, &quot;oh no...&quot;, 1, 10) <font color="#006666">; Will display &quot;Hello again, oh no... again&quot;</font>
 
-  test$ = "Bundy, Barbie, Buddy"
-<font color="#006666">  ReplaceString</font>(test$, "B", "Z", 2, 1)  <font color="#006666">; all B gets changed to Z  (directly in memory, no valid return-value here)</font>
+  test$ = &quot;Bundy, Barbie, Buddy&quot;
+<font color="#006666">  ReplaceString</font>(test$, &quot;B&quot;, &quot;Z&quot;, 2, 1)  <font color="#006666">; all B gets changed to Z  (directly in memory, no valid return-value here)</font>
   <b><font color="#006666">Debug</font></b> test$   <font color="#006666">; Output of the changed string</font>
 </font></pre>
 
@@ -75,6 +75,6 @@ A new string with the replaced strings (see the <font color="#924B72">#PB_String
 
 <a href="removestring.html">RemoveString()</a>, <a href="insertstring.html">InsertString()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removestring.html>RemoveString()</a> - <a href=index.html>String Index</a> - <a href=reversestring.html>ReverseString()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removestring.html>RemoveString()</a> - <a href=index.html>String Index</a> - <a href=reversestring.html>ReverseString()</a> -><br><br>
 
 </body></html>

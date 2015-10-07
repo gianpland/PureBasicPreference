@@ -10,9 +10,9 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font><font color="#006666">; It can take few minutes to build all terrains (it will be more faster after saving it)
-</font><font color="#006666">MessageRequester</font>("Warning !", "It can take a few minutes to build all terrains...", 0) 
+</font><font color="#006666">MessageRequester</font>(&quot;Warning !&quot;, &quot;It can take a few minutes to build all terrains...&quot;, 0) 
 
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <font color="#924B72">#CameraSpeed</font> = 2
 <font color="#924B72">#TerrainMiniX</font> = -1
@@ -25,7 +25,7 @@
 
 <font color="#006666">; OpenGL needs to have CG enabled to work (Linux and OS X have OpenGL by default)
 </font><font color="#006666">;
-</font><b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> &#060;&#062; <font color="#924B72">#PB_OS_Windows</font> <b><font color="#006666">Or</font></b> <font color="#006666">Subsystem</font>("OpenGL")
+</font><b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> &lt;&gt; <font color="#924B72">#PB_OS_Windows</font> <b><font color="#006666">Or</font></b> <font color="#006666">Subsystem</font>(&quot;OpenGL&quot;)
   Flags = <font color="#924B72">#PB_Engine3D_EnableCG</font>
 <b><font color="#006666">CompilerEndIf</font></b>
 
@@ -36,9 +36,9 @@
 <font color="#006666">  InitMouse</font>()
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures/", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures/nvidia", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures/&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures/nvidia&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
     
     <font color="#006666">;- Light 
 </font>    <font color="#006666">;
@@ -57,16 +57,16 @@
     <font color="#006666">;- Terrain definition
 </font><font color="#006666">    SetupTerrains</font>(<font color="#006666">LightID</font>(Light), 3000, <font color="#924B72">#PB_Terrain_NormalMapping</font>)
     <font color="#006666">; initialize terrain
-</font><font color="#006666">    CreateTerrain</font>(0, 513, 12000, 600, 3, "TerrainGroup", "dat")
+</font><font color="#006666">    CreateTerrain</font>(0, 513, 12000, 600, 3, &quot;TerrainGroup&quot;, &quot;dat&quot;)
     <font color="#006666">; set all texture will be use when terrrain will be constructed 
-</font><font color="#006666">    AddTerrainTexture</font>(0,  0, 100, "dirt_grayrocky_diffusespecular.jpg",  "dirt_grayrocky_normalheight.jpg")
-<font color="#006666">    AddTerrainTexture</font>(0,  1,  30, "grass_green-01_diffusespecular.jpg", "grass_green-01_normalheight.jpg")
-<font color="#006666">    AddTerrainTexture</font>(0,  2, 200, "growth_weirdfungus-03_diffusespecular.jpg", "growth_weirdfungus-03_normalheight.jpg")
+</font><font color="#006666">    AddTerrainTexture</font>(0,  0, 100, &quot;dirt_grayrocky_diffusespecular.jpg&quot;,  &quot;dirt_grayrocky_normalheight.jpg&quot;)
+<font color="#006666">    AddTerrainTexture</font>(0,  1,  30, &quot;grass_green-01_diffusespecular.jpg&quot;, &quot;grass_green-01_normalheight.jpg&quot;)
+<font color="#006666">    AddTerrainTexture</font>(0,  2, 200, &quot;growth_weirdfungus-03_diffusespecular.jpg&quot;, &quot;growth_weirdfungus-03_normalheight.jpg&quot;)
     
     <font color="#006666">; Build terrains
 </font>    <b><font color="#006666">For</font></b> ty = <font color="#924B72">#TerrainMiniY</font> <b><font color="#006666">To</font></b> <font color="#924B72">#TerrainMaxiY</font>
       <b><font color="#006666">For</font></b> tx = <font color="#924B72">#TerrainMiniX</font> <b><font color="#006666">To</font></b> <font color="#924B72">#TerrainMaxiX</font>
-        Imported =<font color="#006666"> DefineTerrainTile</font>(0, tx, ty, "terrain513.png", ty % 2, tx % 2)  
+        Imported =<font color="#006666"> DefineTerrainTile</font>(0, tx, ty, &quot;terrain513.png&quot;, ty % 2, tx % 2)  
       <b><font color="#006666">Next</font></b>
     <b><font color="#006666">Next</font></b>  
 <font color="#006666">    BuildTerrain</font>(0)  
@@ -81,7 +81,7 @@
     
     <font color="#006666">; SkyBox
 </font>    <font color="#006666">;
-</font><font color="#006666">    SkyBox</font>("desert07.jpg")
+</font><font color="#006666">    SkyBox</font>(&quot;desert07.jpg&quot;)
     
     <b><font color="#006666">Repeat</font></b>
 <font color="#006666">      Screen3DEvents</font>()
@@ -123,21 +123,21 @@
     
   <b><font color="#006666">EndIf</font></b> 
 <b><font color="#006666">Else</font></b>
-  <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> &#060;&#062; <font color="#924B72">#PB_OS_Windows</font> <b><font color="#006666">Or</font></b> <font color="#006666">Subsystem</font>("OpenGL")
+  <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> &lt;&gt; <font color="#924B72">#PB_OS_Windows</font> <b><font color="#006666">Or</font></b> <font color="#006666">Subsystem</font>(&quot;OpenGL&quot;)
     <font color="#006666">;
 </font>    <font color="#006666">; Terrain on Linux/OSX and Windows with OpenGL needs CG toolkit from nvidia
 </font>    <font color="#006666">; It can be freely downloaded and installed from this site: https://developer.nvidia.com/cg-toolkit-download
 </font>    <font color="#006666">;
-</font><font color="#006666">    MessageRequester</font>("Error","Can't initialize engine3D (Please ensures than CG Toolkit from nvidia is correcly installed)")
+</font><font color="#006666">    MessageRequester</font>(&quot;Error&quot;,&quot;Can&apos;t initialize engine3D (Please ensures than CG Toolkit from nvidia is correcly installed)&quot;)
   <b><font color="#006666">CompilerElse</font></b>
-<font color="#006666">    MessageRequester</font>("Error","Can't initialize engine3D")
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;,&quot;Can&apos;t initialize engine3D&quot;)
   <b><font color="#006666">CompilerEndIf</font></b>
 <b><font color="#006666">EndIf</font></b> 
 
 <b><font color="#006666">Procedure</font></b> <font color="#006666">Clamp</font>(*var.float, min.f, max.f)
-  <b><font color="#006666">If</font></b> *var\f &#060; min
+  <b><font color="#006666">If</font></b> *var\f &lt; min
     *var\f = min
-  <b><font color="#006666">ElseIf</font></b> *var\f &#062; max
+  <b><font color="#006666">ElseIf</font></b> *var\f &gt; max
     *var\f = max
   <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">EndProcedure</font></b>  

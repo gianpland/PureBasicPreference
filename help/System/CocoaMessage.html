@@ -7,8 +7,8 @@ Result = <font color="#006666"><b>CocoaMessage</b></font>(ReturnValueAddress, Ob
 <b>Description</b><br><blockquote>
 
 For advanced users. Available on OS X only, it allows to easily send an Objective-C message to the OS X framework and access 
-any API. Usually Objective-C use brackets to have a clear syntax for messages. As PureBasic doesn't have built-in Objective-C 
-support, it needs to emulate it, so the syntax is a bit different. Once learnt, it's easy to call the required API. 
+any API. Usually Objective-C use brackets to have a clear syntax for messages. As PureBasic doesn&apos;t have built-in Objective-C 
+support, it needs to emulate it, so the syntax is a bit different. Once learnt, it&apos;s easy to call the required API. 
 To get more examples, please read the following thread on the <a href="http://www.purebasic.fr/english/viewtopic.php?f=19&t=50795">forums</a>. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
@@ -19,7 +19,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <table width="90%" class="parameters">
 <tr><td width="10%"><i>ReturnValueAddress</i></td>
 <td width="90%"> 
-If the API call return a structure or a type different than 'integer', this field is used to set the returning result. 
+If the API call return a structure or a type different than &apos;integer&apos;, this field is used to set the returning result. 
 An address to the structure or variable needs to be specified. If zero is specified, the result will be ignored. 
 
 </td></tr>
@@ -31,10 +31,10 @@ The object on which the Objective-C methods will be called. It can be zero if th
 </td></tr>
 <tr><td><i>Method$</i></td>
 <td> 
-The method to call on the object, usually followed by a semicolon (':'). If the method needs a structure as parameter, '@' 
-needs to be appended after the semicolon. If the method expect a string as parameter, '$' can be appended after the 
+The method to call on the object, usually followed by a semicolon (&apos;:&apos;). If the method needs a structure as parameter, &apos;@&apos; 
+needs to be appended after the semicolon. If the method expect a string as parameter, &apos;$&apos; can be appended after the 
 semicolon, so the string will be automatically converted in a temporary NSString. This is not required, but it can be useful 
-and ease the coding. If the method isn't supported by the object, a debugger message will be raised at runtime. 
+and ease the coding. If the method isn&apos;t supported by the object, a debugger message will be raised at runtime. 
 
 </td></tr>
 <tr><td><i>ParameterValue (optional)</i></td>
@@ -60,9 +60,9 @@ to release big objects immediately, you will have to create a local memory pool 
 </blockquote><p><b>Example:</b> with string</p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Objective-C: </font>
-  <font color="#006666">;   ColorList = [NSColorList colorListNamed:@"Crayons"];</font>
+  <font color="#006666">;   ColorList = [NSColorList colorListNamed:@&quot;Crayons&quot;];</font>
   <font color="#006666">;</font>
-  ColorList =<font color="#006666"> CocoaMessage</font>(0, 0, "NSColorList colorListNamed:$", @"Crayons") <font color="#006666">; Will create an NSString for "Crayons" under the hood (respecting ascii/unicode mode of the program)</font>
+  ColorList =<font color="#006666"> CocoaMessage</font>(0, 0, &quot;NSColorList colorListNamed:$&quot;, @&quot;Crayons&quot;) <font color="#006666">; Will create an NSString for &quot;Crayons&quot; under the hood (respecting ascii/unicode mode of the program)</font>
 </font></pre>
 
 </blockquote><p><b>Example:</b> with complex type</p><blockquote>
@@ -70,23 +70,23 @@ to release big objects immediately, you will have to create a local memory pool 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Objective-C: </font>
   <font color="#006666">;   Transform = [NSAffineTransform transform];</font>
   <font color="#006666">;</font>
-  Transform =<font color="#006666"> CocoaMessage</font>(0, 0, "NSAffineTransform transform") <font color="#006666">; Get an identity transform</font>
+  Transform =<font color="#006666"> CocoaMessage</font>(0, 0, &quot;NSAffineTransform transform&quot;) <font color="#006666">; Get an identity transform</font>
 
   <font color="#006666">; Objective-C: </font>
   <font color="#006666">;   [TransForm scaleXBy:sx yBy:sy];</font>
   <font color="#006666">;</font>
   sx.CGFloat = 5.5
   sy.CGFloat = 20
-<font color="#006666">  CocoaMessage</font>(0, TransForm, "scaleXBy:@", @sx, "yBy:@", @sy) <font color="#006666">; Scale x by 5.5, y by 20. As sx is not an integer, '@' needs to be specified</font>
+<font color="#006666">  CocoaMessage</font>(0, TransForm, &quot;scaleXBy:@&quot;, @sx, &quot;yBy:@&quot;, @sy) <font color="#006666">; Scale x by 5.5, y by 20. As sx is not an integer, &apos;@&apos; needs to be specified</font>
   
   <font color="#006666">; Objective-C: </font>
   <font color="#006666">;   NSAffineTransform TransformStruct = [TransForm transformStruct];</font>
   <font color="#006666">;</font>
-<font color="#006666">  CocoaMessage</font>(@TransformStruct.NSAffineTransform, TransForm, "transformStruct") <font color="#006666">; Get the transform structure</font>
+<font color="#006666">  CocoaMessage</font>(@TransformStruct.NSAffineTransform, TransForm, &quot;transformStruct&quot;) <font color="#006666">; Get the transform structure</font>
   
   <b><font color="#006666">Debug</font></b> TransformStruct\m11 <font color="#006666">; debug outputs 5.5</font>
 </font></pre>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>MacOS X</Blockquote></p><center><- <a href=cpuname.html>CPUName()</a> - <a href=index.html>System Index</a> - <a href=computername.html>ComputerName()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>MacOS X</Blockquote></p><center><- <a href=cpuname.html>CPUName()</a> - <a href=index.html>System Index</a> - <a href=computername.html>ComputerName()</a> -><br><br>
 
 </body></html>

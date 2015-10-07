@@ -78,25 +78,25 @@ If an array is not fully filled then null elements will be sorted first in ascen
 
   <b><font color="#006666">Dim</font></b> <font color="#006666">Animals</font>.Animal(2)
 
-<font color="#006666">  Animals</font>(0)\Name$ = "Tiger"
+<font color="#006666">  Animals</font>(0)\Name$ = &quot;Tiger&quot;
 <font color="#006666">  Animals</font>(0)\Speed = 10
 
-<font color="#006666">  Animals</font>(1)\Name$ = "Jaguar"
+<font color="#006666">  Animals</font>(1)\Name$ = &quot;Jaguar&quot;
 <font color="#006666">  Animals</font>(1)\Speed = 40
 
-<font color="#006666">  Animals</font>(2)\Name$ = "Zebra"
+<font color="#006666">  Animals</font>(2)\Name$ = &quot;Zebra&quot;
 <font color="#006666">  Animals</font>(2)\Speed = 30
 
 <font color="#006666">  SortStructuredArray</font>(<font color="#006666">Animals</font>(), 0,<font color="#006666"> OffsetOf</font>(Animal\Name$),<font color="#006666"> TypeOf</font>(Animal\Name$))
 
   <b><font color="#006666">For</font></b> k=0 <b><font color="#006666">To</font></b> 2
-    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>(k)\Name$+" - Speed: "+<font color="#006666">Str</font>(<font color="#006666">Animals</font>(k)\Speed)
+    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>(k)\Name$+&quot; - Speed: &quot;+<font color="#006666">Str</font>(<font color="#006666">Animals</font>(k)\Speed)
   <b><font color="#006666">Next</font></b>
 
 <font color="#006666">  SortStructuredArray</font>(<font color="#006666">Animals</font>(), 0,<font color="#006666"> OffsetOf</font>(Animal\Speed),<font color="#006666"> TypeOf</font>(Animal\Speed))
 
   <b><font color="#006666">For</font></b> k=0 <b><font color="#006666">To</font></b> 2
-    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>(k)\Name$+" - Speed: "+<font color="#006666">Str</font>(<font color="#006666">Animals</font>(k)\Speed)
+    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>(k)\Name$+&quot; - Speed: &quot;+<font color="#006666">Str</font>(<font color="#006666">Animals</font>(k)\Speed)
   <b><font color="#006666">Next</font></b>
 
 </font></pre>
@@ -105,6 +105,6 @@ If an array is not fully filled then null elements will be sorted first in ascen
 
 <a href="sortarray.html">SortArray()</a>, <a href="randomizearray.html">RandomizeArray()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=sortlist.html>SortList()</a> - <a href=index.html>Sort Index</a> - <a href=sortstructuredlist.html>SortStructuredList()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=sortlist.html>SortList()</a> - <a href=index.html>Sort Index</a> - <a href=sortstructuredlist.html>SortStructuredList()</a> -><br><br>
 
 </body></html>

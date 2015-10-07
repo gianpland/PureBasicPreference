@@ -11,18 +11,18 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() = 0 <b><font color="#006666">Or</font></b> <font color="#006666">InitKeyboard</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Sprite system can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Sprite system can&apos;t be initialized&quot;, 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
 <font color="#006666">;
 </font><font color="#006666">; Now, open a 800*600 - 32 bits screen
 </font><font color="#006666">;
-</font><b><font color="#006666">If</font></b> <font color="#006666">OpenScreen</font>(800, 600, 32, "Sprite")
+</font><b><font color="#006666">If</font></b> <font color="#006666">OpenScreen</font>(800, 600, 32, &quot;Sprite&quot;)
 
-  <font color="#006666">; Load our 16 bit sprite (which is a 24 bit picture in fact, as BMP doesn't support 16 bit format)
+  <font color="#006666">; Load our 16 bit sprite (which is a 24 bit picture in fact, as BMP doesn&apos;t support 16 bit format)
 </font>  <font color="#006666">; 
-</font><font color="#006666">  LoadSprite</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/PureBasic.bmp")
+</font><font color="#006666">  LoadSprite</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/PureBasic.bmp&quot;)
 <font color="#006666">  CopySprite</font>(0, 1, 0)
   
   <b><font color="#006666">Repeat</font></b>
@@ -47,7 +47,7 @@
   <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "Can't open a 800*600 - 32 bit screen !", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open a 800*600 - 32 bit screen !&quot;, 0)
 <b><font color="#006666">EndIf</font></b>
 </font></pre>
 </body></html>

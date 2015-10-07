@@ -13,26 +13,26 @@
 </font>
 <font color="#006666">;Use [PageUp] and [PageDown]
 </font>
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f MouseX, MouseY, Pose 
 
 <font color="#924B72">#Mesh</font> = 1
 
 <b><font color="#006666">Macro</font></b> <font color="#006666">Clamp</font>(num, min, max)
-  <b><font color="#006666">If</font></b> num&#060;min
+  <b><font color="#006666">If</font></b> num&lt;min
     num=min
-  <b><font color="#006666">ElseIf</font></b> num&#062;max
+  <b><font color="#006666">ElseIf</font></b> num&gt;max
     num=max
   <b><font color="#006666">EndIf</font></b>  
 <b><font color="#006666">EndMacro</font></b>
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>(3)
     
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Scripts", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Scripts&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
 <font color="#006666">  Parse3DScripts</font>()
   
 <font color="#006666">  InitSprite</font>()
@@ -45,13 +45,13 @@
     
     <font color="#006666">;Ground
 </font>    <font color="#006666">;
-</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Dirt.jpg"))
+</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, &quot;Dirt.jpg&quot;))
 <font color="#006666">    CreatePlane</font>(0, 1500, 1500, 40, 40, 15, 15)
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666">MeshID</font>(0),<font color="#006666">MaterialID</font>(0))
     
     <font color="#006666">;- Mesh
 </font>    
-<font color="#006666">    LoadMesh</font>(<font color="#924B72">#Mesh</font>, "Shapekey.mesh")
+<font color="#006666">    LoadMesh</font>(<font color="#924B72">#Mesh</font>, &quot;Shapekey.mesh&quot;)
     
     <font color="#006666">; Create a animation state For each vertex pose, using the pose name 
 </font>    Track     = 0 
@@ -69,7 +69,7 @@
 <font color="#006666">    StartEntityAnimation</font>(1, Animation$)  
    
     <font color="#006666">;- SkyBox
-</font><font color="#006666">    SkyBox</font>("Desert07.jpg")
+</font><font color="#006666">    SkyBox</font>(&quot;Desert07.jpg&quot;)
     
     <font color="#006666">;- Camera
 </font><font color="#006666">    CreateCamera</font>(0, 0, 0, 100, 100)
@@ -90,10 +90,10 @@
       
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
         
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Pose &#060; 1
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Pose &lt; 1
           Pose + 0.01
 <font color="#006666">          Clamp</font>(Pose, 0, 1)
-        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Pose &#062; 0
+        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Pose &gt; 0
           Pose - 0.01
 <font color="#006666">          Clamp</font>(Pose, 0, 1) 
         <b><font color="#006666">EndIf</font></b>
@@ -103,7 +103,7 @@
       <font color="#006666">; update the pose reference
 </font><font color="#006666">      UpdateVertexPoseReference</font>(<font color="#924B72">#Mesh</font>, Animation$, Track, KeyFrame, PoseIndex, Pose)
       
-      <font color="#006666">; update animation state since we're fudging this manually
+      <font color="#006666">; update animation state since we&apos;re fudging this manually
 </font><font color="#006666">      UpdateEntityAnimation</font>(1, Animation$)
       
 <font color="#006666">      RotateCamera</font>(0, MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)
@@ -115,7 +115,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b></font></pre>

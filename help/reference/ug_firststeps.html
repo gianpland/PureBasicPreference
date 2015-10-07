@@ -2,24 +2,24 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">UserGuide - First steps with the Debug output (variables & operators)</font></b></p>
 
-Normally we would present here the typical "Hello World". You want to see it? 
+Normally we would present here the typical &quot;Hello World&quot;. You want to see it? 
 Ok here we go with two examples: 
 
 <p><b>Debug output</b></p><blockquote>
 
 
-"Hello World" in the <a href="../reference/debugger.html">Debug</a> output window: 
+&quot;Hello World&quot; in the <a href="../reference/debugger.html">Debug</a> output window: 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> "Hello World!"
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> &quot;Hello World!&quot;
 </font></pre>
 
 </blockquote>
 <p><b>MessageRequester</b></p><blockquote>
 
 
-"Hello World" in a <a href="../requester/messagerequester.html">MessageRequester()</a>: 
+&quot;Hello World&quot; in a <a href="../requester/messagerequester.html">MessageRequester()</a>: 
 
-<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  MessageRequester</font>("", "Hello World!")
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  MessageRequester</font>(&quot;&quot;, &quot;Hello World!&quot;)
 </font></pre>
 
 </blockquote>
@@ -33,13 +33,13 @@ arithmetic operators and displaying the result:
   b = 7
   c = 3
 
-  d = a + b  <font color="#006666">; we use the values stored in variables 'a' and 'b' and save the sum of them in 'd'</font>
-  d / c      <font color="#006666">; we directly use the value of 'd' (= 12) divided by the value of 'c' (= 3) and save the result in 'd'</font>
+  d = a + b  <font color="#006666">; we use the values stored in variables &apos;a&apos; and &apos;b&apos; and save the sum of them in &apos;d&apos;</font>
+  d / c      <font color="#006666">; we directly use the value of &apos;d&apos; (= 12) divided by the value of &apos;c&apos; (= 3) and save the result in &apos;d&apos;</font>
 
   <b><font color="#006666">Debug</font></b> d   <font color="#006666">; will output 4</font>
 </font></pre>
 
-This way you have used variables "on the fly". To force the compiler always 
+This way you have used variables &quot;on the fly&quot;. To force the compiler always 
 declaring variables before their first use, just use the keyword 
 <a href="../reference/compilerdirectives.html">EnableExplicit</a>. 
 

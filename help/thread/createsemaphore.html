@@ -10,7 +10,7 @@ Semaphore = <font color="#006666"><b>CreateSemaphore</b></font>([InitialCount])<
 Creates a new semaphore object. 
 <br>
 <br>
-A semaphore is a thread synchronisation object that keeps an internal count. It has two kinds of operations: 
+A semaphore is a thread synchronization object that keeps an internal count. It has two kinds of operations: 
 <a href="signalsemaphore.html">signal</a> and <a href="waitsemaphore.html">wait</a>. A wait operation decreases the count 
 of the semaphore by one. If the count would drop below 0, the wait operation will block until a signal call is made. 
 A signal operation increases the count one, releasing a blocking thread if there is one. A semaphore allows 
@@ -18,7 +18,7 @@ to enforce minimum or maximum counts across threads for example to prevent a que
 too many items. 
 <br>
 <br>
-Unlike a <a href="createmutex.html">mutex</a>, a semaphore object is not "owned" by a particular thread, which means that 
+Unlike a <a href="createmutex.html">mutex</a>, a semaphore object is not &quot;owned&quot; by a particular thread, which means that 
 signal/wait calls do not need to be done from the same thread as it is the case with <a href="lockmutex.html">LockMutex()</a> and 
 <a href="unlockmutex.html">UnlockMutex()</a>. In fact a common use for a semaphore objects is for one thread to do the 
 <a href="signalsemaphore.html">SignalSemaphore()</a> calls and for another one to do all <a href="waitsemaphore.html">WaitSemaphore()</a> calls to implement 
@@ -43,7 +43,7 @@ The new semaphore, or zero if the semaphore creation has failed.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-This example shows a "producer" thread populating a queue with elements and the main thread reading them. 
+This example shows a &quot;producer&quot; thread populating a queue with elements and the main thread reading them. 
 The semaphore is used to make sure the queue never runs out of elements. Note that this could also be 
 achieved with only a mutex and waiting/polling for queue elements with a <a href="../system/delay.html">Delay()</a> in between, 
 but the semaphore commands do a more efficient wait (returning immediately at the <a href="signalsemaphore.html">SignalSemaphore()</a> call 
@@ -78,9 +78,9 @@ and not just on the next time a polling loop would check the queue).
     
     <font color="#006666">; display the queue state</font>
 <font color="#006666">    LockMutex</font>(Mutex)
-      Queue$ = "Queue:"
+      Queue$ = &quot;Queue:&quot;
       <b><font color="#006666">ForEach</font></b> <font color="#006666">Queue</font>()
-        Queue$ + " " +<font color="#006666"> Str</font>(<font color="#006666">Queue</font>())
+        Queue$ + &quot; &quot; +<font color="#006666"> Str</font>(<font color="#006666">Queue</font>())
       <b><font color="#006666">Next</font></b> <font color="#006666">Queue</font>()
       <b><font color="#006666">Debug</font></b> Queue$
     
@@ -98,6 +98,6 @@ and not just on the next time a polling loop would check the queue).
 
 <a href="freesemaphore.html">FreeSemaphore()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=createmutex.html>CreateMutex()</a> - <a href=index.html>Thread Index</a> - <a href=createthread.html>CreateThread()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=createmutex.html>CreateMutex()</a> - <a href=index.html>Thread Index</a> - <a href=createthread.html>CreateThread()</a> -><br><br>
 
 </body></html>

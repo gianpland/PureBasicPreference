@@ -85,7 +85,7 @@
   #PB_Program_Read    - allow to read the programs output (STDOUT)
   #PB_Program_Write   - allow to write to the programs input (STDIN)
   #PB_Program_Error   - allow to catch messages on standard error (STDERR)
-  #PB_Program_Connect - connect another program's output to this program's input
+  #PB_Program_Connect - connect another program&apos;s output to this program&apos;s input
 </font></pre>
 
 
@@ -140,7 +140,7 @@
 <font color="orange">changed</font>: FrontColor(Color)     - joined the red, green, blue to only one color value. (add RGB() for a quick adjustment of old code) <br>
 <font color="orange">changed</font>: BackColor(Color)      - joined the red, green, blue to only one color value. <br>
 <font color="orange">changed</font>: NewX = DrawText(x, y, Text$ [, FrontColor [, BackColor]]) - added x/y coordinates and optional color values <br>
-<font color="orange">changed</font>: TextLength(Text$) -&#062; TextWidth(Text$) - renamed <br>
+<font color="orange">changed</font>: TextLength(Text$) -&gt; TextWidth(Text$) - renamed <br>
 <br>
 <font color="red">removed</font>: Locate(x, y)   - no longer useful. 
 
@@ -254,7 +254,7 @@ FinishDirectory() has to be called after each ExamineDirectory().
 <font color="orange">changed</font>: Inkey()  - now returns only 1 char or nothing (instead of always 2), use RawKey() for the extra character <br>
 <br>
 Note: the old console lib used a graphical console mode, which did not output to stdout correctly. 
-(you could not call it from command-line like: myprogram.exe &#062; test.txt) 
+(you could not call it from command-line like: myprogram.exe &gt; test.txt) 
 Now you have the choice with EnableGraphicalConsole(State), and if you do 
 not explicitly set the graphical mode, the printed stuff should be properly sent to stdout, enabling 
 you to write better console tools. This also applies to stdin and the Input() command. 
@@ -264,7 +264,7 @@ you to write better console tools. This also applies to stdin and the Input() co
 <p><b>AudioCD</b></p><blockquote>
 
 
-<font color="orange">changed</font>: all function name from 'CDAudio' to 'AudioCD' (less french-english..) 
+<font color="orange">changed</font>: all function name from &apos;CDAudio&apos; to &apos;AudioCD&apos; (less french-english..) 
 
 
 </blockquote>
@@ -332,7 +332,7 @@ you to write better console tools. This also applies to stdin and the Input() co
 <p><b>Library</b></p><blockquote>
 
 
-<font color="blue">renamed</font>: IsFunction() -&#062; GetFunction() 
+<font color="blue">renamed</font>: IsFunction() -&gt; GetFunction() 
 
 
 
@@ -345,7 +345,7 @@ you to write better console tools. This also applies to stdin and the Input() co
 <font color="green">added</font>: GetClientPort() <br>
 <font color="green">added</font>: EventServerNumber() <br>
 <br>
-<font color="blue">renamed</font>: NetworkClientID() -&#062; EventClient() 
+<font color="blue">renamed</font>: NetworkClientID() -&gt; EventClient() 
 
 
 </blockquote>
@@ -423,7 +423,7 @@ independent of the actual String mode the executable was compiled with (unicode 
 <br>
 <font color="orange">changed</font>: OpenWindow(#Window, x, y, Width, Height, Title$ [, Flags [, ParentID]]) - flags are now at the end and optionals <br>
 <font color="orange">changed</font>: WaitWindowEvent([Timeout])                  - added optional timeout value <br>
-<font color="orange">changed</font>: ResizeWindow(#Window, x, y, width, height)  - '-1' parameters must be changed to #PB_Ignore <br>
+<font color="orange">changed</font>: ResizeWindow(#Window, x, y, width, height)  - &apos;-1&apos; parameters must be changed to #PB_Ignore <br>
 <font color="orange">changed</font>: SetWindowCallback(@procedure() [, #Window]) - added optional window parameter (to set callback for 1 window only) <br>
 <font color="orange">changed</font>: ResizeWindow(#Window, x, y, Width, Height) - now same as ResizeGadget() <br>
 <font color="orange">changed</font>: WindowID(#Window)       - parameter no longer optional <br>
@@ -500,21 +500,21 @@ independent of the actual String mode the executable was compiled with (unicode 
 <br>
 
 <b>EditorGadget()</b> <br>
-- supports SetGadgetColor for front & backcolor <br>
+- supports SetGadgetColor for front &amp; backcolor <br>
 - new Flag: #PB_Editor_ReadOnly  <br>
 - supports SetGadgetAttribute() with #PB_Editor_ReadOnly to get/set the read-only flag <br>
 <br>
 
 <b>ExplorerListGadget()</b> <br>
-- supports SetGadgetColor() for front & backcolor & #PB_Gadget_LineColor <br>
+- supports SetGadgetColor() for front &amp; backcolor &amp; #PB_Gadget_LineColor <br>
 - Supports GetGadgetItemAttribute(#Gadget, 0, #PB_Explorer_ColumnWidth, 2) ; return width of column 2 <br>
 - Supports SetGadgetItemAttribute(#Gadget, 0, #PB_Explorer_ColumnWidth, 100, 2) ; set width of column 2 to 100 <br>
 - Supports GetGadgetItemText(#Gadget, -1, 2)             ; return header text for column 2 <br>
-- Supports SetGadgetItemText(#Gadget, -1, "New Text", 2) ; change header text for column 2 <br>
+- Supports SetGadgetItemText(#Gadget, -1, &quot;New Text&quot;, 2) ; change header text for column 2 <br>
 <br>
 
 <b>ExplorerTreeGadget()</b> <br>
-- supports SetGadgetColor() for front & backcolor & #PB_Gadget_LineColor <br>
+- supports SetGadgetColor() for front &amp; backcolor &amp; #PB_Gadget_LineColor <br>
 <br>
 
 <b>HyperLinkGadget()</b> <br>
@@ -530,7 +530,7 @@ independent of the actual String mode the executable was compiled with (unicode 
 - Supports GetGadgetItemAttribute(#Gadget, 0, #PB_ListIcon_ColumnWidth, 2) ; return width of column 2 <br>
 - Supports SetGadgetItemAttribute(#Gadget, 0, #PB_ListIcon_ColumnWidth, 100, 2) ; set width of column 2 to 100 <br>
 - Supports GetGadgetItemText(#Gadget, -1, 2)             ; return header text for column 2 <br>
-- Supports SetGadgetItemText(#Gadget, -1, "New Text", 2) ; change header text for column 2 <br>
+- Supports SetGadgetItemText(#Gadget, -1, &quot;New Text&quot;, 2) ; change header text for column 2 <br>
 <br>
 
 <b>ListViewGadget()</b> <br>
@@ -546,7 +546,7 @@ independent of the actual String mode the executable was compiled with (unicode 
 <br>
 
 <b>MDIGadget()</b> <br>
-- The child windows of the MDIGadget are no longer "GadgetItems", but real PB Windows. 
+- The child windows of the MDIGadget are no longer &quot;GadgetItems&quot;, but real PB Windows. 
 This means that you can use ANY command from the WindowLib with them (except StickyWindow()). This makes some of the MDIGadget 
 features obsolete, therefore there are some changes: <br>
 - The Gadget no longer sends any events: all close, resize, activate events are received as Window events <br>
@@ -581,7 +581,7 @@ Note: you must now call CreateGadgetList() to add items to a MDI child, just lik
 <br>
 
 <b>ProgressBarGadget()</b> <br>
-- supports SetGadgetColor() for front & backcolor  (not working with XP skins) <br>
+- supports SetGadgetColor() for front &amp; backcolor  (not working with XP skins) <br>
 - supports SetGadgetAttribute() with #PB_ProgressBar_Minimum, #PB_ProgressBar_Maximum <br>
 <br>
 
@@ -597,7 +597,7 @@ Note: you must now call CreateGadgetList() to add items to a MDI child, just lik
 <br>
 
 <b>SpinGadget()</b> <br>
-- supports SetGadgetColor for front & backcolor (to color the edit area) <br>
+- supports SetGadgetColor for front &amp; backcolor (to color the edit area) <br>
 - supports SetGadgetAttribute() with #PB_Spin_Minimum, #PB_Spin_Maximum <br>
 - New Flags: <br>
 <blockquote>
@@ -642,10 +642,10 @@ replace it in the first splitter first, and then put it in the second one. <br>
 <br>
 
 <b>TreeGadget()</b> <br>
-- Supports SetGadgetColor() for front & backcolor & #PB_Gadget_LineColor <br>
-- Supports SetGadgetItemColor() for front & backcolor <br>
+- Supports SetGadgetColor() for front &amp; backcolor &amp; #PB_Gadget_LineColor <br>
+- Supports SetGadgetItemColor() for front &amp; backcolor <br>
 - changed management of items completely. There are no longer any nodes, 
-just a continuous list where each item has a "sublevel". The sublevels 
+just a continuous list where each item has a &quot;sublevel&quot;. The sublevels 
 of all items define the tree structure like this: 
 <pre><font face="Courier New, Courier, mono"size="2">   + sublevel 0
    +-+ sublevel 1
@@ -655,16 +655,16 @@ of all items define the tree structure like this:
    | sublevel 0
 </font></pre>
 - new parameter to AddGadgetItem: AddGadgetItem(#Gadget, Position, Text$ [, ImageID [, Flags]]) <br>
-The "Flags" parameter is always required for TreeGadget and specifies the 
+The &quot;Flags&quot; parameter is always required for TreeGadget and specifies the 
 Sublevel in which to put this item. <br>
 <br>
 To create the above tree, you do this: 
-<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, "sublevel 0", 0, 0)
-<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, "sublevel 1", 0, 1)
-<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, "sublevel 1", 0, 1)
-<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, "sublevel 2", 0, 2)
-<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, "sublevel 1", 0, 1)
-<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, "sublevel 0", 0, 0)    
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, &quot;sublevel 0&quot;, 0, 0)
+<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, &quot;sublevel 1&quot;, 0, 1)
+<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, &quot;sublevel 1&quot;, 0, 1)
+<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, &quot;sublevel 2&quot;, 0, 2)
+<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, &quot;sublevel 1&quot;, 0, 1)
+<font color="#006666">   AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, &quot;sublevel 0&quot;, 0, 0)    
 </font></pre>
 - new GetGadgetItemAttribute() with #PB_Tree_SubLevel (read-only) to get the sublevel of any item <br>
 - <font color="red">removed</font>: OpenTreeGadgetNode() <br>

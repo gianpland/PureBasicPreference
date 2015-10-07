@@ -11,7 +11,7 @@
 </font><font color="#006666">;
 </font>
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 150, 300, 100, "PureBasic - StatusBar Example", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font>)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 150, 300, 100, &quot;PureBasic - StatusBar Example&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font>)
 
   <b><font color="#006666">If</font></b> <font color="#006666">CreateStatusBar</font>(0,<font color="#006666"> WindowID</font>(0))
 <font color="#006666">    AddStatusBarField</font>(100)
@@ -19,9 +19,9 @@
 <font color="#006666">    AddStatusBarField</font>(100)
   <b><font color="#006666">EndIf</font></b>
 
-<font color="#006666">  StatusBarText</font>(0, 0, "Area 1")
-<font color="#006666">  StatusBarText</font>(0, 1, "Area 2", <font color="#924B72">#PB_StatusBar_BorderLess</font>)
-<font color="#006666">  StatusBarText</font>(0, 2, "Area 3", <font color="#924B72">#PB_StatusBar_Right</font> | <font color="#924B72">#PB_StatusBar_Raised</font>) 
+<font color="#006666">  StatusBarText</font>(0, 0, &quot;Area 1&quot;)
+<font color="#006666">  StatusBarText</font>(0, 1, &quot;Area 2&quot;, <font color="#924B72">#PB_StatusBar_BorderLess</font>)
+<font color="#006666">  StatusBarText</font>(0, 2, &quot;Area 3&quot;, <font color="#924B72">#PB_StatusBar_Right</font> | <font color="#924B72">#PB_StatusBar_Raised</font>) 
       
   <b><font color="#006666">Repeat</font></b>
 

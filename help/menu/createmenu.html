@@ -37,7 +37,7 @@ for the #Menu parameter then the generated number is returned on success.
 To create a menu with support for images, use <a href="createimagemenu.html">CreateImageMenu()</a>. 
 <br>
 <br>
-Once created, this menu becomes the current menu for further item additions. It's now 
+Once created, this menu becomes the current menu for further item additions. It&apos;s now 
 possible to use functions such as <a href="menutitle.html">MenuTitle()</a>, <a href="menuitem.html">MenuItem()</a>, <a href="menubar.html">MenuBar()</a>, <a href="opensubmenu.html">OpenSubMenu()</a> to populate the menu. 
 <br>
 <br>
@@ -52,13 +52,13 @@ To handle menu events properly, see the description of following functions:
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 200, 100, "Menu Example")
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 200, 100, &quot;Menu Example&quot;)
     <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))    <font color="#006666">; menu creation starts....</font>
-<font color="#006666">      MenuTitle</font>("Project")
-<font color="#006666">        MenuItem</font>(1, "Open"   +<font color="#006666">Chr</font>(9)+"Ctrl+O")
-<font color="#006666">        MenuItem</font>(2, "Save"   +<font color="#006666">Chr</font>(9)+"Ctrl+S")
-<font color="#006666">        MenuItem</font>(3, "Save as"+<font color="#006666">Chr</font>(9)+"Ctrl+A")
-<font color="#006666">        MenuItem</font>(4, "Close"  +<font color="#006666">Chr</font>(9)+"Ctrl+C")
+<font color="#006666">      MenuTitle</font>(&quot;Project&quot;)
+<font color="#006666">        MenuItem</font>(1, &quot;Open&quot;   +<font color="#006666">Chr</font>(9)+&quot;Ctrl+O&quot;)
+<font color="#006666">        MenuItem</font>(2, &quot;Save&quot;   +<font color="#006666">Chr</font>(9)+&quot;Ctrl+S&quot;)
+<font color="#006666">        MenuItem</font>(3, &quot;Save as&quot;+<font color="#006666">Chr</font>(9)+&quot;Ctrl+A&quot;)
+<font color="#006666">        MenuItem</font>(4, &quot;Close&quot;  +<font color="#006666">Chr</font>(9)+&quot;Ctrl+C&quot;)
     <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>()=<font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
@@ -69,6 +69,6 @@ To handle menu events properly, see the description of following functions:
 
 <a href="createimagemenu.html">CreateImageMenu()</a>, <a href="createpopupmenu.html">CreatePopupMenu()</a>, <a href="createpopupimagemenu.html">CreatePopupImageMenu()</a>, <a href="freemenu.html">FreeMenu()</a>, <a href="menutitle.html">MenuTitle()</a>, <a href="menuitem.html">MenuItem()</a>, <a href="menubar.html">MenuBar()</a>, <a href="opensubmenu.html">OpenSubMenu()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=createimagemenu.html>CreateImageMenu()</a> - <a href=index.html>Menu Index</a> - <a href=createpopupimagemenu.html>CreatePopupImageMenu()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=createimagemenu.html>CreateImageMenu()</a> - <a href=index.html>Menu Index</a> - <a href=createpopupimagemenu.html>CreatePopupImageMenu()</a> -><br><br>
 
 </body></html>

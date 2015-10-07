@@ -49,7 +49,7 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-The created gadget starts out with just a white background. Use the <a href="canvasoutput.html">CanvasOutput()</a> command to draw to the gadget. 
+The created gadget starts out with just a white background. Use the <a href="canvasoutput.html">CanvasOutput()</a> or <a href="canvasvectoroutput.html">CanvasVectorOutput()</a> command to draw to the gadget. 
 The drawn content stays persistent until it is erased by a further drawing operation. There is no need to redraw the content 
 every time a <font color="#924B72">#PB_Event_Repaint</font> event is received. 
 
@@ -114,10 +114,10 @@ Returns the state of the mouse buttons for the event. The result is a combinatio
 <blockquote>
 
 Returns the state of the keyboard modifiers for the event. The result is a combination (using bitwise or) of the following values: 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Canvas_Shift</font>  : The 'shift' key is currently pressed.
-  <font color="#924B72">#PB_Canvas_Alt</font>    : The 'alt' key is currently pressed.
-  <font color="#924B72">#PB_Canvas_Control</font>: The 'control' key is currently pressed.
-  <font color="#924B72">#PB_Canvas_Command</font>: The 'command' (or "apple") key is currently pressed. (Mac OSX only)
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Canvas_Shift</font>  : The &apos;shift&apos; key is currently pressed.
+  <font color="#924B72">#PB_Canvas_Alt</font>    : The &apos;alt&apos; key is currently pressed.
+  <font color="#924B72">#PB_Canvas_Control</font>: The &apos;control&apos; key is currently pressed.
+  <font color="#924B72">#PB_Canvas_Command</font>: The &apos;command&apos; (or &quot;apple&quot;) key is currently pressed. (Mac OSX only)
 </font></pre>
 </blockquote>
 
@@ -206,7 +206,7 @@ zero removes the clipping.
 <br>
 <br>
 Note: Mouse clipping should only be done as a direct result of user interaction with the gadget such as a mouse click and 
-care must be taken to properly remove the clipping again or the user's mouse will be trapped inside the gadget. The 
+care must be taken to properly remove the clipping again or the user&apos;s mouse will be trapped inside the gadget. The 
 <font color="#924B72">#PB_Canvas_ClipMouse</font> gadget flag can be used to automatically clip/unclip the mouse when the user presses or releases 
 a mouse button in the gadget. 
 </blockquote>
@@ -249,18 +249,18 @@ Mac OSX: a pointer to a Cursor structure
 </blockquote>
 
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 220, 220, "CanvasGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 220, 220, &quot;CanvasGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">    CanvasGadget</font>(0, 10, 10, 200, 200)
     
     <b><font color="#006666">Repeat</font></b>
       Event =<font color="#006666"> WaitWindowEvent</font>()
           
       <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Gadget</font> <b><font color="#006666">And</font></b> <font color="#006666">EventGadget</font>() = 0 
-        <b><font color="#006666">If</font></b> <font color="#006666">EventType</font>() = <font color="#924B72">#PB_EventType_LeftButtonDown</font> <b><font color="#006666">Or</font></b> (<font color="#006666">EventType</font>() = <font color="#924B72">#PB_EventType_MouseMove</font> <b><font color="#006666">And</font></b> <font color="#006666">GetGadgetAttribute</font>(0, <font color="#924B72">#PB_Canvas_Buttons</font>) & <font color="#924B72">#PB_Canvas_LeftButton</font>)
+        <b><font color="#006666">If</font></b> <font color="#006666">EventType</font>() = <font color="#924B72">#PB_EventType_LeftButtonDown</font> <b><font color="#006666">Or</font></b> (<font color="#006666">EventType</font>() = <font color="#924B72">#PB_EventType_MouseMove</font> <b><font color="#006666">And</font></b> <font color="#006666">GetGadgetAttribute</font>(0, <font color="#924B72">#PB_Canvas_Buttons</font>) &amp; <font color="#924B72">#PB_Canvas_LeftButton</font>)
           <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">CanvasOutput</font>(0))
             x =<font color="#006666"> GetGadgetAttribute</font>(0, <font color="#924B72">#PB_Canvas_MouseX</font>)
             y =<font color="#006666"> GetGadgetAttribute</font>(0, <font color="#924B72">#PB_Canvas_MouseY</font>)
@@ -285,6 +285,6 @@ A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">Gad
 
 <a href="canvasoutput.html">CanvasOutput()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, <a href="../window/eventtype.html">EventType()</a>, <a href="../2ddrawing/startdrawing.html">StartDrawing()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=calendargadget.html>CalendarGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=canvasoutput.html>CanvasOutput()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=calendargadget.html>CalendarGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=canvasoutput.html>CanvasOutput()</a> -><br><br>
 
 </body></html>

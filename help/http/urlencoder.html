@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="4">URLEncoder()</font></b></p>
 <p><b>Syntax</b></p><blockquote>
-Result$ = <font color="#006666"><b>URLEncoder</b></font>(URL$)</blockquote>
+Result$ = <font color="#006666"><b>URLEncoder</b></font>(URL$ [, Format])</blockquote>
 
 </blockquote>
 <b>Description</b><br><blockquote>
@@ -20,6 +20,14 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 The URL to encode. 
 
 </td></tr>
+<tr><td><i>Format (optional)</i></td>
+<td> 
+The format of the string before encoding it. It can be one of the following value: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_UTF8</font>  (default)
+  <font color="#924B72">#PB_Ascii</font>
+</font></pre>
+
+</td></tr>
 </table>
 </blockquote><p><b>Return value</b></p><blockquote>
 
@@ -29,19 +37,19 @@ To convert an encoded URL back to a unencoded format, use <a href="urldecoder.ht
 </blockquote><p><b>Remarks</b></p><blockquote>
 
 A URL$ may not contain certain characters such as: tab, space, accent letter etc., 
-therefore these characters must be encoded, which basically involves using "%" as an escape 
+therefore these characters must be encoded, which basically involves using &quot;%&quot; as an escape 
 character. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">URLEncoder</font>("http://www.purebasic.com/test with space.php3")
-  <font color="#006666">; Will print "http://www.purebasic.com/test%20with%20space.php3"</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">URLEncoder</font>(&quot;http://www.purebasic.com/test with space.php3&quot;)
+  <font color="#006666">; Will print &quot;http://www.purebasic.com/test%20with%20space.php3&quot;</font>
 </font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="urldecoder.html">URLDecoder()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=urldecoder.html>URLDecoder()</a> - <a href=index.html>Http Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=urldecoder.html>URLDecoder()</a> - <a href=index.html>Http Index</a><br><br>
 
 </body></html>

@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="4">CatchSound()</font></b></p>
 <p><b>Syntax</b></p><blockquote>
-Result = <font color="#006666"><b>CatchSound</b></font>(#Sound, *Buffer [, Length [, Flags]])</blockquote>
+Result = <font color="#006666"><b>CatchSound</b></font>(#Sound, *Buffer [, Size [, Flags]])</blockquote>
 
 <b>Description</b><br><blockquote>
 
@@ -30,9 +30,9 @@ be used to auto-generate this number.
 The buffer to use to create the sound. This is a regular memory address. 
 
 </td></tr>
-<tr><td><i>Length (optional)</i></td>
+<tr><td><i>Size (optional)</i></td>
 <td> 
-The buffer length. With WAV files, this parameter doesn't need to be 
+The buffer size (in bytes). With WAV files, this parameter doesn&apos;t need to be 
 specified. With other sound decoders, it has to be specified. 
 
 </td></tr>
@@ -55,18 +55,18 @@ Nonzero if the sound has been successfully created, zero otherwise.
 
   <b><font color="#006666">DataSection</font></b>
     Music: 
-      <b><font color="#006666">IncludeBinary</font></b> "Sound.wav"
+      <b><font color="#006666">IncludeBinary</font></b> &quot;Sound.wav&quot;
 </font></pre>
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-The "?" is a pointer to a label. More information about pointers and memory access can be found 
+The &quot;?&quot; is a pointer to a label. More information about pointers and memory access can be found 
 in the relating chapter <a href="../reference/memory.html">here</a>. 
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="loadsound.html">LoadSound()</a>, <a href="freesound.html">FreeSound()</a>, <a href="playsound.html">PlaySound()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Sound Index</a> - <a href=freesound.html>FreeSound()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Sound Index</a> - <a href=freesound.html>FreeSound()</a> -><br><br>
 
 </body></html>

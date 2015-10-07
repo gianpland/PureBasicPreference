@@ -34,7 +34,7 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to act on the panel content: 
@@ -83,17 +83,17 @@ This means that a PanelGadget can be created inside another PanelGadget...
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Shows using of several panels...</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 322, 220, "PanelGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 322, 220, &quot;PanelGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">    PanelGadget     </font>(0, 8, 8, 306, 203)
-<font color="#006666">      AddGadgetItem </font>(0, -1, "Panel 1")
+<font color="#006666">      AddGadgetItem </font>(0, -1, &quot;Panel 1&quot;)
 <font color="#006666">        PanelGadget </font>(1, 5, 5, 290, 166)
-<font color="#006666">          AddGadgetItem</font>(1, -1, "Sub-Panel 1")
-<font color="#006666">          AddGadgetItem</font>(1, -1, "Sub-Panel 2")
-<font color="#006666">          AddGadgetItem</font>(1, -1, "Sub-Panel 3")
+<font color="#006666">          AddGadgetItem</font>(1, -1, &quot;Sub-Panel 1&quot;)
+<font color="#006666">          AddGadgetItem</font>(1, -1, &quot;Sub-Panel 2&quot;)
+<font color="#006666">          AddGadgetItem</font>(1, -1, &quot;Sub-Panel 3&quot;)
 <font color="#006666">        CloseGadgetList</font>()
-<font color="#006666">      AddGadgetItem </font>(0, -1,"Panel 2")
-<font color="#006666">        ButtonGadget</font>(2, 10, 15, 80, 24,"Button 1")
-<font color="#006666">        ButtonGadget</font>(3, 95, 15, 80, 24,"Button 2")
+<font color="#006666">      AddGadgetItem </font>(0, -1,&quot;Panel 2&quot;)
+<font color="#006666">        ButtonGadget</font>(2, 10, 15, 80, 24,&quot;Button 1&quot;)
+<font color="#006666">        ButtonGadget</font>(3, 95, 15, 80, 24,&quot;Button 2&quot;)
 <font color="#006666">    CloseGadgetList</font>()
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
@@ -106,6 +106,6 @@ This means that a PanelGadget can be created inside another PanelGadget...
 <a href="addgadgetitem.html">AddGadgetItem()</a>, <a href="removegadgetitem.html">RemoveGadgetItem()</a>, <a href="countgadgetitems.html">CountGadgetItems()</a>, <a href="cleargadgetitems.html">ClearGadgetItems()</a>, <a href="getgadgetitemtext.html">GetGadgetItemText()</a>, <a href="setgadgetitemtext.html">SetGadgetItemText()</a>, 
 <a href="getgadgetstate.html">GetGadgetState()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="closegadgetlist.html">CloseGadgetList()</a>, <a href="opengadgetlist.html">OpenGadgetList()</a>, <a href="setgadgetitemimage.html">SetGadgetItemImage()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=optiongadget.html>OptionGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=progressbargadget.html>ProgressBarGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=optiongadget.html>OptionGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=progressbargadget.html>ProgressBarGadget()</a> -><br><br>
 
 </body></html>

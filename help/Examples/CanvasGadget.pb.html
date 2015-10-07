@@ -54,19 +54,19 @@
       <b><font color="#006666">Case</font></b> <font color="#924B72">#GADGET_Circle</font>
 <font color="#006666">        DrawImage</font>(<font color="#006666">ImageID</font>(<font color="#924B72">#IMAGE_Content</font>), 0, 0)
         
-        <b><font color="#006666">If</font></b> x &#062; StartX
+        <b><font color="#006666">If</font></b> x &gt; StartX
           rx = x - StartX
         <b><font color="#006666">Else</font></b>
           rx = StartX - x
         <b><font color="#006666">EndIf</font></b>
         
-        <b><font color="#006666">If</font></b> y &#062; StartY
+        <b><font color="#006666">If</font></b> y &gt; StartY
           ry = y - StartY
         <b><font color="#006666">Else</font></b>
           ry = StartY - y
         <b><font color="#006666">EndIf</font></b>
         
-        <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetAttribute</font>(<font color="#924B72">#GADGET_Canvas</font>, <font color="#924B72">#PB_Canvas_Modifiers</font>) & <font color="#924B72">#PB_Canvas_Control</font>
+        <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetAttribute</font>(<font color="#924B72">#GADGET_Canvas</font>, <font color="#924B72">#PB_Canvas_Modifiers</font>) &amp; <font color="#924B72">#PB_Canvas_Control</font>
           ry = rx
         <b><font color="#006666">EndIf</font></b>
         
@@ -92,21 +92,21 @@ CurrentMode  = <font color="#924B72">#GADGET_Brush</font>
 <font color="#006666">CreateImage</font>(<font color="#924B72">#IMAGE_Color</font>, 35, 35, 24)
 <font color="#006666">CreateImage</font>(<font color="#924B72">#IMAGE_Content</font>, 380, 380, 24)
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 460, 400, "CanvasGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 460, 400, &quot;CanvasGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">  CanvasGadget</font>(<font color="#924B72">#GADGET_Canvas</font>, 10, 10, 380, 380, <font color="#924B72">#PB_Canvas_ClipMouse</font>)
 
 <font color="#006666">  ButtonImageGadget</font>(<font color="#924B72">#GADGET_Color</font>, 400, 10, 50, 50,<font color="#006666"> ImageID</font>(<font color="#924B72">#IMAGE_Color</font>))
   
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Brush</font>,  400, 100, 50, 25, "Brush",  <font color="#924B72">#PB_Button_Toggle</font>)
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Line</font>,   400, 130, 50, 25, "Line",   <font color="#924B72">#PB_Button_Toggle</font>)
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Box</font>,    400, 160, 50, 25, "Box",    <font color="#924B72">#PB_Button_Toggle</font>)
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Circle</font>, 400, 190, 50, 25, "Circle", <font color="#924B72">#PB_Button_Toggle</font>)
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Fill</font>,   400, 220, 50, 25, "Fill",   <font color="#924B72">#PB_Button_Toggle</font>)
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Brush</font>,  400, 100, 50, 25, &quot;Brush&quot;,  <font color="#924B72">#PB_Button_Toggle</font>)
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Line</font>,   400, 130, 50, 25, &quot;Line&quot;,   <font color="#924B72">#PB_Button_Toggle</font>)
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Box</font>,    400, 160, 50, 25, &quot;Box&quot;,    <font color="#924B72">#PB_Button_Toggle</font>)
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Circle</font>, 400, 190, 50, 25, &quot;Circle&quot;, <font color="#924B72">#PB_Button_Toggle</font>)
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Fill</font>,   400, 220, 50, 25, &quot;Fill&quot;,   <font color="#924B72">#PB_Button_Toggle</font>)
     
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Clear</font>,  400, 280, 50, 25, "Clear")
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Clear</font>,  400, 280, 50, 25, &quot;Clear&quot;)
   
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Load</font>,   400, 335, 50, 25, "Load")
-<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Save</font>,   400, 365, 50, 25, "Save")
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Load</font>,   400, 335, 50, 25, &quot;Load&quot;)
+<font color="#006666">  ButtonGadget</font>(<font color="#924B72">#GADGET_Save</font>,   400, 365, 50, 25, &quot;Save&quot;)
   
 <font color="#006666">  SetGadgetState</font>(<font color="#924B72">#GADGET_Brush</font>, 1)
 <font color="#006666">  SetGadgetAttribute</font>(<font color="#924B72">#GADGET_Canvas</font>, <font color="#924B72">#PB_Canvas_Cursor</font>, <font color="#924B72">#PB_Cursor_Cross</font>)
@@ -144,7 +144,7 @@ CurrentMode  = <font color="#924B72">#GADGET_Brush</font>
 <font color="#006666">              DrawAction</font>(X, Y,<font color="#006666"> EventType</font>())                        
             
             <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_EventType_MouseMove</font>
-              <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetAttribute</font>(<font color="#924B72">#GADGET_Canvas</font>, <font color="#924B72">#PB_Canvas_Buttons</font>) & <font color="#924B72">#PB_Canvas_LeftButton</font>
+              <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetAttribute</font>(<font color="#924B72">#GADGET_Canvas</font>, <font color="#924B72">#PB_Canvas_Buttons</font>) &amp; <font color="#924B72">#PB_Canvas_LeftButton</font>
 <font color="#006666">                DrawAction</font>(X, Y,<font color="#006666"> EventType</font>())            
               <b><font color="#006666">EndIf</font></b>
                       
@@ -176,7 +176,7 @@ CurrentMode  = <font color="#924B72">#GADGET_Brush</font>
           <b><font color="#006666">EndIf</font></b>
       
         <b><font color="#006666">Case</font></b> <font color="#924B72">#GADGET_Load</font>
-          File$ =<font color="#006666"> OpenFileRequester</font>("Load Image...", "", "JPEG Images|*.jpeg|All Files|*.*", 0)
+          File$ =<font color="#006666"> OpenFileRequester</font>(&quot;Load Image...&quot;, &quot;&quot;, &quot;JPEG Images|*.jpeg|All Files|*.*&quot;, 0)
           <b><font color="#006666">If</font></b> File$
             <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(<font color="#924B72">#IMAGE_LoadSave</font>, File$)
               <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">CanvasOutput</font>(<font color="#924B72">#GADGET_Canvas</font>))
@@ -186,19 +186,19 @@ CurrentMode  = <font color="#924B72">#GADGET_Brush</font>
               <b><font color="#006666">EndIf</font></b>
 <font color="#006666">              FreeImage</font>(<font color="#924B72">#IMAGE_LoadSave</font>)
             <b><font color="#006666">Else</font></b>
-<font color="#006666">              MessageRequester</font>("CanvasGadget", "Cannot load image: " + File$)
+<font color="#006666">              MessageRequester</font>(&quot;CanvasGadget&quot;, &quot;Cannot load image: &quot; + File$)
             <b><font color="#006666">EndIf</font></b>
           <b><font color="#006666">EndIf</font></b>
               
         <b><font color="#006666">Case</font></b> <font color="#924B72">#GADGET_Save</font>
-          File$ =<font color="#006666"> SaveFileRequester</font>("Save Image...", File$, "JPEG Images|*.jpeg|All Files|*.*", 0)
-          <b><font color="#006666">If</font></b> File$ <b><font color="#006666">And</font></b> (<font color="#006666">FileSize</font>(File$) = -1 <b><font color="#006666">Or</font></b> <font color="#006666">MessageRequester</font>("CanvasGadget", "Overwrite this file? " + File$, <font color="#924B72">#PB_MessageRequester_YesNo</font>) = <font color="#924B72">#PB_MessageRequester_Yes</font>)
+          File$ =<font color="#006666"> SaveFileRequester</font>(&quot;Save Image...&quot;, File$, &quot;JPEG Images|*.jpeg|All Files|*.*&quot;, 0)
+          <b><font color="#006666">If</font></b> File$ <b><font color="#006666">And</font></b> (<font color="#006666">FileSize</font>(File$) = -1 <b><font color="#006666">Or</font></b> <font color="#006666">MessageRequester</font>(&quot;CanvasGadget&quot;, &quot;Overwrite this file? &quot; + File$, <font color="#924B72">#PB_MessageRequester_YesNo</font>) = <font color="#924B72">#PB_MessageRequester_Yes</font>)
             <b><font color="#006666">If</font></b> <font color="#006666">CreateImage</font>(<font color="#924B72">#IMAGE_LoadSave</font>, 380, 380, 24) <b><font color="#006666">And</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">ImageOutput</font>(<font color="#924B72">#IMAGE_LoadSave</font>))
 <font color="#006666">              DrawImage</font>(<font color="#006666">GetGadgetAttribute</font>(<font color="#924B72">#GADGET_Canvas</font>, <font color="#924B72">#PB_Canvas_Image</font>), 0, 0)
 <font color="#006666">              StopDrawing</font>()
               
               <b><font color="#006666">If</font></b> <font color="#006666">SaveImage</font>(<font color="#924B72">#IMAGE_LoadSave</font>, File$, <font color="#924B72">#PB_ImagePlugin_JPEG</font>) = 0
-<font color="#006666">                MessageRequester</font>("CanvasGadget", "Cannot save image: " + File$)
+<font color="#006666">                MessageRequester</font>(&quot;CanvasGadget&quot;, &quot;Cannot save image: &quot; + File$)
               <b><font color="#006666">EndIf</font></b>
               
 <font color="#006666">              FreeImage</font>(<font color="#924B72">#IMAGE_LoadSave</font>)

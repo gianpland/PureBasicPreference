@@ -21,20 +21,20 @@
    <b><font color="#006666">ProcedureReturn</font></b> Result
 <b><font color="#006666">EndProcedure</font></b>
 
-DatabaseFile$ =<font color="#006666"> GetTemporaryDirectory</font>()+"Database.sqlite"
+DatabaseFile$ =<font color="#006666"> GetTemporaryDirectory</font>()+&quot;Database.sqlite&quot;
 
 <b><font color="#006666">If</font></b> <font color="#006666">CreateFile</font>(0, DatabaseFile$)
 <font color="#006666">   CloseFile</font>(0)
    
-   <b><font color="#006666">If</font></b> <font color="#006666">OpenDatabase</font>(0, DatabaseFile$, "", "")
+   <b><font color="#006666">If</font></b> <font color="#006666">OpenDatabase</font>(0, DatabaseFile$, &quot;&quot;, &quot;&quot;)
    
-<font color="#006666">      CheckDatabaseUpdate</font>(0, "CREATE TABLE food (name CHAR(50), weight INT)")
+<font color="#006666">      CheckDatabaseUpdate</font>(0, &quot;CREATE TABLE food (name CHAR(50), weight INT)&quot;)
 
-<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES ('apple', '10')")
-<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES ('pear', '5')")
-<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES ('banana', '20')")
+<font color="#006666">      CheckDatabaseUpdate</font>(0, &quot;INSERT INTO food (name, weight) VALUES (&apos;apple&apos;, &apos;10&apos;)&quot;)
+<font color="#006666">      CheckDatabaseUpdate</font>(0, &quot;INSERT INTO food (name, weight) VALUES (&apos;pear&apos;, &apos;5&apos;)&quot;)
+<font color="#006666">      CheckDatabaseUpdate</font>(0, &quot;INSERT INTO food (name, weight) VALUES (&apos;banana&apos;, &apos;20&apos;)&quot;)
       
-      <b><font color="#006666">If</font></b> <font color="#006666">DatabaseQuery</font>(0, "SELECT * FROM food WHERE weight &#062; 7")
+      <b><font color="#006666">If</font></b> <font color="#006666">DatabaseQuery</font>(0, &quot;SELECT * FROM food WHERE weight &gt; 7&quot;)
       
          <b><font color="#006666">While</font></b> <font color="#006666">NextDatabaseRow</font>(0)
             <b><font color="#006666">Debug</font></b> <font color="#006666">GetDatabaseString</font>(0, 0)
@@ -45,10 +45,10 @@ DatabaseFile$ =<font color="#006666"> GetTemporaryDirectory</font>()+"Database.s
       
 <font color="#006666">      CloseDatabase</font>(0)
    <b><font color="#006666">Else</font></b>
-      <b><font color="#006666">Debug</font></b> "Can't open database !"
+      <b><font color="#006666">Debug</font></b> &quot;Can&apos;t open database !&quot;
    <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">Else</font></b>
-   <b><font color="#006666">Debug</font></b> "Can't create the database file !"
+   <b><font color="#006666">Debug</font></b> &quot;Can&apos;t create the database file !&quot;
 <b><font color="#006666">EndIf</font></b>
 </font></pre>
 </body></html>

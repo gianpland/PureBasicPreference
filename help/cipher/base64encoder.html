@@ -38,15 +38,15 @@ The size of the output buffer.
 <br>
 <br>
 The output buffer should be at last 33% bigger than the input buffer, with a minimum size of 64 bytes. 
-It's recommended to get a slightly larger buffer, like 35% bigger to avoid overflows. 
+It&apos;s recommended to get a slightly larger buffer, like 35% bigger to avoid overflows. 
 
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
 <td> 
 It can be a combination of the following values: 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Cipher_NoPadding</font>: it will not insert additional '=' at the end of the encoded buffer to pad it to 3 bytes boundary.
-  <font color="#924B72">#PB_Cipher_URL</font>      : it will use a slightly different encoding, mainly used in URL. The usual '+' and '/' encoded characters
-                        will be respectively encoded to '-' and '_'
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Cipher_NoPadding</font>: it will not insert additional &apos;=&apos; at the end of the encoded buffer to pad it to 3 bytes boundary.
+  <font color="#924B72">#PB_Cipher_URL</font>      : it will use a slightly different encoding, mainly used in URL. The usual &apos;+&apos; and &apos;/&apos; encoded characters
+                        will be respectively encoded to &apos;-&apos; and &apos;_&apos;
 </font></pre>
 
 </td></tr>
@@ -57,7 +57,7 @@ Returns the length of the encoded data in bytes.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  Example$ = "This is a test string!" 
+<pre><font face="Courier New, Courier, mono"size="2">  Example$ = &quot;This is a test string!&quot; 
   Decoded$ =<font color="#006666"> Space</font>(1024) 
   Encoded$ =<font color="#006666"> Space</font>(1024) 
     
@@ -72,6 +72,6 @@ Returns the length of the encoded data in bytes.
 
 <a href="base64decoder.html">Base64Decoder()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=base64decoder.html>Base64Decoder()</a> - <a href=index.html>Cipher Index</a> - <a href=crc32filefingerprint.html>CRC32FileFingerprint()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=base64decoder.html>Base64Decoder()</a> - <a href=index.html>Cipher Index</a> - <a href=closecryptrandom.html>CloseCryptRandom()</a> -><br><br>
 
 </body></html>

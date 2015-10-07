@@ -28,9 +28,9 @@ according to the active mode.
     Age.w 
   <b><font color="#006666">EndStructure</font></b>
   
-  <b><font color="#006666">Debug</font></b> "The size of my friend is "+<font color="#006666">Str</font>(<font color="#006666">Sizeof</font>(Person))+" bytes" <font color="#006666">; will be 10 (4+4+2)</font>
+  <b><font color="#006666">Debug</font></b> &quot;The size of my friend is &quot;+<font color="#006666">Str</font>(<font color="#006666">Sizeof</font>(Person))+&quot; bytes&quot; <font color="#006666">; will be 10 (4+4+2)</font>
   
-  John.Person\Name = "John"
+  John.Person\Name = &quot;John&quot;
   
   <b><font color="#006666">Debug</font></b> <font color="#006666">SizeOf</font>(John) <font color="#006666">; will be also 10 </font>
 </font></pre>
@@ -107,18 +107,18 @@ one of the following values:
   <b><font color="#006666">EndStructure</font></b>
   
   <b><font color="#006666">If</font></b> <font color="#006666">TypeOf</font>(Person\Age) = <font color="#924B72">#PB_Word</font>
-    <b><font color="#006666">Debug</font></b> "Age is a 'Word'"
+    <b><font color="#006666">Debug</font></b> &quot;Age is a &apos;Word&apos;&quot;
   <b><font color="#006666">EndIf</font></b>
             
   Surface.f                 
   <b><font color="#006666">If</font></b> <font color="#006666">TypeOf</font>(Surface) = <font color="#924B72">#PB_Float</font>
-    <b><font color="#006666">Debug</font></b> "Surface is a 'Float'"
+    <b><font color="#006666">Debug</font></b> &quot;Surface is a &apos;Float&apos;&quot;
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2">Result = <b><font color="#006666">Subsystem</font></b>(&#060;constant string expression&#062;)
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2">Result = <b><font color="#006666">Subsystem</font></b>(&lt;constant string expression&gt;)
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -129,8 +129,8 @@ program being compiled. The name of the subsystem is case sensitive.
 </blockquote><p><b>Example</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">CompilerIf</font></b> <font color="#006666">Subsystem</font>("OpenGL")
-    <b><font color="#006666">Debug</font></b> "Compiling with the OpenGL subsystem"
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">CompilerIf</font></b> <font color="#006666">Subsystem</font>(&quot;OpenGL&quot;)
+    <b><font color="#006666">Debug</font></b> &quot;Compiling with the OpenGL subsystem&quot;
   <b><font color="#006666">CompilerEndIf</font></b>
 </font></pre>
 
@@ -143,12 +143,12 @@ program being compiled. The name of the subsystem is case sensitive.
 
 <b><font color="#006666">Defined</font></b> checks if a particular object of a code source like <a href="../reference/structures.html">structure</a>, 
 <a href="../reference/interfaces.html">interface</a>, <a href="../reference/variables.html">variables</a> etc. 
-is already defined or not. The 'Name' parameter has to be specified without any extra decoration 
-(ie: without the '#' for a <a href="../reference/general_rules.html">constant</a>, without '()' for an 
+is already defined or not. The &apos;Name&apos; parameter has to be specified without any extra decoration 
+(ie: without the &apos;#&apos; for a <a href="../reference/general_rules.html">constant</a>, without &apos;()&apos; for an 
 <a href="../reference/dim.html">array</a>, a <a href="../reference/newlist.html">list</a> or a <a href="../reference/newmap.html">map</a>). 
 <br>
 <br>
-The 'Type' parameter can be one of the following values: 
+The &apos;Type&apos; parameter can be one of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Constant</font>
   <font color="#924B72">#PB_Variable</font>
   <font color="#924B72">#PB_Array</font>
@@ -171,13 +171,13 @@ The 'Type' parameter can be one of the following values:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PureConstant</font> = 10
   
   <b><font color="#006666">CompilerIf</font></b> <font color="#006666">Defined</font>(PureConstant, <font color="#924B72">#PB_Constant</font>)
-    <b><font color="#006666">Debug</font></b> "Constant 'PureConstant' is declared"
+    <b><font color="#006666">Debug</font></b> &quot;Constant &apos;PureConstant&apos; is declared&quot;
   <b><font color="#006666">CompilerEndIf</font></b>
   
   Test = 25
   
   <b><font color="#006666">CompilerIf</font></b> <font color="#006666">Defined</font>(Test, <font color="#924B72">#PB_Variable</font>)
-    <b><font color="#006666">Debug</font></b> "Variable 'Test' is declared"
+    <b><font color="#006666">Debug</font></b> &quot;Variable &apos;Test&apos; is declared&quot;
   <b><font color="#006666">CompilerEndIf</font></b>
 </font></pre>
 
@@ -190,7 +190,7 @@ The 'Type' parameter can be one of the following values:
 
 <b><font color="#006666">InitializeStructure</font></b> initialize the specified <a href="../reference/structures.html">structured</a> memory area. 
 It initializes structure members of type Array, List and Map, other members are not affected (.s, .l, .i etc). 
-'Structure' is the name of the structure which should be used to perform the initialization. There is no internal check to ensures 
+&apos;Structure&apos; is the name of the structure which should be used to perform the initialization. There is no internal check to ensures 
 the structure match the memory area. Warning: multiple calls to <b><font color="#006666">InitializeStructure</font></b> create a memory leak 
 because the old members are not freed (<b><font color="#006666">ClearStructure</font></b> has to be called before calling <b><font color="#006666">InitializeStructure</font></b> 
 once more). This function is for advanced users only and should be used with care. To allocate dynamic structure, 
@@ -211,10 +211,10 @@ use <a href="../memory/allocatestructure.html">AllocateStructure()</a>().
   <font color="#006666">; Now the list is ready to use</font>
   <font color="#006666">;</font>
 <font color="#006666">  AddElement</font>(*Student\<font color="#006666">Friends</font>())
-  *Student\<font color="#006666">Friends</font>() = "John"
+  *Student\<font color="#006666">Friends</font>() = &quot;John&quot;
   
 <font color="#006666">  AddElement</font>(*Student\<font color="#006666">Friends</font>())
-  *Student\<font color="#006666">Friends</font>() = "Yann"
+  *Student\<font color="#006666">Friends</font>() = &quot;Yann&quot;
 
   <font color="#006666">; Print out the list content</font>
   <font color="#006666">;</font>
@@ -233,7 +233,7 @@ use <a href="../memory/allocatestructure.html">AllocateStructure()</a>().
 <b><font color="#006666">CopyStructure</font></b> copy the memory of a <a href="../reference/structures.html">structured</a> memory area to another. 
 This is useful when dealing with dynamic allocations, trough <a href="../reference/memory.html">pointers</a>. Every fields will be duplicated, even 
 <a href="../reference/dim.html">array</a>, <a href="../reference/newlist.html">list</a>, and <a href="../reference/newmap.html">map</a>. 
-The destination structure will be automatically cleared before doing the copy, it's not 
+The destination structure will be automatically cleared before doing the copy, it&apos;s not 
 needed to call <b><font color="#006666">ClearStructure</font></b> before <b><font color="#006666">CopyStructure</font></b>. Warning: the destination 
 should be a valid structure memory area, or a cleared memory area. If the memory area is not cleared, 
 it could crash, as random values will be used by the clear routine. 
@@ -250,17 +250,17 @@ This function is for advanced users only and should be used with care.
     Age.l
   <b><font color="#006666">EndStructure</font></b>
 
-  Student.People\Name$ = "Paul"
-  Student\LastName$ = "Morito"
-  Student\<font color="#006666">Friends$</font>("Tom") = "Jones"
-  Student\<font color="#006666">Friends$</font>("Jim") = "Doe"
+  Student.People\Name$ = &quot;Paul&quot;
+  Student\LastName$ = &quot;Morito&quot;
+  Student\<font color="#006666">Friends$</font>(&quot;Tom&quot;) = &quot;Jones&quot;
+  Student\<font color="#006666">Friends$</font>(&quot;Jim&quot;) = &quot;Doe&quot;
   
 <font color="#006666">  CopyStructure</font>(@Student, @StudentCopy.People, People)
   
   <b><font color="#006666">Debug</font></b> StudentCopy\Name$
   <b><font color="#006666">Debug</font></b> StudentCopy\LastName$
-  <b><font color="#006666">Debug</font></b> StudentCopy\<font color="#006666">Friends$</font>("Tom")
-  <b><font color="#006666">Debug</font></b> StudentCopy\<font color="#006666">Friends$</font>("Jim")
+  <b><font color="#006666">Debug</font></b> StudentCopy\<font color="#006666">Friends$</font>(&quot;Tom&quot;)
+  <b><font color="#006666">Debug</font></b> StudentCopy\<font color="#006666">Friends$</font>(&quot;Jim&quot;)
 </font></pre>
 
 
@@ -272,7 +272,7 @@ This function is for advanced users only and should be used with care.
 
 <b><font color="#006666">ClearStructure</font></b> free the memory of a <a href="../reference/structures.html">structured</a> memory area. 
 This is useful when the structure contains strings, array, list or map which have been allocated internally by PureBasic. 
-'Structure' is the name of the structure which should be used to perform the clearing. All the fields will be 
+&apos;Structure&apos; is the name of the structure which should be used to perform the clearing. All the fields will be 
 set to zero, even native type like long, integer etc. There is no internal check to ensures the structure 
 match the memory area. This function is for advanced users only 
 and should be used with care. 
@@ -286,8 +286,8 @@ and should be used with care.
     Age.l
   <b><font color="#006666">EndStructure</font></b>
 
-  Student.People\Name$ = "Paul"
-  Student\LastName$ = "Morito"
+  Student.People\Name$ = &quot;Paul&quot;
+  Student\LastName$ = &quot;Morito&quot;
   Student\Age = 10
   
 <font color="#006666">  ClearStructure</font>(@Student, People)
@@ -301,7 +301,7 @@ and should be used with care.
 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Bool</font></b>(&#060;boolean expression&#062;)
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Bool</font></b>(&lt;boolean expression&gt;)
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -313,10 +313,10 @@ If the boolean expression is true, it will return <font color="#924B72">#True</f
 </blockquote><p><b>Example</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  Hello$ = "Hello"
-  World$ = "World"
+<pre><font face="Courier New, Courier, mono"size="2">  Hello$ = &quot;Hello&quot;
+  World$ = &quot;World&quot;
 
-  <b><font color="#006666">Debug</font></b> <font color="#006666">Bool</font>(Hello$ = "Hello")  <font color="#006666">; will print 1</font>
-  <b><font color="#006666">Debug</font></b> <font color="#006666">Bool</font>(Hello$ &#060;&#062; "Hello" <b><font color="#006666">Or</font></b> World$ = "World") <font color="#006666">; will print 1</font>
+  <b><font color="#006666">Debug</font></b> <font color="#006666">Bool</font>(Hello$ = &quot;Hello&quot;)  <font color="#006666">; will print 1</font>
+  <b><font color="#006666">Debug</font></b> <font color="#006666">Bool</font>(Hello$ &lt;&gt; &quot;Hello&quot; <b><font color="#006666">Or</font></b> World$ = &quot;World&quot;) <font color="#006666">; will print 1</font>
 </font></pre>
 </body></html>

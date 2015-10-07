@@ -9,7 +9,7 @@
 
 Allocates a new dynamic structure item. This dynamic structure item is properly initialized 
 and ready to use, without the need to call <a href="../reference/compilerfunctions.html">InitializeStructure()</a>. 
-To access the structure data, a <a href="../reference/memory.html">pointer</a> associated with the specified 'StructureName' has to be used. 
+To access the structure data, a <a href="../reference/memory.html">pointer</a> associated with the specified &apos;StructureName&apos; has to be used. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -30,7 +30,7 @@ The address of the new dynamic structure item, zero otherwise.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-This command is for advanced users and shouldn't be needed for most of programs. It's often a better choice 
+This command is for advanced users and shouldn&apos;t be needed for most of programs. It&apos;s often a better choice 
 to use a structured <a href="../array/index.html">array</a>, <a href="../list/index.html">list</a> or <a href="../map/index.html">map</a> to store dynamic structured items. 
 <br>
 <br>
@@ -51,9 +51,9 @@ Such an error can be narrowed down to the real cause using the
   <b><font color="#006666">EndStructure</font></b>
   
   *DynamicPeople.People =<font color="#006666"> AllocateStructure</font>(People)
-  *DynamicPeople\Name$ = "Fred"
+  *DynamicPeople\Name$ = &quot;Fred&quot;
 <font color="#006666">  AddElement</font>(*DynamicPeople\<font color="#006666">Friends$</font>())
-  *DynamicPeople\<font color="#006666">Friends$</font>() = "Stef"
+  *DynamicPeople\<font color="#006666">Friends$</font>() = &quot;Stef&quot;
   
   <b><font color="#006666">Debug</font></b> *DynamicPeople\Name$
   <b><font color="#006666">Debug</font></b> *DynamicPeople\<font color="#006666">Friends$</font>()
@@ -65,6 +65,6 @@ Such an error can be narrowed down to the real cause using the
 
 <a href="freestructure.html">FreeStructure()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=allocatememory.html>AllocateMemory()</a> - <a href=index.html>Memory Index</a> - <a href=comparememory.html>CompareMemory()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=allocatememory.html>AllocateMemory()</a> - <a href=index.html>Memory Index</a> - <a href=comparememory.html>CompareMemory()</a> -><br><br>
 
 </body></html>

@@ -12,14 +12,14 @@
 </font>
 <font color="#924B72">#CameraSpeed</font> = 1
 
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
 
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
   
 <font color="#006666">  InitSprite</font>()
 <font color="#006666">  InitKeyboard</font>()
@@ -27,11 +27,11 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    AmbientColor</font>(<font color="#006666">RGB</font>(0, 200, 0))  <font color="#006666">; Green 'HUD' like color 
+<font color="#006666">    AmbientColor</font>(<font color="#006666">RGB</font>(0, 200, 0))  <font color="#006666">; Green &apos;HUD&apos; like color 
 </font> 
-<font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "r2skin.jpg"))
-<font color="#006666">    CreateEntity</font>(0,<font color="#006666"> LoadMesh</font>(0, "robot.mesh"),<font color="#006666"> MaterialID</font>(0))
-<font color="#006666">    StartEntityAnimation</font>(0, "Walk")
+<font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, &quot;r2skin.jpg&quot;))
+<font color="#006666">    CreateEntity</font>(0,<font color="#006666"> LoadMesh</font>(0, &quot;robot.mesh&quot;),<font color="#006666"> MaterialID</font>(0))
+<font color="#006666">    StartEntityAnimation</font>(0, &quot;Walk&quot;)
     
 <font color="#006666">    CreateCamera</font>(0, 0, 0, 100, 50)  <font color="#006666">; Front camera
 </font><font color="#006666">    MoveCamera</font>(0, 0, 20, 250, <font color="#924B72">#PB_Absolute</font>)
@@ -88,7 +88,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">End</font></b></font></pre>

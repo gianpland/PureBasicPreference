@@ -8,7 +8,7 @@ Result = <font color="#006666"><b>OpenWindow</b></font>(#Window, x, y, InnerWidt
 <b>Description</b><br><blockquote>
 
 Opens a new window according to the specified parameters. The new window becomes the active window, 
-it's not needed to use <a href="setactivewindow.html">SetActiveWindow()</a> (unless the window is created as invisible). 
+it&apos;s not needed to use <a href="setactivewindow.html">SetActiveWindow()</a> (unless the window is created as invisible). 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -25,7 +25,7 @@ A number to identify the new window.
 <tr><td><i>x, y</i></td>
 <td> 
 The initial position of the window, in pixels (unless one of the center flags is used). 
-If 'x' or 'y' is set to <font color="#924B72">#PB_Ignore</font>, the OS will choose a position for the window. 
+If &apos;x&apos; or &apos;y&apos; is set to <font color="#924B72">#PB_Ignore</font>, the OS will choose a position for the window. 
 
 </td></tr>
 <tr><td><i>InnerWidth, InnerHeight</i></td>
@@ -40,7 +40,7 @@ The title of the newly created window.
 </td></tr>
 <tr><td><i>ParentWindowID (optional)</i></td>
 <td> 
-The WindowID the new window belongs to. 'ParentWindowID' value can be easily obtained with <a href="windowid.html">WindowID()</a>. 
+The WindowID the new window belongs to. &apos;ParentWindowID&apos; value can be easily obtained with <a href="windowid.html">WindowID()</a>. 
 
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
@@ -51,17 +51,17 @@ Can be a combination of the following values:
   <font color="#924B72">#PB_Window_MaximizeGadget</font>: Adds the maximize gadget to the window title bar. <font color="#924B72">#PB_Window_SystemMenu</font> is automatically added.
                              (MacOS only: <font color="#924B72">#PB_Window_SizeGadget</font> will be also automatically added).
   <font color="#924B72">#PB_Window_SizeGadget</font>    : Adds the sizeable feature to a window.
-  <font color="#924B72">#PB_Window_Invisible</font>     : Creates the window but don't display.
+  <font color="#924B72">#PB_Window_Invisible</font>     : Creates the window but don&apos;t display.
   <font color="#924B72">#PB_Window_TitleBar</font>      : Creates a window with a titlebar.
   <font color="#924B72">#PB_Window_Tool</font>          : Creates a window with a smaller titlebar and no taskbar entry. 
   <font color="#924B72">#PB_Window_BorderLess</font>    : Creates a window without any borders.
   <font color="#924B72">#PB_Window_ScreenCentered</font>: Centers the window in the middle of the screen. x,y parameters are ignored.
-  <font color="#924B72">#PB_Window_WindowCentered</font>: Centers the window in the middle of the parent window ('ParentWindowID' must be specified).
+  <font color="#924B72">#PB_Window_WindowCentered</font>: Centers the window in the middle of the parent window (&apos;ParentWindowID&apos; must be specified).
                                              x,y parameters are ignored.
   <font color="#924B72">#PB_Window_Maximize</font>      : Opens the window maximized. (Note: on Linux, not all Windowmanagers support this)
   <font color="#924B72">#PB_Window_Minimize</font>      : Opens the window minimized.
   <font color="#924B72">#PB_Window_NoGadgets</font>     : Prevents the creation of a GadgetList. <a href="../gadget/usegadgetlist.html">UseGadgetList()</a> can be used to do this later.
-  <font color="#924B72">#PB_Window_NoActivate</font>    : Don't activate the window after opening.
+  <font color="#924B72">#PB_Window_NoActivate</font>    : Don&apos;t activate the window after opening.
 </font></pre>
 
 </td></tr>
@@ -77,8 +77,8 @@ All possible events in a window are handled with the <a href="windowevent.html">
 <br>
 <br>
 Windows only: for special situations callbacks are used, see description at <a href="setwindowcallback.html">SetWindowCallback()</a>. On Windows, 
-the height and width of a window with a titlebar can't be less than around 100 pixels. To open smaller windows, use the <font color="#924B72"></font>
-"#PB_Window_BorderLess" flag. 
+the height and width of a window with a titlebar can&apos;t be less than around 100 pixels. To open smaller windows, use the <font color="#924B72"></font>
+&quot;#PB_Window_BorderLess&quot; flag. 
 <br>
 <br>
 <b>Important:</b> A window should not be opened in a <a href="../thread/index.html">thread</a>, as there is some limitation on OS X and Linux. 
@@ -88,6 +88,6 @@ A debugger error will be raised.
 
 <a href="closewindow.html">CloseWindow()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=iswindow.html>IsWindow()</a> - <a href=index.html>Window Index</a> - <a href=postevent.html>PostEvent()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=iswindow.html>IsWindow()</a> - <a href=index.html>Window Index</a> - <a href=postevent.html>PostEvent()</a> -><br><br>
 
 </body></html>

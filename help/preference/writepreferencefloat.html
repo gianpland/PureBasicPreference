@@ -7,7 +7,7 @@
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Creates or changes the specified key and its associated float value under the form: 'Key$ = Value' in the 
+Creates or changes the specified key and its associated float value under the form: &apos;Key$ = Value&apos; in the 
 preference file, previously created with <a href="createpreferences.html">CreatePreferences()</a> or opened 
 with <a href="openpreferences.html">OpenPreferences()</a>. 
 
@@ -34,10 +34,27 @@ The float value to associate with the key.
 None.
 
 
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Create the preference file prefs.txt</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreatePreferences</font>(<font color="#006666">GetTemporaryDirectory</font>()+&quot;Prefs.txt&quot;, <font color="#924B72">#PB_Preference_GroupSeparator</font>)
+<font color="#006666">    PreferenceGroup</font>(&quot;Window&quot;)
+<font color="#006666">      WritePreferenceString</font>(&quot;Title&quot;, &quot;PureNote&quot;) 
+<font color="#006666">      WritePreferenceLong </font>(&quot;X&quot;, 100)
+<font color="#006666">      WritePreferenceLong </font>(&quot;Y&quot;, 125)
+<font color="#006666">      WritePreferenceInteger</font>(&quot;I&quot;, 1024) 
+<font color="#006666">      WritePreferenceQuad</font>(&quot;Q&quot;, 9223372036854775807)
+<font color="#006666">      WritePreferenceFloat</font>(&quot;%&quot;, 20.10)
+<font color="#006666">      WritePreferenceDouble</font>(&quot;D&quot;, 0.0123456789 )
+<font color="#006666">    ClosePreferences</font>()   
+<font color="#006666">    RunProgram</font>(<font color="#006666">GetTemporaryDirectory</font>()+&quot;Prefs.txt&quot;)
+    <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="writepreferencedouble.html">WritePreferenceDouble()</a>, <a href="writepreferenceinteger.html">WritePreferenceInteger()</a>, <a href="writepreferencelong.html">WritePreferenceLong()</a>, <a href="writepreferencequad.html">WritePreferenceQuad()</a>, <a href="writepreferencestring.html">WritePreferenceString()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=writepreferencedouble.html>WritePreferenceDouble()</a> - <a href=index.html>Preference Index</a> - <a href=writepreferenceinteger.html>WritePreferenceInteger()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=writepreferencedouble.html>WritePreferenceDouble()</a> - <a href=index.html>Preference Index</a> - <a href=writepreferenceinteger.html>WritePreferenceInteger()</a> -><br><br>
 
 </body></html>

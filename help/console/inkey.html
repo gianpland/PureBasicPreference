@@ -7,7 +7,7 @@ String$ = <font color="#006666"><b>Inkey</b></font>()</blockquote>
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Returns a character string if a key is pressed during the call of Inkey(). It doesn't 
+Returns a character string if a key is pressed during the call of Inkey(). It doesn&apos;t 
 interrupt (halt) the program flow. If special keys (non-ASCII) have to be handled, 
 <a href="rawkey.html">RawKey()</a> should be called after Inkey(). 
 
@@ -24,23 +24,23 @@ an empty string otherwise.
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenConsole</font>()
-<font color="#006666">    PrintN</font>("Press Escape to exit")
+<font color="#006666">    PrintN</font>(&quot;Press Escape to exit&quot;)
   
     <b><font color="#006666">Repeat</font></b>
       KeyPressed$ =<font color="#006666"> Inkey</font>()
       
-      <b><font color="#006666">If</font></b> KeyPressed$ &#060;&#062; ""
+      <b><font color="#006666">If</font></b> KeyPressed$ &lt;&gt; &quot;&quot;
         
-<font color="#006666">        PrintN</font>("You pressed: " + KeyPressed$)
-<font color="#006666">        PrintN</font>("It has a raw code of: "+<font color="#006666">Str</font>(<font color="#006666">RawKey</font>()))
+<font color="#006666">        PrintN</font>(&quot;You pressed: &quot; + KeyPressed$)
+<font color="#006666">        PrintN</font>(&quot;It has a raw code of: &quot;+<font color="#006666">Str</font>(<font color="#006666">RawKey</font>()))
         
       <b><font color="#006666">ElseIf</font></b> <font color="#006666">RawKey</font>()
       
-<font color="#006666">        PrintN</font>("You pressed a non ASCII key.")
-<font color="#006666">        PrintN</font>("It has a raw code of: "+<font color="#006666">Str</font>(<font color="#006666">RawKey</font>()))
+<font color="#006666">        PrintN</font>(&quot;You pressed a non ASCII key.&quot;)
+<font color="#006666">        PrintN</font>(&quot;It has a raw code of: &quot;+<font color="#006666">Str</font>(<font color="#006666">RawKey</font>()))
         
       <b><font color="#006666">Else</font></b>
-<font color="#006666">        Delay</font>(20) <font color="#006666">; Don't eat all the CPU time, we're on a multitask OS</font>
+<font color="#006666">        Delay</font>(20) <font color="#006666">; Don&apos;t eat all the CPU time, we&apos;re on a multitask OS</font>
       <b><font color="#006666">EndIf</font></b>
     
     <b><font color="#006666">Until</font></b> KeyPressed$ =<font color="#006666"> Chr</font>(27) <font color="#006666">; Wait until escape is pressed</font>
@@ -61,6 +61,6 @@ A table with ASCII codes is available <a href="../reference/ascii.html">here</a>
 
 <a href="rawkey.html">RawKey()</a>, <a href="input.html">Input()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=enablegraphicalconsole.html>EnableGraphicalConsole()</a> - <a href=index.html>Console Index</a> - <a href=input.html>Input()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=enablegraphicalconsole.html>EnableGraphicalConsole()</a> - <a href=index.html>Console Index</a> - <a href=input.html>Input()</a> -><br><br>
 
 </body></html>

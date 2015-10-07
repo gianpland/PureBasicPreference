@@ -24,17 +24,17 @@ The font to use.
 </blockquote><p><b>Return value</b></p><blockquote>
 
 Returns the ID of the font. 
-This result is sometimes also referred to as a 'Handle'. Take a look at the extra chapter <a href="../reference/handles.html">Handles and Numbers</a> for 
+This result is sometimes also referred to as a &apos;Handle&apos;. Take a look at the extra chapter <a href="../reference/handles.html">Handles and Numbers</a> for 
 more information. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 An example of using FontID() in combination with <a href="../gadget/setgadgetfont.html">SetGadgetFont()</a>: 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 222, 130, "FontID()", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    ButtonGadget</font>(0, 10, 10, 200, 30, "Click to change the font...")
-    Font1 =<font color="#006666"> LoadFont</font>(<font color="#924B72">#PB_Any</font>, "Arial"  ,  8, <font color="#924B72">#PB_Font_Bold</font>)
-    Font2 =<font color="#006666"> LoadFont</font>(<font color="#924B72">#PB_Any</font>, "Verdana", 12, <font color="#924B72">#PB_Font_StrikeOut</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 222, 130, &quot;FontID()&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    ButtonGadget</font>(0, 10, 10, 200, 30, &quot;Click to change the font...&quot;)
+    Font1 =<font color="#006666"> LoadFont</font>(<font color="#924B72">#PB_Any</font>, &quot;Arial&quot;  ,  8, <font color="#924B72">#PB_Font_Bold</font>)
+    Font2 =<font color="#006666"> LoadFont</font>(<font color="#924B72">#PB_Any</font>, &quot;Verdana&quot;, 12, <font color="#924B72">#PB_Font_StrikeOut</font>)
     UsedFont = 1
   <b><font color="#006666">EndIf</font></b>
 
@@ -62,6 +62,6 @@ An example of using FontID() in combination with <a href="../gadget/setgadgetfon
 <a href="../gadget/setgadgetfont.html">SetGadgetFont()</a>, 
 <a href="../2ddrawing/drawingfont.html">DrawingFont()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Font Index</a> - <a href=freefont.html>FreeFont()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Font Index</a> - <a href=freefont.html>FreeFont()</a> -><br><br>
 
 </body></html>

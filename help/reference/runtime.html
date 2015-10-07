@@ -11,7 +11,7 @@
 
 
 For advanced programmers. <b><font color="#006666">Runtime</font></b> is used to create runtime accessible list of programming objects like variables, 
-constants and procedures. Once compiled a program doesn't have variable, constant or procedure label anymore as everything is 
+constants and procedures. Once compiled a program doesn&apos;t have variable, constant or procedure label anymore as everything is 
 converted into binary code. <b><font color="#006666">Runtime</font></b> enforces the compiler to add an extra reference for a specific object to 
 have it available trough the <a href="../runtime/index.html">Runtime</a> library. The objects can be manipulated using their string 
 reference, even when the program is compiled. 
@@ -20,7 +20,7 @@ reference, even when the program is compiled.
 To illustrate the use of <b><font color="#006666">Runtime:</font></b> the <a href="../dialog/index.html">Dialog</a> library use it to access the event procedure 
 associated to a <a href="../gadget/index.html">gadget</a>. The name of the procedure to use for the event handler is specified in 
 the XML file (which is text format), and then the dialog library use <a href="../runtime/getruntimeinteger.html">GetRuntimeInteger()</a> to resolve the procedure address 
-at runtime. It's not needed to recompile the program to change it. 
+at runtime. It&apos;s not needed to recompile the program to change it. 
 <br>
 <br>
 Another use would be adding a small realtime scripting language to the program, allowing easy modification of exposed 
@@ -31,10 +31,10 @@ keyword allows to do it in a standard and unified way.
 
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Runtime</font></b> <b><font color="#006666">Procedure</font></b> <font color="#006666">OnEvent</font>()
-    <b><font color="#006666">Debug</font></b> "OnEvent"
+    <b><font color="#006666">Debug</font></b> &quot;OnEvent&quot;
   <b><font color="#006666">EndProcedure</font></b> 
 
-  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>("OnEvent()") <font color="#006666">; Will display the procedure address</font>
+  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>(&quot;OnEvent()&quot;) <font color="#006666">; Will display the procedure address</font>
 </font></pre>
 
 </blockquote><p><b>Example:</b> Enumeration</p><blockquote>
@@ -46,9 +46,9 @@ keyword allows to do it in a standard and unified way.
     <font color="#924B72">#Constant3</font>
   <b><font color="#006666">EndEnumeration</font></b>
 
-  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>("#Constant1")
-  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>("#Constant2")
-  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>("#Constant3")
+  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>(&quot;#Constant1&quot;)
+  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>(&quot;#Constant2&quot;)
+  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>(&quot;#Constant3&quot;)
 </font></pre>
 
 </blockquote><p><b>Example:</b> Variable</p><blockquote>
@@ -57,8 +57,8 @@ keyword allows to do it in a standard and unified way.
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b> a = 20
   <b><font color="#006666">Runtime</font></b> a
 
-  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>("a")
-<font color="#006666">  SetRuntimeInteger</font>("a", 30)
+  <b><font color="#006666">Debug</font></b> <font color="#006666">GetRuntimeInteger</font>(&quot;a&quot;)
+<font color="#006666">  SetRuntimeInteger</font>(&quot;a&quot;, 30)
   
   <b><font color="#006666">Debug</font></b> a <font color="#006666">; the variable has been modified</font>
 </font></pre>

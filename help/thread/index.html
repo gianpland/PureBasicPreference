@@ -6,9 +6,9 @@
 
 
 A thread is a part of a program which runs asynchronously, in the background 
-of this program. This means it's possible to perform long operations 
+of this program. This means it&apos;s possible to perform long operations 
 (compression, image processing, etc) without halting the whole program and let the user 
-continue to do other things. A thread runs within your program, it's not 
+continue to do other things. A thread runs within your program, it&apos;s not 
 another process. When the main program exits, all the threads are destroyed. 
 Under PureBasic, threads are simply a procedure which is called asynchronously. 
 The thread runs until the procedure exits. 
@@ -22,8 +22,8 @@ but always have the user interface to respond).
 <br>
 <br>
 PureBasic has a special compiler setting to create thread-safe executables. (/THREAD command-line 
-switch or "create thread-safe executable" in the IDE compiler options). Without this mode, 
-certain functions (and also the string access) are faster, but not save to use in threads. 
+switch or &quot;create thread-safe executable&quot; in the IDE compiler options). Without this mode, 
+certain functions (and also the string access) are faster, but not safe to use in threads. 
 It is still possible to create threads without this mode but it is not recommended, as even something simple 
 like a local string access can be dangerous and needs to be protected. 
 Enabling this option makes these things save inside threads, but comes at the price of 
@@ -37,12 +37,12 @@ to manually ensure that you do run into trouble because of this. The Mutex funct
 this library can be used to synchronize access to such shared resources. 
 <br>
 <br>
-Using the <a href="../reference/threaded.html">Threaded</a> keyword it's possible to create thread-based 
+Using the <a href="../reference/threaded.html">Threaded</a> keyword it&apos;s possible to create thread-based 
 persistent objects (variables, arrays, lists, maps). 
 
 <br>
 <br>
-Note: Don't use DirectX inside threads (MS Windows limitation)! If you need to display 
+Note: Don&apos;t use DirectX inside threads (MS Windows limitation)! If you need to display 
 graphics in threads use <a href="../image/index.html">Images</a> and 
 <a href="../2ddrawing/index.html">2DDrawing</a> instead. 
 
@@ -70,6 +70,6 @@ graphics in threads use <a href="../image/index.html">Images</a> and
 <p><b>Example</b></p><blockquote>
 <a href="../Examples/Thread.pb.html">Thread.pb</a>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=../reference/reference.html>Reference Manual - Index</a></center>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=../reference/reference.html>Reference Manual - Index</a></center><br><br>
 
 </body></html>

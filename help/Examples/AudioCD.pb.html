@@ -13,7 +13,7 @@
 NbCDDrives =<font color="#006666"> InitAudioCD</font>()
 
 <b><font color="#006666">If</font></b> NbCDDrives = 0
-<font color="#006666">  MessageRequester</font>("Error", "No CD Audio drives found...", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;No CD Audio drives found...&quot;, 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
@@ -22,9 +22,9 @@ NbCDDrives =<font color="#006666"> InitAudioCD</font>()
 <b><font color="#006666">Procedure</font></b>.s <font color="#006666">GetHourFormat</font>(LengthInSeconds)
   Minutes = LengthInSeconds/60
   Seconds = LengthInSeconds-Minutes*60
-  <b><font color="#006666">If</font></b> Seconds &#060; 10 : Null$ = "0" : <b><font color="#006666">Else</font></b> : Null$ = "" : <b><font color="#006666">EndIf</font></b>
+  <b><font color="#006666">If</font></b> Seconds &lt; 10 : Null$ = &quot;0&quot; : <b><font color="#006666">Else</font></b> : Null$ = &quot;&quot; : <b><font color="#006666">EndIf</font></b>
 
-  <b><font color="#006666">ProcedureReturn</font></b> <font color="#006666">Str</font>(Minutes)+":"+Null$+<font color="#006666">Str</font>(Seconds)
+  <b><font color="#006666">ProcedureReturn</font></b> <font color="#006666">Str</font>(Minutes)+&quot;:&quot;+Null$+<font color="#006666">Str</font>(Seconds)
 <b><font color="#006666">EndProcedure</font></b>
 
 <font color="#006666">; Initialize constants for easier code reading
@@ -44,23 +44,23 @@ NbCDDrives =<font color="#006666"> InitAudioCD</font>()
 
   NbAudioTracks =<font color="#006666"> AudioCDTracks</font>()
   <b><font color="#006666">For</font></b> k=1 <b><font color="#006666">To</font></b> NbAudioTracks
-<font color="#006666">    AddGadgetItem</font>(<font color="#924B72">#GADGET_Select</font>, -1, "Track "+<font color="#006666">Str</font>(k))
+<font color="#006666">    AddGadgetItem</font>(<font color="#924B72">#GADGET_Select</font>, -1, &quot;Track &quot;+<font color="#006666">Str</font>(k))
   <b><font color="#006666">Next</font></b>
 <font color="#006666">  SetGadgetState</font>(<font color="#924B72">#GADGET_Select</font>, 0)
 <b><font color="#006666">EndProcedure</font></b>
 
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 265, 125, "PureBasic - AudioCD Example", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 265, 125, &quot;PureBasic - AudioCD Example&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 
-<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Play</font>   ,  10, 10, 60 , 24, "Play")
-<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Stop</font>   ,  70, 10, 60 , 24, "Stop")
-<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Eject</font>  , 130, 10, 60 , 24, "Eject")
-<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Close</font>  , 190, 10, 60 , 24, "Close")
+<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Play</font>   ,  10, 10, 60 , 24, &quot;Play&quot;)
+<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Stop</font>   ,  70, 10, 60 , 24, &quot;Stop&quot;)
+<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Eject</font>  , 130, 10, 60 , 24, &quot;Eject&quot;)
+<font color="#006666">  ButtonGadget  </font>(<font color="#924B72">#GADGET_Close</font>  , 190, 10, 60 , 24, &quot;Close&quot;)
 <font color="#006666">  ComboBoxGadget</font>(<font color="#924B72">#GADGET_Select</font> ,  10, 43, 240, 24)
-<font color="#006666">  TextGadget</font>(<font color="#924B72">#GADGET_Status</font>, 10, 70, 180, 24, "Status: stopped")
-<font color="#006666">  TextGadget</font>(<font color="#924B72">#GADGET_Time</font>, 200, 70, 240, 24, "")
+<font color="#006666">  TextGadget</font>(<font color="#924B72">#GADGET_Status</font>, 10, 70, 180, 24, &quot;Status: stopped&quot;)
+<font color="#006666">  TextGadget</font>(<font color="#924B72">#GADGET_Time</font>, 200, 70, 240, 24, &quot;&quot;)
 
-<font color="#006666">  TextGadget</font>(<font color="#924B72">#GADGET_AudioCDDrive</font>, 10, 99, 180, 24, "Select the CD-Audio drive :")
+<font color="#006666">  TextGadget</font>(<font color="#924B72">#GADGET_AudioCDDrive</font>, 10, 99, 180, 24, &quot;Select the CD-Audio drive :&quot;)
 <font color="#006666">  ComboBoxGadget</font>(<font color="#924B72">#GADGET_SelectDrive</font>, 210, 95, 40, 24)
 
   <b><font color="#006666">For</font></b> k=1 <b><font color="#006666">To</font></b> NbCDDrives
@@ -107,19 +107,19 @@ NbCDDrives =<font color="#006666"> InitAudioCD</font>()
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Until</font></b> Event = 0
 
-<font color="#006666">    Delay</font>(20) <font color="#006666">; Wait 20 ms, which is a long period for the processor, to don't steal the whole CPU power
+<font color="#006666">    Delay</font>(20) <font color="#006666">; Wait 20 ms, which is a long period for the processor, to don&apos;t steal the whole CPU power
 </font>              <font color="#006666">; for our little application :)
 </font>
     CurrentTrack =<font color="#006666"> AudioCDStatus</font>()
-    <b><font color="#006666">If</font></b> CurrentTrack &#062; 0
-<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Status</font>, "Playing Track "+<font color="#006666">Str</font>(CurrentTrack)+" (Length: "+<font color="#006666">GetHourFormat</font>(<font color="#006666">AudioCDTrackLength</font>(CurrentTrack))+")")
-<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Time</font>, "Time: "+<font color="#006666">GetHourFormat</font>(<font color="#006666">AudioCDTrackSeconds</font>()))
+    <b><font color="#006666">If</font></b> CurrentTrack &gt; 0
+<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Status</font>, &quot;Playing Track &quot;+<font color="#006666">Str</font>(CurrentTrack)+&quot; (Length: &quot;+<font color="#006666">GetHourFormat</font>(<font color="#006666">AudioCDTrackLength</font>(CurrentTrack))+&quot;)&quot;)
+<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Time</font>, &quot;Time: &quot;+<font color="#006666">GetHourFormat</font>(<font color="#006666">AudioCDTrackSeconds</font>()))
 <font color="#006666">      DisableGadget</font>(<font color="#924B72">#GADGET_Play</font>, 1)
 <font color="#006666">      DisableGadget</font>(<font color="#924B72">#GADGET_Stop</font>, 0)
 <font color="#006666">      DisableGadget</font>(<font color="#924B72">#GADGET_Select</font>, 0)
     <b><font color="#006666">Else</font></b>
-<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Status</font>, "Status: Stopped")
-<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Time</font>, "")
+<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Status</font>, &quot;Status: Stopped&quot;)
+<font color="#006666">      SetGadgetText</font>(<font color="#924B72">#GADGET_Time</font>, &quot;&quot;)
 <font color="#006666">      DisableGadget</font>(<font color="#924B72">#GADGET_Play</font>, 0)
 <font color="#006666">      DisableGadget</font>(<font color="#924B72">#GADGET_Stop</font>, 1)
 

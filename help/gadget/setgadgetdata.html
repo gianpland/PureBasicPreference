@@ -38,21 +38,21 @@ None.
   <font color="#006666">; gadget needs to he handled separately.</font>
   <font color="#006666">;</font>
   <b><font color="#006666">Dim</font></b> <font color="#006666">Messages</font>.s(2)
-<font color="#006666">  Messages</font>(0) = "Good morning"
-<font color="#006666">  Messages</font>(1) = "Hello World"
-<font color="#006666">  Messages</font>(2) = "Nothing to say"
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 190, 100, "SetGadgetData", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    ButtonGadget</font>(0,  10, 10, 80, 20, "Button"):<font color="#006666"> SetGadgetData</font>(0, 1)
-<font color="#006666">    ButtonGadget</font>(1,  10, 40, 80, 20, "Button"):<font color="#006666"> SetGadgetData</font>(1, 2)
-<font color="#006666">    ButtonGadget</font>(2,  10, 70, 80, 20, "Button"):<font color="#006666"> SetGadgetData</font>(2, 1)
-<font color="#006666">    ButtonGadget</font>(3, 100, 10, 80, 20, "Button"):<font color="#006666"> SetGadgetData</font>(3, 2)
-<font color="#006666">    ButtonGadget</font>(4, 100, 40, 80, 20, "Button") <font color="#006666">; will have the value 0 because nothing was set yet</font>
-<font color="#006666">    ButtonGadget</font>(5, 100, 70, 80, 20, "Button")
+<font color="#006666">  Messages</font>(0) = &quot;Good morning&quot;
+<font color="#006666">  Messages</font>(1) = &quot;Hello World&quot;
+<font color="#006666">  Messages</font>(2) = &quot;Nothing to say&quot;
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 190, 100, &quot;SetGadgetData&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    ButtonGadget</font>(0,  10, 10, 80, 20, &quot;Button&quot;):<font color="#006666"> SetGadgetData</font>(0, 1)
+<font color="#006666">    ButtonGadget</font>(1,  10, 40, 80, 20, &quot;Button&quot;):<font color="#006666"> SetGadgetData</font>(1, 2)
+<font color="#006666">    ButtonGadget</font>(2,  10, 70, 80, 20, &quot;Button&quot;):<font color="#006666"> SetGadgetData</font>(2, 1)
+<font color="#006666">    ButtonGadget</font>(3, 100, 10, 80, 20, &quot;Button&quot;):<font color="#006666"> SetGadgetData</font>(3, 2)
+<font color="#006666">    ButtonGadget</font>(4, 100, 40, 80, 20, &quot;Button&quot;) <font color="#006666">; will have the value 0 because nothing was set yet</font>
+<font color="#006666">    ButtonGadget</font>(5, 100, 70, 80, 20, &quot;Button&quot;)
     <b><font color="#006666">Repeat</font></b>
       Event =<font color="#006666"> WaitWindowEvent</font>()
       <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Gadget</font>
         Value =<font color="#006666"> GetGadgetData</font>(<font color="#006666">EventGadget</font>())
-<font color="#006666">        MessageRequester</font>("Message",<font color="#006666"> Messages</font>(Value))
+<font color="#006666">        MessageRequester</font>(&quot;Message&quot;,<font color="#006666"> Messages</font>(Value))
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
@@ -62,6 +62,6 @@ None.
 
 <a href="getgadgetdata.html">GetGadgetData()</a>, <a href="getgadgetitemdata.html">GetGadgetItemData()</a>, <a href="setgadgetitemdata.html">SetGadgetItemData()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetcolor.html>SetGadgetColor()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetfont.html>SetGadgetFont()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetcolor.html>SetGadgetColor()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetfont.html>SetGadgetFont()</a> -><br><br>
 
 </body></html>

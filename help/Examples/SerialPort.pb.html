@@ -11,17 +11,17 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> = <font color="#924B72">#PB_OS_Windows</font>
-  Port$ = "COM1"
+  Port$ = &quot;COM1&quot;
 <b><font color="#006666">CompilerElse</font></b>
-  Port$ = "/dev/ttyS0"
+  Port$ = &quot;/dev/ttyS0&quot;
 <b><font color="#006666">CompilerEndIf</font></b>
 
 <b><font color="#006666">If</font></b> <font color="#006666">OpenSerialPort</font>(0, Port$, 300, <font color="#924B72">#PB_SerialPort_NoParity</font>, 8, 1, <font color="#924B72">#PB_SerialPort_NoHandshake</font>, 1024, 1024)
 
-<font color="#006666">	MessageRequester</font>("Information", "SerialPort opened with success")
+<font color="#006666">	MessageRequester</font>(&quot;Information&quot;, &quot;SerialPort opened with success&quot;)
 
 <b><font color="#006666">Else</font></b>
-<font color="#006666">	MessageRequester</font>("Error", "Can't open the serial port: "+Port$)
+<font color="#006666">	MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open the serial port: &quot;+Port$)
 <b><font color="#006666">EndIf</font></b>
 </font></pre>
 </body></html>

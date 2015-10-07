@@ -10,7 +10,7 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY
 
@@ -44,10 +44,10 @@
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
 
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/GUI", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/GUI&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
     
 <font color="#006666">  InitSprite</font>()
 <font color="#006666">  InitKeyboard</font>()
@@ -55,93 +55,93 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    SkyBox</font>("desert07.jpg")
+<font color="#006666">    SkyBox</font>(&quot;desert07.jpg&quot;)
 		
 <font color="#006666">		CreateCamera</font>(0, 0, 0, 100, 100)  <font color="#006666">; Front camera
 </font><font color="#006666">    MoveCamera</font>(0, 0, 0, 100, <font color="#924B72">#PB_Absolute</font>)
     
-<font color="#006666">    OpenWindow3D</font>(<font color="#924B72">#MainWindow</font>, 50, 20, 280, 400, "Hello in 3D !", <font color="#924B72">#PB_Window3D_SizeGadget</font>)
+<font color="#006666">    OpenWindow3D</font>(<font color="#924B72">#MainWindow</font>, 50, 20, 280, 400, &quot;Hello in 3D !&quot;, <font color="#924B72">#PB_Window3D_SizeGadget</font>)
 		
     Top = 10
-<font color="#006666">    TextGadget3D</font>(<font color="#924B72">#ActiveWindowLabel</font>, 10, Top, 250, 25, "Active window: ") : Top + 30
+<font color="#006666">    TextGadget3D</font>(<font color="#924B72">#ActiveWindowLabel</font>, 10, Top, 250, 25, &quot;Active window: &quot;) : Top + 30
     
     <font color="#006666">;- ProgressBar
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "Progress bar: ")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;Progress bar: &quot;)
 <font color="#006666">    ProgressBarGadget3D</font>(<font color="#924B72">#ProgressBar</font>, 110, Top, 150, 25, 0, 100) : Top + 30
 <font color="#006666">    SetGadgetState3D</font>(<font color="#924B72">#ProgressBar</font>, 30)
-<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#ProgressBar</font>, "I'm a progress bar")
+<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#ProgressBar</font>, &quot;I&apos;m a progress bar&quot;)
     
     <font color="#006666">;- ComboBox
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "Combo box: ")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;Combo box: &quot;)
 <font color="#006666">    ComboBoxGadget3D</font>(<font color="#924B72">#ComboBox</font>, 110, Top, 150, 25) : Top + 30
-<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#ComboBox</font>, "Combobox tooltip !")
-<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, "Item 1")
-<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, "Item 2")
-<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, "Item 3")
-<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, "Item 4")
+<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#ComboBox</font>, &quot;Combobox tooltip !&quot;)
+<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, &quot;Item 1&quot;)
+<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, &quot;Item 2&quot;)
+<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, &quot;Item 3&quot;)
+<font color="#006666">    AddGadgetItem3D</font>(<font color="#924B72">#ComboBox</font>, -1, &quot;Item 4&quot;)
     
      <font color="#006666">;- ScrollBar
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "Scroll bar: ")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;Scroll bar: &quot;)
 <font color="#006666">    ScrollBarGadget3D</font>(<font color="#924B72">#ScrollBar</font>, 110, Top+7, 150, 10, 0, 100, 20) : Top + 30
 <font color="#006666">    SetGadgetState3D</font>(<font color="#924B72">#ScrollBar</font>, 30)
         
     <font color="#006666">;- String
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "String: ")
-<font color="#006666">    StringGadget3D</font>(<font color="#924B72">#String</font>, 110, Top, 150, 25, "Modify me") : Top + 30
-<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#String</font>, "I'm a string gadget")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;String: &quot;)
+<font color="#006666">    StringGadget3D</font>(<font color="#924B72">#String</font>, 110, Top, 150, 25, &quot;Modify me&quot;) : Top + 30
+<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#String</font>, &quot;I&apos;m a string gadget&quot;)
     
     <font color="#006666">;- CheckBox
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "Check box: ")
-<font color="#006666">    CheckBoxGadget3D</font>(<font color="#924B72">#CheckBox</font>, 110, Top, 150, 25, "Enable something") : Top + 30
-<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#CheckBox</font>, "I'm a checkbox !")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;Check box: &quot;)
+<font color="#006666">    CheckBoxGadget3D</font>(<font color="#924B72">#CheckBox</font>, 110, Top, 150, 25, &quot;Enable something&quot;) : Top + 30
+<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#CheckBox</font>, &quot;I&apos;m a checkbox !&quot;)
 <font color="#006666">    SetGadgetState3D</font>(<font color="#924B72">#CheckBox</font>, 1)
     
     <font color="#006666">;- Spinner
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "Spinner: ")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;Spinner: &quot;)
 <font color="#006666">    SpinGadget3D</font>(<font color="#924B72">#Spin</font>, 110, Top, 150, 25, 0, 100) : Top + 30
-<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#Spin</font>, "I'm a spinner !")
+<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#Spin</font>, &quot;I&apos;m a spinner !&quot;)
     
     <font color="#006666">;- Options
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "Options: ")
-<font color="#006666">    OptionGadget3D</font>(<font color="#924B72">#Option1</font>, 110, Top, 150, 25, "Choice 1") : Top + 30
-<font color="#006666">    OptionGadget3D</font>(<font color="#924B72">#Option2</font>, 110, Top, 150, 25, "Choice 2") : Top + 30
-<font color="#006666">    OptionGadget3D</font>(<font color="#924B72">#Option3</font>, 110, Top, 150, 25, "Choice 3") : Top + 30
-<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#Option1</font>, "I'm option 1 !")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;Options: &quot;)
+<font color="#006666">    OptionGadget3D</font>(<font color="#924B72">#Option1</font>, 110, Top, 150, 25, &quot;Choice 1&quot;) : Top + 30
+<font color="#006666">    OptionGadget3D</font>(<font color="#924B72">#Option2</font>, 110, Top, 150, 25, &quot;Choice 2&quot;) : Top + 30
+<font color="#006666">    OptionGadget3D</font>(<font color="#924B72">#Option3</font>, 110, Top, 150, 25, &quot;Choice 3&quot;) : Top + 30
+<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#Option1</font>, &quot;I&apos;m option 1 !&quot;)
 <font color="#006666">    SetGadgetState3D</font>(<font color="#924B72">#Option2</font>, 1)
     
     <font color="#006666">;- Button
-</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, "Button: ")
-<font color="#006666">    ButtonGadget3D</font>(<font color="#924B72">#Button</font>, 110, Top, 150, 25, "Click me !") : Top + 30
-<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#Button</font>, "I'm a button !")
+</font><font color="#006666">    TextGadget3D</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 100, 25, &quot;Button: &quot;)
+<font color="#006666">    ButtonGadget3D</font>(<font color="#924B72">#Button</font>, 110, Top, 150, 25, &quot;Click me !&quot;) : Top + 30
+<font color="#006666">    GadgetToolTip3D</font>(<font color="#924B72">#Button</font>, &quot;I&apos;m a button !&quot;)
         
     
-<font color="#006666">    OpenWindow3D</font>(<font color="#924B72">#SecondWindow</font>, 400, 150, 400, 400, "More gadgets", <font color="#924B72">#PB_Window3D_SizeGadget</font>)
+<font color="#006666">    OpenWindow3D</font>(<font color="#924B72">#SecondWindow</font>, 400, 150, 400, 400, &quot;More gadgets&quot;, <font color="#924B72">#PB_Window3D_SizeGadget</font>)
     
 <font color="#006666">    PanelGadget3D</font>(<font color="#924B72">#Panel</font>, 10, 10, 370, 350)
-<font color="#006666">      GadgetToolTip3D</font>(<font color="#924B72">#Panel</font>, "Panel tooltip !")
-<font color="#006666">      AddGadgetItem3D</font>(<font color="#924B72">#Panel</font>, -1, "First")
+<font color="#006666">      GadgetToolTip3D</font>(<font color="#924B72">#Panel</font>, &quot;Panel tooltip !&quot;)
+<font color="#006666">      AddGadgetItem3D</font>(<font color="#924B72">#Panel</font>, -1, &quot;First&quot;)
 <font color="#006666">        ListViewGadget3D</font>(<font color="#924B72">#ListView</font>, 10, 10, 200, 200, <font color="#924B72">#PB_ListView3D_Multiselect</font>) 
           <b><font color="#006666">For</font></b> k = 0 <b><font color="#006666">To</font></b> 20
-<font color="#006666">            AddGadgetItem3D</font>(<font color="#924B72">#ListView</font>, -1, "Item "+<font color="#006666">Str</font>(k))
+<font color="#006666">            AddGadgetItem3D</font>(<font color="#924B72">#ListView</font>, -1, &quot;Item &quot;+<font color="#006666">Str</font>(k))
           <b><font color="#006666">Next</font></b>
           
-<font color="#006666">      AddGadgetItem3D</font>(<font color="#924B72">#Panel</font>, -1, "Second")
+<font color="#006666">      AddGadgetItem3D</font>(<font color="#924B72">#Panel</font>, -1, &quot;Second&quot;)
 <font color="#006666">        ContainerGadget3D</font>(<font color="#924B72">#Container</font>, 0, 0, 400, 400)
-<font color="#006666">          GadgetToolTip3D</font>(<font color="#924B72">#Container</font>, "Container tooltip !")
+<font color="#006666">          GadgetToolTip3D</font>(<font color="#924B72">#Container</font>, &quot;Container tooltip !&quot;)
       
-<font color="#006666">          LoadTexture</font>(0, "clouds.jpg")
+<font color="#006666">          LoadTexture</font>(0, &quot;clouds.jpg&quot;)
 <font color="#006666">          ImageGadget3D</font>(<font color="#924B72">#Image</font>, 10, 10, 128, 128,<font color="#006666"> TextureID</font>(0))
       
 <font color="#006666">          ScrollAreaGadget3D</font>(<font color="#924B72">#ScrollArea</font>, 10, 150, 100, 100, 256, 256, 30)
-<font color="#006666">          GadgetToolTip3D</font>(<font color="#924B72">#ScrollArea</font>, "Scroll area tooltip !")
+<font color="#006666">          GadgetToolTip3D</font>(<font color="#924B72">#ScrollArea</font>, &quot;Scroll area tooltip !&quot;)
 <font color="#006666">            ImageGadget3D</font>(<font color="#924B72">#Image2</font>, 10, 10, 256, 256,<font color="#006666"> TextureID</font>(0))
 <font color="#006666">          CloseGadgetList3D</font>()
         
 <font color="#006666">        CloseGadgetList3D</font>()
     
-<font color="#006666">      AddGadgetItem3D</font>(<font color="#924B72">#Panel</font>, -1, "Third")
+<font color="#006666">      AddGadgetItem3D</font>(<font color="#924B72">#Panel</font>, -1, &quot;Third&quot;)
 <font color="#006666">        EditorGadget3D</font>(<font color="#924B72">#Editor</font>, 10, 10, 300, 200)
-<font color="#006666">        SetGadgetText3D</font>(<font color="#924B72">#Editor</font>, "Multi" + <font color="#924B72">#LF$</font> + "Line" + <font color="#924B72">#LF$</font> + "Editor !")
+<font color="#006666">        SetGadgetText3D</font>(<font color="#924B72">#Editor</font>, &quot;Multi&quot; + <font color="#924B72">#LF$</font> + &quot;Line&quot; + <font color="#924B72">#LF$</font> + &quot;Editor !&quot;)
       
 <font color="#006666">    CloseGadgetList3D</font>()
     
@@ -164,12 +164,12 @@
 <font color="#006666">        InputEvent3D</font>(<font color="#006666">MouseX</font>(),<font color="#006666"> MouseY</font>(),<font color="#006666"> MouseButton</font>(<font color="#924B72">#PB_MouseButton_Left</font>), Input$, SpecialKey)
       <b><font color="#006666">EndIf</font></b>
       
-      <font color="#006666">; Handle the GUI 3D events, it's similar to regular GUI events
+      <font color="#006666">; Handle the GUI 3D events, it&apos;s similar to regular GUI events
 </font>      <font color="#006666">;
 </font>      <b><font color="#006666">Repeat</font></b>
       	Event =<font color="#006666"> WindowEvent3D</font>()
       	
-<font color="#006666">      	SetGadgetText3D</font>(<font color="#924B72">#ActiveWindowLabel</font>, "Active #Window3D: "+<font color="#006666">Str</font>(<font color="#006666">GetActiveWindow3D</font>()))
+<font color="#006666">      	SetGadgetText3D</font>(<font color="#924B72">#ActiveWindowLabel</font>, &quot;Active #Window3D: &quot;+<font color="#006666">Str</font>(<font color="#006666">GetActiveWindow3D</font>()))
       	
       	<b><font color="#006666">Select</font></b> Event
       		<b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event3D_Gadget</font>
@@ -187,7 +187,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 </font></pre>
 </body></html>

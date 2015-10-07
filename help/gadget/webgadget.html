@@ -57,8 +57,8 @@ The WebGadget uses the Internet Explorer 4.0+ ActiveX object on Windows.
 <b>Linux</b> 
 <blockquote>
 
-The WebGadget uses the WebKitGtk library on Linux. The package with this library is named 'libwebkit'. 
-Some distributions may include an old version of this package which is named 'WebKitGtk'. 
+The WebGadget uses the WebKitGtk library on Linux. The package with this library is named &apos;libwebkit&apos;. 
+Some distributions may include an old version of this package which is named &apos;WebKitGtk&apos;. 
 If your distribution does not include a package for this library, the sources can be downloaded from the 
 <a href="http://webkitgtk.org/">WebKitGtk home page</a>. 
 </blockquote>
@@ -86,7 +86,7 @@ The following functions can be used to act on a WebGadget:
 </font></pre>
 <br>
 <br>
-- <a href="setgadgetitemtext.html">SetGadgetItemText()</a>: With <font color="#924B72">#PB_Web_HtmlCode</font> as 'Item' html code can be streamed into the Gadget. (Windows only) 
+- <a href="setgadgetitemtext.html">SetGadgetItemText()</a>: With <font color="#924B72">#PB_Web_HtmlCode</font> as &apos;Item&apos; html code can be streamed into the Gadget. (Windows only) 
 <br>
 
 - <a href="getgadgetitemtext.html">GetGadgetItemText()</a>: The following constants can be used to get information  (Windows only): 
@@ -136,9 +136,9 @@ The following <a href="../window/eventtype.html">types of events</a> can happen 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 600, 300, "WebGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    WebGadget</font>(0, 10, 10, 580, 280, "http://www.purebasic.com")
-    <font color="#006666">; Note: if you want to use a local file, change last parameter to "file://" + path + filename</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 600, 300, &quot;WebGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    WebGadget</font>(0, 10, 10, 580, 280, &quot;http://www.purebasic.com&quot;)
+    <font color="#006666">; Note: if you want to use a local file, change last parameter to &quot;file://&quot; + path + filename</font>
     <b><font color="#006666">Repeat</font></b>
     <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
@@ -150,20 +150,20 @@ The following <a href="../window/eventtype.html">types of events</a> can happen 
 <br>
 Example 2: (with navigation callback) 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; This example does display the PureBasic.com website. Inside the callback procedure</font>
-  <font color="#006666">; the navigation to the 'News' site will be avoided (#False returned), but allowed</font>
+  <font color="#006666">; the navigation to the &apos;News&apos; site will be avoided (#False returned), but allowed</font>
   <font color="#006666">; for all other sites (#True returned).</font>
     
   <b><font color="#006666">Procedure</font></b> <font color="#006666">NavigationCallback</font>(Gadget, Url$) 
-    <b><font color="#006666">If</font></b> Url$= "http://www.purebasic.com/news.php" 
-<font color="#006666">      MessageRequester</font>("", "No news today!") 
+    <b><font color="#006666">If</font></b> Url$= &quot;http://www.purebasic.com/news.php&quot; 
+<font color="#006666">      MessageRequester</font>(&quot;&quot;, &quot;No news today!&quot;) 
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font> 
     <b><font color="#006666">Else</font></b> 
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#True</font> 
     <b><font color="#006666">EndIf</font></b> 
   <b><font color="#006666">EndProcedure</font></b> 
   
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 600, 300, "WebGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>) 
-<font color="#006666">    WebGadget</font>(0, 10, 10, 580, 280, "http://www.purebasic.com") 
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 600, 300, &quot;WebGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>) 
+<font color="#006666">    WebGadget</font>(0, 10, 10, 580, 280, &quot;http://www.purebasic.com&quot;) 
 <font color="#006666">    SetGadgetAttribute</font>(0, <font color="#924B72">#PB_Web_NavigationCallback</font>, @NavigationCallback())
     <b><font color="#006666">Repeat</font></b> 
     <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font> 
@@ -175,6 +175,6 @@ Example 2: (with navigation callback)
 <a href="getgadgettext.html">GetGadgetText()</a>, <a href="setgadgettext.html">SetGadgetText()</a>, <a href="getgadgetitemtext.html">GetGadgetItemText()</a>, <a href="setgadgetitemtext.html">SetGadgetItemText()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, 
 <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=usegadgetlist.html>UseGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadgetpath.html>WebGadgetPath()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=usegadgetlist.html>UseGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadgetpath.html>WebGadgetPath()</a> -><br><br>
 
 </body></html>

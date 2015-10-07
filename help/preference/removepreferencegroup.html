@@ -7,7 +7,7 @@
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Removes the specified 'Group$' and all its keys. 
+Removes the specified &apos;Group$&apos; and all its keys. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -25,10 +25,42 @@ The group name to remove.
 None.
 
 
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Create the preference file prefs.txt</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreatePreferences</font>(<font color="#006666">GetTemporaryDirectory</font>()+&quot;Prefs.txt&quot;, <font color="#924B72">#PB_Preference_GroupSeparator</font>)
+
+<font color="#006666">    PreferenceGroup</font>(&quot;Window&quot;)
+<font color="#006666">      WritePreferenceLong </font>(&quot;X&quot;, 100)
+<font color="#006666">      WritePreferenceLong </font>(&quot;Y&quot;, 125)
+<font color="#006666">      WritePreferenceString</font>(&quot;Title&quot;, &quot;PureNote&quot;)
+      
+<font color="#006666">      PreferenceGroup</font>(&quot;event&quot;)
+<font color="#006666">      WritePreferenceString</font>(&quot;percentage&quot;, &quot;percentage&quot;)
+<font color="#006666">      WritePreferenceFloat</font>(&quot;%&quot;, 100)
+      
+<font color="#006666">      ClosePreferences</font>()
+    
+<font color="#006666">      RunProgram</font>(<font color="#006666">GetTemporaryDirectory</font>()+&quot;Prefs.txt&quot;)
+    <b><font color="#006666">EndIf</font></b>  
+    
+<font color="#006666">    MessageRequester</font>(&quot;Info&quot;, &quot;Delete the group &apos;event&apos; &quot;)
+    
+  <font color="#006666">; Open a preference file</font>
+<font color="#006666">    OpenPreferences</font>(<font color="#006666">GetTemporaryDirectory</font>()+&quot;Prefs.txt&quot;)
+    
+  <font color="#006666">; Delete the group &apos;event&apos;  </font>
+<font color="#006666">    RemovePreferenceGroup</font>(&quot;event&quot;)
+    
+<font color="#006666">    ClosePreferences</font>()
+      
+<font color="#006666">    RunProgram</font>(<font color="#006666">GetTemporaryDirectory</font>()+&quot;Prefs.txt&quot;)
+</font></pre>
+
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="preferencegroup.html">PreferenceGroup()</a>, <a href="examinepreferencegroups.html">ExaminePreferenceGroups()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=readpreferencestring.html>ReadPreferenceString()</a> - <a href=index.html>Preference Index</a> - <a href=removepreferencekey.html>RemovePreferenceKey()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=readpreferencestring.html>ReadPreferenceString()</a> - <a href=index.html>Preference Index</a> - <a href=removepreferencekey.html>RemovePreferenceKey()</a> -><br><br>
 
 </body></html>

@@ -14,11 +14,11 @@
   
   <b><font color="#006666">CompilerCase</font></b> <font color="#924B72">#PB_OS_Windows</font>
 
-      <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, "USER32.DLL")
+      <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, &quot;USER32.DLL&quot;)
       
-        *MessageBox =<font color="#006666"> GetFunction</font>(0, "MessageBoxA")
+        *MessageBox =<font color="#006666"> GetFunction</font>(0, &quot;MessageBoxA&quot;)
         <b><font color="#006666">If</font></b> *MessageBox
-<font color="#006666">          CallFunctionFast</font>(*MessageBox, 0, @"Body", @"Title", 0)
+<font color="#006666">          CallFunctionFast</font>(*MessageBox, 0, @&quot;Body&quot;, @&quot;Title&quot;, 0)
         <b><font color="#006666">EndIf</font></b>
         
 <font color="#006666">        CloseLibrary</font>(0)
@@ -27,15 +27,15 @@
 
   <b><font color="#006666">CompilerCase</font></b> <font color="#924B72">#PB_OS_Linux</font>
 
-      <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, "libc.so")
+      <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, &quot;libc.so&quot;)
       
-        *MAlloc =<font color="#006666"> GetFunction</font>(0, "malloc")
+        *MAlloc =<font color="#006666"> GetFunction</font>(0, &quot;malloc&quot;)
         <b><font color="#006666">If</font></b> *MAlloc
           *Buffer =<font color="#006666"> CallCFunctionFast</font>(*MAlloc, 128)
           <b><font color="#006666">If</font></b> *Buffer
-            <b><font color="#006666">Debug</font></b> "Buffer allocated"
+            <b><font color="#006666">Debug</font></b> &quot;Buffer allocated&quot;
 
-<font color="#006666">            CallCFunction</font>(0, "free", *Buffer)
+<font color="#006666">            CallCFunction</font>(0, &quot;free&quot;, *Buffer)
 
           <b><font color="#006666">EndIf</font></b>
         <b><font color="#006666">EndIf</font></b>

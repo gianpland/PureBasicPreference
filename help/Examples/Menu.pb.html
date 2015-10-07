@@ -14,36 +14,36 @@
 </font><font color="#006666">; We just have to open a window and see when an event happen on the menu
 </font><font color="#006666">;
 </font>
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 150, 195, 260, "PureBasic - Menu")
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 150, 195, 260, &quot;PureBasic - Menu&quot;)
 
   <font color="#006666">;
 </font>  <font color="#006666">; Create the menu. The indent is very important here for a good lisibility
 </font>  <font color="#006666">;
 </font>
   <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))
-<font color="#006666">    MenuTitle</font>("File")
-<font color="#006666">      MenuItem</font>( 1, "&Load...")
-<font color="#006666">      MenuItem</font>( 2, "Save")
-<font color="#006666">      MenuItem</font>( 3, "Save As...")
+<font color="#006666">    MenuTitle</font>(&quot;File&quot;)
+<font color="#006666">      MenuItem</font>( 1, &quot;&amp;Load...&quot;)
+<font color="#006666">      MenuItem</font>( 2, &quot;Save&quot;)
+<font color="#006666">      MenuItem</font>( 3, &quot;Save As...&quot;)
 <font color="#006666">      MenuBar</font>()
-<font color="#006666">      OpenSubMenu</font>("Recents")
-<font color="#006666">        MenuItem</font>( 5, "Pure.png")
-<font color="#006666">        MenuItem</font>( 6, "Basic.jpg")
-<font color="#006666">        OpenSubMenu</font>("Even more !")
-<font color="#006666">          MenuItem</font>( 12, "Yeah")
+<font color="#006666">      OpenSubMenu</font>(&quot;Recents&quot;)
+<font color="#006666">        MenuItem</font>( 5, &quot;Pure.png&quot;)
+<font color="#006666">        MenuItem</font>( 6, &quot;Basic.jpg&quot;)
+<font color="#006666">        OpenSubMenu</font>(&quot;Even more !&quot;)
+<font color="#006666">          MenuItem</font>( 12, &quot;Yeah&quot;)
 <font color="#006666">        CloseSubMenu</font>()
-<font color="#006666">        MenuItem</font>( 13, "Rocks.tga")
+<font color="#006666">        MenuItem</font>( 13, &quot;Rocks.tga&quot;)
 <font color="#006666">      CloseSubMenu</font>()
 <font color="#006666">      MenuBar</font>()
-<font color="#006666">      MenuItem</font>( 7, "&Quit")
+<font color="#006666">      MenuItem</font>( 7, &quot;&amp;Quit&quot;)
 
-<font color="#006666">    MenuTitle</font>("Edition")
-<font color="#006666">      MenuItem</font>( 8, "Cut")
-<font color="#006666">      MenuItem</font>( 9, "Copy")
-<font color="#006666">      MenuItem</font>(10, "Paste")
+<font color="#006666">    MenuTitle</font>(&quot;Edition&quot;)
+<font color="#006666">      MenuItem</font>( 8, &quot;Cut&quot;)
+<font color="#006666">      MenuItem</font>( 9, &quot;Copy&quot;)
+<font color="#006666">      MenuItem</font>(10, &quot;Paste&quot;)
       
-<font color="#006666">    MenuTitle</font>("?")
-<font color="#006666">      MenuItem</font>(11, "About")
+<font color="#006666">    MenuTitle</font>(&quot;?&quot;)
+<font color="#006666">      MenuItem</font>(11, &quot;About&quot;)
 
   <b><font color="#006666">EndIf</font></b>
   
@@ -51,9 +51,9 @@
 <font color="#006666">  DisableMenuItem</font>(0, 13, 1)
   
   <font color="#006666">;
-</font>  <font color="#006666">; This is the 'event loop'. All the user actions are processed here.
-</font>  <font color="#006666">; It's very easy to understand: when an action occurs, the Event
-</font>  <font color="#006666">; isn't 0 and we just have to see what have happened...
+</font>  <font color="#006666">; This is the &apos;event loop&apos;. All the user actions are processed here.
+</font>  <font color="#006666">; It&apos;s very easy to understand: when an action occurs, the Event
+</font>  <font color="#006666">; isn&apos;t 0 and we just have to see what have happened...
 </font>  <font color="#006666">;
 </font>  
   <b><font color="#006666">Repeat</font></b>
@@ -65,10 +65,10 @@
         <b><font color="#006666">Select</font></b> <font color="#006666">EventMenu</font>()  <font color="#006666">; To see which menu has been selected
 </font>
           <b><font color="#006666">Case</font></b> 11 <font color="#006666">; About
-</font><font color="#006666">            MessageRequester</font>("About", "Cool Menu example", 0)
+</font><font color="#006666">            MessageRequester</font>(&quot;About&quot;, &quot;Cool Menu example&quot;, 0)
             
           <b><font color="#006666">Default</font></b>
-<font color="#006666">            MessageRequester</font>("Info", "MenuItem: "+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>()), 0)
+<font color="#006666">            MessageRequester</font>(&quot;Info&quot;, &quot;MenuItem: &quot;+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>()), 0)
 
         <b><font color="#006666">EndSelect</font></b>
 

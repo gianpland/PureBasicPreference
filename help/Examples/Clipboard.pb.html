@@ -11,17 +11,17 @@
 </font><font color="#006666">;
 </font>
 <font color="#006666">; Paste text to the clipboard..
-</font><font color="#006666">SetClipboardText</font>("PureBasic pasted text example.")
+</font><font color="#006666">SetClipboardText</font>(&quot;PureBasic pasted text example.&quot;)
 
 <font color="#006666">; Display the contents of the clipboard...
-</font><font color="#006666">MessageRequester</font>("Info", "Text in the clipboard"+<font color="#924B72">#LF$</font>+"'"+<font color="#006666">GetClipboardText</font>()+"'", 0)
+</font><font color="#006666">MessageRequester</font>(&quot;Info&quot;, &quot;Text in the clipboard&quot;+<font color="#924B72">#LF$</font>+&quot;&apos;&quot;+<font color="#006666">GetClipboardText</font>()+&quot;&apos;&quot;, 0)
 
 <font color="#006666">; Now paste an image...
 </font>
-<b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0,<font color="#006666"> OpenFileRequester</font>("Load a picture","","Bitmap (*.bmp)|*.bmp",0))
+<b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0,<font color="#006666"> OpenFileRequester</font>(&quot;Load a picture&quot;,&quot;&quot;,&quot;Bitmap (*.bmp)|*.bmp&quot;,0))
   <b><font color="#006666">If</font></b> <font color="#006666">SetClipboardImage</font>(0)
 
-<font color="#006666">    MessageRequester</font>("Info", "Image correctly pasted to the clipboard."+<font color="#006666">Chr</font>(10)+"Open 'Paint' to test it !", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Info&quot;, &quot;Image correctly pasted to the clipboard.&quot;+<font color="#006666">Chr</font>(10)+&quot;Open &apos;Paint&apos; to test it !&quot;, 0)
   <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">EndIf</font></b></font></pre>
 </body></html>

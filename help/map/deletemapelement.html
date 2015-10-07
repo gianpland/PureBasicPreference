@@ -36,24 +36,24 @@ current element after the deletion, the result is 0.
 
 After this call, the new current 
 element is the previous element (the one before the deleted element), which is an arbitrary 
-element, as a map isn't sorted. If that element does not exist (in other words, you deleted the first element in the map) 
+element, as a map isn&apos;t sorted. If that element does not exist (in other words, you deleted the first element in the map) 
 then there is no more current element, as it will be before the first element, like 
 after a <a href="resetmap.html">ResetMap()</a>. If there was only one element in the map when you deleted it then you are left 
 with no current element! 
 <br>
 <br>
-If the optional 'Key$' parameter is specified then there will be no more current element after this call. 
+If the optional &apos;Key$&apos; parameter is specified then there will be no more current element after this call. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">NewMap</font></b> <font color="#006666">Country</font>.s()
 
-<font color="#006666">  Country</font>("US") = "United States"
-<font color="#006666">  Country</font>("FR") = "France"
-<font color="#006666">  Country</font>("GE") = "Germany"
+<font color="#006666">  Country</font>(&quot;US&quot;) = &quot;United States&quot;
+<font color="#006666">  Country</font>(&quot;FR&quot;) = &quot;France&quot;
+<font color="#006666">  Country</font>(&quot;GE&quot;) = &quot;Germany&quot;
 
   <font color="#006666">; Delete a country</font>
-<font color="#006666">  DeleteMapElement</font>(<font color="#006666">Country</font>(), "FR")
+<font color="#006666">  DeleteMapElement</font>(<font color="#006666">Country</font>(), &quot;FR&quot;)
   
   <b><font color="#006666">ForEach</font></b> <font color="#006666">Country</font>()
     <b><font color="#006666">Debug</font></b> <font color="#006666">Country</font>()
@@ -64,6 +64,6 @@ If the optional 'Key$' parameter is specified then there will be no more current
 
 <a href="addmapelement.html">AddMapElement()</a>, <a href="clearmap.html">ClearMap()</a>, <a href="mapsize.html">MapSize()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=copymap.html>CopyMap()</a> - <a href=index.html>Map Index</a> - <a href=findmapelement.html>FindMapElement()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=copymap.html>CopyMap()</a> - <a href=index.html>Map Index</a> - <a href=findmapelement.html>FindMapElement()</a> -><br><br>
 
 </body></html>

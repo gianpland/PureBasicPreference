@@ -35,7 +35,7 @@ The text to display on the button.
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
 <td> 
-A combination (using the bitwise OR operator '|') of the following constants: 
+A combination (using the bitwise OR operator &apos;|&apos;) of the following constants: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Button_Right</font>     : Aligns the button text at the right. (not supported on Mac OSX)
   <font color="#924B72">#PB_Button_Left</font>      : Aligns the button text at the left. (not supported on Mac OSX)
   <font color="#924B72">#PB_Button_Default</font>   : Makes the button look as if it is the default button in the window (on OS X, the height of the button needs to be 25).
@@ -52,7 +52,7 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to control the gadget: 
@@ -70,12 +70,12 @@ The following functions can be used to control the gadget:
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Shows possible flags of ButtonGadget in action...</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 222, 200, "ButtonGadgets", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    ButtonGadget</font>(0, 10, 10, 200, 20, "Standard Button")
-<font color="#006666">    ButtonGadget</font>(1, 10, 40, 200, 20, "Left Button", <font color="#924B72">#PB_Button_Left</font>)
-<font color="#006666">    ButtonGadget</font>(2, 10, 70, 200, 20, "Right Button", <font color="#924B72">#PB_Button_Right</font>)
-<font color="#006666">    ButtonGadget</font>(3, 10,100, 200, 60, "Multiline Button  (longer text gets automatically wrapped)", <font color="#924B72">#PB_Button_MultiLine</font>)
-<font color="#006666">    ButtonGadget</font>(4, 10,170, 200, 20, "Toggle Button", <font color="#924B72">#PB_Button_Toggle</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 222, 200, &quot;ButtonGadgets&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    ButtonGadget</font>(0, 10, 10, 200, 20, &quot;Standard Button&quot;)
+<font color="#006666">    ButtonGadget</font>(1, 10, 40, 200, 20, &quot;Left Button&quot;, <font color="#924B72">#PB_Button_Left</font>)
+<font color="#006666">    ButtonGadget</font>(2, 10, 70, 200, 20, &quot;Right Button&quot;, <font color="#924B72">#PB_Button_Right</font>)
+<font color="#006666">    ButtonGadget</font>(3, 10,100, 200, 60, &quot;Multiline Button  (longer text gets automatically wrapped)&quot;, <font color="#924B72">#PB_Button_MultiLine</font>)
+<font color="#006666">    ButtonGadget</font>(4, 10,170, 200, 20, &quot;Toggle Button&quot;, <font color="#924B72">#PB_Button_Toggle</font>)
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
@@ -86,6 +86,6 @@ The following functions can be used to control the gadget:
 
 <a href="setgadgettext.html">SetGadgetText()</a>, <a href="getgadgettext.html">GetGadgetText()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgetstate.html">GetGadgetState()</a>, <a href="buttonimagegadget.html">ButtonImageGadget()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=bindgadgetevent.html>BindGadgetEvent()</a> - <a href=index.html>Gadget Index</a> - <a href=buttonimagegadget.html>ButtonImageGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=bindgadgetevent.html>BindGadgetEvent()</a> - <a href=index.html>Gadget Index</a> - <a href=buttonimagegadget.html>ButtonImageGadget()</a> -><br><br>
 
 </body></html>

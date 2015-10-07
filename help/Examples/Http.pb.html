@@ -13,8 +13,8 @@
 <font color="#006666">InitNetwork</font>()
 
 
-URL$ = "http://user:pass@www.purebasic.com:1024/subdirectory/index.php?year=2008&month=12&day=3"
-<b><font color="#006666">Debug</font></b> <font color="#006666">GetURLPart</font>(URL$, "year")
+URL$ = &quot;http://user:pass@www.purebasic.com:1024/subdirectory/index.php?year=2008&amp;month=12&amp;day=3&quot;
+<b><font color="#006666">Debug</font></b> <font color="#006666">GetURLPart</font>(URL$, &quot;year&quot;)
 <b><font color="#006666">Debug</font></b> <font color="#006666">GetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Site</font>)
 <b><font color="#006666">Debug</font></b> <font color="#006666">GetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Port</font>)
 <b><font color="#006666">Debug</font></b> <font color="#006666">GetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Parameters</font>)
@@ -22,11 +22,11 @@ URL$ = "http://user:pass@www.purebasic.com:1024/subdirectory/index.php?year=2008
 <b><font color="#006666">Debug</font></b> <font color="#006666">GetURLPart</font>(URL$, <font color="#924B72">#PB_URL_User</font>)
 <b><font color="#006666">Debug</font></b> <font color="#006666">GetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Password</font>)
 
-<b><font color="#006666">Debug</font></b> "-------"
-<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Site</font>, "forums.purebasic.fr")
-<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Port</font>, "80")
-<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_User</font>, "bericko")
-<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Password</font>, "password")
+<b><font color="#006666">Debug</font></b> &quot;-------&quot;
+<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Site</font>, &quot;forums.purebasic.fr&quot;)
+<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Port</font>, &quot;80&quot;)
+<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_User</font>, &quot;bericko&quot;)
+<b><font color="#006666">Debug</font></b> <font color="#006666">SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Password</font>, &quot;password&quot;)
 
 
 

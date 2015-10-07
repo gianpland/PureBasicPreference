@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="4">SendMail()</font></b></p>
 <p><b>Syntax</b></p><blockquote>
-Result = <font color="#006666"><b>SendMail</b></font>(#Mail, Smtp$ [, Port [, Asynchronous [, User$, Password$]]])</blockquote>
+Result = <font color="#006666"><b>SendMail</b></font>(#Mail, Smtp$ [, Port [, Flags [, User$, Password$]]])</blockquote>
 
 </blockquote>
 <b>Description</b><br><blockquote>
@@ -24,18 +24,19 @@ The mail to send.
 <td> 
 The address of the mail server to use for sending the mail. 
 
+
 </td></tr>
 <tr><td><i>Port (optional)</i></td>
 <td> 
 The port of the mail server. The default is port 25. 
 
 </td></tr>
-<tr><td><i>Asynchronous (optional)</i></td>
+<tr><td><i>Flags (optional)</i></td>
 <td> 
-Whether the transfer should be done in the background. If this parameter is nonzero 
-then the function returns immediately and the progress can be checked with the <a href="mailprogress.html">MailProgress()</a> function. 
-If this parameter is zero or not specified, then the function blocks until the mail was sent or there 
-was an error. 
+It can be a combination of the following values: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Mail_Asynchronous</font>: sends the mail in the background. <a href="mailprogress.html">MailProgress()</a> can be used to follow the progress.
+  <font color="#924B72">#PB_Mail_UseSSL</font>      : uses TLS/SSL to send the mail (the server needs to support this protocol).
+</font></pre>
 
 </td></tr>
 <tr><td><i>User$, Password$ (optional)</i></td>
@@ -48,16 +49,30 @@ The user and password used for SMTP authentication, if the server requires it.
 
 Returns nonzero if the mail was sent correctly and zero otherwise. 
 
-</blockquote><p><b>Example</b></p><blockquote>
+</blockquote><p><b>Example:</b> Simple SMTP</p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  InitNetwork</font>()
 
   <font color="#006666">; Note: change the address and smtp to have a working example</font>
   <font color="#006666">;</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">CreateMail</font>(0, "test@youraddress.com", "Hello")
-<font color="#006666">    AddMailRecipient</font>(0, "youraddress@youraddress.com", <font color="#924B72">#PB_Mail_To</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateMail</font>(0, &quot;test@youraddress.com&quot;, &quot;Hello&quot;)
+<font color="#006666">    AddMailRecipient</font>(0, &quot;youraddress@youraddress.com&quot;, <font color="#924B72">#PB_Mail_To</font>)
 
-    <b><font color="#006666">Debug</font></b> <font color="#006666">SendMail</font>(0, "smtp.yourfavoritesmtp.com")
+    <b><font color="#006666">Debug</font></b> <font color="#006666">SendMail</font>(0, &quot;smtp.yourfavoritesmtp.com&quot;)
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>Example:</b> Using GMail (TLS)</p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  InitNetwork</font>()
+
+  <font color="#006666">; Be sure to use the right login and right password</font>
+  <font color="#006666">;</font>
+  Login$ = &quot;yourlogin&quot;
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateMail</font>(0, Login$ + &quot;@gmail.com&quot;, &quot;Hello&quot;)
+<font color="#006666">    AddMailRecipient</font>(0, &quot;youraddress@youraddress.com&quot;, <font color="#924B72">#PB_Mail_To</font>)
+
+    <b><font color="#006666">Debug</font></b> <font color="#006666">SendMail</font>(0, &quot;smtp.gmail.com&quot;, 587, <font color="#924B72">#PB_Mail_UseSSL</font>, Login$, &quot;password&quot;)
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -65,6 +80,6 @@ Returns nonzero if the mail was sent correctly and zero otherwise.
 
 <a href="createmail.html">CreateMail()</a>, <a href="mailprogress.html">MailProgress()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removemailrecipient.html>RemoveMailRecipient()</a> - <a href=index.html>Mail Index</a> - <a href=setmailattribute.html>SetMailAttribute()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removemailrecipient.html>RemoveMailRecipient()</a> - <a href=index.html>Mail Index</a> - <a href=setmailattribute.html>SetMailAttribute()</a> -><br><br>
 
 </body></html>

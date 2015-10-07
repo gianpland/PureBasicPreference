@@ -2,12 +2,13 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="4">ReadCharacter()</font></b></p>
 <p><b>Syntax</b></p><blockquote>
-Number.c = <font color="#006666"><b>ReadCharacter</b></font>(#File)</blockquote>
+Result.c = <font color="#006666"><b>ReadCharacter</b></font>(#File [, Format])</blockquote>
 
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Read a character (1 byte in ASCII, 2 bytes in <a href="../reference/unicode.html">unicode</a>) from a file. 
+
+Read a character from a file. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -20,6 +21,15 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 The file to read from. 
 
 </td></tr>
+<tr><td><i>Format (optional)</i></td>
+<td> 
+The format of the character to read. It can be one of the following value: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Ascii</font>  : 1 byte character (default in ASCII mode).
+  <font color="#924B72">#PB_Unicode</font>: 2 bytes character (default in <a href="../reference/unicode.html">unicode</a> mode).
+  <font color="#924B72">#PB_UTF8</font>   : multi-bytes character (from 1 to 4 bytes).
+</font></pre>
+
+</td></tr>
 </table>
 </blockquote><p><b>Return value</b></p><blockquote>
 
@@ -28,12 +38,12 @@ Returns the read character or zero if there was an error.
 </blockquote><p><b>Remarks</b></p><blockquote>
 
 For an example of how to read from a file, see the <a href="readfile.html">ReadFile()</a> function - with 
-ReadCharacter() only a character value is read, instead of a complete line (string). 
+ReadCharacter() only a character is read, instead of a complete line (string). 
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="writecharacter.html">WriteCharacter()</a>, <a href="readasciicharacter.html">ReadAsciiCharacter()</a>, <a href="readunicodecharacter.html">ReadUnicodeCharacter()</a>, <a href="openfile.html">OpenFile()</a>, <a href="readfile.html">ReadFile()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=readbyte.html>ReadByte()</a> - <a href=index.html>File Index</a> - <a href=readdata.html>ReadData()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=readbyte.html>ReadByte()</a> - <a href=index.html>File Index</a> - <a href=readdata.html>ReadData()</a> -><br><br>
 
 </body></html>

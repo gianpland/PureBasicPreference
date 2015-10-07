@@ -37,19 +37,19 @@ about the error and then exit the program.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  MessageRequester</font>("OnError test", "Test start")
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  MessageRequester</font>(&quot;OnError test&quot;, &quot;Test start&quot;)
 
 <font color="#006666">  OnErrorGoto</font>(?ErrorHandler)
-<font color="#006666">  Pokes</font>(10, "Hello World") <font color="#006666">; Cause a #PB_OnError_InvalidMemory error</font>
+<font color="#006666">  Pokes</font>(10, &quot;Hello World&quot;) <font color="#006666">; Cause a #PB_OnError_InvalidMemory error</font>
   
-<font color="#006666">  MessageRequester</font>("OnError test", "This should never be displayed")
+<font color="#006666">  MessageRequester</font>(&quot;OnError test&quot;, &quot;This should never be displayed&quot;)
   <b><font color="#006666">End</font></b>
   
   ErrorHandler:
-<font color="#006666">  MessageRequester</font>("OnError test", "The following error happened: " +<font color="#006666"> ErrorMessage</font>())
+<font color="#006666">  MessageRequester</font>(&quot;OnError test&quot;, &quot;The following error happened: &quot; +<font color="#006666"> ErrorMessage</font>())
   <b><font color="#006666">End</font></b>
 </font></pre>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=onerrorexit.html>OnErrorExit()</a> - <a href=index.html>OnError Index</a> - <a href=raiseerror.html>RaiseError()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=onerrorexit.html>OnErrorExit()</a> - <a href=index.html>OnError Index</a> - <a href=raiseerror.html>RaiseError()</a> -><br><br>
 
 </body></html>

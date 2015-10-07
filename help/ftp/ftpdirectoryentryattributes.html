@@ -28,7 +28,7 @@ Returns a combination of the following values:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_FTP_ReadUser</font>  : Access flags for the owning user
   <font color="#924B72">#PB_FTP_WriteUser</font>
   <font color="#924B72">#PB_FTP_ExecuteUser</font>
-  <font color="#924B72">#PB_FTP_ReadGroup</font> : Access flags for the owning user's group
+  <font color="#924B72">#PB_FTP_ReadGroup</font> : Access flags for the owning user&apos;s group
   <font color="#924B72">#PB_FTP_WriteGroup</font>
   <font color="#924B72">#PB_FTP_ExecuteGroup</font>
   <font color="#924B72">#PB_FTP_ReadAll</font>   : Access flags for all other users
@@ -38,13 +38,13 @@ Returns a combination of the following values:
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-To check if one attribute is actually set, just use the '&' (binary AND) and the attribute constant value: 
+To check if one attribute is actually set, just use the &apos;&amp;&apos; (binary AND) and the attribute constant value: 
 
 <pre><font face="Courier New, Courier, mono"size="2">  [...]
   
   FileAttributes =<font color="#006666"> FTPDirectoryEntryAttributes</font>(<font color="#924B72">#Ftp</font>)
-  <b><font color="#006666">If</font></b> FileAttributes & <font color="#924B72">#PB_FTP_ReadUser</font>
-    <b><font color="#006666">Debug</font></b> "This file has the ReadUser flag"
+  <b><font color="#006666">If</font></b> FileAttributes &amp; <font color="#924B72">#PB_FTP_ReadUser</font>
+    <b><font color="#006666">Debug</font></b> &quot;This file has the ReadUser flag&quot;
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -58,7 +58,7 @@ To check if one attribute is actually set, just use the '&' (binary AND) and the
 <a href="ftpdirectoryentrysize.html">FTPDirectoryEntrySize()</a>, 
 <a href="ftpdirectoryentryraw.html">FTPDirectoryEntryRaw()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=examineftpdirectory.html>ExamineFTPDirectory()</a> - <a href=index.html>Ftp Index</a> - <a href=ftpdirectoryentrydate.html>FTPDirectoryEntryDate()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=examineftpdirectory.html>ExamineFTPDirectory()</a> - <a href=index.html>Ftp Index</a> - <a href=ftpdirectoryentrydate.html>FTPDirectoryEntryDate()</a> -><br><br>
 
 
 </body></html>

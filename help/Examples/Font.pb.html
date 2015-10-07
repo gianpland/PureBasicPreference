@@ -9,18 +9,18 @@
 </font><font color="#006666">;
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
-</font><font color="#006666">; NOTE: This file doesn't compile with the demo version !
+</font><font color="#006666">; NOTE: This file doesn&apos;t compile with the demo version !
 </font><font color="#006666">;
 </font>
-<font color="#006666">LoadFont </font>(0, "Courier", 15)            <font color="#006666">; Load Courrier Font, Size 15
-</font><font color="#006666">LoadFont </font>(1, "Arial", 30)              <font color="#006666">; Load Arial Font, Size 30
+<font color="#006666">LoadFont </font>(0, &quot;Courier&quot;, 15)            <font color="#006666">; Load Courrier Font, Size 15
+</font><font color="#006666">LoadFont </font>(1, &quot;Arial&quot;, 30)              <font color="#006666">; Load Arial Font, Size 30
 </font>
 <font color="#006666">;
 </font><font color="#006666">;-------- Open our Window --------
 </font><font color="#006666">;
 </font>
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 460, 148, "Font Test") = 0
-<font color="#006666">  MessageRequester</font>("Error", "Can't open Window", 0)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 460, 148, &quot;Font Test&quot;) = 0
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open Window&quot;, 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
@@ -31,11 +31,11 @@
 </font>  
 <font color="#006666">    DrawingMode</font>(1)                          <font color="#006666">; Transparent TextBackground
 </font>  
-<font color="#006666">    DrawingFont</font>(<font color="#006666">FontID</font>(0))                 <font color="#006666">; Use the 'Courier' font
-</font><font color="#006666">    DrawText</font>(10,10, "Font: Courier - Size: 15 - Red",<font color="#006666"> RGB</font>(255, 0, 0))    <font color="#006666">; Print our text
+<font color="#006666">    DrawingFont</font>(<font color="#006666">FontID</font>(0))                 <font color="#006666">; Use the &apos;Courier&apos; font
+</font><font color="#006666">    DrawText</font>(10,10, &quot;Font: Courier - Size: 15 - Red&quot;,<font color="#006666"> RGB</font>(255, 0, 0))    <font color="#006666">; Print our text
 </font>                
 <font color="#006666">    DrawingFont</font>(<font color="#006666">FontID</font>(1))                 <font color="#006666">; Use the Arial font
-</font><font color="#006666">    DrawText</font>(10,40, "Font: Arial - Size: 30",<font color="#006666"> RGB</font>(0, 0, 0))      <font color="#006666">; Print our text
+</font><font color="#006666">    DrawText</font>(10,40, &quot;Font: Arial - Size: 30&quot;,<font color="#006666"> RGB</font>(0, 0, 0))      <font color="#006666">; Print our text
 </font>
 <font color="#006666">    StopDrawing</font>()                          <font color="#006666">; This is absolutely needed when the drawing operations are 
 </font>  <b><font color="#006666">EndIf</font></b>                                    <font color="#006666">; finished !!! Never forget it !
@@ -47,9 +47,9 @@
 </font><font color="#006666">ImageGadget</font>(0, 5, 10, 450, 130,<font color="#006666"> ImageID</font>(0))
 
 <font color="#006666">;
-</font><font color="#006666">; This is the 'event loop'. All the user actions are processed here.
-</font><font color="#006666">; It's very easy to understand: when an action occurs, the Event
-</font><font color="#006666">; isn't 0 and we just have to see what have happened...
+</font><font color="#006666">; This is the &apos;event loop&apos;. All the user actions are processed here.
+</font><font color="#006666">; It&apos;s very easy to understand: when an action occurs, the Event
+</font><font color="#006666">; isn&apos;t 0 and we just have to see what have happened...
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">Repeat</font></b>

@@ -14,7 +14,7 @@ It then converts the buffer content into a hexadecimal and text display in a <a 
 as a simple hex viewer application. 
 <br>
 <br>
-An <a href="../gadget/explorerlistgadget.html">ExplorerListGadget()</a> is used to display the contents of the user's home directory, 
+An <a href="../gadget/explorerlistgadget.html">ExplorerListGadget()</a> is used to display the contents of the user&apos;s home directory, 
 initially, and to allow selection of a file. Two <a href="../gadget/buttongadget.html">buttons</a> 
 are provided, one to display a file and another to clear the display. 
 <br>
@@ -27,13 +27,13 @@ eight values.
 <br>
 Two pointers are used - the first (*Buffer) contains the memory address of the 
 complete file. The second (*Byte), in the <a href="../reference/procedures.html">procedure</a> 
-"FileDisplay", demonstrates the use of pointer arithmetic and the 
+&quot;FileDisplay&quot;, demonstrates the use of pointer arithmetic and the 
 <a href="../memory/index.html">Peek</a> instruction to obtain individual values from within 
 the buffer. 
 <br>
 <br>
-Finally, the "FileClose" procedure demonstrates the use of the <a href="../memory/fillmemory.html">FillMemory()</a> instruction 
-to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeMemory()</a> to de-allocate the memory buffer. 
+Finally, the &quot;FileClose&quot; procedure demonstrates the use of the <a href="../memory/fillmemory.html">FillMemory()</a> instruction 
+to overwrite the buffer&apos;s contents and <a href="../memory/freememory.html">FreeMemory()</a> to de-allocate the memory buffer. 
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">;- Compiler Directives</font>
   <b><font color="#006666">EnableExplicit</font></b>
@@ -72,27 +72,27 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
     <b><font color="#006666">Protected</font></b>.l Col
     <b><font color="#006666">Protected</font></b>.s Label
     
-    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(<font color="#924B72">#WindowHex</font>, 50, 50, 500, 400, "Hex View", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
+    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(<font color="#924B72">#WindowHex</font>, 50, 50, 500, 400, &quot;Hex View&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
       
       <font color="#006666">; Set minimum window size.</font>
 <font color="#006666">      WindowBounds</font>(<font color="#924B72">#WindowHex</font>, 175, 175, <font color="#924B72">#PB_Ignore</font>, <font color="#924B72">#PB_Ignore</font>)
       
-      <font color="#006666">; Create Explorer List and set to user's home directory.</font>
+      <font color="#006666">; Create Explorer List and set to user&apos;s home directory.</font>
 <font color="#006666">      ExplorerListGadget</font>(<font color="#924B72">#GadgetFiles</font>, 5, 5, 430, 175,<font color="#006666"> GetHomeDirectory</font>())
       
       <font color="#006666">; Buttons.</font>
-<font color="#006666">      ButtonGadget</font>(<font color="#924B72">#GadgetOpen</font>, 5, 185, 80, 25, "Open")
-<font color="#006666">      ButtonGadget</font>(<font color="#924B72">#GadgetClose</font>, 100, 185, 80, 25, "Close")
+<font color="#006666">      ButtonGadget</font>(<font color="#924B72">#GadgetOpen</font>, 5, 185, 80, 25, &quot;Open&quot;)
+<font color="#006666">      ButtonGadget</font>(<font color="#924B72">#GadgetClose</font>, 100, 185, 80, 25, &quot;Close&quot;)
       
       <font color="#006666">; List Icon Gadget.</font>
-<font color="#006666">      ListIconGadget</font>(<font color="#924B72">#GadgetHex</font>, 5, 215, 490, 180, "Offset", 80, <font color="#924B72">#PB_ListIcon_AlwaysShowSelection</font> | <font color="#924B72">#PB_ListIcon_GridLines</font> | <font color="#924B72">#PB_ListIcon_FullRowSelect</font>)
+<font color="#006666">      ListIconGadget</font>(<font color="#924B72">#GadgetHex</font>, 5, 215, 490, 180, &quot;Offset&quot;, 80, <font color="#924B72">#PB_ListIcon_AlwaysShowSelection</font> | <font color="#924B72">#PB_ListIcon_GridLines</font> | <font color="#924B72">#PB_ListIcon_FullRowSelect</font>)
       
       <font color="#006666">; Column Headings.</font>
       <b><font color="#006666">For</font></b> Col = 0 <b><font color="#006666">To</font></b> 7
-        Label =<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(Col, <font color="#924B72">#PB_Byte</font>), 2, "0")
+        Label =<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(Col, <font color="#924B72">#PB_Byte</font>), 2, &quot;0&quot;)
 <font color="#006666">        AddGadgetColumn</font>(<font color="#924B72">#GadgetHex</font>, Col + 1, Label, 38)
       <b><font color="#006666">Next</font></b> Col
-<font color="#006666">      AddGadgetColumn</font>(<font color="#924B72">#GadgetHex</font>, 9, "Text", 80)
+<font color="#006666">      AddGadgetColumn</font>(<font color="#924B72">#GadgetHex</font>, 9, &quot;Text&quot;, 80)
       
     <b><font color="#006666">EndIf</font></b>
     
@@ -149,10 +149,10 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
     <b><font color="#006666">For</font></b> Rows = 0 <b><font color="#006666">To</font></b> Length - 1 <b><font color="#006666">Step</font></b> 8
       
       <font color="#006666">; Clear the text value for each row.</font>
-      String = ""
+      String = &quot;&quot;
       
       <font color="#006666">; Convert the offset value to a fixed length string.</font>
-      Row =<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(Rows, <font color="#924B72">#PB_Long</font>), 6, "0") +<font color="#006666"> Chr</font>(10)
+      Row =<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(Rows, <font color="#924B72">#PB_Long</font>), 6, &quot;0&quot;) +<font color="#006666"> Chr</font>(10)
       
       <font color="#006666">; Loop through columns.</font>
       <b><font color="#006666">For</font></b> Cols = 0 <b><font color="#006666">To</font></b> 7
@@ -161,7 +161,7 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
         Offset = Rows + Cols
         
         <font color="#006666">; Compare the offset with the file length.</font>
-        <b><font color="#006666">If</font></b> Offset &#060; Length
+        <b><font color="#006666">If</font></b> Offset &lt; Length
           <font color="#006666">; The offset is less than the length of the file.</font>
           
           <font color="#006666">; Obtain the byte from the buffer.</font>
@@ -169,7 +169,7 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
           Peek =<font color="#006666"> PeekB</font>(*Byte)
           
           <font color="#006666">; Convert the byte to text.</font>
-          Row +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(Peek, <font color="#924B72">#PB_Byte</font>), 2, "0") +<font color="#006666"> Chr</font>(10)
+          Row +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(Peek, <font color="#924B72">#PB_Byte</font>), 2, &quot;0&quot;) +<font color="#006666"> Chr</font>(10)
           
           <font color="#006666">; Add the character to the text version.</font>
           <b><font color="#006666">Select</font></b> Peek
@@ -213,13 +213,13 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
     <b><font color="#006666">Protected</font></b>.l FileNumber, ReadLong, Size
     
     <font color="#006666">; Stop if file is empty.</font>
-    <b><font color="#006666">If</font></b> File = ""
+    <b><font color="#006666">If</font></b> File = &quot;&quot;
       <b><font color="#006666">ProcedureReturn</font></b>
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Stop if file size is invalid.</font>
     Size =<font color="#006666"> FileSize</font>(File)
-    <b><font color="#006666">If</font></b> Size &#060; 1
+    <b><font color="#006666">If</font></b> Size &lt; 1
       <b><font color="#006666">ProcedureReturn</font></b> 
     <b><font color="#006666">EndIf</font></b>
     
@@ -263,7 +263,7 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
           
         <b><font color="#006666">ElseIf</font></b> EventGadget = <font color="#924B72">#GadgetOpen</font>
           File =<font color="#006666"> GetGadgetText</font>(<font color="#924B72">#GadgetFiles</font>) +<font color="#006666"> GetGadgetItemText</font>(<font color="#924B72">#GadgetFiles</font>,<font color="#006666"> GetGadgetState</font>(<font color="#924B72">#GadgetFiles</font>))
-          <b><font color="#006666">If</font></b> <font color="#006666">FileSize</font>(File) &#062; 0
+          <b><font color="#006666">If</font></b> <font color="#006666">FileSize</font>(File) &gt; 0
 <font color="#006666">            FileRead</font>()  
 <font color="#006666">            FileDisplay</font>()
           <b><font color="#006666">EndIf</font></b>

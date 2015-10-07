@@ -12,12 +12,12 @@ Checks if an event has occurred on any of the opened windows.
 </blockquote><p><b>Return value</b></p><blockquote>
 
 The next event from the event queue and or zero if there are no more events. 
-Unlike <a href="waitwindowevent.html">WaitWindowEvent()</a> it doesn't wait for the next event - it always returns immediately. 
+Unlike <a href="waitwindowevent.html">WaitWindowEvent()</a> it doesn&apos;t wait for the next event - it always returns immediately. 
 <br>
 <br>
 This makes it useful for window event loops, where other processing needs to be done without waiting 
 for an event to happen (e.g. <a href="../network/index.html">Network</a> transactions) and therefore 
-<a href="waitwindowevent.html">WaitWindowEvent()</a> can't be used. 
+<a href="waitwindowevent.html">WaitWindowEvent()</a> can&apos;t be used. 
 <br>
 <br>
 It must be handled with care though if used on a continuing basis, because unlike 
@@ -73,11 +73,11 @@ Correct way to handle an infinite WindowEvent() loop:
     <b><font color="#006666">EndIf</font></b> 
   <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
 </font></pre>
-<b>Important:</b> The 'Delay' shouldn't be put after each event, because when lot of events will come 
+<b>Important:</b> The &apos;Delay&apos; shouldn&apos;t be put after each event, because when lot of events will come 
 (like refresh, gadgets updates etc..) the app will wait between each event. So the delay need to be put 
 when no events are received. Other (recommened) ways is to use <a href="waitwindowevent.html">WaitWindowEvent()</a> with a small timeout value, 
 or setup a timer with <a href="addwindowtimer.html">AddWindowTimer()</a>(). 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=windowbounds.html>WindowBounds()</a> - <a href=index.html>Window Index</a> - <a href=windowheight.html>WindowHeight()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=windowbounds.html>WindowBounds()</a> - <a href=index.html>Window Index</a> - <a href=windowheight.html>WindowHeight()</a> -><br><br>
 
 </body></html>

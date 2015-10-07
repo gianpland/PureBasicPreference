@@ -3,7 +3,7 @@
 <font face="Arial" size="2"><p align="center"><b><font size="5">UserGuide - Compiler directives (for different behavior on different OS)</font></b></p>
 
 This will be our last visit to the File Properties program. There is one limitation 
-discussed previously to overcome and we've left it until now because it is a special case. 
+discussed previously to overcome and we&apos;ve left it until now because it is a special case. 
 <br>
 <br>
 So far the Attributes column on the display has simply been an <a href="../reference/variables.html">integer</a>. 
@@ -11,7 +11,7 @@ This is because the return values of the <a href="../filesystem/getfileattribute
 instructions have a different meaning on Windows systems compared with Mac and Linux systems. 
 <br>
 <br>
-We can't allow for this difference at run-time, however we can use 
+We can&apos;t allow for this difference at run-time, however we can use 
 <a href="../reference/compilerdirectives.html">Compiler Directives</a> to have the program behave 
 differently on the three different operating systems. 
 <br>
@@ -24,112 +24,112 @@ Add this new procedure declaration to that section.
 Add this new procedure to the implementation section. 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b>.s <font color="#006666">AttributeString</font>(Attributes.l)
     <font color="#006666">; Converts an integer attributes value into a string description.</font>
-    <font color="#006666">; Supports Linux, Mac and Windows system's attributes.</font>
+    <font color="#006666">; Supports Linux, Mac and Windows system&apos;s attributes.</font>
     
     <b><font color="#006666">Protected</font></b>.s Result
     
-    Result = ""
+    Result = &quot;&quot;
     
     <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> = <font color="#924B72">#PB_OS_Windows</font>
           
           <font color="#006666">; These are the attributes for Windows systems.</font>
           <font color="#006666">; A logical-and of the attribute with each constant filters out that bit and can then be used for comparison.</font>
       
-          <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_Archive</font>
-              Result + "A"
+          <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_Archive</font>
+              Result + &quot;A&quot;
           <b><font color="#006666">Else</font></b>
-              Result + " "
+              Result + &quot; &quot;
           <b><font color="#006666">EndIf</font></b>
           
-          <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_Compressed</font>
-              Result + "C"
+          <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_Compressed</font>
+              Result + &quot;C&quot;
           <b><font color="#006666">Else</font></b>
-              Result + " "
+              Result + &quot; &quot;
           <b><font color="#006666">EndIf</font></b>
           
-          <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_Hidden</font>
-              Result + "H"
+          <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_Hidden</font>
+              Result + &quot;H&quot;
           <b><font color="#006666">Else</font></b>
-              Result + " "
+              Result + &quot; &quot;
           <b><font color="#006666">EndIf</font></b>
           
-          <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_ReadOnly</font>
-              Result + "R"
+          <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_ReadOnly</font>
+              Result + &quot;R&quot;
           <b><font color="#006666">Else</font></b>
-              Result + " "
+              Result + &quot; &quot;
           <b><font color="#006666">EndIf</font></b>
           
-          <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_System</font>
-              Result + "S"
+          <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_System</font>
+              Result + &quot;S&quot;
           <b><font color="#006666">Else</font></b>
-              Result + " "
+              Result + &quot; &quot;
           <b><font color="#006666">EndIf</font></b>
           
     <b><font color="#006666">CompilerElse</font></b>
       
       <font color="#006666">; These are the attributes for Mac and Linux systems.</font>
       
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_Link</font>
-        Result + "L "
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_Link</font>
+        Result + &quot;L &quot;
       <b><font color="#006666">Else</font></b>
-        Result + "  "
+        Result + &quot;  &quot;
       <b><font color="#006666">EndIf</font></b>
       
       <font color="#006666">; User attributes.</font>
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_ReadUser</font>
-        Result + "R"
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_ReadUser</font>
+        Result + &quot;R&quot;
       <b><font color="#006666">Else</font></b>
-        Result + " "
+        Result + &quot; &quot;
       <b><font color="#006666">EndIf</font></b>
       
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_WriteUser</font>
-        Result + "W"
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_WriteUser</font>
+        Result + &quot;W&quot;
       <b><font color="#006666">Else</font></b>
-        Result + " "
+        Result + &quot; &quot;
       <b><font color="#006666">EndIf</font></b>
       
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_ExecUser</font>
-        Result + "X "
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_ExecUser</font>
+        Result + &quot;X &quot;
       <b><font color="#006666">Else</font></b>
-        Result + "  "
+        Result + &quot;  &quot;
       <b><font color="#006666">EndIf</font></b>
       
       <font color="#006666">; Group attributes.</font>
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_ReadGroup</font>
-        Result + "R"
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_ReadGroup</font>
+        Result + &quot;R&quot;
       <b><font color="#006666">Else</font></b>
-        Result + " "
+        Result + &quot; &quot;
       <b><font color="#006666">EndIf</font></b>
       
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_WriteGroup</font>
-        Result + "W"
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_WriteGroup</font>
+        Result + &quot;W&quot;
       <b><font color="#006666">Else</font></b>
-        Result + " "
+        Result + &quot; &quot;
       <b><font color="#006666">EndIf</font></b>
       
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_ExecGroup</font>
-        Result + "X "
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_ExecGroup</font>
+        Result + &quot;X &quot;
       <b><font color="#006666">Else</font></b>
-        Result + "  "
+        Result + &quot;  &quot;
       <b><font color="#006666">EndIf</font></b>
       
       <font color="#006666">; All attributes.</font>
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_ReadAll</font>
-        Result + "R"
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_ReadAll</font>
+        Result + &quot;R&quot;
       <b><font color="#006666">Else</font></b>
-        Result + " "
+        Result + &quot; &quot;
       <b><font color="#006666">EndIf</font></b>
       
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_WriteAll</font>
-        Result + "W"
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_WriteAll</font>
+        Result + &quot;W&quot;
       <b><font color="#006666">Else</font></b>
-        Result + " "
+        Result + &quot; &quot;
       <b><font color="#006666">EndIf</font></b>
       
-      <b><font color="#006666">If</font></b> Attributes & <font color="#924B72">#PB_FileSystem_ExecAll</font>
-        Result + "X"
+      <b><font color="#006666">If</font></b> Attributes &amp; <font color="#924B72">#PB_FileSystem_ExecAll</font>
+        Result + &quot;X&quot;
       <b><font color="#006666">Else</font></b>
-        Result + " "
+        Result + &quot; &quot;
       <b><font color="#006666">EndIf</font></b>
       
     <b><font color="#006666">CompilerEndIf</font></b>
@@ -196,7 +196,7 @@ to make a three-way determination.
   <b><font color="#006666">CompilerEndSelect</font></b>
 </font></pre>
 
-The last compiler directive that we're going to discuss here is: 
+The last compiler directive that we&apos;re going to discuss here is: 
 <a href="../reference/compilerdirectives.html">EnableExplicit</a>. 
 <br>
 <br>
@@ -204,8 +204,8 @@ There is a good reason for using this directive. It requires that all <a href=".
 must be defined explicitly before usage, in some way, (using <a href="../reference/define.html">Define</a>, 
 <a href="../reference/dim.html">Dim</a>, <a href="../reference/global.html">Global</a>, <a href="../reference/protected.html">Protected</a>, 
 <a href="../reference/static.html">Static</a> etc.) Doing so eliminates the possibility of logic errors due 
-to mistyped variable names being defined "on-the-fly". This type of subtle error will not affect 
-a program's compilation but could well present as an inconvenient bug at run-time. Using this 
+to mistyped variable names being defined &quot;on-the-fly&quot;. This type of subtle error will not affect 
+a program&apos;s compilation but could well present as an inconvenient bug at run-time. Using this 
 directive eliminates this kind of problem as a compiler error would occur. 
 <br>
 <br>
@@ -216,7 +216,7 @@ For example:
   
   <font color="#006666">; ...</font>
   
-  <b><font color="#006666">If</font></b> Field &#060; FieldMax
+  <b><font color="#006666">If</font></b> Field &lt; FieldMax
     <font color="#006666">; If EnableExplicit is omitted this section of code may not execute when intended because FieldMax will be zero.</font>
   <b><font color="#006666">EndIf</font></b>
 </font></pre>

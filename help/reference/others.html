@@ -3,7 +3,7 @@
 <font face="Arial" size="2"><p align="center"><b><font size="5">Others Commands</font></b></p>
 
 <br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2">
-<b><font color="#006666">Goto</font></b> &#060;label&#062;
+<b><font color="#006666">Goto</font></b> &lt;label&gt;
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -21,33 +21,33 @@ Note: To exit a loop safely, you always should use <a href="../reference/break_c
 <b>Description</b><br><blockquote>
 
 
-Ends the program execution correctly. The 'ExitCode' optional parameter can be specified if the 
+Ends the program execution correctly. The &apos;ExitCode&apos; optional parameter can be specified if the 
 program need to returns an error code (widely used in console programs). 
 <br>
 <br>
-The 'ExitCode' can be further used e.g. with the <a href="../process/programexitcode.html">ProgramExitCode()</a> command. 
+The &apos;ExitCode&apos; can be further used e.g. with the <a href="../process/programexitcode.html">ProgramExitCode()</a> command. 
 
 
 </blockquote>
 <br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2">
-<b><font color="#006666">Swap</font></b> &#060;expression&#062;, &#060;expression&#062;
+<b><font color="#006666">Swap</font></b> &lt;expression&gt;, &lt;expression&gt;
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
 
-Swaps the value of the both expression, in an optimized way. The both &#060;expression&#062; have to be 
+Swaps the value of the both expression, in an optimized way. The both &lt;expression&gt; have to be 
 a <a href="../reference/variables.html">variable</a>, <a href="../reference/dim.html">array</a>, <a href="../reference/newlist.html">list</a> or a  <a href="../reference/newmap.html">map</a> 
 element (structured or not) and have to be one of the 
 PureBasic native type like long (.l), quad (.q), string etc. 
 
 </blockquote><p><b>Example:</b> Swapping of strings</p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  Hello$ = "Hello"
-  World$ = "World"
+<pre><font face="Courier New, Courier, mono"size="2">  Hello$ = &quot;Hello&quot;
+  World$ = &quot;World&quot;
   
   <b><font color="#006666">Swap</font></b> Hello$, World$
   
-  <b><font color="#006666">Debug</font></b> Hello$+" "+World$
+  <b><font color="#006666">Debug</font></b> Hello$+&quot; &quot;+World$
 </font></pre>
 
 </blockquote><p><b>Example:</b> Swapping of multi-dimensional arrays elements</p><blockquote>
@@ -62,7 +62,7 @@ PureBasic native type like long (.l), quad (.q), string etc.
   
   <b><font color="#006666">Swap</font></b> <font color="#006666">Array1</font>(2,2) ,<font color="#006666"> Array2</font>(3,3)  <font color="#006666">; swap 2 arrays elements</font>
   
-  <b><font color="#006666">Debug</font></b> "Array contents after swapping:"
+  <b><font color="#006666">Debug</font></b> &quot;Array contents after swapping:&quot;
   <b><font color="#006666">Debug</font></b> <font color="#006666">Array1</font>(2,2)    <font color="#006666">; will print 20</font>
   <b><font color="#006666">Debug</font></b> <font color="#006666">Array2</font>(3,3)    <font color="#006666">; will print 10</font>
 </font></pre>

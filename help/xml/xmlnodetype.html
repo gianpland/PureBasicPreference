@@ -41,7 +41,7 @@ created or deleted manually. Inside the root node, there can be only one node of
 
 This is a normal node in the tree. It can have a list of attributes and contain text and/or child nodes. 
 <br>
-<b>Example: </b>&#060;node attribute="hello"&#062; contained text &#060;/node&#062; 
+<b>Example: </b>&lt;node attribute=&quot;hello&quot;&gt; contained text &lt;/node&gt; 
 </blockquote>
 
 
@@ -50,7 +50,7 @@ This is a normal node in the tree. It can have a list of attributes and contain 
 
 This node represents a comment. It can have no children or attributes. Its text represents the content of the comment. 
 <br>
-<b>Example: </b>&#060;!--  comment text  --&#062; 
+<b>Example: </b>&lt;!--  comment text  --&gt; 
 </blockquote>
 
 
@@ -58,10 +58,10 @@ This node represents a comment. It can have no children or attributes. Its text 
 <blockquote>
 
 This is a CData section. A CData section contains only text. Its content is not interpreted by the parser so it can 
-contain unescaped "&#060;" and "&#062;" characters for example. CData sections can be used to include other markup or code 
+contain unescaped &quot;&lt;&quot; and &quot;&gt;&quot; characters for example. CData sections can be used to include other markup or code 
 inside a document without having to escape all characters that could be interpreted as XML. 
 <br>
-<b>Example: </b>&#060;![CDATA[  cdata content  ]]&#062; 
+<b>Example: </b>&lt;![CDATA[  cdata content  ]]&gt; 
 </blockquote>
 
 
@@ -74,7 +74,7 @@ The text content of the node is the entire DTD tag. It can be read and modified 
 <a href="setxmlnodetext.html">SetXMLNodeText()</a> and will be written back to the document when exporting/saving without modification. 
 The <a href="setxmlstandalone.html">SetXMLStandalone()</a> command could be useful as well when working with DTDs. 
 <br>
-<b>Example: </b>&#060;!DOCTYPE name SYSTEM "external dtd uri"&#062; 
+<b>Example: </b>&lt;!DOCTYPE name SYSTEM &quot;external dtd uri&quot;&gt; 
 </blockquote>
 
 
@@ -85,12 +85,12 @@ This node represents a Processing Instruction. Processing Instructions contain i
 to be interpreted/executed by the target application. They have a <a href="getxmlnodename.html">name</a> to specify the 
 content of the instruction and the instruction data which can be accessed with <a href="getxmlnodetext.html">GetXMLNodeText()</a>. 
 <br>
-<b>Example: </b>&#060;?php if (...) ... ?&#062; 
+<b>Example: </b>&lt;?php if (...) ... ?&gt; 
 <br>
-(here "php" is the node name, and the rest up to the "?&#062;" is the node text.) 
+(here &quot;php&quot; is the node name, and the rest up to the &quot;?&gt;&quot; is the node text.) 
 </blockquote>
 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=xmlnodepath.html>XMLNodePath()</a> - <a href=index.html>XML Index</a> - <a href=xmlstatus.html>XMLStatus()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=xmlnodepath.html>XMLNodePath()</a> - <a href=index.html>XML Index</a> - <a href=xmlstatus.html>XMLStatus()</a> -><br><br>
 
 </body></html>

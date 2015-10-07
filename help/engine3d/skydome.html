@@ -2,20 +2,60 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="4">SkyDome()</font></b></p>
 <p><b>Syntax</b></p><blockquote>
-Result = <font color="#006666"><b>SkyDome</b></font>(TextureName$, Curve)</blockquote>
+Result = <font color="#006666"><b>SkyDome</b></font>(TextureName$, Curve.f [, FogColor, FogIntensity, FogStartDistance, FogEndDistance])</blockquote>
 
 </blockquote>
 <b>Description</b><br><blockquote>
 
 
 Creates a new SkyDome which is a curved moving sky displayed using the specified texture. 
-The <a href="../texture/index.html">texture</a> 'TextureName$' must be in a path previously declared with the <a href="add3darchive.html">Add3DArchive()</a> function. 
-The curve value indicates how much the sky should be curved (can be either negative or positive). 
-If 'Result' is 0, the SkyDome could not be created. 
-<br>
-<br>
-See also the <a href="skybox.html">SkyBox()</a> function. 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=skybox.html>SkyBox()</a> - <a href=index.html>Engine3D Index</a> - <a href=sun.html>Sun()</a> ->
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>TextureName$</i></td>
+<td width="90%"> 
+The texture to use. The <a href="../texture/index.html">texture</a> must be in a path previously declared with the <a href="add3darchive.html">Add3DArchive()</a> function. 
+
+</td></tr>
+<tr><td><i>Curve</i></td>
+<td> 
+The curve value indicates how much the sky should be curved (can be either negative or positive). 
+
+</td></tr>
+<tr><td><i>FogColor (optional)</i></td>
+<td> 
+The fog color. <a href="../2ddrawing/rgb.html">RGB()</a> can be used to get a valid color value. If not specified, the fog settings are inherited from 
+the <a href="fog.html">Fog()</a> command. 
+
+</td></tr>
+<tr><td><i>FogIntensity (optional)</i></td>
+<td> 
+The fog intensity. If sets to zero, the fog effect is disable. 
+
+</td></tr>
+<tr><td><i>FogStartDistance (optional)</i></td>
+<td> 
+The distance from the camera (in world units) where the fog should start. 
+
+</td></tr>
+<tr><td><i>FogEndDistance (optional)</i></td>
+<td> 
+The distance from the camera where the fog is fully opaque. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Returns non-zero if the SkyDome has been successfully created. 
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="skybox.html">SkyBox()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=skybox.html>SkyBox()</a> - <a href=index.html>Engine3D Index</a> - <a href=sun.html>Sun()</a> -><br><br>
 
 </body></html>

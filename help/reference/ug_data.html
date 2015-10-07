@@ -3,8 +3,8 @@
 <font face="Arial" size="2"><p align="center"><b><font size="5">UserGuide - Storing data in memory</font></b></p>
 
 This example gathers information about the <a href="../file/index.html">files</a> in the logged on 
-user's home directory into a <a href="../reference/structures.html">structured</a> 
-<a href="../reference/newlist.html">list</a>. For now the output isn't very exciting but we 
+user&apos;s home directory into a <a href="../reference/structures.html">structured</a> 
+<a href="../reference/newlist.html">list</a>. For now the output isn&apos;t very exciting but we 
 will come back to this example later on and make it a bit more friendly in several 
 different ways. 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; This section describes the fields of a structure or record, mostly integers in this case,</font>
@@ -19,7 +19,7 @@ different ways.
   <b><font color="#006666">EndStructure</font></b>
   
   <font color="#006666">; Now we define a new list of files using the structure previously specified </font>
-  <font color="#006666">; and some other working variables we'll use later on.</font>
+  <font color="#006666">; and some other working variables we&apos;ll use later on.</font>
   <b><font color="#006666">NewList</font></b> <font color="#006666">Files</font>.FILEITEM()
   <b><font color="#006666">Define</font></b>.s Folder
   <b><font color="#006666">Define</font></b>.l Result
@@ -28,7 +28,7 @@ different ways.
   Folder =<font color="#006666"> GetHomeDirectory</font>()
   
   <font color="#006666">; Open the directory to enumerate all its contents.</font>
-  Result =<font color="#006666"> ExamineDirectory</font>(0, Folder, "*.*")  
+  Result =<font color="#006666"> ExamineDirectory</font>(0, Folder, &quot;*.*&quot;)  
   
   <font color="#006666">; If this is ok, begin enumeration of entries.</font>
   <b><font color="#006666">If</font></b> Result
@@ -53,30 +53,30 @@ different ways.
   
   <font color="#006666">; Shows the results in the debug window (if there is no entry, nothing will be displayed)</font>
   <b><font color="#006666">ForEach</font></b> <font color="#006666">Files</font>()
-    <b><font color="#006666">Debug</font></b> "Filename = " +<font color="#006666"> Files</font>()\Name
-    <b><font color="#006666">Debug</font></b> "Size = " +<font color="#006666"> Str</font>(<font color="#006666">Files</font>()\Size)
-    <b><font color="#006666">Debug</font></b> "Attributes = " +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\Attributes)
-    <b><font color="#006666">Debug</font></b> "Created = " +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\DateCreated)
-    <b><font color="#006666">Debug</font></b> "Accessed = " +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\DateAccessed)
-    <b><font color="#006666">Debug</font></b> "Modified = " +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\DateModified)
+    <b><font color="#006666">Debug</font></b> &quot;Filename = &quot; +<font color="#006666"> Files</font>()\Name
+    <b><font color="#006666">Debug</font></b> &quot;Size = &quot; +<font color="#006666"> Str</font>(<font color="#006666">Files</font>()\Size)
+    <b><font color="#006666">Debug</font></b> &quot;Attributes = &quot; +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\Attributes)
+    <b><font color="#006666">Debug</font></b> &quot;Created = &quot; +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\DateCreated)
+    <b><font color="#006666">Debug</font></b> &quot;Accessed = &quot; +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\DateAccessed)
+    <b><font color="#006666">Debug</font></b> &quot;Modified = &quot; +<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\DateModified)
   <b><font color="#006666">Next</font></b> <font color="#006666">Files</font>()
 </font></pre>
 
-Ok, firstly, the dates in the output are just numbers - this isn't very helpful, 
-so let's make them look a bit more familiar. Replace the last three Debug statements 
+Ok, firstly, the dates in the output are just numbers - this isn&apos;t very helpful, 
+so let&apos;s make them look a bit more familiar. Replace the last three Debug statements 
 with these: 
 <pre><font face="Courier New, Courier, mono"size="2">      ...
-      <b><font color="#006666">Debug</font></b> "Created = " +<font color="#006666"> FormatDate</font>("%dd/%mm/%yyyy",<font color="#006666"> Files</font>()\DateCreated)
-      <b><font color="#006666">Debug</font></b> "Accessed = " +<font color="#006666"> FormatDate</font>("%dd/%mm/%yyyy",<font color="#006666"> Files</font>()\DateAccessed)
-      <b><font color="#006666">Debug</font></b> "Modified = " +<font color="#006666"> FormatDate</font>("%dd/%mm/%yyyy",<font color="#006666"> Files</font>()\DateModified)
+      <b><font color="#006666">Debug</font></b> &quot;Created = &quot; +<font color="#006666"> FormatDate</font>(&quot;%dd/%mm/%yyyy&quot;,<font color="#006666"> Files</font>()\DateCreated)
+      <b><font color="#006666">Debug</font></b> &quot;Accessed = &quot; +<font color="#006666"> FormatDate</font>(&quot;%dd/%mm/%yyyy&quot;,<font color="#006666"> Files</font>()\DateAccessed)
+      <b><font color="#006666">Debug</font></b> &quot;Modified = &quot; +<font color="#006666"> FormatDate</font>(&quot;%dd/%mm/%yyyy&quot;,<font color="#006666"> Files</font>()\DateModified)
 </font></pre>
 
-The <a href="../date/formatdate.html">FormatDate()</a> function takes a date in PureBasic's own numeric date format and 
+The <a href="../date/formatdate.html">FormatDate()</a> function takes a date in PureBasic&apos;s own numeric date format and 
 displays it in a format that we can specify. So now things should begin to look a bit 
 more sensible. 
 <br>
 <br>
-Finally, for now, the list isn't in any particular order, so let's 
+Finally, for now, the list isn&apos;t in any particular order, so let&apos;s 
 <a href="../sort/sortstructuredlist.html">sort the list</a> before we display it. Add this 
 line before the comment about showing the list and the 
 <a href="../reference/foreach_next.html">ForEach</a> loop. 

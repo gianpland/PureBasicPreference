@@ -12,39 +12,39 @@
 </font>
 <font color="#006666">UsePNGImageDecoder</font>()
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 195, 260, "ToolBar example", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font>)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 195, 260, &quot;ToolBar example&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font>)
 
   <b><font color="#006666">If</font></b> <font color="#006666">CreateToolBar</font>(0,<font color="#006666"> WindowID</font>(0))
-<font color="#006666">    ToolBarImageButton</font>(0,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/New.png"))
-<font color="#006666">    ToolBarImageButton</font>(1,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Open.png"))
-<font color="#006666">    ToolBarImageButton</font>(2,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Save.png"))
+<font color="#006666">    ToolBarImageButton</font>(0,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/New.png&quot;))
+<font color="#006666">    ToolBarImageButton</font>(1,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Open.png&quot;))
+<font color="#006666">    ToolBarImageButton</font>(2,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Save.png&quot;))
     
 <font color="#006666">    ToolBarSeparator</font>()
 
-<font color="#006666">    ToolBarImageButton</font>(3,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Cut.png"))
-<font color="#006666">    ToolBarToolTip</font>(0, 3, "Cut")
+<font color="#006666">    ToolBarImageButton</font>(3,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Cut.png&quot;))
+<font color="#006666">    ToolBarToolTip</font>(0, 3, &quot;Cut&quot;)
     
-<font color="#006666">    ToolBarImageButton</font>(4,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Copy.png"))
-<font color="#006666">    ToolBarToolTip</font>(0, 4, "Copy")
+<font color="#006666">    ToolBarImageButton</font>(4,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Copy.png&quot;))
+<font color="#006666">    ToolBarToolTip</font>(0, 4, &quot;Copy&quot;)
     
-<font color="#006666">    ToolBarImageButton</font>(5,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Paste.png"))
-<font color="#006666">    ToolBarToolTip</font>(0, 5, "Paste")
+<font color="#006666">    ToolBarImageButton</font>(5,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Paste.png&quot;))
+<font color="#006666">    ToolBarToolTip</font>(0, 5, &quot;Paste&quot;)
     
 <font color="#006666">    ToolBarSeparator</font>()
 
-<font color="#006666">    ToolBarImageButton</font>(6,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Find.png"))
-<font color="#006666">    ToolBarToolTip</font>(0, 6, "Find a document")
+<font color="#006666">    ToolBarImageButton</font>(6,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Find.png&quot;))
+<font color="#006666">    ToolBarToolTip</font>(0, 6, &quot;Find a document&quot;)
   <b><font color="#006666">EndIf</font></b>
 
 
   <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))
-<font color="#006666">    MenuTitle</font>("Project")
-<font color="#006666">      MenuItem</font>(0, "New")
-<font color="#006666">      MenuItem</font>(1, "Open")
-<font color="#006666">      MenuItem</font>(2, "Save")
+<font color="#006666">    MenuTitle</font>(&quot;Project&quot;)
+<font color="#006666">      MenuItem</font>(0, &quot;New&quot;)
+<font color="#006666">      MenuItem</font>(1, &quot;Open&quot;)
+<font color="#006666">      MenuItem</font>(2, &quot;Save&quot;)
   <b><font color="#006666">EndIf</font></b>
   
-<font color="#006666">  DisableToolBarButton</font>(0, 2, 1) <font color="#006666">; Disable the button '2'
+<font color="#006666">  DisableToolBarButton</font>(0, 2, 1) <font color="#006666">; Disable the button &apos;2&apos;
 </font>  
   <font color="#006666">;
 </font>  <font color="#006666">; The event loop. A ToolBar event is like a Menu event (as tools are shortcut for menu the most
@@ -58,7 +58,7 @@
     <b><font color="#006666">Select</font></b> Event
     
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Menu</font>
-<font color="#006666">        MessageRequester</font>("Information", "ToolBar or Menu ID: "+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>()), 0)
+<font color="#006666">        MessageRequester</font>(&quot;Information&quot;, &quot;ToolBar or Menu ID: &quot;+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>()), 0)
       
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_CloseWindow</font>  <font color="#006666">; If the user has pressed on the close button
 </font>        Quit = 1

@@ -35,20 +35,20 @@ Returns the string matched by the regular expression group.
 </blockquote><p><b>Remarks</b></p><blockquote>
 
 Groups in a regular expression are defined by surrounding a sub-expression 
-with braces "(" and ")". Groups can either accessed by index using functions 
+with braces &quot;(&quot; and &quot;)&quot;. Groups can either accessed by index using functions 
 like <a href="regularexpressiongroup.html">RegularExpressionGroup()</a> or they can be assigned a name using the 
-"(?&#060;name&#062;)" syntax as shown in the example below. 
+&quot;(?&lt;name&gt;)&quot; syntax as shown in the example below. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; This expression matches a color setting string (with value red, green or blue)</font>
-  <font color="#006666">; The colors are grouped with () which has the name "col" assigned to it.</font>
+  <font color="#006666">; The colors are grouped with () which has the name &quot;col&quot; assigned to it.</font>
   <font color="#006666">; This color name is then extracted</font>
   <font color="#006666">;  </font>
-  <b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, "color=(?&#060;col&#062;red|green|blue)")
-    <b><font color="#006666">If</font></b> <font color="#006666">ExamineRegularExpression</font>(0, "stype=bold, color=blue, margin=50")
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, &quot;color=(?&lt;col&gt;red|green|blue)&quot;)
+    <b><font color="#006666">If</font></b> <font color="#006666">ExamineRegularExpression</font>(0, &quot;stype=bold, color=blue, margin=50&quot;)
       <b><font color="#006666">While</font></b> <font color="#006666">NextRegularExpressionMatch</font>(0)
-        <b><font color="#006666">Debug</font></b> "The color is " +<font color="#006666"> RegularExpressionNamedGroup</font>(0, "col")
+        <b><font color="#006666">Debug</font></b> &quot;The color is &quot; +<font color="#006666"> RegularExpressionNamedGroup</font>(0, &quot;col&quot;)
       <b><font color="#006666">Wend</font></b>
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
@@ -62,6 +62,6 @@ like <a href="regularexpressiongroup.html">RegularExpressionGroup()</a> or they 
 <a href="regularexpressionnamedgroupposition.html">RegularExpressionNamedGroupPosition()</a>, <a href="regularexpressionnamedgrouplength.html">RegularExpressionNamedGroupLength()</a>, 
 <a href="regularexpressiongroup.html">RegularExpressionGroup()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=regularexpressionmatchstring.html>RegularExpressionMatchString()</a> - <a href=index.html>RegularExpression Index</a> - <a href=regularexpressionnamedgrouplength.html>RegularExpressionNamedGroupLength()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=regularexpressionmatchstring.html>RegularExpressionMatchString()</a> - <a href=index.html>RegularExpression Index</a> - <a href=regularexpressionnamedgrouplength.html>RegularExpressionNamedGroupLength()</a> -><br><br>
 
 </body></html>

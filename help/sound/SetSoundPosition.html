@@ -35,7 +35,7 @@ The mode used to set the position. It can be one of the following value:
 </td></tr>
 <tr><td><i>Channel (optional)</i></td>
 <td> 
-The channel to set the position. It's the value returned by <a href="playsound.html">PlaySound()</a> when using the 
+The channel to set the position. It&apos;s the value returned by <a href="playsound.html">PlaySound()</a> when using the 
 <font color="#924B72">#PB_Sound_MultiChannel</font> flag. 
 
 </td></tr>
@@ -48,10 +48,28 @@ None.
 
 Sounds loaded with the <font color="#924B72">#PB_Sound_Streaming</font> flag are not supported. 
 
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666"> InitSound</font>()           <font color="#006666">; Initialize Sound system</font>
+<font color="#006666"> UseOGGSoundDecoder</font>()  <font color="#006666">; Use ogg files</font>
+
+ <font color="#006666">; Loads a sound from a file</font>
+<font color="#006666"> LoadSound</font>(0, <font color="#924B72">#PB_Compiler_Home</font> +&quot;Examples\3D\Data\Siren.ogg&quot;)
+ 
+ <font color="#006666">; The is playing</font>
+<font color="#006666"> PlaySound</font>(0)
+ 
+ <font color="#006666">; Change the position at 2 seconds</font>
+<font color="#006666"> SetSoundPosition</font>(0, 2000, <font color="#924B72">#PB_Sound_Millisecond</font>)
+ 
+<font color="#006666"> MessageRequester</font>(&quot;Info&quot;, &quot;Ok to stop.&quot;) 
+ <b><font color="#006666">End</font></b> 
+</font></pre>
+
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="getsoundposition.html">GetSoundPosition()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setsoundfrequency.html>SetSoundFrequency()</a> - <a href=index.html>Sound Index</a> - <a href=soundlength.html>SoundLength()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setsoundfrequency.html>SetSoundFrequency()</a> - <a href=index.html>Sound Index</a> - <a href=soundlength.html>SoundLength()</a> -><br><br>
 
 </body></html>

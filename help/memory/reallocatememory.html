@@ -34,7 +34,7 @@ The size in bytes for the resized or allocated buffer.
 <tr><td><i>Flags (optional)</i></td>
 <td> 
 It can be one of the following values: 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Memory_NoClear</font>: don't fill the extended memory area with zeros. It can help to have faster allocation if the
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Memory_NoClear</font>: don&apos;t fill the extended memory area with zeros. It can help to have faster allocation if the
                       extended memory is used immediately. If the memory size is reduced, this flag has no effect.
 </font></pre>
 
@@ -42,9 +42,9 @@ It can be one of the following values:
 </table>
 </blockquote><p><b>Return value</b></p><blockquote>
 
-Returns the new address of the memory area if it could be resized. In this case, the old '*MemoryID' address can 
+Returns the new address of the memory area if it could be resized. In this case, the old &apos;*MemoryID&apos; address can 
 no longer be used. If resizing the memory area failed (because there is not enough memory available), the result 
-is zero, and the '*MemoryID' address is still valid with the existing memory area and the old size. 
+is zero, and the &apos;*MemoryID&apos; address is still valid with the existing memory area and the old size. 
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
@@ -63,13 +63,13 @@ All remaining allocated memory blocks are automatically freed when the program e
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  *MemoryID =<font color="#006666"> AllocateMemory</font>(1000)
-<font color="#006666">  PokeS</font>(*MemoryID, "Store this string")
+<font color="#006666">  PokeS</font>(*MemoryID, &quot;Store this string&quot;)
   <font color="#006666">; do something more with it here...</font>
   <font color="#006666">;</font>
   *NewMemoryID =<font color="#006666"> ReAllocateMemory</font>(*MemoryID, 2000) <font color="#006666">; need more memory</font>
   <b><font color="#006666">If</font></b> *NewMemoryID
     <font color="#006666">; work with *NewMemoryID now with size 2000</font>
-    <b><font color="#006666">Debug</font></b> "The old contents are still here:"
+    <b><font color="#006666">Debug</font></b> &quot;The old contents are still here:&quot;
     <b><font color="#006666">Debug</font></b> <font color="#006666">PeekS</font>(*NewMemoryID)
     <font color="#006666">;</font>
 <font color="#006666">    FreeMemory</font>(*NewMemoryID) 
@@ -84,7 +84,7 @@ All remaining allocated memory blocks are automatically freed when the program e
 
 <a href="allocatememory.html">AllocateMemory()</a>, <a href="freememory.html">FreeMemory()</a>, <a href="memorysize.html">MemorySize()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=pokew.html>PokeW()</a> - <a href=index.html>Memory Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=pokew.html>PokeW()</a> - <a href=index.html>Memory Index</a><br><br>
 
 
 </body></html>

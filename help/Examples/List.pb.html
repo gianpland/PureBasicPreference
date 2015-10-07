@@ -1,0 +1,73 @@
+<html><head><title>List.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - Linked list example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<b><font color="#006666">Structure</font></b> BasicStructure 
+    Field1.b
+    Field2.w
+    Field3.l
+<b><font color="#006666">EndStructure</font></b>
+
+<b><font color="#006666">Structure</font></b> ComplexStructure
+    Field1.b
+   *Basic.BasicStructure              <font color="#006666">; Pointer to a BasicStructure object
+</font>    Basic2.BasicStructure             <font color="#006666">; Creation of the BasicStructure object inside this structure
+</font>   *Next.ComplexStructure             <font color="#006666">; Pointer to another ComplexStructure object
+</font><b><font color="#006666">EndStructure</font></b>
+
+<b><font color="#006666">NewList</font></b> <font color="#006666">TestList</font>.BasicStructure()
+
+<font color="#006666">;
+</font><font color="#006666">;-------- Add Elements and TestLists --------
+</font><font color="#006666">;
+</font>
+<font color="#006666">AddElement</font>(<font color="#006666">TestList</font>())
+<font color="#006666">TestList</font>()\Field2 = 1
+
+<font color="#006666">AddElement</font>(<font color="#006666">TestList</font>())
+<font color="#006666">TestList</font>()\Field2 = 2
+
+<font color="#006666">AddElement</font>(<font color="#006666">TestList</font>())
+<font color="#006666">TestList</font>()\Field2 = 3
+
+<font color="#006666">AddElement</font>(<font color="#006666">TestList</font>())
+<font color="#006666">TestList</font>()\Field2 = 4
+
+<font color="#006666">;
+</font><font color="#006666">;-------- MessageRequester(&quot;Number of elements in the list:&quot;, Str(TestList()\Field2), 0) --------
+</font><font color="#006666">;
+</font>
+<font color="#006666">MessageRequester</font>(&quot;Number of elements in the list:&quot;,<font color="#006666"> Str</font>(<font color="#006666">ListSize</font>(<font color="#006666">TestList</font>())), 0)
+
+<font color="#006666">; First way to list all the elements
+</font><font color="#006666">;
+</font><font color="#006666">ResetList</font>(<font color="#006666">TestList</font>())               <font color="#006666">; Reset the list index before the first element.
+</font>
+<b><font color="#006666">While</font></b> <font color="#006666">NextElement</font>(<font color="#006666">TestList</font>())       <font color="#006666">; Process all the elements...
+</font><font color="#006666">  MessageRequester</font>(&quot;List elements :&quot;, &quot;Field2 value : &quot;+<font color="#006666">Str</font>(<font color="#006666">TestList</font>()\Field2), 0)
+<b><font color="#006666">Wend</font></b>
+
+<font color="#006666">; Second way, with the help of ForEach
+</font><font color="#006666">;
+</font><b><font color="#006666">ForEach</font></b> <font color="#006666">TestList</font>()       <font color="#006666">; Process all the elements...
+</font><font color="#006666">  MessageRequester</font>(&quot;List elements :&quot;, &quot;Field2 value : &quot;+<font color="#006666">Str</font>(<font color="#006666">TestList</font>()\Field2), 0)
+<b><font color="#006666">Next</font></b>
+
+
+<font color="#006666">SelectElement</font>(<font color="#006666">TestList</font>(), 2)  <font color="#006666">; Go directly to the 3rd element
+</font><font color="#006666">MessageRequester</font>(&quot;3rd Element&quot;, &quot;Field2 value : &quot;+<font color="#006666">Str</font>(<font color="#006666">TestList</font>()\Field2), 0)
+
+
+<font color="#006666">MessageRequester</font>(&quot;Linked List - Example&quot;, &quot;Finished&quot;, 0)
+
+<b><font color="#006666">End</font></b>
+</font></pre>
+</body></html>

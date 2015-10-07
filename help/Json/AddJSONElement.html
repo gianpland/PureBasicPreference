@@ -22,7 +22,7 @@ The JSON value. The value must be of type <font color="#924B72">#PB_JSON_Array</
 <tr><td><i>Index (optional)</i></td>
 <td> 
 The index at which the new value will be inserted into the array. If the index is outside 
-of the range of the array, the new value will be inserted either at the start (for Index &#060; 0) or the end 
+of the range of the array, the new value will be inserted either at the start (for Index &lt; 0) or the end 
 of the array. If this parameter is not specified, the new value is added at the end of the array. 
 
 </td></tr>
@@ -45,7 +45,7 @@ The newly added value initially has type <font color="#924B72">#PB_JSON_Null</fo
     
     <font color="#006666">; insert at a specific index</font>
     StrValue =<font color="#006666"> AddJSONElement</font>(ArrayValue, 1)
-<font color="#006666">    SetJSONString</font>(StrValue, "Hello")
+<font color="#006666">    SetJSONString</font>(StrValue, &quot;Hello&quot;)
     
     <b><font color="#006666">Debug</font></b> <font color="#006666">ComposeJSON</font>(0)
   <b><font color="#006666">EndIf</font></b>
@@ -56,6 +56,6 @@ The newly added value initially has type <font color="#924B72">#PB_JSON_Null</fo
 <a href="setjsonarray.html">SetJSONArray()</a>, <a href="removejsonelement.html">RemoveJSONElement()</a>, <a href="resizejsonelements.html">ResizeJSONElements()</a>, 
 <a href="clearjsonelements.html">ClearJSONElements()</a>, <a href="getjsonelement.html">GetJSONElement()</a>, <a href="jsonarraysize.html">JSONArraySize()</a>, <a href="jsontype.html">JSONType()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Json Index</a> - <a href=addjsonmember.html>AddJSONMember()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><a href=index.html>Json Index</a> - <a href=addjsonmember.html>AddJSONMember()</a> -><br><br>
 
 </body></html>

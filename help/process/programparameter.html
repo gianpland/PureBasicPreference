@@ -33,17 +33,17 @@ one or more parameter at the program start.
 <br>
 <br>
 <b>Note:</b> Relying on the return of an empty string to detect the last parameter is not a good practice, 
-since the function also returns an empty string if an empty string was passed in "" on the command-line. 
+since the function also returns an empty string if an empty string was passed in &quot;&quot; on the command-line. 
 The prefered method which should be used to get all parameters, is to get the count with <a href="countprogramparameters.html">CountProgramParameters()</a> 
 and then to call ProgramParameter() as often as needed. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  MyProgram.exe MyText.txt /FAST "Special Mode"
+<pre><font face="Courier New, Courier, mono"size="2">  MyProgram.exe MyText.txt /FAST &quot;Special Mode&quot;
 </font></pre>
-The first time that ProgramParameter() is called, it will return "MyText.txt", the second time 
-"/FAST" and the third time "Special Mode". 
+The first time that ProgramParameter() is called, it will return &quot;MyText.txt&quot;, the second time 
+&quot;/FAST&quot; and the third time &quot;Special Mode&quot;. 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=programid.html>ProgramID()</a> - <a href=index.html>Process Index</a> - <a href=programrunning.html>ProgramRunning()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=programid.html>ProgramID()</a> - <a href=index.html>Process Index</a> - <a href=programrunning.html>ProgramRunning()</a> -><br><br>
 
 </body></html>

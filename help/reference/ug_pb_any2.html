@@ -9,13 +9,13 @@ multiple instances of several different types of window, in this case three:
 <blockquote>
 
 - The Button window – contains a <a href="../gadget/listviewgadget.html">list view</a> and two 
-<a href="../gadget/buttongadget.html">buttons</a> labelled 'Add' and 'Remove'. When the 'Add' button 
+<a href="../gadget/buttongadget.html">buttons</a> labelled &apos;Add&apos; and &apos;Remove&apos;. When the &apos;Add&apos; button 
 is clicked a <a href="../math/random.html">random</a> integer is added to the list view, when the 
-'Remove' button is clicked the currently highlighted entry in the list view is removed. 
+&apos;Remove&apos; button is clicked the currently highlighted entry in the list view is removed. 
 <br>
 - The Date window – contains a list view and two buttons in the same way as the Button 
 window but also contains a <a href="../gadget/calendargadget.html">calendar gadget</a> too, the 
-window layout is altered to accommodate this additional control. When the 'Add' button 
+window layout is altered to accommodate this additional control. When the &apos;Add&apos; button 
 is clicked, it is the currently selected date that is added to the list view. 
 - The Track window – contains two <a href="../gadget/trackbargadget.html">track bars</a>, with a 
 value between 0 and 100, and a <a href="../gadget/stringgadget.html">string gadget</a>. When the 
@@ -88,7 +88,7 @@ that we need to work with in each of these procedures:
 Each procedure only knows how to handle one type of window – so before we start work we 
 check the WindowClass value to make sure that a window of the correct type has been 
 supplied as the argument something like this: 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassButton</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassButton</font>
 </font></pre>
 The <a href="../window/waitwindowevent.html">event loop</a> is a bit different too. For each event 
 type there is a determination like this: 
@@ -109,7 +109,7 @@ Finally, we despatch the recorded event values in EventWindow, EventGadget, Even
 straight through to the event procedures and let them worry about getting the jobs done. 
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">;- Constants</font>
-  <font color="#924B72">#DateFormat</font> = "%dd/%mm/%yyyy"
+  <font color="#924B72">#DateFormat</font> = &quot;%dd/%mm/%yyyy&quot;
   
   <font color="#006666">;- Enumerations</font>
   <b><font color="#006666">Enumeration</font></b> 
@@ -178,7 +178,7 @@ straight through to the event procedures and let them worry about getting the jo
     
     <font color="#006666">; Set the window caption.</font>
     Buttons + 1
-    ThisTitle = "Button Window " +<font color="#006666"> StrU</font>(Buttons)
+    ThisTitle = &quot;Button Window &quot; +<font color="#006666"> StrU</font>(Buttons)
     
     <font color="#006666">; Open the window.</font>
     ThisWindow =<font color="#006666"> OpenWindow</font>(<font color="#924B72">#PB_Any</font>, 30, 30, 225, 300, ThisTitle, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
@@ -208,24 +208,24 @@ straight through to the event procedures and let them worry about getting the jo
       
       <font color="#006666">; If the menu creation worked, create the menu items.</font>
       <b><font color="#006666">If</font></b> *ThisData\Menu
-<font color="#006666">        MenuTitle</font>("Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewButton</font>, "New Button Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewDate</font>, "New Date Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewTrack</font>, "New Track Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuClose</font>, "Close Window")
+<font color="#006666">        MenuTitle</font>(&quot;Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewButton</font>, &quot;New Button Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewDate</font>, &quot;New Date Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewTrack</font>, &quot;New Track Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuClose</font>, &quot;Close Window&quot;)
       <b><font color="#006666">EndIf</font></b>
       
       <font color="#006666">; Create the window gadgets.</font>
       *ThisData\ListView =<font color="#006666"> ListViewGadget</font>(<font color="#924B72">#PB_Any</font>, 10, 10, 200, 225)
-      *ThisData\AddButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 15, 245, 90, 30, "Add")
-      *ThisData\RemoveButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 115, 245, 90, 30, "Remove")
+      *ThisData\AddButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 15, 245, 90, 30, &quot;Add&quot;)
+      *ThisData\RemoveButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 115, 245, 90, 30, &quot;Remove&quot;)
     <b><font color="#006666">Else</font></b>
       <font color="#006666">; Memory allocation failed.</font>
 <font color="#006666">      CloseWindow</font>(ThisWindow)
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Set the return value.</font>
-    <b><font color="#006666">If</font></b> ThisWindow &#062; 0 <b><font color="#006666">And</font></b> *ThisData &#062; 0
+    <b><font color="#006666">If</font></b> ThisWindow &gt; 0 <b><font color="#006666">And</font></b> *ThisData &gt; 0
       <font color="#006666">; Return the reference to the new window.</font>
       <b><font color="#006666">ProcedureReturn</font></b> ThisWindow
     <b><font color="#006666">Else</font></b>
@@ -253,7 +253,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Check that it is the correct window type, if not stop.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassButton</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassButton</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -292,7 +292,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Check that it is the correct window type, if not stop.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassButton</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassButton</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -331,7 +331,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Check that it is the correct window type, if not stop.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassButton</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassButton</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -342,7 +342,7 @@ straight through to the event procedures and let them worry about getting the jo
         
       <b><font color="#006666">Case</font></b> *ThisData\RemoveButton
         Index =<font color="#006666"> GetGadgetState</font>(*ThisData\ListView)
-        <b><font color="#006666">If</font></b> Index &#062;= 0 <b><font color="#006666">And</font></b> Index &#060;=<font color="#006666"> CountGadgetItems</font>(*ThisData\ListView)
+        <b><font color="#006666">If</font></b> Index &gt;= 0 <b><font color="#006666">And</font></b> Index &lt;=<font color="#006666"> CountGadgetItems</font>(*ThisData\ListView)
 <font color="#006666">          RemoveGadgetItem</font>(*ThisData\ListView, Index)
         <b><font color="#006666">EndIf</font></b>
         
@@ -362,7 +362,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">Protected</font></b>.s ThisKey, ThisTitle
     
     Dates + 1
-    ThisTitle = "Date Window " +<font color="#006666"> StrU</font>(Dates)
+    ThisTitle = &quot;Date Window &quot; +<font color="#006666"> StrU</font>(Dates)
     ThisWindow =<font color="#006666"> OpenWindow</font>(<font color="#924B72">#PB_Any</font>, 30, 30, 310, 420, ThisTitle , <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
     
     <font color="#006666">; Check that the OpenWindow command worked.</font>
@@ -390,17 +390,17 @@ straight through to the event procedures and let them worry about getting the jo
       
       <font color="#006666">; If the menu creation worked, create the menu items.</font>
       <b><font color="#006666">If</font></b> *ThisData\Menu
-<font color="#006666">        MenuTitle</font>("Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewButton</font>, "New Button Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewDate</font>, "New Date Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewTrack</font>, "New Track Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuClose</font>, "Close Window")
+<font color="#006666">        MenuTitle</font>(&quot;Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewButton</font>, &quot;New Button Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewDate</font>, &quot;New Date Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewTrack</font>, &quot;New Track Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuClose</font>, &quot;Close Window&quot;)
       <b><font color="#006666">EndIf</font></b>
       
       <font color="#006666">; Create the window gadgets.</font>
       *ThisData\Calendar =<font color="#006666"> CalendarGadget</font>(<font color="#924B72">#PB_Any</font>, 10, 10, 182, 162)
-      *ThisData\AddButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 210, 10, 90, 30, "Add")
-      *ThisData\RemoveButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 210, 45, 90, 30, "Remove")
+      *ThisData\AddButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 210, 10, 90, 30, &quot;Add&quot;)
+      *ThisData\RemoveButton =<font color="#006666"> ButtonGadget</font>(<font color="#924B72">#PB_Any</font>, 210, 45, 90, 30, &quot;Remove&quot;)
       *ThisData\ListView =<font color="#006666"> ListViewGadget</font>(<font color="#924B72">#PB_Any</font>, 10, 187, 290, 200)
     <b><font color="#006666">Else</font></b>
       <font color="#006666">; Memory allocation failed.</font>
@@ -408,7 +408,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Set the return value.</font>
-    <b><font color="#006666">If</font></b> ThisWindow &#062; 0 <b><font color="#006666">And</font></b> *ThisData &#062; 0 
+    <b><font color="#006666">If</font></b> ThisWindow &gt; 0 <b><font color="#006666">And</font></b> *ThisData &gt; 0 
       <font color="#006666">; Return the reference to the new window.</font>
       <b><font color="#006666">ProcedureReturn</font></b> ThisWindow
     <b><font color="#006666">Else</font></b>
@@ -436,8 +436,8 @@ straight through to the event procedures and let them worry about getting the jo
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
-    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can't destroy this window.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassDate</font>
+    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can&apos;t destroy this window.</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassDate</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -476,7 +476,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Check that it is the correct window type, if not stop.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassDate</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassDate</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -507,7 +507,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Check that it is the correct window type, if not stop.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassDate</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassDate</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -518,7 +518,7 @@ straight through to the event procedures and let them worry about getting the jo
         
       <b><font color="#006666">Case</font></b> *ThisData\RemoveButton
         Index =<font color="#006666"> GetGadgetState</font>(*ThisData\ListView)
-        <b><font color="#006666">If</font></b> Index &#062;= 0 <b><font color="#006666">And</font></b> Index &#060;=<font color="#006666"> CountGadgetItems</font>(*ThisData\ListView)
+        <b><font color="#006666">If</font></b> Index &gt;= 0 <b><font color="#006666">And</font></b> Index &lt;=<font color="#006666"> CountGadgetItems</font>(*ThisData\ListView)
 <font color="#006666">          RemoveGadgetItem</font>(*ThisData\ListView, Index)
         <b><font color="#006666">EndIf</font></b>
         
@@ -538,7 +538,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">Protected</font></b>.s ThisKey, ThisTitle
     
     Tracks + 1
-    ThisTitle = "Track Bar Window " +<font color="#006666"> StrU</font>(Tracks)
+    ThisTitle = &quot;Track Bar Window &quot; +<font color="#006666"> StrU</font>(Tracks)
     ThisWindow =<font color="#006666"> OpenWindow</font>(<font color="#924B72">#PB_Any</font>, 30, 30, 398, 130, ThisTitle, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
     
     <font color="#006666">; Check that the OpenWindow command worked.</font>
@@ -566,25 +566,25 @@ straight through to the event procedures and let them worry about getting the jo
       
       <font color="#006666">; If the menu creation worked, create the menu items.</font>
       <b><font color="#006666">If</font></b> *ThisData\Menu
-<font color="#006666">        MenuTitle</font>("Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewButton</font>, "New Button Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewDate</font>, "New Date Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewTrack</font>, "New Track Window")
-<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuClose</font>, "Close Window")
+<font color="#006666">        MenuTitle</font>(&quot;Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewButton</font>, &quot;New Button Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewDate</font>, &quot;New Date Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuNewTrack</font>, &quot;New Track Window&quot;)
+<font color="#006666">        MenuItem</font>(<font color="#924B72">#MenuClose</font>, &quot;Close Window&quot;)
       <b><font color="#006666">EndIf</font></b>
       
       <font color="#006666">; Create the window gadgets.</font>
       *ThisData\TrackBar1 =<font color="#006666"> TrackBarGadget</font>(<font color="#924B72">#PB_Any</font>, 10, 10, 375, 25, 0, 100, <font color="#924B72">#PB_TrackBar_Ticks</font>)
       *ThisData\TrackBar2 =<font color="#006666"> TrackBarGadget</font>(<font color="#924B72">#PB_Any</font>, 10, 40, 375, 25, 0, 100, <font color="#924B72">#PB_TrackBar_Ticks</font>)
-      *ThisData\Label =<font color="#006666"> TextGadget</font>(<font color="#924B72">#PB_Any</font>, 10, 75, 80, 25, "Difference:")
-      *ThisData\Difference =<font color="#006666"> StringGadget</font>(<font color="#924B72">#PB_Any</font>, 90, 75, 290, 25, "0", <font color="#924B72">#PB_String_ReadOnly</font>)
+      *ThisData\Label =<font color="#006666"> TextGadget</font>(<font color="#924B72">#PB_Any</font>, 10, 75, 80, 25, &quot;Difference:&quot;)
+      *ThisData\Difference =<font color="#006666"> StringGadget</font>(<font color="#924B72">#PB_Any</font>, 90, 75, 290, 25, &quot;0&quot;, <font color="#924B72">#PB_String_ReadOnly</font>)
     <b><font color="#006666">Else</font></b>
       <font color="#006666">; Memory allocation failed.</font>
 <font color="#006666">      CloseWindow</font>(ThisWindow)
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Set the return value.</font>
-    <b><font color="#006666">If</font></b> ThisWindow &#062; 0 <b><font color="#006666">And</font></b> *ThisData &#062; 0
+    <b><font color="#006666">If</font></b> ThisWindow &gt; 0 <b><font color="#006666">And</font></b> *ThisData &gt; 0
       <font color="#006666">; Return the reference to the new window.</font>
       <b><font color="#006666">ProcedureReturn</font></b> ThisWindow
     <b><font color="#006666">Else</font></b>
@@ -611,8 +611,8 @@ straight through to the event procedures and let them worry about getting the jo
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
-    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can't destroy this window.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassTrack</font>
+    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can&apos;t destroy this window.</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassTrack</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -651,7 +651,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Check that it is the correct window type, if not stop.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassTrack</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassTrack</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -686,7 +686,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Check that it is the correct window type, if not stop.</font>
-    <b><font color="#006666">If</font></b> *ThisData\WindowClass &#060;&#062; <font color="#924B72">#WindowClassTrack</font>
+    <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassTrack</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
@@ -719,7 +719,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">Select</font></b> Event
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Gadget</font>
         <font color="#006666">; Check that a valid pointer was obtained.</font>
-        <b><font color="#006666">If</font></b> *EventGadgets &#062; 0
+        <b><font color="#006666">If</font></b> *EventGadgets &gt; 0
           <font color="#006666">; Use *EventGadgets\WindowClass to despatch events to the correct event procedure.</font>
           <b><font color="#006666">Select</font></b> *EventGadgets\WindowClass
             <b><font color="#006666">Case</font></b> <font color="#924B72">#WindowClassButton</font>
@@ -740,25 +740,25 @@ straight through to the event procedures and let them worry about getting the jo
         <b><font color="#006666">Select</font></b> EventMenu
           <b><font color="#006666">Case</font></b> <font color="#924B72">#MenuNewButton</font>
             EventWindow =<font color="#006666"> CreateButtonWindow</font>()
-            <b><font color="#006666">If</font></b> EventWindow &#062; 0
+            <b><font color="#006666">If</font></b> EventWindow &gt; 0
 <font color="#006666">              ResizeButtonWindow</font>(EventWindow)
             <b><font color="#006666">EndIf</font></b>
             
           <b><font color="#006666">Case</font></b> <font color="#924B72">#MenuNewDate</font>
             EventWindow =<font color="#006666"> CreateDateWindow</font>()
-            <b><font color="#006666">If</font></b> EventWindow &#062; 0
+            <b><font color="#006666">If</font></b> EventWindow &gt; 0
 <font color="#006666">              ResizeDateWindow</font>(EventWindow)
             <b><font color="#006666">EndIf</font></b>
             
           <b><font color="#006666">Case</font></b> <font color="#924B72">#MenuNewTrack</font>
             EventWindow =<font color="#006666"> CreateTrackWindow</font>()
-            <b><font color="#006666">If</font></b> EventWindow &#062; 0
+            <b><font color="#006666">If</font></b> EventWindow &gt; 0
 <font color="#006666">              ResizeTrackWindow</font>(EventWindow)
             <b><font color="#006666">EndIf</font></b>
             
           <b><font color="#006666">Case</font></b> <font color="#924B72">#MenuClose</font>
             <font color="#006666">; Check that a valid pointer was obtained.</font>
-            <b><font color="#006666">If</font></b> *EventGadgets &#062; 0
+            <b><font color="#006666">If</font></b> *EventGadgets &gt; 0
               <font color="#006666">; Use *EventGadgets\WindowClass to call the correct destroy window procedure.    </font>
               <b><font color="#006666">Select</font></b> *EventGadgets\WindowClass
                 <b><font color="#006666">Case</font></b> <font color="#924B72">#WindowClassButton</font>
@@ -778,7 +778,7 @@ straight through to the event procedures and let them worry about getting the jo
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_CloseWindow</font>
         <font color="#006666">; Check that a valid pointer was obtained.</font>
-        <b><font color="#006666">If</font></b> *EventGadgets &#062; 0
+        <b><font color="#006666">If</font></b> *EventGadgets &gt; 0
           <font color="#006666">; Use *EventGadgets\WindowClass to call the correct destroy window procedure.</font>
           <b><font color="#006666">Select</font></b> *EventGadgets\WindowClass
             <b><font color="#006666">Case</font></b> <font color="#924B72">#WindowClassButton</font>
@@ -796,7 +796,7 @@ straight through to the event procedures and let them worry about getting the jo
         <b><font color="#006666">EndIf</font></b>
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_SizeWindow</font>     
-        <b><font color="#006666">If</font></b> *EventGadgets &#062; 0
+        <b><font color="#006666">If</font></b> *EventGadgets &gt; 0
           <font color="#006666">; Use *EventGadgets\WindowClass to call the correct resize window procedure.</font>
           <b><font color="#006666">Select</font></b> *EventGadgets\WindowClass
             <b><font color="#006666">Case</font></b> <font color="#924B72">#WindowClassButton</font>

@@ -12,10 +12,10 @@
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">PrintRequester</font>()
 
-  <b><font color="#006666">If</font></b> <font color="#006666">StartPrinting</font>("PureBasic Test")
+  <b><font color="#006666">If</font></b> <font color="#006666">StartPrinting</font>(&quot;PureBasic Test&quot;)
   
-<font color="#006666">    LoadFont</font>(0, "Arial", 30)
-<font color="#006666">    LoadFont</font>(1, "Arial", 100)
+<font color="#006666">    LoadFont</font>(0, &quot;Arial&quot;, 30)
+<font color="#006666">    LoadFont</font>(1, &quot;Arial&quot;, 100)
   
     <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">PrinterOutput</font>())
       
@@ -23,15 +23,15 @@
 </font><font color="#006666">      FrontColor</font>(<font color="#006666">RGB</font>(0, 0, 0)) <font color="#006666">; Use black for standard text color
 </font>      
 <font color="#006666">      DrawingFont</font>(<font color="#006666">FontID</font>(0))
-<font color="#006666">      DrawText</font>(100, 100, "PureBasic Printer Test")
+<font color="#006666">      DrawText</font>(100, 100, &quot;PureBasic Printer Test&quot;)
       
 <font color="#006666">      DrawingFont</font>(<font color="#006666">FontID</font>(1))
-<font color="#006666">      DrawText</font>(100, 400, "PureBasic Printer Test 2")
+<font color="#006666">      DrawText</font>(100, 400, &quot;PureBasic Printer Test 2&quot;)
     
-      <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/PureBasic.bmp")
+      <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/PureBasic.bmp&quot;)
 <font color="#006666">        DrawImage</font>(<font color="#006666">ImageID</font>(0), 200, 600)
       <b><font color="#006666">Else</font></b>
-<font color="#006666">        MessageRequester</font>("Error","Can't load the image")
+<font color="#006666">        MessageRequester</font>(&quot;Error&quot;,&quot;Can&apos;t load the image&quot;)
       <b><font color="#006666">EndIf</font></b>
       
 <font color="#006666">      Box</font>(200, 1000, 100, 100,<font color="#006666"> RGB</font>(255, 0, 0)) <font color="#006666">; Draw a red box

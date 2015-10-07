@@ -12,7 +12,7 @@
 </font>
 <font color="#924B72">#CameraSpeed</font> = 1
 
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY
 
@@ -24,11 +24,11 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
     
     <font color="#006666">; First create our material, with a little rotate effect
 </font>    <font color="#006666">;
-</font>    Material =<font color="#006666"> CreateMaterial</font>(<font color="#924B72">#PB_Any</font>,<font color="#006666"> LoadTexture</font>(0, "clouds.jpg"))
+</font>    Material =<font color="#006666"> CreateMaterial</font>(<font color="#924B72">#PB_Any</font>,<font color="#006666"> LoadTexture</font>(0, &quot;clouds.jpg&quot;))
 <font color="#006666">    RotateMaterial</font>(Material, 0.05, 1)
     
     <font color="#006666">; Then create the billboard group and use the previous material
@@ -79,7 +79,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b></font></pre>

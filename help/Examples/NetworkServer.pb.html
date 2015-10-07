@@ -11,7 +11,7 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">InitNetwork</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Can't initialize the network !", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t initialize the network !&quot;, 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
@@ -20,7 +20,7 @@ Port = 6832
 
 <b><font color="#006666">If</font></b> <font color="#006666">CreateNetworkServer</font>(0, Port)
 
-<font color="#006666">  MessageRequester</font>("PureBasic - Server", "Server created (Port "+<font color="#006666">Str</font>(Port)+").", 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic - Server&quot;, &quot;Server created (Port &quot;+<font color="#006666">Str</font>(Port)+&quot;).&quot;, 0)
   
   <b><font color="#006666">Repeat</font></b>
       
@@ -33,15 +33,15 @@ Port = 6832
       <b><font color="#006666">Select</font></b> SEvent
       
         <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_NetworkEvent_Connect</font>
-<font color="#006666">          MessageRequester</font>("PureBasic - Server", "A new client has connected !", 0)
+<font color="#006666">          MessageRequester</font>(&quot;PureBasic - Server&quot;, &quot;A new client has connected !&quot;, 0)
   
         <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_NetworkEvent_Data</font>
-<font color="#006666">          MessageRequester</font>("PureBasic - Server", "Client "+<font color="#006666">Str</font>(ClientID)+" has send a packet !", 0)
+<font color="#006666">          MessageRequester</font>(&quot;PureBasic - Server&quot;, &quot;Client &quot;+<font color="#006666">Str</font>(ClientID)+&quot; has send a packet !&quot;, 0)
 <font color="#006666">          ReceiveNetworkData</font>(ClientID, *Buffer, 1000)
-<font color="#006666">          MessageRequester</font>("Info", "String: "+<font color="#006666">PeekS</font>(*Buffer, -1, <font color="#924B72">#PB_UTF8</font>), 0)
+<font color="#006666">          MessageRequester</font>(&quot;Info&quot;, &quot;String: &quot;+<font color="#006666">PeekS</font>(*Buffer, -1, <font color="#924B72">#PB_UTF8</font>), 0)
   
         <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_NetworkEvent_Disconnect</font>
-<font color="#006666">          MessageRequester</font>("PureBasic - Server", "Client "+<font color="#006666">Str</font>(ClientID)+" has closed the connection...", 0)
+<font color="#006666">          MessageRequester</font>(&quot;PureBasic - Server&quot;, &quot;Client &quot;+<font color="#006666">Str</font>(ClientID)+&quot; has closed the connection...&quot;, 0)
           Quit = 1
     
       <b><font color="#006666">EndSelect</font></b>
@@ -49,11 +49,11 @@ Port = 6832
     
   <b><font color="#006666">Until</font></b> Quit = 1 
   
-<font color="#006666">  MessageRequester</font>("PureBasic - Server", "Click to quit the server.", 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic - Server&quot;, &quot;Click to quit the server.&quot;, 0)
   
 <font color="#006666">  CloseNetworkServer</font>(0)
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "Can't create the server (port in use ?).", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t create the server (port in use ?).&quot;, 0)
 <b><font color="#006666">EndIf</font></b>
 
   

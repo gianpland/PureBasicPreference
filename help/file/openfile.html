@@ -29,7 +29,7 @@ is interpreted relative to the <a href="../filesystem/getcurrentdirectory.html">
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
 <td> 
-It can be a combination (using the '| operand) of the following values: 
+It can be a combination (using the &apos;| operand) of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_File_SharedRead</font> : the opened file can be read by another process (Windows only).
   <font color="#924B72">#PB_File_SharedWrite</font>: the opened file can be write by another process (Windows only).
   <font color="#924B72">#PB_File_Append</font>     : the file pointer position will be set at the end of file.
@@ -57,9 +57,9 @@ The file pointer will be positioned at the beginning of the file. To append data
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenFile</font>(0, "Test.txt")    <font color="#006666">; opens an existing file or creates one, if it does not exist yet</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenFile</font>(0, &quot;Test.txt&quot;)    <font color="#006666">; opens an existing file or creates one, if it does not exist yet</font>
 <font color="#006666">    FileSeek</font>(0,<font color="#006666"> Lof</font>(0))         <font color="#006666">; jump to the end of the file (result of Lof() is used)</font>
-<font color="#006666">    WriteStringN</font>(0, "... another line at the end.")
+<font color="#006666">    WriteStringN</font>(0, &quot;... another line at the end.&quot;)
 <font color="#006666">    CloseFile</font>(0)
   <b><font color="#006666">EndIf</font></b>
 
@@ -69,6 +69,6 @@ The file pointer will be positioned at the beginning of the file. To append data
 
 <a href="createfile.html">CreateFile()</a>, <a href="readfile.html">ReadFile()</a>, <a href="closefile.html">CloseFile()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=lof.html>Lof()</a> - <a href=index.html>File Index</a> - <a href=readasciicharacter.html>ReadAsciiCharacter()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=lof.html>Lof()</a> - <a href=index.html>File Index</a> - <a href=readasciicharacter.html>ReadAsciiCharacter()</a> -><br><br>
 
 </body></html>

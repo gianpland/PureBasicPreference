@@ -8,7 +8,7 @@
 
 A callback function to be called when data is dragged over a gadget or window that allows 
 data to be dropped (see <a href="enablegadgetdrop.html">EnableGadgetDrop()</a> / <a href="enablewindowdrop.html">EnableWindowDrop()</a>). 
-The callback allows to modify the Drag & Drop process provided by PureBasic, for example by providing 
+The callback allows to modify the Drag &amp; Drop process provided by PureBasic, for example by providing 
 extra visual notification on the target gadget or window. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
@@ -43,22 +43,22 @@ These are the same values as returned by <a href="../gadget/gadgetid.html">Gadge
 for the target gadget or window. 
 <br>
 <br>
-'State' specifies the current state of the Drag & Drop operation and is one of the following values: 
+&apos;State&apos; specifies the current state of the Drag &amp; Drop operation and is one of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drag_Enter</font> : The mouse entered the gadget or window
   <font color="#924B72">#PB_Drag_Update</font>: The mouse was moved inside the gadget or window, or the intended action changed
   <font color="#924B72">#PB_Drag_Leave</font> : The mouse left the gadget or window (Format, Action, x, y are 0 here)
-  <font color="#924B72">#PB_Drag_Finish</font>: The Drag & Drop finished
+  <font color="#924B72">#PB_Drag_Finish</font>: The Drag &amp; Drop finished
 </font></pre>
 
-'Format' specifies the data format and can be one of the following values, or an OS specific ID for 
+&apos;Format&apos; specifies the data format and can be one of the following values, or an OS specific ID for 
 a custom format (see <a href="dragosformats.html">DragOSFormats()</a> for more information). 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drop_Text</font>   : Accept text on this gadget or window
   <font color="#924B72">#PB_Drop_Image</font>  : Accept images on this gadget or window
   <font color="#924B72">#PB_Drop_Files</font>  : Accept filenames on this gadget or window
-  <font color="#924B72">#PB_Drop_Private</font>: Accept a "private" Drag & Drop on this gadget or window
+  <font color="#924B72">#PB_Drop_Private</font>: Accept a &quot;private&quot; Drag &amp; Drop on this gadget or window
 </font></pre>
 
-'Action' specifies the action that would be taken if the user released the mouse at this point. 
+&apos;Action&apos; specifies the action that would be taken if the user released the mouse at this point. 
 It can be one of these values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drag_None</font>: The data will not be accepted if dropped here
   <font color="#924B72">#PB_Drag_Copy</font>: The data will be copied
@@ -68,9 +68,9 @@ It can be one of these values:
 
 By returning <font color="#924B72">#True</font>, the callback allows the action to take place at this point. 
 By returning <font color="#924B72">#False</font>, the callback denies the action (the cursor will be 
-changed to a "forbidden" cursor by the drag source). 
-Especially if 'State' is <font color="#924B72">#PB_Drag_Finish</font>, returning <font color="#924B72">#False</font> will cause 
-the whole Drag & Drop operation to fail. 
+changed to a &quot;forbidden&quot; cursor by the drag source). 
+Especially if &apos;State&apos; is <font color="#924B72">#PB_Drag_Finish</font>, returning <font color="#924B72">#False</font> will cause 
+the whole Drag &amp; Drop operation to fail. 
 
 </td></tr>
 </table>
@@ -82,6 +82,6 @@ None.
 
 <a href="setdragcallback.html">SetDragCallback()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setdragcallback.html>SetDragCallback()</a> - <a href=index.html>DragDrop Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setdragcallback.html>SetDragCallback()</a> - <a href=index.html>DragDrop Index</a><br><br>
 
 </body></html>

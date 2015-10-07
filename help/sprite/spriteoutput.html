@@ -27,6 +27,10 @@ The output ID or zero if drawing is not possible. This value should be passed di
 <a href="../2ddrawing/startdrawing.html">StartDrawing()</a> function to start the drawing operation. The return-value 
 is valid only for one drawing operation and cannot be reused. 
 
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+SpriteOutput() has to be called in the same thread where <a href="../screen/openscreen.html">OpenScreen()</a> was called. 
+
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  StartDrawing</font>(<font color="#006666">SpriteOutput</font>(<font color="#924B72">#Sprite</font>))
@@ -34,6 +38,6 @@ is valid only for one drawing operation and cannot be reused.
 <font color="#006666">  StopDrawing</font>()
 </font></pre>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=spriteid.html>SpriteID()</a> - <a href=index.html>Sprite Index</a> - <a href=spritepixelcollision.html>SpritePixelCollision()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=spriteid.html>SpriteID()</a> - <a href=index.html>Sprite Index</a> - <a href=spritepixelcollision.html>SpritePixelCollision()</a> -><br><br>
 
 </body></html>

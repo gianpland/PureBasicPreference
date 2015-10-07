@@ -13,14 +13,14 @@
 *Buffer =<font color="#006666"> AllocateMemory</font>(1000) 
 
 *Pointer = *Buffer
-<font color="#006666">CopyMemoryString</font>("Hello ", @*Pointer)
-<font color="#006666">CopyMemoryString</font>("World")
+<font color="#006666">CopyMemoryString</font>(&quot;Hello &quot;, @*Pointer)
+<font color="#006666">CopyMemoryString</font>(&quot;World&quot;)
 
 *LargerBuffer =<font color="#006666"> ReAllocateMemory</font>(*Buffer, 2000) <font color="#006666">; need more memory 
 </font><b><font color="#006666">If</font></b> *LargerBuffer 
   <font color="#006666">; work with *LargerBuffer now with size 2000 
 </font>  <font color="#006666">;
-</font>  <b><font color="#006666">Debug</font></b> "The old content is still here:" 
+</font>  <b><font color="#006666">Debug</font></b> &quot;The old content is still here:&quot; 
   <b><font color="#006666">Debug</font></b> <font color="#006666">PeekS</font>(*LargerBuffer) 
 <font color="#006666">  FreeMemory</font>(*LargerBuffer) 
 <b><font color="#006666">Else</font></b> 

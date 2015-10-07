@@ -24,9 +24,9 @@ The dialog to use. It has to be previously created with <a href="createdialog.ht
 <tr><td><i>#XML</i></td>
 <td> 
 The <a href="../xml/index.html">xml</a> to use. It has to be previously created with <a href="../xml/loadxml.html">LoadXML()</a>, <a href="../xml/createxml.html">CreateXML()</a> or <a href="../xml/catchxml.html">CatchXML()</a>. 
-That means it's possible to create dialogs on the fly with <a href="../xml/createxml.html">CreateXML()</a> or <a href="../xml/catchxml.html">CatchXML()</a>. 
+That means it&apos;s possible to create dialogs on the fly with <a href="../xml/createxml.html">CreateXML()</a> or <a href="../xml/catchxml.html">CatchXML()</a>. 
 See below for the supported XML attributes. When including XML in the code, it may be easier to use single quote 
-in XML for attribute (it's perfectly legal XML syntax). 
+in XML for attribute (it&apos;s perfectly legal XML syntax). 
 
 </td></tr>
 <tr><td><i>Name$</i></td>
@@ -66,24 +66,24 @@ To get more information about the error which has occurred, use <a href="dialoge
   I. Common attributes
   --------------------
 
-  width     - positive integer value or 0 (default="0") (set the "minimum size" of a control)
+  width     - positive integer value or 0 (default=&quot;0&quot;) (set the &quot;minimum size&quot; of a control)
   height
 
   id        - #Number identifier for a gadget or a window (default is #PB_Any if not specified). It can be a runtime constant.
-  name      - a string identifying the object (for <a href="dialoggadget.html">DialogGadget()</a> mainly, case insensitive) (default="")
-  text      - text string for the object (default="")
+  name      - a string identifying the object (for <a href="dialoggadget.html">DialogGadget()</a> mainly, case insensitive) (default=&quot;&quot;)
+  text      - text string for the object (default=&quot;&quot;)
 
-  flags     - gadget/window flags in the form "<font color="#924B72">#PB_Window_Borderless</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>"  (default="")
+  flags     - gadget/window flags in the form &quot;<font color="#924B72">#PB_Window_Borderless</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>&quot;  (default=&quot;&quot;)
 
   min        - minimum value
   max        - maximum value
   value      - current value
 
-  invisible - if set to "yes", creates the object invisible (default="no")
-  disabled  - if "yes", creates the object disabled (gadgets only) (default="no")
+  invisible - if set to &quot;yes&quot;, creates the object invisible (default=&quot;no&quot;)
+  disabled  - if &quot;yes&quot;, creates the object disabled (gadgets only) (default=&quot;no&quot;)
 
-  colspan   - inside the &#060;gridbox&#062; element only, allows an element to span multiple rows/columns
-  rowspan     (default="1")
+  colspan   - inside the &lt;gridbox&gt; element only, allows an element to span multiple rows/columns
+  rowspan     (default=&quot;1&quot;)
 
   All these attributes are optional.
 
@@ -91,42 +91,42 @@ To get more information about the error which has occurred, use <a href="dialoge
   II. Root element
   ----------------
 
-  &#060;window&#062; for a single window definition in the same XML file
-  &#060;/window&#062;
+  &lt;window&gt; for a single window definition in the same XML file
+  &lt;/window&gt;
   
   or 
     
-  &#060;dialogs&#062; for a multiple window definition in the same XML file
-    &#060;window name="FirstWindow"&#062;
-    &#060;/window&#062;
-    &#060;window name="SecondWindow"&#062;
-    &#060;/window&#062;
+  &lt;dialogs&gt; for a multiple window definition in the same XML file
+    &lt;window name=&quot;FirstWindow&quot;&gt;
+    &lt;/window&gt;
+    &lt;window name=&quot;SecondWindow&quot;&gt;
+    &lt;/window&gt;
     ...
-  &#060;/dialogs&#062;
+  &lt;/dialogs&gt;
 
 
   III. Window element
   -------------------
 
-  &#060;window&#062;
-  &#060;/window&#062;
+  &lt;window&gt;
+  &lt;/window&gt;
   
   Accepted keys in the XML: 
   All common attributes and the following:
   
-  minwidth  = 'auto' or a numeric value
-  maxwidth  = 'auto' or a numeric value
-  minheight = 'auto' or a numeric value
-  maxheight = 'auto' or a numeric value
+  minwidth  = &apos;auto&apos; or a numeric value
+  maxwidth  = &apos;auto&apos; or a numeric value
+  minheight = &apos;auto&apos; or a numeric value
+  maxheight = &apos;auto&apos; or a numeric value
   
-  It allows to set the window bounds. If set to 'auto', then the
+  It allows to set the window bounds. If set to &apos;auto&apos;, then the
   size is calculated depending of the children size requirement.
   
 
   - Creates the a window
   - Can have all common attributes.
   - Is a single-element container.
-  - If more than one &#060;window&#062; element is present, the 'name' attribute is used to identify them
+  - If more than one &lt;window&gt; element is present, the &apos;name&apos; attribute is used to identify them
   - all gui elements can only be placed in here
   
   
@@ -148,9 +148,9 @@ To get more information about the error which has occurred, use <a href="dialoge
     expand    = yes           - items get bigger to fill all space (default)
                 no            - do not expand to fill all space 
                 equal         - force equal sized items
-                item:&#060;number&#062; - expand only one item if space is available
+                item:&lt;number&gt; - expand only one item if space is available
   
-    align     = top/left      - only applied when expand="no", top/left is the default
+    align     = top/left      - only applied when expand=&quot;no&quot;, top/left is the default
                 center
                 bottom/right
 
@@ -172,7 +172,7 @@ To get more information about the error which has occurred, use <a href="dialoge
     colexpand = yes           - items get bigger to fill all space
     rowexpand   no            - do not expand to fill all space
                 equal         - force equal sized items
-                item:&#060;number&#062; - expand only one item if space is available
+                item:&lt;number&gt; - expand only one item if space is available
   
                 for colexpand, Default=yes, For rowexpand, Default=no
   
@@ -206,8 +206,8 @@ To get more information about the error which has occurred, use <a href="dialoge
   
     margin = margin around the content (default = 10)
              can be a single number (= all margin), or a combination of
-             top:&#060;num&#062;,left:&#060;num&#062;,right:&#060;num&#062;,bottom:&#060;num&#062;,vertical:&#060;num&#062;,horizontal:&#060;num&#062;
-             example: "vertical:5,left:10,right:0"
+             top:&lt;num&gt;,left:&lt;num&gt;,right:&lt;num&gt;,bottom:&lt;num&gt;,vertical:&lt;num&gt;,horizontal:&lt;num&gt;
+             example: &quot;vertical:5,left:10,right:0&quot;
   
     expand = yes        - expand child to fill all space (default)
              no         - no expanding
@@ -218,8 +218,8 @@ To get more information about the error which has occurred, use <a href="dialoge
     expandheight   this setting then the request size is used (ie the content does not get smaller)
                    default=0
   
-    align  = combination of top,left,bottom,right and center. (only effective when expand &#060;&#062; yes)
-             example: "top, center" or "top, left" (default) 
+    align  = combination of top,left,bottom,right and center. (only effective when expand &lt;&gt; yes)
+             example: &quot;top, center&quot; or &quot;top, left&quot; (default) 
              
              
              
@@ -239,48 +239,48 @@ To get more information about the error which has occurred, use <a href="dialoge
     onrightdoubleclick = EventProcedure() - #PB_EventType_RightDoubleClick binding (only for gadget which support this event type)
     onleftdoubleclick  = EventProcedure() - #PB_EventType_LeftDoubleClick binding (only for gadget which support this event type)
     
-  The 'EventProcedure()' has to be declared as 'Runtime' in the main code, and has to respect the BindEvent() procedure
+  The &apos;EventProcedure()&apos; has to be declared as &apos;Runtime&apos; in the main code, and has to respect the BindEvent() procedure
   format. Under the hood, BindGadgetEvent() is called with the specified procedure.
   
   Supported gadgets:
 
-  &#060;button&#062;
-  &#060;buttonimage&#062;
-  &#060;calendar&#062;
-  &#060;canvas&#062;
-  &#060;checkbox&#062;
-  &#060;combobox&#062;
-  &#060;container&#062; - single element container
-  &#060;date&#062;
-  &#060;editor&#062;
-  &#060;explorercombo&#062;
-  &#060;explorerlist&#062;
-  &#060;explorertree&#062; 
-  &#060;frame&#062; - single element container
-  &#060;hyperlink&#062;
-  &#060;ipaddress&#062;
-  &#060;image&#062;
-  &#060;listicon&#062; 
-  &#060;listview&#062;
-  &#060;option&#062;
-  &#060;panel&#062; - can contain &#060;tab&#062; items only
-  &#060;progressbar min max value&#062; 
-  &#060;scrollarea scrolling="vertical,horizontal or both (default)" innerheight innerwidth step&#062; - single element container, scrolling value determines growth behavior
-  &#060;scrollbar min max page value&#062; - page = page length
-  &#060;spin min max value&#062;
-  &#060;splitter firstmin="value or auto" secondmin&#062; - must contain 2 subitems, so its a 2 item container basically, minimum size is determined by contained gadgets. If "auto" is specified, the min value will be the minimum size of the child.
-  &#060;string&#062;
-  &#060;text&#062;
-  &#060;trackbar min max value&#062;
-  &#060;tree&#062;
-  &#060;web&#062;
-  &#060;scintilla&#062; - callback remains empty
+  &lt;button&gt;
+  &lt;buttonimage&gt;
+  &lt;calendar&gt;
+  &lt;canvas&gt;
+  &lt;checkbox&gt;
+  &lt;combobox&gt;
+  &lt;container&gt; - single element container
+  &lt;date&gt;
+  &lt;editor&gt;
+  &lt;explorercombo&gt;
+  &lt;explorerlist&gt;
+  &lt;explorertree&gt; 
+  &lt;frame&gt; - single element container
+  &lt;hyperlink&gt;
+  &lt;ipaddress&gt;
+  &lt;image&gt;
+  &lt;listicon&gt; 
+  &lt;listview&gt;
+  &lt;option group&gt; - use the same &apos;group&apos; number to create linked <a href="../gadget/optiongadget.html">OptionGadget()</a>.
+  &lt;panel&gt; - can contain &lt;tab&gt; items only
+  &lt;progressbar min max value&gt; 
+  &lt;scrollarea scrolling=&quot;vertical,horizontal or both (default)&quot; innerheight innerwidth step&gt; - single element container, scrolling value determines growth behavior
+  &lt;scrollbar min max page value&gt; - page = page length
+  &lt;spin min max value&gt;
+  &lt;splitter firstmin=&quot;value or auto&quot; secondmin&gt; - must contain 2 subitems, so its a 2 item container basically, minimum size is determined by contained gadgets. If &quot;auto&quot; is specified, the min value will be the minimum size of the child.
+  &lt;string&gt;
+  &lt;text&gt;
+  &lt;trackbar min max value&gt;
+  &lt;tree&gt;
+  &lt;web&gt;
+  &lt;scintilla&gt; - callback remains empty
 
   Gadget related elements:
-  &#060;tab&#062; - single element container, for panel tabs (attribute 'text' is supported).
+  &lt;tab&gt; - single element container, for panel tabs (attribute &apos;text&apos; is supported).
   
   Special elements:
-  &#060;empty&#062; - an empty element, useful when it's needed to have space between element, to align them to borders for example. 
+  &lt;empty&gt; - an empty element, useful when it&apos;s needed to have space between element, to align them to borders for example. 
 
 </font></pre>
 
@@ -300,36 +300,36 @@ To get more information about the error which has occurred, use <a href="dialoge
   <font color="#924B72">#Dialog</font> = 0
   <font color="#924B72">#Xml</font> = 0
   
-  XML$ = "&#060;window id='#PB_Any' name='test' text='test' minwidth='auto' minheight='auto' flags='#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget'&#062;" +
-         "  &#060;panel&#062;" +
-         "    &#060;tab text='First tab'&#062;" +
-         "      &#060;vbox expand='item:2'&#062;" +
-         "        &#060;hbox&#062;" +
-         "          &#060;button text='button 1'/&#062;" +
-         "          &#060;checkbox text='checkbox 1'/&#062;" +
-         "          &#060;button text='button 2'/&#062;" +
-         "        &#060;/hbox&#062;" +
-         "        &#060;editor text='content' height='150'/&#062;" +
-         "      &#060;/vbox&#062;" +
-         "    &#060;/tab&#062;" +
-         "    &#060;tab text='Second tab'&#062;" +
-         "    &#060;/tab&#062;" +
-         "  &#060;/panel&#062;" +
-         "&#060;/window&#062;"
+  XML$ = &quot;&lt;window id=&apos;#PB_Any&apos; name=&apos;test&apos; text=&apos;test&apos; minwidth=&apos;auto&apos; minheight=&apos;auto&apos; flags=&apos;#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget&apos;&gt;&quot; +
+         &quot;  &lt;panel&gt;&quot; +
+         &quot;    &lt;tab text=&apos;First tab&apos;&gt;&quot; +
+         &quot;      &lt;vbox expand=&apos;item:2&apos;&gt;&quot; +
+         &quot;        &lt;hbox&gt;&quot; +
+         &quot;          &lt;button text=&apos;button 1&apos;/&gt;&quot; +
+         &quot;          &lt;checkbox text=&apos;checkbox 1&apos;/&gt;&quot; +
+         &quot;          &lt;button text=&apos;button 2&apos;/&gt;&quot; +
+         &quot;        &lt;/hbox&gt;&quot; +
+         &quot;        &lt;editor text=&apos;content&apos; height=&apos;150&apos;/&gt;&quot; +
+         &quot;      &lt;/vbox&gt;&quot; +
+         &quot;    &lt;/tab&gt;&quot; +
+         &quot;    &lt;tab text=&apos;Second tab&apos;&gt;&quot; +
+         &quot;    &lt;/tab&gt;&quot; +
+         &quot;  &lt;/panel&gt;&quot; +
+         &quot;&lt;/window&gt;&quot;
   
   <b><font color="#006666">If</font></b> <font color="#006666">CatchXML</font>(<font color="#924B72">#Xml</font>, @XML$,<font color="#006666"> StringByteLength</font>(XML$), 0, <font color="#924B72">#XmlEncoding</font>) <b><font color="#006666">And</font></b> <font color="#006666">XMLStatus</font>(<font color="#924B72">#Xml</font>) = <font color="#924B72">#PB_XML_Success</font>
     
-    <b><font color="#006666">If</font></b> <font color="#006666">CreateDialog</font>(<font color="#924B72">#Dialog</font>) <b><font color="#006666">And</font></b> <font color="#006666">OpenXMLDialog</font>(<font color="#924B72">#Dialog</font>, <font color="#924B72">#Xml</font>, "test")
+    <b><font color="#006666">If</font></b> <font color="#006666">CreateDialog</font>(<font color="#924B72">#Dialog</font>) <b><font color="#006666">And</font></b> <font color="#006666">OpenXMLDialog</font>(<font color="#924B72">#Dialog</font>, <font color="#924B72">#Xml</font>, &quot;test&quot;)
       
       <b><font color="#006666">Repeat</font></b>
         Event =<font color="#006666"> WaitWindowEvent</font>()
       <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
       
     <b><font color="#006666">Else</font></b>  
-      <b><font color="#006666">Debug</font></b> "Dialog error: " +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
+      <b><font color="#006666">Debug</font></b> &quot;Dialog error: &quot; +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "XML error: " +<font color="#006666"> XMLError</font>(<font color="#924B72">#Xml</font>) + " (Line: " +<font color="#006666"> XMLErrorLine</font>(<font color="#924B72">#Xml</font>) + ")"
+    <b><font color="#006666">Debug</font></b> &quot;XML error: &quot; +<font color="#006666"> XMLError</font>(<font color="#924B72">#Xml</font>) + &quot; (Line: &quot; +<font color="#006666"> XMLErrorLine</font>(<font color="#924B72">#Xml</font>) + &quot;)&quot;
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -378,49 +378,49 @@ To get more information about the error which has occurred, use <a href="dialoge
 <font color="#006666">    ShowPanels</font>()
   <b><font color="#006666">EndProcedure</font></b>
   
-  XML$ = "&#060;window id='#PB_Any' name='test' text='Preferences' minwidth='auto' minheight='auto' flags='#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget'&#062;" +
-         "  &#060;hbox expand='item:2'&#062;" +
-         "    &#060;listview id='#ListView' width='100' onEvent='OnListViewEvent()'/&#062;" +
-         "    &#060;multibox&#062;" +
-         "" +
-         "      &#060;container id='#GeneralContainer' invisible='yes'&#062;" +
-         "        &#060;frame text='General'&#062;" +
-         "          &#060;vbox expand='no'&#062;" +
-         "            &#060;checkbox text='Enable red light'/&#062;" +
-         "            &#060;checkbox text='Enable green light'/&#062;" +
-         "          &#060;/vbox&#062;" +
-         "        &#060;/frame&#062;" +
-         "      &#060;/container&#062;" +
-         "" +
-         "      &#060;container id='#EditorContainer' invisible='yes'&#062;" +
-         "        &#060;frame text='Editor'&#062;" +
-         "          &#060;vbox expand='no'&#062;" +
-         "            &#060;checkbox text='Set read only mode'/&#062;" +
-         "            &#060;checkbox text='Duplicate line automatically'/&#062;" +
-         "            &#060;checkbox text='Enable monospace font'/&#062;" +
-         "          &#060;/vbox&#062;" +
-         "        &#060;/frame&#062;" +
-         "      &#060;/container&#062;" +
-         "" +
-         "      &#060;container  id='#BackupContainer' invisible='yes'&#062;" +
-         "      &#060;frame text='Backup'&#062;" +
-         "        &#060;vbox expand='no'&#062;" +
-         "          &#060;checkbox text='Activate backup'/&#062;" +
-         "        &#060;/vbox&#062;" +
-         "      &#060;/frame&#062;" +
-         "      &#060;/container&#062;" +
-         "" +
-         "    &#060;/multibox&#062;" +
-         "  &#060;/hbox&#062;" +
-         "&#060;/window&#062;"
+  XML$ = &quot;&lt;window id=&apos;#PB_Any&apos; name=&apos;test&apos; text=&apos;Preferences&apos; minwidth=&apos;auto&apos; minheight=&apos;auto&apos; flags=&apos;#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget&apos;&gt;&quot; +
+         &quot;  &lt;hbox expand=&apos;item:2&apos;&gt;&quot; +
+         &quot;    &lt;listview id=&apos;#ListView&apos; width=&apos;100&apos; onEvent=&apos;OnListViewEvent()&apos;/&gt;&quot; +
+         &quot;    &lt;multibox&gt;&quot; +
+         &quot;&quot; +
+         &quot;      &lt;container id=&apos;#GeneralContainer&apos; invisible=&apos;yes&apos;&gt;&quot; +
+         &quot;        &lt;frame text=&apos;General&apos;&gt;&quot; +
+         &quot;          &lt;vbox expand=&apos;no&apos;&gt;&quot; +
+         &quot;            &lt;checkbox text=&apos;Enable red light&apos;/&gt;&quot; +
+         &quot;            &lt;checkbox text=&apos;Enable green light&apos;/&gt;&quot; +
+         &quot;          &lt;/vbox&gt;&quot; +
+         &quot;        &lt;/frame&gt;&quot; +
+         &quot;      &lt;/container&gt;&quot; +
+         &quot;&quot; +
+         &quot;      &lt;container id=&apos;#EditorContainer&apos; invisible=&apos;yes&apos;&gt;&quot; +
+         &quot;        &lt;frame text=&apos;Editor&apos;&gt;&quot; +
+         &quot;          &lt;vbox expand=&apos;no&apos;&gt;&quot; +
+         &quot;            &lt;checkbox text=&apos;Set read only mode&apos;/&gt;&quot; +
+         &quot;            &lt;checkbox text=&apos;Duplicate line automatically&apos;/&gt;&quot; +
+         &quot;            &lt;checkbox text=&apos;Enable monospace font&apos;/&gt;&quot; +
+         &quot;          &lt;/vbox&gt;&quot; +
+         &quot;        &lt;/frame&gt;&quot; +
+         &quot;      &lt;/container&gt;&quot; +
+         &quot;&quot; +
+         &quot;      &lt;container  id=&apos;#BackupContainer&apos; invisible=&apos;yes&apos;&gt;&quot; +
+         &quot;      &lt;frame text=&apos;Backup&apos;&gt;&quot; +
+         &quot;        &lt;vbox expand=&apos;no&apos;&gt;&quot; +
+         &quot;          &lt;checkbox text=&apos;Activate backup&apos;/&gt;&quot; +
+         &quot;        &lt;/vbox&gt;&quot; +
+         &quot;      &lt;/frame&gt;&quot; +
+         &quot;      &lt;/container&gt;&quot; +
+         &quot;&quot; +
+         &quot;    &lt;/multibox&gt;&quot; +
+         &quot;  &lt;/hbox&gt;&quot; +
+         &quot;&lt;/window&gt;&quot;
   
   <b><font color="#006666">If</font></b> <font color="#006666">CatchXML</font>(<font color="#924B72">#Xml</font>, @XML$,<font color="#006666"> StringByteLength</font>(XML$), 0, <font color="#924B72">#XmlEncoding</font>) <b><font color="#006666">And</font></b> <font color="#006666">XMLStatus</font>(<font color="#924B72">#Xml</font>) = <font color="#924B72">#PB_XML_Success</font>
     
-    <b><font color="#006666">If</font></b> <font color="#006666">CreateDialog</font>(<font color="#924B72">#Dialog</font>) <b><font color="#006666">And</font></b> <font color="#006666">OpenXMLDialog</font>(<font color="#924B72">#Dialog</font>, <font color="#924B72">#Xml</font>, "test")
+    <b><font color="#006666">If</font></b> <font color="#006666">CreateDialog</font>(<font color="#924B72">#Dialog</font>) <b><font color="#006666">And</font></b> <font color="#006666">OpenXMLDialog</font>(<font color="#924B72">#Dialog</font>, <font color="#924B72">#Xml</font>, &quot;test&quot;)
       
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#ListView</font>, -1, "General")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#ListView</font>, -1, "Editor")
-<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#ListView</font>, -1, "Backup")
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#ListView</font>, -1, &quot;General&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#ListView</font>, -1, &quot;Editor&quot;)
+<font color="#006666">      AddGadgetItem</font>(<font color="#924B72">#ListView</font>, -1, &quot;Backup&quot;)
       
 <font color="#006666">      SetGadgetState</font>(<font color="#924B72">#ListView</font>, 0)
       
@@ -431,10 +431,10 @@ To get more information about the error which has occurred, use <a href="dialoge
       <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
       
     <b><font color="#006666">Else</font></b>  
-      <b><font color="#006666">Debug</font></b> "Dialog error: " +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
+      <b><font color="#006666">Debug</font></b> &quot;Dialog error: &quot; +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "XML error: " +<font color="#006666"> XMLError</font>(<font color="#924B72">#Xml</font>) + " (Line: " +<font color="#006666"> XMLErrorLine</font>(<font color="#924B72">#Xml</font>) + ")"
+    <b><font color="#006666">Debug</font></b> &quot;XML error: &quot; +<font color="#006666"> XMLError</font>(<font color="#924B72">#Xml</font>) + &quot; (Line: &quot; +<font color="#006666"> XMLErrorLine</font>(<font color="#924B72">#Xml</font>) + &quot;)&quot;
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -454,36 +454,36 @@ To get more information about the error which has occurred, use <a href="dialoge
   <font color="#924B72">#Dialog</font> = 0
   <font color="#924B72">#Xml</font> = 0
   
-  XML$ = "&#060;window id='#PB_Any' name='test' text='Gridbox' minwidth='auto' minheight='auto' flags='#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget'&#062;" +
-         "    &#060;gridbox columns='6'&#062;" +
-         "          &#060;button text='Button 1' /&#062;" +
-         "          &#060;button text='Button 2' /&#062;" +
-         "          &#060;button text='Button 3' colspan='3' /&#062;" +
-         "          &#060;button text='Button 4' /&#062;" +
-         "          &#060;button text='Button 5' rowspan='2' /&#062;" +
-         "          &#060;button text='Button 6' /&#062;" +
-         "          &#060;button text='Button 7' /&#062;" +
-         "          &#060;button text='Button 8' /&#062;" +
-         "          &#060;button text='Button 9' /&#062;" +
-         "          &#060;button text='Button 10' /&#062;" +
-         "          &#060;button text='Button 11' /&#062;" +
-         "          &#060;button text='Button 12' /&#062;" +
-         "    &#060;/gridbox&#062;" +
-         "  &#060;/window&#062;"
+  XML$ = &quot;&lt;window id=&apos;#PB_Any&apos; name=&apos;test&apos; text=&apos;Gridbox&apos; minwidth=&apos;auto&apos; minheight=&apos;auto&apos; flags=&apos;#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget&apos;&gt;&quot; +
+         &quot;    &lt;gridbox columns=&apos;6&apos;&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 1&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 2&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 3&apos; colspan=&apos;3&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 4&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 5&apos; rowspan=&apos;2&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 6&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 7&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 8&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 9&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 10&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 11&apos; /&gt;&quot; +
+         &quot;          &lt;button text=&apos;Button 12&apos; /&gt;&quot; +
+         &quot;    &lt;/gridbox&gt;&quot; +
+         &quot;  &lt;/window&gt;&quot;
   
   <b><font color="#006666">If</font></b> <font color="#006666">CatchXML</font>(<font color="#924B72">#Xml</font>, @XML$,<font color="#006666"> StringByteLength</font>(XML$), 0, <font color="#924B72">#XmlEncoding</font>) <b><font color="#006666">And</font></b> <font color="#006666">XMLStatus</font>(<font color="#924B72">#Xml</font>) = <font color="#924B72">#PB_XML_Success</font>
     
-    <b><font color="#006666">If</font></b> <font color="#006666">CreateDialog</font>(<font color="#924B72">#Dialog</font>) <b><font color="#006666">And</font></b> <font color="#006666">OpenXMLDialog</font>(<font color="#924B72">#Dialog</font>, <font color="#924B72">#Xml</font>, "test")
+    <b><font color="#006666">If</font></b> <font color="#006666">CreateDialog</font>(<font color="#924B72">#Dialog</font>) <b><font color="#006666">And</font></b> <font color="#006666">OpenXMLDialog</font>(<font color="#924B72">#Dialog</font>, <font color="#924B72">#Xml</font>, &quot;test&quot;)
       
       <b><font color="#006666">Repeat</font></b>
         Event =<font color="#006666"> WaitWindowEvent</font>()
       <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
       
     <b><font color="#006666">Else</font></b>  
-      <b><font color="#006666">Debug</font></b> "Dialog error: " +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
+      <b><font color="#006666">Debug</font></b> &quot;Dialog error: &quot; +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "XML error: " +<font color="#006666"> XMLError</font>(<font color="#924B72">#Xml</font>) + " (Line: " +<font color="#006666"> XMLErrorLine</font>(<font color="#924B72">#Xml</font>) + ")"
+    <b><font color="#006666">Debug</font></b> &quot;XML error: &quot; +<font color="#006666"> XMLError</font>(<font color="#924B72">#Xml</font>) + &quot; (Line: &quot; +<font color="#006666"> XMLErrorLine</font>(<font color="#924B72">#Xml</font>) + &quot;)&quot;
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -491,4 +491,6 @@ To get more information about the error which has occurred, use <a href="dialoge
 
 <a href="createdialog.html">CreateDialog()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=isdialog.html>IsDialog()</a> - <a href=index.html>Dialog Index</a></body></html>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=isdialog.html>IsDialog()</a> - <a href=index.html>Dialog Index</a> - <a href=refreshdialog.html>RefreshDialog()</a> -><br><br>
+
+</body></html>

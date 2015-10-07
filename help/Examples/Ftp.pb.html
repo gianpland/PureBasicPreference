@@ -12,19 +12,19 @@
 </font>
 <font color="#006666">InitNetwork</font>()
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenFTP</font>(0, "127.0.0.1", "test", "test", 0)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenFTP</font>(0, &quot;127.0.0.1&quot;, &quot;test&quot;, &quot;test&quot;, 0)
 
-  Result =<font color="#006666"> SendFTPFile</font>(0,<font color="#006666"> OpenFileRequester</font>("Choose a file to send", "", "*.*", 0), "purebasic_sent.file", 1)
+  Result =<font color="#006666"> SendFTPFile</font>(0,<font color="#006666"> OpenFileRequester</font>(&quot;Choose a file to send&quot;, &quot;&quot;, &quot;*.*&quot;, 0), &quot;purebasic_sent.file&quot;, 1)
   
   <b><font color="#006666">Repeat</font></b>
     <b><font color="#006666">Debug</font></b> <font color="#006666">FTPProgress</font>(0)
 <font color="#006666">    Delay</font>(300)
   <b><font color="#006666">Until</font></b> <font color="#006666">FTPProgress</font>(0) = -3 <b><font color="#006666">Or</font></b> <font color="#006666">FTPProgress</font>(0) = -2
 
-  <b><font color="#006666">Debug</font></b> "finished"
+  <b><font color="#006666">Debug</font></b> &quot;finished&quot;
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "Can't connect to the FTP server")
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t connect to the FTP server&quot;)
 <b><font color="#006666">EndIf</font></b>
 </font></pre>
 </body></html>

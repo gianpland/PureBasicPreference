@@ -26,7 +26,7 @@ about PostgreSQL: <a href="http://www.postgresql.org">http://www.postgresql.org<
 <br>
 <br>
 A PostgreSQL database has to be connected using <a href="opendatabase.html">OpenDatabase()</a> before using any other database functions. 
-PostgresSQL specific parameters can be passed in the 'DatabaseName$' parameter of <a href="opendatabase.html">OpenDatabase()</a>: 
+PostgresSQL specific parameters can be passed in the &apos;DatabaseName$&apos; parameter of <a href="opendatabase.html">OpenDatabase()</a>: 
 <pre><font face="Courier New, Courier, mono"size="2">  - host: Name of host to connect to.
   - hostaddr: Numeric IP address of host to connect to.
   - port: Port number to connect to at the server host.
@@ -42,10 +42,10 @@ PostgresSQL specific parameters can be passed in the 'DatabaseName$' parameter o
 
   <font color="#006666">; You should have a server running on localhost</font>
   <font color="#006666">;</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenDatabase</font>(0, "host=localhost port=5432", "postgres", "postgres")
-    <b><font color="#006666">Debug</font></b> "Connected to PostgreSQL"
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenDatabase</font>(0, &quot;host=localhost port=5432&quot;, &quot;postgres&quot;, &quot;postgres&quot;)
+    <b><font color="#006666">Debug</font></b> &quot;Connected to PostgreSQL&quot;
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "Connection failed: "+<font color="#006666">DatabaseError</font>()
+    <b><font color="#006666">Debug</font></b> &quot;Connection failed: &quot;+<font color="#006666">DatabaseError</font>()
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -53,6 +53,6 @@ PostgresSQL specific parameters can be passed in the 'DatabaseName$' parameter o
 
 <a href="opendatabase.html">OpenDatabase()</a>, <a href="usesqlitedatabase.html">UseSQLiteDatabase()</a>, <a href="useodbcdatabase.html">UseODBCDatabase()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=useodbcdatabase.html>UseODBCDatabase()</a> - <a href=index.html>Database Index</a> - <a href=usesqlitedatabase.html>UseSQLiteDatabase()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=useodbcdatabase.html>UseODBCDatabase()</a> - <a href=index.html>Database Index</a> - <a href=usesqlitedatabase.html>UseSQLiteDatabase()</a> -><br><br>
 
 </body></html>

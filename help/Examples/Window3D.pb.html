@@ -13,14 +13,14 @@
 <font color="#924B72">#MainWindow</font> = 0
 <font color="#924B72">#CloseButton</font> = 0
 
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
   
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/GUI", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/GUI&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
 
     
 <font color="#006666">  InitSprite</font>()
@@ -29,15 +29,15 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    SkyBox</font>("desert07.jpg")
+<font color="#006666">    SkyBox</font>(&quot;desert07.jpg&quot;)
 
 <font color="#006666">    CreateCamera</font>(0, 0, 0, 100, 100)  <font color="#006666">; Front camera
 </font><font color="#006666">    MoveCamera</font>(0,0,100,100, <font color="#924B72">#PB_Absolute</font>)
     
     
-<font color="#006666">    OpenWindow3D</font>(<font color="#924B72">#MainWindow</font>, 100, 100, 300, 100, "Hello in 3D !")
+<font color="#006666">    OpenWindow3D</font>(<font color="#924B72">#MainWindow</font>, 100, 100, 300, 100, &quot;Hello in 3D !&quot;)
 		
-<font color="#006666">			ButtonGadget3D</font>(<font color="#924B72">#CloseButton</font>, 150, 40, 120, 25, "Quit")
+<font color="#006666">			ButtonGadget3D</font>(<font color="#924B72">#CloseButton</font>, 150, 40, 120, 25, &quot;Quit&quot;)
 			
 <font color="#006666">  	ShowGUI</font>(128, 1) <font color="#006666">; Display the GUI, semi-transparent and display the mouse cursor
 </font>    		
@@ -50,7 +50,7 @@
 <font color="#006666">        InputEvent3D</font>(<font color="#006666">MouseX</font>(),<font color="#006666"> MouseY</font>(),<font color="#006666"> MouseButton</font>(<font color="#924B72">#PB_MouseButton_Left</font>), Input$, 0)
       <b><font color="#006666">EndIf</font></b>
       
-      <font color="#006666">; Handle the GUI 3D events, it's similar to regular GUI events
+      <font color="#006666">; Handle the GUI 3D events, it&apos;s similar to regular GUI events
 </font>      <font color="#006666">;
 </font>      <b><font color="#006666">Repeat</font></b>
       	Event =<font color="#006666"> WindowEvent3D</font>()
@@ -76,6 +76,6 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;, 0)
 <b><font color="#006666">EndIf</font></b></font></pre>
 </body></html>

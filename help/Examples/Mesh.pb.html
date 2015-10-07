@@ -14,7 +14,7 @@
 <font color="#924B72">#PB_Material_SpecularColor</font> = 1
 <font color="#924B72">#PB_Material_AmbientColor</font>  = 2
 
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY
 
@@ -25,8 +25,8 @@
   
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
 
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
    
 <font color="#006666">  InitSprite</font>()
 <font color="#006666">  InitKeyboard</font>()
@@ -34,15 +34,15 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    LoadMesh   </font>(<font color="#924B72">#RobotMesh</font>   , "robot.mesh")
-<font color="#006666">    LoadTexture</font>(<font color="#924B72">#RobotTexture</font>, "clouds.jpg")
+<font color="#006666">    LoadMesh   </font>(<font color="#924B72">#RobotMesh</font>   , &quot;robot.mesh&quot;)
+<font color="#006666">    LoadTexture</font>(<font color="#924B72">#RobotTexture</font>, &quot;clouds.jpg&quot;)
     
 <font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> TextureID</font>(<font color="#924B72">#RobotTexture</font>))
     
 <font color="#006666">    CreateEntity</font>(<font color="#924B72">#Robot</font>,<font color="#006666"> MeshID</font>(<font color="#924B72">#RobotMesh</font>),<font color="#006666"> MaterialID</font>(0))
 <font color="#006666">    SetEntityMaterial</font>(<font color="#924B72">#Robot</font>,<font color="#006666"> MaterialID</font>(0))
     
-<font color="#006666">    StartEntityAnimation</font>(<font color="#924B72">#Robot</font>, "Walk")
+<font color="#006666">    StartEntityAnimation</font>(<font color="#924B72">#Robot</font>, &quot;Walk&quot;)
     
 <font color="#006666">    DisableMaterialLighting</font>(0, 1)
     
@@ -97,7 +97,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;, 0)
 <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">End</font></b></font></pre>

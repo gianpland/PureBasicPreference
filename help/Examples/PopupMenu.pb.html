@@ -15,26 +15,26 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">CreatePopupMenu</font>(0)
-<font color="#006666">  MenuItem</font>(1, "Cut")
-<font color="#006666">  MenuItem</font>(2, "Copy")
-<font color="#006666">  MenuItem</font>(3, "Paste")
+<font color="#006666">  MenuItem</font>(1, &quot;Cut&quot;)
+<font color="#006666">  MenuItem</font>(2, &quot;Copy&quot;)
+<font color="#006666">  MenuItem</font>(3, &quot;Paste&quot;)
 <font color="#006666">  MenuBar</font>()
-<font color="#006666">  OpenSubMenu</font>("Options")
-<font color="#006666">    MenuItem</font>(4, "Window...")
-<font color="#006666">    MenuItem</font>(5, "Gadget...")
+<font color="#006666">  OpenSubMenu</font>(&quot;Options&quot;)
+<font color="#006666">    MenuItem</font>(4, &quot;Window...&quot;)
+<font color="#006666">    MenuItem</font>(5, &quot;Gadget...&quot;)
 <font color="#006666">  CloseSubMenu</font>()
 <font color="#006666">  MenuBar</font>()
-<font color="#006666">  MenuItem</font>( 6, "Quit")
+<font color="#006666">  MenuItem</font>( 6, &quot;Quit&quot;)
 <b><font color="#006666">EndIf</font></b>
 
 <font color="#006666">;
 </font><font color="#006666">; We just have to open a window and see when an event happen on the menu
 </font><font color="#006666">;
-</font><b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 100, 300, 260, "PureBasic - PopupMenu Example")
+</font><b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 100, 300, 260, &quot;PureBasic - PopupMenu Example&quot;)
 
-<font color="#006666">  ListIconGadget</font>(0, 10, 10, 280, 240, "Tools", 200)
-<font color="#006666">    AddGadgetItem</font>(0, -1, "Hammer")
-<font color="#006666">    AddGadgetItem</font>(0, -1, "Screwdriver")
+<font color="#006666">  ListIconGadget</font>(0, 10, 10, 280, 240, &quot;Tools&quot;, 200)
+<font color="#006666">    AddGadgetItem</font>(0, -1, &quot;Hammer&quot;)
+<font color="#006666">    AddGadgetItem</font>(0, -1, &quot;Screwdriver&quot;)
 
   <b><font color="#006666">Repeat</font></b>
 
@@ -50,13 +50,13 @@
         <b><font color="#006666">Select</font></b> <font color="#006666">EventMenu</font>()  <font color="#006666">; To see which menu has been selected
 </font>
           <b><font color="#006666">Case</font></b> 1 <font color="#006666">; Cut
-</font><font color="#006666">            MessageRequester</font>("PureBasic", "Cut", 0)
+</font><font color="#006666">            MessageRequester</font>(&quot;PureBasic&quot;, &quot;Cut&quot;, 0)
 
           <b><font color="#006666">Case</font></b> 2 <font color="#006666">; Copy
-</font><font color="#006666">            MessageRequester</font>("PureBasic", "Copy", 0)
+</font><font color="#006666">            MessageRequester</font>(&quot;PureBasic&quot;, &quot;Copy&quot;, 0)
 
           <b><font color="#006666">Case</font></b> 3 <font color="#006666">; Paste
-</font><font color="#006666">            MessageRequester</font>("PureBasic", "Paste", 0)
+</font><font color="#006666">            MessageRequester</font>(&quot;PureBasic&quot;, &quot;Paste&quot;, 0)
 
           <b><font color="#006666">Case</font></b> 6 <font color="#006666">; Quit
 </font>            Quit = 1

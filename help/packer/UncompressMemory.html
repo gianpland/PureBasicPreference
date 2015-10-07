@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="4">UncompressMemory()</font></b></p>
 <p><b>Syntax</b></p><blockquote>
-Result = <font color="#006666"><b>UncompressMemory</b></font>(*Buffer, Size, *Output, OutputSize [, PluginID])</blockquote>
+Result = <font color="#006666"><b>UncompressMemory</b></font>(*Buffer, Size, *Output, OutputSize [, Plugin])</blockquote>
 
 </blockquote>
 <b>Description</b><br><blockquote>
@@ -37,7 +37,7 @@ The memory buffer size to store the uncompressed data. It must be at least of th
 uncompressed data. 
 
 </td></tr>
-<tr><td><i>PluginID (optional)</i></td>
+<tr><td><i>Plugin (optional)</i></td>
 <td> 
 The plugin to use, if more than one packer plugin has been registered. It can be one of the following value: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_PackerPlugin_BriefLZ</font>: use the BriefLZ packer to uncompress the memory. <a href="usebrieflzpacker.html">UseBriefLZPacker()</a> has to be called to have any effect.
@@ -56,6 +56,6 @@ Return the uncompressed size if the buffer has been successfully uncompressed, -
 
 <a href="compressmemory.html">CompressMemory()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removepackfile.html>RemovePackFile()</a> - <a href=index.html>Packer Index</a> - <a href=uncompresspackfile.html>UncompressPackFile()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removepackfile.html>RemovePackFile()</a> - <a href=index.html>Packer Index</a> - <a href=uncompresspackfile.html>UncompressPackFile()</a> -><br><br>
 
 </body></html>

@@ -78,27 +78,27 @@ are not specified, then the whole list is sorted.
   <b><font color="#006666">NewList</font></b> <font color="#006666">Animals</font>.Animal()
 
 <font color="#006666">  AddElement</font>(<font color="#006666">Animals</font>())
-<font color="#006666">  Animals</font>()\Name$ = "Tiger"
+<font color="#006666">  Animals</font>()\Name$ = &quot;Tiger&quot;
 <font color="#006666">  Animals</font>()\Speed = 10
 
 <font color="#006666">  AddElement</font>(<font color="#006666">Animals</font>())
-<font color="#006666">  Animals</font>()\Name$ = "Jaguar"
+<font color="#006666">  Animals</font>()\Name$ = &quot;Jaguar&quot;
 <font color="#006666">  Animals</font>()\Speed = 40
 
 <font color="#006666">  AddElement</font>(<font color="#006666">Animals</font>())
-<font color="#006666">  Animals</font>()\Name$ = "Zebra"
+<font color="#006666">  Animals</font>()\Name$ = &quot;Zebra&quot;
 <font color="#006666">  Animals</font>()\Speed = 30
 
 <font color="#006666">  SortStructuredList</font>(<font color="#006666">Animals</font>(), 0,<font color="#006666"> OffsetOf</font>(Animal\Name$),<font color="#006666"> TypeOf</font>(Animal\Name$))
 
   <b><font color="#006666">ForEach</font></b> <font color="#006666">Animals</font>()
-    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>()\Name$+" - Speed: "+<font color="#006666">Str</font>(<font color="#006666">Animals</font>()\Speed)
+    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>()\Name$+&quot; - Speed: &quot;+<font color="#006666">Str</font>(<font color="#006666">Animals</font>()\Speed)
   <b><font color="#006666">Next</font></b>
 
 <font color="#006666">  SortStructuredList</font>(<font color="#006666">Animals</font>(), 0,<font color="#006666"> OffsetOf</font>(Animal\Speed),<font color="#006666"> TypeOf</font>(Animal\Speed))
 
   <b><font color="#006666">ForEach</font></b> <font color="#006666">Animals</font>()
-    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>()\Name$+" - Speed: "+<font color="#006666">Str</font>(<font color="#006666">Animals</font>()\Speed)
+    <b><font color="#006666">Debug</font></b> <font color="#006666">Animals</font>()\Name$+&quot; - Speed: &quot;+<font color="#006666">Str</font>(<font color="#006666">Animals</font>()\Speed)
   <b><font color="#006666">Next</font></b>
 
 </font></pre>
@@ -107,6 +107,6 @@ are not specified, then the whole list is sorted.
 
 <a href="sortlist.html">SortList()</a>, <a href="randomizelist.html">RandomizeList()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=sortstructuredarray.html>SortStructuredArray()</a> - <a href=index.html>Sort Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=sortstructuredarray.html>SortStructuredArray()</a> - <a href=index.html>Sort Index</a><br><br>
 
 </body></html>

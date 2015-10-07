@@ -7,7 +7,7 @@ Result = <font color="#006666"><b>GetJSONElement</b></font>(JSONValue, Index)</b
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Return the JSON array element at the given 'Index' of a JSON value 
+Return the JSON array element at the given &apos;Index&apos; of a JSON value 
 of <a href="jsontype.html">type</a> <font color="#924B72">#PB_JSON_Array</font>. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
@@ -31,11 +31,11 @@ and <a href="jsonarraysize.html">JSONArraySize()</a> - 1.
 </blockquote><p><b>Return value</b></p><blockquote>
 
 The address of the JSON value at the specified array index. 
-If the given 'Index' is out of range, the result is 0. 
+If the given &apos;Index&apos; is out of range, the result is 0. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  ParseJSON</font>(0, "[1, 2, 3, 4, 5]")
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  ParseJSON</font>(0, &quot;[1, 2, 3, 4, 5]&quot;)
     
   <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> <font color="#006666">JSONArraySize</font>(<font color="#006666">JSONValue</font>(0)) - 1
     <b><font color="#006666">Debug</font></b> <font color="#006666">GetJSONInteger</font>(<font color="#006666">GetJSONElement</font>(<font color="#006666">JSONValue</font>(0), i))
@@ -47,6 +47,6 @@ If the given 'Index' is out of range, the result is 0.
 <a href="setjsonarray.html">SetJSONArray()</a>, <a href="addjsonelement.html">AddJSONElement()</a>, <a href="removejsonelement.html">RemoveJSONElement()</a>, <a href="resizejsonelements.html">ResizeJSONElements()</a>, 
 <a href="clearjsonelements.html">ClearJSONElements()</a>, <a href="jsonarraysize.html">JSONArraySize()</a>, <a href="jsontype.html">JSONType()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=getjsondouble.html>GetJSONDouble()</a> - <a href=index.html>Json Index</a> - <a href=getjsonfloat.html>GetJSONFloat()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=getjsondouble.html>GetJSONDouble()</a> - <a href=index.html>Json Index</a> - <a href=getjsonfloat.html>GetJSONFloat()</a> -><br><br>
 
 </body></html>

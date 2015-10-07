@@ -37,7 +37,7 @@ See the documentation of each gadget for the supported color attributes:
 <td> 
 The new color for the attribute. <a href="../2ddrawing/rgb.html">RGB()</a> can be 
 used to get a valid color value. To remove the custom color and go back to the default system color, set 
-the 'Color' parameter to -1. 
+the &apos;Color&apos; parameter to -1. 
 
 </td></tr>
 </table>
@@ -89,11 +89,11 @@ or overwritten by the style.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 170, "SetGadgetColor", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    StringGadget</font>(0, 10, 10, 180, 20, "String...")
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 170, &quot;SetGadgetColor&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    StringGadget</font>(0, 10, 10, 180, 20, &quot;String...&quot;)
 <font color="#006666">    ListViewGadget</font>(1, 10, 40, 180, 60)
     <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 4
-<font color="#006666">      AddGadgetItem</font>(1, -1, "Text")
+<font color="#006666">      AddGadgetItem</font>(1, -1, &quot;Text&quot;)
     <b><font color="#006666">Next</font></b> i
 <font color="#006666">    ContainerGadget</font>(2, 10, 110, 180, 50, <font color="#924B72">#PB_Container_Raised</font>)
 
@@ -113,6 +113,6 @@ or overwritten by the style.
 
 <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="getgadgetitemcolor.html">GetGadgetItemColor()</a>, <a href="setgadgetitemcolor.html">SetGadgetItemColor()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetattribute.html>SetGadgetAttribute()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetdata.html>SetGadgetData()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetattribute.html>SetGadgetAttribute()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetdata.html>SetGadgetData()</a> -><br><br>
 
 </body></html>

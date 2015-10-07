@@ -34,7 +34,7 @@ Can be one of the following values:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Network_TCP</font>: The server will use the <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP network protocol</a> (default)
   <font color="#924B72">#PB_Network_UDP</font>: The server will use the <a href="http://en.wikipedia.org/wiki/User_Datagram_Protocol">UDP network protocol</a>
 </font></pre>
-combined with one of the following values (using the '|' operand): 
+combined with one of the following values (using the &apos;|&apos; operand): 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Network_IPv4</font>: create a server using IPv4 (default)
   <font color="#924B72">#PB_Network_IPv6</font>: create a server using IPv6
 </font></pre>
@@ -43,7 +43,7 @@ combined with one of the following values (using the '|' operand):
 <tr><td><i>BindedIP$ (optional)</i></td>
 <td> 
 The local IP address to bind the server. By default, the server is created on all available local interfaces, and accept 
-connections from them. It can be useful to restrict the server to only one interface (for example "127.0.0.1") 
+connections from them. It can be useful to restrict the server to only one interface (for example &quot;127.0.0.1&quot;) 
 to avoid connection attempt from other interfaces. On Windows, binding only to the localhost avoid to trigger the 
 built-in firewall. 
 
@@ -59,7 +59,7 @@ If #PB_Any was used as the #Server parameter then the generated number is return
 
 Any number of servers can run simultaneously on the same computer, the only restriction 
 being that two servers can not run using the same port and the same protocol (<font color="#924B72">#PB_Network_TCP</font> and <font color="#924B72">#PB_Network_UDP</font>). 
-It's possible to create two servers using the same port, one using IPv4 and the other using IPv6. 
+It&apos;s possible to create two servers using the same port, one using IPv4 and the other using IPv6. 
 <a href="networkserverevent.html">NetworkServerEvent()</a> can be used to monitor server for events. 
 <br>
 <br>
@@ -69,6 +69,6 @@ It's possible to create two servers using the same port, one using IPv4 and the 
 
 <a href="opennetworkconnection.html">OpenNetworkConnection()</a>, <a href="closenetworkserver.html">CloseNetworkServer()</a>, <a href="networkserverevent.html">NetworkServerEvent()</a>, <a href="initnetwork.html">InitNetwork()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=connectionid.html>ConnectionID()</a> - <a href=index.html>Network Index</a> - <a href=eventclient.html>EventClient()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=connectionid.html>ConnectionID()</a> - <a href=index.html>Network Index</a> - <a href=eventclient.html>EventClient()</a> -><br><br>
 
 </body></html>

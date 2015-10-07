@@ -45,9 +45,9 @@ None.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 220, 100, "HideWindow()", <font color="#924B72">#PB_Window_SystemMenu</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 220, 100, &quot;HideWindow()&quot;, <font color="#924B72">#PB_Window_SystemMenu</font>)
    
-<font color="#006666">   ButtonGadget  </font>(1, 10, 60, 200, 30, "Hide the window")
+<font color="#006666">   ButtonGadget  </font>(1, 10, 60, 200, 30, &quot;Hide the window&quot;)
    
    <b><font color="#006666">Repeat</font></b>
      Event =<font color="#006666"> WaitWindowEvent</font>()
@@ -59,10 +59,10 @@ None.
            <b><font color="#006666">Case</font></b> 1
              
 <font color="#006666">             HideWindow</font>(0, <font color="#924B72">#True</font>)  
-             <b><font color="#006666">Debug</font></b> "Window hidden."
-<font color="#006666">             MessageRequester</font>("Info", "Press OK to show the window")
+             <b><font color="#006666">Debug</font></b> &quot;Window hidden.&quot;
+<font color="#006666">             MessageRequester</font>(&quot;Info&quot;, &quot;Press OK to show the window&quot;)
 <font color="#006666">             HideWindow</font>(0, <font color="#924B72">#False</font>)  
-             <b><font color="#006666">Debug</font></b> "Window is visible."
+             <b><font color="#006666">Debug</font></b> &quot;Window is visible.&quot;
                               
            <b><font color="#006666">EndSelect</font></b>
             
@@ -75,6 +75,6 @@ None.
 
 <a href="openwindow.html">OpenWindow()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=getwindowtitle.html>GetWindowTitle()</a> - <a href=index.html>Window Index</a> - <a href=iswindow.html>IsWindow()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=getwindowtitle.html>GetWindowTitle()</a> - <a href=index.html>Window Index</a> - <a href=iswindow.html>IsWindow()</a> -><br><br>
 
 </body></html>

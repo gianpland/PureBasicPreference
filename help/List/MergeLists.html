@@ -32,8 +32,8 @@ function returns.
 <td> 
 Location where to insert the elements in the DestinationList(). This can be one of the following 
 values: 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_List_First</font> : Insert the elements at the beginning of DestinationList()
-  <font color="#924B72">#PB_List_Last</font>  : Append the elements at the end of DestinationList()
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_List_Last</font>  : Append the elements at the end of DestinationList() (default)
+  <font color="#924B72">#PB_List_First</font> : Insert the elements at the beginning of DestinationList()
   <font color="#924B72">#PB_List_Before</font>: Insert the elements before the current element of DestinationList()
   <font color="#924B72">#PB_List_After</font> : Insert the elements after the current element of DestinationList()
 </font></pre>
@@ -47,18 +47,18 @@ None.
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">NewList</font></b> <font color="#006666">A</font>.s()
-<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = "a0"
-<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = "a1"
-<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = "a2"
-<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = "a3"
+<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = &quot;a0&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = &quot;a1&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = &quot;a2&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">A</font>()):<font color="#006666"> A</font>() = &quot;a3&quot;
   
   <b><font color="#006666">NewList</font></b> <font color="#006666">B</font>.s()
-<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = "b0"
-<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = "b1"
-<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = "b2"
-<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = "b3"
+<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = &quot;b0&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = &quot;b1&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = &quot;b2&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">B</font>()):<font color="#006666"> B</font>() = &quot;b3&quot;
     
-  <font color="#006666">; Insert the elements of A() before the "b1" element in B()</font>
+  <font color="#006666">; Insert the elements of A() before the &quot;b1&quot; element in B()</font>
 <font color="#006666">  SelectElement</font>(<font color="#006666">B</font>(), 1)
 <font color="#006666">  MergeLists</font>(<font color="#006666">A</font>(),<font color="#006666"> B</font>(), <font color="#924B72">#PB_List_Before</font>)
   
@@ -71,6 +71,6 @@ None.
 
 <a href="splitlist.html">SplitList()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=listsize.html>ListSize()</a> - <a href=index.html>List Index</a> - <a href=moveelement.html>MoveElement()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=listsize.html>ListSize()</a> - <a href=index.html>List Index</a> - <a href=moveelement.html>MoveElement()</a> -><br><br>
 
 </body></html>

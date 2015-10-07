@@ -12,7 +12,7 @@
 </font>
 <font color="#006666">UseBriefLZPacker</font>() <font color="#006666">; Small and fast packer
 </font>
-<b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0,<font color="#006666"> OpenFileRequester</font>("Choose a file to compress", "", "*.*", 0))
+<b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0,<font color="#006666"> OpenFileRequester</font>(&quot;Choose a file to compress&quot;, &quot;&quot;, &quot;*.*&quot;, 0))
   FileLength =<font color="#006666"> Lof</font>(0)
   
   <font color="#006666">; Allocate the 2 memory buffers needed for compression..
@@ -29,10 +29,10 @@
 
       DecompressedLength =<font color="#006666"> UncompressMemory</font>(*Target, CompressedLength, *Source, FileLength)
       <b><font color="#006666">If</font></b> DecompressedLength = FileLength
-<font color="#006666">        MessageRequester</font>("Info", "De/Compression succeded:"+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>+"Old size: "+<font color="#006666">Str</font>(FileLength)+<font color="#924B72">#LF$</font>+"New size: "+<font color="#006666">Str</font>(CompressedLength))
+<font color="#006666">        MessageRequester</font>(&quot;Info&quot;, &quot;De/Compression succeded:&quot;+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>+&quot;Old size: &quot;+<font color="#006666">Str</font>(FileLength)+<font color="#924B72">#LF$</font>+&quot;New size: &quot;+<font color="#006666">Str</font>(CompressedLength))
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Else</font></b>
-<font color="#006666">      MessageRequester</font>("Error", "Can't compress the file")
+<font color="#006666">      MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t compress the file&quot;)
     <b><font color="#006666">EndIf</font></b> 
     
 <font color="#006666">    FreeMemory</font>(*Source)

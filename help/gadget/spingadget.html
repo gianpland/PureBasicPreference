@@ -47,7 +47,7 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to act on a SpinGadget: 
@@ -73,21 +73,21 @@ The following functions can be used to act on a SpinGadget:
 
 The following events are supported through <a href="../window/eventtype.html">EventType()</a>: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_EventType_Change</font>: The text in the edit area has been modified by the user.
-  <font color="#924B72">#PB_EventType_Up</font>    : The 'Up' button was pressed.
-  <font color="#924B72">#PB_EventType_Down</font>  : The 'Down' button was pressed.
+  <font color="#924B72">#PB_EventType_Up</font>    : The &apos;Up&apos; button was pressed.
+  <font color="#924B72">#PB_EventType_Down</font>  : The &apos;Down&apos; button was pressed.
 </font></pre>
 
 This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
-the following values as 'ColorType': 
+the following values as &apos;ColorType&apos;: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_FrontColor</font>: Textcolor
   <font color="#924B72">#PB_Gadget_BackColor</font> : Backgroundcolor
 </font></pre>
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 140, 70, "SpinGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 140, 70, &quot;SpinGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">    SpinGadget     </font>(0, 20, 20, 100, 25, 0, 1000)
-<font color="#006666">    SetGadgetState </font>(0, 5) :<font color="#006666"> SetGadgetText</font>(0, "5")   <font color="#006666">; set initial value</font>
+<font color="#006666">    SetGadgetState </font>(0, 5) :<font color="#006666"> SetGadgetText</font>(0, &quot;5&quot;)   <font color="#006666">; set initial value</font>
     <b><font color="#006666">Repeat</font></b>
       Event =<font color="#006666"> WaitWindowEvent</font>()
       <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Gadget</font>
@@ -107,6 +107,6 @@ the following values as 'ColorType':
 <a href="getgadgetstate.html">GetGadgetState()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgettext.html">GetGadgetText()</a>, <a href="setgadgettext.html">SetGadgetText()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, 
 <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=shortcutgadget.html>ShortcutGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=splittergadget.html>SplitterGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=shortcutgadget.html>ShortcutGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=splittergadget.html>SplitterGadget()</a> -><br><br>
 
 </body></html>

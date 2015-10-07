@@ -30,8 +30,8 @@ The directory to examine.
 <tr><td><i>Pattern$</i></td>
 <td> 
 A pattern to filter the returned entries by. 
-For example: A 'Pattern$' like "*.*" or "" will list all the files (and sub-directories) in the directory. 
-A 'Pattern$' like "*.exe" will list only .exe files (and sub-directories ending with .exe if any). 
+For example: A &apos;Pattern$&apos; like &quot;*.*&quot; or &quot;&quot; will list all the files (and sub-directories) in the directory. 
+A &apos;Pattern$&apos; like &quot;*.exe&quot; will list only .exe files (and sub-directories ending with .exe if any). 
 
 </td></tr>
 </table>
@@ -48,14 +48,14 @@ be called to free the resources associated to the listing.
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  Directory$ =<font color="#006666"> GetHomeDirectory</font>() <font color="#006666">; Lists all files and folder in the home directory</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">ExamineDirectory</font>(0, Directory$, "*.*")  
+  <b><font color="#006666">If</font></b> <font color="#006666">ExamineDirectory</font>(0, Directory$, &quot;*.*&quot;)  
     <b><font color="#006666">While</font></b> <font color="#006666">NextDirectoryEntry</font>(0)
       <b><font color="#006666">If</font></b> <font color="#006666">DirectoryEntryType</font>(0) = <font color="#924B72">#PB_DirectoryEntry_File</font>
-        Type$ = "[File] "
-        Size$ = " (Size: " +<font color="#006666"> DirectoryEntrySize</font>(0) + ")"
+        Type$ = &quot;[File] &quot;
+        Size$ = &quot; (Size: &quot; +<font color="#006666"> DirectoryEntrySize</font>(0) + &quot;)&quot;
       <b><font color="#006666">Else</font></b>
-        Type$ = "[Directory] "
-        Size$ = "" <font color="#006666">; A directory doesn't have a size</font>
+        Type$ = &quot;[Directory] &quot;
+        Size$ = &quot;&quot; <font color="#006666">; A directory doesn&apos;t have a size</font>
       <b><font color="#006666">EndIf</font></b>
       
       <b><font color="#006666">Debug</font></b> Type$ +<font color="#006666"> DirectoryEntryName</font>(0) + Size$
@@ -74,6 +74,6 @@ be called to free the resources associated to the listing.
 <a href="directoryentryattributes.html">DirectoryEntryAttributes()</a>, 
 <a href="directoryentrydate.html">DirectoryEntryDate()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=directoryentrytype.html>DirectoryEntryType()</a> - <a href=index.html>FileSystem Index</a> - <a href=filesize.html>FileSize()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=directoryentrytype.html>DirectoryEntryType()</a> - <a href=index.html>FileSystem Index</a> - <a href=filesize.html>FileSize()</a> -><br><br>
 
 </body></html>

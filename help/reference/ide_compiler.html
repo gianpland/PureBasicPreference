@@ -2,11 +2,11 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">Compiling your programs</font></b></p>
 
-Compiling is simple. Just select "Compile/Run" (F5 by default) and your program will be 
+Compiling is simple. Just select &quot;Compile/Run&quot; (F5 by default) and your program will be 
 compiled and executed for a testing run. 
 <br>
 <br>
-To customize the compiling process, you can open the "Compiler options" dialog. The 
+To customize the compiling process, you can open the &quot;Compiler options&quot; dialog. The 
 settings made there are associated with the current source file or the current project, 
 and also remembered when they are closed. The place where this information is saved can be configured. 
 By default, it is saved at the end of the source code as a comment (invisible in the IDE). 
@@ -41,7 +41,7 @@ as the source code will work.
 The source code need not be saved for this (but any <a href="../reference/includes.html">included files</a> must be saved). 
 <br>
 <br>
-The "Compile/Run" option respects the debugger setting (on or off) from the compiler 
+The &quot;Compile/Run&quot; option respects the debugger setting (on or off) from the compiler 
 options or debugger menu (they are the same). 
 
 <br>
@@ -57,7 +57,7 @@ depends on the setting of the last compilation.
 
 <b>Compile with Debugger</b> 
 <br>
-This is the same as "Compile/Run" except that it ignores the debugger setting and enabled the 
+This is the same as &quot;Compile/Run&quot; except that it ignores the debugger setting and enabled the 
 debugger for this compilation. This is useful when you usually have the debugger off, but want 
 to have it on for just this one compilation. 
 
@@ -66,7 +66,7 @@ to have it on for just this one compilation.
 
 <b>Compile without Debugger</b> 
 <br>
-Same as "Compile with Debugger" except that it forces the debugger to be off for this compilation. 
+Same as &quot;Compile with Debugger&quot; except that it forces the debugger to be off for this compilation. 
 
 <br>
 <br>
@@ -94,8 +94,8 @@ of this source file.
 <br>
 This opens a save dialog, asking for the executable name to create. If the executable format is set 
 to DLL, it will create a DLL on Windows, shared object on Linux and dylib on OS X. When creating 
-an executable on OS X, appending '.app' at the executable name will create a bundled executable 
-with the necessary directory structure, including the icon. If no '.app' is set, then it will 
+an executable on OS X, appending &apos;.app&apos; at the executable name will create a bundled executable 
+with the necessary directory structure, including the icon. If no &apos;.app&apos; is set, then it will 
 create a regular console-like executable. 
 
 <br>
@@ -105,7 +105,7 @@ create a regular console-like executable.
 <br>
 When a project is open, this submenu shows all compile targets and allows to quickly 
 switch the current default target. The default target is the one which is compiled/executed 
-with the "Compile/Run" menu entry. 
+with the &quot;Compile/Run&quot; menu entry. 
 
 <br>
 <br>
@@ -178,7 +178,7 @@ Windows: The icon must be in ICO format (Windows Icon).
 <br>
 
 MacOS X: The icon must be in ICNS format (Macintosh Icon). To create such an icon, you should create 
-PNG files in the dimensions 128x128, 48x48, 32x32 and 16x16 of your image and then use the tool "Icon Composer" 
+PNG files in the dimensions 128x128, 48x48, 32x32 and 16x16 of your image and then use the tool &quot;Icon Composer&quot; 
 that comes with the OSX developer tools to create the ICNS file. 
 It should be located in /Developer/Applications/Utilities/. To be displayed once the application 
 has just been created, the Finder may need to be restarted. 
@@ -246,7 +246,7 @@ Note: This option has no effect when the program is run on other versions of Win
 
 <b>Request User mode for Windows Vista and above</b> (Windows only) 
 <br>
-This option disables the "Virtualization" feature for this executable on Windows Vista and above. Virtualization 
+This option disables the &quot;Virtualization&quot; feature for this executable on Windows Vista and above. Virtualization 
 caused file and registry access to be redirected to a special user folder if the user does not have 
 the needed rights to do the operation (this is done for compatibility with older programs). 
 <br>
@@ -256,7 +256,7 @@ if the program complies with the Windows Vista file/registry access rules.
 <br>
 <br>
 Note: This option has no effect when the program is run on other versions of Windows. 
-It cannot be combined with the "Administrator mode" option above. 
+It cannot be combined with the &quot;Administrator mode&quot; option above. 
 
 <br>
 <br>
@@ -286,15 +286,15 @@ This allows you to specify the created executable format:
 <br>
 <u>Console</u> : an executable with a default console. This one still can create windows and such, 
 but it always has a console open. When executed from a command prompt, this executable type uses the 
-command terminal as its console and writes there, whereas the "Windows" executable would create a 
+command terminal as its console and writes there, whereas the &quot;Windows&quot; executable would create a 
 separate Console window when using <a href="../console/openconsole.html">OpenConsole()</a>. 
 This setting must be used to create a <a href="../console/index.html">Console</a> application that can have 
 its input/output redirected with pipes. 
 <br>
 <u>Shared DLL</u> : create a windows DLL. See <a href="../reference/dll.html">Building a DLL</a> for more info. 
 <br>
-Note: When you do "Compile/Run" with a DLL source code, it is executed as a normal executable. A dll 
-is only created when you use "create executable". 
+Note: When you do &quot;Compile/Run&quot; with a DLL source code, it is executed as a normal executable. A dll 
+is only created when you use &quot;create executable&quot;. 
 
 
 
@@ -332,7 +332,7 @@ when creating the executable. The file should contain one option per line.
 
 
 This section contains options that affect how the executable is run from the IDE for testing. 
-Except for the tools option, they have no effect when the "Create executable" menu is used. 
+Except for the tools option, they have no effect when the &quot;Create executable&quot; menu is used. 
 
 <p><img src="images/ide_compiler_compile.png"></p>
 
@@ -404,13 +404,13 @@ directory for testing. With this option turned off, the executable is created in
 <b>Execute tools</b> 
 <br>
 Here <a href="../reference/ide_externaltools.html">external tools</a> can be enabled on a per-source basis. 
-The "Global settings" column shows if the tool is enabled or disabled in the 
+The &quot;Global settings&quot; column shows if the tool is enabled or disabled in the 
 <a href="../reference/ide_externaltools.html">tools configuration</a>. A tool will only be executed for the source 
 if it is both enabled globally and for this source. 
 
 <br>
 <br>
-Note: For a tool to be listed here, it must have the "Enable Tool on a per-source basis" option 
+Note: For a tool to be listed here, it must have the &quot;Enable Tool on a per-source basis&quot; option 
 checked in the <a href="../reference/ide_externaltools.html">tools configuration</a> and be executed by a trigger 
 that is associated with a source file (i.e. not executed by menu or by editor startup for example). 
 
@@ -426,15 +426,15 @@ which will be predefined when compiling this source.
 
 <b>#PB_Editor_CompileCount</b> 
 <br>
-If enabled, this constant holds the number of times that the code was compiled (both with "Compile/Run" and 
-"Create Executable") from the IDE. The counter can be manually edited in the input field. 
+If enabled, this constant holds the number of times that the code was compiled (both with &quot;Compile/Run&quot; and 
+&quot;Create Executable&quot;) from the IDE. The counter can be manually edited in the input field. 
 
 <br>
 <br>
 
 <b>#PB_Editor_BuildCount</b> 
 <br>
-If enabled, this constant holds the number of times that the code was compiled with "Create Executable" only. 
+If enabled, this constant holds the number of times that the code was compiled with &quot;Create Executable&quot; only. 
 The counter can be manually edited in the input field. 
 
 <br>
@@ -442,8 +442,8 @@ The counter can be manually edited in the input field.
 
 <b>#PB_Editor_CreateExecutable</b> 
 <br>
-If enabled, this constants holds a value of 1 if the code is compiled with the "Create Executable" menu or 
-0 if "Compile/Run" was used. 
+If enabled, this constants holds a value of 1 if the code is compiled with the &quot;Create Executable&quot; menu or 
+0 if &quot;Compile/Run&quot; was used. 
 
 <br>
 <br>
@@ -458,12 +458,12 @@ checking in the source for it to enable/disable the features with
 <br>
 <br>
 Inside the definition of these constants, environment variables can be used by specifying them 
-in a "bash" like style with a "$" in front. The environment variable will be replaced in the constant 
+in a &quot;bash&quot; like style with a &quot;$&quot; in front. The environment variable will be replaced in the constant 
 definition before compiling the source. This allows to pass certain options of the system that the 
 code is compiled on to the program in the form of constants. 
 <br>
 <br>
-Example: #Creator="$USERNAME" 
+Example: #Creator=&quot;$USERNAME&quot; 
 <br>
 Here, the $USERNAME will be replaced by the username of the logged in user on Windows systems. If 
 an environment variable does not exist, it will be replaced by an empty string. 
@@ -482,8 +482,8 @@ Note: To test within the source code if a constant is defined or not, the <font 
 
 <p><img src="images/ide_compiler_version.png"></p>
 
-By enabling this, a resource is included in the executable with information about your program. 
-It can be viewed by right-clicking on the executable in the windows explorer and selecting "Properties". 
+This is a Windows only feature. By enabling this, a resource is included in the executable with information about your program. 
+It can be viewed by right-clicking on the executable in the windows explorer and selecting &quot;Properties&quot;. 
 Also it can be read by other programs such as setup tools. 
 <br>
 <br>
@@ -501,11 +501,11 @@ In all the string fields, you may include special tokens that are replaced when 
 <br>
 %SOURCE : replaced with the filename (no path) of the source file. 
 <br>
-%EXECUTABLE : replaced with the name of the created executable (this only works when "create executable" is used, not with "Compile/Run". 
+%EXECUTABLE : replaced with the name of the created executable (this only works when &quot;create executable&quot; is used, not with &quot;Compile/Run&quot;. 
 <br>
-%COMPILECOUNT : replaced with the value for the #PB_Editor_CompileCount constant. 
+%COMPILECOUNT : replaced with the value of the <font color="#924B72">#PB_Editor_CompileCount</font> constant. 
 <br>
-%BUILDCOUNT : replaced with the value for the #PB_Editor_BuildCount constant. 
+%BUILDCOUNT : replaced with the value of the <font color="#924B72">#PB_Editor_BuildCount</font> constant. 
 <br>
 <br>
 Furthermore, you can use any token listed with the <a href="../date/formatdate.html">FormatDate()</a> command. These tokens 
@@ -536,6 +536,25 @@ Type of the executable (Here VFT_UNKNOWN, VFT_APP or VFT_DLL are the only ones t
 <b>Language</b> 
 <br>
 Specifies the language in which this version info is written. 
+<br>
+<br>
+The fields values can be accessed when compiling the program from the IDE using the following constants (same order): 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Editor_FileVersionNumeric</font>
+  <font color="#924B72">#PB_Editor_ProductVersionNumeric</font>
+  <font color="#924B72">#PB_Editor_CompanyName</font>
+  <font color="#924B72">#PB_Editor_ProductName</font>
+  <font color="#924B72">#PB_Editor_ProductVersion</font>
+  <font color="#924B72">#PB_Editor_FileVersion</font>
+  <font color="#924B72">#PB_Editor_FileDescription</font>
+  <font color="#924B72">#PB_Editor_InternalName</font>
+  <font color="#924B72">#PB_Editor_OriginalFilename</font>
+  <font color="#924B72">#PB_Editor_LegalCopyright</font>
+  <font color="#924B72">#PB_Editor_LegalTrademarks</font>
+  <font color="#924B72">#PB_Editor_PrivateBuild</font>
+  <font color="#924B72">#PB_Editor_SpecialBuild</font>
+  <font color="#924B72">#PB_Editor_Email</font>
+  <font color="#924B72">#PB_Editor_Website</font>
+</font></pre>
 
 
 </blockquote>
@@ -544,7 +563,7 @@ Specifies the language in which this version info is written.
 
 <p><img src="images/ide_compiler_ressources.png"></p>
 
-Here you can include as many Resource scripts (*.rc files) as you want. They will be compiled 
+This is a Windows only feature. Here you can include as many Resource scripts (*.rc files) as you want. They will be compiled 
 and included with the executable. You can use any resource editor (for example the <a href="http://www.christian-heffner.de/index.php?page=start&lang=en">PellesC</a> IDE) 
 to create such scripts. 
 
@@ -570,15 +589,15 @@ side of the compiler options window is extended with the list of the defined com
 on top of it allows to create, delete, copy, edit or move targets in the list. 
 <br>
 <br>
-The default target is the one which will be compiled when the "Compile/Run" menu entry is selected. 
-It can be quickly switched with the "Set as default target" checkbox or from the compiler menu. 
-The "Enable in 'Build all Targets'" option specifies whether or not the selected target will be built 
-when the 'Build all Targets' menu entry is used. 
+The default target is the one which will be compiled when the &quot;Compile/Run&quot; menu entry is selected. 
+It can be quickly switched with the &quot;Set as default target&quot; checkbox or from the compiler menu. 
+The &quot;Enable in &apos;Build all Targets&apos;&quot; option specifies whether or not the selected target will be built 
+when the &apos;Build all Targets&apos; menu entry is used. 
 <br>
 <br>
 The right side of the compiler options is almost the same as in the non-project mode and reflects 
 the settings for the compile target that is currently selected on the left. 
-The only difference are the "Input source file" and "Output executable" fields on the first tab. 
+The only difference are the &quot;Input source file&quot; and &quot;Output executable&quot; fields on the first tab. 
 These fields have to be specified for all compile targets. Other than that, the compiler 
 options are identical to the options described above. 
 <br>
@@ -594,7 +613,7 @@ for the individual source files in the location specified by the <a href="../ref
 
 <p><img src="images/ide_compiler_build.png"></p>
 
-When the 'Build all Targets' menu entry is selected on an open project, all targets that have the corresponding 
+When the &apos;Build all Targets&apos; menu entry is selected on an open project, all targets that have the corresponding 
 option set in the compiler options will be compiled in the order they are defined in the compiler options. The progress 
 window shows the current compile progress as well as the status of each target. When the process is finished, the 
 build log can be copied to the clipboard or saved to disk. 

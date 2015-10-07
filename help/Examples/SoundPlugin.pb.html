@@ -11,19 +11,19 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">InitSound</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Can't open DirectX 7 or no sound card is available",  0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open DirectX 7 or no sound card is available&quot;,  0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
 <font color="#006666">UseOGGSoundDecoder</font>()
 
-SoundFileName$ =<font color="#006666"> OpenFileRequester</font>("Choose a sound file", "", "Wave or OGG files|*.wav;*.ogg",0)
+SoundFileName$ =<font color="#006666"> OpenFileRequester</font>(&quot;Choose a sound file&quot;, &quot;&quot;, &quot;Wave or OGG files|*.wav;*.ogg&quot;,0)
 <b><font color="#006666">If</font></b> SoundFileName$
   <b><font color="#006666">If</font></b> <font color="#006666">LoadSound</font>(0, SoundFileName$)
 <font color="#006666">    PlaySound</font>(0,<font color="#924B72">#PB_Sound_Loop</font>)
-<font color="#006666">    MessageRequester</font>("Sound", "Playing the sound (loop)..."+<font color="#006666">Chr</font>(10)+"Click to quit..", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Sound&quot;, &quot;Playing the sound (loop)...&quot;+<font color="#006666">Chr</font>(10)+&quot;Click to quit..&quot;, 0)
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error", "Can't load the sound.", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t load the sound.&quot;, 0)
   <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">End</font></b>   </font></pre>

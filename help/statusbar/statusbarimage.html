@@ -47,13 +47,13 @@ None.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 340, 50, "StatusBarImage", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font> | <font color="#924B72">#PB_Window_SizeGadget</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 340, 50, &quot;StatusBarImage&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font> | <font color="#924B72">#PB_Window_SizeGadget</font>)
     <b><font color="#006666">If</font></b> <font color="#006666">CreateStatusBar</font>(0,<font color="#006666"> WindowID</font>(0))
 <font color="#006666">      AddStatusBarField</font>(120)
 <font color="#006666">      AddStatusBarField</font>(170)
     <b><font color="#006666">EndIf</font></b>
 
-    <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0, "cube16.ico")     <font color="#006666">; change path/filename to your own image (or icon)</font>
+    <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0, &quot;cube16.ico&quot;)     <font color="#006666">; change path/filename to your own image (or icon)</font>
 <font color="#006666">      StatusBarImage</font>(0, 0,<font color="#006666"> ImageID</font>(0))
 <font color="#006666">      StatusBarImage</font>(0, 1,<font color="#006666"> ImageID</font>(0), <font color="#924B72">#PB_StatusBar_Right</font> | <font color="#924B72">#PB_StatusBar_Raised</font>) 
     <b><font color="#006666">EndIf</font></b>  
@@ -64,6 +64,6 @@ None.
 </font></pre>
 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=statusbarid.html>StatusBarID()</a> - <a href=index.html>StatusBar Index</a> - <a href=statusbarprogress.html>StatusBarProgress()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=statusbarid.html>StatusBarID()</a> - <a href=index.html>StatusBar Index</a> - <a href=statusbarprogress.html>StatusBarProgress()</a> -><br><br>
 
 </body></html>

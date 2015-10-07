@@ -41,25 +41,25 @@ current element after the deletion, the result is 0.
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">NewList</font></b> <font color="#006666">people</font>.s()
 
-<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = "Tom"
-<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = "Dick"
-<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = "Harry"
-<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = "Bob"
+<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = &quot;Tom&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = &quot;Dick&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = &quot;Harry&quot;
+<font color="#006666">  AddElement</font>(<font color="#006666">people</font>()) :<font color="#006666"> people</font>() = &quot;Bob&quot;
 
 <font color="#006666">  FirstElement</font>(<font color="#006666">people</font>())
 <font color="#006666">  DeleteElement</font>(<font color="#006666">people</font>(), 1)
-<font color="#006666">  MessageRequester</font>("Information", "First person in list is "+<font color="#006666">people</font>(), <font color="#924B72">#PB_MessageRequester_Ok</font>)
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, &quot;First person in list is &quot;+<font color="#006666">people</font>(), <font color="#924B72">#PB_MessageRequester_Ok</font>)
 
-<font color="#006666">  LastElement</font>(<font color="#006666">people</font>())      <font color="#006666">; Moves to "Bob"</font>
-<font color="#006666">  PreviousElement</font>(<font color="#006666">people</font>())  <font color="#006666">; Moves to "Harry"</font>
+<font color="#006666">  LastElement</font>(<font color="#006666">people</font>())      <font color="#006666">; Moves to &quot;Bob&quot;</font>
+<font color="#006666">  PreviousElement</font>(<font color="#006666">people</font>())  <font color="#006666">; Moves to &quot;Harry&quot;</font>
 <font color="#006666">  DeleteElement</font>(<font color="#006666">people</font>())    <font color="#006666">; And deletes him. there is an element before Harry, so it becomes the current</font>
-<font color="#006666">  MessageRequester</font>("Information", "Current person in list is "+<font color="#006666">people</font>(), <font color="#924B72">#PB_MessageRequester_Ok</font>)
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, &quot;Current person in list is &quot;+<font color="#006666">people</font>(), <font color="#924B72">#PB_MessageRequester_Ok</font>)
 </font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="addelement.html">AddElement()</a>, <a href="insertelement.html">InsertElement()</a>, <a href="clearlist.html">ClearList()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=countlist.html>CountList()</a> - <a href=index.html>List Index</a> - <a href=firstelement.html>FirstElement()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=countlist.html>CountList()</a> - <a href=index.html>List Index</a> - <a href=firstelement.html>FirstElement()</a> -><br><br>
 
 </body></html>

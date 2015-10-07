@@ -12,14 +12,14 @@
 </font>
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitSound</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Sound system not available.") : <b><font color="#006666">End</font></b>
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Sound system not available.&quot;) : <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
-FileName$ =<font color="#006666"> OpenFileRequester</font>("","","Music Modules (*.mod, *.xm, *.it)|*.mod;*.xm", 0)
+FileName$ =<font color="#006666"> OpenFileRequester</font>(&quot;&quot;,&quot;&quot;,&quot;Music Modules (*.mod, *.xm, *.it)|*.mod;*.xm&quot;, 0)
 <b><font color="#006666">If</font></b> FileName$
   <b><font color="#006666">If</font></b> <font color="#006666">LoadMusic</font>(0, FileName$)
 <font color="#006666">    PlayMusic</font>(0)    
-<font color="#006666">    MessageRequester</font>("PureBasic - Module player", "Playing the music module...")
+<font color="#006666">    MessageRequester</font>(&quot;PureBasic - Module player&quot;, &quot;Playing the music module...&quot;)
     
     <font color="#006666">; Now, perform a nice fading...
 </font>    <font color="#006666">;
@@ -29,7 +29,7 @@ FileName$ =<font color="#006666"> OpenFileRequester</font>("","","Music Modules 
     <b><font color="#006666">Next</font></b>
     
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error", "Can't load the music module or bad module format.")
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t load the music module or bad module format.&quot;)
   <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">EndIf</font></b>
 </font></pre>

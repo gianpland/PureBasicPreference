@@ -23,11 +23,11 @@
 <font color="#006666">UsePNGImageEncoder</font>()
 
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 250, 130, "PureBasic - Image Converter", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 250, 130, &quot;PureBasic - Image Converter&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 
 <font color="#006666">  CreateToolBar</font>(0,<font color="#006666"> WindowID</font>(0))
-<font color="#006666">    ToolBarImageButton</font>(0,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Open.png"))
-<font color="#006666">    ToolBarImageButton</font>(1,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/ToolBar/Save.png"))
+<font color="#006666">    ToolBarImageButton</font>(0,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Open.png&quot;))
+<font color="#006666">    ToolBarImageButton</font>(1,<font color="#006666"> LoadImage</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/ToolBar/Save.png&quot;))
 <font color="#006666">    DisableToolBarButton</font>(0, 1, 1)    <font color="#006666">; disable the save button
 </font>    
 <font color="#006666">  ImageGadget</font>(0, 0, 28,<font color="#006666"> WindowWidth</font>(0),<font color="#006666"> WindowHeight</font>(0), 0, <font color="#924B72">#PB_Image_Border</font>)
@@ -41,7 +41,7 @@
       
         <b><font color="#006666">Case</font></b> 0  <font color="#006666">; Open
 </font>        
-          Filename$ =<font color="#006666"> OpenFileRequester</font>("Choose a picture", "", "All Images Formats|*.bmp;*.jpg;*.png;*.tif;*.tga", 0)
+          Filename$ =<font color="#006666"> OpenFileRequester</font>(&quot;Choose a picture&quot;, &quot;&quot;, &quot;All Images Formats|*.bmp;*.jpg;*.png;*.tif;*.tga&quot;, 0)
           <b><font color="#006666">If</font></b> Filename$
           
             <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0, Filename$)
@@ -54,31 +54,31 @@
         
         <b><font color="#006666">Case</font></b> 1  <font color="#006666">; Save
 </font>          
-          Filename$ =<font color="#006666"> SaveFileRequester</font>("Save a picture",<font color="#006666"> Left</font>(Filename$,<font color="#006666"> Len</font>(Filename$)-<font color="#006666">Len</font>(<font color="#006666">GetExtensionPart</font>(Filename$))-1), "BMP Format|*.bmp|JPEG Format|*.jpg|PNG Format|*.png", 0)
+          Filename$ =<font color="#006666"> SaveFileRequester</font>(&quot;Save a picture&quot;,<font color="#006666"> Left</font>(Filename$,<font color="#006666"> Len</font>(Filename$)-<font color="#006666">Len</font>(<font color="#006666">GetExtensionPart</font>(Filename$))-1), &quot;BMP Format|*.bmp|JPEG Format|*.jpg|PNG Format|*.png&quot;, 0)
           <b><font color="#006666">If</font></b> Filename$
           
             <b><font color="#006666">Select</font></b> <font color="#006666">SelectedFilePattern</font>()
             
               <b><font color="#006666">Case</font></b> 0  <font color="#006666">; BMP
 </font>                ImageFormat = <font color="#924B72">#PB_ImagePlugin_BMP</font>
-                Extension$  = "bmp"
+                Extension$  = &quot;bmp&quot;
 
               <b><font color="#006666">Case</font></b> 1  <font color="#006666">; JPEG
 </font>                ImageFormat = <font color="#924B72">#PB_ImagePlugin_JPEG</font>
-                Extension$  = "jpg"
+                Extension$  = &quot;jpg&quot;
                 
               <b><font color="#006666">Case</font></b> 2  <font color="#006666">; PNG
 </font>                ImageFormat = <font color="#924B72">#PB_ImagePlugin_PNG</font>
-                Extension$  = "png"
+                Extension$  = &quot;png&quot;
 
             <b><font color="#006666">EndSelect</font></b>
             
-            <b><font color="#006666">If</font></b> <font color="#006666">LCase</font>(<font color="#006666">GetExtensionPart</font>(Filename$)) &#060;&#062; Extension$
-              Filename$ + "." + Extension$
+            <b><font color="#006666">If</font></b> <font color="#006666">LCase</font>(<font color="#006666">GetExtensionPart</font>(Filename$)) &lt;&gt; Extension$
+              Filename$ + &quot;.&quot; + Extension$
             <b><font color="#006666">EndIf</font></b>
             
             <b><font color="#006666">If</font></b> <font color="#006666">SaveImage</font>(0, Filename$, ImageFormat)
-<font color="#006666">              MessageRequester</font>("Information", "Image saved successfully", 0)
+<font color="#006666">              MessageRequester</font>(&quot;Information&quot;, &quot;Image saved successfully&quot;, 0)
             <b><font color="#006666">EndIf</font></b>
           
           <b><font color="#006666">EndIf</font></b>

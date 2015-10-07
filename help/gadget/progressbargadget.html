@@ -28,7 +28,8 @@ The position and dimensions of the new gadget.
 </td></tr>
 <tr><td><i>Minimum, Maximum</i></td>
 <td> 
-The minimum and maximum values that the progress bar can take. 
+The minimum and maximum values that the progress bar can take. The values must be between 
+0 and 65536 to work on all OS. 
 
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
@@ -48,13 +49,14 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to act on the gadget: 
 <br>
 <br>
-- <a href="setgadgetstate.html">SetGadgetState()</a>: Change progress bar value. 
+- <a href="setgadgetstate.html">SetGadgetState()</a>: Change progress bar value. A value of <font color="#924B72">#PB_ProgressBar_Unknown</font> can be used 
+to indicate that the progress is unknown. 
 <br>
 - <a href="getgadgetstate.html">GetGadgetState()</a>: Get the current progress bar value. 
 <br>
@@ -69,21 +71,21 @@ The following functions can be used to act on the gadget:
 </font></pre>
 
 This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
-the following values as 'ColorType'. (Note: Windows only. On Windows XP with enabled skins, this coloring has no effect.) 
+the following values as &apos;ColorType&apos;. (Note: Windows only. On Windows XP with enabled skins, this coloring has no effect.) 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_FrontColor</font>: Progressbarcolor
   <font color="#924B72">#PB_Gadget_BackColor</font> : Backgroundcolor
 </font></pre>
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 320, 160, "ProgressBarGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    TextGadget       </font>(3,  10, 10, 250,  20, "ProgressBar Standard  (50/100)", <font color="#924B72">#PB_Text_Center</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 320, 160, &quot;ProgressBarGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    TextGadget       </font>(3,  10, 10, 250,  20, &quot;ProgressBar Standard  (50/100)&quot;, <font color="#924B72">#PB_Text_Center</font>)
 <font color="#006666">    ProgressBarGadget</font>(0,  10, 30, 250,  30, 0, 100)
 <font color="#006666">    SetGadgetState   </font>(0, 50)   <font color="#006666">;  set 1st progressbar (ID = 0) to 50 of 100</font>
-<font color="#006666">    TextGadget       </font>(4,  10, 70, 250,  20, "ProgressBar Smooth  (50/200)", <font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    TextGadget       </font>(4,  10, 70, 250,  20, &quot;ProgressBar Smooth  (50/200)&quot;, <font color="#924B72">#PB_Text_Center</font>)
 <font color="#006666">    ProgressBarGadget</font>(1,  10, 90, 250,  30, 0, 200, <font color="#924B72">#PB_ProgressBar_Smooth</font>)
 <font color="#006666">    SetGadgetState   </font>(1, 50)   <font color="#006666">;  set 2nd progressbar (ID = 1) to 50 of 200</font>
-<font color="#006666">    TextGadget       </font>(5, 100,135, 200,  20, "ProgressBar Vertical  (100/300)", <font color="#924B72">#PB_Text_Right</font>)
+<font color="#006666">    TextGadget       </font>(5, 100,135, 200,  20, &quot;ProgressBar Vertical  (100/300)&quot;, <font color="#924B72">#PB_Text_Right</font>)
 <font color="#006666">    ProgressBarGadget</font>(2, 270, 10,  30, 120, 0, 300, <font color="#924B72">#PB_ProgressBar_Vertical</font>)
 <font color="#006666">    SetGadgetState   </font>(2, 100)   <font color="#006666">; set 3rd progressbar (ID = 2) to 100 of 300</font>
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>()=<font color="#924B72">#PB_Event_CloseWindow</font>
@@ -96,6 +98,6 @@ the following values as 'ColorType'. (Note: Windows only. On Windows XP with ena
 
 <a href="getgadgetstate.html">GetGadgetState()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=panelgadget.html>PanelGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=removegadgetcolumn.html>RemoveGadgetColumn()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=panelgadget.html>PanelGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=removegadgetcolumn.html>RemoveGadgetColumn()</a> -><br><br>
 
 </body></html>

@@ -7,7 +7,7 @@
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Bind a gadget event to a callback. It's an additional way to handle events in PureBasic, 
+Bind a gadget event to a callback. It&apos;s an additional way to handle events in PureBasic, 
 which works without problem with the regulars <a href="../window/windowevent.html">WindowEvent()</a> / <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> 
 commands. It also allows to have real-time event notifications as 
 the callback can be invoked as soon as the event occurs (useful for 
@@ -32,7 +32,10 @@ The callback procedure to call when the event occurs. It has to be declared like
   <b><font color="#006666">EndProcedure</font></b>
 </font></pre>
 Regular functions like <a href="../window/eventgadget.html">EventGadget()</a>, <a href="../window/eventwindow.html">EventWindow()</a>, <a href="../window/eventmenu.html">EventMenu()</a>, <a href="../window/eventtype.html">EventType()</a> and <a href="../window/eventdata.html">EventData()</a> are 
-available within the callback to get more information about the event. 
+available within the callback to get more information about the event. <br>
+<br>
+Note: <a href="../window/windowevent.html">WindowEvent()</a> and <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> should never be called from inside the callback 
+or the program can be locked or have wrong behavior. 
 
 </td></tr>
 <tr><td><i>EventType (optional)</i></td>
@@ -49,12 +52,12 @@ None.
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">ButtonHandler</font>()
-    <b><font color="#006666">Debug</font></b> "Button click event on gadget #" +<font color="#006666"> EventGadget</font>()
+    <b><font color="#006666">Debug</font></b> &quot;Button click event on gadget #&quot; +<font color="#006666"> EventGadget</font>()
   <b><font color="#006666">EndProcedure</font></b>
   
-<font color="#006666">  OpenWindow</font>(0, 100, 100, 200, 50, "Click test", <font color="#924B72">#PB_Window_SystemMenu</font>)
+<font color="#006666">  OpenWindow</font>(0, 100, 100, 200, 50, &quot;Click test&quot;, <font color="#924B72">#PB_Window_SystemMenu</font>)
   
-<font color="#006666">  ButtonGadget</font>(0, 10, 10, 180, 30, "Click me")
+<font color="#006666">  ButtonGadget</font>(0, 10, 10, 180, 30, &quot;Click me&quot;)
   
 <font color="#006666">  BindGadgetEvent</font>(0, @ButtonHandler())
   
@@ -66,6 +69,6 @@ None.
 </blockquote><p><b>See Also</b></p><blockquote>
 <a href="bindgadgetevent.html">BindGadgetEvent()</a>, <a href="../menu/bindmenuevent.html">BindMenuEvent()</a>, <a href="../window/unbindevent.html">UnbindEvent()</a>, <a href="../window/windowevent.html">WindowEvent()</a>, <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=addgadgetitem.html>AddGadgetItem()</a> - <a href=index.html>Gadget Index</a> - <a href=buttongadget.html>ButtonGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=addgadgetitem.html>AddGadgetItem()</a> - <a href=index.html>Gadget Index</a> - <a href=buttongadget.html>ButtonGadget()</a> -><br><br>
 
 </body></html>

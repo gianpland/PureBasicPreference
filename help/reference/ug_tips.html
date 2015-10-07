@@ -6,13 +6,13 @@
 
 
 <a href="../reference/newlist.html">lists</a> provide a powerful way to build a structured 
-storage system - however they have a disadvantage. If you aren't sure exactly where 
+storage system - however they have a disadvantage. If you aren&apos;t sure exactly where 
 in the list a particular item is, you must examine each entry in the list to find the 
 right one. 
 <br>
 <br>
 <a href="../reference/newmap.html">Maps</a> also provide a similar function but are indexed by a 
-key value instead - however they too have a disadvantage, they don't maintain the 
+key value instead - however they too have a disadvantage, they don&apos;t maintain the 
 order elements are inserted into the list. 
 <br>
 <br>
@@ -42,7 +42,7 @@ It then demonstrates how to access the list using the index in the map.
   <b><font color="#006666">Define</font></b>.s ISBN
   
   <font color="#006666">; Add an empty element at the top of the list.</font>
-  <font color="#006666">; The first element in a list is numbered zero, however the map will return zero if a requested entry isn't present.</font>
+  <font color="#006666">; The first element in a list is numbered zero, however the map will return zero if a requested entry isn&apos;t present.</font>
   <font color="#006666">; This empty element avoids a potential problem with an incorrect reference to the first catalog item being returned.</font>
 <font color="#006666">  AddElement</font>(<font color="#006666">Catalog</font>())
   
@@ -61,21 +61,21 @@ It then demonstrates how to access the list using the index in the map.
   <b><font color="#006666">Next</font></b> Count
   
   <font color="#006666">; Find an entry.</font>
-  ISBN = "978-0340896983"
+  ISBN = &quot;978-0340896983&quot;
   Index =<font color="#006666"> ISBN13</font>(ISBN)
   
-  <b><font color="#006666">If</font></b> Index &#062; 0
-    <b><font color="#006666">Debug</font></b> "Book with ISBN13 " + ISBN + " is at list index " +<font color="#006666"> StrU</font>(Index) + "."
-    <b><font color="#006666">Debug</font></b> ""
+  <b><font color="#006666">If</font></b> Index &gt; 0
+    <b><font color="#006666">Debug</font></b> &quot;Book with ISBN13 &quot; + ISBN + &quot; is at list index &quot; +<font color="#006666"> StrU</font>(Index) + &quot;.&quot;
+    <b><font color="#006666">Debug</font></b> &quot;&quot;
     
     <font color="#006666">; We can now directly select the right list element without having to perform a search.</font>
 <font color="#006666">    SelectElement</font>(<font color="#006666">Catalog</font>(), Index)
-    <b><font color="#006666">Debug</font></b> "'" +<font color="#006666"> Catalog</font>()\Title + "' by " +<font color="#006666"> Catalog</font>()\Author
-    <b><font color="#006666">Debug</font></b> "ISBN: " +<font color="#006666"> Catalog</font>()\ISBN13
-    <b><font color="#006666">Debug</font></b> "Price: " +<font color="#006666"> StrD</font>(<font color="#006666">Catalog</font>()\Price, 2)
+    <b><font color="#006666">Debug</font></b> &quot;&apos;&quot; +<font color="#006666"> Catalog</font>()\Title + &quot;&apos; by &quot; +<font color="#006666"> Catalog</font>()\Author
+    <b><font color="#006666">Debug</font></b> &quot;ISBN: &quot; +<font color="#006666"> Catalog</font>()\ISBN13
+    <b><font color="#006666">Debug</font></b> &quot;Price: &quot; +<font color="#006666"> StrD</font>(<font color="#006666">Catalog</font>()\Price, 2)
     
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "No book with that ISBN in the catalog."
+    <b><font color="#006666">Debug</font></b> &quot;No book with that ISBN in the catalog.&quot;
     
   <b><font color="#006666">EndIf</font></b>
   
@@ -86,22 +86,22 @@ It then demonstrates how to access the list using the index in the map.
     
     BookData:
     
-    <b><font color="#006666">Data</font></b>.s "Carte Blanche", "Jeffery Deaver", "978-1444716474"
+    <b><font color="#006666">Data</font></b>.s &quot;Carte Blanche&quot;, &quot;Jeffery Deaver&quot;, &quot;978-1444716474&quot;
     <b><font color="#006666">Data</font></b>.d 19.99
     
-    <b><font color="#006666">Data</font></b>.s "One Day", "David Nicholls", "978-0340896983"
+    <b><font color="#006666">Data</font></b>.s &quot;One Day&quot;, &quot;David Nicholls&quot;, &quot;978-0340896983&quot;
     <b><font color="#006666">Data</font></b>.d 7.99
     
-    <b><font color="#006666">Data</font></b>.s "Madeleine", "Kate McCann", "978-0593067918"
+    <b><font color="#006666">Data</font></b>.s &quot;Madeleine&quot;, &quot;Kate McCann&quot;, &quot;978-0593067918&quot;
     <b><font color="#006666">Data</font></b>.d 20.00
     
-    <b><font color="#006666">Data</font></b>.s "The Dukan Diet", "Dr Pierre Dukan", "978-1444710335"
+    <b><font color="#006666">Data</font></b>.s &quot;The Dukan Diet&quot;, &quot;Dr Pierre Dukan&quot;, &quot;978-1444710335&quot;
     <b><font color="#006666">Data</font></b>.d 8.99
     
-    <b><font color="#006666">Data</font></b>.s "A Game of Thrones", "George R. R. Martin", "978-0006479888"
+    <b><font color="#006666">Data</font></b>.s &quot;A Game of Thrones&quot;, &quot;George R. R. Martin&quot;, &quot;978-0006479888&quot;
     <b><font color="#006666">Data</font></b>.d 9.99
     
-    <b><font color="#006666">Data</font></b>.s "The Help", "Kathryn Stockett", "978-0141039282"
+    <b><font color="#006666">Data</font></b>.s &quot;The Help&quot;, &quot;Kathryn Stockett&quot;, &quot;978-0141039282&quot;
     <b><font color="#006666">Data</font></b>.d 8.99
     
   <b><font color="#006666">EndDataSection</font></b>

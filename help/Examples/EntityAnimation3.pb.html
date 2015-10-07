@@ -12,7 +12,7 @@
 </font><font color="#006666">;Cursor = Move Robot
 </font><font color="#006666">;Speed animation = PageUp and PageDown 
 </font>
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <font color="#924B72">#ANIM_FADE_SPEED</font> = 7.5  <font color="#006666">; animation crossfade speed in % of full weight per second
 </font>
@@ -33,19 +33,19 @@
 <b><font color="#006666">Declare</font></b>.f <font color="#006666">WrapPi</font>(Angle.f)
 
 <b><font color="#006666">Macro</font></b> <font color="#006666">Clamp</font>(num, min, max)
-  <b><font color="#006666">If</font></b> num&#060;min
+  <b><font color="#006666">If</font></b> num&lt;min
     num=min
-  <b><font color="#006666">ElseIf</font></b> num&#062;max
+  <b><font color="#006666">ElseIf</font></b> num&gt;max
     num=max
   <b><font color="#006666">EndIf</font></b>  
 <b><font color="#006666">EndMacro</font></b>
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
   
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures"        , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models"          , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Scripts"         , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;        , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;          , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Scripts&quot;         , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
 <font color="#006666">  Parse3DScripts</font>()
   
 <font color="#006666">  InitSprite</font>()
@@ -58,14 +58,14 @@
     
     <font color="#006666">;Ground
 </font>    <font color="#006666">;
-</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Dirt.jpg"))
+</font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, &quot;Dirt.jpg&quot;))
 <font color="#006666">    CreatePlane</font>(0, 1500, 1500, 40, 40, 15, 15)
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666">MeshID</font>(0),<font color="#006666">MaterialID</font>(0))
 <font color="#006666">    EntityRenderMode</font>(0, 0)
     
     <font color="#006666">;Mesh
 </font>    <font color="#006666">;
-</font><font color="#006666">    LoadMesh</font>(1, "robot.mesh")
+</font><font color="#006666">    LoadMesh</font>(1, &quot;robot.mesh&quot;)
     
     <font color="#006666">; Entity
 </font>    <font color="#006666">;
@@ -74,11 +74,11 @@
     
     <font color="#006666">; Animation
 </font>    <font color="#006666">;
-</font>    animNames$ = "Idle,Walk"
+</font>    animNames$ = &quot;Idle,Walk&quot;
     
     <font color="#006666">; populate our animation List
 </font>    <b><font color="#006666">For</font></b> i = 1 <b><font color="#006666">To</font></b> <font color="#924B72">#NUM_ANIMS</font>
-<font color="#006666">      Anim</font>(i) =<font color="#006666"> StringField</font>(animNames$, i, ",")
+<font color="#006666">      Anim</font>(i) =<font color="#006666"> StringField</font>(animNames$, i, &quot;,&quot;)
       <font color="#006666">;EnableEntityAnimation(1, Anim(i), #True, #False)
 </font>      Fadein  = <font color="#924B72">#False</font>
       FadeOut = <font color="#924B72">#False</font>
@@ -86,7 +86,7 @@
     
     <font color="#006666">; SkyBox
 </font>    <font color="#006666">;
-</font><font color="#006666">    SkyBox</font>("Desert07.jpg")
+</font><font color="#006666">    SkyBox</font>(&quot;Desert07.jpg&quot;)
     
     <font color="#006666">; Camera
 </font>    <font color="#006666">;
@@ -131,9 +131,9 @@
           RobotMove = <font color="#924B72">#True</font>
         <b><font color="#006666">EndIf</font></b>
         
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Speed &#060; 1.0
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Speed &lt; 1.0
           Speed + 0.05
-        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &#062; 0.1 
+        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &gt; 0.1 
           Speed - 0.05
         <b><font color="#006666">EndIf</font></b>
         
@@ -142,14 +142,14 @@
 <font color="#006666">      RotateEntity</font>(1, 0,<font color="#006666"> CurveAngle</font>(<font color="#006666">EntityYaw</font>(1), Angle, 4 * TimeSinceLastFrame), 0)
       
       <b><font color="#006666">If</font></b> RobotMove
-        <b><font color="#006666">If</font></b> Anim &#060;&#062; <font color="#924B72">#Walk</font>
+        <b><font color="#006666">If</font></b> Anim &lt;&gt; <font color="#924B72">#Walk</font>
           Anim = <font color="#924B72">#Walk</font>
           Fadein  = <font color="#924B72">#Walk</font>
           FadeOut = <font color="#924B72">#Idle</font> 
 <font color="#006666">          StartEntityAnimation</font>(1,<font color="#006666"> Anim</font>(Anim), <font color="#924B72">#PB_EntityAnimation_Manual</font>)
         <b><font color="#006666">EndIf</font></b>  
       <b><font color="#006666">Else</font></b>
-        <b><font color="#006666">If</font></b> Anim &#060;&#062; <font color="#924B72">#Idle</font>
+        <b><font color="#006666">If</font></b> Anim &lt;&gt; <font color="#924B72">#Idle</font>
           Anim = <font color="#924B72">#Idle</font>
           Fadein  = <font color="#924B72">#Idle</font>
           FadeOut = <font color="#924B72">#Walk</font> 
@@ -169,7 +169,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>
@@ -183,7 +183,7 @@
 </font>    newWeight =<font color="#006666"> GetEntityAnimationWeight</font>(1,<font color="#006666"> Anim</font>(FadeIn)) + deltaTime * <font color="#924B72">#ANIM_FADE_SPEED</font>
 <font color="#006666">    Clamp</font>(newWeight, 0, 1)
 <font color="#006666">    SetEntityAnimationWeight</font>(1,<font color="#006666"> Anim</font>(FadeIn), newWeight)
-    <b><font color="#006666">If</font></b> newWeight &#062;= 1 
+    <b><font color="#006666">If</font></b> newWeight &gt;= 1 
       FadeIn = <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>  
     
@@ -195,7 +195,7 @@
 </font>    newWeight.f =<font color="#006666"> GetEntityAnimationWeight</font>(1,<font color="#006666"> Anim</font>(FadeOut)) - deltaTime * <font color="#924B72">#ANIM_FADE_SPEED</font>
 <font color="#006666">    Clamp</font>(newWeight, 0, 1)
 <font color="#006666">    SetEntityAnimationWeight</font>(1,<font color="#006666"> Anim</font>(FadeOut), newWeight)
-    <b><font color="#006666">If</font></b> newWeight &#060;= 0
+    <b><font color="#006666">If</font></b> newWeight &lt;= 0
 <font color="#006666">      StopEntityAnimation</font>(1,<font color="#006666"> Anim</font>(FadeOut))
       FadeOut = <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
@@ -212,7 +212,7 @@
 
 <b><font color="#006666">Procedure</font></b>.f <font color="#006666">CurveAngle</font>(Actuelle.f, Target.f, P.f)
   Delta.f =<font color="#006666"> WrapPi</font>(Target-Actuelle)
-  <b><font color="#006666">If</font></b> P &#062; 1000 : P = 1000 : <b><font color="#006666">EndIf</font></b>
+  <b><font color="#006666">If</font></b> P &gt; 1000 : P = 1000 : <b><font color="#006666">EndIf</font></b>
   Valeur.f = Actuelle + (Delta * P / 1000)
   <b><font color="#006666">ProcedureReturn</font></b> <font color="#006666">WrapPi</font>(Valeur)
 <b><font color="#006666">EndProcedure</font></b> </font></pre>

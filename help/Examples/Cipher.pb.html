@@ -12,17 +12,19 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_Unicode</font>
-  <b><font color="#006666">CompilerError</font></b> "This program should be compiled in ASCII mode (see Compiler/Compiler Option window)"
+  <b><font color="#006666">CompilerError</font></b> &quot;This program should be compiled in ASCII mode (see Compiler/Compiler Option window)&quot;
 <b><font color="#006666">CompilerEndIf</font></b>
 
+<font color="#006666">UseCRC32Fingerprint</font>()
+<font color="#006666">UseMD5Fingerprint</font>()
 
-<font color="#006666">MessageRequester</font>("CRC32 Test", "Should be 352441C2 : "+<font color="#006666">Hex</font>(<font color="#006666">CRC32Fingerprint</font>(@"abc", 3)), 0)
+<font color="#006666">MessageRequester</font>(&quot;CRC32 Test&quot;, &quot;Should be 352441c2 : &quot;+<font color="#006666">StringFingerprint</font>(&quot;abc&quot;, <font color="#924B72">#PB_Ascii</font>, <font color="#924B72">#PB_Cipher_CRC32</font>), 0)
 
-<font color="#006666">MessageRequester</font>("MD5 Test"  , "Should be ed50deb5bb795508b8a5c8e50dafa954 : "+<font color="#006666">MD5Fingerprint</font>(@"PureBasic",<font color="#006666"> Len</font>("PureBasic")), 0)
+<font color="#006666">MessageRequester</font>(&quot;MD5 Test&quot;  , &quot;Should be ed50deb5bb795508b8a5c8e50dafa954 : &quot;+<font color="#006666">StringFingerprint</font>(&quot;PureBasic&quot;, <font color="#924B72">#PB_Ascii</font>, <font color="#924B72">#PB_Cipher_MD5</font>), 0)
 
-<font color="#006666">MessageRequester</font>("DES Test"  , "Should be FrfWXJ4yTjycc : "+<font color="#006666">DESFingerprint</font>("1Fr", "Fr"), 0)
+<font color="#006666">MessageRequester</font>(&quot;DES Test&quot;  , &quot;Should be FrfWXJ4yTjycc : &quot;+<font color="#006666">DESFingerprint</font>(&quot;1Fr&quot;, &quot;Fr&quot;), 0)
 
 *OutputBuffer =<font color="#006666"> AllocateMemory</font>(100)
-<font color="#006666">Base64Encoder</font>(@"PureBasic",<font color="#006666"> Len</font>("PureBasic"), *OutputBuffer, 100)
-<font color="#006666">MessageRequester</font>("Base64 Test", "Should be UHVyZUJhc2lj : "+<font color="#006666">PeekS</font>(*OutputBuffer), 0)</font></pre>
+<font color="#006666">Base64Encoder</font>(@&quot;PureBasic&quot;,<font color="#006666"> Len</font>(&quot;PureBasic&quot;), *OutputBuffer, 100)
+<font color="#006666">MessageRequester</font>(&quot;Base64 Test&quot;, &quot;Should be UHVyZUJhc2lj : &quot;+<font color="#006666">PeekS</font>(*OutputBuffer), 0)</font></pre>
 </body></html>

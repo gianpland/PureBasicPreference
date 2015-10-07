@@ -12,16 +12,16 @@
 </font>
 <font color="#924B72">#CameraSpeed</font> = 1
 
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY, RollZ
 
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
   
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/skybox.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/skybox.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
   
 <font color="#006666">  InitSprite</font>()
 <font color="#006666">  InitKeyboard</font>()
@@ -29,22 +29,22 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    LoadMesh</font>(0, "robot.mesh")
+<font color="#006666">    LoadMesh</font>(0, &quot;robot.mesh&quot;)
     
-<font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "clouds.jpg"))
+<font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, &quot;clouds.jpg&quot;))
 <font color="#006666">    CopyMaterial</font>(0, 1)
-<font color="#006666">    CreateMaterial</font>(2,<font color="#006666"> LoadTexture</font>(2, "r2skin.jpg"))
+<font color="#006666">    CreateMaterial</font>(2,<font color="#006666"> LoadTexture</font>(2, &quot;r2skin.jpg&quot;))
 <font color="#006666">    MaterialShadingMode</font>(0, <font color="#924B72">#PB_Material_Wireframe</font>)
     
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666"> MeshID</font>(0),<font color="#006666"> MaterialID</font>(0))
 <font color="#006666">    CreateEntity</font>(1,<font color="#006666"> MeshID</font>(0),<font color="#006666"> MaterialID</font>(1), -60, 0, 0)
 <font color="#006666">    CreateEntity</font>(2,<font color="#006666"> MeshID</font>(0),<font color="#006666"> MaterialID</font>(2),  60, 0, 0)
     
-<font color="#006666">    StartEntityAnimation</font>(0, "Walk")
+<font color="#006666">    StartEntityAnimation</font>(0, &quot;Walk&quot;)
     
 <font color="#006666">    EntityRenderMode</font>(0, <font color="#924B72">#PB_Entity_DisplaySkeleton</font>)
     
-<font color="#006666">    SkyBox</font>("stevecube.jpg")
+<font color="#006666">    SkyBox</font>(&quot;stevecube.jpg&quot;)
     
 <font color="#006666">    CreateCamera</font>(0, 0, 0, 100, 100)
 <font color="#006666">    MoveCamera</font>(0, 0, 40, 150, <font color="#924B72">#PB_Absolute</font>)
@@ -90,7 +90,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b></font></pre>

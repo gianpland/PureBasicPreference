@@ -24,7 +24,7 @@ The number which identifies this new cipher.
 <tr><td><i>*Key</i></td>
 <td> 
 A buffer containing the key for decoding. 
-Its size depends of the 'Bits' parameter: l6 bytes for 128-bit encryption, 24 bytes for 196-bit 
+Its size depends of the &apos;Bits&apos; parameter: l6 bytes for 128-bit encryption, 24 bytes for 196-bit 
 and 32 bytes for 256-bit. 
 
 </td></tr>
@@ -37,7 +37,7 @@ The size of the key used by the ciphering. Valid values are 128, 192 and 256.
 <td> 
 The InitializationVector is a random data block, used to initialize the ciphering 
 to avoid breach in decoding (only needed when using the <font color="#924B72">#PB_Cipher_CBC</font> mode). 
-Its size depends of the 'Bits' parameter: l6 bytes for 128-bit encryption, 24 bytes for 196-bit 
+Its size depends of the &apos;Bits&apos; parameter: l6 bytes for 128-bit encryption, 24 bytes for 196-bit 
 and 32 bytes for 256-bit. 
 
 </td></tr>
@@ -49,9 +49,9 @@ This parameter can be a combination of one the following values:
 
 with
 
-  <font color="#924B72">#PB_Cipher_CBC</font>: Default mode of encoding (Cipher Block Chaining). Needs an '*InitializationVector'.
+  <font color="#924B72">#PB_Cipher_CBC</font>: Default mode of encoding (Cipher Block Chaining). Needs an &apos;*InitializationVector&apos;.
                   Recommended as more secure than ECB mode.
-  <font color="#924B72">#PB_Cipher_ECB</font>: Alternative mode (Electronic CodeBook). It doesn't uses random value nor chaining 
+  <font color="#924B72">#PB_Cipher_ECB</font>: Alternative mode (Electronic CodeBook). It doesn&apos;t uses random value nor chaining 
                   (each block is ciphered independently) making it less strong the CBC.
 </font></pre>
 
@@ -73,7 +73,7 @@ For more information about AES, see <a href="aesencoder.html">AESEncoder()</a>.
 
 <a href="addcipherbuffer.html">AddCipherBuffer()</a>, <a href="finishcipher.html">FinishCipher()</a>, <a href="aesencoder.html">AESEncoder()</a>, <a href="aesdecoder.html">AESDecoder()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=sha1fingerprint.html>SHA1Fingerprint()</a> - <a href=index.html>Cipher Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=opencryptrandom.html>OpenCryptRandom()</a> - <a href=index.html>Cipher Index</a> - <a href=startfingerprint.html>StartFingerprint()</a> -><br><br>
 
 
 </body></html>

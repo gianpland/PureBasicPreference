@@ -29,9 +29,9 @@ The text displayed in the requester window.
 <tr><td><i>Flags (optional)</i></td>
 <td> 
 It can be one of the following value: 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_MessageRequester_Ok</font>          : to have the 'ok' only button (Standard)
-  <font color="#924B72">#PB_MessageRequester_YesNo</font>       : to have 'yes' or 'no' buttons
-  <font color="#924B72">#PB_MessageRequester_YesNoCancel</font> : to have 'yes', 'no' and 'cancel' buttons
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_MessageRequester_Ok</font>          : to have the &apos;ok&apos; only button (Standard)
+  <font color="#924B72">#PB_MessageRequester_YesNo</font>       : to have &apos;yes&apos; or &apos;no&apos; buttons
+  <font color="#924B72">#PB_MessageRequester_YesNoCancel</font> : to have &apos;yes&apos;, &apos;no&apos; and &apos;cancel&apos; buttons
 </font></pre>
 
 </td></tr>
@@ -39,44 +39,44 @@ It can be one of the following value:
 </blockquote><p><b>Return value</b></p><blockquote>
 
 It can be one of the following constants: 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_MessageRequester_Yes</font>    : the 'yes' button was pressed
-  <font color="#924B72">#PB_MessageRequester_No</font>     : the 'no' button was pressed
-  <font color="#924B72">#PB_MessageRequester_Cancel</font> : the 'Cancel' button was pressed
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_MessageRequester_Yes</font>    : the &apos;yes&apos; button was pressed
+  <font color="#924B72">#PB_MessageRequester_No</font>     : the &apos;no&apos; button was pressed
+  <font color="#924B72">#PB_MessageRequester_Cancel</font> : the &apos;Cancel&apos; button was pressed
 </font></pre>
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Simple MessageRequester  (normally used for information purposes only)</font>
-  <font color="#006666">; (result will be always the same, so we don't check it here)</font>
-<font color="#006666">  MessageRequester</font>("Information", "Just a short information text.", <font color="#924B72">#PB_MessageRequester_Ok</font>)
+  <font color="#006666">; (result will be always the same, so we don&apos;t check it here)</font>
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, &quot;Just a short information text.&quot;, <font color="#924B72">#PB_MessageRequester_Ok</font>)
 
   <font color="#006666">; MessageRequester with Yes / No buttons  (normally used for questions)</font>
   <font color="#006666">; (result will be shown in the following information requester)</font>
-  Result =<font color="#006666"> MessageRequester</font>("Title", "Please make your input:", <font color="#924B72">#PB_MessageRequester_YesNo</font>)
-  a$ = "Result of the previously requester was: "
+  Result =<font color="#006666"> MessageRequester</font>(&quot;Title&quot;, &quot;Please make your input:&quot;, <font color="#924B72">#PB_MessageRequester_YesNo</font>)
+  a$ = &quot;Result of the previously requester was: &quot;
   <b><font color="#006666">If</font></b> Result = <font color="#924B72">#PB_MessageRequester_Yes</font>    <font color="#006666">; pressed Yes button (Result = 6)</font>
-    a$ + "Yes"
+    a$ + &quot;Yes&quot;
   <b><font color="#006666">Else</font></b>                                    <font color="#006666">; pressed No button (Result = 7)</font>
-    a$ + "No"
+    a$ + &quot;No&quot;
   <b><font color="#006666">EndIf</font></b>
-<font color="#006666">  MessageRequester</font>("Information", a$, <font color="#924B72">#PB_MessageRequester_Ok</font>)
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, a$, <font color="#924B72">#PB_MessageRequester_Ok</font>)
 
   <font color="#006666">; MessageRequester with Yes / No / Cancel buttons  (normally used for questions)</font>
   <font color="#006666">; (result will be shown in the following information requester)</font>
-  Result =<font color="#006666"> MessageRequester</font>("Title", "Please make your input:", <font color="#924B72">#PB_MessageRequester_YesNoCancel</font>) 
-  a$ = "Result of the previously requester was: "
+  Result =<font color="#006666"> MessageRequester</font>(&quot;Title&quot;, &quot;Please make your input:&quot;, <font color="#924B72">#PB_MessageRequester_YesNoCancel</font>) 
+  a$ = &quot;Result of the previously requester was: &quot;
   <b><font color="#006666">If</font></b> Result = <font color="#924B72">#PB_MessageRequester_Yes</font>       <font color="#006666">; pressed Yes button</font>
-    a$ + "Yes"
+    a$ + &quot;Yes&quot;
   <b><font color="#006666">ElseIf</font></b> Result = <font color="#924B72">#PB_MessageRequester_No</font>    <font color="#006666">; pressed No button</font>
-    a$ + "No"
+    a$ + &quot;No&quot;
   <b><font color="#006666">Else</font></b>                                       <font color="#006666">; pressed Cancel button or Esc</font>
-    a$ + "Cancel"
+    a$ + &quot;Cancel&quot;
   <b><font color="#006666">EndIf</font></b>
-<font color="#006666">  MessageRequester</font>("Information", a$, <font color="#924B72">#PB_MessageRequester_Ok</font>)
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, a$, <font color="#924B72">#PB_MessageRequester_Ok</font>)
 </font></pre>
 <br>
 <p><img src="../HelpPictures/messagerequester.png"></p>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=inputrequester.html>InputRequester()</a> - <a href=index.html>Requester Index</a> - <a href=nextselectedfilename.html>NextSelectedFilename()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=inputrequester.html>InputRequester()</a> - <a href=index.html>Requester Index</a> - <a href=nextselectedfilename.html>NextSelectedFilename()</a> -><br><br>
 
 </body></html>

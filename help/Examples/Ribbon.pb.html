@@ -10,15 +10,15 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 
-</font><b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+</font><b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Define</font></b> yaw.f, X.f, Y.f, Z.f, FOV.f, Timer.i
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
   
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Scripts", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Scripts&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
 <font color="#006666">  Parse3DScripts</font>()
   
 <font color="#006666">  InitSprite</font>()
@@ -28,7 +28,7 @@
     
     <font color="#006666">; Ground
 </font>    <font color="#006666">;
-</font><font color="#006666">    GetScriptMaterial</font>(0, "Scene/GroundBlend")
+</font><font color="#006666">    GetScriptMaterial</font>(0, &quot;Scene/GroundBlend&quot;)
 <font color="#006666">    CreatePlane</font>(0, 10000, 10000, 100, 100, 50, 50)
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666"> MeshID</font>(0),<font color="#006666"> MaterialID</font>(0))
     
@@ -38,7 +38,7 @@
     
     <font color="#006666">;Ribbon
 </font>    <font color="#006666">;
-</font><font color="#006666">    GetScriptMaterial</font>(1, "Scene/RibbonTrail")
+</font><font color="#006666">    GetScriptMaterial</font>(1, &quot;Scene/RibbonTrail&quot;)
 <font color="#006666">    CreateRibbonEffect</font>(0,<font color="#006666"> MaterialID</font>(1), 1, 80, 1750)
 <font color="#006666">    RibbonEffectColor</font>(0, 0,<font color="#006666"> RGBA</font>(255, 255, 255, 255),<font color="#006666"> RGBA</font>(0, 0, 255, 255))
 <font color="#006666">    RibbonEffectWidth</font>(0, 0, 50, 3)
@@ -46,7 +46,7 @@
     
     <font color="#006666">; Billboard
 </font>    <font color="#006666">;
-</font><font color="#006666">    GetScriptMaterial</font>(2, "Scene/burst")
+</font><font color="#006666">    GetScriptMaterial</font>(2, &quot;Scene/burst&quot;)
 <font color="#006666">    CreateBillboardGroup</font>(0,<font color="#006666"> MaterialID</font>(2), 512, 512)
 <font color="#006666">    AddBillboard</font>(0, 0, 0, 0)
         
@@ -61,12 +61,12 @@
     
     <font color="#006666">; Skybox
 </font>    <font color="#006666">;
-</font><font color="#006666">    SkyBox</font>("desert07.jpg")
+</font><font color="#006666">    SkyBox</font>(&quot;desert07.jpg&quot;)
         
     <b><font color="#006666">Repeat</font></b>
 <font color="#006666">      Screen3DEvents</font>()
       
-      <b><font color="#006666">If</font></b> Timer &#060;<font color="#006666"> ElapsedMilliseconds</font>()
+      <b><font color="#006666">If</font></b> Timer &lt;<font color="#006666"> ElapsedMilliseconds</font>()
         Timer =<font color="#006666"> ElapsedMilliseconds</font>() + 5
         yaw + 0.1
       <b><font color="#006666">EndIf</font></b> 
@@ -93,7 +93,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;, 0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b></font></pre>

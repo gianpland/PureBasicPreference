@@ -23,7 +23,7 @@ if the condition is already true, zero iterations may be performed. Take the ; a
 from the second line to see this happen. 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b>.i B
   <font color="#006666">; B = 100</font>
-  <b><font color="#006666">While</font></b> B &#060; 100
+  <b><font color="#006666">While</font></b> B &lt; 100
     B +<font color="#006666"> Random</font>(20)
     <b><font color="#006666">Debug</font></b> B
   <b><font color="#006666">Wend</font></b>
@@ -37,11 +37,11 @@ the second line to demonstrate.
   <b><font color="#006666">Repeat</font></b>
     C +<font color="#006666"> Random</font>(20)
     <b><font color="#006666">Debug</font></b> C
-  <b><font color="#006666">Until</font></b> C &#062; 99
+  <b><font color="#006666">Until</font></b> C &gt; 99
 </font></pre>
 
 
-This loop is infinite. It won't stop until you stop it (use the red X button on the 
+This loop is infinite. It won&apos;t stop until you stop it (use the red X button on the 
 IDE toolbar). 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b>.i D
   <b><font color="#006666">Repeat</font></b>
@@ -55,16 +55,16 @@ There is a special loop for working with <a href="../reference/newlist.html">lis
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">NewList</font></b> <font color="#006666">Fruit</font>.s()
   
 <font color="#006666">  AddElement</font>(<font color="#006666">Fruit</font>())
-<font color="#006666">  Fruit</font>() = "Banana"
+<font color="#006666">  Fruit</font>() = &quot;Banana&quot;
   
 <font color="#006666">  AddElement</font>(<font color="#006666">Fruit</font>())
-<font color="#006666">  Fruit</font>() = "Apple"
+<font color="#006666">  Fruit</font>() = &quot;Apple&quot;
   
 <font color="#006666">  AddElement</font>(<font color="#006666">Fruit</font>())
-<font color="#006666">  Fruit</font>() = "Pear"
+<font color="#006666">  Fruit</font>() = &quot;Pear&quot;
   
 <font color="#006666">  AddElement</font>(<font color="#006666">Fruit</font>())
-<font color="#006666">  Fruit</font>() = "Orange"
+<font color="#006666">  Fruit</font>() = &quot;Orange&quot;
   
   <b><font color="#006666">ForEach</font></b> <font color="#006666">Fruit</font>()
     <b><font color="#006666">Debug</font></b> <font color="#006666">Fruit</font>()

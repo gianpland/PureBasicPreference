@@ -10,7 +10,7 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 300, 200, "2D Drawing Test")
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 300, 200, &quot;2D Drawing Test&quot;)
 
   <font color="#006666">; Create an offscreen image, with a green circle in it.
 </font>  <font color="#006666">; It will be displayed later
@@ -29,7 +29,7 @@
 <font color="#006666">      DrawingMode</font>(<font color="#924B72">#PB_2DDrawing_Transparent</font>)
 <font color="#006666">      BackColor</font>(<font color="#006666">RGB</font>(0,155,155)) <font color="#006666">; Change the text back and front colour
 </font><font color="#006666">      FrontColor</font>(<font color="#006666">RGB</font>(255,255,255)) 
-<font color="#006666">      DrawText</font>(10,50,"Hello, this is a test")
+<font color="#006666">      DrawText</font>(10,50,&quot;Hello, this is a test&quot;)
 
 <font color="#006666">      StopDrawing</font>()
     <b><font color="#006666">EndIf</font></b>
@@ -40,9 +40,9 @@
 </font><font color="#006666">  ImageGadget</font>(0, 0, 0, 0, 0,<font color="#006666"> ImageID</font>(0))
   
   <font color="#006666">;
-</font>  <font color="#006666">; This is the 'event loop'. All the user actions are processed here.
-</font>  <font color="#006666">; It's very easy to understand: when an action occurs, the Event
-</font>  <font color="#006666">; isn't 0 and we just have to see what have happened...
+</font>  <font color="#006666">; This is the &apos;event loop&apos;. All the user actions are processed here.
+</font>  <font color="#006666">; It&apos;s very easy to understand: when an action occurs, the Event
+</font>  <font color="#006666">; isn&apos;t 0 and we just have to see what have happened...
 </font>  <font color="#006666">;
 </font>  
   <b><font color="#006666">Repeat</font></b>

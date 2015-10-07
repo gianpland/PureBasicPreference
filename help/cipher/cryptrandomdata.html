@@ -45,17 +45,17 @@ To generate random data from the faster but not cryptographic safe pseudorandom 
   <b><font color="#006666">If</font></b> <font color="#006666">OpenCryptRandom</font>() <b><font color="#006666">And</font></b> *Key
 <font color="#006666">    CryptRandomData</font>(*Key, 16)
     
-    Text$ = "Generated Key:"
+    Text$ = &quot;Generated Key:&quot;
     <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 15
-      Text$ + " " +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(<font color="#006666">PeekB</font>(*Key+i), <font color="#924B72">#PB_Byte</font>), 2, "0")
+      Text$ + &quot; &quot; +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(<font color="#006666">PeekB</font>(*Key+i), <font color="#924B72">#PB_Byte</font>), 2, &quot;0&quot;)
     <b><font color="#006666">Next</font></b> i     
     
 <font color="#006666">    CloseCryptRandom</font>()
   <b><font color="#006666">Else</font></b>
-    Text$ = "Key generation is not available"
+    Text$ = &quot;Key generation is not available&quot;
   <b><font color="#006666">EndIf</font></b>
   
-<font color="#006666">  MessageRequester</font>("Example", Text$)
+<font color="#006666">  MessageRequester</font>(&quot;Example&quot;, Text$)
 </font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
@@ -63,5 +63,5 @@ To generate random data from the faster but not cryptographic safe pseudorandom 
 <a href="opencryptrandom.html">OpenCryptRandom()</a>, <a href="cryptrandom.html">CryptRandom()</a>, <a href="closecryptrandom.html">CloseCryptRandom()</a> 
 <a href="../math/randomdata.html">RandomData()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=cryptrandom.html>CryptRandom()</a> - <a href=index.html>Cipher Index</a> - <a href=desfingerprint.html>DESFingerprint()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=cryptrandom.html>CryptRandom()</a> - <a href=index.html>Cipher Index</a> - <a href=desfingerprint.html>DESFingerprint()</a> -><br><br>
 </body></html>

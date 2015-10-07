@@ -45,14 +45,14 @@ with different names are ignored by the extraction.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  Xml$ = "&#060;map&#062;&#060;element key=" +<font color="#006666"> Chr</font>(34) + "theKey" +<font color="#006666"> Chr</font>(34) + "&#062;the value&#060;/element&#062;&#060;/map&#062;"
+<pre><font face="Courier New, Courier, mono"size="2">  Xml$ = &quot;&lt;map&gt;&lt;element key=&quot; +<font color="#006666"> Chr</font>(34) + &quot;theKey&quot; +<font color="#006666"> Chr</font>(34) + &quot;&gt;the value&lt;/element&gt;&lt;/map&gt;&quot;
   
   <b><font color="#006666">If</font></b> <font color="#006666">ParseXML</font>(0, Xml$) <b><font color="#006666">And</font></b> <font color="#006666">XMLStatus</font>(0) = <font color="#924B72">#PB_XML_Success</font>
     <b><font color="#006666">NewMap</font></b> <font color="#006666">Test</font>.s()
 <font color="#006666">    ExtractXMLMap</font>(<font color="#006666">MainXMLNode</font>(0),<font color="#006666"> Test</font>())
     
     <b><font color="#006666">ForEach</font></b> <font color="#006666">Test</font>()
-      <b><font color="#006666">Debug</font></b> <font color="#006666">MapKey</font>(<font color="#006666">Test</font>()) + " -&#062; " +<font color="#006666"> Test</font>()
+      <b><font color="#006666">Debug</font></b> <font color="#006666">MapKey</font>(<font color="#006666">Test</font>()) + &quot; -&gt; &quot; +<font color="#006666"> Test</font>()
     <b><font color="#006666">Next</font></b>
   <b><font color="#006666">Else</font></b>
     <b><font color="#006666">Debug</font></b> <font color="#006666">XMLError</font>(0)
@@ -63,6 +63,6 @@ with different names are ignored by the extraction.
 
 <a href="insertxmlmap.html">InsertXMLMap()</a>, <a href="extractxmlarray.html">ExtractXMLArray()</a>, <a href="extractxmllist.html">ExtractXMLList()</a>, <a href="extractxmlstructure.html">ExtractXMLStructure()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=extractxmllist.html>ExtractXMLList()</a> - <a href=index.html>XML Index</a> - <a href=extractxmlstructure.html>ExtractXMLStructure()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=extractxmllist.html>ExtractXMLList()</a> - <a href=index.html>XML Index</a> - <a href=extractxmlstructure.html>ExtractXMLStructure()</a> -><br><br>
 
 </body></html>

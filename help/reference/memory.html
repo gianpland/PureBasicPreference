@@ -5,7 +5,7 @@
 <p><b>Pointers</b></p><blockquote>
 
 
-Using pointers is possible by placing one '*' (asterix) in front of the name of a <a href="../reference/variables.html">variable</a>, <a href="../reference/dim.html">array</a>, 
+Using pointers is possible by placing one &apos;*&apos; (asterix) in front of the name of a <a href="../reference/variables.html">variable</a>, <a href="../reference/dim.html">array</a>, 
 <a href="../reference/newlist.html">list</a> or <a href="../reference/newmap.html">map</a>. 
 A pointer is a placeholder for a memory address which is usually associated to a <a href="../reference/structures.html">structure</a>. 
 
@@ -21,9 +21,9 @@ There are only three valid methods to set the value of a pointer: <br>
 - Copy the value from another pointer <br>
 - Find the address of a variable, procedure or label (as shown below) <br>
 <br>
-Note: unlike C/C++, in PureBasic the '*' is <b>always</b> part of the item name. 
-Therefore '*ptr' and 'ptr' are two different variables. 
-'ptr' is a variable (regular one) storing a value, '*ptr' is another variable of pointer type storing an address. 
+Note: unlike C/C++, in PureBasic the &apos;*&apos; is <b>always</b> part of the item name. 
+Therefore &apos;*ptr&apos; and &apos;ptr&apos; are two different variables. 
+&apos;ptr&apos; is a variable (regular one) storing a value, &apos;*ptr&apos; is another variable of pointer type storing an address. 
 
 <br>
 <br>
@@ -34,14 +34,14 @@ Because pointers receive only addresses as values, the memory size of a pointer 
 space allowing to store an absolute address of the processor: 
 <br>
 - On 32-bit processors the address space is limited to 32-bit, so a 
-pointer takes 32-bit (4 bytes, like a 'long') in memory 
+pointer takes 32-bit (4 bytes, like a &apos;long&apos;) in memory 
 <br>
-- On 64-bit processors it takes 64-bit (8 bytes, like a 'quad') in memory, because 
+- On 64-bit processors it takes 64-bit (8 bytes, like a &apos;quad&apos;) in memory, because 
 the absolute address is on a 64-bit range. 
 <br>
 <br>
-As a consequence the type of a pointer depends of the CPU address mode, (‘long' on 32-bit CPU 
-and ‘quad' on 64-bit one for example), so a pointer is a variable of type pointer. 
+As a consequence the type of a pointer depends of the CPU address mode, (‘long&apos; on 32-bit CPU 
+and ‘quad&apos; on 64-bit one for example), so a pointer is a variable of type pointer. 
 <br>
 It results from this that assigning a native type to a pointer (*Pointer.l, *Pointer.b ...) makes no sense. 
 <br>
@@ -59,14 +59,14 @@ with this, the system grants them only an addressing with 32-bit pointers.
 <br>
 <br>
 By assigning a structure to a pointer (for example *MyPointer.Point) it allows to access any memory 
-address in a structured way (with the operator ‘\'). 
+address in a structured way (with the operator ‘\&apos;). 
 <br>
 </blockquote><p><b>Example:</b> Pointers and variables</p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b> Point1.Point, Point2.Point
-  *CurrentPoint.Point = @Point1  <font color="#006666">; Pointer declaration, associated to a structure and initialized with Point1's address</font>
+  *CurrentPoint.Point = @Point1  <font color="#006666">; Pointer declaration, associated to a structure and initialized with Point1&apos;s address</font>
   *CurrentPoint \x = 10          <font color="#006666">; Assign value 10 to Point1\x</font>
-  *CurrentPoint.Point = @Point2  <font color="#006666">; move to Point2's address</font>
+  *CurrentPoint.Point = @Point2  <font color="#006666">; move to Point2&apos;s address</font>
   *CurrentPoint \x = 20          <font color="#006666">; Assign value 20 to Point2\x</font>
   <b><font color="#006666">Debug</font></b> Point1\x
   <b><font color="#006666">Debug</font></b> Point2\x
@@ -106,7 +106,7 @@ string instead of the string itself: a such structure field is a pointer towards
 <br>
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  Text$ = "Hello"
+<pre><font face="Courier New, Courier, mono"size="2">  Text$ = &quot;Hello&quot;
   *Text = @Text$            <font color="#006666">; *Text store the address of the string in memory</font>
   *Pointer.String = @*Text  <font color="#006666">; *Pointer points on *Text</font>
   <b><font color="#006666">Debug</font></b> *Pointer\s          <font color="#006666">; Display the string living at the address stored in *Pointer (i.e. @Text$)</font>
@@ -202,11 +202,11 @@ question mark (?) in front of the label name.
 </blockquote><p><b>Example</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> "Size of data file = " +<font color="#006666"> Str</font>(?endofmydata - ?mydata)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> &quot;Size of data file = &quot; +<font color="#006666"> Str</font>(?endofmydata - ?mydata)
   
   <b><font color="#006666">DataSection</font></b>
     mydata:
-      <b><font color="#006666">IncludeBinary</font></b> "somefile.bin"
+      <b><font color="#006666">IncludeBinary</font></b> &quot;somefile.bin&quot;
     endofmydata:
   <b><font color="#006666">EndDataSection</font></b>
 </font></pre>

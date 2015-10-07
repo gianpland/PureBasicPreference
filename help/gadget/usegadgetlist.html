@@ -19,7 +19,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <tr><td width="10%"><i>WindowID</i></td>
 <td width="90%"> 
 The new window to add gadgets to. It can be obtained with the <a href="../window/windowid.html">WindowID()</a> function. 
-If 'WindowID' is 0, the current GadgetList window will be returned and nothing will be changed. 
+If &apos;WindowID&apos; is 0, the current GadgetList window will be returned and nothing will be changed. 
 
 </td></tr>
 </table>
@@ -32,19 +32,19 @@ to go back to the previous GadgetList later.
 
 This example shows how to use this command to create a new window with gadgets without interrupting the 
 gadget creation on the current window: 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 500, 500, "Main Window", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    ButtonGadget</font>(0, 10, 10, 150, 25, "Button 1")
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 500, 500, &quot;Main Window&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    ButtonGadget</font>(0, 10, 10, 150, 25, &quot;Button 1&quot;)
     
     <font color="#006666">; Create Window with #PB_Window_NoGadgets to prevent automatic GadgetList creation</font>
-    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(1, 0, 0, 300, 200, "Child Window", <font color="#924B72">#PB_Window_TitleBar</font> | <font color="#924B72">#PB_Window_WindowCentered</font> | <font color="#924B72">#PB_Window_NoGadgets</font>,<font color="#006666"> WindowID</font>(0))     
+    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(1, 0, 0, 300, 200, &quot;Child Window&quot;, <font color="#924B72">#PB_Window_TitleBar</font> | <font color="#924B72">#PB_Window_WindowCentered</font> | <font color="#924B72">#PB_Window_NoGadgets</font>,<font color="#006666"> WindowID</font>(0))     
       OldGadgetList =<font color="#006666"> UseGadgetList</font>(<font color="#006666">WindowID</font>(1)) <font color="#006666">; Create GadgetList and store old GadgetList</font>
       
-<font color="#006666">      ButtonGadget</font>(10, 10, 10, 150, 25, "Child Window Button")
+<font color="#006666">      ButtonGadget</font>(10, 10, 10, 150, 25, &quot;Child Window Button&quot;)
       
 <font color="#006666">      UseGadgetList</font>(OldGadgetList)               <font color="#006666">; Return to previous GadgetList</font>
     <b><font color="#006666">EndIf</font></b>
     
-<font color="#006666">    ButtonGadget</font>(1, 10, 45, 150, 25, "Button 2") <font color="#006666">; This will be on the main window again</font>
+<font color="#006666">    ButtonGadget</font>(1, 10, 45, 150, 25, &quot;Button 2&quot;) <font color="#006666">; This will be on the main window again</font>
     
     <b><font color="#006666">Repeat</font></b>
     <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
@@ -55,6 +55,6 @@ gadget creation on the current window:
 
 <a href="../window/openwindow.html">OpenWindow()</a>, <a href="../window/windowid.html">WindowID()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=unbindgadgetevent.html>UnbindGadgetEvent()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadget.html>WebGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=unbindgadgetevent.html>UnbindGadgetEvent()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadget.html>WebGadget()</a> -><br><br>
 
 </body></html>

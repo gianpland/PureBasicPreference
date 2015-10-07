@@ -4,7 +4,7 @@
 
 
 The PureBasic IDE allows you to configure external programs to be called directly 
-from the IDE, through the Menu, Shortcuts, the Toolbar, or on special "triggers". 
+from the IDE, through the Menu, Shortcuts, the Toolbar, or on special &quot;triggers&quot;. 
 The use of this is to make any other program you use while programming easily 
 accessible. 
 <br>
@@ -20,14 +20,14 @@ or all files.
 
 <p><img src="images/ide_exttools_menu.png"></p>
 
-With the "Config tools" command in the Tools menu, you can configure such external tools. 
+With the &quot;Config tools&quot; command in the Tools menu, you can configure such external tools. 
 The list you will see displays all the configured tools in the order they appear in the 
 Tools menu (if not hidden). You can add and remove tools here, or change the order 
-by clicking "Move Up"/"Move Down " after selecting an item. 
+by clicking &quot;Move Up&quot;/&quot;Move Down &quot; after selecting an item. 
 
 <p><img src="images/ide_exttools_toolswindow.png"></p>
 
-Any tool can be quickly enabled or disabled from the "Config tools" window with the checkbox before 
+Any tool can be quickly enabled or disabled from the &quot;Config tools&quot; window with the checkbox before 
 each tool entry. A checked checkbox means the tool is enabled, an unchecked one means it is currently disabled. 
 
 
@@ -65,8 +65,8 @@ filename is inserted here. You may modify or delete the file at will.
 replaced with the temporary file that is sent to the compiler for compilation. By modifying this 
 file, you can actually change what will be compiled. 
 <br>
-%EXECUTABLE : This will be replaced by the name of the executable that was created in with the last "Create Executable". 
-For the "After Compile/Run" trigger, this will be replaces with the name of the temporary executable file created by the 
+%EXECUTABLE : This will be replaced by the name of the executable that was created in with the last &quot;Create Executable&quot;. 
+For the &quot;After Compile/Run&quot; trigger, this will be replaces with the name of the temporary executable file created by the 
 compiler. 
 <br>
 %CURSOR : this will be replaced by the current cursor position in the form of LINExCOLUMN. 
@@ -83,9 +83,9 @@ This can be used together with %TEMPFILE, if you want your tool to do some actio
 <br>
 <br>
 
-Note: for any filename or path tokens, it is generally a good idea to place them in "" 
-(i.e. "%TEMPFILE") to ensure also paths with spaces in them are passed correctly to the tool. 
-These tokens and a description can also be viewed by clicking the "Info" button next to the Arguments field. 
+Note: for any filename or path tokens, it is generally a good idea to place them in &quot;&quot; 
+(i.e. &quot;%TEMPFILE&quot;) to ensure also paths with spaces in them are passed correctly to the tool. 
+These tokens and a description can also be viewed by clicking the &quot;Info&quot; button next to the Arguments field. 
 
 <br>
 <br>
@@ -122,7 +122,7 @@ it in the Toolbar configuration in the Preferences (see
 <a href="../reference/ide_preferences.html">Configuring the IDE</a> for more). 
 <br>
 <br>
-With this trigger set, the "Shortcut" option below becomes valid and lets you specify 
+With this trigger set, the &quot;Shortcut&quot; option below becomes valid and lets you specify 
 a shortcut that will execute this tool. 
 
 <br>
@@ -148,7 +148,7 @@ Note that all open sources have already been closed at this time.
 The tool will be executed right before the compiler is called to compile a 
 source code. Using the %COMPILEFILE token, you can get the code to be compiled 
 and modify it. This makes it possible to write a small pre-processor for the 
-source code. Note that you should enable the "Wait until tool quits" option if you 
+source code. Note that you should enable the &quot;Wait until tool quits&quot; option if you 
 want your modifications to be given to the compiler. 
 
 <br>
@@ -166,7 +166,7 @@ but not delete it, as that results in an error-message when the IDE tries to exe
 
 <b>Run compiled Program</b> 
 <br>
-The tool will be executed when the user selects the "Run" command from the compiler menu. 
+The tool will be executed when the user selects the &quot;Run&quot; command from the compiler menu. 
 The tool is executed before the executable is started. The %EXECUTABLE token is valid here too. 
 
 <br>
@@ -174,7 +174,7 @@ The tool is executed before the executable is started. The %EXECUTABLE token is 
 
 <b>Before create Executable</b> 
 <br>
-The same as for the "Before Compile/Run" trigger applies here too, only that the triggering 
+The same as for the &quot;Before Compile/Run&quot; trigger applies here too, only that the triggering 
 event is when the user creates the final executable. 
 
 <br>
@@ -231,7 +231,7 @@ Note: Only one tool can have this trigger. Any other tools with this trigger wil
 <br>
 This tool basically replaces the hex viewer, which is usually used to display unknown file 
 types. It will be executed, when the file extension is unknown to the IDE, and if no other 
-external tool is configured to handle the file (if a tool is set with the "File Viewer – All Files" 
+external tool is configured to handle the file (if a tool is set with the &quot;File Viewer – All Files&quot; 
 trigger, then this tool will never be called). 
 <br>
 <br>
@@ -243,13 +243,13 @@ Note: Only one tool can have this trigger set.
 <b>File Viewer – Special file</b> 
 <br>
 This configures the tool to handle specific file extensions. It has a higher priority than 
-the "File Viewer – All files" or "File Viewer – Unknown file" triggers and also higher than 
+the &quot;File Viewer – All files&quot; or &quot;File Viewer – Unknown file&quot; triggers and also higher than 
 the internal file viewer itself. Specify the extensions that the tool should handle in the 
 edit box on the right. Multiple extensions can be given. 
 <br>
 <br>
 A common use for this trigger is for example to configure a program like Acrobat Reader 
-to handle the "pdf" extension, which enables you to easily open pdf files from the Explorer, 
+to handle the &quot;pdf&quot; extension, which enables you to easily open pdf files from the Explorer, 
 the File Viewer, or by double-clicking on an <a href="../reference/includes.html">Includebinary</a> statement in the source. 
 
 
@@ -276,7 +276,7 @@ expect user input, as there will be no way to close it in that case.
 
 <b>Hide editor</b> 
 <br>
-This is only possible with the "wait until tool quits" option set. 
+This is only possible with the &quot;wait until tool quits&quot; option set. 
 Hides the editor while the tool is running. 
 
 <br>
@@ -284,7 +284,7 @@ Hides the editor while the tool is running.
 
 <b>Reload Source after the tool has quit</b> 
 <br>
-This is only possible with the "wait until tool quits" option set, and when 
+This is only possible with the &quot;wait until tool quits&quot; option set, and when 
 either the %FILE or %TEMPFILE tokens are used in the Arguments list. 
 <br>
 <br>
@@ -305,10 +305,10 @@ only be executed by a special trigger, but not from the menu.
 
 <b>Enable Tool on a per-source basis</b> 
 <br>
-Tools with this option set will be listed in the "Execute tools" list in the 
+Tools with this option set will be listed in the &quot;Execute tools&quot; list in the 
 <a href="../reference/ide_compiler.html">compiler options</a>, and only executed for sources where 
 it is enabled there. 
-Note that when disabling the tool with the checkbox here in the "Config tools" window, it will 
+Note that when disabling the tool with the checkbox here in the &quot;Config tools&quot; window, it will 
 be globally disabled and not run for any source code, even if enabled there. 
 <br>
 <br>
@@ -327,7 +327,7 @@ This option is only available for the following triggers:
 
 <b>Supported File extensions</b> 
 <br>
-Only for the "File Viewer – Special file" trigger. 
+Only for the &quot;File Viewer – Special file&quot; trigger. 
 Enter the list of handled extensions here. 
 
 
@@ -345,19 +345,19 @@ This is a list of provided variables. Note that those that provide information a
 not present for tools executed on IDE startup or end. 
 <pre><font face="Courier New, Courier, mono"size="2">  PB_TOOL_IDE         - Full path and filename of the IDE
   PB_TOOL_Compiler    - Full path and filename of the Compiler
-  PB_TOOL_Preferences - Full path and filename of the IDE's Preference file
+  PB_TOOL_Preferences - Full path and filename of the IDE&apos;s Preference file
   PB_TOOL_Project     - Full path and filename of the currently open project (if any)
   PB_TOOL_Language    - Language currently used in the IDE
   PB_TOOL_FileList    - A list of all open files in the IDE, separated by Chr(10)  
 
   PB_TOOL_Debugger    - These variables provide the settings from the <a href="../reference/ide_compiler.html">Compiler Options</a>
-  PB_TOOL_InlineASM     window for the current source. They are set to "1" if the option
-  PB_TOOL_Unicode       is enabled, and "0" if not.
+  PB_TOOL_InlineASM     window for the current source. They are set to &quot;1&quot; if the option
+  PB_TOOL_Unicode       is enabled, and &quot;0&quot; if not.
   PB_TOOL_Thread     
   PB_TOOL_XPSkin     
   PB_TOOL_OnError    
 
-  PB_TOOL_SubSystem   - content of the "Subsystem" field in the compiler options
+  PB_TOOL_SubSystem   - content of the &quot;Subsystem&quot; field in the compiler options
   PB_TOOL_Executable  - same as the %COMPILEFILE token for the command-line
   PB_TOOL_Cursor      - same as the %CURSOR token for the command-line
   PB_TOOL_Selection   - same as the %SELECTION token for the command-line

@@ -24,7 +24,7 @@ The filename of the preference file.
 <td> 
 It can be a combination of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Preference_NoSpace</font>: no spaces will be put around the equal sign joining key and values.
-                          It can be useful when dealing with external preferences files which doesn't
+                          It can be useful when dealing with external preferences files which doesn&apos;t
                           accept spaces around equal sign.
   <font color="#924B72">#PB_Preference_GroupSeparator</font>: add an empty line between the groups to ease readability of the file.
 </font></pre>
@@ -37,7 +37,7 @@ Nonzero if the file has been successfully opened, zero otherwise.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-If the file wasn't found or can't be opened, it is still possible to use the read functions and it 
+If the file wasn&apos;t found or can&apos;t be opened, it is still possible to use the read functions and it 
 will return the specified default value. It is very useful to initialize in one step the program variables. 
 The functions like <a href="readpreferencestring.html">ReadPreferenceString()</a> can be used to read the preference values stored in the file. 
 <br>
@@ -52,10 +52,36 @@ It is possible to change existing values with <a href="writepreferencestring.htm
 Once all write operations are done, <a href="closepreferences.html">ClosePreferences()</a> needs to be called to really write the preferences back to disk 
 (if it has been modified inbetween). 
 
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Open a preference file</font>
+<font color="#006666">  OpenPreferences</font>(<font color="#924B72">#PB_Compiler_Home</font> +&quot;Examples\Sources\Data\test.pref&quot;)
+  
+  <font color="#006666">; Examine Groups</font>
+<font color="#006666">  ExaminePreferenceGroups</font>()
+  <font color="#006666">; For each group</font>
+  <b><font color="#006666">While</font></b> <font color="#006666">NextPreferenceGroup</font>()
+    texte$ = texte$ +<font color="#006666"> PreferenceGroupName</font>() + <font color="#924B72">#LF$</font> <font color="#006666">; its name</font>
+  <font color="#006666">; Examine keys for the current group  </font>
+<font color="#006666">    ExaminePreferenceKeys</font>()
+  <font color="#006666">; For each key  </font>
+  <b><font color="#006666">While</font></b>  <font color="#006666">NextPreferenceKey</font>()                          
+    texte$ = texte$ +<font color="#006666"> PreferenceKeyName</font>() + &quot; = &quot; +<font color="#006666"> PreferenceKeyValue</font>() + <font color="#924B72">#LF$</font> <font color="#006666">; its name and its data</font>
+  <b><font color="#006666">Wend</font></b>
+  texte$ = texte$ +  <font color="#924B72">#LF$</font>
+  <b><font color="#006666">Wend</font></b>
+
+ <font color="#006666">; Display all groups and all keys with datas</font>
+<font color="#006666">  MessageRequester</font>(&quot;test.pref&quot;,texte$)
+
+  <font color="#006666">; Close the preference file</font>
+<font color="#006666">  ClosePreferences</font>()    
+</font></pre>
+
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="closepreferences.html">ClosePreferences()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=nextpreferencekey.html>NextPreferenceKey()</a> - <a href=index.html>Preference Index</a> - <a href=preferencecomment.html>PreferenceComment()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=nextpreferencekey.html>NextPreferenceKey()</a> - <a href=index.html>Preference Index</a> - <a href=preferencecomment.html>PreferenceComment()</a> -><br><br>
 
 </body></html>

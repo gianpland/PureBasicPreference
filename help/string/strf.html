@@ -23,7 +23,7 @@ The value to convert.
 <tr><td><i>NbDecimal (optional)</i></td>
 <td> 
 The maximum number of decimal places for the converted number. If omitted, it will be set to 10 decimal places, with removing the trailing zeros. 
-The number will be rounded, if 'NbDecimal' is smaller than existing decimal places of 'Value.f'. 
+The number will be rounded, if &apos;NbDecimal&apos; is smaller than existing decimal places of &apos;Value.f&apos;. 
 
 </td></tr>
 </table>
@@ -39,16 +39,16 @@ It is possible to omit this command when concatenating string and float, it will
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  value.f = 10.54
-  <b><font color="#006666">Debug</font></b> "Result: " +<font color="#006666"> StrF</font>(value)    <font color="#006666">; we do not use the 2nd parameter, so we get a float number rounded to 10 decimal places</font>
-  <b><font color="#006666">Debug</font></b> "Result: " + value          <font color="#006666">; same as previous line</font>
-  <b><font color="#006666">Debug</font></b> "Result: " +<font color="#006666"> StrF</font>(value,2)  <font color="#006666">; we want a result with two decimal places, no rounding needed as we have only two</font>
-  <b><font color="#006666">Debug</font></b> "Result: " +<font color="#006666"> StrF</font>(value,0)  <font color="#006666">; we want a result with no decimal places, so the value is rounded</font>
+  <b><font color="#006666">Debug</font></b> &quot;Result: &quot; +<font color="#006666"> StrF</font>(value)    <font color="#006666">; we do not use the 2nd parameter, so we get a float number rounded to 10 decimal places</font>
+  <b><font color="#006666">Debug</font></b> &quot;Result: &quot; + value          <font color="#006666">; same as previous line</font>
+  <b><font color="#006666">Debug</font></b> &quot;Result: &quot; +<font color="#006666"> StrF</font>(value,2)  <font color="#006666">; we want a result with two decimal places, no rounding needed as we have only two</font>
+  <b><font color="#006666">Debug</font></b> &quot;Result: &quot; +<font color="#006666"> StrF</font>(value,0)  <font color="#006666">; we want a result with no decimal places, so the value is rounded</font>
 </font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="strd.html">StrD()</a>, <a href="str.html">Str()</a>, <a href="stru.html">StrU()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=strd.html>StrD()</a> - <a href=index.html>String Index</a> - <a href=stru.html>StrU()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=strd.html>StrD()</a> - <a href=index.html>String Index</a> - <a href=stru.html>StrU()</a> -><br><br>
 
 </body></html>

@@ -19,11 +19,11 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <td width="90%"> 
 The text to display in the title item. 
 
-On Windows you can use the special '&' character to underline a specific 
+On Windows you can use the special &apos;&amp;&apos; character to underline a specific 
 letter: 
 <br>
 <br>
-"&File" will actually display: <u>F</u>ile 
+&quot;&amp;File&quot; will actually display: <u>F</u>ile 
 
 </td></tr>
 </table>
@@ -33,16 +33,16 @@ None.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 200, 100, "MenuTitle Example")
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 200, 100, &quot;MenuTitle Example&quot;)
     <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))
-<font color="#006666">      MenuTitle</font>("Project")      <font color="#006666">; normal menu title with following item</font>
-<font color="#006666">        MenuItem</font>(1, "Open")  
-<font color="#006666">        MenuItem</font>(2, "Close")
-<font color="#006666">      MenuTitle</font>("&Edit")        <font color="#006666">; menu title with underlined character, the underline</font>
+<font color="#006666">      MenuTitle</font>(&quot;Project&quot;)      <font color="#006666">; normal menu title with following item</font>
+<font color="#006666">        MenuItem</font>(1, &quot;Open&quot;)  
+<font color="#006666">        MenuItem</font>(2, &quot;Close&quot;)
+<font color="#006666">      MenuTitle</font>(&quot;&amp;Edit&quot;)        <font color="#006666">; menu title with underlined character, the underline</font>
                                 <font color="#006666">; will only be displayed, when called with F10 key</font>
-<font color="#006666">        MenuItem</font>(3, "Undo")
-<font color="#006666">        MenuItem</font>(4, "Redo")
-<font color="#006666">      MenuTitle</font>("About")        <font color="#006666">; only menu title</font>
+<font color="#006666">        MenuItem</font>(3, &quot;Undo&quot;)
+<font color="#006666">        MenuItem</font>(4, &quot;Redo&quot;)
+<font color="#006666">      MenuTitle</font>(&quot;About&quot;)        <font color="#006666">; only menu title</font>
     <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
@@ -53,6 +53,6 @@ None.
 
 <a href="menuitem.html">MenuItem()</a>, <a href="menubar.html">MenuBar()</a>, <a href="opensubmenu.html">OpenSubMenu()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=menuitem.html>MenuItem()</a> - <a href=index.html>Menu Index</a> - <a href=opensubmenu.html>OpenSubMenu()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=menuitem.html>MenuItem()</a> - <a href=index.html>Menu Index</a> - <a href=opensubmenu.html>OpenSubMenu()</a> -><br><br>
 
 </body></html>

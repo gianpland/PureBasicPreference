@@ -37,21 +37,21 @@ None.
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">ErrorHandler</font>()
-<font color="#006666">    MessageRequester</font>("OnError test", "The following error happened: " +<font color="#006666"> ErrorMessage</font>())
+<font color="#006666">    MessageRequester</font>(&quot;OnError test&quot;, &quot;The following error happened: &quot; +<font color="#006666"> ErrorMessage</font>())
   <b><font color="#006666">EndProcedure</font></b>
 
-<font color="#006666">  MessageRequester</font>("OnError test", "Test start")
+<font color="#006666">  MessageRequester</font>(&quot;OnError test&quot;, &quot;Test start&quot;)
 
 <font color="#006666">  OnErrorCall</font>(@ErrorHandler())
 <font color="#006666">  RaiseError</font>(<font color="#924B72">#PB_OnError_InvalidMemory</font>)
   
-<font color="#006666">  MessageRequester</font>("OnError test", "This should never be displayed")
+<font color="#006666">  MessageRequester</font>(&quot;OnError test&quot;, &quot;This should never be displayed&quot;)
 </font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="errorcode.html">ErrorCode()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=onerrorgoto.html>OnErrorGoto()</a> - <a href=index.html>OnError Index</a>
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=onerrorgoto.html>OnErrorGoto()</a> - <a href=index.html>OnError Index</a><br><br>
 
 </body></html>

@@ -37,17 +37,17 @@ None.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 222, 130, "SetGadgetFont", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-    <b><font color="#006666">If</font></b> <font color="#006666">LoadFont</font>(0, "Arial", 16)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 222, 130, &quot;SetGadgetFont&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+    <b><font color="#006666">If</font></b> <font color="#006666">LoadFont</font>(0, &quot;Arial&quot;, 16)
 <font color="#006666">      SetGadgetFont</font>(<font color="#924B72">#PB_Default</font>,<font color="#006666"> FontID</font>(0))   <font color="#006666">; Set the loaded Arial 16 font as new standard</font>
     <b><font color="#006666">EndIf</font></b>
-<font color="#006666">    ButtonGadget</font>(0, 10, 10, 200, 30, "Button - Arial 16")
+<font color="#006666">    ButtonGadget</font>(0, 10, 10, 200, 30, &quot;Button - Arial 16&quot;)
 <font color="#006666">    SetGadgetFont</font>(<font color="#924B72">#PB_Default</font>, <font color="#924B72">#PB_Default</font>)  <font color="#006666">; Set the font settings back to original standard font</font>
-<font color="#006666">    ButtonGadget</font>(1, 10, 50, 200, 30, "Button - standard")
-    <b><font color="#006666">If</font></b> <font color="#006666">LoadFont</font>(1,"Courier",10, <font color="#924B72">#PB_Font_Bold</font> | <font color="#924B72">#PB_Font_Underline</font>)
+<font color="#006666">    ButtonGadget</font>(1, 10, 50, 200, 30, &quot;Button - standard&quot;)
+    <b><font color="#006666">If</font></b> <font color="#006666">LoadFont</font>(1,&quot;Courier&quot;,10, <font color="#924B72">#PB_Font_Bold</font> | <font color="#924B72">#PB_Font_Underline</font>)
 <font color="#006666">      SetGadgetFont</font>(<font color="#924B72">#PB_Default</font>,<font color="#006666"> FontID</font>(1))   <font color="#006666">; Set the loaded Courier 10 font as new standard</font>
     <b><font color="#006666">EndIf</font></b>
-<font color="#006666">    TextGadget</font>(2, 10, 90, 200, 40, "Bold + underlined Courier 10 Text", <font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    TextGadget</font>(2, 10, 90, 200, 40, &quot;Bold + underlined Courier 10 Text&quot;, <font color="#924B72">#PB_Text_Center</font>)
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
@@ -58,6 +58,6 @@ None.
 
 <a href="getgadgetfont.html">GetGadgetFont()</a>, <a href="../font/fontid.html">FontID()</a>, <a href="../font/loadfont.html">LoadFont()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetdata.html>SetGadgetData()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetitemattribute.html>SetGadgetItemAttribute()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetdata.html>SetGadgetData()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetitemattribute.html>SetGadgetItemAttribute()</a> -><br><br>
 
 </body></html>

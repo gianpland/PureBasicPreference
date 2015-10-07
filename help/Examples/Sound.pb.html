@@ -11,17 +11,17 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">InitSound</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Sound system is not available",  0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Sound system is not available&quot;,  0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
-SoundFileName$ =<font color="#006666"> OpenFileRequester</font>("Choose a .wav file", "", "Wave files|*.wav",0)
+SoundFileName$ =<font color="#006666"> OpenFileRequester</font>(&quot;Choose a .wav file&quot;, &quot;&quot;, &quot;Wave files|*.wav&quot;,0)
 <b><font color="#006666">If</font></b> SoundFileName$
   <b><font color="#006666">If</font></b> <font color="#006666">LoadSound</font>(0, SoundFileName$)
 <font color="#006666">    PlaySound</font>(0, <font color="#924B72">#PB_Sound_Loop</font>)
-<font color="#006666">    MessageRequester</font>("Sound", "Playing the sound (loop)..."+<font color="#924B72">#LF$</font>+"Click to quit..", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Sound&quot;, &quot;Playing the sound (loop)...&quot;+<font color="#924B72">#LF$</font>+&quot;Click to quit..&quot;, 0)
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error", "Can't load the sound.", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t load the sound.&quot;, 0)
   <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">End</font></b>   </font></pre>

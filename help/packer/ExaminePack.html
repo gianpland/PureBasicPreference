@@ -32,12 +32,12 @@ Nonzero if the pack can be examined, zero otherwise.
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  UseZipPacker</font>()
 
   <font color="#006666">; Open the packed file</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenPack</font>(0, "mycompressedfiles.zip") 
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenPack</font>(0, &quot;mycompressedfiles.zip&quot;) 
     
     <font color="#006666">; List all the entries</font>
     <b><font color="#006666">If</font></b> <font color="#006666">ExaminePack</font>(0)
       <b><font color="#006666">While</font></b> <font color="#006666">NextPackEntry</font>(0)
-        <b><font color="#006666">Debug</font></b> "Name: " +<font color="#006666"> PackEntryName</font>(0) + ", Size: " +<font color="#006666"> PackEntrySize</font>(0)
+        <b><font color="#006666">Debug</font></b> &quot;Name: &quot; +<font color="#006666"> PackEntryName</font>(0) + &quot;, Size: &quot; +<font color="#006666"> PackEntrySize</font>(0)
       <b><font color="#006666">Wend</font></b>
     <b><font color="#006666">EndIf</font></b>
     
@@ -49,6 +49,6 @@ Nonzero if the pack can be examined, zero otherwise.
 
 <a href="openpack.html">OpenPack()</a>, <a href="nextpackentry.html">NextPackEntry()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=createpack.html>CreatePack()</a> - <a href=index.html>Packer Index</a> - <a href=nextpackentry.html>NextPackEntry()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=createpack.html>CreatePack()</a> - <a href=index.html>Packer Index</a> - <a href=nextpackentry.html>NextPackEntry()</a> -><br><br>
 
 </body></html>

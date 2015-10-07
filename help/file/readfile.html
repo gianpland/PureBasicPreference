@@ -29,7 +29,7 @@ is interpreted relative to the <a href="../filesystem/getcurrentdirectory.html">
 </td></tr>
 <tr><td><i>Flags (optional)</i></td>
 <td> 
-It can be a combination (using the '| operand) of the following values: 
+It can be a combination (using the &apos;| operand) of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_File_SharedRead</font> : the opened file can be read by another process (Windows only).
   <font color="#924B72">#PB_File_NoBuffering</font>: the internal PureBasic file buffering system will be disabled for this file. 
                         <a href="filebufferssize.html">FileBuffersSize()</a> can not be used on this file.
@@ -50,13 +50,13 @@ To create a new and empty file, use the <a href="createfile.html">CreateFile()</
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">
-  <b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0, "Text.txt")   <font color="#006666">; if the file could be read, we continue...</font>
-    <b><font color="#006666">While</font></b> <font color="#006666">Eof</font>(0) = 0           <font color="#006666">; loop as long the 'end of file' isn't reached</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0, &quot;Text.txt&quot;)   <font color="#006666">; if the file could be read, we continue...</font>
+    <b><font color="#006666">While</font></b> <font color="#006666">Eof</font>(0) = 0           <font color="#006666">; loop as long the &apos;end of file&apos; isn&apos;t reached</font>
       <b><font color="#006666">Debug</font></b> <font color="#006666">ReadString</font>(0)      <font color="#006666">; display line by line in the debug window</font>
     <b><font color="#006666">Wend</font></b>
 <font color="#006666">    CloseFile</font>(0)               <font color="#006666">; close the previously opened file</font>
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Information","Couldn't open the file!")
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;,&quot;Couldn&apos;t open the file!&quot;)
   <b><font color="#006666">EndIf</font></b>
 
 </font></pre>
@@ -65,6 +65,6 @@ To create a new and empty file, use the <a href="createfile.html">CreateFile()</
 
 <a href="openfile.html">OpenFile()</a>, <a href="createfile.html">CreateFile()</a>, <a href="closefile.html">CloseFile()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=readdouble.html>ReadDouble()</a> - <a href=index.html>File Index</a> - <a href=readfloat.html>ReadFloat()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=readdouble.html>ReadDouble()</a> - <a href=index.html>File Index</a> - <a href=readfloat.html>ReadFloat()</a> -><br><br>
 
 </body></html>

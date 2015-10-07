@@ -6,7 +6,7 @@ Result = <font color="#006666"><b>DragText</b></font>(Text$ [, Actions])</blockq
 
 <b>Description</b><br><blockquote>
 
-Starts a Drag & Drop operation with text data. 
+Starts a Drag &amp; Drop operation with text data. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -21,9 +21,9 @@ The text to drag.
 </td></tr>
 <tr><td><i>Actions (optional)</i></td>
 <td> 
-A combination of the Drag & Drop actions that should be allowed for the data. 
+A combination of the Drag &amp; Drop actions that should be allowed for the data. 
 If the parameter is not specified, <font color="#924B72">#PB_Drag_Copy</font> will be the only allowed action. 
-Possible actions are: (they can be combined with '|') 
+Possible actions are: (they can be combined with &apos;|&apos;) 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drag_Copy</font>: The text can be copied
   <font color="#924B72">#PB_Drag_Move</font>: The text can be moved
   <font color="#924B72">#PB_Drag_Link</font>: The text can be linked
@@ -37,8 +37,8 @@ that can really be taken also depend on the actions allowed by the drop target.
 </table>
 </blockquote><p><b>Return value</b></p><blockquote>
 
-Returns one of the above Drag & Drop action values to indicate what action the user took, or 
-<font color="#924B72">#PB_Drag_None</font> if the user aborted the Drag & Drop operation. 
+Returns one of the above Drag &amp; Drop action values to indicate what action the user took, or 
+<font color="#924B72">#PB_Drag_None</font> if the user aborted the Drag &amp; Drop operation. 
 <br>
 <br>
 Note that if <font color="#924B72">#PB_Drag_Move</font> is returned, it is your responsibility to remove the 
@@ -46,9 +46,9 @@ dragged text data from your application.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-Drag & Drop can basically be started any time, but the 
+Drag &amp; Drop can basically be started any time, but the 
 left mouse button should be currently pressed as otherwise the operation will end immediately without success. 
-The usual time to start a Drag & Drop operation is when a <a href="../gadget/index.html">Gadget</a> reported an event with 
+The usual time to start a Drag &amp; Drop operation is when a <a href="../gadget/index.html">Gadget</a> reported an event with 
 <a href="../window/eventtype.html">EventType()</a> of <font color="#924B72">#PB_EventType_DragStart</font>. 
 
 </blockquote><p><b>See Also</b></p><blockquote>
@@ -56,6 +56,6 @@ The usual time to start a Drag & Drop operation is when a <a href="../gadget/ind
 <a href="dragfiles.html">DragFiles()</a>, <a href="dragimage.html">DragImage()</a>, <a href="dragprivate.html">DragPrivate()</a>, <a href="dragosformats.html">DragOSFormats()</a>, 
 <a href="setdragcallback.html">SetDragCallback()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=dragprivate.html>DragPrivate()</a> - <a href=index.html>DragDrop Index</a> - <a href=enablegadgetdrop.html>EnableGadgetDrop()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=dragprivate.html>DragPrivate()</a> - <a href=index.html>DragDrop Index</a> - <a href=enablegadgetdrop.html>EnableGadgetDrop()</a> -><br><br>
 
 </body></html>

@@ -10,10 +10,10 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 290, 200, "PureBasic - FileSystem Example")
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 290, 200, &quot;PureBasic - FileSystem Example&quot;)
 
 <font color="#006666">  StringGadget  </font>(0,  10, 10, 202, 24,<font color="#006666"> GetHomeDirectory</font>())
-<font color="#006666">  ButtonGadget  </font>(1, 220, 10, 60 , 24, "List")
+<font color="#006666">  ButtonGadget  </font>(1, 220, 10, 60 , 24, &quot;List&quot;)
 <font color="#006666">  ListViewGadget</font>(2,  10, 40, 270, 150)
 
   <b><font color="#006666">Repeat</font></b>
@@ -24,13 +24,13 @@
 </font>
 <font color="#006666">        ClearGadgetItems</font>(2)  <font color="#006666">; Clear all the items found in the ListView
 </font>
-        <b><font color="#006666">If</font></b> <font color="#006666">ExamineDirectory</font>(0,<font color="#006666"> GetGadgetText</font>(0), "*.*")
+        <b><font color="#006666">If</font></b> <font color="#006666">ExamineDirectory</font>(0,<font color="#006666"> GetGadgetText</font>(0), &quot;*.*&quot;)
 
           <b><font color="#006666">While</font></b> <font color="#006666">NextDirectoryEntry</font>(0)
 
             FileName$ =<font color="#006666"> DirectoryEntryName</font>(0)
             <b><font color="#006666">If</font></b> <font color="#006666">DirectoryEntryType</font>(0) = <font color="#924B72">#PB_DirectoryEntry_Directory</font>
-              FileName$ = "[DIR] "+FileName$
+              FileName$ = &quot;[DIR] &quot;+FileName$
             <b><font color="#006666">EndIf</font></b>
             
 <font color="#006666">            AddGadgetItem</font>(2, -1, FileName$)
@@ -38,7 +38,7 @@
           <b><font color="#006666">Wend</font></b>
           
         <b><font color="#006666">Else</font></b>
-<font color="#006666">          MessageRequester</font>("Error","Can't examine this directory: "+<font color="#006666">GetGadgetText</font>(0),0)
+<font color="#006666">          MessageRequester</font>(&quot;Error&quot;,&quot;Can&apos;t examine this directory: &quot;+<font color="#006666">GetGadgetText</font>(0),0)
         <b><font color="#006666">EndIf</font></b>
 
       <b><font color="#006666">EndIf</font></b>
@@ -48,5 +48,5 @@
 
 <b><font color="#006666">EndIf</font></b>
 
-<b><font color="#006666">End</font></b> :</font></pre>
+<b><font color="#006666">End</font></b> ®</font></pre>
 </body></html>

@@ -32,21 +32,21 @@ The selected path, or an empty string if the requester has been canceled by the 
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-The path is returned with the terminating '\' on Windows, or the terminating '/' on Linux and OS X. 
+The path is returned with the terminating &apos;\&apos; on Windows, or the terminating &apos;/&apos; on Linux and OS X. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  InitialPath$ = "C:\"   <font color="#006666">; set initial path to display (could also be blank)</font>
-  Path$ =<font color="#006666"> PathRequester</font>("Please choose your path", InitialPath$)
+<pre><font face="Courier New, Courier, mono"size="2">  InitialPath$ = &quot;C:\&quot;   <font color="#006666">; set initial path to display (could also be blank)</font>
+  Path$ =<font color="#006666"> PathRequester</font>(&quot;Please choose your path&quot;, InitialPath$)
   <b><font color="#006666">If</font></b> Path$
-<font color="#006666">    MessageRequester</font>("Information", "You have selected following path:"+<font color="#006666">Chr</font>(10)+Path$, 0)
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;You have selected following path:&quot;+<font color="#006666">Chr</font>(10)+Path$, 0)
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Information", "The requester was canceled.", 0) 
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;The requester was canceled.&quot;, 0) 
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 <br>
 <p><img src="../HelpPictures/pathrequester.png"></p>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=openfilerequester.html>OpenFileRequester()</a> - <a href=index.html>Requester Index</a> - <a href=savefilerequester.html>SaveFileRequester()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=openfilerequester.html>OpenFileRequester()</a> - <a href=index.html>Requester Index</a> - <a href=savefilerequester.html>SaveFileRequester()</a> -><br><br>
 
 </body></html>

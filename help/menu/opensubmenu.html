@@ -22,8 +22,8 @@ The text for the submenu.
 <br>
 <b>Windows:</b> 
 <br>
-In the Text$ argument, you can use the special '&' character to underline a specific letter: 
-"&File" will actually display: <u>F</u>ile 
+In the Text$ argument, you can use the special &apos;&amp;&apos; character to underline a specific letter: 
+&quot;&amp;File&quot; will actually display: <u>F</u>ile 
 
 </td></tr>
 <tr><td><i>ImageID (optional)</i></td>
@@ -40,15 +40,15 @@ None.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 220, 100, "SubMenu Example")
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 200, 200, 220, 100, &quot;SubMenu Example&quot;)
     <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))
-<font color="#006666">      MenuTitle</font>("Project") 
-<font color="#006666">        MenuItem</font>(1, "Open")  
-<font color="#006666">        MenuItem</font>(2, "Close")
+<font color="#006666">      MenuTitle</font>(&quot;Project&quot;) 
+<font color="#006666">        MenuItem</font>(1, &quot;Open&quot;)  
+<font color="#006666">        MenuItem</font>(2, &quot;Close&quot;)
 <font color="#006666">        MenuBar</font>()
-<font color="#006666">        OpenSubMenu</font>("Recent files")       <font color="#006666">; begin submenu</font>
-<font color="#006666">          MenuItem</font>( 3, "C:\Autoexec.bat")
-<font color="#006666">          MenuItem</font>( 4, "D:\Test.txt")
+<font color="#006666">        OpenSubMenu</font>(&quot;Recent files&quot;)       <font color="#006666">; begin submenu</font>
+<font color="#006666">          MenuItem</font>( 3, &quot;C:\Autoexec.bat&quot;)
+<font color="#006666">          MenuItem</font>( 4, &quot;D:\Test.txt&quot;)
 <font color="#006666">        CloseSubMenu</font>()                    <font color="#006666">; end submenu</font>
     <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>()=<font color="#924B72">#PB_Event_CloseWindow</font>
@@ -61,6 +61,6 @@ None.
 
 <a href="closesubmenu.html">CloseSubMenu()</a>, <a href="menutitle.html">MenuTitle()</a>, <a href="menuitem.html">MenuItem()</a>, <a href="menubar.html">MenuBar()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=menutitle.html>MenuTitle()</a> - <a href=index.html>Menu Index</a> - <a href=setmenuitemstate.html>SetMenuItemState()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=menutitle.html>MenuTitle()</a> - <a href=index.html>Menu Index</a> - <a href=setmenuitemstate.html>SetMenuItemState()</a> -><br><br>
 
 </body></html>

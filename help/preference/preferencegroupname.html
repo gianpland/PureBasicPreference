@@ -17,10 +17,25 @@ None.
 
 The name of the current group being enumerated with <a href="examinepreferencegroups.html">ExaminePreferenceGroups()</a>. 
 
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Open a preference file</font>
+<font color="#006666">  OpenPreferences</font>(<font color="#924B72">#PB_Compiler_Home</font> +&quot;Examples\Sources\Data\test.pref&quot;)
+  
+  <font color="#006666">; Examine groups</font>
+<font color="#006666">  ExaminePreferenceGroups</font>()
+  <b><font color="#006666">While</font></b> <font color="#006666">NextPreferenceGroup</font>() <font color="#006666">; While group exists</font>
+<font color="#006666">    MessageRequester</font>(&quot;Groups&quot;,<font color="#006666"> PreferenceGroupName</font>())  <font color="#006666">; Display this group</font>
+  <b><font color="#006666">Wend</font></b>
+  
+  <font color="#006666">; Close the preference file</font>
+<font color="#006666">  ClosePreferences</font>() 
+</font></pre>
+
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="examinepreferencegroups.html">ExaminePreferenceGroups()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=preferencegroup.html>PreferenceGroup()</a> - <a href=index.html>Preference Index</a> - <a href=preferencekeyname.html>PreferenceKeyName()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=preferencegroup.html>PreferenceGroup()</a> - <a href=index.html>Preference Index</a> - <a href=preferencekeyname.html>PreferenceKeyName()</a> -><br><br>
 
 </body></html>

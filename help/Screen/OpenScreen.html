@@ -7,7 +7,7 @@ Result = <font color="#006666"><b>OpenScreen</b></font>(Width, Height, Depth, Ti
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Opens a new screen according to the specified 'Width', 'Height' and 'Depth'. 
+Opens a new screen according to the specified &apos;Width&apos;, &apos;Height&apos; and &apos;Depth&apos;. 
 <a href="../sprite/initsprite.html">InitSprite()</a> has to be called successfully before using this command. The 
 opened screen is created with 2 video buffers to allow double 
 buffering, especially useful for games. The buffers can be manipulated with 
@@ -22,7 +22,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <tr><td width="10%"><i>Width, Height</i></td>
 <td width="90%"> 
 The screen resolution, in pixels. The specified resolution has to be supported 
-or the screen won't be created. <a href="examinescreenmodes.html">ExamineScreenModes()</a> can be used to get a full list of supported resolution. 
+or the screen won&apos;t be created. <a href="examinescreenmodes.html">ExamineScreenModes()</a> can be used to get a full list of supported resolution. 
 
 </td></tr>
 <tr><td><i>Depth</i></td>
@@ -37,20 +37,20 @@ It can be one the following values:
 <tr><td><i>Title$</i></td>
 <td> 
 The title for the application which will be displayed when switching back to the desktop. 
-(Windows only). It will be displayed in the taskbar, so it's recommended to use a title 
+(Windows only). It will be displayed in the taskbar, so it&apos;s recommended to use a title 
 related to the application name. 
 
 </td></tr>
 <tr><td><i>FlipMode (optional)</i></td>
 <td> 
-Sets the screen synchronization methods used when flipping buffers (also known as 'Vertical blank synchronization'). 
+Sets the screen synchronization methods used when flipping buffers (also known as &apos;Vertical blank synchronization&apos;). 
 It can have one of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">   <font color="#924B72">#PB_Screen_NoSynchronization</font>   : disable synchronization 
    <font color="#924B72">#PB_Screen_WaitSynchronization</font> : enable synchronization (default value)
-   <font color="#924B72">#PB_Screen_SmartSynchronization</font>: enable synchronization, with a CPU saver routine when the program doesn't consume
+   <font color="#924B72">#PB_Screen_SmartSynchronization</font>: enable synchronization, with a CPU saver routine when the program doesn&apos;t consume
                                     all the CPU time (full screen mode only)
 </font></pre>
-Waiting for the screen synchronization allows the flip to be perfect (no 'tearing' 
+Waiting for the screen synchronization allows the flip to be perfect (no &apos;tearing&apos; 
 or other visible artifacts) because the flip is performed when the screen has been fully drawn (and when the 
 screen spot is outside of visible screen area). This also link the flip frequence to the actual screen refresh, ie: for 60Hz screen it 
 could have at most 60 flip per seconds, etc. 
@@ -58,7 +58,7 @@ could have at most 60 flip per seconds, etc.
 </td></tr>
 <tr><td><i>RefreshRate (optional)</i></td>
 <td> 
-Set the refresh rate (in Hz) for the new screen. If it can't be handled, then OpenScreen() will fail. 
+Set the refresh rate (in Hz) for the new screen. If it can&apos;t be handled, then OpenScreen() will fail. 
 <a href="examinescreenmodes.html">ExamineScreenModes()</a> can be used to get a full list of supported refresh rates. 
 <br>
 Note: on Windows, the refresh rate could be locked or forced by the video card drivers, so it could be inaccurate. 
@@ -81,6 +81,6 @@ To open a screen area on a regular window, see <a href="openwindowedscreen.html"
 
 <a href="openwindowedscreen.html">OpenWindowedScreen()</a>, <a href="flipbuffers.html">FlipBuffers()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=nextscreenmode.html>NextScreenMode()</a> - <a href=index.html>Screen Index</a> - <a href=openwindowedscreen.html>OpenWindowedScreen()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=nextscreenmode.html>NextScreenMode()</a> - <a href=index.html>Screen Index</a> - <a href=openwindowedscreen.html>OpenWindowedScreen()</a> -><br><br>
 
 </body></html>

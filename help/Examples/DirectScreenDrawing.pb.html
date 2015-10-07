@@ -17,7 +17,7 @@
 </font><font color="#924B72">#ScreenHeight</font> = 600
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() = 0 <b><font color="#006666">Or</font></b> <font color="#006666">InitKeyboard</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "DirectX is needed.",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;DirectX is needed.&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">Structure</font></b> Pixel
@@ -38,12 +38,12 @@
 <b><font color="#006666">Next</font></b>
 
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenScreen</font>(<font color="#924B72">#ScreenWidth</font>, <font color="#924B72">#ScreenHeight</font>, 32, "PB Plasma")
+<b><font color="#006666">If</font></b> <font color="#006666">OpenScreen</font>(<font color="#924B72">#ScreenWidth</font>, <font color="#924B72">#ScreenHeight</font>, 32, &quot;PB Plasma&quot;)
 
   <b><font color="#006666">Repeat</font></b>
 
     Wave+6
-    <b><font color="#006666">If</font></b> Wave &#062; 320 : Wave = 0 : <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">If</font></b> Wave &gt; 320 : Wave = 0 : <b><font color="#006666">EndIf</font></b>
     
     <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">ScreenOutput</font>())
       Buffer      =<font color="#006666"> DrawingBuffer</font>()             <font color="#006666">; Get the start address of the screen buffer
@@ -52,9 +52,9 @@
 </font>      
       <b><font color="#006666">If</font></b> PixelFormat = <font color="#924B72">#PB_PixelFormat_32Bits_RGB</font>
         <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 255
-<font color="#006666">          ColorTable</font>(i) = i &#060;&#060; 16 <font color="#006666">; Blue is at the 3th pixel
+<font color="#006666">          ColorTable</font>(i) = i &lt;&lt; 16 <font color="#006666">; Blue is at the 3th pixel
 </font>        <b><font color="#006666">Next</font></b>
-      <b><font color="#006666">Else</font></b>                        <font color="#006666">; Else it's 32bits_BGR
+      <b><font color="#006666">Else</font></b>                        <font color="#006666">; Else it&apos;s 32bits_BGR
 </font>        <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 255
 <font color="#006666">          ColorTable</font>(i) = i       <font color="#006666">; Blue is at the 1th pixel
 </font>        <b><font color="#006666">Next</font></b>    
@@ -82,7 +82,7 @@
   <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)
 
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error","Can't open the screen !",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;,&quot;Can&apos;t open the screen !&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>

@@ -23,7 +23,7 @@ The gadget to use.
 <tr><td><i>Item</i></td>
 <td> 
 The item to use. The first item in the gadget has index 0. 
-If this parameter is set to -1, the color will be applied to the given 'Column' in all gadget items. 
+If this parameter is set to -1, the color will be applied to the given &apos;Column&apos; in all gadget items. 
 
 </td></tr>
 <tr><td><i>ColorType</i></td>
@@ -38,7 +38,7 @@ The kind of color attribute to change. This can be one of the following values:
 <td> 
 The new color for the attribute. <a href="../2ddrawing/rgb.html">RGB()</a> can be 
 used to get a valid color value. To remove the custom color and go back to the default system color, set 
-the 'Color' parameter to -1. 
+the &apos;Color&apos; parameter to -1. 
 
 </td></tr>
 <tr><td><i>Column (optional)</i></td>
@@ -71,11 +71,11 @@ or overwritten by the style.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 300, 300, "SetGadgetItemColor", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    ListIconGadget</font>(0, 10, 10, 280, 280, "Column 0", 100)
-<font color="#006666">    AddGadgetColumn</font>(0, 1, "Column 1", 100)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 300, 300, &quot;SetGadgetItemColor&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    ListIconGadget</font>(0, 10, 10, 280, 280, &quot;Column 0&quot;, 100)
+<font color="#006666">    AddGadgetColumn</font>(0, 1, &quot;Column 1&quot;, 100)
     <b><font color="#006666">For</font></b> i = 1 <b><font color="#006666">To</font></b> 10
-<font color="#006666">      AddGadgetItem</font>(0, -1, "Text 1"+<font color="#006666">Chr</font>(10)+"Text 2")
+<font color="#006666">      AddGadgetItem</font>(0, -1, &quot;Text 1&quot;+<font color="#006666">Chr</font>(10)+&quot;Text 2&quot;)
     <b><font color="#006666">Next</font></b>
 
 <font color="#006666">    SetGadgetItemColor</font>(0, -1, <font color="#924B72">#PB_Gadget_FrontColor</font>, $0000FF,  1)
@@ -92,6 +92,6 @@ or overwritten by the style.
 
 <a href="getgadgetitemcolor.html">GetGadgetItemColor()</a>, <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetitemattribute.html>SetGadgetItemAttribute()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetitemdata.html>SetGadgetItemData()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=setgadgetitemattribute.html>SetGadgetItemAttribute()</a> - <a href=index.html>Gadget Index</a> - <a href=setgadgetitemdata.html>SetGadgetItemData()</a> -><br><br>
 
 </body></html>

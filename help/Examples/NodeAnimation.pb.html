@@ -12,7 +12,7 @@
 </font><font color="#006666">;An example of using AnimationTracks To make a node smoothly 
 </font><font color="#006666">;follow a predefined path With spline interpolation.
 
-</font><b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+</font><b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 <b><font color="#006666">Declare</font></b> <font color="#006666">AddPath</font>(NodeAnimation)
 <b><font color="#006666">Define</font></b>.f Duration = 10000, Time = Duration / 4
@@ -24,15 +24,15 @@
 <font color="#006666">  InitMouse</font>()
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data"                , <font color="#924B72">#PB_3DArchive_FileSystem</font>)    
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures"        , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models"          , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Scripts"         , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Packs/desert.zip", <font color="#924B72">#PB_3DArchive_Zip</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data&quot;                , <font color="#924B72">#PB_3DArchive_FileSystem</font>)    
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;        , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Models&quot;          , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Scripts&quot;         , <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">    Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Packs/desert.zip&quot;, <font color="#924B72">#PB_3DArchive_Zip</font>)
 <font color="#006666">    Parse3DScripts</font>()
     
     <font color="#006666">;- Barrel
-</font><font color="#006666">    CreateEntity</font>(1,<font color="#006666"> LoadMesh</font>(1, "Barrel.mesh"), <font color="#924B72">#PB_Material_None</font>)
+</font><font color="#006666">    CreateEntity</font>(1,<font color="#006666"> LoadMesh</font>(1, &quot;Barrel.mesh&quot;), <font color="#924B72">#PB_Material_None</font>)
 <font color="#006666">    ScaleEntity</font>(1, 9, 9, 9)
     
     <font color="#006666">;- Camera
@@ -47,7 +47,7 @@
 <font color="#006666">    CreateLight</font>(0,<font color="#006666"> RGB</font>(235, 253, 126), -750, 750, -750)
     
     <font color="#006666">;- SkyBox
-</font><font color="#006666">    SkyBox</font>("desert07.jpg")
+</font><font color="#006666">    SkyBox</font>(&quot;desert07.jpg&quot;)
     
     <font color="#006666">;- NodeAnimation 
 </font>    NodeAnimation =<font color="#006666"> CreateNodeAnimation</font>(<font color="#924B72">#PB_Any</font>,<font color="#006666"> NodeID</font>(0), Duration, <font color="#924B72">#PB_NodeAnimation_Spline</font>, <font color="#924B72">#PB_NodeAnimation_LinearRotation</font>)
@@ -76,7 +76,7 @@
     
   <b><font color="#006666">EndIf</font></b> 
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error","Can't initialize engine3D")
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;,&quot;Can&apos;t initialize engine3D&quot;)
 <b><font color="#006666">EndIf</font></b> 
 </font></pre>
 </body></html>

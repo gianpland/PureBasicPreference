@@ -8,8 +8,7 @@ OutputID = <font color="#006666"><b>PrinterOutput</b></font>()</blockquote>
 <b>Description</b><br><blockquote>
 
 Returns the OutputID of the current printer to be used with the <a href="../2ddrawing/startdrawing.html">StartDrawing()</a> function. 
-All the 2DDrawing functions are available and can be used for printing. The printer is seen 
-as an empty sheet, exactly like a window or an image. 
+Drawing on the printer will be performed using pixel based drawing operations. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 None.
@@ -19,6 +18,13 @@ None.
 
 The OutputID of the current printer to be used with the <a href="../2ddrawing/startdrawing.html">StartDrawing()</a> function. 
 
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+Drawing on a printer using pixel based drawing may reduce printing quality and adds 
+extra complexity because the printers resolution must be taken into account. Vector based 
+drawing using <a href="printervectoroutput.html">PrinterVectorOutput()</a> should be preferred, as it provides resolution independent 
+functions for high-quality printing. 
+
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  StartDrawing</font>(<font color="#006666">PrinterOutput</font>())
@@ -26,6 +32,10 @@ The OutputID of the current printer to be used with the <a href="../2ddrawing/st
 <font color="#006666">  StopDrawing</font>()
 </font></pre>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=printrequester.html>PrintRequester()</a> - <a href=index.html>Printer Index</a> - <a href=printerpageheight.html>PrinterPageHeight()</a> ->
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="../2ddrawing/startdrawing.html">StartDrawing()</a>, <a href="printervectoroutput.html">PrinterVectorOutput()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=printrequester.html>PrintRequester()</a> - <a href=index.html>Printer Index</a> - <a href=printerpageheight.html>PrinterPageHeight()</a> -><br><br>
 
 </body></html>

@@ -13,9 +13,9 @@ It demonstrates the <a href="../filesystem/gettemporarydirectory.html">GetTempor
 <br>
 <br>
 It works fine as far as it goes, but has a drawback. As the string value has a variable length - 
-you can't randomly access the records because you can't predict where each new record will 
+you can&apos;t randomly access the records because you can&apos;t predict where each new record will 
 start in the file. They must be all be read back in the same sequence as they were written. 
-This isn't a problem with the small number of records created here but this could be an 
+This isn&apos;t a problem with the small number of records created here but this could be an 
 inconvenience with a larger file. PureBasic offers a way to handle this situation too - but 
 an example would be too complex for this topic. See the <a href="../database/index.html">Database</a> 
 sections of the help-file or reference manual to see how it could be done. 
@@ -32,10 +32,10 @@ sections of the help-file or reference manual to see how it could be done.
   
   <font color="#006666">; Create a temporary file name.</font>
   Folder =<font color="#006666"> GetTemporaryDirectory</font>()
-  FileName = Folder + "test.data"
+  FileName = Folder + &quot;test.data&quot;
   
   <font color="#006666">; Create the temporary file.</font>
-  <font color="#006666">; If #PB_Any is used, CreateFile returns the file's number.  </font>
+  <font color="#006666">; If #PB_Any is used, CreateFile returns the file&apos;s number.  </font>
   <font color="#006666">; Useful if you may have more than one file open simultaneously.</font>
   File =<font color="#006666"> CreateFile</font>(<font color="#924B72">#PB_Any</font>, FileName)
   
@@ -56,7 +56,7 @@ sections of the help-file or reference manual to see how it could be done.
       
       <font color="#006666">; Create and write a random string in Unicode format.</font>
       <font color="#006666">; Note the use of WriteStringN to delimit the string with an end of line marker.</font>
-      String = "String " +<font color="#006666"> StrU</font>(<font color="#006666">Random</font>(<font color="#924B72">#MAXLONG</font>))
+      String = &quot;String &quot; +<font color="#006666"> StrU</font>(<font color="#006666">Random</font>(<font color="#924B72">#MAXLONG</font>))
 <font color="#006666">      WriteStringN</font>(File, String, <font color="#924B72">#PB_Unicode</font>)
       
     <b><font color="#006666">Next</font></b> Count
@@ -66,7 +66,7 @@ sections of the help-file or reference manual to see how it could be done.
     
   <b><font color="#006666">Else</font></b>
     <font color="#006666">; If this was unsuccessful.</font>
-    <b><font color="#006666">Debug</font></b> "Could not create the file: " + FileName 
+    <b><font color="#006666">Debug</font></b> &quot;Could not create the file: &quot; + FileName 
     
   <b><font color="#006666">EndIf</font></b>
   
@@ -79,14 +79,14 @@ sections of the help-file or reference manual to see how it could be done.
     <font color="#006666">; Reset the counter.</font>
     Count = 1
     
-    <font color="#006666">; Loop until the 'end of file' is reached.</font>
+    <font color="#006666">; Loop until the &apos;end of file&apos; is reached.</font>
     <font color="#006666">; This will read all of the records regardless of how many there are.</font>
     <b><font color="#006666">While</font></b> <font color="#006666">Eof</font>(File) = 0
       
       <font color="#006666">; Print a header line.</font>
-      <b><font color="#006666">Debug</font></b> "------------------------------------------------------------------------------------------------"
+      <b><font color="#006666">Debug</font></b> &quot;------------------------------------------------------------------------------------------------&quot;
       
-      <b><font color="#006666">Debug</font></b> "[" +<font color="#006666"> StrU</font>(Count) + "]"
+      <b><font color="#006666">Debug</font></b> &quot;[&quot; +<font color="#006666"> StrU</font>(Count) + &quot;]&quot;
       Count + 1
       <font color="#006666">; Read a byte value and print it.</font>
       <b><font color="#006666">Debug</font></b> <font color="#006666">StrU</font>(<font color="#006666">ReadByte</font>(File), <font color="#924B72">#PB_Byte</font>)
@@ -103,7 +103,7 @@ sections of the help-file or reference manual to see how it could be done.
     <b><font color="#006666">Wend</font></b>
     
     <font color="#006666">; Print the trailing line.</font>
-    <b><font color="#006666">Debug</font></b> "------------------------------------------------------------------------------------------------"
+    <b><font color="#006666">Debug</font></b> &quot;------------------------------------------------------------------------------------------------&quot;
     
     <font color="#006666">; Close the file.</font>
 <font color="#006666">    CloseFile</font>(File)
@@ -113,7 +113,7 @@ sections of the help-file or reference manual to see how it could be done.
     
   <b><font color="#006666">Else</font></b>
     <font color="#006666">; If this was unsuccessful.</font>
-    <b><font color="#006666">Debug</font></b> "Could not open the file: " + FileName
+    <b><font color="#006666">Debug</font></b> &quot;Could not open the file: &quot; + FileName
     
   <b><font color="#006666">EndIf</font></b>
 </font></pre>

@@ -7,7 +7,7 @@
 </blockquote>
 <b>Description</b><br><blockquote>
 
-For experienced programmers only. It's only supported on Microsoft Windows. 
+For experienced programmers only. It&apos;s only supported on Microsoft Windows. 
 <br>
 <br>
 Normal events should be handled with the regular <a href="waitwindowevent.html">WaitWindowEvent()</a> or 
@@ -23,7 +23,7 @@ To remove/disable a previous set Callback just call SetWindowCallback(0 [, #Wind
 <br>
 <br>
 <b>Warning: </b> this way is lowlevel. Incorrect handling of the messages in the callback can 
-interfere with PB's own message processing. 
+interfere with PB&apos;s own message processing. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -52,11 +52,11 @@ Here you see a working example checking some window parameters
     <b><font color="#006666">If</font></b> uMsg = <font color="#924B72">#WM_SIZE</font> 
       <b><font color="#006666">Select</font></b> WParam 
         <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_MINIMIZED</font> 
-          <b><font color="#006666">Debug</font></b> "Window was minimized" 
+          <b><font color="#006666">Debug</font></b> &quot;Window was minimized&quot; 
         <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_RESTORED</font> 
-          <b><font color="#006666">Debug</font></b> "Window was restored" 
+          <b><font color="#006666">Debug</font></b> &quot;Window was restored&quot; 
         <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_MAXIMIZED</font> 
-          <b><font color="#006666">Debug</font></b> "Window was maximized" 
+          <b><font color="#006666">Debug</font></b> &quot;Window was maximized&quot; 
       <b><font color="#006666">EndSelect</font></b> 
     <b><font color="#006666">EndIf</font></b> 
   
@@ -64,7 +64,7 @@ Here you see a working example checking some window parameters
   <b><font color="#006666">EndProcedure</font></b> 
   
   
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 100, "Messages", <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_MaximizeGadget</font>) 
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 100, &quot;Messages&quot;, <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_MaximizeGadget</font>) 
     
 <font color="#006666">    SetWindowCallback</font>(@WinCallback())    <font color="#006666">; activate the callback</font>
     
@@ -89,6 +89,6 @@ A specific window to associate the callback to. If omitted the callback will be 
 None.
 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>Windows</Blockquote></p><center><- <a href=setactivewindow.html>SetActiveWindow()</a> - <a href=index.html>Window Index</a> - <a href=setwindowcolor.html>SetWindowColor()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>Windows</Blockquote></p><center><- <a href=setactivewindow.html>SetActiveWindow()</a> - <a href=index.html>Window Index</a> - <a href=setwindowcolor.html>SetWindowColor()</a> -><br><br>
 
 </body></html>

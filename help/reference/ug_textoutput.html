@@ -9,14 +9,14 @@ application to display the properties of files in a particular folder to the
 <a href="../reference/debugger.html">debug window</a>. 
 <br>
 <br>
-Now we're going to revisit this example to improve the data output section to resolve 
+Now we&apos;re going to revisit this example to improve the data output section to resolve 
 some issues with using the debug window. Firstly, this window is only available in the 
-PureBasic IDE which means its only useful to programmers, secondly it doesn't really 
+PureBasic IDE which means its only useful to programmers, secondly it doesn&apos;t really 
 give us much control over how our output looks. 
 <br>
 <br>
 PureBasic provides a text mode window, or <a href="../console/openconsole.html">console window</a>, 
-which can be used in compiled programs. So let's update our example to use it instead. 
+which can be used in compiled programs. So let&apos;s update our example to use it instead. 
 <br>
 <br>
 First, we will need some extra working variables to make this work properly. Amend the 
@@ -43,11 +43,11 @@ Now replace this with:
   <font color="#006666">; Display a title.</font>
   <font color="#006666">; PrintN displays the string given in the console window and moves the print position to the start of the next line afterwards.</font>
   <font color="#006666">; Space(n) returns n spaces in a string.</font>
-<font color="#006666">  PrintN</font>("File list of " + Folder + ".")
-<font color="#006666">  PrintN</font>("-------------------------------------------------------------------------------")
-  Msg = "Num Name"
+<font color="#006666">  PrintN</font>(&quot;File list of &quot; + Folder + &quot;.&quot;)
+<font color="#006666">  PrintN</font>(&quot;-------------------------------------------------------------------------------&quot;)
+  Msg = &quot;Num Name&quot;
 <font color="#006666">  PrintN</font>(Msg)
-  Msg =<font color="#006666"> Space</font>(4) + "Create" +<font color="#006666"> Space</font>(5) + "Access" +<font color="#006666"> Space</font>(5) + "Modify" +<font color="#006666"> Space</font>(5) + "Attrib Size"
+  Msg =<font color="#006666"> Space</font>(4) + &quot;Create&quot; +<font color="#006666"> Space</font>(5) + &quot;Access&quot; +<font color="#006666"> Space</font>(5) + &quot;Modify&quot; +<font color="#006666"> Space</font>(5) + &quot;Attrib Size&quot;
 <font color="#006666">  PrintN</font>(Msg)
   
   <font color="#006666">; Loop through the list to display the results.</font>
@@ -58,36 +58,36 @@ Now replace this with:
     <font color="#006666">; StrU converts an unsigned number into a string.</font>
     <font color="#006666">; RSet pads a string to a set length with the necessary number of a specified character at the front.</font>
     <font color="#006666">; Here we use it to make sure all the index numbers are padded to 3 characters in length.</font>
-    Num =<font color="#006666"> RSet</font>(<font color="#006666">StrU</font>(<font color="#006666">ListIndex</font>(<font color="#006666">Files</font>()) + 1), 3, " ")
+    Num =<font color="#006666"> RSet</font>(<font color="#006666">StrU</font>(<font color="#006666">ListIndex</font>(<font color="#006666">Files</font>()) + 1), 3, &quot; &quot;)
     
     <font color="#006666">; Display the item number and file name.</font>
-    Msg = Num + " " +<font color="#006666"> Files</font>()\Name
+    Msg = Num + &quot; &quot; +<font color="#006666"> Files</font>()\Name
 <font color="#006666">    PrintN</font>(Msg)
     
     <font color="#006666">; These lines convert the three date values to something more familiar.</font>
-    Create =<font color="#006666"> FormatDate</font>("%dd/%mm/%yyyy",<font color="#006666"> Files</font>()\DateCreated)
-    Access =<font color="#006666"> FormatDate</font>("%dd/%mm/%yyyy",<font color="#006666"> Files</font>()\DateAccessed)
-    Modify =<font color="#006666"> FormatDate</font>("%dd/%mm/%yyyy",<font color="#006666"> Files</font>()\DateModified)
+    Create =<font color="#006666"> FormatDate</font>(&quot;%dd/%mm/%yyyy&quot;,<font color="#006666"> Files</font>()\DateCreated)
+    Access =<font color="#006666"> FormatDate</font>(&quot;%dd/%mm/%yyyy&quot;,<font color="#006666"> Files</font>()\DateAccessed)
+    Modify =<font color="#006666"> FormatDate</font>(&quot;%dd/%mm/%yyyy&quot;,<font color="#006666"> Files</font>()\DateModified)
     
     <font color="#006666">; Convert the file size to a padded string the same as with the index value above,</font>
     <font color="#006666">; but allow space for the maximum size of a quad.</font>
     Size =<font color="#006666"> RSet</font>(<font color="#006666">StrU</font>(<font color="#006666">Files</font>()\Size), 19)
     
     <font color="#006666">; Convert the attributes to a string, for now.</font>
-    Attrib =<font color="#006666"> RSet</font>(<font color="#006666">StrU</font>(<font color="#006666">Files</font>()\Attributes), 6, " ")
+    Attrib =<font color="#006666"> RSet</font>(<font color="#006666">StrU</font>(<font color="#006666">Files</font>()\Attributes), 6, &quot; &quot;)
     
-    <font color="#006666">; Display the file's properties.</font>
-    Msg =<font color="#006666"> Space</font>(4) + Create + " " + Access + " " + Modify + " " + Attrib + " " + Size
+    <font color="#006666">; Display the file&apos;s properties.</font>
+    Msg =<font color="#006666"> Space</font>(4) + Create + &quot; &quot; + Access + &quot; &quot; + Modify + &quot; &quot; + Attrib + &quot; &quot; + Size
 <font color="#006666">    PrintN</font>(Msg)
     
     <font color="#006666">; Display a blank line.</font>
-<font color="#006666">    PrintN</font>("")
+<font color="#006666">    PrintN</font>(&quot;&quot;)
     
   <b><font color="#006666">Next</font></b> <font color="#006666">Files</font>()
   
   <font color="#006666">; Wait for the return key to be displayed, so the results can be viewed before the screen closes.</font>
-<font color="#006666">  PrintN</font>("")
-<font color="#006666">  PrintN</font>("Press return to exit")
+<font color="#006666">  PrintN</font>(&quot;&quot;)
+<font color="#006666">  PrintN</font>(&quot;Press return to exit&quot;)
 <font color="#006666">  Input</font>()
 </font></pre>
 
@@ -114,7 +114,7 @@ All being well the output should appear in a console window looking something li
 This output is from a Windows XP system, later versions of Windows and Linux or Mac OSX 
 will show different files of course. 
 <br>
-<b>Note for Linux/MacOS:</b> Please note, to select "Console" as executable format in the 
+<b>Note for Linux/MacOS:</b> Please note, to select &quot;Console&quot; as executable format in the 
 <a href="../reference/ide_compiler.html">compiler options</a>. 
 
 

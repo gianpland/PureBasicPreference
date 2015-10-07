@@ -50,7 +50,7 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to act on a SplitterGadget: 
@@ -84,16 +84,16 @@ the second splitter.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 230, 180, "SplitterGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 230, 180, &quot;SplitterGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
     <font color="#924B72">#Button1</font>  = 0
     <font color="#924B72">#Button2</font>  = 1
     <font color="#924B72">#Splitter</font> = 2
 
-<font color="#006666">    ButtonGadget</font>(<font color="#924B72">#Button1</font>, 0, 0, 0, 0, "Button 1") <font color="#006666">; No need to specify size or coordinates</font>
-<font color="#006666">    ButtonGadget</font>(<font color="#924B72">#Button2</font>, 0, 0, 0, 0, "Button 2") <font color="#006666">; as they will be sized automatically</font>
+<font color="#006666">    ButtonGadget</font>(<font color="#924B72">#Button1</font>, 0, 0, 0, 0, &quot;Button 1&quot;) <font color="#006666">; No need to specify size or coordinates</font>
+<font color="#006666">    ButtonGadget</font>(<font color="#924B72">#Button2</font>, 0, 0, 0, 0, &quot;Button 2&quot;) <font color="#006666">; as they will be sized automatically</font>
 <font color="#006666">    SplitterGadget</font>(<font color="#924B72">#Splitter</font>, 5, 5, 220, 120, <font color="#924B72">#Button1</font>, <font color="#924B72">#Button2</font>, <font color="#924B72">#PB_Splitter_Separator</font>)
 
-<font color="#006666">    TextGadget</font>(3, 10, 135, 210, 40, "Above GUI part shows two automatically resizing buttons inside the 220x120 SplitterGadget area.",<font color="#924B72">#PB_Text_Center</font> )
+<font color="#006666">    TextGadget</font>(3, 10, 135, 210, 40, &quot;Above GUI part shows two automatically resizing buttons inside the 220x120 SplitterGadget area.&quot;,<font color="#924B72">#PB_Text_Center</font> )
 
     <b><font color="#006666">Repeat</font></b>
     <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
@@ -106,6 +106,6 @@ the second splitter.
 
 <a href="getgadgetstate.html">GetGadgetState()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=spingadget.html>SpinGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=stringgadget.html>StringGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=spingadget.html>SpinGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=stringgadget.html>StringGadget()</a> -><br><br>
 
 </body></html>

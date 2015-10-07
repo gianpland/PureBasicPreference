@@ -21,7 +21,7 @@
 </font><font color="#006666">;
 </font><font color="#006666">; So a rotate on the y axis will take the y axis as center. With OpenGL, we can specify
 </font><font color="#006666">; positive And negative value. Positive values are always in the same sens as the axis
-</font><font color="#006666">; (like described on the schmatic, with '+' signs)
+</font><font color="#006666">; (like described on the schmatic, with &apos;+&apos; signs)
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">Global</font></b> RollAxisX.f
@@ -65,7 +65,7 @@
 </font>  <font color="#006666">; glBegin() specify how the vertexes are considered. Here a group of
 </font>  <font color="#006666">; 4 vertexes (GL_QUADS) form a rectangular surface.
 </font>
-  <font color="#006666">; Now, the color stuff: It's r,v,b but with float values which
+  <font color="#006666">; Now, the color stuff: It&apos;s r,v,b but with float values which
 </font>  <font color="#006666">; can go from 0.0 To 1.0 (0 is .. zero And 1.0 is full intensity) 
 </font>  
 <font color="#006666">  glNormal3f_ </font>(0,0,1.0)
@@ -142,7 +142,7 @@
   
 <font color="#006666">  glTranslatef_</font>(0, 0, -5.0)
   
-<font color="#006666">  glEnable_</font>(<font color="#924B72">#GL_DEPTH_TEST</font>)   <font color="#006666">; Enabled, it slowdown a lot the rendering. It's to be sure than the
+<font color="#006666">  glEnable_</font>(<font color="#924B72">#GL_DEPTH_TEST</font>)   <font color="#006666">; Enabled, it slowdown a lot the rendering. It&apos;s to be sure than the
 </font>                              <font color="#006666">; rendered objects are inside the z-buffer.
 </font>  
 <font color="#006666">  glEnable_</font>(<font color="#924B72">#GL_CULL_FACE</font>)    <font color="#006666">; This will enhance the rendering speed as all the back face will be
@@ -155,12 +155,12 @@
 
 <b><font color="#006666">Procedure</font></b> <font color="#006666">HandleError </font>(Result, Text$)
   <b><font color="#006666">If</font></b> Result = 0
-<font color="#006666">    MessageRequester</font>("Error", Text$, 0)
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, Text$, 0)
     <b><font color="#006666">End</font></b>
   <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">EndProcedure</font></b>
 
-<font color="#006666">OpenWindow</font>(0, 0, 0, 530, 320, "OpenGL Gadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">OpenWindow</font>(0, 0, 0, 530, 320, &quot;OpenGL Gadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 
 <font color="#006666">OpenGLGadget</font>(0, 10, 10, 200, 200)
 <font color="#006666">SetupGL</font>()

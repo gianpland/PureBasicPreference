@@ -36,6 +36,9 @@ Returns one of the following values, depending on the OS on which the command ru
   <font color="#924B72">#PB_OS_Windows_Server_2008_R2</font>
   <font color="#924B72">#PB_OS_Windows_8</font>
   <font color="#924B72">#PB_OS_Windows_Server_2012</font>
+  <font color="#924B72">#PB_OS_Windows_8_1</font>
+  <font color="#924B72">#PB_OS_Windows_Server_2012_R2</font>
+  <font color="#924B72">#PB_OS_Windows_10</font>
   <font color="#924B72">#PB_OS_Windows_Future</font>  ; New Windows version (not existing when the program was written)
 </font></pre>
 </blockquote>
@@ -64,6 +67,9 @@ Returns one of the following values, depending on the OS on which the command ru
   <font color="#924B72">#PB_OS_MacOSX_10_6</font>
   <font color="#924B72">#PB_OS_MacOSX_10_7</font>
   <font color="#924B72">#PB_OS_MacOSX_10_8</font>
+  <font color="#924B72">#PB_OS_MacOSX_10_9</font>
+  <font color="#924B72">#PB_OS_MacOSX_10_10</font>
+  <font color="#924B72">#PB_OS_MacOSX_10_11</font>
   <font color="#924B72">#PB_OS_MacOSX_Future</font>  ; New MacOS X version (not existing when the program was written)
 </font></pre>
 </blockquote>
@@ -73,16 +79,16 @@ Returns one of the following values, depending on the OS on which the command ru
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Select</font></b> <font color="#006666">OSVersion</font>()
     <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_OS_Windows_98</font>
-<font color="#006666">      MessageRequester</font>("Info", "Windows 98")
+<font color="#006666">      MessageRequester</font>(&quot;Info&quot;, &quot;Windows 98&quot;)
 
     <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_OS_Windows_2000</font>
-<font color="#006666">      MessageRequester</font>("Info", "Windows 2000")
+<font color="#006666">      MessageRequester</font>(&quot;Info&quot;, &quot;Windows 2000&quot;)
 
     <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_OS_Windows_XP</font>
-<font color="#006666">      MessageRequester</font>("Info", "Windows XP")
+<font color="#006666">      MessageRequester</font>(&quot;Info&quot;, &quot;Windows XP&quot;)
 
     <b><font color="#006666">Default</font></b>
-<font color="#006666">      MessageRequester</font>("Info", "Unsupported Windows version")
+<font color="#006666">      MessageRequester</font>(&quot;Info&quot;, &quot;Unsupported Windows version&quot;)
   <b><font color="#006666">EndSelect</font></b>
 </font></pre>
 
@@ -90,13 +96,13 @@ Note: the value of these constants are established before the release date of ea
 therefore tests such as the one which follows, may be used, in order to catch all versions 
 which are older or newer than a given one: 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OSVersion</font>() &#060; <font color="#924B72">#PB_OS_Windows_2000</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OSVersion</font>() &lt; <font color="#924B72">#PB_OS_Windows_2000</font>
     <font color="#006666">;</font>
     <font color="#006666">; All versions older than Windows 2000</font>
     <font color="#006666">;</font>
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=memorystatus.html>MemoryStatus()</a> - <a href=index.html>System Index</a> - <a href=username.html>UserName()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=memorystatus.html>MemoryStatus()</a> - <a href=index.html>System Index</a> - <a href=username.html>UserName()</a> -><br><br>
 
 </body></html>

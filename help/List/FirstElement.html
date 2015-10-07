@@ -38,16 +38,16 @@ if there if there are no elements in the list.
 <font color="#006666">  Numbers</font>() = 8
 
 <font color="#006666">  FirstElement</font>(<font color="#006666">Numbers</font>())
-<font color="#006666">  MessageRequester</font>("Information", "First element value is "+<font color="#006666">Str</font>(<font color="#006666">Numbers</font>()), <font color="#924B72">#PB_MessageRequester_OK</font>)
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, &quot;First element value is &quot;+<font color="#006666">Str</font>(<font color="#006666">Numbers</font>()), <font color="#924B72">#PB_MessageRequester_OK</font>)
 
 
   <font color="#006666">; An example which uses the return-value</font>
   <b><font color="#006666">NewList</font></b> <font color="#006666">Numbers</font>.w()
 
-  <b><font color="#006666">If</font></b> <font color="#006666">FirstElement</font>(<font color="#006666">Numbers</font>()) &#060;&#062; 0
-<font color="#006666">    MessageRequester</font>("Information", "First element value is "+<font color="#006666">Str</font>(<font color="#006666">Numbers</font>()), <font color="#924B72">#PB_MessageRequester_OK</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">FirstElement</font>(<font color="#006666">Numbers</font>()) &lt;&gt; 0
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;First element value is &quot;+<font color="#006666">Str</font>(<font color="#006666">Numbers</font>()), <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Information", "List is empty", <font color="#924B72">#PB_MessageRequester_OK</font>)
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;List is empty&quot;, <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">EndIf</font></b>
 
 <font color="#006666">  AddElement</font>(<font color="#006666">Numbers</font>())
@@ -55,10 +55,10 @@ if there if there are no elements in the list.
 <font color="#006666">  AddElement</font>(<font color="#006666">Numbers</font>())
 <font color="#006666">  Numbers</font>() = 8
 
-  <b><font color="#006666">If</font></b> <font color="#006666">FirstElement</font>(<font color="#006666">Numbers</font>()) &#060;&#062; 0
-<font color="#006666">    MessageRequester</font>("Information", "First element value is "+<font color="#006666">Str</font>(<font color="#006666">Numbers</font>()), <font color="#924B72">#PB_MessageRequester_OK</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">FirstElement</font>(<font color="#006666">Numbers</font>()) &lt;&gt; 0
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;First element value is &quot;+<font color="#006666">Str</font>(<font color="#006666">Numbers</font>()), <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Information", "List is empty", <font color="#924B72">#PB_MessageRequester_OK</font>)
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;List is empty&quot;, <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">EndIf</font></b>
 
 
@@ -72,9 +72,9 @@ if there if there are no elements in the list.
 
   *Element.Word =<font color="#006666"> FirstElement</font>(<font color="#006666">Numbers</font>())
   <b><font color="#006666">If</font></b> *Element
-<font color="#006666">    MessageRequester</font>("Information", "First element value is "+<font color="#006666">Str</font>(*Element\w), <font color="#924B72">#PB_MessageRequester_OK</font>)
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;First element value is &quot;+<font color="#006666">Str</font>(*Element\w), <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Information", "List is empty", <font color="#924B72">#PB_MessageRequester_OK</font>)
+<font color="#006666">    MessageRequester</font>(&quot;Information&quot;, &quot;List is empty&quot;, <font color="#924B72">#PB_MessageRequester_OK</font>)
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -83,6 +83,6 @@ if there if there are no elements in the list.
 <a href="lastelement.html">LastElement()</a>, <a href="previouselement.html">PreviousElement()</a>, <a href="nextelement.html">NextElement()</a>, 
 <a href="selectelement.html">SelectElement()</a>, <a href="listindex.html">ListIndex()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=deleteelement.html>DeleteElement()</a> - <a href=index.html>List Index</a> - <a href=freelist.html>FreeList()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=deleteelement.html>DeleteElement()</a> - <a href=index.html>List Index</a> - <a href=freelist.html>FreeList()</a> -><br><br>
 
 </body></html>

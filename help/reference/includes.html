@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">Includes Functions</font></b></p>
 
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">IncludeFile</font></b>  "Filename" 
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">IncludeFile</font></b>  &quot;Filename&quot; 
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -13,14 +13,14 @@
 </blockquote><p><b>Example</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">IncludeFile</font></b> "Sources\myfile.pb" <font color="#006666">; This file will be inserted in the current code.</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">IncludeFile</font></b> &quot;Sources\myfile.pb&quot; <font color="#006666">; This file will be inserted in the current code.</font>
 </font></pre>
 
 This command is useful, if you want to split your source code into several files, to be able 
 to reuse parts e.g. in different projects. 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">XIncludeFile</font></b> "Filename"
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">XIncludeFile</font></b> &quot;Filename&quot;
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -30,15 +30,15 @@ to reuse parts e.g. in different projects.
 </blockquote><p><b>Example</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">XIncludeFile</font></b> "Sources\myfile.pb" <font color="#006666">; This file will be inserted.</font>
-  <b><font color="#006666">XIncludeFile</font></b> "Sources\myfile.pb" <font color="#006666">; This file will be ignored along with all subsequent calls. </font>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">XIncludeFile</font></b> &quot;Sources\myfile.pb&quot; <font color="#006666">; This file will be inserted.</font>
+  <b><font color="#006666">XIncludeFile</font></b> &quot;Sources\myfile.pb&quot; <font color="#006666">; This file will be ignored along with all subsequent calls. </font>
 </font></pre>
 
 This command is useful, if you want to split your source code into several files, to be able 
 to reuse parts e.g. in different projects. 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">IncludeBinary</font></b> "filename" 
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">IncludeBinary</font></b> &quot;filename&quot; 
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -51,7 +51,7 @@ Including should be done inside a <a href="../reference/data.html">Data</a> bloc
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">DataSection</font></b>
     MapLabel:
-    <b><font color="#006666">IncludeBinary</font></b> "Data\map.data"
+    <b><font color="#006666">IncludeBinary</font></b> &quot;Data\map.data&quot;
   <b><font color="#006666">EndDataSection</font></b> 
 </font></pre>
 
@@ -62,7 +62,7 @@ into the executable.
 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">IncludePath</font></b> "path" 
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">IncludePath</font></b> &quot;path&quot; 
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -73,8 +73,8 @@ this command. This can be very handy when you include many files which are in th
 </blockquote><p><b>Example</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">IncludePath</font></b>  "Sources\Data"
-  <b><font color="#006666">IncludeFile</font></b>  "Sprite.pb"
-  <b><font color="#006666">XIncludeFile</font></b> "Music.pb"
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">IncludePath</font></b>  &quot;Sources\Data&quot;
+  <b><font color="#006666">IncludeFile</font></b>  &quot;Sprite.pb&quot;
+  <b><font color="#006666">XIncludeFile</font></b> &quot;Music.pb&quot;
 </font></pre>
 </body></html>

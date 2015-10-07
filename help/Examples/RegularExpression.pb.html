@@ -10,22 +10,22 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<font color="#006666">; Will match every word of 3 letters, lowercase with a 'b' as middle letter
+<font color="#006666">; Will match every word of 3 letters, lowercase with a &apos;b&apos; as middle letter
 </font><font color="#006666">;
-</font><b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, "[a-z]b[a-z]")
+</font><b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, &quot;[a-z]b[a-z]&quot;)
 
   <b><font color="#006666">Dim</font></b> <font color="#006666">Result$</font>(0)
   
-  a =<font color="#006666"> ExtractRegularExpression</font>(0, " abc it won't match abz",<font color="#006666"> result$</font>())
+  a =<font color="#006666"> ExtractRegularExpression</font>(0, &quot; abc it won&apos;t match abz&quot;,<font color="#006666"> result$</font>())
   
-<font color="#006666">  MessageRequester</font>("Info", "Nb strings found: "+<font color="#006666">Str</font>(a))
+<font color="#006666">  MessageRequester</font>(&quot;Info&quot;, &quot;Nb strings found: &quot;+<font color="#006666">Str</font>(a))
   
   <b><font color="#006666">For</font></b> k=0 <b><font color="#006666">To</font></b> a-1
-<font color="#006666">    MessageRequester</font>("Info",<font color="#006666"> Result$</font>(k))
+<font color="#006666">    MessageRequester</font>(&quot;Info&quot;,<font color="#006666"> Result$</font>(k))
   <b><font color="#006666">Next</font></b>
 
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error",<font color="#006666"> RegularExpressionError</font>())
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;,<font color="#006666"> RegularExpressionError</font>())
 <b><font color="#006666">EndIf</font></b>
 </font></pre>
 </body></html>

@@ -40,12 +40,12 @@ to make the mutex available to other threads again. If this is not done, this co
     
     <b><font color="#006666">Repeat</font></b>
       <b><font color="#006666">If</font></b> <font color="#006666">TryLockMutex</font>(Mutex)
-<font color="#006666">        PrintN</font>("Mutex successfully locked.")
+<font color="#006666">        PrintN</font>(&quot;Mutex successfully locked.&quot;)
         
 <font color="#006666">        UnlockMutex</font>(Mutex)
         <b><font color="#006666">Break</font></b> <font color="#006666">; quit the loop and thread</font>
       <b><font color="#006666">Else</font></b>
-<font color="#006666">        PrintN</font>("Still waiting for mutex access...")
+<font color="#006666">        PrintN</font>(&quot;Still waiting for mutex access...&quot;)
 <font color="#006666">        Delay</font>(200)
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">ForEver</font></b>  
@@ -67,6 +67,6 @@ to make the mutex available to other threads again. If this is not done, this co
 
 <a href="unlockmutex.html">UnlockMutex()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=threadpriority.html>ThreadPriority()</a> - <a href=index.html>Thread Index</a> - <a href=trysemaphore.html>TrySemaphore()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=threadpriority.html>ThreadPriority()</a> - <a href=index.html>Thread Index</a> - <a href=trysemaphore.html>TrySemaphore()</a> -><br><br>
 
 </body></html>

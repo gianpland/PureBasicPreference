@@ -19,7 +19,7 @@ None.
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 150, 25, "ToolBar", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 150, 25, &quot;ToolBar&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
     <b><font color="#006666">If</font></b> <font color="#006666">CreateToolBar</font>(0,<font color="#006666"> WindowID</font>(0))
 <font color="#006666">      ToolBarStandardButton</font>(0, <font color="#924B72">#PB_ToolBarIcon_New</font>)
 <font color="#006666">      ToolBarSeparator</font>()
@@ -32,7 +32,7 @@ None.
     <b><font color="#006666">Repeat</font></b>
       Event =<font color="#006666"> WaitWindowEvent</font>()
       <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Menu</font>
-        <b><font color="#006666">Debug</font></b> "ToolBar ID: "+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>())
+        <b><font color="#006666">Debug</font></b> &quot;ToolBar ID: &quot;+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>())
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
   <b><font color="#006666">EndIf</font></b>
@@ -44,6 +44,6 @@ None.
 
 <a href="createtoolbar.html">CreateToolBar()</a>, <a href="toolbarstandardbutton.html">ToolBarStandardButton()</a>, <a href="toolbarimagebutton.html">ToolBarImageButton()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=toolbarimagebutton.html>ToolBarImageButton()</a> - <a href=index.html>ToolBar Index</a> - <a href=toolbarstandardbutton.html>ToolBarStandardButton()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=toolbarimagebutton.html>ToolBarImageButton()</a> - <a href=index.html>ToolBar Index</a> - <a href=toolbarstandardbutton.html>ToolBarStandardButton()</a> -><br><br>
 
 </body></html>

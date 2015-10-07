@@ -31,7 +31,7 @@ a custom event, it can be any integer number. This value can be retrieved with <
 <td> 
 The object number associated with the event. It can be for example a <a href="../gadget/index.html">gadget</a> 
 or <a href="../menu/index.html">menu</a> number. When using 
-a custom event, it can be any integer number. This value can be retrieved with <a href="eventgadget.html">EventGadget()</a>. 
+a custom event, it can be any positive integer number (zero included). This value can be retrieved with <a href="eventgadget.html">EventGadget()</a>. 
 
 </td></tr>
 <tr><td><i>Type (optional)</i></td>
@@ -72,7 +72,7 @@ processing can be done.
 <font color="#006666">    PostEvent</font>(<font color="#924B72">#EventProcessingFinished</font>)
   <b><font color="#006666">EndProcedure</font></b>
   
-<font color="#006666">  OpenWindow</font>(0, 200, 200, 100, 100, "PostEvent")
+<font color="#006666">  OpenWindow</font>(0, 200, 200, 100, 100, &quot;PostEvent&quot;)
   
 <font color="#006666">  CreateThread</font>(@Thread(), 0)
   
@@ -81,10 +81,10 @@ processing can be done.
     
     <b><font color="#006666">Select</font></b> Event
       <b><font color="#006666">Case</font></b> <font color="#924B72">#EventBeginProcessing</font>
-        <b><font color="#006666">Debug</font></b> "Thread begin processing "
+        <b><font color="#006666">Debug</font></b> &quot;Thread begin processing &quot;
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#EventProcessingFinished</font>
-        <b><font color="#006666">Debug</font></b> "Thread processing finished"
+        <b><font color="#006666">Debug</font></b> &quot;Thread processing finished&quot;
     <b><font color="#006666">EndSelect</font></b>
     
   <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
@@ -95,6 +95,6 @@ processing can be done.
 
 <a href="windowevent.html">WindowEvent()</a>, <a href="eventwindow.html">EventWindow()</a>, <a href="eventgadget.html">EventGadget()</a>, <a href="eventtype.html">EventType()</a>, <a href="eventdata.html">EventData()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=openwindow.html>OpenWindow()</a> - <a href=index.html>Window Index</a> - <a href=removekeyboardshortcut.html>RemoveKeyboardShortcut()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=openwindow.html>OpenWindow()</a> - <a href=index.html>Window Index</a> - <a href=removekeyboardshortcut.html>RemoveKeyboardShortcut()</a> -><br><br>
 
 </body></html>

@@ -38,7 +38,7 @@ None.
   <font color="#006666">; shows how KillThread works </font>
   <b><font color="#006666">Procedure</font></b> <font color="#006666">PrintStuff</font>(*Interval)
     <b><font color="#006666">Repeat</font></b>
-<font color="#006666">      PrintN</font>(".")
+<font color="#006666">      PrintN</font>(&quot;.&quot;)
 <font color="#006666">      Delay</font>(*Interval)
     <b><font color="#006666">ForEver</font></b>
   <b><font color="#006666">EndProcedure</font></b>
@@ -47,7 +47,7 @@ None.
     thread =<font color="#006666"> CreateThread</font>(@PrintStuff(), 500)
     <b><font color="#006666">If</font></b> thread
       <b><font color="#006666">For</font></b> i=0 <b><font color="#006666">To</font></b> 10
-<font color="#006666">        PrintN</font>("A")
+<font color="#006666">        PrintN</font>(&quot;A&quot;)
 <font color="#006666">        Delay</font>(999)
   
         <b><font color="#006666">If</font></b> i=5
@@ -58,6 +58,6 @@ None.
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=isthread.html>IsThread()</a> - <a href=index.html>Thread Index</a> - <a href=lockmutex.html>LockMutex()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=isthread.html>IsThread()</a> - <a href=index.html>Thread Index</a> - <a href=lockmutex.html>LockMutex()</a> -><br><br>
 
 </body></html>

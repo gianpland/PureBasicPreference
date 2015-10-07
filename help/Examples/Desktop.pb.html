@@ -12,25 +12,25 @@
 </font>
 NbDesktops =<font color="#006666"> ExamineDesktops</font>()
 
-<font color="#006666">MessageRequester</font>("Information", "You have "+<font color="#006666">Str</font>(NbDesktops)+" desktop(s)")
+<font color="#006666">MessageRequester</font>(&quot;Information&quot;, &quot;You have &quot;+<font color="#006666">Str</font>(NbDesktops)+&quot; desktop(s)&quot;)
 
-<font color="#006666">; Let's enumerate all the desktops found
+<font color="#006666">; Let&apos;s enumerate all the desktops found
 </font><font color="#006666">;
 </font><b><font color="#006666">For</font></b> k=0 <b><font color="#006666">To</font></b> NbDesktops-1
   
-  Text$ = "Desktop n°"+<font color="#006666">Str</font>(k+1)+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
-  Text$ + "Size: "+<font color="#006666">Str</font>(<font color="#006666">DesktopWidth</font>(k))+"*"+<font color="#006666">Str</font>(<font color="#006666">DesktopHeight</font>(k))+<font color="#924B72">#LF$</font>
-  Text$ + "Color depth: "+<font color="#006666">Str</font>(<font color="#006666">DesktopDepth</font>(k))+<font color="#924B72">#LF$</font>
+  Text$ = &quot;Desktop n°&quot;+<font color="#006666">Str</font>(k+1)+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
+  Text$ + &quot;Size: &quot;+<font color="#006666">Str</font>(<font color="#006666">DesktopWidth</font>(k))+&quot;*&quot;+<font color="#006666">Str</font>(<font color="#006666">DesktopHeight</font>(k))+<font color="#924B72">#LF$</font>
+  Text$ + &quot;Color depth: &quot;+<font color="#006666">Str</font>(<font color="#006666">DesktopDepth</font>(k))+<font color="#924B72">#LF$</font>
   
   <b><font color="#006666">If</font></b> <font color="#006666">DesktopFrequency</font>(k) = 0
-    Text$ + "Frequency: Default"+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
+    Text$ + &quot;Frequency: Default&quot;+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
   <b><font color="#006666">Else</font></b>
-    Text$ + "Frequency: "+<font color="#006666">Str</font>(<font color="#006666">DesktopFrequency</font>(k))+" Hz"+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
+    Text$ + &quot;Frequency: &quot;+<font color="#006666">Str</font>(<font color="#006666">DesktopFrequency</font>(k))+&quot; Hz&quot;+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
   <b><font color="#006666">EndIf</font></b>
   
-  Text$ + "Name: "+<font color="#006666">DesktopName</font>(k)
+  Text$ + &quot;Name: &quot;+<font color="#006666">DesktopName</font>(k)
   
-<font color="#006666">  MessageRequester</font>("Information", Text$)
+<font color="#006666">  MessageRequester</font>(&quot;Information&quot;, Text$)
   
 <b><font color="#006666">Next</font></b>
 </font></pre>

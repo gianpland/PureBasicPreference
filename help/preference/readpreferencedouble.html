@@ -7,7 +7,7 @@ Result.d = <font color="#006666"><b>ReadPreferenceDouble</b></font>(Key$, Defaul
 </blockquote>
 <b>Description</b><br><blockquote>
 
-Try to read the specified associated 'Key$' value. 
+Try to read the specified associated &apos;Key$&apos; value. 
 
 </blockquote><p><b>Parameters</b></p><blockquote>
 <style type="text/css">
@@ -23,20 +23,48 @@ used, then the search is restricted to the current group.
 </td></tr>
 <tr><td><i>DefaultValue</i></td>
 <td> 
-The default value to return if the key isn't found or the 
-preference file haven't been opened correctly (file missing for example). 
+The default value to return if the key isn&apos;t found or the 
+preference file haven&apos;t been opened correctly (file missing for example). 
 
 </td></tr>
 </table>
 </blockquote><p><b>Return value</b></p><blockquote>
 
-The value associated to the specified key, as a double number. if the key isn't found 
+The value associated to the specified key, as a double number. if the key isn&apos;t found 
 the default value is returned. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Open a preference file</font>
+<font color="#006666">  OpenPreferences</font>(<font color="#924B72">#PB_Compiler_Home</font> +&quot;Examples\Sources\Data\test.pref&quot;)
+  
+  <font color="#006666">; Open the group &apos;window&apos;</font>
+<font color="#006666">  PreferenceGroup</font>(&quot;window&quot;)
+  
+  <font color="#006666">; Examine keys until w = 800</font>
+<font color="#006666">  NextPreferenceKey</font>() <font color="#006666">; x = 0</font>
+<font color="#006666">  NextPreferenceKey</font>() <font color="#006666">; y = 0</font>
+<font color="#006666">  NextPreferenceKey</font>() <font color="#006666">; w = 800</font>
+  
+  <font color="#006666">; Read the key</font>
+  cle$=<font color="#006666"> PreferenceKeyName</font>()
+  
+  <font color="#006666">; Display the key and its data with different format</font>
+<font color="#006666">    MessageRequester</font>(&quot;Clé Integer&quot;,<font color="#006666"> Str</font>(<font color="#006666">ReadPreferenceInteger</font>(cle$,0)))
+<font color="#006666">    MessageRequester</font>(&quot;Clé Float&quot;,<font color="#006666"> StrF</font>(<font color="#006666">ReadPreferenceFloat</font>(cle$,0),6))
+<font color="#006666">    MessageRequester</font>(&quot;Clé Double&quot;,<font color="#006666"> StrD</font>(<font color="#006666">ReadPreferenceDouble</font>(cle$,0),15))
+<font color="#006666">    MessageRequester</font>(&quot;Clé Long&quot;,<font color="#006666"> Str</font>(<font color="#006666">ReadPreferenceLong</font>(cle$,0)))
+<font color="#006666">    MessageRequester</font>(&quot;Clé Quad&quot;,<font color="#006666"> Str</font>(<font color="#006666">ReadPreferenceQuad</font>(cle$,0)))
+<font color="#006666">    MessageRequester</font>(&quot;Clé String&quot;,<font color="#006666"> ReadPreferenceString</font>(cle$,&quot;0&quot;))
+    
+  <font color="#006666">; Close the preference file</font>
+<font color="#006666">  ClosePreferences</font>() 
+</font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="readpreferencefloat.html">ReadPreferenceFloat()</a>, <a href="readpreferenceinteger.html">ReadPreferenceInteger()</a>, <a href="readpreferencelong.html">ReadPreferenceLong()</a>, <a href="readpreferencequad.html">ReadPreferenceQuad()</a>, <a href="readpreferencestring.html">ReadPreferenceString()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=preferencekeyvalue.html>PreferenceKeyValue()</a> - <a href=index.html>Preference Index</a> - <a href=readpreferencefloat.html>ReadPreferenceFloat()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=preferencekeyvalue.html>PreferenceKeyValue()</a> - <a href=index.html>Preference Index</a> - <a href=readpreferencefloat.html>ReadPreferenceFloat()</a> -><br><br>
 
 </body></html>

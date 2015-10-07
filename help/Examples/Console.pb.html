@@ -9,7 +9,7 @@
 </font><font color="#006666">;
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
-</font>    text$  = "Feel the Power of PureBasic!"        <font color="#006666">; just a small text$ string
+</font>    text$  = &quot;Feel the Power of PureBasic!&quot;        <font color="#006666">; just a small text$ string
 </font>    dlay   = 4000                                  <font color="#006666">; delay will set to 4000
 </font>
 <font color="#006666">;
@@ -17,7 +17,7 @@
 </font><font color="#006666">;
 </font>
 <font color="#006666">    OpenConsole</font>()                                  <font color="#006666">; First we must open a console
-</font><font color="#006666">    ConsoleTitle </font>("PureBasic - Console Example:")  <font color="#006666">; Now we can give the opened console a Titlename ;)                                                  
+</font><font color="#006666">    ConsoleTitle </font>(&quot;PureBasic - Console Example:&quot;)  <font color="#006666">; Now we can give the opened console a Titlename ;)                                                  
 </font><font color="#006666">    EnableGraphicalConsole</font>(1)
 
 <font color="#006666">;                                                                                                   
@@ -25,13 +25,13 @@
 </font><font color="#006666">;
 </font>    
 <font color="#006666">    ConsoleLocate </font>(18,12)                          <font color="#006666">; x y position 
-</font><font color="#006666">    Print </font>("Please enter your name:   ")           <font color="#006666">; Ask for name
+</font><font color="#006666">    Print </font>(&quot;Please enter your name:   &quot;)           <font color="#006666">; Ask for name
 </font>    name$=<font color="#006666">Input</font>()                                  <font color="#006666">; Wait for user input
 </font>
 <font color="#006666">    ClearConsole</font>()                                 <font color="#006666">; This will clean the ConsoleScreen
 </font>    
 <font color="#006666">    ConsoleLocate </font>(24,10)                          <font color="#006666">; x y position 
-</font><font color="#006666">    PrintN </font>("Welcome "+name$)                      <font color="#006666">; Print our text and the UserName
+</font><font color="#006666">    PrintN </font>(&quot;Welcome &quot;+name$)                      <font color="#006666">; Print our text and the UserName
 </font><font color="#006666">    ConsoleLocate </font>(24,12)                          <font color="#006666">; x y position
 </font><font color="#006666">    PrintN </font>(text$)                                 <font color="#006666">; Print our text
 </font>
@@ -86,5 +86,5 @@
     <font color="#006666">;-------- Exit --------
 </font>
 <font color="#006666">    CloseConsole</font>()
-<b><font color="#006666">End</font></b>þ</font></pre>
+<b><font color="#006666">End</font></b></font></pre>
 </body></html>

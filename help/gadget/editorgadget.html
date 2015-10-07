@@ -42,7 +42,7 @@ then the return-value is the auto-generated gadget number on success.
 
 </blockquote><p><b>Remarks</b></p><blockquote>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following events are supported through <a href="../window/eventtype.html">EventType()</a>: 
@@ -60,7 +60,8 @@ The following functions can be used to act on the editor content:
 <br>
 - <a href="getgadgetitemtext.html">GetGadgetItemText()</a>: Get the specified line text. 
 <br>
-- <a href="getgadgettext.html">GetGadgetText()</a>: Get the text content of the editor gadget. 
+- <a href="getgadgettext.html">GetGadgetText()</a>: Get the text content of the editor gadget. Please note, that several 
+lines of text are separated with &quot;Chr(13)+Chr(10)&quot; on Windows and &quot;Chr(10)&quot; on Linux and OS X. 
 <br>
 - <a href="removegadgetitem.html">RemoveGadgetItem()</a>: Remove a line in the editor. 
 <br>
@@ -81,17 +82,17 @@ The following functions can be used to act on the editor content:
 
 <br>
 This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
-the following values as 'ColorType': 
+the following values as &apos;ColorType&apos;: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_BackColor</font>      : backgroundcolor (not supported on MacOSX)
   <font color="#924B72">#PB_Gadget_FrontColor</font>     : textcolor
 </font></pre>
 
 </blockquote><p><b>Example</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 322, 150, "EditorGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 322, 150, &quot;EditorGadget&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">    EditorGadget</font>(0, 8, 8, 306, 133)
     <b><font color="#006666">For</font></b> a = 0 <b><font color="#006666">To</font></b> 5
-<font color="#006666">      AddGadgetItem</font>(0, a, "Line "+<font color="#006666">Str</font>(a))
+<font color="#006666">      AddGadgetItem</font>(0, a, &quot;Line &quot;+<font color="#006666">Str</font>(a))
     <b><font color="#006666">Next</font></b>
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
@@ -105,6 +106,6 @@ the following values as 'ColorType':
 <a href="getgadgetitemtext.html">GetGadgetItemText()</a>, <a href="setgadgetitemtext.html">SetGadgetItemText()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, 
 <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a>, <a href="stringgadget.html">StringGadget()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=disablegadget.html>DisableGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=explorercombogadget.html>ExplorerComboGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=disablegadget.html>DisableGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=explorercombogadget.html>ExplorerComboGadget()</a> -><br><br>
 
 </body></html>

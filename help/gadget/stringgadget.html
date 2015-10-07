@@ -36,7 +36,7 @@ This gadget accepts only one line of text. To get multi-line input, use the <a h
 <td> 
 Flags to modify the gadget behavior. It can be a combination of the following values: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_String_Numeric</font>    : Only (positive) integer numbers are accepted.
-  <font color="#924B72">#PB_String_Password</font>   : Password mode, displaying only '*' instead of normal characters.
+  <font color="#924B72">#PB_String_Password</font>   : Password mode, displaying only &apos;*&apos; instead of normal characters.
   <font color="#924B72">#PB_String_ReadOnly</font>   : Read-only mode. No text can be entered.
   <font color="#924B72">#PB_String_LowerCase</font>  : All characters are converted to lower case automatically.
   <font color="#924B72">#PB_String_UpperCase</font>  : All characters are converted to upper case automatically.
@@ -64,7 +64,7 @@ The following events are supported through <a href="../window/eventtype.html">Ev
 The following functions can be used to act on this gadget: 
 <br>
 <br>
-- <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with the following values as 'ColorType': 
+- <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with the following values as &apos;ColorType&apos;: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_FrontColor</font>: Textcolor
   <font color="#924B72">#PB_Gadget_BackColor</font> : Backgroundcolor
 </font></pre>
@@ -77,19 +77,19 @@ The following functions can be used to act on this gadget:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_String_MaximumLength</font>: Set the maximum number of characters which can be entered.
 </font></pre>
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &apos;mini help&apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Shows possible flags of StringGadget in action...</font>
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 322, 205, "StringGadget Flags", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">    StringGadget</font>(0, 8,  10, 306, 20, "Normal StringGadget...")
-<font color="#006666">    StringGadget</font>(1, 8,  35, 306, 20, "1234567", <font color="#924B72">#PB_String_Numeric</font>)
-<font color="#006666">    StringGadget</font>(2, 8,  60, 306, 20, "Read-only StringGadget", <font color="#924B72">#PB_String_ReadOnly</font>)
-<font color="#006666">    StringGadget</font>(3, 8,  85, 306, 20, "lowercase...", <font color="#924B72">#PB_String_LowerCase</font>)
-<font color="#006666">    StringGadget</font>(4, 8, 110, 306, 20, "uppercase...", <font color="#924B72">#PB_String_UpperCase</font>)
-<font color="#006666">    StringGadget</font>(5, 8, 140, 306, 20, "Borderless StringGadget", <font color="#924B72">#PB_String_BorderLess</font>)
-<font color="#006666">    StringGadget</font>(6, 8, 170, 306, 20, "Password", <font color="#924B72">#PB_String_Password</font>)
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 322, 205, &quot;StringGadget Flags&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">    StringGadget</font>(0, 8,  10, 306, 20, &quot;Normal StringGadget...&quot;)
+<font color="#006666">    StringGadget</font>(1, 8,  35, 306, 20, &quot;1234567&quot;, <font color="#924B72">#PB_String_Numeric</font>)
+<font color="#006666">    StringGadget</font>(2, 8,  60, 306, 20, &quot;Read-only StringGadget&quot;, <font color="#924B72">#PB_String_ReadOnly</font>)
+<font color="#006666">    StringGadget</font>(3, 8,  85, 306, 20, &quot;lowercase...&quot;, <font color="#924B72">#PB_String_LowerCase</font>)
+<font color="#006666">    StringGadget</font>(4, 8, 110, 306, 20, &quot;uppercase...&quot;, <font color="#924B72">#PB_String_UpperCase</font>)
+<font color="#006666">    StringGadget</font>(5, 8, 140, 306, 20, &quot;Borderless StringGadget&quot;, <font color="#924B72">#PB_String_BorderLess</font>)
+<font color="#006666">    StringGadget</font>(6, 8, 170, 306, 20, &quot;Password&quot;, <font color="#924B72">#PB_String_Password</font>)
     <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
@@ -100,6 +100,6 @@ A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">Gad
 
 <a href="getgadgettext.html">GetGadgetText()</a>, <a href="setgadgettext.html">SetGadgetText()</a>, <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a>, <a href="editorgadget.html">EditorGadget()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=splittergadget.html>SplitterGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=textgadget.html>TextGadget()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=splittergadget.html>SplitterGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=textgadget.html>TextGadget()</a> -><br><br>
 
 </body></html>

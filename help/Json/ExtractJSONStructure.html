@@ -45,7 +45,7 @@ proper type to match a structure member they will be ignored and the correspondi
 structure member is left empty. 
 <br>
 <br>
-Any '*' or '$' characters are stripped from the structure member names before comparing 
+Any &apos;*&apos; or &apos;$&apos; characters are stripped from the structure member names before comparing 
 them to the JSON object members. So a member key must not include these characters to 
 be properly matched to a structure member. 
 <br>
@@ -62,11 +62,11 @@ the comparison is performed case insensitive.
     <b><font color="#006666">List</font></b> <font color="#006666">Books</font>.s()
   <b><font color="#006666">EndStructure</font></b>
 
-  Input$ = "{" +<font color="#006666"> Chr</font>(34) + "Name" +<font color="#006666"> Chr</font>(34) + ": " +<font color="#006666"> Chr</font>(34) + "John Smith" +<font color="#006666"> Chr</font>(34) + ", " + 
-<font color="#006666">                 Chr</font>(34) + "Age" +<font color="#006666"> Chr</font>(34) + ": 42, " + 
-<font color="#006666">                 Chr</font>(34) + "Books" +<font color="#006666"> Chr</font>(34) + ": [" +
-<font color="#006666">                           Chr</font>(34) + "Investing For Dummies" +<font color="#006666"> Chr</font>(34) + ", " + 
-<font color="#006666">                           Chr</font>(34) + "A Little Bit of Everything For Dummies" +<font color="#006666"> Chr</font>(34) + "] }"
+  Input$ = &quot;{&quot; +<font color="#006666"> Chr</font>(34) + &quot;Name&quot; +<font color="#006666"> Chr</font>(34) + &quot;: &quot; +<font color="#006666"> Chr</font>(34) + &quot;John Smith&quot; +<font color="#006666"> Chr</font>(34) + &quot;, &quot; + 
+<font color="#006666">                 Chr</font>(34) + &quot;Age&quot; +<font color="#006666"> Chr</font>(34) + &quot;: 42, &quot; + 
+<font color="#006666">                 Chr</font>(34) + &quot;Books&quot; +<font color="#006666"> Chr</font>(34) + &quot;: [&quot; +
+<font color="#006666">                           Chr</font>(34) + &quot;Investing For Dummies&quot; +<font color="#006666"> Chr</font>(34) + &quot;, &quot; + 
+<font color="#006666">                           Chr</font>(34) + &quot;A Little Bit of Everything For Dummies&quot; +<font color="#006666"> Chr</font>(34) + &quot;] }&quot;
                            
 <font color="#006666">  ParseJSON</font>(0, Input$)
 <font color="#006666">  ExtractJSONStructure</font>(<font color="#006666">JSONValue</font>(0), @P.Person, Person)
@@ -82,6 +82,6 @@ the comparison is performed case insensitive.
 <a href="insertjsonarray.html">InsertJSONArray()</a>, <a href="insertjsonlist.html">InsertJSONList()</a>, <a href="insertjsonmap.html">InsertJSONMap()</a>, <a href="insertjsonstructure.html">InsertJSONStructure()</a>, 
 <a href="setjsonobject.html">SetJSONObject()</a>, <a href="jsontype.html">JSONType()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=extractjsonmap.html>ExtractJSONMap()</a> - <a href=index.html>Json Index</a> - <a href=freejson.html>FreeJSON()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=extractjsonmap.html>ExtractJSONMap()</a> - <a href=index.html>Json Index</a> - <a href=freejson.html>FreeJSON()</a> -><br><br>
 
 </body></html>

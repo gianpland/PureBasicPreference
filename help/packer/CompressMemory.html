@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="4">CompressMemory()</font></b></p>
 <p><b>Syntax</b></p><blockquote>
-Result = <font color="#006666"><b>CompressMemory</b></font>(*Buffer, Size, *Output, OutputSize [, PluginID])</blockquote>
+Result = <font color="#006666"><b>CompressMemory</b></font>(*Buffer, Size, *Output, OutputSize [, Plugin])</blockquote>
 
 </blockquote>
 <b>Description</b><br><blockquote>
@@ -36,7 +36,7 @@ The memory buffer to store the compressed data.
 The memory buffer size to store the compressed data. 
 
 </td></tr>
-<tr><td><i>PluginID (optional)</i></td>
+<tr><td><i>Plugin (optional)</i></td>
 <td> 
 The plugin to use, if more than one packer plugin has been registered. It can be one of the following value: 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_PackerPlugin_BriefLZ</font>: use the BriefLZ packer to compress the memory. <a href="usebrieflzpacker.html">UseBriefLZPacker()</a> has to be called to have any effect.
@@ -49,12 +49,12 @@ The plugin to use, if more than one packer plugin has been registered. It can be
 </blockquote><p><b>Return value</b></p><blockquote>
 
 Return the compressed size if the buffer has been successfully compressed, zero otherwise. 
-If the buffer data can't be compressed (already compressed data generally don't compress anymore), it will return zero. 
+If the buffer data can&apos;t be compressed (already compressed data generally don&apos;t compress anymore), it will return zero. 
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="uncompressmemory.html">UncompressMemory()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=closepack.html>ClosePack()</a> - <a href=index.html>Packer Index</a> - <a href=createpack.html>CreatePack()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=closepack.html>ClosePack()</a> - <a href=index.html>Packer Index</a> - <a href=createpack.html>CreatePack()</a> -><br><br>
 
 </body></html>

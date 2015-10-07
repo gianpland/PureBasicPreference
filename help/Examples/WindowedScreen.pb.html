@@ -11,18 +11,18 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() = 0 <b><font color="#006666">Or</font></b> <font color="#006666">InitKeyboard</font>() = 0 <b><font color="#006666">Or</font></b> <font color="#006666">InitMouse</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Can't open the sprite system", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open the sprite system&quot;, 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
-<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 340, 285, "Gadget and sprites!", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
-<font color="#006666">  ButtonGadget</font>(1, 10,  10, 100, 25, "Grab input")
-<font color="#006666">  ButtonGadget</font>(2, 120,  10, 100, 25, "Button 2")
-<font color="#006666">  ButtonGadget</font>(3, 230,  10, 100, 25, "Button 3")
-<font color="#006666">  TextGadget  </font>(4, 10, 40, 300, 30, "Press 'F1' to ungrab keyboard and mouse")
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 340, 285, &quot;Gadget and sprites!&quot;, <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">  ButtonGadget</font>(1, 10,  10, 100, 25, &quot;Grab input&quot;)
+<font color="#006666">  ButtonGadget</font>(2, 120,  10, 100, 25, &quot;Button 2&quot;)
+<font color="#006666">  ButtonGadget</font>(3, 230,  10, 100, 25, &quot;Button 3&quot;)
+<font color="#006666">  TextGadget  </font>(4, 10, 40, 300, 30, &quot;Press &apos;F1&apos; to ungrab keyboard and mouse&quot;)
 
   <b><font color="#006666">If</font></b> <font color="#006666">OpenWindowedScreen</font>(<font color="#006666">WindowID</font>(0), 10, 70, 320, 200, 0, 0, 0)
-<font color="#006666">    LoadSprite</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/Data/PureBasicLogo.bmp")
+<font color="#006666">    LoadSprite</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/sources/Data/PureBasicLogo.bmp&quot;)
 
     direction = 1
     playerX = 1
@@ -46,10 +46,10 @@
               <b><font color="#006666">Case</font></b> 1
                 InputReleased = 0
 <font color="#006666">                ReleaseMouse</font>(<font color="#924B72">#False</font>)
-<font color="#006666">                SetGadgetText</font>(4, "Press 'F1' to ungrab keyboard and mouse")
+<font color="#006666">                SetGadgetText</font>(4, &quot;Press &apos;F1&apos; to ungrab keyboard and mouse&quot;)
     
               <b><font color="#006666">Case</font></b> 2, 3
-<font color="#006666">                SetGadgetText</font>(4, "Button "+<font color="#006666">Str</font>(Gadget)+" pressed.")
+<font color="#006666">                SetGadgetText</font>(4, &quot;Button &quot;+<font color="#006666">Str</font>(Gadget)+&quot; pressed.&quot;)
             <b><font color="#006666">EndSelect</font></b>
         
         <b><font color="#006666">EndSelect</font></b>
@@ -60,12 +60,12 @@
     
 <font color="#006666">        ExamineMouse</font>()
     
-        <font color="#006666">; do the sprite & screen management at every frame
+        <font color="#006666">; do the sprite &amp; screen management at every frame
 </font><font color="#006666">        ExamineKeyboard</font>()
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)    <b><font color="#006666">And</font></b> playerY &#062; 0   : playerY -3 : <b><font color="#006666">EndIf</font></b>  
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)  <b><font color="#006666">And</font></b> playerY &#060; 280 : playerY +3 : <b><font color="#006666">EndIf</font></b>  
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)  <b><font color="#006666">And</font></b> playerX &#062; 0   : playerX -3 : <b><font color="#006666">EndIf</font></b>  
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>) <b><font color="#006666">And</font></b> playerX &#060; 300 : playerX +3 : <b><font color="#006666">EndIf</font></b>  
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)    <b><font color="#006666">And</font></b> playerY &gt; 0   : playerY -3 : <b><font color="#006666">EndIf</font></b>  
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)  <b><font color="#006666">And</font></b> playerY &lt; 280 : playerY +3 : <b><font color="#006666">EndIf</font></b>  
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)  <b><font color="#006666">And</font></b> playerX &gt; 0   : playerX -3 : <b><font color="#006666">EndIf</font></b>  
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>) <b><font color="#006666">And</font></b> playerX &lt; 300 : playerX +3 : <b><font color="#006666">EndIf</font></b>  
     
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_F1</font>)
 <font color="#006666">          ReleaseMouse</font>(<font color="#924B72">#True</font>)
@@ -82,14 +82,14 @@
 <font color="#006666">      DisplaySprite</font>(0, playerX, playerY)
     
       x + direction
-      <b><font color="#006666">If</font></b> x &#062; 300 : direction = -1 : <b><font color="#006666">EndIf</font></b>   <font color="#006666">; moving back to the left with negative value
-</font>      <b><font color="#006666">If</font></b> x &#060; 0   : direction =  1 : <b><font color="#006666">EndIf</font></b>   <font color="#006666">; moving to the right with positive value
+      <b><font color="#006666">If</font></b> x &gt; 300 : direction = -1 : <b><font color="#006666">EndIf</font></b>   <font color="#006666">; moving back to the left with negative value
+</font>      <b><font color="#006666">If</font></b> x &lt; 0   : direction =  1 : <b><font color="#006666">EndIf</font></b>   <font color="#006666">; moving to the right with positive value
 </font>        
 <font color="#006666">      FlipBuffers</font>()       <font color="#006666">; Inverse the buffers (the back become the front (visible)... and we can do the rendering on the back
 </font>    
     <b><font color="#006666">Until</font></b>  Quit <b><font color="#006666">Or</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error", "Can't open windowed screen!", 0)
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t open windowed screen!&quot;, 0)
   <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">EndIf</font></b>
 </font></pre>

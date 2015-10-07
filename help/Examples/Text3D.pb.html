@@ -10,13 +10,13 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Screen3DRequester.pb&quot;
 
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
   
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
-<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/fonts", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/Textures&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + &quot;examples/3d/Data/fonts&quot;, <font color="#924B72">#PB_3DArchive_FileSystem</font>)
 <font color="#006666">  Parse3DScripts</font>()
   
 <font color="#006666">  InitSprite</font>()
@@ -27,14 +27,14 @@
     
 <font color="#006666">    CreateCube</font>(0, 2)
     
-<font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Caisse.png"))
+<font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, &quot;Caisse.png&quot;))
     
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666"> MeshID</font>(0),<font color="#006666"> MaterialID</font>(0))
     
-<font color="#006666">    CreateText3D</font>(0, "Hello world")
+<font color="#006666">    CreateText3D</font>(0, &quot;Hello world&quot;)
 <font color="#006666">    Text3DColor</font>(0,<font color="#006666"> RGBA</font>(255, 0, 0, 255))
 <font color="#006666">    Text3DAlignment</font>(0, <font color="#924B72">#PB_Text3D_HorizontallyCentered</font>)
-<font color="#006666">    AttachEntityObject</font>(0, "",<font color="#006666"> Text3DID</font>(0))
+<font color="#006666">    AttachEntityObject</font>(0, &quot;&quot;,<font color="#006666"> Text3DID</font>(0))
 <font color="#006666">    MoveText3D</font>(0, 0, 2, 2)
 
 <font color="#006666">    RotateEntity</font>(0, 0, -70, 0)
@@ -56,7 +56,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;The 3D Engine can&apos;t be initialized&quot;,0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>

@@ -11,23 +11,23 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">InitNetwork</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Can't initialize the network !", 0)
+<font color="#006666">  MessageRequester</font>(&quot;Error&quot;, &quot;Can&apos;t initialize the network !&quot;, 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
 Port = 6832
 
-ConnectionID =<font color="#006666"> OpenNetworkConnection</font>("127.0.0.1", Port)
+ConnectionID =<font color="#006666"> OpenNetworkConnection</font>(&quot;127.0.0.1&quot;, Port)
 <b><font color="#006666">If</font></b> ConnectionID
-<font color="#006666">  MessageRequester</font>("PureBasic - Client", "Client connected to server...", 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic - Client&quot;, &quot;Client connected to server...&quot;, 0)
   
-<font color="#006666">  SendNetworkString</font>(ConnectionID, "An hello from a client !!! :-)", <font color="#924B72">#PB_UTF8</font>)
+<font color="#006666">  SendNetworkString</font>(ConnectionID, &quot;An hello from a client !!! :-)&quot;, <font color="#924B72">#PB_UTF8</font>)
     
-<font color="#006666">  MessageRequester</font>("PureBasic - Client", "A string has been sent to the server, please check it before quit...", 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic - Client&quot;, &quot;A string has been sent to the server, please check it before quit...&quot;, 0)
   
 <font color="#006666">  CloseNetworkConnection</font>(ConnectionID)
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("PureBasic - Client", "Can't find the server (Is it launched ?).", 0)
+<font color="#006666">  MessageRequester</font>(&quot;PureBasic - Client&quot;, &quot;Can&apos;t find the server (Is it launched ?).&quot;, 0)
 <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">End</font></b>   </font></pre>

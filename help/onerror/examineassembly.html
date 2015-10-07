@@ -47,21 +47,21 @@ Nonzero if disassembling is possible, zero otherwise.
     a = (<font color="#006666">Random</font>(100) * 5) + 2000
   Code_End:
   
-  Text$ = "Disassembled code: " +<font color="#006666"> Chr</font>(13)  
+  Text$ = &quot;Disassembled code: &quot; +<font color="#006666"> Chr</font>(13)  
   <b><font color="#006666">If</font></b> <font color="#006666">ExamineAssembly</font>(?Code_Start, ?Code_End)
     <b><font color="#006666">While</font></b> <font color="#006666">NextInstruction</font>()
-      Text$ +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(<font color="#006666">InstructionAddress</font>()),<font color="#006666"> SizeOf</font>(Integer)*2, "0")
-      Text$ + " " +<font color="#006666"> InstructionString</font>() +<font color="#006666"> Chr</font>(13)
+      Text$ +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(<font color="#006666">InstructionAddress</font>()),<font color="#006666"> SizeOf</font>(Integer)*2, &quot;0&quot;)
+      Text$ + &quot; &quot; +<font color="#006666"> InstructionString</font>() +<font color="#006666"> Chr</font>(13)
     <b><font color="#006666">Wend</font></b>
   <b><font color="#006666">EndIf</font></b>
   
-<font color="#006666">  MessageRequester</font>("Result", Text$)
+<font color="#006666">  MessageRequester</font>(&quot;Result&quot;, Text$)
 </font></pre>
 
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="nextinstruction.html">NextInstruction()</a>, <a href="instructionaddress.html">InstructionAddress()</a>, <a href="instructionstring.html">InstructionString()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>Windows, Linux, MacOS X (x86)</Blockquote></p><center><- <a href=errortargetaddress.html>ErrorTargetAddress()</a> - <a href=index.html>OnError Index</a> - <a href=instructionaddress.html>InstructionAddress()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>Windows, Linux, MacOS X (x86)</Blockquote></p><center><- <a href=errortargetaddress.html>ErrorTargetAddress()</a> - <a href=index.html>OnError Index</a> - <a href=instructionaddress.html>InstructionAddress()</a> -><br><br>
 
 </body></html>

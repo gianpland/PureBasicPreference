@@ -2,7 +2,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">Compiler Directives</font></b></p>
 
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">CompilerIf</font></b> &#060;constant expression&#062;
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">CompilerIf</font></b> &lt;constant expression&gt;
   ...
 [<b><font color="#006666">CompilerElseIf</font></b>]
   ...
@@ -13,10 +13,10 @@
 <b>Description</b><br><blockquote>
 
 
-If the &#060;constant expression&#062; result is true, the code inside the <b><font color="#006666">CompilerIf</font></b> will be compiled, 
-else it will be totally ignored. It's useful when building multi-OSes programs to 
+If the &lt;constant expression&gt; result is true, the code inside the <b><font color="#006666">CompilerIf</font></b> will be compiled, 
+else it will be totally ignored. It&apos;s useful when building multi-OSes programs to 
 customize some programs part by using OS specific functions. The <b><font color="#006666">And</font></b> and <b><font color="#006666">Or</font></b> Keywords 
-can be used in &#060;constant expression&#062; to combine multiple conditions. 
+can be used in &lt;constant expression&gt; to combine multiple conditions. 
 
 </blockquote><p><b>Example</b></p><blockquote>
 
@@ -30,8 +30,8 @@ can be used in &#060;constant expression&#062; to combine multiple conditions.
 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">CompilerSelect</font></b> &#060;numeric constant&#062;
-  <b><font color="#006666">CompilerCase</font></b> &#060;numeric constant&#062;
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">CompilerSelect</font></b> &lt;numeric constant&gt;
+  <b><font color="#006666">CompilerCase</font></b> &lt;numeric constant&gt;
     ...
   [<b><font color="#006666">CompilerDefault</font></b>]
     ...
@@ -42,7 +42,7 @@ can be used in &#060;constant expression&#062; to combine multiple conditions.
 
 Works like a regular <a href="../reference/select_endselect.html">Select : EndSelect</a> except that only one numeric 
 value is allowed per case. It will tell the compiler which code should 
-be compiled. It's useful when building multi-OSes programs to customize some programs part 
+be compiled. It&apos;s useful when building multi-OSes programs to customize some programs part 
 by using OS specific functions. 
 
 </blockquote><p><b>Example</b></p><blockquote>
@@ -58,7 +58,7 @@ by using OS specific functions.
 
 
 </blockquote>
-<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">CompilerError</font></b> &#060;string constant&#062;
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">CompilerError</font></b> &lt;string constant&gt;
 </font></pre></blockquote>
 <b>Description</b><br><blockquote>
 
@@ -70,9 +70,9 @@ when doing specialized routines, or to inform a source code is not available on 
 
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> = <font color="#924B72">#PB_OS_AmigaOS</font>
-    <b><font color="#006666">CompilerError</font></b> "AmigaOS isn't supported, sorry."
+    <b><font color="#006666">CompilerError</font></b> &quot;AmigaOS isn&apos;t supported, sorry.&quot;
   <b><font color="#006666">CompilerElse</font></b>
-    <b><font color="#006666">CompilerError</font></b> "OS supported, you can now comment me."
+    <b><font color="#006666">CompilerError</font></b> &quot;OS supported, you can now comment me.&quot;
   <b><font color="#006666">CompilerEndIf</font></b>
 
 </font></pre>
@@ -98,7 +98,7 @@ will raise an error. It can help to catch typo bugs.
   
   <b><font color="#006666">Define</font></b> a
   
-  a = 20 <font color="#006666">; Ok, as declared with 'Define'</font>
+  a = 20 <font color="#006666">; Ok, as declared with &apos;Define&apos;</font>
   b = 10 <font color="#006666">; Will raise an error here</font>
 </font></pre>
 
@@ -161,7 +161,7 @@ The PureBasic compiler has several reserved constants which can be useful to the
   <font color="#924B72">#PB_Compiler_Line</font>     : Line number of the file being compiled, useful for <a href="../reference/ide_debugger.html">debug</a> purpose.
   <font color="#924B72">#PB_Compiler_Procedure</font>: Current procedure name, if the line is inside a <a href="../reference/procedures.html">procedure</a>.
   <font color="#924B72">#PB_Compiler_Module</font>   : Current module name, if the line is inside a <a href="../reference/module.html">module</a>.
-  <font color="#924B72">#PB_Compiler_Version</font>  : Compiler version, in integer format in the form '420' for 4.20.
+  <font color="#924B72">#PB_Compiler_Version</font>  : Compiler version, in integer format in the form &apos;420&apos; for 4.20.
   <font color="#924B72">#PB_Compiler_Home</font>     : Full path of the PureBasic directory, can be useful to locate <a href="../reference/includes.html">include files</a>
   <font color="#924B72">#PB_Compiler_Debugger</font> : Set to 1 if the <a href="../reference/ide_debugger.html">runtime debugger</a> is enabled, set to 0 else. When an executable
                           is created, the debugger is always disabled (this constant will be 0).

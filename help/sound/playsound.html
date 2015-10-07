@@ -26,7 +26,7 @@ It can be a combination of the following values:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Sound_Loop</font>        : play the sound continuously (starts again when end is reached)
   <font color="#924B72">#PB_Sound_MultiChannel</font>: play the sound in a new channel instead of stopping the
         previously played sound. This allows to use the same sound and to play it on different
-        channels at once. 'Result' will be new allocated channel, and can be used by the
+        channels at once. &apos;Result&apos; will be new allocated channel, and can be used by the
         other sound commands like <a href="soundvolume.html">SoundVolume()</a>, <a href="soundpan.html">SoundPan()</a> etc.
 </font></pre>
 
@@ -42,10 +42,26 @@ The default value is 100.
 
 The channel number, if the <font color="#924B72">#PB_Sound_MultiChannel</font> flag is used. 
 
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666"> InitSound</font>()           <font color="#006666">; Initialize Sound system</font>
+<font color="#006666"> UseOGGSoundDecoder</font>()  <font color="#006666">; Use ogg files</font>
+
+ <font color="#006666">; Loads a sound from a file</font>
+<font color="#006666"> LoadSound</font>(0, <font color="#924B72">#PB_Compiler_Home</font> +&quot;Examples\3D\Data\Siren.ogg&quot;)
+ <font color="#006666">; The sound is playing</font>
+<font color="#006666"> PlaySound</font>(0, <font color="#924B72">#PB_Sound_Loop</font>, 20)
+ 
+<font color="#006666"> MessageRequester</font>(&quot;Info&quot;, &quot;Ok to stop.&quot;)
+ 
+<font color="#006666"> FreeSound</font>(0) <font color="#006666">; The sound is freed</font>
+ <b><font color="#006666">End</font></b>
+</font></pre>
+
 </blockquote><p><b>See Also</b></p><blockquote>
 
 <a href="stopsound.html">StopSound()</a>, <a href="freesound.html">FreeSound()</a>, <a href="pausesound.html">PauseSound()</a>, <a href="resumesound.html">ResumeSound()</a> 
 
-</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=pausesound.html>PauseSound()</a> - <a href=index.html>Sound Index</a> - <a href=resumesound.html>ResumeSound()</a> ->
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=pausesound.html>PauseSound()</a> - <a href=index.html>Sound Index</a> - <a href=resumesound.html>ResumeSound()</a> -><br><br>
 
 </body></html>

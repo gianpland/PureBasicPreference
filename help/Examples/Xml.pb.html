@@ -26,15 +26,15 @@
   
     <font color="#006666">; Add this node to the tree. Add name and attributes
 </font>    <font color="#006666">;
-</font>    Text$ =<font color="#006666"> GetXMLNodeName</font>(*CurrentNode) + " (Attributes: "
+</font>    Text$ =<font color="#006666"> GetXMLNodeName</font>(*CurrentNode) + &quot; (Attributes: &quot;
         
     <b><font color="#006666">If</font></b> <font color="#006666">ExamineXMLAttributes</font>(*CurrentNode)
       <b><font color="#006666">While</font></b> <font color="#006666">NextXMLAttribute</font>(*CurrentNode)
-        Text$ +<font color="#006666"> XMLAttributeName</font>(*CurrentNode) + "=" +<font color="#006666"> Chr</font>(34) +<font color="#006666"> XMLAttributeValue</font>(*CurrentNode) +<font color="#006666"> Chr</font>(34) + " "
+        Text$ +<font color="#006666"> XMLAttributeName</font>(*CurrentNode) + &quot;=&quot; +<font color="#006666"> Chr</font>(34) +<font color="#006666"> XMLAttributeValue</font>(*CurrentNode) +<font color="#006666"> Chr</font>(34) + &quot; &quot;
       <b><font color="#006666">Wend</font></b>
     <b><font color="#006666">EndIf</font></b>
     
-    Text$ + ")"
+    Text$ + &quot;)&quot;
     
 <font color="#006666">    AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, Text$, 0, CurrentSublevel)
         
@@ -45,7 +45,7 @@
     
     <font color="#006666">; Loop through all available child nodes and call this procedure again
 </font>    <font color="#006666">;
-</font>    <b><font color="#006666">While</font></b> *ChildNode &#060;&#062; 0
+</font>    <b><font color="#006666">While</font></b> *ChildNode &lt;&gt; 0
 <font color="#006666">      FillTree</font>(*ChildNode, CurrentSublevel + 1)      
       *ChildNode =<font color="#006666"> NextXMLNode</font>(*ChildNode)
     <b><font color="#006666">Wend</font></b>        
@@ -54,8 +54,8 @@
 
 <b><font color="#006666">EndProcedure</font></b>
 
-FileName$ =<font color="#006666"> OpenFileRequester</font>("Choose XML file...", "", "XML files (*.xml)|*.xml|All files (*.*)|*.*", 0)
-<b><font color="#006666">If</font></b> FileName$ &#060;&#062; ""
+FileName$ =<font color="#006666"> OpenFileRequester</font>(&quot;Choose XML file...&quot;, &quot;&quot;, &quot;XML files (*.xml)|*.xml|All files (*.*)|*.*&quot;, 0)
+<b><font color="#006666">If</font></b> FileName$ &lt;&gt; &quot;&quot;
 
   <b><font color="#006666">If</font></b> <font color="#006666">LoadXML</font>(<font color="#924B72">#XML</font>, FileName$)
 
@@ -66,18 +66,18 @@ FileName$ =<font color="#006666"> OpenFileRequester</font>("Choose XML file...",
 </font>    <font color="#006666">;
 </font>    <font color="#006666">; Display an error message if there was a markup error
 </font>    <font color="#006666">;
-</font>    <b><font color="#006666">If</font></b> <font color="#006666">XMLStatus</font>(<font color="#924B72">#XML</font>) &#060;&#062; <font color="#924B72">#PB_XML_Success</font>
-      Message$ = "Error in the XML file:" +<font color="#006666"> Chr</font>(13)
-      Message$ + "Message: " +<font color="#006666"> XMLError</font>(<font color="#924B72">#XML</font>) +<font color="#006666"> Chr</font>(13)
-      Message$ + "Line: " +<font color="#006666"> Str</font>(<font color="#006666">XMLErrorLine</font>(<font color="#924B72">#XML</font>)) + "   Character: " +<font color="#006666"> Str</font>(<font color="#006666">XMLErrorPosition</font>(<font color="#924B72">#XML</font>))
-<font color="#006666">      MessageRequester</font>("Error", Message$)
+</font>    <b><font color="#006666">If</font></b> <font color="#006666">XMLStatus</font>(<font color="#924B72">#XML</font>) &lt;&gt; <font color="#924B72">#PB_XML_Success</font>
+      Message$ = &quot;Error in the XML file:&quot; +<font color="#006666"> Chr</font>(13)
+      Message$ + &quot;Message: &quot; +<font color="#006666"> XMLError</font>(<font color="#924B72">#XML</font>) +<font color="#006666"> Chr</font>(13)
+      Message$ + &quot;Line: &quot; +<font color="#006666"> Str</font>(<font color="#006666">XMLErrorLine</font>(<font color="#924B72">#XML</font>)) + &quot;   Character: &quot; +<font color="#006666"> Str</font>(<font color="#006666">XMLErrorPosition</font>(<font color="#924B72">#XML</font>))
+<font color="#006666">      MessageRequester</font>(&quot;Error&quot;, Message$)
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Note:
 </font>    <font color="#006666">;   Even if there was an error in the XML, all nodes before the error position
 </font>    <font color="#006666">;   are still accessible, so open the window and show the tree anyway.
 </font>    <font color="#006666">;
-</font>    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(<font color="#924B72">#Window</font>, 0, 0, 500, 500, "XML Example", <font color="#924B72">#PB_Window_SystemMenu</font>|<font color="#924B72">#PB_Window_ScreenCentered</font>)
+</font>    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(<font color="#924B72">#Window</font>, 0, 0, 500, 500, &quot;XML Example&quot;, <font color="#924B72">#PB_Window_SystemMenu</font>|<font color="#924B72">#PB_Window_ScreenCentered</font>)
 <font color="#006666">      TreeGadget</font>(<font color="#924B72">#TreeGadget</font>, 10, 10, 480, 480)
       
       <font color="#006666">; Get the main XML node, and call the FillTree() procedure with it
@@ -101,7 +101,7 @@ FileName$ =<font color="#006666"> OpenFileRequester</font>("Choose XML file...",
     <b><font color="#006666">EndIf</font></b>
         
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error", "The file cannot be opened.")
+<font color="#006666">    MessageRequester</font>(&quot;Error&quot;, &quot;The file cannot be opened.&quot;)
   <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">EndIf</font></b>
