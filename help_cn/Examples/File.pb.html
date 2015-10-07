@@ -1,0 +1,39 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>File.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - File example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<font color="#006666">MessageRequester</font>("PureBasic", "Welcome !"+<font color="#006666">Chr</font>(13)+"PureBasic will write a file named: PureBasicTestFile.pb", 0)
+
+<b><font color="#006666">If</font></b> <font color="#006666">CreateFile</font>(0, "PureBasicTestFile.txt")
+<font color="#006666">  WriteStringN</font>(0, "         This is a PureBasic file test")
+<font color="#006666">  WriteString</font>(0, "Now it's on ")
+<font color="#006666">  WriteString</font>(0, "the same line.")
+
+<font color="#006666">  CloseFile</font>(0)
+<b><font color="#006666">Else</font></b>
+<font color="#006666">  MessageRequester</font>("PureBasic", "Error: can't write the file", 0)
+  <b><font color="#006666">End</font></b>
+<b><font color="#006666">EndIf</font></b>
+
+<b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0, "PureBasicTestFile.txt")
+
+  First$ =<font color="#006666">  Trim</font>(<font color="#006666">ReadString</font>(0))
+<font color="#006666">  MessageRequester</font>("PureBasic", "Line read: "+First$, 0)
+  
+<font color="#006666">  CloseFile</font>(0)
+<b><font color="#006666">Else</font></b>
+<font color="#006666">  MessageRequester</font>("PureBasic", "Error: Can't read the file", 0)
+<b><font color="#006666">EndIf</font></b>
+
+<b><font color="#006666">End</font></b>
+</font></pre>
+</body></html>

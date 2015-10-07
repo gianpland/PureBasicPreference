@@ -1,0 +1,241 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ListIconGadget</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ListIconGadget()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>ListIconGadget</b></font>(#Gadget, x, y, Width, Height, Title$, TitleWidth [, Flags])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Creates a ListIcon gadget in the current GadgetList. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Gadget</i></td>
+<td width="90%"> 
+ 
+A number to identify the new gadget. <a href="../reference/purebasic_objects.html">#PB_Any</a> can 
+be used to auto-generate this number. 
+
+ 
+
+</td></tr>
+<tr><td><i>x, y, Width, Height</i></td>
+<td> 
+ 
+The position and dimensions of the new gadget. 
+
+ 
+
+</td></tr>
+<tr><td><i>Title$</i></td>
+<td> 
+ 
+The title for the first column in the gadget. The gadget is created with one initial column. 
+
+ 
+
+</td></tr>
+<tr><td><i>TitleWidth</i></td>
+<td> 
+ 
+The width of the first column in the gadget. 
+
+ 
+
+</td></tr>
+<tr><td><i>Flags (optional)</i></td>
+<td> 
+ 
+Flags to modify the gadget behavior. It can be a combination of the following values: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_ListIcon_CheckBoxes</font>         : Display checkboxes in the first column.
+  <font color="#924B72">#PB_ListIcon_ThreeState</font>         : The checkboxes can have an "in between" state.
+  <font color="#924B72">#PB_ListIcon_MultiSelect</font>        : Enable multiple selection.
+  <font color="#924B72">#PB_ListIcon_GridLines</font>          : Display separator lines between rows and columns (not supported on Mac OSX).
+  <font color="#924B72">#PB_ListIcon_FullRowSelect</font>      : The selection covers the full row instead of the first column (Windows only). 
+  <font color="#924B72">#PB_ListIcon_HeaderDragDrop</font>     : The order of columns can be changed using drag'n'drop.
+  <font color="#924B72">#PB_ListIcon_AlwaysShowSelection</font>: The selection is still visible, even when the gadget is not activated (Windows only).
+</font></pre>
+
+The <font color="#924B72">#PB_ListIcon_ThreeState</font> flag can be used in combination with the 
+<font color="#924B72">#PB_ListIcon_CheckBoxes</font> flag to get checkboxes that can have an "on", "off" and "in between" state. 
+The user can only select the "on" or "off" states. The "in between" state can be set programmatically using the <a href="setgadgetitemstate.html">SetGadgetItemState()</a> function. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero on success and zero on failure. If <font color="#924B72">#PB_Any</font> was used as the #Gadget parameter 
+then the return-value is the auto-generated gadget number on success. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+<br>
+<br>
+The following functions can be used to act on the list content: 
+<br>
+<br>
+- <a href="addgadgetcolumn.html">AddGadgetColumn()</a>: Add a column to the gadget. 
+<br>
+- <a href="removegadgetcolumn.html">RemoveGadgetColumn()</a>: Remove a column from the gadget. 
+<br>
+- <a href="addgadgetitem.html">AddGadgetItem()</a>: Add an item (with an optional image in the standard 16x16 icon size). 
+<br>
+- <a href="removegadgetitem.html">RemoveGadgetItem()</a>: Remove an item. 
+<br>
+- <a href="cleargadgetitems.html">ClearGadgetItems()</a>: Remove all the items. 
+<br>
+- <a href="countgadgetitems.html">CountGadgetItems()</a>: Returns the number of items currently in the #Gadget. 
+<br>
+<br>
+- <a href="getgadgetitemcolor.html">GetGadgetItemColor()</a>: Returns front or backcolor of the item. 
+<br>
+- <a href="setgadgetitemcolor.html">SetGadgetItemColor()</a>: Changes front or backcolor of the item. (not supported on MacOS X) 
+<br>
+- <a href="getgadgetitemdata.html">GetGadgetItemData()</a>: Returns the value that was stored with item. 
+<br>
+- <a href="setgadgetitemdata.html">SetGadgetItemData()</a>: Stores a value with the item. 
+<br>
+- <a href="getgadgetitemstate.html">GetGadgetItemState()</a>: Returns the current state of the specified item. 
+<br>
+- <a href="setgadgetitemstate.html">SetGadgetItemState()</a>: Changes the current state of the specified item. 
+<br>
+- <a href="getgadgetitemtext.html">GetGadgetItemText()</a>: Returns the current text of the specified item. (or column header, if item = -1) 
+<br>
+- <a href="setgadgetitemtext.html">SetGadgetItemText()</a>: Changes the current text of the specified item. (or column header, if item = -1). 
+Like with <a href="addgadgetitem.html">AddGadgetItem()</a>, it is possible to set the text for several columns at once, with the <a href="../string/chr.html">Chr(10)</a> separator. 
+<br>
+- <a href="setgadgetitemimage.html">SetGadgetItemImage()</a>: Changes the current image of the specified item. 
+<br>
+- <a href="getgadgetstate.html">GetGadgetState()</a>: Returns the first selected item or -1 if there is no item selected. 
+<br>
+- <a href="setgadgetstate.html">SetGadgetState()</a>: Change the selected item (all other selected items will be deselected). If -1 is specified, no more item will be selected. 
+<br>
+- <a href="getgadgetattribute.html">GetGadgetAttribute()</a> / <a href="setgadgetattribute.html">SetGadgetAttribute()</a>: With the following attribute: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_ListIcon_DisplayMode</font> : Changes the display of the gadget. Can be one of the following constants (Windows only):
+    <font color="#924B72">#PB_ListIcon_LargeIcon</font>: Large icon mode
+    <font color="#924B72">#PB_ListIcon_SmallIcon</font>: Small icon mode
+    <font color="#924B72">#PB_ListIcon_List</font>     : List icon mode
+    <font color="#924B72">#PB_ListIcon_Report</font>   : Report mode (columns, default mode)
+</font></pre>
+<br>
+
+- <a href="getgadgetitemattribute.html">GetGadgetItemAttribute()</a> / <a href="setgadgetitemattribute.html">SetGadgetItemAttribute()</a>: With the following attribute: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_ListIcon_ColumnWidth</font> : Returns/Changes the width of the given 'Column'. The 'Item' parameter is ignored.
+</font></pre>
+
+
+
+
+
+This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
+the following values as 'ColorType': 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_FrontColor</font>: Textcolor
+  <font color="#924B72">#PB_Gadget_BackColor</font> : Backgroundcolor
+  <font color="#924B72">#PB_Gadget_LineColor</font> : Color for the gridlines if the <font color="#924B72">#PB_ListIcon_GridLines</font> flag is used.
+</font></pre>
+
+
+
+The following events are supported through <a href="../window/eventtype.html">EventType()</a>: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_EventType_LeftClick</font>: left click on an item, or a checkbox was checked/unchecked
+  <font color="#924B72">#PB_EventType_LeftDoubleClick</font>
+  <font color="#924B72">#PB_EventType_RightClick</font>
+  <font color="#924B72">#PB_EventType_RightDoubleClick</font>
+  <font color="#924B72">#PB_EventType_Change</font>: the current item changed
+  <font color="#924B72">#PB_EventType_DragStart</font>: the user tried to start a Drag &amp; Drop operation.
+</font></pre>
+
+After a <font color="#924B72">#PB_EventType_DragStart</font> event, the <a href="../dragdrop/index.html">Drag &amp; Drop library</a> can be used to start 
+a Drag &amp; Drop operation. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"> <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 100, 300, 100, "ListIcon Example", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+<font color="#006666">   ListIconGadget</font>(0, 5, 5, 290, 90, "Name", 100, <font color="#924B72">#PB_ListIcon_FullRowSelect</font> | <font color="#924B72">#PB_ListIcon_AlwaysShowSelection</font>)
+<font color="#006666">   AddGadgetColumn</font>(0, 1, "Address", 250)
+<font color="#006666">   AddGadgetItem</font>(0, -1, "Harry Rannit"+<font color="#006666">Chr</font>(10)+"12 Parliament Way, Battle Street, By the Bay")
+<font color="#006666">   AddGadgetItem</font>(0, -1, "Ginger Brokeit"+<font color="#006666">Chr</font>(10)+"130 PureBasic Road, BigTown, CodeCity")
+   <b><font color="#006666">Repeat</font></b>
+     Event =<font color="#006666"> WaitWindowEvent</font>()
+   <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
+ <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Shows possible flags of ListIconGadget in action...</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 640, 300, "ListIconGadgets", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+    <font color="#006666">; left column</font>
+<font color="#006666">    TextGadget    </font>(6,  10,  10, 300, 20, "ListIcon Standard", <font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    ListIconGadget</font>(0,  10,  25, 300, 70, "Column 1", 100)
+<font color="#006666">    TextGadget    </font>(7,  10, 105, 300, 20, "ListIcon with Checkbox", <font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    ListIconGadget</font>(1,  10, 120, 300, 70, "Column 1", 100, <font color="#924B72">#PB_ListIcon_CheckBoxes</font>)  <font color="#006666">; ListIcon with checkbox</font>
+<font color="#006666">    TextGadget    </font>(8,  10, 200, 300, 20, "ListIcon with Multi-Selection", <font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    ListIconGadget</font>(2,  10, 215, 300, 70, "Column 1", 100, <font color="#924B72">#PB_ListIcon_MultiSelect</font>) <font color="#006666">; ListIcon with multi-selection</font>
+    <font color="#006666">; right column</font>
+<font color="#006666">    TextGadget    </font>(9, 330,  10, 300, 20, "ListIcon with separator lines",<font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    ListIconGadget</font>(3, 330,  25, 300, 70, "Column 1", 100, <font color="#924B72">#PB_ListIcon_GridLines</font>)
+<font color="#006666">    TextGadget   </font>(10, 330, 105, 300, 20, "ListIcon with FullRowSelect and AlwaysShowSelection",<font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    ListIconGadget</font>(4, 330, 120, 300, 70, "Column 1", 100, <font color="#924B72">#PB_ListIcon_FullRowSelect</font> | <font color="#924B72">#PB_ListIcon_AlwaysShowSelection</font>)
+<font color="#006666">    TextGadget   </font>(11, 330, 200, 300, 20, "ListIcon Standard with large icons",<font color="#924B72">#PB_Text_Center</font>)
+<font color="#006666">    ListIconGadget</font>(5, 330, 220, 300, 65, "", 200,<font color="#924B72">#PB_ListIcon_GridLines</font>)
+    <b><font color="#006666">For</font></b> a = 0 <b><font color="#006666">To</font></b> 4            <font color="#006666">; add columns to each of the first 5 listicons</font>
+      <b><font color="#006666">For</font></b> b = 2 <b><font color="#006666">To</font></b> 4          <font color="#006666">; add 3 more columns to each listicon</font>
+<font color="#006666">        AddGadgetColumn</font>(a, b, "Column " +<font color="#006666"> Str</font>(b), 65)
+      <b><font color="#006666">Next</font></b>
+      <b><font color="#006666">For</font></b> b = 0 <b><font color="#006666">To</font></b> 2          <font color="#006666">; add 4 items to each line of the listicons</font>
+<font color="#006666">        AddGadgetItem</font>(a, b, "Item 1"+<font color="#006666">Chr</font>(10)+"Item 2"+<font color="#006666">Chr</font>(10)+"Item 3"+<font color="#006666">Chr</font>(10)+"Item 4")
+      <b><font color="#006666">Next</font></b>
+    <b><font color="#006666">Next</font></b>
+    <font color="#006666">; Here we change the ListIcon display to large icons and show an image</font>
+    <b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0, "map2.bmp")     <font color="#006666">; change path/filename to your own 32x32 pixel image</font>
+<font color="#006666">      SetGadgetAttribute</font>(5, <font color="#924B72">#PB_ListIcon_DisplayMode</font>, <font color="#924B72">#PB_ListIcon_LargeIcon</font>)
+<font color="#006666">      AddGadgetItem</font>(5, 1, "Picture 1",<font color="#006666"> ImageID</font>(0))
+<font color="#006666">      AddGadgetItem</font>(5, 2, "Picture 2",<font color="#006666"> ImageID</font>(0))
+    <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">Repeat</font></b> : <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+
+<p><img src="../HelpPictures/listicongadget.png"></p>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="addgadgetcolumn.html">AddGadgetColumn()</a>, <a href="removegadgetcolumn.html">RemoveGadgetColumn()</a>, <a href="addgadgetitem.html">AddGadgetItem()</a>, <a href="removegadgetitem.html">RemoveGadgetItem()</a>, <a href="cleargadgetitems.html">ClearGadgetItems()</a>, <a href="countgadgetitems.html">CountGadgetItems()</a>, 
+<a href="getgadgetstate.html">GetGadgetState()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, <a href="getgadgetitemtext.html">GetGadgetItemText()</a>, <a href="setgadgetitemtext.html">SetGadgetItemText()</a>, <a href="setgadgetitemimage.html">SetGadgetItemImage()</a>, 
+<a href="getgadgetitemstate.html">GetGadgetItemState()</a>, <a href="setgadgetitemstate.html">SetGadgetItemState()</a>, <a href="getgadgetitemdata.html">GetGadgetItemData()</a>, <a href="setgadgetitemdata.html">SetGadgetItemData()</a>, <a href="getgadgetitemattribute.html">GetGadgetItemAttribute()</a>, <a href="setgadgetitemattribute.html">SetGadgetItemAttribute()</a>, 
+<a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a>, <a href="getgadgetitemcolor.html">GetGadgetItemColor()</a>, <a href="setgadgetitemcolor.html">SetGadgetItemColor()</a>, <a href="explorerlistgadget.html">ExplorerListGadget()</a>, <a href="listviewgadget.html">ListViewGadget()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=isgadget.html>IsGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=listviewgadget.html>ListViewGadget()</a> -&gt;
+
+
+
+</body></html>

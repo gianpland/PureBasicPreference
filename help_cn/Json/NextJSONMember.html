@@ -1,0 +1,64 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>NextJSONMember</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">NextJSONMember()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>NextJSONMember</b></font>(JSONValue)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+After a call to <a href="examinejsonmembers.html">ExamineJSONMembers()</a>, this function is used to iterate over 
+all members of the specified JSON value of <a href="jsontype.html">type</a> <font color="#924B72">#PB_JSON_Object</font>. 
+<br>
+<br>
+<a href="jsonmemberkey.html">JSONMemberKey()</a> and <a href="jsonmembervalue.html">JSONMemberValue()</a> can be used to get information 
+about the current member. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>JSONValue</i></td>
+<td width="90%"> 
+ 
+The JSON value. The value must be of type <font color="#924B72">#PB_JSON_Object</font> and 
+<a href="examinejsonmembers.html">ExamineJSONMembers()</a> must have been called on this value. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns non-zero if another JSON member was found. If the result is zero then 
+there are no more JSON members to be examined. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+
+See <a href="examinejsonmembers.html">ExamineJSONMembers()</a> for an example. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="examinejsonmembers.html">ExamineJSONMembers()</a>, <a href="jsonmemberkey.html">JSONMemberKey()</a>, <a href="jsonmembervalue.html">JSONMemberValue()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=loadjson.html>LoadJSON()</a> - <a href=index.html>Json Index</a> - <a href=parsejson.html>ParseJSON()</a> -&gt;
+
+
+
+</body></html>

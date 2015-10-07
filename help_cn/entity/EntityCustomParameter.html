@@ -1,0 +1,91 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>EntityCustomParameter</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">EntityCustomParameter()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>EntityCustomParameter</b></font>(#Entity, SubEntity, ParameterIndex, Value1, Value2, Value3, Value4)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Set a custom parameter value to the #Entity material shader script. To have any effect, the material 
+associated to the entity should have a shader script (either GLSL or HLSL). 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Entity</i></td>
+<td width="90%"> 
+ 
+The entity to use. 
+
+ 
+
+</td></tr>
+<tr><td><i>SubEntity</i></td>
+<td> 
+ 
+The sub-entity to use. First sub-entity index starts at 0 (representing the main entity). 
+
+ 
+
+</td></tr>
+<tr><td><i>ParameterIndex</i></td>
+<td> 
+ 
+The parameter index in the shader script. 
+
+ 
+
+</td></tr>
+<tr><td><i>Value1</i></td>
+<td> 
+ 
+The first parameter value. 
+
+ 
+
+</td></tr>
+<tr><td><i>Value2</i></td>
+<td> 
+ 
+The second parameter value (if the parameter only accept one value, this value will be ignored). 
+
+ 
+
+</td></tr>
+<tr><td><i>Value3</i></td>
+<td> 
+ 
+The third parameter value (if the parameter only accept two value, this value will be ignored). 
+
+ 
+
+</td></tr>
+<tr><td><i>Value4</i></td>
+<td> 
+ 
+The fourth parameter value (if the parameter only accept three value, this value will be ignored). 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无. For more information see the following example: 
+
+</blockquote><p><b>示例</b></p><blockquote>
+<a href="../Examples/RustyBall.pb.html">RustyBall.pb</a>
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=entitycollide.html>EntityCollide()</a> - <a href=index.html>Entity Index</a> - <a href=entityfixedyawaxis.html>EntityFixedYawAxis()</a> -&gt;
+
+
+
+</body></html>

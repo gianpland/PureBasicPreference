@@ -1,0 +1,88 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Requester.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - Requester example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, 300,<font color="#006666"> MenuHeight</font>(), "PureBasic - Requesters example")
+
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))
+<font color="#006666">    MenuTitle</font>("Test")
+<font color="#006666">      MenuItem</font>(0, "Open")
+<font color="#006666">      MenuItem</font>(1, "Save")
+<font color="#006666">      MenuItem</font>(6, "Path")
+<font color="#006666">      MenuBar</font>()
+<font color="#006666">      MenuItem</font>(2, "Choose a color")
+<font color="#006666">      MenuItem</font>(3, "Choose a font")
+<font color="#006666">      MenuBar</font>()
+<font color="#006666">      MenuItem</font>(4, "Simple message")
+<font color="#006666">      MenuBar</font>()
+<font color="#006666">      MenuItem</font>(5, "Quit")
+  <b><font color="#006666">EndIf</font></b>
+  
+  <b><font color="#006666">Repeat</font></b>
+    Event =<font color="#006666"> WaitWindowEvent</font>()
+
+    <b><font color="#006666">Select</font></b> Event
+    
+      <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Menu</font>  <font color="#006666">; A Menu item has been selected
+</font>      
+        <b><font color="#006666">Select</font></b> <font color="#006666">EventMenu</font>()
+        
+          <b><font color="#006666">Case</font></b> 0  <font color="#006666">; OpenFileRequester
+</font>            File$ =<font color="#006666"> OpenFileRequester</font>("PureBasic - Open", "Pure.txt", "Text (*.txt)|*.txt;*.bat|(PureBasic (*.pb)|*.pb", 0)
+            <b><font color="#006666">If</font></b> File$+File$
+<font color="#006666">              MessageRequester</font>("Information", "Selected File: "+File$, 0)<font color="#006666">;
+</font>            <b><font color="#006666">EndIf</font></b>
+          
+          <b><font color="#006666">Case</font></b> 1  <font color="#006666">; SaveFileRequester
+</font>            File$ =<font color="#006666"> SaveFileRequester</font>("PureBasic - Save", "Basic.pb", "Text (*.txt)|*.txt|(PureBasic (*.pb)|*.pb", 1)
+            <b><font color="#006666">If</font></b> File$
+<font color="#006666">              MessageRequester</font>("Information", "Selected File: "+File$, 0)<font color="#006666">;
+</font>            <b><font color="#006666">EndIf</font></b>
+          
+          <b><font color="#006666">Case</font></b> 2  <font color="#006666">; ColorRequester
+</font>            Colour =<font color="#006666"> ColorRequester</font>()
+            <b><font color="#006666">If</font></b> Colour &gt; -1
+<font color="#006666">              MessageRequester</font>("Info", "Colour choosen: Red: "+<font color="#006666">Str</font>(<font color="#006666">Red</font>(Colour))+", Green: "+<font color="#006666">Str</font>(<font color="#006666">Green</font>(Colour))+", Blue: "+<font color="#006666">Str</font>(<font color="#006666">Blue</font>(Colour)), 0)<font color="#006666">;
+</font>            <b><font color="#006666">EndIf</font></b>
+          
+          <b><font color="#006666">Case</font></b> 3  <font color="#006666">; FontRequester
+</font>            <b><font color="#006666">If</font></b> <font color="#006666">FontRequester</font>("Courier", -13, 0)
+<font color="#006666">              MessageRequester</font>("Info", "Selected font: "+<font color="#006666">SelectedFontName</font>()+<font color="#006666">Chr</font>(10)+"Font size: "+<font color="#006666">Str</font>(<font color="#006666">SelectedFontSize</font>()), 0)
+            <b><font color="#006666">EndIf</font></b>
+          
+          <b><font color="#006666">Case</font></b> 4  <font color="#006666">; MessageRequester
+</font><font color="#006666">            MessageRequester</font>("Information", "Simple Message"+<font color="#006666">Chr</font>(13)+"Line 2"+<font color="#006666">Chr</font>(13)+"Line 3", 0)
+          
+          <b><font color="#006666">Case</font></b> 5  <font color="#006666">; Quit
+</font>            Quit = 1
+            
+          <b><font color="#006666">Case</font></b> 6
+            Path$ =<font color="#006666"> PathRequester</font>("Choose a path...","C:\")
+            <b><font color="#006666">If</font></b> Path$
+<font color="#006666">              MessageRequester</font>("Information", "Selected Path: "+Path$, 0)
+            <b><font color="#006666">EndIf</font></b>
+            
+        <b><font color="#006666">EndSelect</font></b>
+      
+      
+      <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_CloseWindow</font>  <font color="#006666">; If the user has pressed on the close button
+</font>        Quit = 1
+        
+    <b><font color="#006666">EndSelect</font></b>
+
+  <b><font color="#006666">Until</font></b> Quit = 1
+  
+<b><font color="#006666">EndIf</font></b>
+
+<b><font color="#006666">End</font></b>   <font color="#006666">; All the opened windows are closed automatically by PureBasic
+</font>    </font></pre>
+</body></html>

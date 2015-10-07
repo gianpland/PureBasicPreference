@@ -1,0 +1,186 @@
+<html><head><title>General Rules</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="5">General Rules</font></b></p>
+
+
+PureBasic has established rules which never change. These are: 
+
+
+<p><b>Comments</b></p><blockquote>
+
+
+Comments are marked by <b><font color="#006666">;</font></b>. All text entered after <b><font color="#006666"></font></b>; is ignored by the compiler. 
+
+<p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> a = 10 <font color="#006666">; This is a comment to indicate something.</font>
+</font></pre>
+
+
+
+</blockquote>
+<p><b>Keywords</b></p><blockquote>
+
+
+All <b>keywords</b> are used for general things inside PureBasic, like creating arrays (Dim) or lists (NewList), 
+or controlling the program flow (If : Else : EndIf). They are not followed by the brackets '()', which are 
+typically for PureBasic <b>functions</b>. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">    <b><font color="#006666">If</font></b> a = 1      <font color="#006666">; If, Else and EndIf are keywords; while 'a = 1'</font>
+      ...         <font color="#006666">; is a variable used inside an expression.</font>
+    <b><font color="#006666">Else</font></b>
+      ...
+    <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+<b>Keywords</b> are regularly described in the chapters on the left side of 
+the index page in the reference manual. 
+
+
+
+</blockquote>
+<p><b>Functions</b></p><blockquote>
+
+
+All <b>functions</b> must be followed by a ( or else it will not be considered as a function, (even for null parameter functions). 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">    EventWindow</font>() <font color="#006666">; it is a function.</font>
+    EventWindow   <font color="#006666">; it is a variable.</font>
+</font></pre>
+
+<b>Functions</b> are regularly included in the PureBasic "Command libraries", described on the right side of 
+the index page in the reference manual. 
+
+
+</blockquote>
+<p><b>Constants</b></p><blockquote>
+
+
+All constants are preceded by <b><font color="#006666"></font></b>#. They can only be declared once in the source and always keep their predefined values. 
+(The compiler replaces all constant names with their corresponding values when compiling the executable.) 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#Hello</font> = 10 <font color="#006666">; it is a constant.</font>
+  Hello  = 10 <font color="#006666">; it is a variable.</font>
+</font></pre>
+
+
+
+</blockquote>
+<p><b>Labels</b></p><blockquote>
+
+
+All labels must be followed by a <b><font color="#006666">:</font></b> (colon). Label names may not contain any operators (+,-,...) as 
+well special characters (ß,ä,ö,ü,...). When defined in a <a href="../reference/procedures.html">procedure</a>, the label will be only available in this 
+procedure. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  I_am_a_label:
+</font></pre>
+
+
+
+</blockquote>
+<p><b>Expressions</b></p><blockquote>
+
+
+An expression is something which can be evaluated. An expression can mix any variables, constants, 
+or functions, of the same type. When you use numbers in an expression, you can add the Keyword $ sign 
+in front of it to mean a hexadecimal number, or a Keyword % sign to mean a binary number. 
+Without either of those, the number will be treated as decimal. Strings must be enclosed by inverted commas. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  a = a + 1 + (12 * 3)
+
+  a = a +<font color="#006666"> WindowHeight</font>(<font color="#924B72">#Window</font>) + b/2 + <font color="#924B72">#MyConstant</font>
+
+  <b><font color="#006666">If</font></b> a &#060;&#062; 12 + 2
+    b + 2 &#062;= c + 3
+  <b><font color="#006666">EndIf</font></b>
+
+  a$ = b$ + "this is a string value" + c$
+
+  Foo = Foo + $69 / %1001  <font color="#006666">; Hexadecimal and binary number usage</font>
+</font></pre>
+
+
+
+</blockquote>
+<p><b>Concatenation of commands</b></p><blockquote>
+
+
+Any number of commands can be added to the same line by using the <b><font color="#006666">:</font></b> option. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> IsCrazy = 0 :<font color="#006666"> MessageRequester</font>("Info", "Not Crazy") : <b><font color="#006666">Else</font></b> :<font color="#006666"> MessageRequester</font>("Info", "Crazy") : <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+
+</blockquote>
+<p><b>Line continuation</b></p><blockquote>
+
+
+If the line contains a big expression, it can be split on several lines. A split line has to end 
+with one of the following operator: plus (+), comma (,), or (|), And, Or, Xor. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  Text$ = "Very very very very long text" + <font color="#924B72">#LF$</font> +
+          "another long text" + <font color="#924B72">#LF$</font> +
+          " and the end of the long text"
+
+<font color="#006666">  MessageRequester</font>("Hello this is a very long title",
+                   "And a very long message, so we can use the multiline" + <font color="#924B72">#LF$</font> + Text$,
+                   <font color="#924B72">#PB_MessageRequester_Ok</font>)
+</font></pre>
+
+
+
+</blockquote>
+<p><b>Typical words in this manual</b></p><blockquote>
+
+
+Words used in this manual: 
+
+<blockquote>
+
+&#060;variable&#062; : a basic variable. <br>
+&#060;expression&#062; : an expression as explained above. <br>
+&#060;constant&#062; : a numeric constant. <br>
+&#060;label&#062; : a program label. <br>
+&#060;type&#062; : any type, (standard or structured). <br>
+</blockquote>
+
+
+
+</blockquote>
+<p><b>Others</b></p><blockquote>
+
+
+- In this guide, all topics are listed in alphabetical order to decrease any search time. 
+<br>
+<br>
+- <b>Return values</b> of commands are always <a href="../reference/variables.html">Integer</a> if no other type 
+is specified in the Syntax line of the command description. 
+<br>
+- In the PureBasic documentation are used the terms "commands" and "functions" as well - this is one and the same, 
+independently of a return-value. If a value is returned by the command or function, you can read in the 
+related command description. 
+<br>
+</body></html>

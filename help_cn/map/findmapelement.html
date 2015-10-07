@@ -1,0 +1,79 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>FindMapElement</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">FindMapElement()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>FindMapElement</b></font>(Map(), Key$)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Change the current map element to the element associated at the specified key. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>Map()</i></td>
+<td width="90%"> 
+ 
+The map to use. 
+
+ 
+
+</td></tr>
+<tr><td><i>Key$</i></td>
+<td> 
+ 
+The key to find. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the key was found and zero otherwise. 
+The value returned is a <a href="../reference/memory.html">pointer</a> to the new element data. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">NewMap</font></b> <font color="#006666">Country</font>.s()
+
+<font color="#006666">  Country</font>("US") = "United States"
+<font color="#006666">  Country</font>("FR") = "France"
+<font color="#006666">  Country</font>("GE") = "Germany"
+
+  <b><font color="#006666">If</font></b> <font color="#006666">FindMapElement</font>(<font color="#006666">Country</font>(), "US")
+    <b><font color="#006666">Debug</font></b> "'US' is in the country list."    
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> "'US' is NOT in the country list !"    
+  <b><font color="#006666">EndIf</font></b>
+  
+  <b><font color="#006666">If</font></b> <font color="#006666">FindMapElement</font>(<font color="#006666">Country</font>(), "UK")
+    <b><font color="#006666">Debug</font></b> "'UK' is in the country list."
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> "'UK' is NOT in the country list !"
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="addmapelement.html">AddMapElement()</a>, <a href="deletemapelement.html">DeleteMapElement()</a>, <a href="mapkey.html">MapKey()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=deletemapelement.html>DeleteMapElement()</a> - <a href=index.html>Map Index</a> - <a href=freemap.html>FreeMap()</a> -&gt;
+
+
+
+</body></html>

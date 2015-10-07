@@ -1,0 +1,44 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>FlipBuffers</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">FlipBuffers()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>FlipBuffers</b></font>()</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Flip the back and front buffers of the current screen. The invisible area is now visible and vice versa, 
+which allowss to do a 'double-buffering' effect (flicker free graphical displays). 
+A screen must have been opened with <a href="openscreen.html">OpenScreen()</a> or <a href="openwindowedscreen.html">OpenWindowedScreen()</a>. The way the buffer are flipped 
+(with or without synchronization) is set by <a href="openscreen.html">OpenScreen()</a> or <a href="openwindowedscreen.html">OpenWindowedScreen()</a>. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+FlipBuffers() has to be called outside a <a href="../2ddrawing/startdrawing.html">StartDrawing()</a> : ... : <a href="../2ddrawing/stopdrawing.html">StopDrawing()</a> program block. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="openscreen.html">OpenScreen()</a>, <a href="openwindowedscreen.html">OpenWindowedScreen()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=examinescreenmodes.html>ExamineScreenModes()</a> - <a href=index.html>Screen Index</a> - <a href=isscreenactive.html>IsScreenActive()</a> -&gt;
+
+
+
+</body></html>

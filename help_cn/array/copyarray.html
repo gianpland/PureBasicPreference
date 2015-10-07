@@ -1,0 +1,80 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CopyArray</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CopyArray()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CopyArray</b></font>(SourceArray(), DestinationArray())</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Copy every elements of 'SourceArray()' into 'DestinationArray()'. 
+After a successful copy, the two arrays are identical. The arrays must have the 
+same number of dimensions. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>SourceArray()</i></td>
+<td width="90%"> 
+ 
+The array to copy from. 
+
+ 
+
+</td></tr>
+<tr><td><i>DestinationArray()</i></td>
+<td> 
+ 
+The array to copy to. Every element previously found in this array will be deleted. 
+This array must be of the same type (native or structured) and the same 
+number of dimensions of the source array. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the copy succeeded or zero if it failed. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Dim</font></b> <font color="#006666">Numbers</font>(5)
+  <b><font color="#006666">Dim</font></b> <font color="#006666">NumbersCopy</font>(10)
+  
+<font color="#006666">  Numbers</font>(0) = 128
+<font color="#006666">  Numbers</font>(5) = 256
+  
+  <b><font color="#006666">Debug</font></b> "Array size before copy: "+<font color="#006666">Str</font>(<font color="#006666">ArraySize</font>(<font color="#006666">NumbersCopy</font>())) <font color="#006666">; will print 10</font>
+  
+<font color="#006666">  CopyArray</font>(<font color="#006666">Numbers</font>(),<font color="#006666"> NumbersCopy</font>())
+  
+  <b><font color="#006666">Debug</font></b> "Array size after copy: "+<font color="#006666">Str</font>(<font color="#006666">ArraySize</font>(<font color="#006666">NumbersCopy</font>())) <font color="#006666">; will print 5</font>
+  <b><font color="#006666">Debug</font></b> <font color="#006666">NumbersCopy</font>(0)
+  <b><font color="#006666">Debug</font></b> <font color="#006666">NumbersCopy</font>(5)
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="../list/copylist.html">CopyList()</a>, <a href="../map/copymap.html">CopyMap()</a> 
+
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=arraysize.html>ArraySize()</a> - <a href=index.html>Array Index</a> - <a href=freearray.html>FreeArray()</a> -&gt;
+
+
+
+</body></html>

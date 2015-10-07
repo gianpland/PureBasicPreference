@@ -1,0 +1,40 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>InitSound</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">InitSound()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>InitSound</b></font>()</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Initializes the sound environment. This function must be always called before 
+any other sound function and should always check its result. If the sound environment fails, 
+it's absolutely necessary to disable all the sound functions calls. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Nonzero if the sound environment has been setup correctly, zero otherwise. 
+
+Possible causes of failure under MS Windows: DirectX 7 isn't available or no sound card are present. If the program 
+need to run on NT4.0, be sure to enable the 'NT4.0 Compliant executable' in the compiler 
+options. 
+
+ 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=getsoundposition.html>GetSoundPosition()</a> - <a href=index.html>Sound Index</a> - <a href=issound.html>IsSound()</a> -&gt;
+
+
+
+</body></html>

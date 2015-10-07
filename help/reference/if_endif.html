@@ -1,0 +1,44 @@
+<html><head><title>If : Else : EndIf</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="5">If : Else : EndIf</font></b></p>
+
+<br><b>Syntax</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">If</font></b> &#060;expression&#062; 
+  ...
+[<b><font color="#006666">ElseIf</font></b> &#060;expression&#062;]
+  ...
+[<b><font color="#006666">Else</font></b>]
+  ...
+<b><font color="#006666">EndIf</font></b> 
+</font></pre></blockquote>
+<b>Description</b><br><blockquote>
+
+
+The <b><font color="#006666">If</font></b> structure is used to achieve tests, and/or change the programmes direction, depending on whether the test is true or false. 
+<b><font color="#006666">ElseIf</font></b> optional command is used for any number of additional tests if the previous test was not true. 
+The <b><font color="#006666">Else</font></b> optional command is used to execute a part of code, if all previous tests were false. 
+Any number of <b><font color="#006666">If</font></b> structures may be nested together. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> a=10 
+    <b><font color="#006666">Debug</font></b> "a=10"
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> "a&#060;&#062;10"
+  <b><font color="#006666">EndIf</font></b>    
+</font></pre>
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> a=10 <b><font color="#006666">And</font></b> b&#062;=10 <b><font color="#006666">Or</font></b> c=20     
+    <b><font color="#006666">If</font></b> b=15
+      <b><font color="#006666">Debug</font></b> "b=15"
+    <b><font color="#006666">Else</font></b>       
+      <b><font color="#006666">Debug</font></b> "Other possibility"
+    <b><font color="#006666">EndIf</font></b>   
+  <b><font color="#006666">Else</font></b>     
+    <b><font color="#006666">Debug</font></b> "Test failure"
+  <b><font color="#006666">EndIf</font></b>  
+</font></pre>
+</body></html>

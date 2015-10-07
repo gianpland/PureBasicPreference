@@ -1,0 +1,72 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ClearMap</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ClearMap()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>ClearMap</b></font>(Map())  </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Clears all the elements in the specified map and releases their memory. After this call 
+the map is still usable, but is empty (i.e. there are no more elements in it). 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>Map()</i></td>
+<td width="90%"> 
+ 
+The map to clear. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+PureBasic will only free the memory for the elements. If you have been using the 
+map for something such as storing handles of objects that you create 
+directly with the OS, there is no way PureBasic (or any other language) can know 
+what they are. Therefore, in cases such as that, you should go through the 
+elements in the map and free the objects yourself. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">NewMap</font></b> <font color="#006666">Country</font>.s()
+
+<font color="#006666">  Country</font>("FR") = "France"
+<font color="#006666">  Country</font>("US") = "United States"
+
+  <font color="#006666">; Proof that items have been added to the map</font>
+<font color="#006666">  MessageRequester</font>("Information", "There are "+<font color="#006666">Str</font>(<font color="#006666">MapSize</font>(<font color="#006666">Country</font>()))+" elements in the map")
+ 
+  <font color="#006666">; Clear the map and show that the map really is empty</font>
+<font color="#006666">  ClearMap</font>(<font color="#006666">Country</font>())
+<font color="#006666">  MessageRequester</font>("Information", "There are "+<font color="#006666">Str</font>(<font color="#006666">MapSize</font>(<font color="#006666">Country</font>()))+" element in the map")
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="addmapelement.html">AddMapElement()</a>, <a href="deletemapelement.html">DeleteMapElement()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addmapelement.html>AddMapElement()</a> - <a href=index.html>Map Index</a> - <a href=copymap.html>CopyMap()</a> -&gt;
+
+
+
+</body></html>

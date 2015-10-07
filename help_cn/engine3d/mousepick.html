@@ -1,0 +1,36 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>MousePick</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">MousePick()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>MousePick</b></font>(#Camera, x, y [, PickMask])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+Simulates a mouse click and returns which object is under the specified 2D point (x,y - in pixels) on the 
+specified #Camera.  'PickMask' specifies the entity mask used while performing the pick. Only the entities with a mask matching 
+the PickMask value will be reported. If this parameter is omitted, all the entities are valid 
+for the pick detection. The mask can be a combination, to select more than one entity group. 
+To have more information about pick mask, see <a href="../entity/createentity.html">CreateEntity()</a>. The returned value can be: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  -1 : Nothing has been detected
+  <font color="#924B72">#PB_World_WaterPick</font>: the click occurred on the water.
+  <font color="#924B72">#PB_World_TerrainPick</font>: the click occurred on a terrain.
+  0 and above: the click occurred on the #Entity. The entity pick is based on its bounding box, not on its mesh.
+</font></pre>
+
+To get more information about the picked object position, use <a href="pickx.html">PickX()</a>, <a href="picky.html">PickY()</a> and <a href="pickz.html">PickZ()</a>. 
+
+ 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=loadworld.html>LoadWorld()</a> - <a href=index.html>Engine3D Index</a> - <a href=mouseraycast.html>MouseRayCast()</a> -&gt;
+
+
+
+</body></html>

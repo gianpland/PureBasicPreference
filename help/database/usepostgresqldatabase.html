@@ -1,0 +1,58 @@
+<html><head><title>UsePostgreSQLDatabase</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">UsePostgreSQLDatabase()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+<font color="#006666"><b>UsePostgreSQLDatabase</b></font>()</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Initialize the PostgreSQL database environment for future use. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+None.
+
+</blockquote><p><b>Return value</b></p><blockquote>
+None.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+PostgreSQL is a powerful, server based database 
+manager which support very large database and high concurrency. It is free to use 
+in commercial projects, unlike MySQL which requires a licence to use it in a non-GPL program. 
+There is no additional driver to install, all is ready to connect a PostgreSQL server. For more information 
+about PostgreSQL: <a href="http://www.postgresql.org">http://www.postgresql.org</a>. 
+<br>
+<br>
+A PostgreSQL database has to be connected using <a href="opendatabase.html">OpenDatabase()</a> before using any other database functions. 
+PostgresSQL specific parameters can be passed in the 'DatabaseName$' parameter of <a href="opendatabase.html">OpenDatabase()</a>: 
+<pre><font face="Courier New, Courier, mono"size="2">  - host: Name of host to connect to.
+  - hostaddr: Numeric IP address of host to connect to.
+  - port: Port number to connect to at the server host.
+  - dbname: The database name. Defaults to be the same as the user name. 
+  - connect_timeout: Maximum wait for connection, in seconds (write as a decimal integer string). 
+                     Zero or not specified means wait indefinitely. 
+                     It is not recommended to use a timeout of less than 2 seconds.
+</font></pre>
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  UsePostgreSQLDatabase</font>()
+
+  <font color="#006666">; You should have a server running on localhost</font>
+  <font color="#006666">;</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenDatabase</font>(0, "host=localhost port=5432", "postgres", "postgres")
+    <b><font color="#006666">Debug</font></b> "Connected to PostgreSQL"
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> "Connection failed: "+<font color="#006666">DatabaseError</font>()
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="opendatabase.html">OpenDatabase()</a>, <a href="usesqlitedatabase.html">UseSQLiteDatabase()</a>, <a href="useodbcdatabase.html">UseODBCDatabase()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=useodbcdatabase.html>UseODBCDatabase()</a> - <a href=index.html>Database Index</a> - <a href=usesqlitedatabase.html>UseSQLiteDatabase()</a> ->
+
+</body></html>

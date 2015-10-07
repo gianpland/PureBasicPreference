@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="2.6.3_11" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>1 - Blue</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112340Z">
+        <seg>1 - 蓝色</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>1 : Underline cursor (default)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140837Z">
+        <seg>1 : Underline 下划线光标 (默认)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>10: Full-height cursor</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140853Z">
+        <seg>10: Full-height 完整高度光标</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>14 - Yellow</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112405Z">
+        <seg>14 - 黄色</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>15 - White</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112412Z">
+        <seg>15 - 白色</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2 - Green</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112342Z">
+        <seg>2 - 绿色</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>4 - Red</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112419Z">
+        <seg>4 - 红色</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>5 : Mid-height cursor</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140844Z">
+        <seg>5 : Mid-height 中高光标</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- &lt;a0&gt;ClearConsole()&lt;/a0&gt; - &lt;a1&gt;Console Index&lt;/a1&gt; - &lt;a2&gt;ConsoleColor()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111634Z">
+        <seg>&lt;- &lt;a0&gt;ClearConsole()&lt;/a0&gt; - &lt;a1&gt;Console 目录&lt;/a1&gt; - &lt;a2&gt;ConsoleColor()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- &lt;a0&gt;CloseConsole()&lt;/a0&gt; - &lt;a1&gt;Console Index&lt;/a1&gt; - &lt;a2&gt;ConsoleCursor()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112356Z">
+        <seg>&lt;- &lt;a0&gt;CloseConsole()&lt;/a0&gt; - &lt;a1&gt;Console 索引&lt;/a1&gt; - &lt;a2&gt;ConsoleCursor()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- &lt;a0&gt;ConsoleColor()&lt;/a0&gt; - &lt;a1&gt;Console Index&lt;/a1&gt; - &lt;a2&gt;ConsoleError()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140959Z">
+        <seg>&lt;- &lt;a0&gt;ConsoleColor()&lt;/a0&gt; - &lt;a1&gt;Console 目录&lt;/a1&gt; - &lt;a2&gt;ConsoleError()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- &lt;a0&gt;ConsoleCursor()&lt;/a0&gt; - &lt;a1&gt;Console Index&lt;/a1&gt; - &lt;a2&gt;ConsoleLocate()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T142135Z">
+        <seg>&lt;- &lt;a0&gt;ConsoleCursor()&lt;/a0&gt; - &lt;a1&gt;Console 索引&lt;/a1&gt; - &lt;a2&gt;ConsoleLocate()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;2DDrawing Index&lt;/a0&gt; - &lt;a1&gt;AlphaBlend()&lt;/a1&gt; -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140307Z">
+        <seg>&lt;a0&gt;2DDrawing 目录&lt;/a0&gt; - &lt;a1&gt;AlphaBlend()&lt;/a1&gt; -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Console Index&lt;/a0&gt; - &lt;a1&gt;CloseConsole()&lt;/a1&gt; -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110829Z">
+        <seg>&lt;a0&gt;Console 索引&lt;/a0&gt; - &lt;a1&gt;CloseConsole()&lt;/a1&gt; -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b4&gt;&lt;f5&gt;If&lt;/f5&gt;&lt;/b4&gt; &lt;f6&gt;OpenConsole&lt;/f6&gt;()
+&lt;f7&gt;      PrintN&lt;/f7&gt;("This is console #"+&lt;f8&gt;Str&lt;/f8&gt;(i))
+&lt;f9&gt;      PrintN&lt;/f9&gt;("Press return to close console")
+&lt;f10&gt;      Input&lt;/f10&gt;()
+&lt;f11&gt;      CloseConsole&lt;/f11&gt;()</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111953Z">
+        <seg>&lt;b4&gt;&lt;f5&gt;If&lt;/f5&gt;&lt;/b4&gt; &lt;f6&gt;OpenConsole&lt;/f6&gt;()
+&lt;f7&gt;      PrintN&lt;/f7&gt;("这是一个控制台 #"+&lt;f8&gt;Str&lt;/f8&gt;(i))
+&lt;f9&gt;      PrintN&lt;/f9&gt;("按回车键关闭控制台")
+&lt;f10&gt;      Input&lt;/f10&gt;()
+&lt;f11&gt;      CloseConsole&lt;/f11&gt;()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A value of 0 means fully transparent and a value of 255 means fully opaque.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135218Z">
+        <seg>零意味着完全透明，255意味着完全不透明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111649Z">
+        <seg>所有</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Any characters printed after calling this function will use the new colors.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112201Z">
+        <seg>调用此函数后控制台上打印的所有字符都将使用您新指定的颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Change the colors used by the text display.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112047Z">
+        <seg>更改用来显示文本的颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changes the display of the cursor, which is the indicator used to show where the next displayed character will be drawn.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141203Z">
+        <seg>更改光标的显示，该指示器将在设置之后显示字符时开始使用。 .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Clears the whole console content using the current background color.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110927Z">
+        <seg>使用当前背景色清除整个控制台内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Close the console previously opened with &lt;a0&gt;OpenConsole()&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111814Z">
+        <seg>使用&lt;a0&gt;OpenConsole()&lt;/a0&gt;打开控制台窗口前请先关闭先前的控制台窗口。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Currently, 3 values are available:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140641Z">
+        <seg>目前有三个值有效：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Description</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110627Z">
+        <seg>概要</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Example</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111620Z">
+        <seg>示例</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>None.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110635Z">
+        <seg>无.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Once the console has been closed, it's not possible to use any console-related functions unless you open the console again.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111853Z">
+        <seg>当年你关闭控制台后，将不能使用任何与控制台有关的函数，除非你再次打开。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Overview</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T113211Z">
+        <seg>概要</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Parameters</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110938Z">
+        <seg>参数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Reference Manual - Index</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T143920Z">
+        <seg>参考手册 - 索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Remarks</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T134225Z">
+        <seg>备注</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Return value</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110643Z">
+        <seg>返回值</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the alpha component of a color value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T134539Z">
+        <seg>返回一个颜色值的alpha分量.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the value of the alpha component.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135129Z">
+        <seg>返回alpha分量的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See Also</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110759Z">
+        <seg>参阅</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Supported OS</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110813Z">
+        <seg>已支持操作系统</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Syntax</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110618Z">
+        <seg>语法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The background color is set with &lt;a0&gt;ConsoleColor()&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110924Z">
+        <seg>使用&lt;a0&gt;ConsoleColor()&lt;/a0&gt;来设置背景色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color to be used for the characters.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112213Z">
+        <seg>此颜色用于字符。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135028Z">
+        <seg>颜色值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color values range from 0 to 15, which are the 16 colors available in console mode:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112335Z">
+        <seg>颜色范围在0-15,控制台模式下只有16种颜色有效:：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The console has to be in graphical mode, see &lt;a1&gt;EnableGraphicalConsole()&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111405Z">
+        <seg>控制台必使用图形模式，请参考 &lt;a1&gt;EnableGraphicalConsole()&lt;/a1&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The console has to be in graphical mode, see &lt;a2&gt;EnableGraphicalConsole()&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140948Z">
+        <seg>控制台必须是图形模式, 请参阅 &lt;a2&gt;EnableGraphicalConsole()&lt;/a2&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The console will automatically be closed when your program ends.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111913Z">
+        <seg>您的程序结束后控制台窗口会自动关闭。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The new height of the cursor indicator.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140615Z">
+        <seg>光标的新高度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The result will be between 0 and 255.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135144Z">
+        <seg>结果在0至255之间。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The string to send.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141536Z">
+        <seg>要发送的字符串。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These functions are useful to perform &lt;a1&gt;Drawing operations&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135003Z">
+        <seg>这些函数对于执行&lt;a1&gt;绘图操作&lt;/a1&gt;非常有用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This function allows you to change the height of the cursor.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141250Z">
+        <seg>此函数允许您更改光标的高度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This must be a 32-bit RGBA value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135044Z">
+        <seg>必须是一个32位RGBA值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This value can be zero (for an invisible cursor) or range from 1 to 10 for the height of the cursor.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140607Z">
+        <seg>光标高度值可以为0(针对隐藏鼠标)或者1至10之间。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To combine red, green, blue and alpha values in order to create a 32-bit RGB color, use the &lt;a0&gt;RGBA()&lt;/a0&gt; function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T134905Z">
+        <seg>要结合红、绿、蓝和Alpha值的顺序创建一个32位颜色，那么轻使用 &lt;a0&gt;RGBA()&lt;/a0&gt; 函数.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Writes the Message string (plus a newline) to the standard error output of the program.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141438Z">
+        <seg>向程序的标准错误输出中写入一个字符串(具有换行符)。</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>

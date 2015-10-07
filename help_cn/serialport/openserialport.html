@@ -1,0 +1,137 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>OpenSerialPort</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">OpenSerialPort()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>OpenSerialPort</b></font>(#SerialPort, SerialPortName$, Bauds, Parity, Data, Stop.f, HandshakeMode, InputBufferSize, OutputBufferSize)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Opens a serial port for use. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#SerialPort</i></td>
+<td width="90%"> 
+ 
+A number to identify the new serial port. 
+<a href="../reference/purebasic_objects.html">#PB_Any</a> can be used to auto-generate this number. 
+
+ 
+
+</td></tr>
+<tr><td><i>SerialPortName$</i></td>
+<td> 
+ 
+Text identifier for the serial port, for example "COM1" on 
+Windows or "/dev/ttyS0" on Linux. 
+
+ 
+
+</td></tr>
+<tr><td><i>Bauds</i></td>
+<td> 
+ 
+Defines the speed of the serial connection and can be one of the following values: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">    50, 75, 110, 150, 300, 600, 1200, 1800, 2400
+    4800, 9600, 19200, 38400, 57600 or 115200
+</font></pre>
+
+</td></tr>
+<tr><td><i>Parity</i></td>
+<td> 
+ 
+Defines how the parity will be handled on the connection. It can be one of the following values: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_SerialPort_NoParity</font>   : No parity
+  <font color="#924B72">#PB_SerialPort_EvenParity</font> : Even parity
+  <font color="#924B72">#PB_SerialPort_MarkParity</font> : Mark parity
+  <font color="#924B72">#PB_SerialPort_OddParity</font>  : Odd parity
+  <font color="#924B72">#PB_SerialPort_SpaceParity</font>: Space parity
+</font></pre>
+
+</td></tr>
+<tr><td><i>Data</i></td>
+<td> 
+ 
+Defines the data length, in byte (usually 7 or 8). 
+
+ 
+
+</td></tr>
+<tr><td><i>Stop</i></td>
+<td> 
+ 
+Sets the number of stop bits (1, 1.5 or 2). 
+
+ 
+
+</td></tr>
+<tr><td><i>HandshakeMode</i></td>
+<td> 
+ 
+The handshake mode. It can be one of the following values: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_SerialPort_NoHandshake</font>     : No handshaking
+  <font color="#924B72">#PB_SerialPort_RtsHandshake</font>    : No handshaking but RTS is set to 1
+  <font color="#924B72">#PB_SerialPort_RtsCtsHandshake</font> : RTS/CTS
+  <font color="#924B72">#PB_SerialPort_XonXoffHandshake</font>: Xon/Xoff
+</font></pre>
+
+</td></tr>
+<tr><td><i>InputBufferSize</i></td>
+<td> 
+ 
+Defines the size of the input buffer, in bytes. 
+
+ 
+
+</td></tr>
+<tr><td><i>OutputBufferSize</i></td>
+<td> 
+ 
+Defines the size of the output buffer, in bytes. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Nonzero if the serial port was successfully opened, zero otherwise 
+(it may be already in use, or the parameters are wrong). If <font color="#924B72">#PB_Any</font> was used 
+for the #SerialPort parameter then the generated number is returned on success. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenSerialPort</font>(0, "COM1", 300, <font color="#924B72">#PB_SerialPort_NoParity</font>, 8, 1, <font color="#924B72">#PB_SerialPort_NoHandshake</font>, 1024, 1024)
+    <b><font color="#006666">Debug</font></b> "Success"
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> "Failed"
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="closeserialport.html">CloseSerialPort()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=isserialport.html>IsSerialPort()</a> - <a href=index.html>SerialPort Index</a> - <a href=readserialportdata.html>ReadSerialPortData()</a> -&gt;
+
+
+
+</body></html>

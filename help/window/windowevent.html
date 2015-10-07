@@ -1,0 +1,83 @@
+<html><head><title>WindowEvent</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">WindowEvent()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Event = <font color="#006666"><b>WindowEvent</b></font>()  </blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Checks if an event has occurred on any of the opened windows. 
+
+</blockquote><p><b>Return value</b></p><blockquote>
+
+The next event from the event queue and or zero if there are no more events. 
+Unlike <a href="waitwindowevent.html">WaitWindowEvent()</a> it doesn't wait for the next event - it always returns immediately. 
+<br>
+<br>
+This makes it useful for window event loops, where other processing needs to be done without waiting 
+for an event to happen (e.g. <a href="../network/index.html">Network</a> transactions) and therefore 
+<a href="waitwindowevent.html">WaitWindowEvent()</a> can't be used. 
+<br>
+<br>
+It must be handled with care though if used on a continuing basis, because unlike 
+<a href="waitwindowevent.html">WaitWindowEvent()</a>, it will not give CPU time to other programs while waiting 
+for an event and therefore consume all CPU power. In this case, either <a href="../system/delay.html">Delay()</a> should 
+be used somewhere in the loop or <a href="waitwindowevent.html">WaitWindowEvent()</a> with a small timeout value. 
+<br>
+<br>
+To get the window number in which the event occurred, use the <a href="eventwindow.html">EventWindow()</a> function. 
+<br>
+<br>
+Possible Events are : 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Event_Menu</font>            : a <a href="../menu/index.html">menu</a> has been selected
+  <font color="#924B72">#PB_Event_Gadget</font>          : a <a href="../gadget/index.html">gadget</a> has been pushed
+  <font color="#924B72">#PB_Event_SysTray</font>         : an icon in the <a href="../systray/index.html">systray</a> zone was clicked
+  <font color="#924B72">#PB_Event_Timer</font>           : a <a href="addwindowtimer.html">timer</a> has reached its timeout
+  <font color="#924B72">#PB_Event_CloseWindow</font>     : the window close gadget has been pushed
+  <font color="#924B72">#PB_Event_Repaint</font>         : the window content has been destroyed and must be repainted (useful for <a href="../2ddrawing/index.html">2D graphics operations</a>)
+  <font color="#924B72">#PB_Event_SizeWindow</font>      : the window has been resized
+  <font color="#924B72">#PB_Event_MoveWindow</font>      : the window has been moved
+  <font color="#924B72">#PB_Event_MinimizeWindow</font>  : the window has been minimized
+  <font color="#924B72">#PB_Event_MaximizeWindow</font>  : the window has been maximized
+  <font color="#924B72">#PB_Event_RestoreWindow</font>   : the window has been restored to normal size (either from a minimum or maximum size)
+  <font color="#924B72">#PB_Event_ActivateWindow</font>  : the window has been activated (got the focus)
+  <font color="#924B72">#PB_Event_DeactivateWindow</font>: the window has been deactivated (lost the focus)
+  <font color="#924B72">#PB_Event_WindowDrop</font>      : a <a href="../dragdrop/index.html">Drag & Drop</a> operation was finished on a window
+  <font color="#924B72">#PB_Event_GadgetDrop</font>      : a <a href="../dragdrop/index.html">Drag & Drop</a> operation was finished on a <a href="../gadget/index.html">gadget</a> 
+  <font color="#924B72">#PB_Event_RightClick</font>      : a right mouse button click has occurred on the window. This can be useful to display a popup menu
+  <font color="#924B72">#PB_Event_LeftClick</font>       : a left mouse button click has occurred on the window
+  <font color="#924B72">#PB_Event_LeftDoubleClick</font> : a left mouse button double-click has occurred on the window
+  
+</font></pre>
+A basic example for event handling can be found in the <a href="waitwindowevent.html">WaitWindowEvent()</a> description. 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+After a <font color="#924B72">#PB_Event_WindowDrop</font> or <font color="#924B72">#PB_Event_GadgetDrop</font> Event, the event functions 
+of the <a href="../dragdrop/index.html">Drag & Drop library</a> can be used to examine and read the dropped data. 
+<br>
+<br>
+<b>Important:</b> The window event loop should not be processed in a <a href="../thread/index.html">thread</a>, as there is some limitation on OS X and Linux. 
+A debugger error will be raised. 
+<br>
+<br>
+Correct way to handle an infinite WindowEvent() loop: 
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Repeat</font></b> 
+    Event =<font color="#006666"> WindowEvent</font>()
+
+    <b><font color="#006666">If</font></b> Event    <font color="#006666">; An event was in the queue so process it </font>
+      .... 
+    <b><font color="#006666">Else</font></b>  
+<font color="#006666">      Delay</font>(1)  <font color="#006666">; No event, let the others apps get some CPU time too ! </font>
+    <b><font color="#006666">EndIf</font></b> 
+  <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
+</font></pre>
+<b>Important:</b> The 'Delay' shouldn't be put after each event, because when lot of events will come 
+(like refresh, gadgets updates etc..) the app will wait between each event. So the delay need to be put 
+when no events are received. Other (recommened) ways is to use <a href="waitwindowevent.html">WaitWindowEvent()</a> with a small timeout value, 
+or setup a timer with <a href="addwindowtimer.html">AddWindowTimer()</a>(). 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=windowbounds.html>WindowBounds()</a> - <a href=index.html>Window Index</a> - <a href=windowheight.html>WindowHeight()</a> ->
+
+</body></html>

@@ -1,0 +1,40 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>LoadMesh</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">LoadMesh()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>LoadMesh</b></font>(#Mesh, Filename$)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+Loads a new #Mesh. If <a href="../reference/purebasic_objects.html">#PB_Any</a> is used 
+as the '#Mesh' parameter, then the new mesh number will be returned as 'Result'. Before loading 
+a mesh, an archive must be specified with <a href="../engine3d/add3darchive.html">Add3DArchive()</a>. 
+<br>
+<br>
+Mesh is required to be in the OGRE .mesh format. A command-line tool based on <a href="http://assimp.sourceforge.net/main_features_formats.html">assimp</a> is available to convert 
+many 3d formats into the OGRE mesh, including materials and animations. It can be downloaded 
+here: <a href="http://www.purebasic.com/download/OgreAssimpConverter.zip">OgreAssimpConverter.zip</a> (Windows only). Some problems 
+have been reported with shadow and converted meshes, if that happen use OgreMeshUpdater.exe on the newly converted mesh and it should fix 
+it. <br>
+<br>
+It is also possible to use existing exporter for Milkshape, Lightwave, Blender or 3DS Max. More 
+information may be found on the <a href="http://www.ogre3d.org/">OGRE website</a>. 
+<br>
+<br>
+If Result equals 0, then the Mesh may not be loaded. 
+If the #Mesh already exists, then it is freed and replaced by a new one. 
+
+ 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=ismesh.html>IsMesh()</a> - <a href=index.html>Mesh Index</a> - <a href=meshface.html>MeshFace()</a> -&gt;
+
+
+
+</body></html>

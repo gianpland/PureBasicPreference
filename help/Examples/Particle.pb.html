@@ -1,0 +1,118 @@
+<html><head><title>Particle.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - Particle
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<font color="#006666">; [F5] = Enable/Disable ParticleEmitter 0
+</font><font color="#006666">; [F6] = SpeedFactor + for ParticleEmitter 1
+</font><font color="#006666">; [F7] = SpeedFactor - for ParticleEmitter 1
+</font>
+<font color="#924B72">#CameraSpeed</font> = 1
+<font color="#924B72">#MaxSpeedFactor</font> = 10
+<font color="#924B72">#MinSpeedFactor</font> = 0
+
+<b><font color="#006666">IncludeFile</font></b> <font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Screen3DRequester.pb"
+
+<b><font color="#006666">Define</font></b>.f KeyX, KeyY, MouseX, MouseY, speedFactor = 1.0, percent = 0.01
+
+<b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
+
+<font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
+  
+<font color="#006666">  InitSprite</font>()
+<font color="#006666">  InitKeyboard</font>()
+<font color="#006666">  InitMouse</font>()
+  
+  <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
+    
+<font color="#006666">    LoadTexture</font>(0, "flare.png")
+    
+<font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> TextureID</font>(0))
+<font color="#006666">      DisableMaterialLighting</font>(0, 1)
+<font color="#006666">      MaterialBlendingMode   </font>(0, <font color="#924B72">#PB_Material_Add</font>)
+        
+<font color="#006666">    CreateParticleEmitter</font>(0, 10, 1, 1, 0)
+<font color="#006666">      ParticleMaterial    </font>(0,<font color="#006666"> MaterialID</font>(0))
+<font color="#006666">      ParticleTimeToLive  </font>(0, 2, 2)
+<font color="#006666">      ParticleEmissionRate</font>(0, 20)
+<font color="#006666">      ParticleSize        </font>(0, 30, 30)
+<font color="#006666">      ParticleColorRange  </font>(0,<font color="#006666"> RGB</font>(255,0,0),<font color="#006666"> RGB</font>(255, 0, 255))
+
+<font color="#006666">    CreateParticleEmitter</font>(1, 10, 1, 1, 0)
+<font color="#006666">      ParticleMaterial    </font>(1,<font color="#006666"> MaterialID</font>(0))
+<font color="#006666">      ParticleTimeToLive  </font>(1, 2, 2)
+<font color="#006666">      ParticleEmissionRate</font>(1, 20)
+<font color="#006666">      ParticleSize        </font>(1, 30, 30)
+<font color="#006666">      ParticleColorRange  </font>(1,<font color="#006666"> RGB</font>(255, 255, 0),<font color="#006666"> RGB</font>(0, 255, 0))
+
+<font color="#006666">    MoveParticleEmitter</font>(1, -50, 0, 0)
+  
+<font color="#006666">    CreateCamera</font>(0, 0, 0, 100, 100)
+<font color="#006666">    MoveCamera</font>(0, 0, 0, 100, <font color="#924B72">#PB_Absolute</font>)
+          
+    <b><font color="#006666">Repeat</font></b>
+<font color="#006666">      Screen3DEvents</font>()
+        
+      <b><font color="#006666">If</font></b> <font color="#006666">ExamineMouse</font>()
+        MouseX = -<font color="#006666">MouseDeltaX</font>() * <font color="#924B72">#CameraSpeed</font> * 0.05
+        MouseY = -<font color="#006666">MouseDeltaY</font>() * <font color="#924B72">#CameraSpeed</font> * 0.05
+      <b><font color="#006666">EndIf</font></b>  
+      
+      <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
+        
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardReleased</font>(<font color="#924B72">#PB_Key_F5</font>)
+          Disable = 1 - Disable
+<font color="#006666">          DisableParticleEmitter</font>(0, Disable)
+        <b><font color="#006666">EndIf</font></b>
+        
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_F6</font>) 
+          speedFactor = speedFactor + percent * (<font color="#924B72">#MaxSpeedFactor</font> - speedFactor)
+<font color="#006666">          ParticleSpeedFactor</font>(1, speedFactor)
+        <b><font color="#006666">EndIf</font></b>
+        
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_F7</font>) 
+          speedFactor = speedFactor + percent * (<font color="#924B72">#MinSpeedFactor</font> - speedFactor)
+<font color="#006666">          ParticleSpeedFactor</font>(1, speedFactor)
+        <b><font color="#006666">EndIf</font></b>
+    
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
+          KeyX = -<font color="#924B72">#CameraSpeed</font> 
+        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
+          KeyX = <font color="#924B72">#CameraSpeed</font> 
+        <b><font color="#006666">Else</font></b>
+          KeyX = 0
+        <b><font color="#006666">EndIf</font></b>
+        
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
+          KeyY = -<font color="#924B72">#CameraSpeed</font> 
+        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
+          KeyY = <font color="#924B72">#CameraSpeed</font> 
+        <b><font color="#006666">Else</font></b>
+          KeyY = 0
+        <b><font color="#006666">EndIf</font></b>
+
+      <b><font color="#006666">EndIf</font></b>
+            
+<font color="#006666">      RotateCamera</font>(0, MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)
+<font color="#006666">      MoveCamera  </font>(0, KeyX, 0, KeyY)
+    
+<font color="#006666">      RenderWorld</font>()
+<font color="#006666">      Screen3DStats</font>()
+
+<font color="#006666">      FlipBuffers</font>()
+    <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>) <b><font color="#006666">Or</font></b> Quit = 1
+  <b><font color="#006666">EndIf</font></b>
+    
+<b><font color="#006666">Else</font></b>
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<b><font color="#006666">EndIf</font></b>
+  
+<b><font color="#006666">End</font></b></font></pre>
+</body></html>

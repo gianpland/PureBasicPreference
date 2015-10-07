@@ -1,0 +1,77 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CreateSphere</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CreateSphere()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CreateSphere</b></font>(#Mesh, Radius [Segments, Rings])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Create a new sphere. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Mesh</i></td>
+<td width="90%"> 
+ 
+The number to identify the new mesh. <a href="../reference/purebasic_objects.html">#PB_Any</a> can be used to 
+auto-generate this number. 
+
+ 
+
+</td></tr>
+<tr><td><i>Radius</i></td>
+<td> 
+ 
+Radius, in world unit, of the sphere. 
+
+ 
+
+</td></tr>
+<tr><td><i>Segments (optional)</i></td>
+<td> 
+ 
+Number of segments to create the sphere. The segments are the vertical lines of the sphere. The more segments, 
+the more realistic the sphere will be, but it will also affect the rendering speed if too many of them are specified. 
+
+ 
+
+</td></tr>
+<tr><td><i>Rings (optional)</i></td>
+<td> 
+ 
+Number of rings to create the sphere. The rings are the horizontal lines of the sphere. The more rings, 
+the more realistic the sphere will be, but it will also affect the rendering speed if too many of them are specified. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the mesh was created successfully and zero if there was an error. 
+If <font color="#924B72">#PB_Any</font> was used as the #Mesh parameter then the new generated number is returned on success. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="freemesh.html">FreeMesh()</a>, <a href="createcylinder.html">CreateCylinder()</a>, <a href="createmesh.html">CreateMesh()</a>, <a href="createcube.html">CreateCube()</a>, <a href="createplane.html">CreatePlane()</a>, <a href="createline3d.html">CreateLine3D()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=createplane.html>CreatePlane()</a> - <a href=index.html>Mesh Index</a> - <a href=finishmesh.html>FinishMesh()</a> -&gt;
+
+
+
+</body></html>

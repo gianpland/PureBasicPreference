@@ -1,0 +1,85 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CreateLine3D</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CreateLine3D()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CreateLine3D</b></font>(#Mesh, x, y, z, Color, x2, y2, z2, Color2)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Create a new 3D line. The line is a wireframe object which can be used to ease debugging. 
+To change the line position, just create it again. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Mesh</i></td>
+<td width="90%"> 
+ 
+The number to identify the new mesh. <a href="../reference/purebasic_objects.html">#PB_Any</a> can be used to 
+auto-generate this number. 
+
+ 
+
+</td></tr>
+<tr><td><i>x, y, z</i></td>
+<td> 
+ 
+The first point coordinate of the line, in world units. 
+
+ 
+
+</td></tr>
+<tr><td><i>Color</i></td>
+<td> 
+ 
+The color to be used by the first point. <a href="../2ddrawing/rgb.html">RGB()</a> can be used to get a valid color. 
+
+ 
+
+</td></tr>
+<tr><td><i>x2, y2, z2</i></td>
+<td> 
+ 
+The second point coordinate of the line, in world units. 
+
+ 
+
+</td></tr>
+<tr><td><i>Color2</i></td>
+<td> 
+ 
+The color to be used by the second point. If this color is different than the color set for the first 
+point, then a gradient between this two colors will be created. <a href="../2ddrawing/rgb.html">RGB()</a> can be used to get a valid color. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the mesh was created successfully and zero if there was an error. 
+If <font color="#924B72">#PB_Any</font> was used as the #Mesh parameter then the new generated number is returned on success. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="freemesh.html">FreeMesh()</a>, <a href="createsphere.html">CreateSphere()</a>, <a href="createmesh.html">CreateMesh()</a>, <a href="createcube.html">CreateCube()</a>, <a href="createplane.html">CreatePlane()</a>, <a href="createcylinder.html">CreateCylinder()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=createcylinder.html>CreateCylinder()</a> - <a href=index.html>Mesh Index</a> - <a href=createmesh.html>CreateMesh()</a> -&gt;
+
+
+
+</body></html>

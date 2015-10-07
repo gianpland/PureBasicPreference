@@ -1,0 +1,48 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>StopDrawing</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">StopDrawing()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>StopDrawing</b></font>()  </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Once all the needed graphics operations (started with <a href="startdrawing.html">StartDrawing()</a>) have been 
+performed, this function must be called to finish the drawing and free all associated resources. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+
+Typically, a normal drawing sequence would look like: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">WindowOutput</font>(0))
+<font color="#006666">    Box</font>(10,10,20,20)
+<font color="#006666">    Line</font>(30,50,100,100)
+    ....
+<font color="#006666">    StopDrawing</font>() 
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="startdrawing.html">StartDrawing()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=startdrawing.html>StartDrawing()</a> - <a href=index.html>2DDrawing Index</a> - <a href=textheight.html>TextHeight()</a> -&gt;
+
+
+
+</body></html>

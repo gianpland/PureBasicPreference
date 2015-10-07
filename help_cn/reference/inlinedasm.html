@@ -1,0 +1,105 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Inline x86 ASM</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="5">Inline x86 ASM</font></b></p>
+
+<p><b>Introduction</b></p><blockquote>
+
+
+
+
+
+PureBasic allows you to include any x86 assembler commands (including MMX and FPU one) directly 
+in the source code, as if it was a real assembler. And it gives you even more: you can use directly 
+any <a href="../reference/variables.html">variables</a> or <a href="../reference/memory.html">pointers</a> in the assembler keywords, you can put any ASM commands on the same line, ... 
+
+On Windows and Linux, PureBasic uses <b>fasm</b> (<a href="http://flatassembler.net/">http://flatassembler.net</a>), so if you want more information about 
+the syntax, just read the <b>fasm</b> guide. <br>
+On OS X, PureBasic uses <b>yasm</b> (<a href="http://yasm.tortall.net/">http://yasm.tortall.net/</a>), so if you want more information about 
+the syntax, just read the <b>yasm</b> guide. <br>
+<br>
+To activate the inline assembler use the compiler directives <a href="../reference/compilerdirectives.html">EnableASM</a> and <a href="../reference/compilerdirectives.html">DisableASM</a>. <br>
+It's possible to enable the ASM syntax coloring in the IDE with the "enable inline ASM syntax coloring" <a href="../reference/ide_compiler.html">compiler option</a>. <br>
+
+</blockquote>
+<p><b>Rules</b></p><blockquote>
+
+
+
+
+
+You have several rules to closely follow if you want to include ASM in a BASIC code : <br>
+<br>
+- The used <a href="../reference/variables.html">variables</a> or <a href="../reference/memory.html">pointers</a> must be declared <b>before</b> to use them in an assembler keyword <br>
+- When you reference a <a href="../reference/general_rules.html">label</a>, you must put the prefix 'l_' before the name. This is because PureBasic add a 'l_' 
+before a BASIC label to avoid conflict with internal labels. The label need to be referenced in lowercase 
+when using the in-line ASM. If the label is defined in a <a href="../reference/procedures.html">procedure</a>, then its prefix is 'll_procedurename_', in lowercase. <br>
+- When you reference a <a href="../reference/module.html">module</a> item, you must put the prefix 'module_name.' all in lowercase before the item. 
+
+ 
+
+<p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  MOV ebx,l_mylabel
+  ...
+  MyLabel:
+</font></pre>
+
+
+
+- The errors in an ASM part are not reported by PureBasic but by FASM. Just check your code if a such error happen. <br>
+- With enabled InlineASM you can't use ASM keywords as label names in your source. <br>
+- On x86 processors, the available volatile registers are: eax, ecx and edx. All others must be always preserved. <br>
+- On x64 processors, the available volatile registers are: rax, rcx, rdx, r8, r9, xmm0, xmm1, xmm2 and xmm3. All others must be always preserved. <br>
+- Windows only: an ASM help-file could be downloaded <a href="http://www.purebasic.com/download/AsmHelp.zip">here</a>. If you place the 'ASM.HLP' in the 'Help/' folder of PureBasic, 
+you can also get help on ASM keywords with F1. (Note: this feature is only enabled, when InlineASM is enabled). <br>
+<br>
+When using assembler in a <a href="../reference/procedures.html">procedure</a>, you have to be aware of several important things:  <br>
+<br>
+- To return directly the 'eax' (or 'rax' on x64) register content, just use <b><font color="#006666">ProcedureReturn</font></b>, without any expression. 
+It will let the 'eax' (or 'rax' on x64) register content untouched and use it as return-value. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b>.l <font color="#006666">MyTest</font>()
+    MOV eax, 45
+    <b><font color="#006666">ProcedureReturn</font></b>  <font color="#006666">; The returned value will be 45</font>
+  <b><font color="#006666">EndProcedure</font></b>
+</font></pre>
+
+
+
+- Local variables in PureBasic are directly indexed by the stack pointer, which means if 
+the stack pointer change via an ASM instruction (like PUSH, POP etc..) the variable index will 
+be wrong and direct variable reference won't work anymore. 
+<br>
+<br>
+- It's possible to pass directly an assembly line to the assembler without being processed by the compiler 
+by using the '!' character at the line start. This allow to have a full access to the assembler directives. 
+When using this, it's possible to reference the local variables using the notation 
+'p.v_variablename' for a regular variable or 'p.p_variablename' for a pointer 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">Test</font>(*Pointer, Variable)
+    ! MOV dword [p.p_Pointer], 20
+    ! MOV dword [p.v_Variable], 30
+    <b><font color="#006666">Debug</font></b> *Pointer
+    <b><font color="#006666">Debug</font></b> Variable
+  <b><font color="#006666">EndProcedure</font></b>
+  
+<font color="#006666">  Test</font>(0, 0)
+</font></pre>
+
+
+</blockquote><p><b>示例</b></p><blockquote>
+<a href="../Examples/AsmInline.pb.html">AsmInline.pb</a>
+
+</body></html>

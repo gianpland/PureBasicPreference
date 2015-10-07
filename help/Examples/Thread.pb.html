@@ -1,0 +1,26 @@
+<html><head><title>Thread.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - Thread example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<b><font color="#006666">Procedure</font></b> <font color="#006666">AlertThread</font>(Parameter)
+
+  <b><font color="#006666">Repeat</font></b>
+    <b><font color="#006666">Debug</font></b> "Alert !"
+<font color="#006666">    Delay</font>(3000)
+  <b><font color="#006666">ForEver</font></b>
+
+<b><font color="#006666">EndProcedure</font></b>
+
+<font color="#006666">CreateThread</font>(@AlertThread(), 154)
+
+<font color="#006666">MessageRequester</font>("Info", "It will display an alert every 3 seconds."+<font color="#924B72">#LF$</font>+"Click To finish the program", 0) 
+</font></pre>
+</body></html>

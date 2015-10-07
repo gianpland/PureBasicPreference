@@ -1,0 +1,87 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>SetFTPDirectory</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">SetFTPDirectory()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>SetFTPDirectory</b></font>(#Ftp, Directory$)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Changes the current #Ftp directory, relative to the current directory. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Ftp</i></td>
+<td width="90%"> 
+ 
+The connection to use. 
+
+ 
+
+</td></tr>
+<tr><td><i>Directory$</i></td>
+<td> 
+ 
+The directory to change to. This parameter must refer to a directory inside 
+the current FTP directory. Nested paths are not allowed. Use the value ".." to return 
+to the parent directory of the current directory. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the operation was successful and zero if it failed. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+To get the current FTP directory, use the <a href="getftpdirectory.html">GetFTPDirectory()</a> function. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  InitNetwork</font>()
+  
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenFTP</font>(0, "ftp.free.fr", "anonymous", "")
+    
+    <b><font color="#006666">Debug</font></b> "Successfully connected"
+    
+    <b><font color="#006666">If</font></b> <font color="#006666">SetFTPDirectory</font>(0, "pub")
+      <b><font color="#006666">If</font></b> <font color="#006666">SetFTPDirectory</font>(0, "Linux")
+        <b><font color="#006666">Debug</font></b> "Cool, changed to '/pub/Linux'"
+        <b><font color="#006666">Debug</font></b> <font color="#006666">GetFTPDirectory</font>(0)
+      <b><font color="#006666">Else</font></b>
+        <b><font color="#006666">Debug</font></b> "Can't change to '/pub/Linux'"
+      <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">Else</font></b>
+      <b><font color="#006666">Debug</font></b> "Can't change to 'pub'"
+    <b><font color="#006666">EndIf</font></b>
+    
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> "Can't connect to ftp.free.fr"
+  <b><font color="#006666">EndIf</font></b>  
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="getftpdirectory.html">GetFTPDirectory()</a>, <a href="examineftpdirectory.html">ExamineFTPDirectory()</a>, <a href="sendftpfile.html">SendFTPFile()</a>, <a href="receiveftpfile.html">ReceiveFTPFile()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=sendftpfile.html>SendFTPFile()</a> - <a href=index.html>Ftp Index</a></body></html>

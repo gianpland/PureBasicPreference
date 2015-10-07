@@ -1,0 +1,116 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>DragFiles</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">DragFiles()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>DragFiles</b></font>(Files$ [, Actions])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Starts a Drag &amp; Drop operation with a list of filenames. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>Files$</i></td>
+<td width="90%"> 
+ 
+The list of filenames or directories to drag. Multiple filenames should be separated with a 
+<a href="../string/chr.html">Chr(10)</a> (linefeed) character. Each filename must include its full path, as the 
+target application will not know how to resolve relative names. The filenames must refer to existing files, 
+so the target application can access them. 
+
+ 
+
+</td></tr>
+<tr><td><i>Actions (optional)</i></td>
+<td> 
+ 
+A combination of the Drag &amp; Drop actions that should be allowed for the files. 
+If the parameter is not specified, <font color="#924B72">#PB_Drag_Copy</font> will be the only allowed action. 
+Possible actions are: (they can be combined with '|') 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drag_Copy</font>: The files can be copied
+  <font color="#924B72">#PB_Drag_Move</font>: The files can be moved
+  <font color="#924B72">#PB_Drag_Link</font>: The files can be linked
+</font></pre>
+
+
+
+The user can decide which of these actions to take by pressing modifier keys like Ctrl or Shift. The actions 
+that can really be taken also depend on the actions allowed by the drop target. 
+(On MacOSX, the actions are only treated as a suggestion. The drop target can still choose another action.) 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns one of the above Drag &amp; Drop action values to indicate what action the user took, or 
+<font color="#924B72">#PB_Drag_None</font> if the user aborted the Drag &amp; Drop operation. 
+<br>
+<br>
+Note that unlike with the other functions that start Drag &amp; Drop, nothing should be done when  <font color="#924B72">#PB_Drag_Move</font> 
+is returned. As the dragged data is only the filename and not the file itself, any action that is taken on the file 
+must be done by the drag target. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+Drag &amp; Drop can basically be started any time, but the 
+left mouse button should be currently pressed as otherwise the operation will end immediately without success. 
+The usual time to start a Drag &amp; Drop operation is when a <a href="../gadget/index.html">Gadget</a> reported an event with 
+<a href="../window/eventtype.html">EventType()</a> of <font color="#924B72">#PB_EventType_DragStart</font>. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Select some files or folders and drag them to another application</font>
+  <font color="#006666">;</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(1, 200, 200, 400, 400, "Drag &amp; Drop", <font color="#924B72">#PB_Window_SystemMenu</font>)
+<font color="#006666">    ExplorerListGadget</font>(1, 10, 10, 380, 380, "*", <font color="#924B72">#PB_Explorer_MultiSelect</font>)
+  
+    <b><font color="#006666">Repeat</font></b>
+      Event =<font color="#006666"> WaitWindowEvent</font>()  
+          
+      <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Gadget</font> <b><font color="#006666">And</font></b> <font color="#006666">EventGadget</font>() = 1 <b><font color="#006666">And</font></b> <font color="#006666">EventType</font>() = <font color="#924B72">#PB_EventType_DragStart</font>
+        Files$ = ""       
+        <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> <font color="#006666">CountGadgetItems</font>(1)-1
+          <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetItemState</font>(1, i) &amp; <font color="#924B72">#PB_Explorer_Selected</font>
+            Files$ +<font color="#006666"> GetGadgetText</font>(1) +<font color="#006666"> GetGadgetItemText</font>(1, i) +<font color="#006666"> Chr</font>(10)
+          <b><font color="#006666">EndIf</font></b>
+        <b><font color="#006666">Next</font></b> i        
+        
+<font color="#006666">        DragFiles</font>(Files$)
+      <b><font color="#006666">EndIf</font></b>      
+      
+    <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="dragtext.html">DragText()</a>, <a href="dragimage.html">DragImage()</a>, <a href="dragprivate.html">DragPrivate()</a>, <a href="dragosformats.html">DragOSFormats()</a>, 
+<a href="setdragcallback.html">SetDragCallback()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>DragDrop Index</a> - <a href=dragimage.html>DragImage()</a> -&gt;
+
+
+
+</body></html>

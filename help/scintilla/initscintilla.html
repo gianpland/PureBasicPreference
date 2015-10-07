@@ -1,0 +1,36 @@
+<html><head><title>InitScintilla</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">InitScintilla()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Result = <font color="#006666"><b>InitScintilla</b></font>([LibraryName$])</blockquote>
+
+<b>Description</b><br><blockquote>
+
+Loads the Scintilla DLL which is needed to use the commands of this library. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>LibraryName$ (optional)</i></td>
+<td width="90%"> 
+Specifies the path and name of the DLL file (default is 'scintilla.dll'). 
+The scintilla DLL file is included in the "Compilers" folder of the PureBasic package. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Nonzero if the library was loaded successfully, zero otherwise. On OS X and Linux, the return value is always 
+<font color="#924B72">#True</font> as the library is linked statically. 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+This command is useful only on Windows, as on the other OS, the scintilla library is 
+linked statically with the executable and therefore does not need to be loaded or distributed with the program. 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>Windows</Blockquote></p><center><a href=index.html>Scintilla Index</a> - <a href=scintillagadget.html>ScintillaGadget()</a> ->
+
+</body></html>

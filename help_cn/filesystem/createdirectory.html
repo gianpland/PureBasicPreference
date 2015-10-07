@@ -1,0 +1,63 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CreateDirectory</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CreateDirectory()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CreateDirectory</b></font>(DirectoryName$)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+Creates a new directory. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>DirectoryName$</i></td>
+<td width="90%"> 
+ 
+The name of the new directory. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the operation was successful or zero if it failed. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+This function fails if the parent directory of the new directory does not exist. To create 
+multiple levels of directories, this function has to be called for each directory level 
+to create separately. 
+
+
+ 
+
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="copydirectory.html">CopyDirectory()</a>, <a href="examinedirectory.html">ExamineDirectory()</a>, <a href="deletedirectory.html">DeleteDirectory()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=copyfile.html>CopyFile()</a> - <a href=index.html>FileSystem Index</a> - <a href=deletedirectory.html>DeleteDirectory()</a> -&gt;
+
+
+
+</body></html>

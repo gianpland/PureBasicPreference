@@ -1,0 +1,64 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>FinishFingerprint</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">FinishFingerprint()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result$ = <font color="#006666"><b>FinishFingerprint</b></font>(#Fingerprint)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Finishes the calculation of a checksum started by <a href="examinemd5fingerprint.html">ExamineMD5Fingerprint()</a> 
+or <a href="examinesha1fingerprint.html">ExamineSHA1Fingerprint()</a> and returns the checksum as a string. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#FingerPrint</i></td>
+<td width="90%"> 
+ 
+The fingerprint to finish. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns the checksum in the same string format as <a href="md5fingerprint.html">MD5Fingerprint()</a> or 
+<a href="sha1fingerprint.html">SHA1Fingerprint()</a>. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+This command should be called to finish a checksum calculation, even if the checksum is actually 
+no longer needed as it frees up any data associated with the checksum calculation as well. 
+<br>
+<br>
+See <a href="examinemd5fingerprint.html">ExamineMD5Fingerprint()</a> or <a href="examinesha1fingerprint.html">ExamineSHA1Fingerprint()</a> 
+for a code example and more information. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="examinemd5fingerprint.html">ExamineMD5Fingerprint()</a>, <a href="examinesha1fingerprint.html">ExamineSHA1Fingerprint()</a>, <a href="nextfingerprint.html">NextFingerprint()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=finishcipher.html>FinishCipher()</a> - <a href=index.html>Cipher Index</a> - <a href=isfingerprint.html>IsFingerprint()</a> -&gt;
+
+
+
+</body></html>

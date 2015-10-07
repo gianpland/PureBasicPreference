@@ -1,0 +1,56 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>UnlockMutex</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">UnlockMutex()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>UnlockMutex</b></font>(Mutex)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Unlocks a mutex previously locked by <a href="lockmutex.html">LockMutex()</a>. The mutex is then available 
+again for other threads to lock it. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>Mutex</i></td>
+<td width="90%"> 
+ 
+The mutex to unlock. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+A mutex can only be unlocked by the thread that also locked it. 
+<br>
+<br>
+See <a href="createmutex.html">CreateMutex()</a> for a code example. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="lockmutex.html">LockMutex()</a>, <a href="createmutex.html">CreateMutex()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=trysemaphore.html>TrySemaphore()</a> - <a href=index.html>Thread Index</a> - <a href=waitsemaphore.html>WaitSemaphore()</a> -&gt;
+
+
+
+</body></html>

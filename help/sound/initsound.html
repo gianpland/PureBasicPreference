@@ -1,0 +1,28 @@
+<html><head><title>InitSound</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">InitSound()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Result = <font color="#006666"><b>InitSound</b></font>()</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Initializes the sound environment. This function must be always called before 
+any other sound function and should always check its result. If the sound environment fails, 
+it's absolutely necessary to disable all the sound functions calls. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+None.
+
+
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Nonzero if the sound environment has been setup correctly, zero otherwise. 
+
+Possible causes of failure under MS Windows: DirectX 7 isn't available or no sound card are present. If the program 
+need to run on NT4.0, be sure to enable the 'NT4.0 Compliant executable' in the compiler 
+options. 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=getsoundposition.html>GetSoundPosition()</a> - <a href=index.html>Sound Index</a> - <a href=issound.html>IsSound()</a> ->
+
+</body></html>

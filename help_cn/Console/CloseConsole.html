@@ -1,0 +1,38 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CloseConsole</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CloseConsole()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>CloseConsole</b></font>()</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+使用<a href="openconsole.html">OpenConsole()</a>打开控制台窗口前请先关闭先前的控制台窗口。当年你关闭控制台后，将不能使用任何与控制台有关的函数，除非你再次打开。您的程序结束后控制台窗口会自动关闭。 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 4
+    <b><font color="#006666">If</font></b> <font color="#006666">OpenConsole</font>()
+<font color="#006666">      PrintN</font>("这是一个控制台 #"+<font color="#006666">Str</font>(i))
+<font color="#006666">      PrintN</font>("按回车键关闭控制台")
+<font color="#006666">      Input</font>()
+<font color="#006666">      CloseConsole</font>()
+    <b><font color="#006666">EndIf</font></b>
+  <b><font color="#006666">Next</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="openconsole.html">OpenConsole()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=clearconsole.html>ClearConsole()</a> - <a href=index.html>Console 目录</a> - <a href=consolecolor.html>ConsoleColor()</a> -&gt;
+
+</body></html>

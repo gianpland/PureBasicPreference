@@ -1,0 +1,58 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CloseFile</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CloseFile()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>CloseFile</b></font>(#File)</blockquote>
+
+<b>概要</b><br><blockquote>
+
+
+
+Close the specified file. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#File</i></td>
+<td width="90%"> 
+ 
+The file to close. If <font color="#924B72">#PB_All</font> is specified, all the remaining files are closed. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+Once the file is closed, it may not be used anymore. Closing a file ensures the buffer will 
+effectively be put to the disk. 
+<br>
+<br>
+All remaining opened files are automatically closed when the program ends. 
+<br>
+<br>
+For an example see the <a href="readfile.html">ReadFile()</a> or the <a href="createfile.html">CreateFile()</a> functions. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="createfile.html">CreateFile()</a>, <a href="openfile.html">OpenFile()</a>, <a href="readfile.html">ReadFile()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>File Index</a> - <a href=createfile.html>CreateFile()</a> -&gt;
+
+
+
+</body></html>

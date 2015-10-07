@@ -1,0 +1,75 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>MD5FileFingerprint</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">MD5FileFingerprint()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result$ = <font color="#006666"><b>MD5FileFingerprint</b></font>(Filename$ [, Offset [, Length]])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Returns a 32 characters long MD5 (Message Digest 5) hash code for the specified file. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>FileName$</i></td>
+<td width="90%"> 
+ 
+The file of which the fingerprint should be calculated. 
+
+ 
+
+</td></tr>
+<tr><td><i>Offset (optional)</i></td>
+<td> 
+ 
+The offset (in bytes) from the start of the file to begin the checksum calculation. 
+
+ 
+
+</td></tr>
+<tr><td><i>Length (optional)</i></td>
+<td> 
+ 
+The length (in bytes) to use for the checksum calculation. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns the hash code if the calculation was successful. 
+If the file isn't found or an error has happened, the result will be empty. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+See <a href="md5fingerprint.html">MD5Fingerprint()</a> for more information on the MD5 algorithm. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="md5fingerprint.html">MD5Fingerprint()</a>, <a href="examinemd5fingerprint.html">ExamineMD5Fingerprint()</a>, 
+<a href="sha1filefingerprint.html">SHA1FileFingerprint()</a>, <a href="crc32filefingerprint.html">CRC32FileFingerprint()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=isfingerprint.html>IsFingerprint()</a> - <a href=index.html>Cipher Index</a> - <a href=md5fingerprint.html>MD5Fingerprint()</a> -&gt;
+
+
+
+</body></html>

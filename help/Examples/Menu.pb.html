@@ -1,0 +1,85 @@
+<html><head><title>Menu.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - Menu example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<font color="#006666">;
+</font><font color="#006666">; We just have to open a window and see when an event happen on the menu
+</font><font color="#006666">;
+</font>
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 150, 195, 260, "PureBasic - Menu")
+
+  <font color="#006666">;
+</font>  <font color="#006666">; Create the menu. The indent is very important here for a good lisibility
+</font>  <font color="#006666">;
+</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))
+<font color="#006666">    MenuTitle</font>("File")
+<font color="#006666">      MenuItem</font>( 1, "&Load...")
+<font color="#006666">      MenuItem</font>( 2, "Save")
+<font color="#006666">      MenuItem</font>( 3, "Save As...")
+<font color="#006666">      MenuBar</font>()
+<font color="#006666">      OpenSubMenu</font>("Recents")
+<font color="#006666">        MenuItem</font>( 5, "Pure.png")
+<font color="#006666">        MenuItem</font>( 6, "Basic.jpg")
+<font color="#006666">        OpenSubMenu</font>("Even more !")
+<font color="#006666">          MenuItem</font>( 12, "Yeah")
+<font color="#006666">        CloseSubMenu</font>()
+<font color="#006666">        MenuItem</font>( 13, "Rocks.tga")
+<font color="#006666">      CloseSubMenu</font>()
+<font color="#006666">      MenuBar</font>()
+<font color="#006666">      MenuItem</font>( 7, "&Quit")
+
+<font color="#006666">    MenuTitle</font>("Edition")
+<font color="#006666">      MenuItem</font>( 8, "Cut")
+<font color="#006666">      MenuItem</font>( 9, "Copy")
+<font color="#006666">      MenuItem</font>(10, "Paste")
+      
+<font color="#006666">    MenuTitle</font>("?")
+<font color="#006666">      MenuItem</font>(11, "About")
+
+  <b><font color="#006666">EndIf</font></b>
+  
+<font color="#006666">  DisableMenuItem</font>(0, 3, 1)
+<font color="#006666">  DisableMenuItem</font>(0, 13, 1)
+  
+  <font color="#006666">;
+</font>  <font color="#006666">; This is the 'event loop'. All the user actions are processed here.
+</font>  <font color="#006666">; It's very easy to understand: when an action occurs, the Event
+</font>  <font color="#006666">; isn't 0 and we just have to see what have happened...
+</font>  <font color="#006666">;
+</font>  
+  <b><font color="#006666">Repeat</font></b>
+
+    <b><font color="#006666">Select</font></b> <font color="#006666">WaitWindowEvent</font>()
+
+      <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Menu</font>
+
+        <b><font color="#006666">Select</font></b> <font color="#006666">EventMenu</font>()  <font color="#006666">; To see which menu has been selected
+</font>
+          <b><font color="#006666">Case</font></b> 11 <font color="#006666">; About
+</font><font color="#006666">            MessageRequester</font>("About", "Cool Menu example", 0)
+            
+          <b><font color="#006666">Default</font></b>
+<font color="#006666">            MessageRequester</font>("Info", "MenuItem: "+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>()), 0)
+
+        <b><font color="#006666">EndSelect</font></b>
+
+      <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_CloseWindow</font>
+        Quit = 1
+
+    <b><font color="#006666">EndSelect</font></b>
+
+  <b><font color="#006666">Until</font></b> Quit = 1
+
+<b><font color="#006666">EndIf</font></b>
+
+<b><font color="#006666">End</font></b>  </font></pre>
+</body></html>

@@ -1,0 +1,44 @@
+<html><head><title>PauseSound</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">PauseSound()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+<font color="#006666"><b>PauseSound</b></font>(#Sound [, Channel])</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Pause the sound. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Sound</i></td>
+<td width="90%"> 
+The sound to use. If <font color="#924B72">#PB_All</font> is specified, all the sounds (and all channels) are paused. 
+
+</td></tr>
+<tr><td><i>Channel (optional)</i></td>
+<td> 
+The channel to use. It's the value returned by <a href="playsound.html">PlaySound()</a> when using the 
+<font color="#924B72">#PB_Sound_MultiChannel</font> flag. If <font color="#924B72">#PB_All</font> is specified, all the channels of the sound are paused. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+None.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+Sounds loaded with the <font color="#924B72">#PB_Sound_Streaming</font> flag are not supported. 
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="loadsound.html">LoadSound()</a>, <a href="resumesound.html">ResumeSound()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=loadsound.html>LoadSound()</a> - <a href=index.html>Sound Index</a> - <a href=playsound.html>PlaySound()</a> ->
+
+</body></html>

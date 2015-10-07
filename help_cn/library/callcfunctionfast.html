@@ -1,0 +1,83 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CallCFunctionFast</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CallCFunctionFast()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CallCFunctionFast</b></font>(*FunctionPointer [,Parameter1 [, Parameter2...]])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Calls a function directly, using its address. The function is expected to use the cdecl calling 
+convention (the convention used by the C language). 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>*FunctionPointer</i></td>
+<td width="90%"> 
+ 
+The address of the function to call. 
+<br>
+<br>
+This pointer may be found using the 
+<a href="getfunction.html">GetFunction()</a>, <a href="getfunctionentry.html">GetFunctionEntry()</a> or <a href="libraryfunctionaddress.html">LibraryFunctionAddress()</a> functions. 
+The use of this function is the fastest method with which to call library functions, especially when 
+the results of a call to: GetFunction() or LibraryFunctionAddress() have been stored. This is due to 
+the fact that this function is not required to search for the name of the library function. 
+
+ 
+
+</td></tr>
+<tr><td><i>Parameter1, Parameter2, ...</i></td>
+<td> 
+ 
+The parameters for the function. The number of parameters must match the parameters 
+of the called function. The maximum number of supported parameters is 20. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns the return-value of the called function. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+If the function is described as 'cdecl' then the use of this function is required. However, 
+most DLLs used within the Microsoft Windows OS do not use this form, so <a href="callfunctionfast.html">CallFunctionFast()</a> 
+should be sufficient in most cases. 
+@oselse
+To call a function that uses the stdcall calling convention, use the <a href="callfunctionfast.html">CallFunctionFast()</a> function. 
+
+<br>
+<br>
+Note: This function is not very flexible and does not handle string/float/double/quad parameters or string/float/double/quad returns. 
+The use of: <a href="../reference/prototypes.html">prototypes</a> is now strongly recommended. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="getfunction.html">GetFunction()</a>, <a href="callfunctionfast.html">CallFunctionFast()</a>, <a href="../reference/prototypes.html">prototypes</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=callcfunction.html>CallCFunction()</a> - <a href=index.html>Library Index</a> - <a href=callfunction.html>CallFunction()</a> -&gt;
+
+
+
+</body></html>

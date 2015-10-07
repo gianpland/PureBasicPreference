@@ -1,0 +1,78 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>StartDrawing</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">StartDrawing()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>StartDrawing</b></font>(OutputID)  </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Change the current drawing output to the specified output. After setting this, 
+all drawing functions are rendered to this output. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>OutputID</i></td>
+<td width="90%"> 
+ 
+The output to draw on. It can be obtained with the following functions: 
+<br>
+<br>
+<a href="../window/windowoutput.html">WindowOutput()</a>: Graphics will be rendered directly on the Window 
+<br>
+<a href="../screen/screenoutput.html">ScreenOutput()</a>: Graphics will be rendered directly on the Screen (for games) 
+<br>
+<a href="../sprite/spriteoutput.html">SpriteOutput()</a>: Graphics will be rendered directly on the Sprite (for games) 
+<br>
+<a href="../image/imageoutput.html">ImageOutput()</a>: Graphics will be rendered directly on the Image data (see <a href="../image/createimage.html">CreateImage()</a>) 
+<br>
+<a href="../printer/printeroutput.html">PrinterOutput()</a>: Graphics will be rendered directly on the Printer 
+<br>
+<a href="../gadget/canvasoutput.html">CanvasOutput()</a>: Graphics will be rendered directly on the <a href="../gadget/canvasgadget.html">CanvasGadget()</a> 
+<br>
+<a href="../texture/textureoutput.html">TextureOutput()</a>: Graphics will be rendered directly on the Texture (for 3D games) 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if drawing is possible or zero if the operation failed. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+Once all drawing operations are finished, <a href="stopdrawing.html">StopDrawing()</a> must be called. 
+<br>
+<br>
+If "Create thread-safe executable" is enabled in the <a href="../reference/ide_compiler.html">compiler options</a> then 
+every thread has its own current drawing output, which means two threads can do drawing on separate 
+outputs at the same time. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="stopdrawing.html">StopDrawing()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=setorigin.html>SetOrigin()</a> - <a href=index.html>2DDrawing Index</a> - <a href=stopdrawing.html>StopDrawing()</a> -&gt;
+
+
+
+</body></html>

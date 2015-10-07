@@ -64,7 +64,7 @@ A basic example for event handling can be found in the <a href="waitwindowevent.
 
  
 
-</blockquote><p><b>备注</b></p><blockquote>
+</blockquote><p><b>Remarks</b></p><blockquote>
 
 
 
@@ -78,14 +78,14 @@ A debugger error will be raised.
 <br>
 Correct way to handle an infinite WindowEvent() loop: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Repeat</font></b>
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Repeat</font></b> 
     Event =<font color="#006666"> WindowEvent</font>()
 
     <b><font color="#006666">If</font></b> Event    <font color="#006666">; An event was in the queue so process it </font>
-      ....
+      .... 
     <b><font color="#006666">Else</font></b>  
 <font color="#006666">      Delay</font>(1)  <font color="#006666">; No event, let the others apps get some CPU time too !</font>
-    <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">EndIf</font></b> 
   <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
 </font></pre>
 <b>Important:</b> The 'Delay' shouldn't be put after each event, because when lot of events will come 

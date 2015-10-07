@@ -1,0 +1,44 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>EventDropAction</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">EventDropAction()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>EventDropAction</b></font>()</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+After a <font color="#924B72">#PB_Event_GadgetDrop</font> or <font color="#924B72">#PB_Event_WindowDrop</font> is received by 
+<a href="../window/waitwindowevent.html">WaitWindowEvent()</a> or <a href="../window/windowevent.html">WindowEvent()</a>, this 
+function returns the action that should be taken with the data. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns one of the following values: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drag_Copy</font>: The data should be copied
+  <font color="#924B72">#PB_Drag_Move</font>: The data should be moved (The drag source is responsible for removing the original data)
+  <font color="#924B72">#PB_Drag_Link</font>: The data should be linked
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="enablegadgetdrop.html">EnableGadgetDrop()</a>, <a href="enablewindowdrop.html">EnableWindowDrop()</a>, 
+<a href="eventdroptype.html">EventDropType()</a>, <a href="eventdropx.html">EventDropX()</a>, <a href="eventdropy.html">EventDropY()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=enablewindowdrop.html>EnableWindowDrop()</a> - <a href=index.html>DragDrop Index</a> - <a href=eventdropbuffer.html>EventDropBuffer()</a> -&gt;
+
+
+
+</body></html>

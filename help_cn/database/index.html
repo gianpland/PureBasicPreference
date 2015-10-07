@@ -1,0 +1,76 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Database</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">PureBasic - Database</font></b></p>
+
+<p><b>Overview</b></p><blockquote>
+
+
+
+The database library is an easy set of functions to access SQLite, PostgreSQL or any database type (Oracle, MySQL, Access, etc) 
+via ODBC. Accessing and updating data is done using SQL queries, therefore it 
+is necessary to have an understanding of SQL syntax. 
+<br>
+<br>
+Here are some links about SQL syntax: 
+<br>
+<a href="http://www.w3schools.com/sql/default.asp">W3Schools SQL Tutorial</a> 
+<br>
+<a href="http://www.hwaci.com/sw/sqlite/lang.html">SQLite SQL functions</a> 
+<br>
+<a href="http://www.postgresql.org/docs/8.4/interactive/index.html">PostgreSQL manual</a> 
+<br>
+<br>
+Database programming starts by initializing the database environment using <a href="useodbcdatabase.html">UseODBCDatabase()</a>, 
+<a href="usesqlitedatabase.html">UseSQLiteDatabase()</a>, and <a href="usepostgresqldatabase.html">UsePostgreSQLDatabase()</a>. 
+
+<br>
+<br>
+Note: Under Windows, prior to using an ODBC database, it is necessary to establish an ODBC "User Data Source" 
+which makes your database available via ODBC and useable with this Database library. For more information, 
+refer to Windows's ODBC help document. 
+
+ 
+
+</blockquote><p><b>Command Index</b><blockquote>
+<a href="affecteddatabaserows.html">AffectedDatabaseRows</a><br>
+<a href="checkdatabasenull.html">CheckDatabaseNull</a><br>
+<a href="closedatabase.html">CloseDatabase</a><br>
+<a href="databasecolumnindex.html">DatabaseColumnIndex</a><br>
+<a href="databasecolumnname.html">DatabaseColumnName</a><br>
+<a href="databasecolumnsize.html">DatabaseColumnSize</a><br>
+<a href="databasecolumntype.html">DatabaseColumnType</a><br>
+<a href="databasecolumns.html">DatabaseColumns</a><br>
+<a href="databasedriverdescription.html">DatabaseDriverDescription</a><br>
+<a href="databasedrivername.html">DatabaseDriverName</a><br>
+<a href="databaseerror.html">DatabaseError</a><br>
+<a href="databaseid.html">DatabaseID</a><br>
+<a href="databasequery.html">DatabaseQuery</a><br>
+<a href="databaseupdate.html">DatabaseUpdate</a><br>
+<a href="examinedatabasedrivers.html">ExamineDatabaseDrivers</a><br>
+<a href="finishdatabasequery.html">FinishDatabaseQuery</a><br>
+<a href="firstdatabaserow.html">FirstDatabaseRow</a><br>
+<a href="getdatabaseblob.html">GetDatabaseBlob</a><br>
+<a href="getdatabasedouble.html">GetDatabaseDouble</a><br>
+<a href="getdatabasefloat.html">GetDatabaseFloat</a><br>
+<a href="getdatabaselong.html">GetDatabaseLong</a><br>
+<a href="getdatabasequad.html">GetDatabaseQuad</a><br>
+<a href="getdatabasestring.html">GetDatabaseString</a><br>
+<a href="isdatabase.html">IsDatabase</a><br>
+<a href="nextdatabasedriver.html">NextDatabaseDriver</a><br>
+<a href="nextdatabaserow.html">NextDatabaseRow</a><br>
+<a href="opendatabase.html">OpenDatabase</a><br>
+<a href="opendatabaserequester.html">OpenDatabaseRequester</a><br>
+<a href="previousdatabaserow.html">PreviousDatabaseRow</a><br>
+<a href="setdatabaseblob.html">SetDatabaseBlob</a><br>
+<a href="useodbcdatabase.html">UseODBCDatabase</a><br>
+<a href="usepostgresqldatabase.html">UsePostgreSQLDatabase</a><br>
+<a href="usesqlitedatabase.html">UseSQLiteDatabase</a><br>
+</blockquote></p>
+
+<p><b>示例</b></p><blockquote>
+<a href="../Examples/Database.pb.html">Database.pb</a>
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=../reference/reference.html>Reference Manual - Index</a></center>
+
+</body></html>

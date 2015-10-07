@@ -1,0 +1,128 @@
+<html><head><title>Gadget.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - Gadget example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<font color="#924B72">#WindowWidth</font>  = 390
+<font color="#924B72">#WindowHeight</font> = 350
+
+<b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 100, 200, <font color="#924B72">#WindowWidth</font>, <font color="#924B72">#WindowHeight</font>, "PureBasic - Gadget Demonstration", <font color="#924B72">#PB_Window_MinimizeGadget</font>)
+    
+  Top = 10
+  GadgetHeight = 24
+
+<font color="#006666">  FrameGadget</font>(<font color="#924B72">#PB_Any</font>, 10, Top, 370, 290, "Player...") : Top+20
+
+<font color="#006666">  StringGadget</font>(0,  20, Top, 200, GadgetHeight, "")
+<font color="#006666">  ButtonGadget</font>(1, 223, Top,  72, GadgetHeight, "Play")
+<font color="#006666">  ButtonGadget</font>(2, 295, Top,  72, GadgetHeight, "Stop")  : Top+35
+<font color="#006666">  DisableGadget</font>(2,1)
+  
+<font color="#006666">  GadgetToolTip</font>(1,"Play the current song")
+  
+<font color="#006666">  PanelGadget</font>(3, 20, Top, <font color="#924B72">#WindowWidth</font>-50, <font color="#924B72">#WindowHeight</font>-Top-60)
+<font color="#006666">    AddGadgetItem</font>(3, 0, "MP3 PlayList")
+<font color="#006666">      ListViewGadget</font>(4, 6, 10, 230, 148)
+
+      <b><font color="#006666">For</font></b> k=0 <b><font color="#006666">To</font></b> 30
+<font color="#006666">        AddGadgetItem</font>(4, -1, "Music Song n° "+<font color="#006666">Str</font>(k))
+      <b><font color="#006666">Next</font></b>
+
+<font color="#006666">      ButtonGadget</font>(5,  250, 10, 80, GadgetHeight, "Add")
+<font color="#006666">      ButtonGadget</font>(6,  250, 38, 80, GadgetHeight, "Remove")
+<font color="#006666">      ButtonGadget</font>(7,  250, 66, 80, GadgetHeight, "Select")
+<font color="#006666">      GadgetToolTip</font>(7, "Select the current song")
+      
+<font color="#006666">      TrackBarGadget</font>(17, 10, 168, 310, 25, 0, 100)
+
+<font color="#006666">    AddGadgetItem</font>(3, 1, "Options")
+      Top = 10
+<font color="#006666">      CheckBoxGadget</font>(10, 10, Top, 250, GadgetHeight, "Enable low-pass filter") : Top+30
+<font color="#006666">      CheckBoxGadget</font>(11, 10, Top, 250, GadgetHeight, "Enable visual plug-in")  : Top+30
+<font color="#006666">      ComboBoxGadget</font>(12, 10, Top, 250, 21) : Top+30
+<font color="#006666">        AddGadgetItem</font>(12, -1, "FireWorks")
+<font color="#006666">        AddGadgetItem</font>(12, -1, "OpenGL spectrum")
+<font color="#006666">        AddGadgetItem</font>(12, -1, "Bump bass")
+<font color="#006666">      SetGadgetState</font>(12,0)
+<font color="#006666">      DisableGadget</font>(12,1)
+      
+<font color="#006666">      OptionGadget</font>(13, 10, Top, 80, GadgetHeight, "640*480") : Top+20
+<font color="#006666">      OptionGadget</font>(14, 10, Top, 80, GadgetHeight, "800*600") : Top+20
+<font color="#006666">      OptionGadget</font>(15, 10, Top, 80, GadgetHeight, "1024*768")
+<font color="#006666">      SetGadgetState</font>(13, 1)
+      
+<font color="#006666">      ButtonGadget</font>(16, 150, Top, 80, GadgetHeight, "Info")
+<font color="#006666">  CloseGadgetList</font>()
+
+<font color="#006666">  TextGadget  </font>(9, 10, <font color="#924B72">#WindowHeight</font>-30, 250, 24, "PureBasic - Gadget demonstration")
+<font color="#006666">  ButtonGadget</font>(8, <font color="#924B72">#WindowWidth</font>-100, <font color="#924B72">#WindowHeight</font>-36, 80, 24, "Quit")
+
+<font color="#006666">  SetGadgetState</font>(3, 0)
+
+  <b><font color="#006666">Repeat</font></b>
+    Event =<font color="#006666"> WaitWindowEvent</font>()
+    
+    <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Gadget</font>
+
+      <b><font color="#006666">Select</font></b> <font color="#006666">EventGadget</font>()
+        <b><font color="#006666">Case</font></b> 0
+          <b><font color="#006666">If</font></b> <font color="#006666">EventType</font>() = <font color="#924B72">#PB_EventType_ReturnKey</font>
+<font color="#006666">            MessageRequester</font>("Info", "Return key pressed", 0)
+<font color="#006666">            SetActiveGadget</font>(0)
+          <b><font color="#006666">EndIf</font></b>
+          
+        <b><font color="#006666">Case</font></b> 1 <font color="#006666">; Play
+</font><font color="#006666">          DisableGadget</font>(2,0)  <font color="#006666">; Enable the 'Stop' gadget
+</font><font color="#006666">          DisableGadget</font>(1,1)  <font color="#006666">; Disable the 'Play' Gadget
+</font>      
+        <b><font color="#006666">Case</font></b> 2 <font color="#006666">; Stop
+</font><font color="#006666">          DisableGadget</font>(1,0)  <font color="#006666">; Enable the 'Play' gadget
+</font><font color="#006666">          DisableGadget</font>(2,1)  <font color="#006666">; Disable the 'Stop' Gadget
+</font>        
+        <b><font color="#006666">Case</font></b> 4
+          <b><font color="#006666">If</font></b> <font color="#006666">EventType</font>() = 2
+<font color="#006666">            SetGadgetText</font>(0,<font color="#006666"> GetGadgetText</font>(4)) <font color="#006666">; Get the current item from the ListView..
+</font>          <b><font color="#006666">EndIf</font></b>
+
+        <b><font color="#006666">Case</font></b> 5 <font color="#006666">; Add
+</font><font color="#006666">          AddGadgetItem</font>(4, -1, "New Item Added...")
+
+        <b><font color="#006666">Case</font></b> 6 <font color="#006666">; Remove
+</font><font color="#006666">          RemoveGadgetItem</font>(4,<font color="#006666"> GetGadgetState</font>(4)) <font color="#006666">; Remove the current element of the ListView
+</font>
+        <b><font color="#006666">Case</font></b> 7 <font color="#006666">; Select
+</font><font color="#006666">          SetGadgetText</font>(0,<font color="#006666"> GetGadgetText</font>(4)) <font color="#006666">; Get the current item from the ListView..
+</font>  
+        <b><font color="#006666">Case</font></b> 8 <font color="#006666">; Quit...
+</font>          Event = <font color="#924B72">#PB_Event_CloseWindow</font>
+
+        <b><font color="#006666">Case</font></b> 11 <font color="#006666">; Enable PlugIn..
+</font><font color="#006666">          DisableGadget</font>(12, 1-<font color="#006666">GetGadgetState</font>(11))
+          
+        <b><font color="#006666">Case</font></b> 16 <font color="#006666">;
+</font>          <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetState</font>(13) : Result$ =<font color="#006666"> GetGadgetText</font>(13) : <b><font color="#006666">EndIf</font></b>
+          <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetState</font>(14) : Result$ =<font color="#006666"> GetGadgetText</font>(14) : <b><font color="#006666">EndIf</font></b>
+          <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetState</font>(15) : Result$ =<font color="#006666"> GetGadgetText</font>(15) : <b><font color="#006666">EndIf</font></b>
+         
+<font color="#006666">          MessageRequester</font>("Info", "Selected screen mode: "+Result$, 0)
+        
+        <b><font color="#006666">Case</font></b> 17
+<font color="#006666">          SetGadgetText</font>(0,<font color="#006666"> Str</font>(<font color="#006666">GetGadgetState</font>(17)))
+          
+      <b><font color="#006666">EndSelect</font></b>
+
+    <b><font color="#006666">EndIf</font></b>
+
+  <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
+
+<b><font color="#006666">EndIf</font></b>
+
+<b><font color="#006666">End</font></b> </font></pre>
+</body></html>

@@ -1,0 +1,71 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Input</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">Input()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+String$ = <font color="#006666"><b>Input</b></font>()</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Allows the program to catch an entire line of characters. This function locks the 
+program execution and waits until the user presses the return key. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns the string that the user entered before pressing the return key. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+If the console is in graphical mode (see <a href="enablegraphicalconsole.html">EnableGraphicalConsole()</a>), 
+the line can't be longer than the console width (no more keys are accepted when the line gets too long). 
+<br>
+<br>
+In non-graphical mode, a special return-value of <font color="#924B72">#PB_Input_Eof</font> (equals Chr(4)) will be received 
+if the user enters a single Ctrl+D in the console, or a file that has been redirected to the programs input 
+has reached its end. 
+For compatibility with other console applications on Windows, <font color="#924B72">#PB_Input_Eof</font> is also received 
+when Ctrl+Z is entered in the console. 
+
+<br>
+<br>
+If not line based or raw input is needed, <a href="readconsoledata.html">ReadConsoleData()</a> can be used in non-graphical mode. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenConsole</font>()
+<font color="#006666">    Print</font>("Enter your name and press return: ")
+    Name$ =<font color="#006666"> Input</font>()
+    
+<font color="#006666">    PrintN</font>("Hello " + Name$ + ", nice to meet you.")
+<font color="#006666">    PrintN</font>("Press return to exit")
+<font color="#006666">    Input</font>()
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="inkey.html">Inkey()</a>, <a href="rawkey.html">RawKey()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=inkey.html>Inkey()</a> - <a href=index.html>Console Index</a> - <a href=openconsole.html>OpenConsole()</a> -&gt;
+
+
+
+</body></html>

@@ -1,0 +1,191 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Data</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="5">Data</font></b></p>
+
+<p><b>Introduction</b></p><blockquote>
+
+
+
+
+
+PureBasic allows the use of <b><font color="#006666">Data</font></b>, to store predefined blocks of information inside of your program. 
+This is very useful for default values of a program (language string for example) or, in a game, to 
+define the sprite way to follow (precalculated). 
+<br>
+<br>
+<b><font color="#006666">DataSection</font></b> must be called first to indicate a data section follow. This means all labels 
+and data component will be stored in the <b><font color="#006666">data</font></b> section of the program, which has a much faster access 
+than the code section. <b><font color="#006666">Data</font></b> will be used to enter the data. <b><font color="#006666">EndDataSection</font></b> must be specified if some 
+code follows the data declaration. One of good stuff is you can define different <b><font color="#006666">Data</font></b> sections in the 
+code without any problem. <b><font color="#006666">Restore</font></b> and <b><font color="#006666">Read</font></b> command will be used to retrieve the data. 
+
+ 
+
+</blockquote>
+<p><b>Commands</b></p><blockquote>
+
+
+</blockquote>
+<br><b>语法</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">DataSection</font></b>
+</font></pre></blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+Start a data section. 
+
+
+ 
+
+
+</blockquote>
+<br><b>语法</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">EndDataSection</font></b>
+</font></pre></blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+End a data section. 
+
+
+ 
+
+
+</blockquote>
+<br><b>语法</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Data</font></b>.TypeName
+</font></pre></blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+Defines data. The type can only be a native <a href="../reference/variables.html">basic type</a> (integer, long, word, byte, ascii, unicode, float, double, quad, character, string). Any 
+number of data can be put on the same line, each one delimited with a comma ','. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Data</font></b>.l 100, 200, -250, -452, 145
+  <b><font color="#006666">Data</font></b>.s "Hello", "This", "is ", "What ?"
+</font></pre>
+
+
+
+For advanced programmers: it's also possible to put a <a href="../reference/procedures.html">procedure</a> <a href="../reference/memory.html">address</a> 
+or a <a href="../reference/memory.html">label address</a> inside <b><font color="#006666">Data</font></b> when its type is set to integer (.i). 
+(Using the 'integer' type will store the (different) addresses accurate on both 32-bit and 64-bit environments.) 
+This can be used to build easy virtual function tables for example. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">Max</font>(Number, Number2)
+  <b><font color="#006666">EndProcedure</font></b>
+  
+  Label:
+    
+  <b><font color="#006666">DataSection</font></b>
+    <b><font color="#006666">Data</font></b>.i ?Label, @Max()
+  <b><font color="#006666">EndDataSection</font></b>
+</font></pre>
+
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Interface</font></b> MyObject
+<font color="#006666">    DoThis</font>()
+<font color="#006666">    DoThat</font>()
+  <b><font color="#006666">EndInterface</font></b>
+
+  <b><font color="#006666">Procedure</font></b> <font color="#006666">This</font>(*Self)
+<font color="#006666">    MessageRequester</font>("MyObject", "This")
+  <b><font color="#006666">EndProcedure</font></b>
+
+  <b><font color="#006666">Procedure</font></b> <font color="#006666">That</font>(*Self)
+<font color="#006666">    MessageRequester</font>("MyObject", "That")
+  <b><font color="#006666">EndProcedure</font></b>
+
+  m.MyObject = ?VTable
+
+  m\<font color="#006666">DoThis</font>()
+  m\<font color="#006666">DoThat</font>()
+
+
+  <b><font color="#006666">DataSection</font></b>
+    VTable:
+      <b><font color="#006666">Data</font></b>.i ?Procedures
+    Procedures:
+      <b><font color="#006666">Data</font></b>.i @This(), @That()
+  <b><font color="#006666">EndDataSection</font></b>
+</font></pre>
+
+
+
+</blockquote>
+<br><b>语法</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Restore</font></b> label
+</font></pre></blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+This keyword is useful to set the start indicator for the <b><font color="#006666">Read</font></b> to a specified label. All labels used 
+for this purpose should be placed within the <b><font color="#006666">DataSection</font></b> because the data is treated as a separate 
+block from the program code when it is compiled and may become disassociated from a label if the label 
+were placed outside of the DataSection. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Restore</font></b> StringData
+  <b><font color="#006666">Read</font></b>.s MyFirstData$
+  <b><font color="#006666">Read</font></b>.s MySecondData$
+  
+  <b><font color="#006666">Restore</font></b> NumericalData
+  <b><font color="#006666">Read</font></b>.l a
+  <b><font color="#006666">Read</font></b>.l b
+
+  <b><font color="#006666">Debug</font></b> MyFirstData$
+  <b><font color="#006666">Debug</font></b> a
+  
+  <b><font color="#006666">End</font></b>  
+  
+  <b><font color="#006666">DataSection</font></b>
+    NumericalData:    
+      <b><font color="#006666">Data</font></b>.l 100, 200, -250, -452, 145
+      
+    StringData:
+      <b><font color="#006666">Data</font></b>.s "Hello", "This", "is ", "What ?"
+  <b><font color="#006666">EndDataSection</font></b>
+</font></pre>
+
+</blockquote>
+<br><b>语法</b><blockquote><pre><font face="Courier New, Courier, mono"size="2"><b><font color="#006666">Read</font></b>[.&lt;type&gt;] &lt;variable&gt;
+</font></pre></blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+
+
+Read the next available data. The next available data can be changed by using the <b><font color="#006666">Restore</font></b> command. 
+By default, the next available data is the first data declared. The type of data to read is determined by the 
+type suffix. The <a href="../reference/define.html">default type</a> will be used if it is not specified. 
+
+ 
+
+</body></html>

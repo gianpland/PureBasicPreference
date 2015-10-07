@@ -1,0 +1,97 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CRC32Fingerprint</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CRC32Fingerprint()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CRC32Fingerprint</b></font>(*Buffer, Size [, InitialValue])    </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Perform a CRC32 checksum on the given buffer. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>*Buffer</i></td>
+<td width="90%"> 
+ 
+The buffer containing the data for the checksum calculation. 
+
+ 
+
+</td></tr>
+<tr><td><i>Size</i></td>
+<td> 
+ 
+The size of the given buffer. 
+
+ 
+
+</td></tr>
+<tr><td><i>InitialValue (optional)</i></td>
+<td> 
+ 
+The optional InitialValue parameter can be used to pass the checksum of a previous buffer. The result 
+will then be the checksum of both buffers, as if it were calculated from one continuous buffer. This way 
+calculating the checksum of large data can be broken down into a number of calculations on smaller buffers. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns the calculated checksum. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+CRC32 is a 32-bit fingerprint not intended for password 
+storage as it's easily crackable, but for quick data integrity check. For example, zip files have a CRC32 
+checksum at the end of each file to be sure that the zip is not corrupted. The main advantage of CRC32 
+over MD5 or other hash algorithm is its very high speed. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  *Buffer =<font color="#006666"> AllocateMemory</font>(200)                 <font color="#006666">; Prepare a buffer with data</font>
+  <b><font color="#006666">If</font></b> *Buffer
+<font color="#006666">    PokeS</font>(*Buffer, "The quick brown fox jumps over the lazy dog.")
+    Length =<font color="#006666"> MemoryStringLength</font>(*Buffer)
+    
+    CRC32 =<font color="#006666"> CRC32Fingerprint</font>(*Buffer, Length)   <font color="#006666">; Calculate the checksum in 1 step</font>
+    <b><font color="#006666">Debug</font></b> "CRC32 checksum = " +<font color="#006666"> Str</font>(CRC32)
+    
+    Part1 =<font color="#006666"> CRC32Fingerprint</font>(*Buffer, Length/2) <font color="#006666">; Calculate the checksum in 2 steps</font>
+    CRC32 =<font color="#006666"> CRC32Fingerprint</font>(*Buffer+Length/2, Length/2, Part1)
+    <b><font color="#006666">Debug</font></b> "CRC32 checksum = " +<font color="#006666"> Str</font>(CRC32)
+  
+<font color="#006666">    FreeMemory</font>(*Buffer)
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="crc32filefingerprint.html">CRC32FileFingerprint()</a>, 
+<a href="md5fingerprint.html">MD5Fingerprint()</a>, <a href="sha1fingerprint.html">SHA1Fingerprint()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=crc32filefingerprint.html>CRC32FileFingerprint()</a> - <a href=index.html>Cipher Index</a> - <a href=closecryptrandom.html>CloseCryptRandom()</a> -&gt;
+
+
+
+</body></html>

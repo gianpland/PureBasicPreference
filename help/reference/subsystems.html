@@ -1,0 +1,65 @@
+<html><head><title>Subsystems</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="5">Subsystems</font></b></p>
+
+<p><b>Introduction</b></p><blockquote>
+
+PureBasic integrated commandset relies on available OS libraries. Sometimes, there is different way to achieve 
+the same goal and when it makes sense, PureBasic offers the possibility to change the used underlying libraries for 
+specific commands, without changing one line of source code. For example, on Windows there is the 'OpenGL' subsystem 
+available, which will use OpenGL functions to render sprites, instead of DirectX (which is the default subsystem). 
+It can be useful to use OpenGL instead of DirectX when writing a crossplatform game, as OS X and Linux use OpenGL as default. 
+It also allows to use raw OpenGL commands directly on screen. <br>
+<br>
+To enable a subsystem, its name has to be set in the IDE <a href="../reference/ide_compiler.html">compiler options</a>, or through the /SUBSYSTEM <a href="../reference/cli_compiler.html">command-line</a> switch. 
+This is a compile time option, which means an executable can not embed more than one subsystem at once. If multiple support is 
+needed (for example shipping an OpenGL and DirectX version of a game), two executables needs to be created. <br>
+<br>
+The available subsystems are located in the PureBasic 'subsystems' folder. Any residents or libraries found in this drawer 
+will have precedency over the default libraries and residents, when a subsystem is specified. Any number of different subsystems 
+can be specified (as long it doesn't affect the same libraries). <br>
+<br>
+The <b><font color="#006666">Subsystem</font></b> <a href="../reference/compilerfunctions.html">compiler function</a> can be used to detect if a specific subsystem is used 
+for the compilation. 
+
+</blockquote>
+<p><b>Available subsystems</b></p><blockquote>
+
+Here is a list of available subsystems, and the affected libraries: <br>
+<br>
+<b>Windows</b> 
+<pre><font face="Courier New, Courier, mono"size="2">  OpenGL: use OpenGL instead of DirectX. Affected libraries: 
+          - Sprite
+          - Sprite3D
+          - Screen
+          - All 3D engine related libraries
+</font></pre>
+<br>
+<b>Linux</b> 
+<pre><font face="Courier New, Courier, mono"size="2">  None
+</font></pre>
+<br>
+<b>MacOS X</b> 
+<pre><font face="Courier New, Courier, mono"size="2">  Carbon: warning, this subsystem is deprecated and no more maintained. 
+          Use the Carbon API instead of Cocoa. Affected libraries:
+          - 2D Drawing
+          - AudioCD
+          - Clipboard
+          - Desktop
+          - Drag & Drop
+          - Font
+          - Gadget
+          - Image
+          - Menu
+          - Movie
+          - Printer
+          - Requester
+          - Scintilla
+          - StatusBar
+          - SysTray
+          - Toolbar
+          - Window
+</font></pre>
+
+
+</body></html>

@@ -1,0 +1,88 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>InputEvent3D</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">InputEvent3D()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>InputEvent3D</b></font>(MouseX, MouseY, LeftMouseButton [, Text$, SpecialKey])  </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Injects events in the 3D GUI system. To be versatile enough, the events aren't automatically gets from the 
+main mouse and keyboard, but injected on demand. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>MouseX</i></td>
+<td width="90%"> 
+ 
+The 'x' mouse position to be injected in the GUI system, in pixels. 
+
+ 
+
+</td></tr>
+<tr><td><i>MouseY</i></td>
+<td> 
+ 
+The 'y' mouse position to be injected in the GUI system, in pixels. 
+
+ 
+
+</td></tr>
+<tr><td><i>LeftMouseButton</i></td>
+<td> 
+ 
+The left mouse button state (either zero if unpressed or one if pressed) to be injected in the GUI system. 
+
+ 
+
+</td></tr>
+<tr><td><i>Text$ (optional)</i></td>
+<td> 
+ 
+The text to be injected in the GUI system, for example to feed a <a href="../gadget3d/stringgadget3d.html">StringGadget3D()</a> when it has the focus. 
+
+ 
+
+</td></tr>
+<tr><td><i>SpecialKey (optional)</i></td>
+<td> 
+ 
+Non displayable keys to be injected in the GUI system, for example to handle backspace, enter and such. 
+The available special keys are: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Key_Back</font>
+  <font color="#924B72">#PB_Key_Delete</font>
+  <font color="#924B72">#PB_Key_Return</font>
+  <font color="#924B72">#PB_Key_Up</font>
+  <font color="#924B72">#PB_Key_Down</font>
+  <font color="#924B72">#PB_Key_Left</font>
+  <font color="#924B72">#PB_Key_Right</font>
+</font></pre>
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Here is the classic case to get the events from the mouse</font>
+  <font color="#006666">;</font>
+<font color="#006666">  InputEvent3D</font>(<font color="#006666">MouseX</font>(),<font color="#006666"> MouseY</font>(),<font color="#006666"> MouseButton</font>(<font color="#924B72">#PB_MouseButton_Left</font>))
+</font></pre>
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=initengine3d.html>InitEngine3D()</a> - <a href=index.html>Engine3D Index</a> - <a href=loadworld.html>LoadWorld()</a> -&gt;
+
+
+
+</body></html>

@@ -1,0 +1,95 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CreateCylinder</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CreateCylinder()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CreateCylinder</b></font>(#Mesh, Radius, Length [, Tessellation, CloseTop, VerticalShift])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Create a new cylinder. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Mesh</i></td>
+<td width="90%"> 
+ 
+The number to identify the new mesh. <a href="../reference/purebasic_objects.html">#PB_Any</a> can be used to 
+auto-generate this number. 
+
+ 
+
+</td></tr>
+<tr><td><i>Radius</i></td>
+<td> 
+ 
+Radius, in world unit, of the cylinder. 
+
+ 
+
+</td></tr>
+<tr><td><i>Length (optional)</i></td>
+<td> 
+ 
+Length, in world unit, of the cylinder. 
+
+ 
+
+</td></tr>
+<tr><td><i>Tessellation (optional)</i></td>
+<td> 
+ 
+Tessellation factor to create the cylinder. The minimum value is 2. The higher the factor is and the more 
+precise the cylinder will be, but it will also affect the rendering speed if a too high factor is specified. 
+Default value is 8. 
+
+ 
+
+</td></tr>
+<tr><td><i>CloseTop (optional)</i></td>
+<td> 
+ 
+Specify if the cylinder should be closed on top and bottom, or if it should be left open (like a pipe). Set it to 
+1 to create a closed cylinder or to 0 else. Default value is 1. 
+
+ 
+
+</td></tr>
+<tr><td><i>VerticalShift (optional)</i></td>
+<td> 
+ 
+The shift, in world unit, to apply between the bottom and the top of the cylinder. Default value is 
+0. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the mesh was created successfully and zero if there was an error. 
+If <font color="#924B72">#PB_Any</font> was used as the #Mesh parameter then the new generated number is returned on success. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="freemesh.html">FreeMesh()</a>, <a href="createsphere.html">CreateSphere()</a>, <a href="createmesh.html">CreateMesh()</a>, <a href="createcube.html">CreateCube()</a>, <a href="createplane.html">CreatePlane()</a>, <a href="createline3d.html">CreateLine3D()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=createcube.html>CreateCube()</a> - <a href=index.html>Mesh Index</a> - <a href=createline3d.html>CreateLine3D()</a> -&gt;
+
+
+
+</body></html>

@@ -1,0 +1,64 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>NextFTPDirectoryEntry</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">NextFTPDirectoryEntry()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>NextFTPDirectoryEntry</b></font>(#Ftp)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Moves to the next entry in an enumeration started with <a href="examineftpdirectory.html">ExamineFTPDirectory()</a>. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Ftp</i></td>
+<td width="90%"> 
+ 
+The connection to use. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the next entry is available or zero if there are no more entries to examine. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+The entry name can be read with <a href="ftpdirectoryentryname.html">FTPDirectoryEntryName()</a>. To know whether an 
+entry is a file or directory, use <a href="ftpdirectoryentrytype.html">FTPDirectoryEntryType()</a>. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="examineftpdirectory.html">ExamineFTPDirectory()</a>, 
+<a href="ftpdirectoryentrytype.html">FTPDirectoryEntryType()</a>, 
+<a href="ftpdirectoryentryname.html">FTPDirectoryEntryName()</a>, 
+<a href="ftpdirectoryentrydate.html">FTPDirectoryEntryDate()</a>, 
+<a href="ftpdirectoryentrysize.html">FTPDirectoryEntrySize()</a>, 
+<a href="ftpdirectoryentryraw.html">FTPDirectoryEntryRaw()</a>, 
+<a href="ftpdirectoryentryattributes.html">FTPDirectoryEntryAttributes()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=isftp.html>IsFtp()</a> - <a href=index.html>Ftp Index</a> - <a href=openftp.html>OpenFTP()</a> -&gt;
+
+
+
+</body></html>

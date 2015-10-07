@@ -1,0 +1,66 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>TerrainPhysicBody</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">TerrainPhysicBody()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>TerrainPhysicBody</b></font>(#Terrain, Restitution, Friction)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Adds a static physic body to the terrain. This enable physic objects to collide with the 
+terrain. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Terrain</i></td>
+<td width="90%"> 
+ 
+The terrain to use. 
+
+ 
+
+</td></tr>
+<tr><td><i>Restitution</i></td>
+<td> 
+ 
+The restitution factor. If set to 0.0, the terrain will not restitute any force, which means than 
+the colliding object will not bounce on the terrain. If sets to a value above 0.0, it will 
+restitute some force so the colliding object will bounce when colliding to the terrain 
+(the higher is the value, the more the bouncing will be). 
+
+ 
+
+</td></tr>
+<tr><td><i>Friction</i></td>
+<td> 
+ 
+The friction factor. If set to 0.0, the colliding object will slide on the terrain without 
+loosing force. If sets to a value above 0.0, the colliding object will loose speed when 
+colliding to the terrain (the higher is the value, the more the speed will decrease). 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="createterrain.html">CreateTerrain()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=terrainmousepick.html>TerrainMousePick()</a> - <a href=index.html>Terrain Index</a> - <a href=terrainrendermode.html>TerrainRenderMode()</a> -&gt;
+
+
+
+</body></html>

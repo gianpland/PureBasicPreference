@@ -1,0 +1,68 @@
+<html><head><title>ExamineSHA1Fingerprint</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ExamineSHA1Fingerprint()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Result = <font color="#006666"><b>ExamineSHA1Fingerprint</b></font>(#Fingerprint)</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Initializes the calculation of a SHA1 (Secure Hash Algorithm 1) checksum in several steps. Unlike the 
+<a href="sha1fingerprint.html">SHA1Fingerprint()</a> function this allows to calculate the checksum of 
+large data without the need to load it all into one continuous memory buffer. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Fingerprint</i></td>
+<td width="90%"> 
+The number to refer to this checksum calculation in later calls. 
+<a href="../reference/purebasic_objects.html">#PB_Any</a> can be used to auto-generate this number. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Returns the #FingerPrint value if <font color="#924B72">#PB_Any</font> was used for that parameter. 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+<a href="nextfingerprint.html">NextFingerprint()</a> can be used to add memory blocks into the calculation 
+and <a href="finishfingerprint.html">FinishFingerprint()</a> to finish the calculation and read the SHA1 hash. 
+<br>
+<br>
+See <a href="sha1fingerprint.html">SHA1Fingerprint()</a> for more information on the SHA1 algorithm. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  *Buffer =<font color="#006666"> AllocateMemory</font>(200)                  <font color="#006666">; Prepare a buffer with data</font>
+  <b><font color="#006666">If</font></b> *Buffer
+<font color="#006666">    PokeS</font>(*Buffer, "The quick brown fox jumps over the lazy dog.")
+    Length =<font color="#006666"> MemoryStringLength</font>(*Buffer)
+    
+    <b><font color="#006666">If</font></b> <font color="#006666">ExamineSHA1Fingerprint</font>(1)                 <font color="#006666">; start the calculation</font>
+<font color="#006666">      NextFingerprint</font>(1, *Buffer, Length/2)          <font color="#006666">; calculate part 1</font>
+<font color="#006666">      NextFingerprint</font>(1, *Buffer+Length/2, Length/2) <font color="#006666">; calculate part 2</font>
+      
+      SHA1$ =<font color="#006666"> FinishFingerprint</font>(1)               <font color="#006666">; finish calculation</font>
+      <b><font color="#006666">Debug</font></b> "SHA1 checksum = " + SHA1$
+      
+      SHA1$ =<font color="#006666"> SHA1Fingerprint</font>(*Buffer, Length)   <font color="#006666">; compare to a calculation in 1 step</font>
+      <b><font color="#006666">Debug</font></b> "SHA1 checksum = " + SHA1$
+    <b><font color="#006666">EndIf</font></b>
+
+<font color="#006666">    FreeMemory</font>(*Buffer)
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="sha1fingerprint.html">SHA1Fingerprint()</a>, <a href="sha1filefingerprint.html">SHA1FileFingerprint()</a>, 
+<a href="md5fingerprint.html">MD5Fingerprint()</a>, <a href="crc32fingerprint.html">CRC32Fingerprint()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=examinemd5fingerprint.html>ExamineMD5Fingerprint()</a> - <a href=index.html>Cipher Index</a> - <a href=finishcipher.html>FinishCipher()</a> ->
+
+</body></html>

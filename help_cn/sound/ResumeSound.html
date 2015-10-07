@@ -1,0 +1,61 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ResumeSound</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ResumeSound()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>ResumeSound</b></font>(#Sound [, Channel])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Resume the sound playing. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Sound</i></td>
+<td width="90%"> 
+ 
+The sound to use. If <font color="#924B72">#PB_All</font> is specified, all the sounds (and all channels) are resumed. 
+
+ 
+
+</td></tr>
+<tr><td><i>Channel (optional)</i></td>
+<td> 
+ 
+The channel to use. It's the value returned by <a href="playsound.html">PlaySound()</a> when using the 
+<font color="#924B72">#PB_Sound_MultiChannel</font> flag. If <font color="#924B72">#PB_All</font> is specified, all the channels of the sound are resumed. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+Sounds loaded with the <font color="#924B72">#PB_Sound_Streaming</font> flag are not supported. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="loadsound.html">LoadSound()</a>, <a href="pausesound.html">PauseSound()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=playsound.html>PlaySound()</a> - <a href=index.html>Sound Index</a> - <a href=setsoundfrequency.html>SetSoundFrequency()</a> -&gt;
+
+
+
+</body></html>

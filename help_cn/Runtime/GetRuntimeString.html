@@ -1,0 +1,54 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>GetRuntimeString</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">GetRuntimeString()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result$ = <font color="#006666"><b>GetRuntimeString</b></font>(Object$)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Returns the string value of the runtime object. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>Object$</i></td>
+<td width="90%"> 
+ 
+Name of the object to get the value from. The following objects are supported: <br>
+- Variable: the object name is 'VariableName' (case insensitive). <br>
+- Constant: the object name is '#Constantame' (case insensitive). <br>
+<br>
+When accessing public <a href="../reference/module.html">module</a> items, the module prefix name is mandatory, even if <b><font color="#006666">UseModule</font></b> is used. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns the string value of specified object, or an empty string if not found. As an empty string is a valid string 
+value, <a href="isruntime.html">IsRuntime()</a> can be used to determine if the runtime object really exists. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="setruntimestring.html">SetRuntimeString()</a>, <a href="isruntime.html">IsRuntime()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=getruntimeinteger.html>GetRuntimeInteger()</a> - <a href=index.html>Runtime Index</a> - <a href=isruntime.html>IsRuntime()</a> -&gt;
+
+
+
+</body></html>

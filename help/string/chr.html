@@ -1,0 +1,51 @@
+<html><head><title>Chr</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">Chr()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Text$ = <font color="#006666"><b>Chr</b></font>(CharacterValue)</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Returns a string created with the given character value. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>CharacterValue</i></td>
+<td width="90%"> 
+The character value. It can be an ASCII value, or an unicode value if the program 
+is compiled as <a href="../reference/unicode.html">Unicode mode</a>. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Returns a string created with the given character value. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">Chr</font>(33) <font color="#006666">; Will display "!"</font>
+</font></pre>
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+A table with all Ascii values and their relating figures may be found <a href="../reference/ascii.html">here</a>. 
+<br>
+<br>
+This command also works in <a href="../reference/unicode.html">Unicode mode</a> and then 
+returns the related characters associated to the given value. 
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Debug</font></b> <font color="#006666">Chr</font>(401) <font color="#006666">; will display "?"</font>
+  <b><font color="#006666">Debug</font></b> <font color="#006666">Chr</font>(956) <font color="#006666">; will display "¼"</font>
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="asc.html">Asc()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=bin.html>Bin()</a> - <a href=index.html>String Index</a> - <a href=countstring.html>CountString()</a> ->
+
+</body></html>

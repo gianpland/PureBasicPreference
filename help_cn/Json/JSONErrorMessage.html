@@ -1,0 +1,48 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>JSONErrorMessage</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">JSONErrorMessage()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result$ = <font color="#006666"><b>JSONErrorMessage</b></font>()</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Returns a message describing the cause for the failure at the last JSON parsing operation 
+with <a href="parsejson.html">ParseJSON()</a>, <a href="catchjson.html">CatchJSON()</a> or <a href="loadjson.html">LoadJSON()</a>. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+The error message in english. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">ParseJSON</font>(0, "[1, 2, 3 4]")
+    <font color="#006666">; work with the data</font>
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> <font color="#006666">JSONErrorMessage</font>()
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="jsonerrorline.html">JSONErrorLine()</a>, <a href="jsonerrorposition.html">JSONErrorPosition()</a>, <a href="parsejson.html">ParseJSON()</a>, <a href="catchjson.html">CatchJSON()</a>, <a href="loadjson.html">LoadJSON()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=jsonerrorline.html>JSONErrorLine()</a> - <a href=index.html>Json Index</a> - <a href=jsonerrorposition.html>JSONErrorPosition()</a> -&gt;
+
+
+
+</body></html>

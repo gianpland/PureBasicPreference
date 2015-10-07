@@ -1,0 +1,67 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ReadSerialPortData</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ReadSerialPortData()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>ReadSerialPortData</b></font>(#SerialPort, *Buffer, Length)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Reads an arbitrary amount of data from the #SerialPort. If the input buffer was empty, this function will block 
+until data is available. To check if data is available, use <a href="availableserialportinput.html">AvailableSerialPortInput()</a>. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#SerialPort</i></td>
+<td width="90%"> 
+ 
+The serial port to use. 
+
+ 
+
+</td></tr>
+<tr><td><i>*Buffer</i></td>
+<td> 
+ 
+The memory address to use to put the read data. 
+
+ 
+
+</td></tr>
+<tr><td><i>Length</i></td>
+<td> 
+ 
+The length to read from the serial port, in bytes. The specified buffer should be large enough to handle it. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+The number of bytes which are actually read. It can be less than the requested length. 
+If a read error has occured, it will return zero. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="availableserialportinput.html">AvailableSerialPortInput()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=openserialport.html>OpenSerialPort()</a> - <a href=index.html>SerialPort Index</a> - <a href=serialporterror.html>SerialPortError()</a> -&gt;
+
+
+
+</body></html>

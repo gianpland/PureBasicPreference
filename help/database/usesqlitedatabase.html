@@ -1,0 +1,58 @@
+<html><head><title>UseSQLiteDatabase</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">UseSQLiteDatabase()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+<font color="#006666"><b>UseSQLiteDatabase</b></font>()</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Initialize the SQLite database environment for future use. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+None.
+
+</blockquote><p><b>Return value</b></p><blockquote>
+None.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+SQLite is a file based, serverless database 
+manager. There is no driver or additional files to install, all is ready to use. SQLite is widely 
+spread across the industry and is considered to be one of the best embedded database manager 
+available. For more information about SQLite: <a href="http://www.sqlite.org">http://www.sqlite.org</a>. 
+<br>
+<br>
+To create a new empty database, create a new file with <a href="../file/createfile.html">CreateFile()</a>. Database 
+commands can now be used to create tables and add records. 
+<br>
+<br>
+A SQLite database has to be opened using <a href="opendatabase.html">OpenDatabase()</a> before using any other database functions. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  UseSQLiteDatabase</font>()
+
+  Filename$ =<font color="#006666"> OpenFileRequester</font>("Choose a file name", "PureBasic.sqlite", "*.sqlite|*.sqlite", 0)
+
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateFile</font>(0, Filename$)
+    <b><font color="#006666">Debug</font></b> "Database file created"
+<font color="#006666">    CloseFile</font>(0)
+  <b><font color="#006666">EndIf</font></b>
+  
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenDatabase</font>(0, Filename$, "", "")
+    <b><font color="#006666">Debug</font></b> "Connected to PureBasic.sqlite"
+    <b><font color="#006666">If</font></b> <font color="#006666">DatabaseUpdate</font>(0, "CREATE TABLE info (test VARCHAR(255));")
+      <b><font color="#006666">Debug</font></b> "Table created"
+    <b><font color="#006666">EndIf</font></b>
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="opendatabase.html">OpenDatabase()</a>, <a href="usepostgresqldatabase.html">UsePostgreSQLDatabase()</a>, <a href="useodbcdatabase.html">UseODBCDatabase()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=usepostgresqldatabase.html>UsePostgreSQLDatabase()</a> - <a href=index.html>Database Index</a>
+
+</body></html>

@@ -1,0 +1,69 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ScintillaSendMessage</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ScintillaSendMessage()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>ScintillaSendMessage</b></font>(#Gadget, Message [, Param [, LParam]])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Sends a message to the scintilla control to perform a specific task. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Gadget</i></td>
+<td width="90%"> 
+ 
+The scintilla gadget to use. 
+
+ 
+
+</td></tr>
+<tr><td><i>Message</i></td>
+<td> 
+ 
+The message to send. More information about the possible messages may be found on the 
+<a href="http://www.scintilla.org/">Scintilla Homepage</a>. 
+The <font color="#924B72">#SCI_</font>[...] constants representing the possible values are already defined 
+in PureBasic. 
+
+ 
+
+</td></tr>
+<tr><td><i>Param (optional)</i></td>
+<td> 
+ 
+The first custom parameter for the specified message. Default value if not specified is zero. 
+
+ 
+
+</td></tr>
+<tr><td><i>LParam (optional)</i></td>
+<td> 
+ 
+The second custom parameter for the specified message. Default value if not specified is zero. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+The result of the message sent. 
+
+ 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=scintillagadget.html>ScintillaGadget()</a> - <a href=index.html>Scintilla Index</a>
+</body></html>

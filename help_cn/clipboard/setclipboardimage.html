@@ -1,0 +1,59 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>SetClipboardImage</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">SetClipboardImage()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>SetClipboardImage</b></font>(#Image)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Places a copy of the given image into the clipboard. If the clipboard currently 
+contains an image then it will be overwritten. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Image</i></td>
+<td width="90%"> 
+ 
+The image to put into the clipboard. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">CreateImage</font>(0, 26, 20)
+<font color="#006666">    StartDrawing</font>(<font color="#006666">ImageOutput</font>(0))
+<font color="#006666">      Box</font>(0, 0, 26, 20,<font color="#006666"> RGB</font>(255, 255, 255))
+<font color="#006666">      Circle</font>(13, 10, 5,<font color="#006666"> RGB</font>(255, 0, 0))
+<font color="#006666">    StopDrawing</font>()
+<font color="#006666">    SetClipboardImage</font>(0)
+  <b><font color="#006666">EndIf</font></b>
+
+  <font color="#006666">; now if you open a graphics application and paste the clipboard contents,</font>
+  <font color="#006666">; you will see a Japanese flag ;-)</font>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="setclipboardtext.html">SetClipboardText()</a>, <a href="clearclipboard.html">ClearClipboard()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=getclipboardtext.html>GetClipboardText()</a> - <a href=index.html>Clipboard Index</a> - <a href=setclipboardtext.html>SetClipboardText()</a> -&gt;
+
+
+
+</body></html>

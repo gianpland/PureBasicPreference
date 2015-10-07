@@ -1,0 +1,88 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>SendFTPFile</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">SendFTPFile()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>SendFTPFile</b></font>(#Ftp, Filename$, RemoteFilename$ [, Asynchronous])</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Sends a file to a FTP server. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Ftp</i></td>
+<td width="90%"> 
+ 
+The connection to use. 
+
+ 
+
+</td></tr>
+<tr><td><i>Filename$</i></td>
+<td> 
+ 
+The name of the file to send. If the filename does not include a full path, it 
+is interpreted relative to the <a href="../filesystem/getcurrentdirectory.html">current directory</a>. 
+
+ 
+
+</td></tr>
+<tr><td><i>RemoteFilename$</i></td>
+<td> 
+ 
+The remote filename. 
+It has to be in the current ftp directory 
+(see <a href="getftpdirectory.html">GetFTPDirectory()</a> and <a href="setftpdirectory.html">SetFTPDirectory()</a>). 
+
+ 
+
+</td></tr>
+<tr><td><i>Asynchronous (optional)</i></td>
+<td> 
+ 
+If set to a <font color="#924B72">#True</font>, the transfer will be made in the background. The default is to block the program 
+until the file has been fully sent. The progress of an asynchronous transfer can be received with the <a href="ftpprogress.html">FTPProgress()</a> 
+command and it can be aborted using the <a href="abortftpfile.html">AbortFTPFile()</a> command. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the file was uploaded correctly, or the asynchronous transfer was initialized correctly. 
+On failure, the return-value is zero. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+Only one file can be downloaded or uploaded (see <a href="receiveftpfile.html">ReceiveFTPFile()</a>) in the background at once. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="receiveftpfile.html">ReceiveFTPFile()</a>, <a href="setftpdirectory.html">SetFTPDirectory()</a>, <a href="getftpdirectory.html">GetFTPDirectory()</a>, 
+<a href="ftpprogress.html">FTPProgress()</a>, <a href="abortftpfile.html">AbortFTPFile()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=renameftpfile.html>RenameFTPFile()</a> - <a href=index.html>Ftp Index</a> - <a href=setftpdirectory.html>SetFTPDirectory()</a> -&gt;
+
+
+
+</body></html>

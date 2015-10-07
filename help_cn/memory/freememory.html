@@ -1,0 +1,60 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>FreeMemory</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">FreeMemory()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>FreeMemory</b></font>(*MemoryID)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Free the memory previously allocated with <a href="allocatememory.html">AllocateMemory()</a> or <a href="reallocatememory.html">ReAllocateMemory()</a>. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>*MemoryID</i></td>
+<td width="90%"> 
+ 
+The address of the memory area to free. This must be a value returned from 
+either <a href="allocatememory.html">AllocateMemory()</a> or <a href="reallocatememory.html">ReAllocateMemory()</a>. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+If the program crashes at this command even though the input seems correct, 
+it is usually a result of a memory corruption at an earlier time in the program by writing 
+at an area outside of the allocated memory area. 
+Such an error can be narrowed down to the real cause using the 
+<a href="../reference/ide_debugtools.html">purifier</a> debugger tool. 
+<br>
+<br>
+All remaining allocated memory blocks are automatically freed when the program ends. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="allocatememory.html">AllocateMemory()</a>, <a href="reallocatememory.html">ReAllocateMemory()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=fillmemory.html>FillMemory()</a> - <a href=index.html>Memory Index</a> - <a href=freestructure.html>FreeStructure()</a> -&gt;
+
+
+
+</body></html>

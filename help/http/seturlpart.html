@@ -1,0 +1,75 @@
+<html><head><title>SetURLPart</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">SetURLPart()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Result$ = <font color="#006666"><b>SetURLPart</b></font>(URL$, Parameter$, Value$)</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Set a specific part of the given URL$. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>URL$</i></td>
+<td width="90%"> 
+The URL to modify. 
+A URL$ may contain parameters, which are useful when a scripting language 
+such as: (PHP) is being used on that server. The syntax is as follows: (http://www.purebasic.com/index.php3?test=1) 
+Here, the parameter is named "test" and its associated value is "1". 
+<br>
+<br>
+In order to set a specific part of a URL, the information provided within "URL$" must (at the minimum), 
+be of the following format: ("http://www.purebasic.com") 
+
+</td></tr>
+<tr><td><i>Parameter$</i></td>
+<td> 
+The parameter to modify. 
+The parameters are not case-sensitive. Moreover, Parameter$ may be one of the following constants: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_URL_Protocol</font>: change the protocol of the URL$
+  <font color="#924B72">#PB_URL_Site</font>: change the site of the URL$
+  <font color="#924B72">#PB_URL_Port</font>: change the port of the URL$ (or adds it if not specified)
+  <font color="#924B72">#PB_URL_Parameters</font>: changes all the parameters of the URL$ (or adds it if not specified)
+  <font color="#924B72">#PB_URL_Path</font>: changes the path of the URL$ (or adds it if not specified)
+  <font color="#924B72">#PB_URL_User</font>: changes the username of the URL$ (or adds it if not specified)
+  <font color="#924B72">#PB_URL_Password</font>: changes the password of the URL$  (or adds it if not specified - the "user" needs to exist)
+</font></pre>
+
+</td></tr>
+<tr><td><i>Value$</i></td>
+<td> 
+The value to assign to the given parameter or URL part. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Returns the modified URL. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  URL$ = "http://www.test.com/hello.php3"
+
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Protocol</font>, "ftp")
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Site</font>, "www.purebasic.com")
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Port</font>, "80")
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Path</font>, "english/index.php3")
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_User</font>, "user")
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, <font color="#924B72">#PB_URL_Password</font>, "pass")
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, "test", "1")
+  URL$ =<font color="#006666"> SetURLPart</font>(URL$, "ok", "2")
+
+  <b><font color="#006666">Debug</font></b> URL$ <font color="#006666">; Will print "ftp://user:pass@www.purebasic.com:80/english/index.php3?test=1&ok=2"</font>
+
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="geturlpart.html">GetURLPart()</a>, <a href="urlencoder.html">URLEncoder()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=receivehttpfile.html>ReceiveHTTPFile()</a> - <a href=index.html>Http Index</a> - <a href=urldecoder.html>URLDecoder()</a> -></body></html>

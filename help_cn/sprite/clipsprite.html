@@ -1,0 +1,71 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ClipSprite</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ClipSprite()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>ClipSprite</b></font>(#Sprite, x, y, Width, Height)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Adds a clip zone to the specified sprite. For example, if a sprite is 100*100 (Width*Height) and 
+a clipping zone is added as x=10, y=10, Width=20, Height=20 then when the sprite is displayed, only the rectangular 
+area starting from x=10, y=10 with width=20 and height=20 will be displayed. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Sprite</i></td>
+<td width="90%"> 
+ 
+The sprite to clip. 
+
+ 
+
+</td></tr>
+<tr><td><i>x, y</i></td>
+<td> 
+ 
+The clipping start position (in pixels). <font color="#924B72">#PB_Default</font> can be used as value to remove the clipping. 
+
+ 
+
+</td></tr>
+<tr><td><i>Width, Height</i></td>
+<td> 
+ 
+The clipping size (in pixels). <font color="#924B72">#PB_Default</font> can be used as value to remove the clipping. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+On some older gfx cards the clipping with ClipSprite() doesn't work properly, 
+if the sprite is larger than the used screen. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="displaysprite.html">DisplaySprite()</a>, <a href="displaytransparentsprite.html">DisplayTransparentSprite()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=catchsprite.html>CatchSprite()</a> - <a href=index.html>Sprite Index</a> - <a href=copysprite.html>CopySprite()</a> -&gt;
+
+
+
+</body></html>

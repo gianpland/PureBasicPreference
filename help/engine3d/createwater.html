@@ -1,0 +1,30 @@
+<html><head><title>CreateWater</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CreateWater()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+<font color="#006666"><b>CreateWater</b></font>(#Camera, x, y, z, Transparency, Flags)</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+
+Creates a water plane at the given position. 'Transparency' adjust the whole water transparency, from 0 (fully opaque) to 255 (transparent). 
+'Flags' can be a combination of the following constants: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_World_WaterMediumQuality</font>: medium quality (default).
+  <font color="#924B72">#PB_World_WaterLowQuality</font>   : low quality, which means less polygons (but faster rendering).
+  <font color="#924B72">#PB_World_WaterHighQuality</font>  : high quality, which means more polygons (but slower rendering).
+  <font color="#924B72">#PB_World_WaterCaustics</font>     : Enable the water caustics effects, which are small patterns created by the light on the water surface.
+  <font color="#924B72">#PB_World_WaterSmooth</font>       : Enable smooth wave transition.
+  <font color="#924B72">#PB_World_WaterFoam</font>         : Enable foam effect, which affect underwater objects when viewed out of the water plane.
+  <font color="#924B72">#PB_World_WaterSun</font>          : Enable sun reflection on water. To control the sun position and color, use <a href="sun.html">Sun()</a>.
+  <font color="#924B72">#PB_World_UnderWater</font>        : Activate an underwater effect, to have opaque underwater.
+  <font color="#924B72">#PB_World_WaterGodRays</font>      : Activate sun god rays rendering when being underwater. <font color="#924B72">#PB_World_WaterSun</font> has to be specified.
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="freewater.html">FreeWater()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=convertworldtolocalposition.html>ConvertWorldToLocalPosition()</a> - <a href=index.html>Engine3D Index</a> - <a href=enableworldcollisions.html>EnableWorldCollisions()</a> ->
+
+</body></html>

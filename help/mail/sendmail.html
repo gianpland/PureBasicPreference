@@ -1,0 +1,70 @@
+<html><head><title>SendMail</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">SendMail()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Result = <font color="#006666"><b>SendMail</b></font>(#Mail, Smtp$ [, Port [, Asynchronous [, User$, Password$]]])</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Send the specified mail. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Mail</i></td>
+<td width="90%"> 
+The mail to send. 
+
+</td></tr>
+<tr><td><i>Smtp$</i></td>
+<td> 
+The address of the mail server to use for sending the mail. 
+
+</td></tr>
+<tr><td><i>Port (optional)</i></td>
+<td> 
+The port of the mail server. The default is port 25. 
+
+</td></tr>
+<tr><td><i>Asynchronous (optional)</i></td>
+<td> 
+Whether the transfer should be done in the background. If this parameter is nonzero 
+then the function returns immediately and the progress can be checked with the <a href="mailprogress.html">MailProgress()</a> function. 
+If this parameter is zero or not specified, then the function blocks until the mail was sent or there 
+was an error. 
+
+</td></tr>
+<tr><td><i>User$, Password$ (optional)</i></td>
+<td> 
+The user and password used for SMTP authentication, if the server requires it. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Returns nonzero if the mail was sent correctly and zero otherwise. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  InitNetwork</font>()
+
+  <font color="#006666">; Note: change the address and smtp to have a working example</font>
+  <font color="#006666">;</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreateMail</font>(0, "test@youraddress.com", "Hello")
+<font color="#006666">    AddMailRecipient</font>(0, "youraddress@youraddress.com", <font color="#924B72">#PB_Mail_To</font>)
+
+    <b><font color="#006666">Debug</font></b> <font color="#006666">SendMail</font>(0, "smtp.yourfavoritesmtp.com")
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="createmail.html">CreateMail()</a>, <a href="mailprogress.html">MailProgress()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=removemailrecipient.html>RemoveMailRecipient()</a> - <a href=index.html>Mail Index</a> - <a href=setmailattribute.html>SetMailAttribute()</a> ->
+
+</body></html>

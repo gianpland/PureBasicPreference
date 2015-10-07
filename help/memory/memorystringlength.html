@@ -1,0 +1,45 @@
+<html><head><title>MemoryStringLength</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">MemoryStringLength()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Result = <font color="#006666"><b>MemoryStringLength</b></font>(*String [, Flags])</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Returns the length (in characters) of the given zero terminated string. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>*String</i></td>
+<td width="90%"> 
+The address of the string to get the length from. 
+
+</td></tr>
+<tr><td><i>Flags (optional)</i></td>
+<td> 
+The string format to use. This can be one of the following values: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Ascii</font>  : Reads the strings as ascii
+  <font color="#924B72">#PB_UTF8</font>   : Reads the strings as UTF8
+  <font color="#924B72">#PB_Unicode</font>: Reads the strings as unicode
+</font></pre>
+The default is <font color="#924B72">#PB_Unicode</font> if the program is compiled in <a href="../reference/unicode.html">unicode</a> mode and 
+<font color="#924B72">#PB_Ascii</font> otherwise. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Returns the length of the string in characters. 
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="pokes.html">PokeS()</a>, <a href="peeks.html">PeekS()</a>, <a href="allocatememory.html">AllocateMemory()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=memorysize.html>MemorySize()</a> - <a href=index.html>Memory Index</a> - <a href=movememory.html>MoveMemory()</a> ->
+
+</body></html>

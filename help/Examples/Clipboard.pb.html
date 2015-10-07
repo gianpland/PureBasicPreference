@@ -1,0 +1,27 @@
+<html><head><title>Clipboard.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - Clipboard example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<font color="#006666">; Paste text to the clipboard..
+</font><font color="#006666">SetClipboardText</font>("PureBasic pasted text example.")
+
+<font color="#006666">; Display the contents of the clipboard...
+</font><font color="#006666">MessageRequester</font>("Info", "Text in the clipboard"+<font color="#924B72">#LF$</font>+"'"+<font color="#006666">GetClipboardText</font>()+"'", 0)
+
+<font color="#006666">; Now paste an image...
+</font>
+<b><font color="#006666">If</font></b> <font color="#006666">LoadImage</font>(0,<font color="#006666"> OpenFileRequester</font>("Load a picture","","Bitmap (*.bmp)|*.bmp",0))
+  <b><font color="#006666">If</font></b> <font color="#006666">SetClipboardImage</font>(0)
+
+<font color="#006666">    MessageRequester</font>("Info", "Image correctly pasted to the clipboard."+<font color="#006666">Chr</font>(10)+"Open 'Paint' to test it !", 0)
+  <b><font color="#006666">EndIf</font></b>
+<b><font color="#006666">EndIf</font></b></font></pre>
+</body></html>

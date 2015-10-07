@@ -1,0 +1,59 @@
+<html><head><title>ChangeCurrentElement</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ChangeCurrentElement()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+<font color="#006666"><b>ChangeCurrentElement</b></font>(List(), *NewElement)</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Changes the current element of the specified list to the given new element. 
+This function is very useful if you want to "remember" an element, and restore it after 
+performing other processing. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>List()</i></td>
+<td width="90%"> 
+The name of the list, created with the <a href="../reference/newlist.html">NewList</a> function. 
+You must include the brackets after the list name. 
+
+</td></tr>
+<tr><td><i>*NewElement</i></td>
+<td> 
+The new element to set as the current element for the list. 
+The element must be a <a href="../reference/memory.html">pointer</a> to another element which exists in this list. 
+You should get this address by using the @ operator on the list name and not through 
+any other method. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+None.
+
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  *Old_Element = @mylist()   <font color="#006666">; Get the address of the current element</font>
+  
+<font color="#006666">  ResetList</font>(<font color="#006666">mylist</font>())        <font color="#006666">; Perform a search for all elements named</font>
+  <b><font color="#006666">While</font></b> <font color="#006666">NextElement</font>(<font color="#006666">mylist</font>())   <font color="#006666">; "John" and change them to "J" </font>
+    <b><font color="#006666">If</font></b> <font color="#006666">mylist</font>()\name = "John"
+<font color="#006666">      mylist</font>()\name = "J"     
+    <b><font color="#006666">EndIf</font></b> 
+  <b><font color="#006666">Wend</font></b>     
+  
+<font color="#006666">  ChangeCurrentElement</font>(<font color="#006666">mylist</font>(), *Old_Element) <font color="#006666">; Restore previous current element (from before the search)</font>
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="selectelement.html">SelectElement()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=addelement.html>AddElement()</a> - <a href=index.html>List Index</a> - <a href=clearlist.html>ClearList()</a> ->
+
+</body></html>

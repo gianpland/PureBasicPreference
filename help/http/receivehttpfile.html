@@ -1,0 +1,58 @@
+<html><head><title>ReceiveHTTPFile</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ReceiveHTTPFile()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+Result = <font color="#006666"><b>ReceiveHTTPFile</b></font>(URL$, Filename$)</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Download a file to disk from the given URL$. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>URL$</i></td>
+<td width="90%"> 
+The URL to download from. 
+
+</td></tr>
+<tr><td><i>Filename$</i></td>
+<td> 
+The local filename to write the file to. If the filename does not include a full path, it 
+is interpreted relative to the <a href="../filesystem/getcurrentdirectory.html">current directory</a>. 
+If the file exists, it will be overwritten. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+
+Returns nonzero if the download was successful or zero if not. 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+<a href="../network/initnetwork.html">InitNetwork()</a> has to be called before using this command. 
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  InitNetwork</font>()
+
+  Filename$ =<font color="#006666"> SaveFileRequester</font>("Where to save index.php3 ?", "", "", 0)
+
+  <b><font color="#006666">If</font></b> <font color="#006666">ReceiveHTTPFile</font>("http://www.purebasic.com/index.php3", Filename$)
+    <b><font color="#006666">Debug</font></b> "Success"
+  <b><font color="#006666">Else</font></b>
+    <b><font color="#006666">Debug</font></b> "Failed"
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="gethttpheader.html">GetHTTPHeader()</a>, <a href="urlencoder.html">URLEncoder()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>All</Blockquote></p><center><- <a href=geturlpart.html>GetURLPart()</a> - <a href=index.html>Http Index</a> - <a href=seturlpart.html>SetURLPart()</a> ->
+
+</body></html>

@@ -1,0 +1,88 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CryptRandomData</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CryptRandomData()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CryptRandomData</b></font>(*Buffer, Length)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Fills the specified memory buffer with random data from the cryptographic safe pseudorandom number generator. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>*Buffer</i></td>
+<td width="90%"> 
+ 
+The buffer to fill. 
+
+ 
+
+</td></tr>
+<tr><td><i>Length</i></td>
+<td> 
+ 
+The size of the buffer in bytes. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns nonzero if the random data was generated successfully and zero otherwise. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+The generator has to be opened first with the <a href="opencryptrandom.html">OpenCryptRandom()</a> command. 
+<br>
+<br>
+To generate random data from the faster but not cryptographic safe pseudorandom number generator, use the 
+<a href="../math/randomdata.html">RandomData()</a> function. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  *Key =<font color="#006666"> AllocateMemory</font>(16)
+  
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenCryptRandom</font>() <b><font color="#006666">And</font></b> *Key
+<font color="#006666">    CryptRandomData</font>(*Key, 16)
+    
+    Text$ = "Generated Key:"
+    <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 15
+      Text$ + " " +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(<font color="#006666">PeekB</font>(*Key+i), <font color="#924B72">#PB_Byte</font>), 2, "0")
+    <b><font color="#006666">Next</font></b> i     
+    
+<font color="#006666">    CloseCryptRandom</font>()
+  <b><font color="#006666">Else</font></b>
+    Text$ = "Key generation is not available"
+  <b><font color="#006666">EndIf</font></b>
+  
+<font color="#006666">  MessageRequester</font>("Example", Text$)
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="opencryptrandom.html">OpenCryptRandom()</a>, <a href="cryptrandom.html">CryptRandom()</a>, <a href="closecryptrandom.html">CloseCryptRandom()</a> 
+<a href="../math/randomdata.html">RandomData()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=cryptrandom.html>CryptRandom()</a> - <a href=index.html>Cipher Index</a> - <a href=desfingerprint.html>DESFingerprint()</a> -&gt;
+
+</body></html>

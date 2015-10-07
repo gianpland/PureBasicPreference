@@ -1,0 +1,75 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CRC32FileFingerprint</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">CRC32FileFingerprint()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>CRC32FileFingerprint</b></font>(Filename$ [, Offset [, Length]])    </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Returns the CRC32 checksum of the given file. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>FileName$</i></td>
+<td width="90%"> 
+ 
+The file of which the fingerprint should be calculated. 
+
+ 
+
+</td></tr>
+<tr><td><i>Offset (optional)</i></td>
+<td> 
+ 
+The offset (in bytes) from the start of the file to begin the checksum calculation. 
+
+ 
+
+</td></tr>
+<tr><td><i>Length (optional)</i></td>
+<td> 
+ 
+The length (in bytes) to use for the checksum calculation. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns the checksum for the file. 
+If the file isn't found or an error has happened, the result will be zero. 
+
+ 
+
+</blockquote><p><b>Remarks</b></p><blockquote>
+
+
+
+CRC32 is a 32-bit fingerprint not intended for password storage as it's easily crackable, but for quick 
+data integrity checks. The main advantage of CRC32 over MD5 or other hash algorithm is its very high speed. 
+
+ 
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="crc32fingerprint.html">CRC32Fingerprint()</a>, <a href="md5filefingerprint.html">MD5FileFingerprint()</a>, <a href="sha1filefingerprint.html">SHA1FileFingerprint()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=base64encoder.html>Base64Encoder()</a> - <a href=index.html>Cipher Index</a> - <a href=crc32fingerprint.html>CRC32Fingerprint()</a> -&gt;
+
+
+
+</body></html>

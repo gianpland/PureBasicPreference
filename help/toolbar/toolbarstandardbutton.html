@@ -1,0 +1,87 @@
+<html><head><title>ToolBarStandardButton</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">ToolBarStandardButton()</font></b></p>
+<p><b>Syntax</b></p><blockquote>
+<font color="#006666"><b>ToolBarStandardButton</b></font>(#Button, #ButtonIcon [,Mode])</blockquote>
+
+</blockquote>
+<b>Description</b><br><blockquote>
+
+Add a standard button to the toolbar being constructed. <a href="createtoolbar.html">CreateToolBar()</a> must 
+be called before to use this function. A standard button is an icon which is 
+available directly from the OS. 
+
+</blockquote><p><b>Parameters</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Button</i></td>
+<td width="90%"> 
+The new toolbar button identifier. 
+
+</td></tr>
+<tr><td><i>#ButtonIcon</i></td>
+<td> 
+It can one of the following constants: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_ToolBarIcon_New</font>
+  <font color="#924B72">#PB_ToolBarIcon_Open</font>
+  <font color="#924B72">#PB_ToolBarIcon_Save</font>
+  <font color="#924B72">#PB_ToolBarIcon_Print</font>
+  <font color="#924B72">#PB_ToolBarIcon_PrintPreview</font>
+  <font color="#924B72">#PB_ToolBarIcon_Find</font>
+  <font color="#924B72">#PB_ToolBarIcon_Replace</font>
+
+  <font color="#924B72">#PB_ToolBarIcon_Cut</font>
+  <font color="#924B72">#PB_ToolBarIcon_Copy</font>
+  <font color="#924B72">#PB_ToolBarIcon_Paste</font>
+  <font color="#924B72">#PB_ToolBarIcon_Undo</font>
+  <font color="#924B72">#PB_ToolBarIcon_Redo</font>
+
+  <font color="#924B72">#PB_ToolBarIcon_Delete</font>
+  <font color="#924B72">#PB_ToolBarIcon_Properties</font>
+  <font color="#924B72">#PB_ToolBarIcon_Help</font>
+</font></pre>
+
+</td></tr>
+<tr><td><i>Mode (optional)</i></td>
+<td> 
+The mode value can be one of the following constants: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_ToolBar_Normal</font>: the button will act as standard button (default)
+  <font color="#924B72">#PB_ToolBar_Toggle</font>: the button will act as toggle button
+</font></pre>
+<a href="gettoolbarbuttonstate.html">GetToolBarButtonState()</a> and <a href="settoolbarbuttonstate.html">SetToolBarButtonState()</a> can be used to retreive or modify a toggle button state. 
+
+</td></tr>
+</table>
+</blockquote><p><b>Return value</b></p><blockquote>
+None.
+
+
+</blockquote><p><b>Example</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 150, 25, "ToolBar", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+    <b><font color="#006666">If</font></b> <font color="#006666">CreateToolBar</font>(0,<font color="#006666"> WindowID</font>(0))
+<font color="#006666">      ToolBarStandardButton</font>(0, <font color="#924B72">#PB_ToolBarIcon_New</font>)
+<font color="#006666">      ToolBarStandardButton</font>(1, <font color="#924B72">#PB_ToolBarIcon_Open</font>)
+<font color="#006666">      ToolBarStandardButton</font>(2, <font color="#924B72">#PB_ToolBarIcon_Save</font>)
+    <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">Repeat</font></b>
+      Event =<font color="#006666"> WaitWindowEvent</font>()
+      <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Menu</font>
+        <b><font color="#006666">Debug</font></b> "ToolBar ID: "+<font color="#006666">Str</font>(<font color="#006666">EventMenu</font>())
+      <b><font color="#006666">EndIf</font></b>
+    <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+<br>
+<p><img src="../HelpPictures/createtoolbar.png"></p>
+
+</blockquote><p><b>See Also</b></p><blockquote>
+
+<a href="createtoolbar.html">CreateToolBar()</a>, <a href="toolbarimagebutton.html">ToolBarImageButton()</a>, <a href="toolbarseparator.html">ToolBarSeparator()</a> 
+
+</Blockquote><p><b>Supported OS </b><Blockquote>Windows, Linux</Blockquote></p><center><- <a href=toolbarseparator.html>ToolBarSeparator()</a> - <a href=index.html>ToolBar Index</a> - <a href=toolbartooltip.html>ToolBarToolTip()</a> ->
+
+</body></html>

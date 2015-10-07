@@ -1,0 +1,19 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>System.pb</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font><font color="#006666">;   PureBasic - System example file
+</font><font color="#006666">;
+</font><font color="#006666">;    (c) Fantaisie Software
+</font><font color="#006666">;
+</font><font color="#006666">; ------------------------------------------------------------
+</font><font color="#006666">;
+</font>
+<font color="#006666">MessageRequester</font>("System information", "User: " +<font color="#006666"> UserName</font>() + <font color="#924B72">#LF$</font> +
+                                       "Computer name: " +<font color="#006666"> ComputerName</font>() + <font color="#924B72">#LF$</font> +
+                                       "NbCPUs: " +<font color="#006666"> CountCPUs</font>() + <font color="#924B72">#LF$</font> +
+                                       "Physical memory (MB): " +<font color="#006666"> Str</font>(<font color="#006666">MemoryStatus</font>(<font color="#924B72">#PB_System_TotalPhysical</font>) / (1024 * 1024)))
+</font></pre>
+</body></html>
