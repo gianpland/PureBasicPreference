@@ -270,6 +270,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Getting started&lt;/a0&gt;&lt;br1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141350Z" creationid="oSilas" creationdate="20151007T141350Z">
+        <seg>&lt;a0&gt;入门&lt;/a0&gt;&lt;br1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a2&gt;Working with files&lt;/a2&gt;&lt;br3&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141440Z" creationid="oSilas" creationdate="20151007T141440Z">
+        <seg>&lt;a2&gt;文件处理&lt;/a2&gt;&lt;br3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b4&gt;&lt;f5&gt;If&lt;/f5&gt;&lt;/b4&gt; &lt;f6&gt;OpenConsole&lt;/f6&gt;()
 &lt;f7&gt;      PrintN&lt;/f7&gt;("This is console #"+&lt;f8&gt;Str&lt;/f8&gt;(i))
 &lt;f9&gt;      PrintN&lt;/f9&gt;("Press return to close console")
@@ -486,6 +502,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Command Index</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T140838Z" creationid="oSilas" creationdate="20151007T140838Z">
+        <seg>命令索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Currently, 3 values are available:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140641Z">
@@ -682,6 +706,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110938Z">
         <seg>参数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Pure Basic Reference Manual</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141339Z" creationid="oSilas" creationdate="20151007T141339Z">
+        <seg>Pure Basic 参考手册</seg>
       </tuv>
     </tu>
     <tu>
@@ -915,6 +947,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041605Z" creationid="oSilas" creationdate="20141128T041605Z">
         <seg>用来绘制的图像ID。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The PureBasic IDE</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141326Z" creationid="oSilas" creationdate="20151007T141326Z">
+        <seg> PureBasic IDE</seg>
       </tuv>
     </tu>
     <tu>
