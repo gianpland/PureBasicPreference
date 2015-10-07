@@ -1,0 +1,93 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>UnbindEvent</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">UnbindEvent()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>UnbindEvent</b></font>(Event, @Callback() [, Window [, Object [, EventType]]])    </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Unbind an event from a callback. If no matching event callback is found, this 
+command has no effect. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>Event</i></td>
+<td width="90%"> 
+ 
+The event to unbind. For a full list of events, see <a href="windowevent.html">WindowEvent()</a>. Custom 
+events are also supported, when using <a href="postevent.html">PostEvent()</a>. 
+
+ 
+
+</td></tr>
+<tr><td><i>@Callback()</i></td>
+<td> 
+ 
+The callback procedure to unbind. 
+
+ 
+
+</td></tr>
+<tr><td><i>Window (optional)</i></td>
+<td> 
+ 
+The #Window number to unbind the event. 
+
+ 
+
+</td></tr>
+<tr><td><i>Object (optional)</i></td>
+<td> 
+ 
+The object number to unbind the event. It can be a gadget, menuitem or systray number. 
+
+ 
+
+</td></tr>
+<tr><td><i>EventType (optional)</i></td>
+<td> 
+ 
+The event type to unbind the event from. For a full list of supported types, see <a href="eventtype.html">EventType()</a>. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">SizeWindowHandler</font>()
+    <b><font color="#006666">Debug</font></b> "Size event on window #" +<font color="#006666"> EventWindow</font>()
+  <b><font color="#006666">EndProcedure</font></b>
+  
+<font color="#006666">  OpenWindow</font>(0, 100, 100, 200, 200, "Resize test", <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_SystemMenu</font>)
+  
+<font color="#006666">  BindEvent</font>(<font color="#924B72">#PB_Event_SizeWindow</font>, @SizeWindowHandler())
+<font color="#006666">  UnbindEvent</font>(<font color="#924B72">#PB_Event_SizeWindow</font>, @SizeWindowHandler()) <font color="#006666">; Unbind it immediately</font>
+  
+  <b><font color="#006666">Repeat</font></b>
+    Event =<font color="#006666"> WaitWindowEvent</font>()
+  <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+<a href="bindevent.html">BindEvent()</a>, <a href="../gadget/bindgadgetevent.html">BindGadgetEvent()</a>, <a href="../menu/bindmenuevent.html">BindMenuEvent()</a>, <a href="windowevent.html">WindowEvent()</a>, <a href="waitwindowevent.html">WaitWindowEvent()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=stickywindow.html>StickyWindow()</a> - <a href=index.html>Window Index</a> - <a href=waitwindowevent.html>WaitWindowEvent()</a> -&gt;
+
+
+
+</body></html>

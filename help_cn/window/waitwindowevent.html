@@ -1,0 +1,104 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>WaitWindowEvent</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">WaitWindowEvent()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Event = <font color="#006666"><b>WaitWindowEvent</b></font>([Timeout])    </blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Wait until an event occurs. It's the same function as <a href="windowevent.html">WindowEvent()</a> 
+but locks the program execution, which is very important in a multitasking 
+environment. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>Timeout (optional)</i></td>
+<td width="90%"> 
+ 
+The timeout (in milliseconds) which causes the function to 
+return if no events are occurring. If no timeout is specified, it will wait 
+infinitely until an event occurs. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Return the event which occurred, see <a href="windowevent.html">WindowEvent()</a> for more information. 
+
+ 
+
+</blockquote><p><b>备注</b></p><blockquote>
+
+
+
+An application should always use this function instead of <a href="windowevent.html">WindowEvent()</a> 
+if possible, as it doesn't takes an CPU time while waiting for an event. 
+<br>
+<br>
+The window event loop should not be processed in a <a href="../thread/index.html">thread</a>, as there is some limitation on OS X and Linux. 
+A debugger error will be raised. 
+<br>
+<br>
+WaitWindowEvent() can only be called once per event loop, because else events will be "lost" 
+(every event can only be processed once and isn't available anymore for a second time after first 
+processing). 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 230, 90, "Event handling example...", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>)
+
+<font color="#006666">   ButtonGadget  </font>(1, 10, 10, 200, 20, "Click me")
+<font color="#006666">   CheckBoxGadget</font>(2, 10, 40, 200, 20, "Check me")
+
+   <b><font color="#006666">If</font></b> <font color="#006666">CreateMenu</font>(0,<font color="#006666"> WindowID</font>(0))
+<font color="#006666">     MenuTitle</font>("Menu")
+<font color="#006666">     MenuItem</font>(1, "Item 1")
+<font color="#006666">     MenuItem</font>(2, "Item 2")
+<font color="#006666">     MenuItem</font>(3, "Item 3")
+   <b><font color="#006666">EndIf</font></b>
+
+   <b><font color="#006666">Repeat</font></b>
+     Event =<font color="#006666"> WaitWindowEvent</font>()
+     
+     <b><font color="#006666">Select</font></b> Event
+     
+       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Gadget</font>
+         <b><font color="#006666">Select</font></b> <font color="#006666">EventGadget</font>()
+           <b><font color="#006666">Case</font></b> 1 : <b><font color="#006666">Debug</font></b> "Button 1 clicked!"
+           <b><font color="#006666">Case</font></b> 2 : <b><font color="#006666">Debug</font></b> "Button 2 clicked!"
+         <b><font color="#006666">EndSelect</font></b>
+       
+       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Menu</font>
+         <b><font color="#006666">Select</font></b> <font color="#006666">EventMenu</font>()
+           <b><font color="#006666">Case</font></b> 1 : <b><font color="#006666">Debug</font></b> "Menu item 1 clicked!"
+           <b><font color="#006666">Case</font></b> 2 : <b><font color="#006666">Debug</font></b> "Menu item 2 clicked!"
+           <b><font color="#006666">Case</font></b> 3 : <b><font color="#006666">Debug</font></b> "Menu item 3 clicked!"
+         <b><font color="#006666">EndSelect</font></b>
+     
+     <b><font color="#006666">EndSelect</font></b>
+   <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
+ <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=unbindevent.html>UnbindEvent()</a> - <a href=index.html>Window Index</a> - <a href=windowbounds.html>WindowBounds()</a> -&gt;
+
+
+
+</body></html>
