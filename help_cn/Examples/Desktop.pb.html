@@ -15,11 +15,11 @@ NbDesktops =<font color="#006666"> ExamineDesktops</font>()
 
 <font color="#006666">MessageRequester</font>("Information", "You have "+<font color="#006666">Str</font>(NbDesktops)+" desktop(s)")
 
-<font color="#006666">; Let's enumerate all the desktops found
+<font color="#006666">; Let&amp;apos;s enumerate all the desktops found
 </font><font color="#006666">;
 </font><b><font color="#006666">For</font></b> k=0 <b><font color="#006666">To</font></b> NbDesktops-1
   
-  Text$ = "Desktop n�+<font color="#006666">Str</font>(k+1)+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
+  Text$ = "Desktop n�"+<font color="#006666">Str</font>(k+1)+<font color="#924B72">#LF$</font>+<font color="#924B72">#LF$</font>
   Text$ + "Size: "+<font color="#006666">Str</font>(<font color="#006666">DesktopWidth</font>(k))+"*"+<font color="#006666">Str</font>(<font color="#006666">DesktopHeight</font>(k))+<font color="#924B72">#LF$</font>
   Text$ + "Color depth: "+<font color="#006666">Str</font>(<font color="#006666">DesktopDepth</font>(k))+<font color="#924B72">#LF$</font>
   

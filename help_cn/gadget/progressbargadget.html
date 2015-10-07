@@ -41,7 +41,8 @@ The position and dimensions of the new gadget.
 <tr><td><i>Minimum, Maximum</i></td>
 <td> 
  
-The minimum and maximum values that the progress bar can take. 
+The minimum and maximum values that the progress bar can take. The values must be between 
+0 and 65536 to work on all OS. 
 
  
 
@@ -67,17 +68,18 @@ then the return-value is the auto-generated gadget number on success.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &amp;apos;mini help&amp;apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to act on the gadget: 
 <br>
 <br>
-- <a href="setgadgetstate.html">SetGadgetState()</a>: Change progress bar value. 
+- <a href="setgadgetstate.html">SetGadgetState()</a>: Change progress bar value. A value of <font color="#924B72">#PB_ProgressBar_Unknown</font> can be used 
+to indicate that the progress is unknown. 
 <br>
 - <a href="getgadgetstate.html">GetGadgetState()</a>: Get the current progress bar value. 
 <br>
@@ -98,7 +100,7 @@ The following functions can be used to act on the gadget:
 
 
 This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
-the following values as 'ColorType'. (Note: Windows only. On Windows XP with enabled skins, this coloring has no effect.) 
+the following values as &amp;apos;ColorType&amp;apos;. (Note: Windows only. On Windows XP with enabled skins, this coloring has no effect.) 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_FrontColor</font>: Progressbarcolor
   <font color="#924B72">#PB_Gadget_BackColor</font> : Backgroundcolor
@@ -126,8 +128,6 @@ the following values as 'ColorType'. (Note: Windows only. On Windows XP with ena
 
 <a href="getgadgetstate.html">GetGadgetState()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=panelgadget.html>PanelGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=removegadgetcolumn.html>RemoveGadgetColumn()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=panelgadget.html>PanelGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=removegadgetcolumn.html>RemoveGadgetColumn()</a> -&gt;<br><br>
 
 </body></html>

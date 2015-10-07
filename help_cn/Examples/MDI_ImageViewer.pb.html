@@ -11,7 +11,7 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font>
-<font color="#006666">; As MDIGadget is a Windows only gadget, it won't run on Linux or OS X
+<font color="#006666">; As MDIGadget is a Windows only gadget, it won&amp;apos;t run on Linux or OS X
 </font><font color="#006666">;
 </font><b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_OS</font> &lt;&gt; <font color="#924B72">#PB_OS_Windows</font>
   <b><font color="#006666">CompilerError</font></b> "MDIGadget() is only supported on Windows"
@@ -113,12 +113,12 @@
       <b><font color="#006666">If</font></b> Window = <font color="#924B72">#WINDOW</font> <font color="#006666">; Out main window is closed, just quit
 </font>        Quit = 1
         
-      <b><font color="#006666">Else</font></b> <font color="#006666">; It's one of our MDI children
-</font>      
-        <b><font color="#006666">If</font></b> <font color="#006666">SelectMDIWindow</font>(Window) <font color="#006666">; Check if it's one of our MDI window
+      <b><font color="#006666">Else</font></b> <font color="#006666">; It&amp;apos;s one of our MDI children
+</font>
+        <b><font color="#006666">If</font></b> <font color="#006666">SelectMDIWindow</font>(Window) <font color="#006666">; Check if it&amp;apos;s one of our MDI window
 </font><font color="#006666">          CloseWindow</font>(Window)
 <font color="#006666">          FreeImage</font>(<font color="#006666">MDIWindow</font>()\Image)
-<font color="#006666">          DeleteElement</font>(<font color="#006666">MDIWindow</font>())   
+<font color="#006666">          DeleteElement</font>(<font color="#006666">MDIWindow</font>())
         <b><font color="#006666">EndIf</font></b>
     
       <b><font color="#006666">EndIf</font></b>
@@ -153,7 +153,7 @@
                           
             <b><font color="#006666">Else</font></b>
 <font color="#006666">              MessageRequester</font>("Image Viewer","Could not load image: "+FileName$)
-            <b><font color="#006666">EndIf</font></b>            
+            <b><font color="#006666">EndIf</font></b>
             
             FileName$ =<font color="#006666"> NextSelectedFileName</font>()
           <b><font color="#006666">Wend</font></b>
@@ -172,12 +172,12 @@
                             
           <b><font color="#006666">ForEach</font></b> <font color="#006666">MDIWindow</font>()
 <font color="#006666">            CloseWindow</font>(<font color="#006666">MDIWindow</font>()\Window)
-<font color="#006666">            FreeImage</font>(<font color="#006666">MDIWindow</font>()\Image)  
+<font color="#006666">            FreeImage</font>(<font color="#006666">MDIWindow</font>()\Image)
           <b><font color="#006666">Next</font></b>
 <font color="#006666">          ClearList</font>(<font color="#006666">MDIWindow</font>())
         
         <b><font color="#006666">Case</font></b> <font color="#924B72">#MENU_Quit</font>
-          Quit = 1     
+          Quit = 1
   
         <b><font color="#006666">Case</font></b> <font color="#924B72">#MENU_TileV</font>
 <font color="#006666">          SetGadgetState</font>(<font color="#924B72">#GADGET_MDI</font>, <font color="#924B72">#PB_MDI_TileVertically</font>)
@@ -199,7 +199,7 @@
         
       <b><font color="#006666">EndSelect</font></b>
       
-      
+
     <b><font color="#006666">ElseIf</font></b> Event = <font color="#924B72">#PB_Event_SizeWindow</font>
       
       Window =<font color="#006666"> EventWindow</font>()

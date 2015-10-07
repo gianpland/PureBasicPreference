@@ -33,7 +33,7 @@ d, e and f will be created as integer type variables, since there was no type sp
 signed word typed (.w) as no type is specified and the default type had been changed to the word type. <br>
 <br>
 If variables are specified, <b><font color="#006666">Define</font></b> only declares these variables as "defined type" and will not change the default type. 
-If you don't assign a value to the variables at this time, the value will be 0. 
+If you don&amp;apos;t assign a value to the variables at this time, the value will be 0. 
 
  
 
@@ -60,9 +60,9 @@ Alternative possibility for the variable declaration using <b><font color="#0066
 </blockquote><p><b>示例</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b> MyChar.c 
-  <b><font color="#006666">Define</font></b> MyLong.l 
-  <b><font color="#006666">Define</font></b> MyWord.w 
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b> MyChar.c
+  <b><font color="#006666">Define</font></b> MyLong.l
+  <b><font color="#006666">Define</font></b> MyWord.w
   
   <b><font color="#006666">Debug</font></b> <font color="#006666">SizeOf</font>(MyChar)   <font color="#006666">; will print 1 in ASCII mode, and 2 in unicode mode</font>
   <b><font color="#006666">Debug</font></b> <font color="#006666">SizeOf</font>(MyLong)   <font color="#006666">; will print 4</font>

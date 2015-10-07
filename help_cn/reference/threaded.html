@@ -9,14 +9,14 @@
 
 
 <b><font color="#006666">Threaded</font></b> allows to create a <a href="../thread/index.html">thread based</a> persistent <a href="../reference/variables.html">variable</a>, 
-<a href="../reference/dim.html">arrays</a>, <a href="../reference/newlist.html">lists</a> or <a href="../reference/newmap.html">maps</a>. This means 
+<a href="../reference/dim.html">arrays</a> (except multi-dimensional arrays), <a href="../reference/newlist.html">lists</a> or <a href="../reference/newmap.html">maps</a>. This means 
 every <a href="../thread/index.html">thread</a> will have its own version of the object. This is only useful when writing multithreaded programs. 
 If a type is specified after <b><font color="#006666">Threaded</font></b>, the default type is changed for this declaration. <br>
 <br>
 Each variable can have a default value directly assigned to it, but it has to be a constant value. 
 When declaring a threaded array, the dimension parameter has to be a constant value. <br>
 <br>
-A Threaded object can't be declared in a procedure, its scope is always global. 
+A Threaded object can&amp;apos;t be declared in a procedure, its scope is always global. 
 
 
  
@@ -31,7 +31,7 @@ A Threaded object can't be declared in a procedure, its scope is always global.
   
   <b><font color="#006666">Procedure</font></b> <font color="#006666">Thread</font>(Parameter)
     
-    <b><font color="#006666">Debug</font></b> Counter <font color="#006666">; Will display zero as this thread doesn't have used this variable for now</font>
+    <b><font color="#006666">Debug</font></b> Counter <font color="#006666">; Will display zero as this thread doesn&amp;apos;t have used this variable for now</font>
     Counter = 256
     <b><font color="#006666">Debug</font></b> Counter <font color="#006666">; Will display 256</font>
     

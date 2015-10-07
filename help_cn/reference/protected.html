@@ -10,7 +10,7 @@
 
 <b><font color="#006666">Protected</font></b> allows a <a href="../reference/variables.html">variable</a> to be accessed only in a <a href="../reference/procedures.html">Procedure</a> even if the same 
 variable has been declared as <a href="../reference/global.html">Global</a> in the main program. <b><font color="#006666">Protected</font></b> in its function 
-is often known as 'Local' from other BASIC dialects. Each variable can have a default value directly assigned to it. 
+is often known as &amp;apos;Local&amp;apos; from other BASIC dialects. Each variable can have a default value directly assigned to it. 
 If a type is specified after <b><font color="#006666">Protected</font></b>, the default type is changed for this declaration. 
 <b><font color="#006666">Protected</font></b> can also be used with <a href="../reference/dim.html">arrays</a>, <a href="../reference/newlist.html">lists</a> and <a href="../reference/newmap.html">maps</a>. <br>
 <br>
@@ -28,8 +28,8 @@ variables while keeping their values.
   
   <b><font color="#006666">Procedure</font></b> <font color="#006666">Change</font>()
     <b><font color="#006666">Protected</font></b> a
-    a = 20 
-  <b><font color="#006666">EndProcedure</font></b> 
+    a = 20
+  <b><font color="#006666">EndProcedure</font></b>
   
 <font color="#006666">  Change</font>()
   <b><font color="#006666">Debug</font></b> a <font color="#006666">; Will print 10, as the variable has been protected.</font>
@@ -44,8 +44,8 @@ variables while keeping their values.
   
   <b><font color="#006666">Procedure</font></b> <font color="#006666">Change</font>()
     <b><font color="#006666">Protected</font></b> <b><font color="#006666">Dim</font></b> <b><font color="#006666">Array</font></b>(2) <font color="#006666">; This array is protected, it will be local.</font>
-    <b><font color="#006666">Array</font></b>(0) = 20 
-  <b><font color="#006666">EndProcedure</font></b> 
+    <b><font color="#006666">Array</font></b>(0) = 20
+  <b><font color="#006666">EndProcedure</font></b>
   
 <font color="#006666">  Change</font>()
   <b><font color="#006666">Debug</font></b> <b><font color="#006666">Array</font></b>(0) <font color="#006666">; Will print 10, as the array has been protected.</font>

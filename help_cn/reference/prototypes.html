@@ -12,7 +12,7 @@
 
 
 For advanced programmers. <b><font color="#006666">Prototype</font></b> allows to declare a type which will map 
-a function. It's useful when used with a variable, to do a function pointer (the 
+a function. It&amp;apos;s useful when used with a variable, to do a function pointer (the 
 variable value will be the address the function to call, and can be changed at will). 
 <br>
 <br>
@@ -47,11 +47,11 @@ value.
 
   <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, "User32.dll")
    
-    <font color="#006666">; 'MsgBox' is a variable with a 'ProtoMessageBox' type</font>
+    <font color="#006666">; &amp;apos;MsgBox&amp;apos; is a variable with a &amp;apos;ProtoMessageBox&amp;apos; type</font>
     <font color="#006666">;</font>
     MsgBox.ProtoMessageBox =<font color="#006666"> GetFunction</font>(0, "MessageBoxA")
     
-<font color="#006666">    MsgBox</font>(0, "Hello", "World") <font color="#006666">; We don't specify the flags</font>
+<font color="#006666">    MsgBox</font>(0, "Hello", "World") <font color="#006666">; We don&amp;apos;t specify the flags</font>
   <b><font color="#006666">EndIf</font></b>
     
 </font></pre>
@@ -60,7 +60,7 @@ value.
 </blockquote><p><b>Example:</b> With pseudotypes</p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; We use the 'p-unicode' pseudotype for the string parameters, as</font>
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; We use the &amp;apos;p-unicode&amp;apos; pseudotype for the string parameters, as</font>
   <font color="#006666">; MessageBoxW() is an unicode only function. The compiler will </font>
   <font color="#006666">; automatically converts the strings to unicode when needed.</font>
   <font color="#006666">;</font>
@@ -68,11 +68,11 @@ value.
 
   <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, "User32.dll")
    
-    <font color="#006666">; 'MsgBox' is a variable with a 'ProtoMessageBoxW' type</font>
+    <font color="#006666">; &amp;apos;MsgBox&amp;apos; is a variable with a &amp;apos;ProtoMessageBoxW&amp;apos; type</font>
     <font color="#006666">;</font>
     MsgBox.ProtoMessageBoxW =<font color="#006666"> GetFunction</font>(0, "MessageBoxW")
     
-<font color="#006666">    MsgBox</font>(0, "Hello", "World") <font color="#006666">; We don't specify the flags</font>
+<font color="#006666">    MsgBox</font>(0, "Hello", "World") <font color="#006666">; We don&amp;apos;t specify the flags</font>
   <b><font color="#006666">EndIf</font></b>
     
 </font></pre>

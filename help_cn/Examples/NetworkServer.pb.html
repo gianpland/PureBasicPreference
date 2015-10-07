@@ -12,7 +12,7 @@
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">If</font></b> <font color="#006666">InitNetwork</font>() = 0
-<font color="#006666">  MessageRequester</font>("Error", "Can't initialize the network !", 0)
+<font color="#006666">  MessageRequester</font>("Error", "Can&amp;apos;t initialize the network !", 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
@@ -48,13 +48,13 @@ Port = 6832
       <b><font color="#006666">EndSelect</font></b>
     <b><font color="#006666">EndIf</font></b>
     
-  <b><font color="#006666">Until</font></b> Quit = 1 
+  <b><font color="#006666">Until</font></b> Quit = 1
   
 <font color="#006666">  MessageRequester</font>("PureBasic - Server", "Click to quit the server.", 0)
   
 <font color="#006666">  CloseNetworkServer</font>(0)
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "Can't create the server (port in use ?).", 0)
+<font color="#006666">  MessageRequester</font>("Error", "Can&amp;apos;t create the server (port in use ?).", 0)
 <b><font color="#006666">EndIf</font></b>
 
   

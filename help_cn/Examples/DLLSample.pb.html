@@ -11,8 +11,8 @@
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
 </font><font color="#006666">; This example is a skeleton to build easely a DLL using PureBasic
-</font><font color="#006666">; The dll is created in the 'Compilers' directory, under the
-</font><font color="#006666">; 'purebasic.dll' name. An associated '.lib' is generated to use
+</font><font color="#006666">; The dll is created in the &amp;apos;Compilers&amp;apos; directory, under the
+</font><font color="#006666">; &amp;apos;purebasic.dll&amp;apos; name. An associated &amp;apos;.lib&amp;apos; is generated to use
 </font><font color="#006666">; with VisualC++.
 </font><font color="#006666">;
 </font><font color="#006666">;
@@ -24,7 +24,7 @@
 </font><font color="#006666">;   AttachProcess() procedure
 </font><font color="#006666">;   
 </font><font color="#006666">;   - There is 4 procedures automatically called: AttachProcess(),
-</font><font color="#006666">;   DetachProcess(), AttachThread() and DetachThread(). If you don't
+</font><font color="#006666">;   DetachProcess(), AttachThread() and DetachThread(). If you don&amp;apos;t
 </font><font color="#006666">;   need them, just remove them.
 </font><font color="#006666">;
 </font>
@@ -43,13 +43,13 @@
 </font>    <b><font color="#006666">ProcedureDLL</font></b> <font color="#006666">AttachProcess</font>(Instance)
     <b><font color="#006666">EndProcedure</font></b>
   
-  
+
     <font color="#006666">; Called when the program release (free) the DLL
 </font>    <font color="#006666">;
 </font>    <b><font color="#006666">ProcedureDLL</font></b> <font color="#006666">DetachProcess</font>(Instance)
     <b><font color="#006666">EndProcedure</font></b>
   
-  
+
     <font color="#006666">; Both are called when a thread in a program call or release (free) the DLL
 </font>    <font color="#006666">;
 </font>    <b><font color="#006666">ProcedureDLL</font></b> <font color="#006666">AttachThread</font>(Instance)
@@ -71,7 +71,7 @@
 <b><font color="#006666">CompilerElse</font></b>
 
   <b><font color="#006666">If</font></b> <font color="#006666">OpenLibrary</font>(0, "PureBasic.dll") <b><font color="#006666">Or</font></b> <font color="#006666">OpenLibrary</font>(0, "PureBasic.so")
-<font color="#006666">    CallFunction</font>(0, "EasyRequester", @"Test")  
+<font color="#006666">    CallFunction</font>(0, "EasyRequester", @"Test")
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">CompilerEndIf</font></b>

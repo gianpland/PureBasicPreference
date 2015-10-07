@@ -240,7 +240,7 @@ was never saved.
 <br>
 <br>
 
-<b>File Viewer �All Files</b> 
+<b>File Viewer � All Files</b> 
 <br>
 The tool will completely replace the internal file viewer. If an attempt is made in the 
 IDE to open a file that cannot be loaded into the edit area, the IDE will first try the 
@@ -253,11 +253,11 @@ Note: Only one tool can have this trigger. Any other tools with this trigger wil
 <br>
 <br>
 
-<b>File Viewer �Unknown file</b> 
+<b>File Viewer � Unknown file</b> 
 <br>
 This tool basically replaces the hex viewer, which is usually used to display unknown file 
 types. It will be executed, when the file extension is unknown to the IDE, and if no other 
-external tool is configured to handle the file (if a tool is set with the "File Viewer �All Files" 
+external tool is configured to handle the file (if a tool is set with the "File Viewer � All Files" 
 trigger, then this tool will never be called). 
 <br>
 <br>
@@ -266,10 +266,10 @@ Note: Only one tool can have this trigger set.
 <br>
 <br>
 
-<b>File Viewer �Special file</b> 
+<b>File Viewer � Special file</b> 
 <br>
 This configures the tool to handle specific file extensions. It has a higher priority than 
-the "File Viewer �All files" or "File Viewer �Unknown file" triggers and also higher than 
+the "File Viewer � All files" or "File Viewer � Unknown file" triggers and also higher than 
 the internal file viewer itself. Specify the extensions that the tool should handle in the 
 edit box on the right. Multiple extensions can be given. 
 <br>
@@ -356,7 +356,7 @@ This option is only available for the following triggers:
 
 <b>Supported File extensions</b> 
 <br>
-Only for the "File Viewer �Special file" trigger. 
+Only for the "File Viewer � Special file" trigger. 
 Enter the list of handled extensions here. 
 
 
@@ -381,17 +381,17 @@ not present for tools executed on IDE startup or end.
  
 <pre><font face="Courier New, Courier, mono"size="2">  PB_TOOL_IDE         - Full path and filename of the IDE
   PB_TOOL_Compiler    - Full path and filename of the Compiler
-  PB_TOOL_Preferences - Full path and filename of the IDE's Preference file
+  PB_TOOL_Preferences - Full path and filename of the IDE&amp;apos;s Preference file
   PB_TOOL_Project     - Full path and filename of the currently open project (if any)
   PB_TOOL_Language    - Language currently used in the IDE
-  PB_TOOL_FileList    - A list of all open files in the IDE, separated by Chr(10)  
+  PB_TOOL_FileList    - A list of all open files in the IDE, separated by Chr(10)
 
   PB_TOOL_Debugger    - These variables provide the settings from the <a href="../reference/ide_compiler.html">Compiler Options</a>
   PB_TOOL_InlineASM     window for the current source. They are set to "1" if the option
   PB_TOOL_Unicode       is enabled, and "0" if not.
-  PB_TOOL_Thread     
-  PB_TOOL_XPSkin     
-  PB_TOOL_OnError    
+  PB_TOOL_Thread
+  PB_TOOL_XPSkin
+  PB_TOOL_OnError
 
   PB_TOOL_SubSystem   - content of the "Subsystem" field in the compiler options
   PB_TOOL_Executable  - same as the %COMPILEFILE token for the command-line

@@ -9,11 +9,7 @@ MemoryAddress = <font color="#006666"><b>DrawingBuffer</b></font>()    </blockqu
 </blockquote>
 <b>概要</b><br><blockquote>
 
-
-
-Returns the MemoryAddress of the drawing buffer for direct pixel manipulation. 
-
- 
+返回用于直接操作绘图缓存的MemoryAddress。 
 
 </blockquote><p><b>参数</b></p><blockquote>
 无.
@@ -21,40 +17,16 @@ Returns the MemoryAddress of the drawing buffer for direct pixel manipulation.
 
 </blockquote><p><b>返回值</b></p><blockquote>
 
+如果能直接访问像素数据则返回地址，否则返回零。 
 
+</blockquote><p><b>备注</b></p><blockquote>
 
-Returns the address of the pixel data if direct access is possible or zero if the pixel 
-data cannot be accessed directly. 
-
- 
-
-</blockquote><p><b>Remarks</b></p><blockquote>
-
-
-
-This function has to be called again if other drawing commands of this library where used since the last pixel manipulation. 
-<br>
-<br>
-This function is for advanced programmers only. To get more information about the buffer, 
-the following functions are available: <a href="drawingbufferpixelformat.html">DrawingBufferPixelFormat()</a> and 
-<a href="drawingbufferpitch.html">DrawingBufferPitch()</a>. 
-<br>
-<br>
-The returned address can be directly in video memory if the output is 
-<a href="../screen/screenoutput.html">ScreenOutput()</a> or <a href="../sprite/spriteoutput.html">SpriteOutput()</a> 
-and allows very fast pixel manipulation. With <a href="../image/imageoutput.html">ImageOutput()</a> this command allows 
-direct access to the pixels of the target image. 
-
- 
+如果此库的其他绘图命令之前使用了像素操作，那么此函数可以再次调用。<br><br>此函数仅限高级程序员使用。To get more information about the buffer, the following functions are available: <a href="drawingbufferpixelformat.html">DrawingBufferPixelFormat()</a> and <a href="drawingbufferpitch.html">DrawingBufferPitch()</a>. <br><br>The returned address can be directly in video memory if the output is <a href="../screen/screenoutput.html">ScreenOutput()</a> or <a href="../sprite/spriteoutput.html">SpriteOutput()</a> and allows very fast pixel manipulation. <a href="../image/imageoutput.html">ImageOutput()</a>与此命令允许直接访问目标图像的像素。 
 
 </blockquote><p><b>示例</b></p><blockquote>
 
 
-
-
-
-For an example of how the drawing buffer can be used to create a nice visual effect, take a look here: 
- 
+例如如何绘图缓冲区可用于创建一个很好的视觉效果的情况下，看看这里： 
 </blockquote><p><b>示例</b></p><blockquote>
 <a href="../Examples/DirectScreenDrawing.pb.html">DirectScreenDrawing.pb</a>
 
@@ -62,8 +34,6 @@ For an example of how the drawing buffer can be used to create a nice visual eff
 
 <a href="drawingbufferpixelformat.html">DrawingBufferPixelFormat()</a>, <a href="drawingbufferpitch.html">DrawingBufferPitch()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=drawtext.html>DrawText()</a> - <a href=index.html>2DDrawing Index</a> - <a href=drawingbufferpitch.html>DrawingBufferPitch()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=drawtext.html>DrawText()</a> - <a href=index.html>2DDrawing 目录</a> - <a href=drawingbufferpitch.html>DrawingBufferPitch()</a> -&gt;<br><br>
 
 </body></html>

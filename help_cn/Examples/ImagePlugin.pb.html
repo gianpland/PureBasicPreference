@@ -37,11 +37,11 @@
     Event =<font color="#006666"> WaitWindowEvent</font>()
     
     <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Menu</font>  <font color="#006666">; ToolBar are acting as menu
-</font>    
+</font>
       <b><font color="#006666">Select</font></b> <font color="#006666">EventMenu</font>()
       
         <b><font color="#006666">Case</font></b> 0  <font color="#006666">; Open
-</font>        
+</font>
           Filename$ =<font color="#006666"> OpenFileRequester</font>("Choose a picture", "", "All Images Formats|*.bmp;*.jpg;*.png;*.tif;*.tga", 0)
           <b><font color="#006666">If</font></b> Filename$
           
@@ -54,7 +54,7 @@
           <b><font color="#006666">EndIf</font></b>
         
         <b><font color="#006666">Case</font></b> 1  <font color="#006666">; Save
-</font>          
+</font>
           Filename$ =<font color="#006666"> SaveFileRequester</font>("Save a picture",<font color="#006666"> Left</font>(Filename$,<font color="#006666"> Len</font>(Filename$)-<font color="#006666">Len</font>(<font color="#006666">GetExtensionPart</font>(Filename$))-1), "BMP Format|*.bmp|JPEG Format|*.jpg|PNG Format|*.png", 0)
           <b><font color="#006666">If</font></b> Filename$
           

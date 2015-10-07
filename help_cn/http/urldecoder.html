@@ -4,7 +4,7 @@
 <font face="Arial" size="2"><p align="center"><b><font size="4">URLDecoder()</font></b></p>
 <p><b>语法</b></p><blockquote>
 
-Result$ = <font color="#006666"><b>URLDecoder</b></font>(URL$)</blockquote>
+Result$ = <font color="#006666"><b>URLDecoder</b></font>(URL$ [, Format])</blockquote>
 
 </blockquote>
 <b>概要</b><br><blockquote>
@@ -29,6 +29,16 @@ The URL to decode. To encode an URL, use <a href="urlencoder.html">URLEncoder()<
  
 
 </td></tr>
+<tr><td><i>Format (optional)</i></td>
+<td> 
+ 
+The format of the URL encoding. It can be one of the following value: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_UTF8</font>  (default)
+  <font color="#924B72">#PB_Ascii</font>
+</font></pre>
+
+</td></tr>
 </table>
 </blockquote><p><b>返回值</b></p><blockquote>
 
@@ -38,7 +48,7 @@ Returns the decoded URL.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -59,8 +69,6 @@ given "URL$" and the return-value of that "URL$" will remain unchanged.
 
 <a href="urlencoder.html">URLEncoder()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=seturlpart.html>SetURLPart()</a> - <a href=index.html>Http Index</a> - <a href=urlencoder.html>URLEncoder()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=seturlpart.html>SetURLPart()</a> - <a href=index.html>Http Index</a> - <a href=urlencoder.html>URLEncoder()</a> -&gt;<br><br>
 
 </body></html>

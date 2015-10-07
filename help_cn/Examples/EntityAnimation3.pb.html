@@ -95,7 +95,7 @@
 <font color="#006666">    MoveCamera</font>(0, 50, 100, 180, <font color="#924B72">#PB_Absolute</font>)
 <font color="#006666">    CameraLookAt</font>(0,<font color="#006666"> EntityX</font>(1),<font color="#006666"> EntityY</font>(1) + 40,<font color="#006666"> EntityZ</font>(1))
     
-    
+
 <font color="#006666">    CreateLight</font>(0,<font color="#006666"> RGB</font>(255, 255, 255), -40, 100, 80)
 <font color="#006666">    AmbientColor</font>(<font color="#006666">RGB</font>(80, 80, 80))
     
@@ -103,11 +103,11 @@
 <font color="#006666">      Screen3DEvents</font>()
       
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineMouse</font>()
-        MouseX = -<font color="#006666">MouseDeltaX</font>()/10 
+        MouseX = -<font color="#006666">MouseDeltaX</font>()/10
         MouseY = -<font color="#006666">MouseDeltaY</font>()/10
       <b><font color="#006666">EndIf</font></b>
       
-      RobotMove = <font color="#924B72">#False</font>    
+      RobotMove = <font color="#924B72">#False</font>
       Angle =<font color="#006666"> EntityYaw</font>(1)
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
         
@@ -118,12 +118,12 @@
           
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
 <font color="#006666">          MoveEntity</font>(1, 1 * Speed, 0, 0)
-          Angle = 0 
+          Angle = 0
           RobotMove = <font color="#924B72">#True</font>
           
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
 <font color="#006666">          MoveEntity</font>(1, 0, 0, -1 * Speed)
-          Angle = 90 
+          Angle = 90
           RobotMove = <font color="#924B72">#True</font>
           
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
@@ -134,7 +134,7 @@
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Speed &lt; 1.0
           Speed + 0.05
-        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &gt; 0.1 
+        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &gt; 0.1
           Speed - 0.05
         <b><font color="#006666">EndIf</font></b>
         
@@ -148,15 +148,15 @@
           Fadein  = <font color="#924B72">#Walk</font>
           FadeOut = <font color="#924B72">#Idle</font> 
 <font color="#006666">          StartEntityAnimation</font>(1,<font color="#006666"> Anim</font>(Anim), <font color="#924B72">#PB_EntityAnimation_Manual</font>)
-        <b><font color="#006666">EndIf</font></b>  
+        <b><font color="#006666">EndIf</font></b>
       <b><font color="#006666">Else</font></b>
         <b><font color="#006666">If</font></b> Anim &lt;&gt; <font color="#924B72">#Idle</font>
           Anim = <font color="#924B72">#Idle</font>
           Fadein  = <font color="#924B72">#Idle</font>
           FadeOut = <font color="#924B72">#Walk</font> 
 <font color="#006666">          StartEntityAnimation</font>(1,<font color="#006666"> Anim</font>(Anim), <font color="#924B72">#PB_EntityAnimation_Manual</font>)
-        <b><font color="#006666">EndIf</font></b>  
-      <b><font color="#006666">EndIf</font></b>  
+        <b><font color="#006666">EndIf</font></b>
+      <b><font color="#006666">EndIf</font></b>
       
 <font color="#006666">      AddEntityAnimationTime</font>(1,<font color="#006666"> Anim</font>(Anim), TimeSinceLastFrame)
 <font color="#006666">      fadeAnimations</font>(TimeSinceLastFrame / 1000.0)
@@ -170,7 +170,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized",0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>
@@ -184,9 +184,9 @@
 </font>    newWeight =<font color="#006666"> GetEntityAnimationWeight</font>(1,<font color="#006666"> Anim</font>(FadeIn)) + deltaTime * <font color="#924B72">#ANIM_FADE_SPEED</font>
 <font color="#006666">    Clamp</font>(newWeight, 0, 1)
 <font color="#006666">    SetEntityAnimationWeight</font>(1,<font color="#006666"> Anim</font>(FadeIn), newWeight)
-    <b><font color="#006666">If</font></b> newWeight &gt;= 1 
+    <b><font color="#006666">If</font></b> newWeight &gt;= 1
       FadeIn = <font color="#924B72">#False</font>
-    <b><font color="#006666">EndIf</font></b>  
+    <b><font color="#006666">EndIf</font></b>
     
   <b><font color="#006666">EndIf</font></b>
   
@@ -204,7 +204,7 @@
   
 <b><font color="#006666">EndProcedure</font></b>
 
-<b><font color="#006666">Procedure</font></b>.f <font color="#006666">WrapPi</font>(Angle.f) 
+<b><font color="#006666">Procedure</font></b>.f <font color="#006666">WrapPi</font>(Angle.f)
   Angle + 180
   Angle -<font color="#006666"> Round</font>(Angle * 1/360.0, <font color="#924B72">#PB_Round_Down</font>) * 360
   Angle - 180

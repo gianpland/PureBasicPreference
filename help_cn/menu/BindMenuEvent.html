@@ -10,7 +10,7 @@
 
 
 
-Bind a menu event to a callback. It's an additional way to handle events in PureBasic, 
+Bind a menu event to a callback. It&amp;apos;s an additional way to handle events in PureBasic, 
 which works without problem with the regulars <a href="../window/windowevent.html">WindowEvent()</a> / <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> 
 commands. A menu event can be unbinded with <a href="unbindmenuevent.html">UnbindMenuEvent()</a>. 
 
@@ -49,7 +49,10 @@ The callback procedure to call when the event occurs. It has to be declared like
 </font></pre>
 
 Regular functions like <a href="../window/eventgadget.html">EventGadget()</a>, <a href="../window/eventwindow.html">EventWindow()</a>, <a href="../window/eventmenu.html">EventMenu()</a>, <a href="../window/eventtype.html">EventType()</a> and <a href="../window/eventdata.html">EventData()</a> are 
-available within the callback to get more information about the event. 
+available within the callback to get more information about the event. <br>
+<br>
+Note: <a href="../window/windowevent.html">WindowEvent()</a> and <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> should never be called from inside the callback 
+or the program can be locked or have wrong behavior. 
 
  
 
@@ -88,8 +91,6 @@ available within the callback to get more information about the event.
 </blockquote><p><b>参阅</b></p><blockquote>
 <a href="../gadget/bindgadgetevent.html">BindGadgetEvent()</a>, <a href="bindmenuevent.html">BindMenuEvent()</a>, <a href="../window/unbindevent.html">UnbindEvent()</a>, <a href="../window/windowevent.html">WindowEvent()</a>, <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Menu Index</a> - <a href=closesubmenu.html>CloseSubMenu()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Menu Index</a> - <a href=closesubmenu.html>CloseSubMenu()</a> -&gt;<br><br>
 
 </body></html>

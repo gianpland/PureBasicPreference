@@ -42,7 +42,7 @@ The size of the new sprite (in pixels).
 <tr><td><i>Mode (optional)</i></td>
 <td> 
  
-It can be a combination of the following values (with the '|' operator): 
+It can be a combination of the following values (with the &amp;apos;|&amp;apos; operator): 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Sprite_PixelCollision</font>: Add special information to handle pixel collision trough <a href="spritepixelcollision.html">SpritePixelCollision()</a>.
   <font color="#924B72">#PB_Sprite_AlphaBlending</font> : Sprite is created with per pixel alpha-channel support, needed for <a href="displaytransparentsprite.html">DisplayTransparentSprite()</a>.
@@ -59,12 +59,18 @@ for the #Sprite parameter then the generated number is returned on success.
 
  
 
+</blockquote><p><b>备注</b></p><blockquote>
+
+
+
+CreateSprite() has to be called in the same thread where <a href="../screen/openscreen.html">OpenScreen()</a> was called. 
+
+ 
+
 </blockquote><p><b>参阅</b></p><blockquote>
 
 <a href="spriteoutput.html">SpriteOutput()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=copysprite.html>CopySprite()</a> - <a href=index.html>Sprite Index</a> - <a href=displaysprite.html>DisplaySprite()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=copysprite.html>CopySprite()</a> - <a href=index.html>Sprite Index</a> - <a href=displaysprite.html>DisplaySprite()</a> -&gt;<br><br>
 
 </body></html>

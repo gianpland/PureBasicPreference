@@ -12,14 +12,14 @@
 For advanced programmers. The pseudotypes are a way to ease the programming when dealing with 
 external libraries which need datatypes that are not internally supported by PureBasic. In this 
 case, it is possible to use the predefined pseudotype which will do the appropriate conversion 
-on the fly, without extra work. As they are not 'real' types, the chosen naming scheme is explicitly 
-different: a 'p-' prefix (for 'pseudo') is part of the type name. The available pseudotypes are: 
+on the fly, without extra work. As they are not &amp;apos;real&amp;apos; types, the chosen naming scheme is explicitly 
+different: a &amp;apos;p-&amp;apos; prefix (for &amp;apos;pseudo&amp;apos;) is part of the type name. The available pseudotypes are: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  p-ascii: acts as a string type, but will always convert the string to ascii before
-           calling the function, even when the program is compiled in <a href="../reference/unicode.html">unicode</a> mode. 
-           It is very useful when accessing a shared library which doesn't have unicode 
+           calling the function, even when the program is compiled in <a href="../reference/unicode.html">unicode</a> mode.
+           It is very useful when accessing a shared library which doesn&amp;apos;t have unicode
            support in an unicode program for example.
-           
+
   p-utf8: acts as a string type, but will always convert the string to utf8 before calling the
           function. It is very useful when accessing a shared library which needs its <a href="../reference/unicode.html">unicode</a>
           string be passed as UTF8 instead of ascii or unicode strings.
@@ -29,12 +29,12 @@ different: a 'p-' prefix (for 'pseudo') is part of the type name. The available 
           like COM components.
 
   p-unicode: acts as a string type, but will always convert the string to <a href="../reference/unicode.html">unicode</a> before
-             calling the function, even when the program is compiled in ascii mode. 
+             calling the function, even when the program is compiled in ascii mode.
              It is very useful when accessing a shared library which only supports unicode
              in an ascii program for example.
 
   p-variant: acts as a numeric type, will adjust the function call to use the variant parameter
-             correctly. It is very useful when accessing a shared library which needs 'variant' parameters,
+             correctly. It is very useful when accessing a shared library which needs &amp;apos;variant&amp;apos; parameters,
              like COM components.
 </font></pre>
 
@@ -42,7 +42,7 @@ different: a 'p-' prefix (for 'pseudo') is part of the type name. The available 
 
 The pseudotypes can only be used with <a href="../reference/prototypes.html">prototypes</a>, <a href="../reference/interfaces.html">interfaces</a> 
 and <a href="../reference/import_endimport.html">imported</a> functions. The pseudotypes does the appropriate 
-conversion only if it is necessary: for example using a 'p-ascii' pseudotype in an ascii compiled program makes 
+conversion only if it is necessary: for example using a &amp;apos;p-ascii&amp;apos; pseudotype in an ascii compiled program makes 
 no difference with regular string type. 
 
  
@@ -52,7 +52,7 @@ no difference with regular string type.
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Import</font></b> "User32.lib"
    
-    <font color="#006666">; We use the 'p-unicode' pseudotype for the string parameters, as</font>
+    <font color="#006666">; We use the &amp;apos;p-unicode&amp;apos; pseudotype for the string parameters, as</font>
     <font color="#006666">; MessageBoxW() is an unicode only function. The compiler will </font>
     <font color="#006666">; automatically converts the strings to unicode when needed.</font>
     <font color="#006666">;</font>

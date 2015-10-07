@@ -39,7 +39,7 @@
     
 <font color="#006666">    AddGadgetItem</font>(<font color="#924B72">#TreeGadget</font>, -1, Text$, 0, CurrentSublevel)
         
-        
+
     <font color="#006666">; Now get the first child node (if any)
 </font>    <font color="#006666">;    
 </font>    *ChildNode =<font color="#006666"> ChildXMLNode</font>(*CurrentNode)
@@ -47,9 +47,9 @@
     <font color="#006666">; Loop through all available child nodes and call this procedure again
 </font>    <font color="#006666">;
 </font>    <b><font color="#006666">While</font></b> *ChildNode &lt;&gt; 0
-<font color="#006666">      FillTree</font>(*ChildNode, CurrentSublevel + 1)      
+<font color="#006666">      FillTree</font>(*ChildNode, CurrentSublevel + 1)
       *ChildNode =<font color="#006666"> NextXMLNode</font>(*ChildNode)
-    <b><font color="#006666">Wend</font></b>        
+    <b><font color="#006666">Wend</font></b>
   
   <b><font color="#006666">EndIf</font></b>
 
@@ -83,7 +83,7 @@ FileName$ =<font color="#006666"> OpenFileRequester</font>("Choose XML file...",
       
       <font color="#006666">; Get the main XML node, and call the FillTree() procedure with it
 </font>      <font color="#006666">;
-</font>      *MainNode =<font color="#006666"> MainXMLNode</font>(<font color="#924B72">#XML</font>)      
+</font>      *MainNode =<font color="#006666"> MainXMLNode</font>(<font color="#924B72">#XML</font>)
       <b><font color="#006666">If</font></b> *MainNode
 <font color="#006666">        FillTree</font>(*MainNode, 0)
       <b><font color="#006666">EndIf</font></b>

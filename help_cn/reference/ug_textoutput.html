@@ -12,14 +12,14 @@ application to display the properties of files in a particular folder to the
 <a href="../reference/debugger.html">debug window</a>. 
 <br>
 <br>
-Now we're going to revisit this example to improve the data output section to resolve 
+Now we&amp;apos;re going to revisit this example to improve the data output section to resolve 
 some issues with using the debug window. Firstly, this window is only available in the 
-PureBasic IDE which means its only useful to programmers, secondly it doesn't really 
+PureBasic IDE which means its only useful to programmers, secondly it doesn&amp;apos;t really 
 give us much control over how our output looks. 
 <br>
 <br>
 PureBasic provides a text mode window, or <a href="../console/openconsole.html">console window</a>, 
-which can be used in compiled programs. So let's update our example to use it instead. 
+which can be used in compiled programs. So let&amp;apos;s update our example to use it instead. 
 <br>
 <br>
 First, we will need some extra working variables to make this work properly. Amend the 
@@ -86,7 +86,7 @@ Now replace this with:
     <font color="#006666">; Convert the attributes to a string, for now.</font>
     Attrib =<font color="#006666"> RSet</font>(<font color="#006666">StrU</font>(<font color="#006666">Files</font>()\Attributes), 6, " ")
     
-    <font color="#006666">; Display the file's properties.</font>
+    <font color="#006666">; Display the file&amp;apos;s properties.</font>
     Msg =<font color="#006666"> Space</font>(4) + Create + " " + Access + " " + Modify + " " + Attrib + " " + Size
 <font color="#006666">    PrintN</font>(Msg)
     

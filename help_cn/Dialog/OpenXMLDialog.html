@@ -34,9 +34,9 @@ The dialog to use. It has to be previously created with <a href="createdialog.ht
 <td> 
  
 The <a href="../xml/index.html">xml</a> to use. It has to be previously created with <a href="../xml/loadxml.html">LoadXML()</a>, <a href="../xml/createxml.html">CreateXML()</a> or <a href="../xml/catchxml.html">CatchXML()</a>. 
-That means it's possible to create dialogs on the fly with <a href="../xml/createxml.html">CreateXML()</a> or <a href="../xml/catchxml.html">CatchXML()</a>. 
+That means it&amp;apos;s possible to create dialogs on the fly with <a href="../xml/createxml.html">CreateXML()</a> or <a href="../xml/catchxml.html">CatchXML()</a>. 
 See below for the supported XML attributes. When including XML in the code, it may be easier to use single quote 
-in XML for attribute (it's perfectly legal XML syntax). 
+in XML for attribute (it&amp;apos;s perfectly legal XML syntax). 
 
  
 
@@ -84,7 +84,7 @@ To get more information about the error which has occurred, use <a href="dialoge
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 <pre><font face="Courier New, Courier, mono"size="2">----------------------------------------------------------------
@@ -122,7 +122,7 @@ To get more information about the error which has occurred, use <a href="dialoge
   &lt;window&gt; for a single window definition in the same XML file
   &lt;/window&gt;
   
-  or 
+  or
     
   &lt;dialogs&gt; for a multiple window definition in the same XML file
     &lt;window name="FirstWindow"&gt;
@@ -139,25 +139,25 @@ To get more information about the error which has occurred, use <a href="dialoge
   &lt;window&gt;
   &lt;/window&gt;
   
-  Accepted keys in the XML: 
+  Accepted keys in the XML:
   All common attributes and the following:
   
-  minwidth  = 'auto' or a numeric value
-  maxwidth  = 'auto' or a numeric value
-  minheight = 'auto' or a numeric value
-  maxheight = 'auto' or a numeric value
+  minwidth  = &amp;apos;auto&amp;apos; or a numeric value
+  maxwidth  = &amp;apos;auto&amp;apos; or a numeric value
+  minheight = &amp;apos;auto&amp;apos; or a numeric value
+  maxheight = &amp;apos;auto&amp;apos; or a numeric value
   
-  It allows to set the window bounds. If set to 'auto', then the
+  It allows to set the window bounds. If set to &amp;apos;auto&amp;apos;, then the
   size is calculated depending of the children size requirement.
-  
+
 
   - Creates the a window
   - Can have all common attributes.
   - Is a single-element container.
-  - If more than one &lt;window&gt; element is present, the 'name' attribute is used to identify them
+  - If more than one &lt;window&gt; element is present, the &amp;apos;name&amp;apos; attribute is used to identify them
   - all gui elements can only be placed in here
   
-  
+
   IV. Layout elements
   -------------------
   
@@ -168,13 +168,13 @@ To get more information about the error which has occurred, use <a href="dialoge
     Arrange the elements horizontally or vertically. Can contain
     any number of children.
 
-    Accepted keys in the XML: 
+    Accepted keys in the XML:
     All common attributes and the following:
   
     spacing   = space to add between the packed childs (default=5)
   
     expand    = yes           - items get bigger to fill all space (default)
-                no            - do not expand to fill all space 
+                no            - do not expand to fill all space
                 equal         - force equal sized items
                 item:&lt;number&gt; - expand only one item if space is available
   
@@ -183,12 +183,12 @@ To get more information about the error which has occurred, use <a href="dialoge
                 bottom/right
 
   *****************************************************************
-  gridbox 
+  gridbox
   *****************************************************************
   
     Align elements in a table. Can contain
     any number of children.
-    
+
     Accepted keys in the XML:
     All common attributes and the following:
   
@@ -216,11 +216,11 @@ To get more information about the error which has occurred, use <a href="dialoge
     A box with multiple childs in the same position. Used to put multiple containers
     inside and show only one of them at a time. Can contain
     any number of children.
-   
+
     Accepted keys in the XML:
 
     All common attributes.
-    
+
   *****************************************************************
   singlebox
   *****************************************************************
@@ -247,10 +247,10 @@ To get more information about the error which has occurred, use <a href="dialoge
                    default=0
   
     align  = combination of top,left,bottom,right and center. (only effective when expand &lt;&gt; yes)
-             example: "top, center" or "top, left" (default) 
+             example: "top, center" or "top, left" (default)
              
-             
-             
+
+
   V. Gadget elements
   ------------------
 
@@ -267,9 +267,9 @@ To get more information about the error which has occurred, use <a href="dialoge
     onrightdoubleclick = EventProcedure() - #PB_EventType_RightDoubleClick binding (only for gadget which support this event type)
     onleftdoubleclick  = EventProcedure() - #PB_EventType_LeftDoubleClick binding (only for gadget which support this event type)
     
-  The 'EventProcedure()' has to be declared as 'Runtime' in the main code, and has to respect the BindEvent() procedure
+  The &amp;apos;EventProcedure()&amp;apos; has to be declared as &amp;apos;Runtime&amp;apos; in the main code, and has to respect the BindEvent() procedure
   format. Under the hood, BindGadgetEvent() is called with the specified procedure.
-  
+
   Supported gadgets:
 
   &lt;button&gt;
@@ -283,16 +283,16 @@ To get more information about the error which has occurred, use <a href="dialoge
   &lt;editor&gt;
   &lt;explorercombo&gt;
   &lt;explorerlist&gt;
-  &lt;explorertree&gt; 
+  &lt;explorertree&gt;
   &lt;frame&gt; - single element container
   &lt;hyperlink&gt;
   &lt;ipaddress&gt;
   &lt;image&gt;
-  &lt;listicon&gt; 
+  &lt;listicon&gt;
   &lt;listview&gt;
-  &lt;option&gt;
+  &lt;option group&gt; - use the same &amp;apos;group&amp;apos; number to create linked <a href="../gadget/optiongadget.html">OptionGadget()</a>.
   &lt;panel&gt; - can contain &lt;tab&gt; items only
-  &lt;progressbar min max value&gt; 
+  &lt;progressbar min max value&gt;
   &lt;scrollarea scrolling="vertical,horizontal or both (default)" innerheight innerwidth step&gt; - single element container, scrolling value determines growth behavior
   &lt;scrollbar min max page value&gt; - page = page length
   &lt;spin min max value&gt;
@@ -305,10 +305,10 @@ To get more information about the error which has occurred, use <a href="dialoge
   &lt;scintilla&gt; - callback remains empty
 
   Gadget related elements:
-  &lt;tab&gt; - single element container, for panel tabs (attribute 'text' is supported).
-  
+  &lt;tab&gt; - single element container, for panel tabs (attribute &amp;apos;text&amp;apos; is supported).
+
   Special elements:
-  &lt;empty&gt; - an empty element, useful when it's needed to have space between element, to align them to borders for example. 
+  &lt;empty&gt; - an empty element, useful when it&amp;apos;s needed to have space between element, to align them to borders for example. 
 
 </font></pre>
 
@@ -321,26 +321,26 @@ To get more information about the error which has occurred, use <a href="dialoge
   <font color="#006666">;</font>
   <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_Unicode</font>
     <font color="#924B72">#XmlEncoding</font> = <font color="#924B72">#PB_UTF8</font>
-  <b><font color="#006666">CompilerElse</font></b> 
+  <b><font color="#006666">CompilerElse</font></b>
     <font color="#924B72">#XmlEncoding</font> = <font color="#924B72">#PB_Ascii</font>
   <b><font color="#006666">CompilerEndIf</font></b>
 
   <font color="#924B72">#Dialog</font> = 0
   <font color="#924B72">#Xml</font> = 0
   
-  XML$ = "&lt;window id='#PB_Any' name='test' text='test' minwidth='auto' minheight='auto' flags='#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget'&gt;" +
+  XML$ = "&lt;window id=&amp;apos;#PB_Any&amp;apos; name=&amp;apos;test&amp;apos; text=&amp;apos;test&amp;apos; minwidth=&amp;apos;auto&amp;apos; minheight=&amp;apos;auto&amp;apos; flags=&amp;apos;#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget&amp;apos;&gt;" +
          "  &lt;panel&gt;" +
-         "    &lt;tab text='First tab'&gt;" +
-         "      &lt;vbox expand='item:2'&gt;" +
+         "    &lt;tab text=&amp;apos;First tab&amp;apos;&gt;" +
+         "      &lt;vbox expand=&amp;apos;item:2&amp;apos;&gt;" +
          "        &lt;hbox&gt;" +
-         "          &lt;button text='button 1'/&gt;" +
-         "          &lt;checkbox text='checkbox 1'/&gt;" +
-         "          &lt;button text='button 2'/&gt;" +
+         "          &lt;button text=&amp;apos;button 1&amp;apos;/&gt;" +
+         "          &lt;checkbox text=&amp;apos;checkbox 1&amp;apos;/&gt;" +
+         "          &lt;button text=&amp;apos;button 2&amp;apos;/&gt;" +
          "        &lt;/hbox&gt;" +
-         "        &lt;editor text='content' height='150'/&gt;" +
+         "        &lt;editor text=&amp;apos;content&amp;apos; height=&amp;apos;150&amp;apos;/&gt;" +
          "      &lt;/vbox&gt;" +
          "    &lt;/tab&gt;" +
-         "    &lt;tab text='Second tab'&gt;" +
+         "    &lt;tab text=&amp;apos;Second tab&amp;apos;&gt;" +
          "    &lt;/tab&gt;" +
          "  &lt;/panel&gt;" +
          "&lt;/window&gt;"
@@ -351,9 +351,9 @@ To get more information about the error which has occurred, use <a href="dialoge
       
       <b><font color="#006666">Repeat</font></b>
         Event =<font color="#006666"> WaitWindowEvent</font>()
-      <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
+      <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
       
-    <b><font color="#006666">Else</font></b>  
+    <b><font color="#006666">Else</font></b>
       <b><font color="#006666">Debug</font></b> "Dialog error: " +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
@@ -370,7 +370,7 @@ To get more information about the error which has occurred, use <a href="dialoge
   <font color="#006666">;</font>
   <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_Unicode</font>
     <font color="#924B72">#XmlEncoding</font> = <font color="#924B72">#PB_UTF8</font>
-  <b><font color="#006666">CompilerElse</font></b> 
+  <b><font color="#006666">CompilerElse</font></b>
     <font color="#924B72">#XmlEncoding</font> = <font color="#924B72">#PB_Ascii</font>
   <b><font color="#006666">CompilerEndIf</font></b>
 
@@ -406,34 +406,34 @@ To get more information about the error which has occurred, use <a href="dialoge
 <font color="#006666">    ShowPanels</font>()
   <b><font color="#006666">EndProcedure</font></b>
   
-  XML$ = "&lt;window id='#PB_Any' name='test' text='Preferences' minwidth='auto' minheight='auto' flags='#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget'&gt;" +
-         "  &lt;hbox expand='item:2'&gt;" +
-         "    &lt;listview id='#ListView' width='100' onEvent='OnListViewEvent()'/&gt;" +
+  XML$ = "&lt;window id=&amp;apos;#PB_Any&amp;apos; name=&amp;apos;test&amp;apos; text=&amp;apos;Preferences&amp;apos; minwidth=&amp;apos;auto&amp;apos; minheight=&amp;apos;auto&amp;apos; flags=&amp;apos;#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget&amp;apos;&gt;" +
+         "  &lt;hbox expand=&amp;apos;item:2&amp;apos;&gt;" +
+         "    &lt;listview id=&amp;apos;#ListView&amp;apos; width=&amp;apos;100&amp;apos; onEvent=&amp;apos;OnListViewEvent()&amp;apos;/&gt;" +
          "    &lt;multibox&gt;" +
          "" +
-         "      &lt;container id='#GeneralContainer' invisible='yes'&gt;" +
-         "        &lt;frame text='General'&gt;" +
-         "          &lt;vbox expand='no'&gt;" +
-         "            &lt;checkbox text='Enable red light'/&gt;" +
-         "            &lt;checkbox text='Enable green light'/&gt;" +
+         "      &lt;container id=&amp;apos;#GeneralContainer&amp;apos; invisible=&amp;apos;yes&amp;apos;&gt;" +
+         "        &lt;frame text=&amp;apos;General&amp;apos;&gt;" +
+         "          &lt;vbox expand=&amp;apos;no&amp;apos;&gt;" +
+         "            &lt;checkbox text=&amp;apos;Enable red light&amp;apos;/&gt;" +
+         "            &lt;checkbox text=&amp;apos;Enable green light&amp;apos;/&gt;" +
          "          &lt;/vbox&gt;" +
          "        &lt;/frame&gt;" +
          "      &lt;/container&gt;" +
          "" +
-         "      &lt;container id='#EditorContainer' invisible='yes'&gt;" +
-         "        &lt;frame text='Editor'&gt;" +
-         "          &lt;vbox expand='no'&gt;" +
-         "            &lt;checkbox text='Set read only mode'/&gt;" +
-         "            &lt;checkbox text='Duplicate line automatically'/&gt;" +
-         "            &lt;checkbox text='Enable monospace font'/&gt;" +
+         "      &lt;container id=&amp;apos;#EditorContainer&amp;apos; invisible=&amp;apos;yes&amp;apos;&gt;" +
+         "        &lt;frame text=&amp;apos;Editor&amp;apos;&gt;" +
+         "          &lt;vbox expand=&amp;apos;no&amp;apos;&gt;" +
+         "            &lt;checkbox text=&amp;apos;Set read only mode&amp;apos;/&gt;" +
+         "            &lt;checkbox text=&amp;apos;Duplicate line automatically&amp;apos;/&gt;" +
+         "            &lt;checkbox text=&amp;apos;Enable monospace font&amp;apos;/&gt;" +
          "          &lt;/vbox&gt;" +
          "        &lt;/frame&gt;" +
          "      &lt;/container&gt;" +
          "" +
-         "      &lt;container  id='#BackupContainer' invisible='yes'&gt;" +
-         "      &lt;frame text='Backup'&gt;" +
-         "        &lt;vbox expand='no'&gt;" +
-         "          &lt;checkbox text='Activate backup'/&gt;" +
+         "      &lt;container  id=&amp;apos;#BackupContainer&amp;apos; invisible=&amp;apos;yes&amp;apos;&gt;" +
+         "      &lt;frame text=&amp;apos;Backup&amp;apos;&gt;" +
+         "        &lt;vbox expand=&amp;apos;no&amp;apos;&gt;" +
+         "          &lt;checkbox text=&amp;apos;Activate backup&amp;apos;/&gt;" +
          "        &lt;/vbox&gt;" +
          "      &lt;/frame&gt;" +
          "      &lt;/container&gt;" +
@@ -456,9 +456,9 @@ To get more information about the error which has occurred, use <a href="dialoge
       
       <b><font color="#006666">Repeat</font></b>
         Event =<font color="#006666"> WaitWindowEvent</font>()
-      <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
+      <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
       
-    <b><font color="#006666">Else</font></b>  
+    <b><font color="#006666">Else</font></b>
       <b><font color="#006666">Debug</font></b> "Dialog error: " +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
@@ -475,27 +475,27 @@ To get more information about the error which has occurred, use <a href="dialoge
   <font color="#006666">;</font>
   <b><font color="#006666">CompilerIf</font></b> <font color="#924B72">#PB_Compiler_Unicode</font>
     <font color="#924B72">#XmlEncoding</font> = <font color="#924B72">#PB_UTF8</font>
-  <b><font color="#006666">CompilerElse</font></b> 
+  <b><font color="#006666">CompilerElse</font></b>
     <font color="#924B72">#XmlEncoding</font> = <font color="#924B72">#PB_Ascii</font>
   <b><font color="#006666">CompilerEndIf</font></b>
   
   <font color="#924B72">#Dialog</font> = 0
   <font color="#924B72">#Xml</font> = 0
   
-  XML$ = "&lt;window id='#PB_Any' name='test' text='Gridbox' minwidth='auto' minheight='auto' flags='#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget'&gt;" +
-         "    &lt;gridbox columns='6'&gt;" +
-         "          &lt;button text='Button 1' /&gt;" +
-         "          &lt;button text='Button 2' /&gt;" +
-         "          &lt;button text='Button 3' colspan='3' /&gt;" +
-         "          &lt;button text='Button 4' /&gt;" +
-         "          &lt;button text='Button 5' rowspan='2' /&gt;" +
-         "          &lt;button text='Button 6' /&gt;" +
-         "          &lt;button text='Button 7' /&gt;" +
-         "          &lt;button text='Button 8' /&gt;" +
-         "          &lt;button text='Button 9' /&gt;" +
-         "          &lt;button text='Button 10' /&gt;" +
-         "          &lt;button text='Button 11' /&gt;" +
-         "          &lt;button text='Button 12' /&gt;" +
+  XML$ = "&lt;window id=&amp;apos;#PB_Any&amp;apos; name=&amp;apos;test&amp;apos; text=&amp;apos;Gridbox&amp;apos; minwidth=&amp;apos;auto&amp;apos; minheight=&amp;apos;auto&amp;apos; flags=&amp;apos;#PB_Window_ScreenCentered | #PB_Window_SystemMenu | #PB_Window_SizeGadget&amp;apos;&gt;" +
+         "    &lt;gridbox columns=&amp;apos;6&amp;apos;&gt;" +
+         "          &lt;button text=&amp;apos;Button 1&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 2&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 3&amp;apos; colspan=&amp;apos;3&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 4&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 5&amp;apos; rowspan=&amp;apos;2&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 6&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 7&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 8&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 9&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 10&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 11&amp;apos; /&gt;" +
+         "          &lt;button text=&amp;apos;Button 12&amp;apos; /&gt;" +
          "    &lt;/gridbox&gt;" +
          "  &lt;/window&gt;"
   
@@ -505,9 +505,9 @@ To get more information about the error which has occurred, use <a href="dialoge
       
       <b><font color="#006666">Repeat</font></b>
         Event =<font color="#006666"> WaitWindowEvent</font>()
-      <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> 
+      <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>
       
-    <b><font color="#006666">Else</font></b>  
+    <b><font color="#006666">Else</font></b>
       <b><font color="#006666">Debug</font></b> "Dialog error: " +<font color="#006666"> DialogError</font>(<font color="#924B72">#Dialog</font>)
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
@@ -519,4 +519,6 @@ To get more information about the error which has occurred, use <a href="dialoge
 
 <a href="createdialog.html">CreateDialog()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=isdialog.html>IsDialog()</a> - <a href=index.html>Dialog Index</a></body></html>
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=isdialog.html>IsDialog()</a> - <a href=index.html>Dialog Index</a> - <a href=refreshdialog.html>RefreshDialog()</a> -&gt;<br><br>
+
+</body></html>

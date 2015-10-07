@@ -45,9 +45,9 @@ The position and dimensions of the new gadget.
  
 The initial displayed directory, it can include one or multiple 
 patterns, like "C:\*.pb;*.pbi". If no pattern is included, the directory must 
-end with a '\'. Including no directory will display the root containing the 
-drives. Including no pattern defaults to '*.*'. So a Directory$ of "" will 
-display the root and set '*.*' as pattern. 
+end with a &amp;apos;\&amp;apos;. Including no directory will display the root containing the 
+drives. Including no pattern defaults to &amp;apos;*.*&amp;apos;. So a Directory$ of "" will 
+display the root and set &amp;apos;*.*&amp;apos; as pattern. 
 
  
 
@@ -61,16 +61,16 @@ Flags to modify the gadget behavior. It can be a combination of the following va
   <font color="#924B72">#PB_Explorer_AlwaysShowSelection</font> : The selection is visible, even when the gadget is not activated.
   <font color="#924B72">#PB_Explorer_MultiSelect</font>         : Enable multiple selection of items in the gadget.
   <font color="#924B72">#PB_Explorer_GridLines</font>           : Display separator lines between rows and columns.
-  <font color="#924B72">#PB_Explorer_HeaderDragDrop</font>      : In report view, the headers can be changed by Drag'n'Drop.
+  <font color="#924B72">#PB_Explorer_HeaderDragDrop</font>      : In report view, the headers can be changed by Drag&amp;apos;n&amp;apos;Drop.
   <font color="#924B72">#PB_Explorer_FullRowSelect</font>       : The selection covers the full row instead of the first column.
 
   <font color="#924B72">#PB_Explorer_NoFiles</font>             : No files will be displayed.
   <font color="#924B72">#PB_Explorer_NoFolders</font>           : No folders will be displayed.
   <font color="#924B72">#PB_Explorer_NoParentFolder</font>      : There will be no [..] link to the parent folder.
   <font color="#924B72">#PB_Explorer_NoDirectoryChange</font>   : The directory cannot be changed by the user.
-  <font color="#924B72">#PB_Explorer_NoDriveRequester</font>    : There will be no 'please insert drive X:' displayed.
+  <font color="#924B72">#PB_Explorer_NoDriveRequester</font>    : There will be no &amp;apos;please insert drive X:&amp;apos; displayed.
   <font color="#924B72">#PB_Explorer_NoSort</font>              : The user cannot sort the content by clicking on a column header.
-  <font color="#924B72">#PB_Explorer_NoMyDocuments</font>       : The 'My Documents' Folder will not be displayed as a separate item.
+  <font color="#924B72">#PB_Explorer_NoMyDocuments</font>       : The &amp;apos;My Documents&amp;apos; Folder will not be displayed as a separate item.
   <font color="#924B72">#PB_Explorer_AutoSort</font>            : The content will be sorted automatically by name.
   <font color="#924B72">#PB_Explorer_HiddenFiles</font>         : Will display hidden files as well (supported on Linux and OS X only).
 </font></pre>
@@ -86,11 +86,11 @@ then the return-value is the auto-generated gadget number on success.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &amp;apos;mini help&amp;apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 <br>
 <br>
 The following functions can be used to control the gadget: 
@@ -128,13 +128,13 @@ The following functions can be used to control the gadget:
 
 - <a href="getgadgetitemattribute.html">GetGadgetItemAttribute()</a> / <a href="setgadgetitemattribute.html">SetGadgetItemAttribute()</a>: With the following attribute: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Explorer_ColumnWidth</font> : Returns/Changes the width of the given 'Column'. The 'Item' parameter is ignored.
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Explorer_ColumnWidth</font> : Returns/Changes the width of the given &amp;apos;Column&amp;apos;. The &amp;apos;Item&amp;apos; parameter is ignored.
 </font></pre>
 
 <br>
 
 This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
-the following values as 'ColorType': 
+the following values as &amp;apos;ColorType&amp;apos;: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_FrontColor</font>: Textcolor
   <font color="#924B72">#PB_Gadget_BackColor</font> : Backgroundcolor
@@ -175,8 +175,6 @@ a Drag &amp; Drop operation.
 <a href="getgadgetitemattribute.html">GetGadgetItemAttribute()</a>, <a href="setgadgetitemattribute.html">SetGadgetItemAttribute()</a>,<a href="setgadgetcolor.html">SetGadgetColor()</a>, <a href="setgadgetitemstate.html">SetGadgetItemState()</a>, <a href="getgadgetcolor.html">GetGadgetColor()</a>, 
 <a href="explorercombogadget.html">ExplorerComboGadget()</a>, <a href="explorertreegadget.html">ExplorerTreeGadget()</a>, <a href="listicongadget.html">ListIconGadget()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=explorercombogadget.html>ExplorerComboGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=explorertreegadget.html>ExplorerTreeGadget()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=explorercombogadget.html>ExplorerComboGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=explorertreegadget.html>ExplorerTreeGadget()</a> -&gt;<br><br>
 
 </body></html>

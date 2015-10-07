@@ -14,7 +14,7 @@ Mutex = <font color="#006666"><b>CreateMutex</b></font>()</blockquote>
 Creates a new mutex object. The mutex is initially unlocked. 
 <br>
 <br>
-The main objective of the mutex functions is thread synchronisation. They do not create 
+The main objective of the mutex functions is thread synchronization. They do not create 
 too much overhead, but they only work within one program, not system-wide. 
 A mutex is an object that can only be "owned" or locked by one thread at a time, 
 so it is used to protect shared resources. Only the thread that has the mutex 
@@ -41,20 +41,20 @@ The new mutext object, or zero if the mutex creation has failed.
   <font color="#006666">; the strings are printed in order, because only one thread at a time</font>
   <font color="#006666">; has the right to execute the printing functions.</font>
   <font color="#006666">;</font>
-  <b><font color="#006666">Procedure</font></b> <font color="#006666">WithoutMutex</font>(*Number)     
+  <b><font color="#006666">Procedure</font></b> <font color="#006666">WithoutMutex</font>(*Number)
     <b><font color="#006666">Shared</font></b> Mutex
     
-    <b><font color="#006666">For</font></b> a = 1 <b><font color="#006666">To</font></b> 5      
+    <b><font color="#006666">For</font></b> a = 1 <b><font color="#006666">To</font></b> 5
       <font color="#006666">;LockMutex(Mutex)    ; uncomment this to see the difference</font>
     
 <font color="#006666">      PrintN</font>("Thread "+<font color="#006666">Str</font>(*Number)+": Trying to print 5x in a row:")
       <b><font color="#006666">For</font></b> b = 1 <b><font color="#006666">To</font></b> 5
 <font color="#006666">        Delay</font>(50)
 <font color="#006666">        PrintN</font>("Thread "+<font color="#006666">Str</font>(*Number)+" Line "+<font color="#006666">Str</font>(b))
-      <b><font color="#006666">Next</font></b> b          
+      <b><font color="#006666">Next</font></b> b
       
       <font color="#006666">;UnlockMutex(Mutex) ; uncomment this to see the difference</font>
-    <b><font color="#006666">Next</font></b> a    
+    <b><font color="#006666">Next</font></b> a
   <b><font color="#006666">EndProcedure</font></b>
   
 <font color="#006666">  OpenConsole</font>()
@@ -74,8 +74,6 @@ The new mutext object, or zero if the mutex creation has failed.
 </font></pre>
 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Thread Index</a> - <a href=createsemaphore.html>CreateSemaphore()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Thread Index</a> - <a href=createsemaphore.html>CreateSemaphore()</a> -&gt;<br><br>
 
 </body></html>

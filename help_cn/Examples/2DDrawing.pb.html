@@ -41,13 +41,13 @@
 </font><font color="#006666">  ImageGadget</font>(0, 0, 0, 0, 0,<font color="#006666"> ImageID</font>(0))
   
   <font color="#006666">;
-</font>  <font color="#006666">; This is the 'event loop'. All the user actions are processed here.
-</font>  <font color="#006666">; It's very easy to understand: when an action occurs, the Event
-</font>  <font color="#006666">; isn't 0 and we just have to see what have happened...
+</font>  <font color="#006666">; This is the &amp;apos;event loop&amp;apos;. All the user actions are processed here.
+</font>  <font color="#006666">; It&amp;apos;s very easy to understand: when an action occurs, the Event
+</font>  <font color="#006666">; isn&amp;apos;t 0 and we just have to see what have happened...
 </font>  <font color="#006666">;
-</font>  
+</font>
   <b><font color="#006666">Repeat</font></b>
-    Event =<font color="#006666"> WaitWindowEvent</font>() 
+    Event =<font color="#006666"> WaitWindowEvent</font>()
   <b><font color="#006666">Until</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font>  <font color="#006666">; If the user has pressed on the window close button
 </font>  
 <b><font color="#006666">EndIf</font></b>

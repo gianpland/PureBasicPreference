@@ -11,11 +11,11 @@ The DLL code is like a PureBasic code excepts than no real code should be writte
 <br>
 When writing a DLL, all the code is done inside procedures. When a procedure should be public 
 (ie: accessible by third programs which will use the DLL), the keyword <b><font color="#006666">ProcedureDLL</font></b> (or <b><font color="#006666">ProcedureCDLL</font></b> if 
-the procedure needs to be in 'CDecl' format, which is not the case of regular Windows DLL) is used instead 
+the procedure needs to be in &amp;apos;CDecl&amp;apos; format, which is not the case of regular Windows DLL) is used instead 
 of <b><font color="#006666">Procedure</font></b> (and <b><font color="#006666">DeclareDLL</font></b> or <b><font color="#006666">DeclareCDLL</font></b> if are used instead of Declare). This is the only change 
 to do to a program. <br>
 <br>
-When this is done, select 'Shared DLL' as output format ('Compiler Option' window in the PureBasic editor 
+When this is done, select &amp;apos;Shared DLL&amp;apos; as output format (&amp;apos;Compiler Option&amp;apos; window in the PureBasic editor 
 or /DLL switch in command line) and a DLL with the name you set (in the save-requester when using the IDE) 
 will be created in the selected directory. 
 
@@ -44,17 +44,17 @@ of the following events happen: <br>
 - DLL is attached to a new thread <br>
 - DLL is detached from a thread <br>
 <br>
-To handle that, it's possible to declare 4 special procedures called: <font color="#006666">AttachProcess</font>(Instance), <font color="#006666">DetachProcess</font>(Instance), 
+To handle that, it&amp;apos;s possible to declare 4 special procedures called: <font color="#006666">AttachProcess</font>(Instance), <font color="#006666">DetachProcess</font>(Instance), 
 <font color="#006666">AttachThread</font>(Instance) and <font color="#006666">DetachThread</font>(Instance). This means these 4 procedures names are reserved and 
-can't be used by the programmer for other purposes. <br>
+can&amp;apos;t be used by the programmer for other purposes. <br>
 <br>
-<b>Notes about creating DLL's:</b> <br>
+<b>Notes about creating DLL&amp;apos;s:</b> <br>
 <br>
 - The declaration of arrays, lists or map with <a href="../reference/dim.html">Dim</a>, <a href="../reference/newlist.html">NewList</a> or <a href="../reference/newmap.html">NewMap</a> must always be done inside the procedure AttachProcess. <br>
-- Don't write program code outside procedures. The only exception is the declaration of variables or structures. <br>
+- Don&amp;apos;t write program code outside procedures. The only exception is the declaration of variables or structures. <br>
 - DirectX initialization routines must not be written in the AttachProcess procedure. <br>
 <br>
-<b>Note about returning strings from DLL's:</b> <br>
+<b>Note about returning strings from DLL&amp;apos;s:</b> <br>
 <br>
 If you want to return a string out of a DLL, the string has to be declared as <a href="../reference/global.html">Global</a> before using it. 
 
@@ -74,7 +74,7 @@ If you want to return a string out of a DLL, the string has to be declared as <a
 
 
 Without declaring it as <a href="../reference/global.html">Global</a> first, the string is local to the ProcedureDLL 
-and can't be accessed from outside. 
+and can&amp;apos;t be accessed from outside. 
 <br>
 <br>
 When using <a href="../library/callfunction.html">CallFunction()</a> (or one of its similar CallXXX functions) on 

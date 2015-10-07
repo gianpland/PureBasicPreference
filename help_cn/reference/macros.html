@@ -16,7 +16,7 @@
 Macros are a very powerful feature, mainly useful for advanced programmers. A macro is a placeholder 
 for some code (one keyword, one line or even many lines), which will be directly inserted in the 
 source code at the place where a macro is used. In this, it differs from <a href="../reference/procedures.html">procedures</a>, as the procedures 
-doesn't duplicate the code when they are called. 
+doesn&amp;apos;t duplicate the code when they are called. 
 <br>
 <br>
 The <b><font color="#006666">Macro</font></b> : <b><font color="#006666">EndMacro</font></b> declaration must be done before the macro will be called for the first time. 
@@ -30,9 +30,9 @@ all the macros found on this line are expanded.
 <br>
 <br>
 The macros are divided into two categories: simple (without parameters) and complex 
-(with parameters, needs the parentheses when calling it). When using no parameters, it's possible 
+(with parameters, needs the parentheses when calling it). When using no parameters, it&amp;apos;s possible 
 to replace any word with another word (or any expression). The macros can be used recursively, 
-but if the parameter passed contain the concatenation character '#', it won't be expanded. 
+but if the parameter passed contain the concatenation character &amp;apos;#&amp;apos;, it won&amp;apos;t be expanded. 
 
  
 
@@ -44,7 +44,7 @@ but if the parameter passed contain the concatenation character '#', it won't be
   <b><font color="#006666">EndMacro</font></b>
 
   a = 0
-  <b><font color="#006666">If</font></b> MyNot a   <font color="#006666">; Here the line will be expanded to : 'If Not a'</font>
+  <b><font color="#006666">If</font></b> MyNot a   <font color="#006666">; Here the line will be expanded to : &amp;apos;If Not a&amp;apos;</font>
     <b><font color="#006666">Debug</font></b> "Ok"
   <b><font color="#006666">EndIf</font></b>
   
@@ -52,10 +52,10 @@ but if the parameter passed contain the concatenation character '#', it won't be
 
 
 
-When using parameters, it's possible to do very flexible macros. The special concatenation character 
-'#' can be used to create new labels or keyword by mixing the macro code and the parameter expression 
+When using parameters, it&amp;apos;s possible to do very flexible macros. The special concatenation character 
+&amp;apos;#&amp;apos; can be used to create new labels or keyword by mixing the macro code and the parameter expression 
 (spaces are not accepted between each words by the concatenation character). 
-It's also possible to define default values for parameters, so they can be omitted when calling the 
+It&amp;apos;s also possible to define default values for parameters, so they can be omitted when calling the 
 macro. 
 
  
@@ -69,7 +69,7 @@ macro.
 
   Text$ = "World"
 <font color="#006666">  UMsgBox</font>("Hello", "-"+Text$+"-") <font color="#006666">; Here the line will be expanded like that:</font>
-                                  <font color="#006666">; 'MessageRequester("Hello", UCase("-"+Text$+"-"), 0)'</font>
+                                  <font color="#006666">; &amp;apos;MessageRequester("Hello", UCase("-"+Text$+"-"), 0)&amp;apos;</font>
 </font></pre>
 
 </blockquote><p><b>Example:</b> Macro with default parameter</p><blockquote>
@@ -80,7 +80,7 @@ macro.
   <b><font color="#006666">EndMacro</font></b>
 
 <font color="#006666">  UMsgBox</font>("Hello") <font color="#006666">; Here the line will be expanded like that:</font>
-                   <font color="#006666">; 'MessageRequester("Hello", UCase("Ha, no body specified"), 0)'</font>
+                   <font color="#006666">; &amp;apos;MessageRequester("Hello", UCase("Ha, no body specified"), 0)&amp;apos;</font>
 </font></pre>
 
 </blockquote><p><b>Example:</b> Macro parameter concatenation</p><blockquote>

@@ -26,7 +26,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
  
 The password to encrypt. 
 It can be up to 8 characters long (all further 
-characters are simply ignored). <a href="md5fingerprint.html">MD5Fingerprint()</a> can be used to hash a bigger buffer. 
+characters are simply ignored). <a href="stringfingerprint.html">StringFingerprint()</a> can be used to hash a bigger buffer. 
 
  
 
@@ -34,8 +34,8 @@ characters are simply ignored). <a href="md5fingerprint.html">MD5Fingerprint()</
 <tr><td><i>Key$</i></td>
 <td> 
  
-The Key$ is also known as the 'Salt' parameter, well know from Linux/Unix/BSD users. When using a 2 
-characters long Key$, this function returns a 'Salt2' string, compatible 
+The Key$ is also known as the &amp;apos;Salt&amp;apos; parameter, well know from Linux/Unix/BSD users. When using a 2 
+characters long Key$, this function returns a &amp;apos;Salt2&amp;apos; string, compatible 
 which any standard Linux hash password (/etc/passwd). This function is based on the open source crypt() 
 function. 
 
@@ -51,7 +51,7 @@ Returns the encrypted password.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -70,10 +70,8 @@ when the password is correctly chosen.
 
 </blockquote><p><b>参阅</b></p><blockquote>
 
-<a href="md5fingerprint.html">MD5Fingerprint()</a>, <a href="sha1fingerprint.html">SHA1Fingerprint()</a> 
+<a href="stringfingerprint.html">StringFingerprint()</a>, <a href="fingerprint.html">Fingerprint()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=cryptrandomdata.html>CryptRandomData()</a> - <a href=index.html>Cipher Index</a> - <a href=examinemd5fingerprint.html>ExamineMD5Fingerprint()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=cryptrandomdata.html>CryptRandomData()</a> - <a href=index.html>Cipher Index</a> - <a href=filefingerprint.html>FileFingerprint()</a> -&gt;<br><br>
 
 </body></html>

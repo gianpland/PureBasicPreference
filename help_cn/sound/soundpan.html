@@ -10,7 +10,7 @@
 
 
 
-Sets the new pan value, in real-time, for the #Sound. The pan value is saved for the #Sound, so it's not 
+Sets the new pan value, in real-time, for the #Sound. The pan value is saved for the #Sound, so it&amp;apos;s not 
 needed to call it every time. The panning is a way to play a sound on a stereo equipment. 
 
  
@@ -41,7 +41,7 @@ If the pan value is zero, then the sound is played on right and left speaker, eq
 <tr><td><i>Channel (optional)</i></td>
 <td> 
  
-The channel to use. It's the value returned by <a href="playsound.html">PlaySound()</a> when using the 
+The channel to use. It&amp;apos;s the value returned by <a href="playsound.html">PlaySound()</a> when using the 
 <font color="#924B72">#PB_Sound_MultiChannel</font> flag. 
 
  
@@ -52,8 +52,31 @@ The channel to use. It's the value returned by <a href="playsound.html">PlaySoun
 无.
 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>Windows, MacOS X</Blockquote></p><center>&lt;- <a href=soundlength.html>SoundLength()</a> - <a href=index.html>Sound Index</a> - <a href=soundstatus.html>SoundStatus()</a> -&gt;
+</blockquote><p><b>示例</b></p><blockquote>
 
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666"> InitSound</font>()           <font color="#006666">; Initialize Sound system</font>
+<font color="#006666"> UseOGGSoundDecoder</font>()  <font color="#006666">; Use ogg files</font>
 
+ <font color="#006666">; Loads a sound from a file</font>
+<font color="#006666"> LoadSound</font>(0, <font color="#924B72">#PB_Compiler_Home</font> +"Examples\3D\Data\Siren.ogg")
+ <font color="#006666">; The sound is playing</font>
+<font color="#006666"> PlaySound</font>(0, <font color="#924B72">#PB_Sound_Loop</font>, 20)
+
+<font color="#006666"> MessageRequester</font>("Info", "The sound is playing in stereo.")
+ 
+<font color="#006666"> SoundPan</font>(0, -100)
+<font color="#006666"> MessageRequester</font>("Info", "The sound is playing only on the left channel.")
+ 
+<font color="#006666"> SoundPan</font>(0, 100)
+<font color="#006666"> MessageRequester</font>("Info", "The sound is playing only on the right channel.")
+ 
+<font color="#006666"> SoundPan</font>(0, 0)
+<font color="#006666"> MessageRequester</font>("Info", "The sound is playing in stereo.")
+ 
+<font color="#006666"> FreeSound</font>(0) <font color="#006666">; The sound is freed</font>
+ <b><font color="#006666">End</font></b>
+</font></pre>
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>Windows, MacOS X</Blockquote></p><center>&lt;- <a href=soundlength.html>SoundLength()</a> - <a href=index.html>Sound Index</a> - <a href=soundstatus.html>SoundStatus()</a> -&gt;<br><br>
 
 </body></html>

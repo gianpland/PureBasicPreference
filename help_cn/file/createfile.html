@@ -44,11 +44,11 @@ is interpreted relative to the <a href="../filesystem/getcurrentdirectory.html">
 <tr><td><i>Flags (optional)</i></td>
 <td> 
  
-It can be a combination (using the '| operand) of the following values: 
+It can be a combination (using the &amp;apos;| operand) of the following values: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_File_SharedRead</font> : the opened file can be read by another process (Windows only).
   <font color="#924B72">#PB_File_SharedWrite</font>: the opened file can be write by another process (Windows only).
-  <font color="#924B72">#PB_File_NoBuffering</font>: the internal PureBasic file buffering system will be disabled for this file. 
+  <font color="#924B72">#PB_File_NoBuffering</font>: the internal PureBasic file buffering system will be disabled for this file.
                         <a href="filebufferssize.html">FileBuffersSize()</a> can not be used on this file.
 </font></pre>
 
@@ -64,7 +64,7 @@ If <font color="#924B72">#PB_Any</font> was used as the #File parameter then the
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -83,10 +83,10 @@ reading only, use <a href="readfile.html">ReadFile()</a>.
 <pre><font face="Courier New, Courier, mono"size="2">
   <b><font color="#006666">If</font></b> <font color="#006666">CreateFile</font>(0, "Text.txt")         <font color="#006666">; we create a new text file...</font>
     <b><font color="#006666">For</font></b> a=1 <b><font color="#006666">To</font></b> 10
-<font color="#006666">      WriteStringN</font>(0, "Line "+<font color="#006666">Str</font>(a))  <font color="#006666">; we write 10 lines (each with 'end of line' character)</font>
+<font color="#006666">      WriteStringN</font>(0, "Line "+<font color="#006666">Str</font>(a))  <font color="#006666">; we write 10 lines (each with &amp;apos;end of line&amp;apos; character)</font>
     <b><font color="#006666">Next</font></b>
     <b><font color="#006666">For</font></b> a=1 <b><font color="#006666">To</font></b> 10
-<font color="#006666">      WriteString</font>(0, "String"+<font color="#006666">Str</font>(a))  <font color="#006666">; and now we add 10 more strings on the same line (because there is no 'end of line' character)</font>
+<font color="#006666">      WriteString</font>(0, "String"+<font color="#006666">Str</font>(a))  <font color="#006666">; and now we add 10 more strings on the same line (because there is no &amp;apos;end of line&amp;apos; character)</font>
     <b><font color="#006666">Next</font></b>
 <font color="#006666">    CloseFile</font>(0)                       <font color="#006666">; close the previously opened file and store the written data this way</font>
   <b><font color="#006666">Else</font></b>
@@ -99,8 +99,6 @@ reading only, use <a href="readfile.html">ReadFile()</a>.
 
 <a href="openfile.html">OpenFile()</a>, <a href="readfile.html">ReadFile()</a>, <a href="closefile.html">CloseFile()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=closefile.html>CloseFile()</a> - <a href=index.html>File Index</a> - <a href=eof.html>Eof()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=closefile.html>CloseFile()</a> - <a href=index.html>File Index</a> - <a href=eof.html>Eof()</a> -&gt;<br><br>
 
 </body></html>

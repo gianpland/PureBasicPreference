@@ -3,7 +3,7 @@
 <body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
 <font face="Arial" size="2"><p align="center"><b><font size="5">UserGuide - Variables and Processing of variables</font></b></p>
 
-<b>A</b> is an integer - but note that you can't declare <a href="../reference/variables.html">variables</a> 
+<b>A</b> is an integer - but note that you can&amp;apos;t declare <a href="../reference/variables.html">variables</a> 
 this way if you use the <a href="../reference/compilerdirectives.html">EnableExplicit</a> directive. 
 Outside of a <a href="../reference/procedures.html">procedure</a> A will exist at Main scope, within 
 a procedure it will become local. 
@@ -36,7 +36,7 @@ So is <b>G$</b>, however, if you declare strings this way, you must always use t
 
 
 
-This won't work. (G becomes a new integer variable and a compiler error occurs). 
+This won&amp;apos;t work. (G becomes a new integer variable and a compiler error occurs). 
  
 <pre><font face="Courier New, Courier, mono"size="2">  G = "Goodbye, World!"
 </font></pre>
@@ -74,7 +74,7 @@ changes are minimized.
 
 
 
-Note that you can't use the alternative syntax of the <a href="../reference/define.html">Define</a> 
+Note that you can&amp;apos;t use the alternative syntax of the <a href="../reference/define.html">Define</a> 
 keyword with <a href="../reference/newlist.html">NewList</a> or <a href="../reference/newmap.html">NewMap</a> 
 though. A compiler error will result. 
 <br>
@@ -82,19 +82,19 @@ though. A compiler error will result.
 Within a procedure: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">TestVariables</font>()
-  �
-  �<font color="#006666">; N and P will be local.</font>
-  �<b><font color="#006666">Define</font></b>.l N
-  �<b><font color="#006666">Protected</font></b>.l P
-  �
-  �<font color="#006666">; Q will be a static local.</font>
-  �<b><font color="#006666">Static</font></b>.l Q
-  �
-  �<font color="#006666">; The main scope variable F and the string list K will be available within this procedure.</font>
-  �<b><font color="#006666">Shared</font></b> F,<font color="#006666"> K</font>()
-  �
-  �<font color="#006666">; The global scope variable J will be available here implicitly.</font>
-  �
+  � 
+  � <font color="#006666">; N and P will be local.</font>
+  � <b><font color="#006666">Define</font></b>.l N
+  � <b><font color="#006666">Protected</font></b>.l P
+  � 
+  � <font color="#006666">; Q will be a static local.</font>
+  � <b><font color="#006666">Static</font></b>.l Q
+  � 
+  � <font color="#006666">; The main scope variable F and the string list K will be available within this procedure.</font>
+  � <b><font color="#006666">Shared</font></b> F,<font color="#006666"> K</font>()
+  � 
+  � <font color="#006666">; The global scope variable J will be available here implicitly.</font>
+  � 
   <b><font color="#006666">EndProcedure</font></b>
 </font></pre>
 

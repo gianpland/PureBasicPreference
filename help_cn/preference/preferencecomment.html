@@ -33,8 +33,24 @@ The new comment to write.
 无.
 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=openpreferences.html>OpenPreferences()</a> - <a href=index.html>Preference Index</a> - <a href=preferencegroup.html>PreferenceGroup()</a> -&gt;
+</blockquote><p><b>示例</b></p><blockquote>
 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Cr閍tion du fichier prefs.txt</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreatePreferences</font>(<font color="#006666">GetTemporaryDirectory</font>()+"Prefs.txt")
 
+<font color="#006666">    PreferenceComment</font>("The coordinates of the window.") <font color="#006666">; Write a comment</font>
+<font color="#006666">    PreferenceComment</font>("") <font color="#006666">; Write a comment (empty line)</font>
+
+<font color="#006666">    PreferenceGroup</font>("Window")
+<font color="#006666">      WritePreferenceLong </font>("X", 100)
+<font color="#006666">      WritePreferenceLong </font>("Y", 125)
+
+<font color="#006666">      ClosePreferences</font>()
+    
+<font color="#006666">      RunProgram</font>(<font color="#006666">GetTemporaryDirectory</font>()+"Prefs.txt")
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=openpreferences.html>OpenPreferences()</a> - <a href=index.html>Preference Index</a> - <a href=preferencegroup.html>PreferenceGroup()</a> -&gt;<br><br>
 
 </body></html>

@@ -16,7 +16,7 @@ use what is the best for your situation!
 This example shows the use of <b><font color="#006666">If : ElseIf : Else : EndIf</font></b> for creating a message, possibly 
 for showing in the status bar of a form (<a href="../gadget/index.html">GUI</a>) or something similar, based upon the number 
 of items and filtered items in an, imaginary, list. Note that unlike some other BASIC 
-languages, PureBasic doesn't use the "Then" keyword and that there is no space in the 
+languages, PureBasic doesn&amp;apos;t use the "Then" keyword and that there is no space in the 
 ElseIf and EndIf keywords. 
 
  
@@ -24,7 +24,7 @@ ElseIf and EndIf keywords.
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b>.l Items = 10, Filter = 6
   <b><font color="#006666">Define</font></b>.s Message
   
-  <b><font color="#006666">If</font></b> Items = 0 
+  <b><font color="#006666">If</font></b> Items = 0
     Message = "List is empty."
     
   <b><font color="#006666">ElseIf</font></b> Items = 1 <b><font color="#006666">And</font></b> Filter = 0
@@ -72,7 +72,7 @@ demonstrate the <a href="../reference/select_endselect.html">Default</a> keyword
       <b><font color="#006666">Case</font></b> 32
         Message =<font color="#006666"> StrU</font>(Char) + " is a space."
         
-      <b><font color="#006666">Case</font></b> 36, 128   
+      <b><font color="#006666">Case</font></b> 36, 128
         Message =<font color="#006666"> StrU</font>(Char) + " is a currency symbol. (" +<font color="#006666"> Chr</font>(Char) + ")"
         
       <b><font color="#006666">Case</font></b> 33 <b><font color="#006666">To</font></b> 35, 37 <b><font color="#006666">To</font></b> 47, 58 <b><font color="#006666">To</font></b> 64, 91 <b><font color="#006666">To</font></b> 96
@@ -89,7 +89,7 @@ demonstrate the <a href="../reference/select_endselect.html">Default</a> keyword
         
       <b><font color="#006666">Default</font></b>
         <font color="#006666">; If none of the preceding Case conditions are met.</font>
-        Message = "Sorry, I don't know what " +<font color="#006666"> StrU</font>(Char) + " is!"
+        Message = "Sorry, I don&amp;apos;t know what " +<font color="#006666"> StrU</font>(Char) + " is!"
         
     <b><font color="#006666">EndSelect</font></b>
     

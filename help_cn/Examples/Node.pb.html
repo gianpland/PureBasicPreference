@@ -38,7 +38,7 @@
     
 <font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Dirt.jpg"))
     
-<font color="#006666">    CreateSphere</font>(0, 1)  
+<font color="#006666">    CreateSphere</font>(0, 1)
     
     d=3
     
@@ -58,9 +58,9 @@
 <font color="#006666">        ScaleEntity</font>(<font color="#006666">Entity</font>(j, i), 1, 1, 2)   
 <font color="#006666">        AttachNodeObject</font>(<font color="#006666">Node</font>(j, i),<font color="#006666"> EntityID</font>(<font color="#006666">Entity</font>(j, i)))
 <font color="#006666">        MoveEntity</font>(<font color="#006666">entity</font>(j, i), 0, 0, d)
-      <b><font color="#006666">Next</font></b> 
+      <b><font color="#006666">Next</font></b>
       
-    <b><font color="#006666">Next</font></b> 
+    <b><font color="#006666">Next</font></b>
     
     <font color="#006666">;-Camera 
 </font><font color="#006666">    CreateCamera</font>(0, 0, 0, 100, 100)
@@ -74,7 +74,7 @@
 </font><font color="#006666">    CreateLight</font>(0,<font color="#006666"> RGB</font>(255, 255, 255), 0, 500, 100)
 <font color="#006666">    AmbientColor</font>(<font color="#006666">RGB</font>(85, 85, 85))
      
-    
+
     <b><font color="#006666">Repeat</font></b>
       
 <font color="#006666">      Screen3DEvents</font>()
@@ -85,24 +85,24 @@
 <font color="#006666">          RotateNode</font>(<font color="#006666">Node</font>(j, 0), (45-(<font color="#006666">MouseY</font>()/8)), 360.0/(<font color="#924B72">#NbBranche</font>+1) * j + (<font color="#006666">MouseX</font>()/2),0, <font color="#924B72">#PB_Absolute</font>)
           <b><font color="#006666">For</font></b> i = 1 <b><font color="#006666">To</font></b> <font color="#924B72">#NBNode</font>
 <font color="#006666">            RotateNode</font>(<font color="#006666">Node</font>(j, i), 45-(<font color="#006666">MouseY</font>()/8), 0, 0, <font color="#924B72">#PB_Absolute</font>)
-          <b><font color="#006666">Next</font></b> 
-        <b><font color="#006666">Next</font></b> 
+          <b><font color="#006666">Next</font></b>
+        <b><font color="#006666">Next</font></b>
         
       <b><font color="#006666">EndIf</font></b>
       
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
-<font color="#006666">          MoveCamera</font>(0, 0, 0, -<font color="#924B72">#CameraSpeed</font>)   
+<font color="#006666">          MoveCamera</font>(0, 0, 0, -<font color="#924B72">#CameraSpeed</font>)
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
-<font color="#006666">          MoveCamera</font>(0, 0, 0, <font color="#924B72">#CameraSpeed</font>) 
+<font color="#006666">          MoveCamera</font>(0, 0, 0, <font color="#924B72">#CameraSpeed</font>)
         <b><font color="#006666">EndIf</font></b>
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
-<font color="#006666">          MoveCamera</font>(0, <font color="#924B72">#CameraSpeed</font>, 0, 0)   
+<font color="#006666">          MoveCamera</font>(0, <font color="#924B72">#CameraSpeed</font>, 0, 0)
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
-<font color="#006666">          MoveCamera</font>(0, -<font color="#924B72">#CameraSpeed</font>, 0, 0) 
-        <b><font color="#006666">EndIf</font></b>   
+<font color="#006666">          MoveCamera</font>(0, -<font color="#924B72">#CameraSpeed</font>, 0, 0)
+        <b><font color="#006666">EndIf</font></b>
         
       <b><font color="#006666">EndIf</font></b>
                 
@@ -113,7 +113,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized", 0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b></font></pre>

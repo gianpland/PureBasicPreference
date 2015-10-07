@@ -10,10 +10,12 @@
 </font><font color="#006666">;
 </font><font color="#006666">; ------------------------------------------------------------
 </font><font color="#006666">;
-</font><font color="#006666">; Note: disable the debugger to run at full speed !</font><font color="#006666">;
+</font><font color="#006666">; Note: disable the debugger to run at full speed !
+</font><font color="#006666">;
 </font>
 
-<font color="#924B72">#ScreenWidth</font>  = 800  <font color="#006666">; Feel free to change this to see the pixel filling speed !</font><font color="#924B72">#ScreenHeight</font> = 600
+<font color="#924B72">#ScreenWidth</font>  = 800  <font color="#006666">; Feel free to change this to see the pixel filling speed !
+</font><font color="#924B72">#ScreenHeight</font> = 600
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitSprite</font>() = 0 <b><font color="#006666">Or</font></b> <font color="#006666">InitKeyboard</font>() = 0
 <font color="#006666">  MessageRequester</font>("Error", "DirectX is needed.",0)
@@ -47,16 +49,16 @@
     <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">ScreenOutput</font>())
       Buffer      =<font color="#006666"> DrawingBuffer</font>()             <font color="#006666">; Get the start address of the screen buffer
 </font>      Pitch       =<font color="#006666"> DrawingBufferPitch</font>()        <font color="#006666">; Get the length (in byte) took by one horizontal line
-</font>      PixelFormat =<font color="#006666"> DrawingBufferPixelFormat</font>()  <font color="#006666">; Get the pixel format. 
-</font>      
+</font>      PixelFormat =<font color="#006666"> DrawingBufferPixelFormat</font>()  <font color="#006666">; Get the pixel format.
+</font>
       <b><font color="#006666">If</font></b> PixelFormat = <font color="#924B72">#PB_PixelFormat_32Bits_RGB</font>
         <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 255
 <font color="#006666">          ColorTable</font>(i) = i &lt;&lt; 16 <font color="#006666">; Blue is at the 3th pixel
 </font>        <b><font color="#006666">Next</font></b>
-      <b><font color="#006666">Else</font></b>                        <font color="#006666">; Else it's 32bits_BGR
+      <b><font color="#006666">Else</font></b>                        <font color="#006666">; Else it&amp;apos;s 32bits_BGR
 </font>        <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> 255
 <font color="#006666">          ColorTable</font>(i) = i       <font color="#006666">; Blue is at the 1th pixel
-</font>        <b><font color="#006666">Next</font></b>    
+</font>        <b><font color="#006666">Next</font></b>
       <b><font color="#006666">EndIf</font></b>
     
       <b><font color="#006666">For</font></b> y = 0 <b><font color="#006666">To</font></b> <font color="#924B72">#ScreenHeight</font>-1
@@ -66,7 +68,8 @@
         
         <b><font color="#006666">For</font></b> x = 0 <b><font color="#006666">To</font></b> <font color="#924B72">#ScreenWidth</font>-1
           pos2 = (<font color="#006666">CosTable</font>(x+Wave) +<font color="#006666"> CosTable</font>(x+y) + pos1)
-          *Line\Pixel =<font color="#006666"> ColorTable</font>(pos2) <font color="#006666">; Write the pixel directly to the memory !</font>          *Line+4
+          *Line\Pixel =<font color="#006666"> ColorTable</font>(pos2) <font color="#006666">; Write the pixel directly to the memory !
+</font>          *Line+4
         <b><font color="#006666">Next</font></b>
       <b><font color="#006666">Next</font></b>
       
@@ -80,7 +83,7 @@
   <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)
 
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error","Can't open the screen !",0)
+<font color="#006666">  MessageRequester</font>("Error","Can&amp;apos;t open the screen !",0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>

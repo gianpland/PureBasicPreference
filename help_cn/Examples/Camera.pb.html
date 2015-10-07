@@ -28,7 +28,7 @@
   
   <b><font color="#006666">If</font></b> <font color="#006666">Screen3DRequester</font>()
     
-<font color="#006666">    AmbientColor</font>(<font color="#006666">RGB</font>(0, 200, 0))  <font color="#006666">; Green 'HUD' like color 
+<font color="#006666">    AmbientColor</font>(<font color="#006666">RGB</font>(0, 200, 0))  <font color="#006666">; Green &amp;apos;HUD&amp;apos; like color 
 </font> 
 <font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "r2skin.jpg"))
 <font color="#006666">    CreateEntity</font>(0,<font color="#006666"> LoadMesh</font>(0, "robot.mesh"),<font color="#006666"> MaterialID</font>(0))
@@ -44,7 +44,7 @@
 <font color="#006666">    RotateCamera</font>(1, 180, 0, 0)
     
 <font color="#006666">    CameraRenderMode</font>(1, <font color="#924B72">#PB_Camera_Wireframe</font>)  <font color="#006666">; Wireframe for this camera
-</font> 
+</font>
     <b><font color="#006666">Repeat</font></b>
 <font color="#006666">      Screen3DEvents</font>()
       
@@ -56,24 +56,24 @@
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
              
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
-          KeyX = -<font color="#924B72">#CameraSpeed</font> 
+          KeyX = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
-          KeyX = <font color="#924B72">#CameraSpeed</font> 
+          KeyX = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyX = 0
         <b><font color="#006666">EndIf</font></b>
                   
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
-          KeyY = -<font color="#924B72">#CameraSpeed</font> 
+          KeyY = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
-          KeyY = <font color="#924B72">#CameraSpeed</font> 
+          KeyY = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyY = 0
         <b><font color="#006666">EndIf</font></b>
 
       <b><font color="#006666">EndIf</font></b>
       
-      
+
 <font color="#006666">      RotateEntity</font>(0, 0, 0.1, 0, <font color="#924B72">#PB_Relative</font>)
       
 <font color="#006666">      RotateCamera</font>(0, MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)
@@ -89,7 +89,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized",0)
 <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">End</font></b></font></pre>

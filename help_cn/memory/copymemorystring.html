@@ -59,7 +59,7 @@ Returns the value of *DestinationMemoryID after the string was copied.
   *Pointer = *Buffer
 <font color="#006666">  CopyMemoryString</font>("Hello", @*Pointer)
 <font color="#006666">  CopyMemoryString</font>(" World")  <font color="#006666">; This one will be put just after "Hello"</font>
-  *Pointer-2                  <font color="#006666">; Come back from 2 characters (on the 'l' of 'World')</font>
+  *Pointer-2                  <font color="#006666">; Come back from 2 characters (on the &amp;apos;l&amp;apos; of &amp;apos;World&amp;apos;)</font>
 <font color="#006666">  CopyMemoryString</font>("LD")      <font color="#006666">; Finally the last two letters will be uppercase</font>
   <b><font color="#006666">Debug</font></b> <font color="#006666">PeekS</font>(*Buffer)
 </font></pre>
@@ -68,8 +68,6 @@ Returns the value of *DestinationMemoryID after the string was copied.
 
 <a href="copymemory.html">CopyMemory()</a>, <a href="peeks.html">PeekS()</a>, <a href="pokes.html">PokeS()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=copymemory.html>CopyMemory()</a> - <a href=index.html>Memory Index</a> - <a href=fillmemory.html>FillMemory()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=copymemory.html>CopyMemory()</a> - <a href=index.html>Memory Index</a> - <a href=fillmemory.html>FillMemory()</a> -&gt;<br><br>
 
 </body></html>

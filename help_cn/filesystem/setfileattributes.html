@@ -35,11 +35,10 @@ The name of the file to modify. This can also specify the name of a directory.
 The new attributes. 
 <br>
 <br>
-On Windows, 'Attributes' is a combination of the following values: 
+On Windows, &amp;apos;Attributes&amp;apos; is a combination of the following values: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_FileSystem_Hidden</font>    : File is hidden
   <font color="#924B72">#PB_FileSystem_Archive</font>   : File has been changed and not archived since the last time
-  <font color="#924B72">#PB_FileSystem_Compressed</font>: File is compressed
   <font color="#924B72">#PB_FileSystem_Normal</font>    : Normal attributes
   <font color="#924B72">#PB_FileSystem_ReadOnly</font>  : File is in read-only mode
   <font color="#924B72">#PB_FileSystem_System</font>    : File is a system file
@@ -52,7 +51,7 @@ On Linux and MacOSX, the following values can be used:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_FileSystem_ReadUser</font>  : Access flags for the owning user
   <font color="#924B72">#PB_FileSystem_WriteUser</font>
   <font color="#924B72">#PB_FileSystem_ExecUser</font>
-  <font color="#924B72">#PB_FileSystem_ReadGroup</font> : Access flags for the owning user's group
+  <font color="#924B72">#PB_FileSystem_ReadGroup</font> : Access flags for the owning user&amp;apos;s group
   <font color="#924B72">#PB_FileSystem_WriteGroup</font>
   <font color="#924B72">#PB_FileSystem_ExecGroup</font>
   <font color="#924B72">#PB_FileSystem_ReadAll</font>   : Access flags for all other users
@@ -62,7 +61,7 @@ On Linux and MacOSX, the following values can be used:
 
 
 
-To combine several attributes, just use the '|' (binary OR) operand: 
+To combine several attributes, just use the &amp;apos;|&amp;apos; (binary OR) operand: 
  
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  SetFileAttributes</font>("C:\Text.txt", <font color="#924B72">#PB_FileSystem_Hidden</font> | <font color="#924B72">#PB_FileSystem_ReadOnly</font>)
 </font></pre>
@@ -81,8 +80,6 @@ Returns nonzero if the operation was successful and zero otherwise.
 
 <a href="getfileattributes.html">GetFileAttributes()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=setcurrentdirectory.html>SetCurrentDirectory()</a> - <a href=index.html>FileSystem Index</a> - <a href=setfiledate.html>SetFileDate()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=setcurrentdirectory.html>SetCurrentDirectory()</a> - <a href=index.html>FileSystem Index</a> - <a href=setfiledate.html>SetFileDate()</a> -&gt;<br><br>
 
 </body></html>

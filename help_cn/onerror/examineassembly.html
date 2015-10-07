@@ -63,7 +63,7 @@ Nonzero if disassembling is possible, zero otherwise.
     a = (<font color="#006666">Random</font>(100) * 5) + 2000
   Code_End:
   
-  Text$ = "Disassembled code: " +<font color="#006666"> Chr</font>(13)  
+  Text$ = "Disassembled code: " +<font color="#006666"> Chr</font>(13)
   <b><font color="#006666">If</font></b> <font color="#006666">ExamineAssembly</font>(?Code_Start, ?Code_End)
     <b><font color="#006666">While</font></b> <font color="#006666">NextInstruction</font>()
       Text$ +<font color="#006666"> RSet</font>(<font color="#006666">Hex</font>(<font color="#006666">InstructionAddress</font>()),<font color="#006666"> SizeOf</font>(Integer)*2, "0")
@@ -78,8 +78,6 @@ Nonzero if disassembling is possible, zero otherwise.
 
 <a href="nextinstruction.html">NextInstruction()</a>, <a href="instructionaddress.html">InstructionAddress()</a>, <a href="instructionstring.html">InstructionString()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>Windows, Linux, MacOS X (x86)</Blockquote></p><center>&lt;- <a href=errortargetaddress.html>ErrorTargetAddress()</a> - <a href=index.html>OnError Index</a> - <a href=instructionaddress.html>InstructionAddress()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>Windows, Linux, MacOS X (x86)</Blockquote></p><center>&lt;- <a href=errortargetaddress.html>ErrorTargetAddress()</a> - <a href=index.html>OnError Index</a> - <a href=instructionaddress.html>InstructionAddress()</a> -&gt;<br><br>
 
 </body></html>

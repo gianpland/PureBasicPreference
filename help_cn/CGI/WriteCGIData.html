@@ -1,0 +1,76 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>WriteCGIData</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">WriteCGIData()</font></b></p>
+<p><b>语法</b></p><blockquote>
+
+Result = <font color="#006666"><b>WriteCGIData</b></font>(*Buffer, Size)</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Writes binary data to the CGI output. When sending binary data, the &amp;apos;content-type&amp;apos; header should be set to 
+&amp;apos;application/octet-stream&amp;apos;. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>*Buffer</i></td>
+<td width="90%"> 
+ 
+The memory buffer to write. 
+
+ 
+
+</td></tr>
+<tr><td><i>Size</i></td>
+<td> 
+ 
+The size (in bytes) to write. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Returns non-zero if the data has been successfully written to the CGI output. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> <b><font color="#006666">Not</font></b> <font color="#006666">InitCGI</font>() <b><font color="#006666">Or</font></b> <b><font color="#006666">Not</font></b> <font color="#006666">ReadCGI</font>()
+    <b><font color="#006666">End</font></b>
+  <b><font color="#006666">EndIf</font></b>
+  
+<font color="#006666">  WriteCGIHeader</font>(<font color="#924B72">#PB_CGI_HeaderContentType</font>, "application/octet-stream")
+<font color="#006666">  WriteCGIHeader</font>(<font color="#924B72">#PB_CGI_HeaderContentDisposition</font>, "attachment; filename=image.png", <font color="#924B72">#PB_CGI_LastHeader</font>)
+  
+  <b><font color="#006666">If</font></b> <font color="#006666">ReadFile</font>(0, <font color="#924B72">#PB_Compiler_Home</font> + "examples/sources/data/world.png")
+    Size =<font color="#006666"> Lof</font>(0)
+    *Buffer =<font color="#006666"> AllocateMemory</font>(Size)
+<font color="#006666">    ReadData</font>(0, *Buffer, Size) <font color="#006666">; Read the whole file into the new allocated buffer</font>
+    
+<font color="#006666">    WriteCGIData</font>(*Buffer, Size) <font color="#006666">; Write the whole buffer to the CGI output</font>
+    
+<font color="#006666">    CloseFile</font>(0)
+  <b><font color="#006666">EndIf</font></b>
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="initcgi.html">InitCGI()</a>, <a href="writecgiheader.html">WriteCGIHeader()</a>, <a href="writecgifile.html">WriteCGIFile()</a> 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=waitfastcgirequest.html>WaitFastCGIRequest()</a> - <a href=index.html>CGI Index</a> - <a href=writecgifile.html>WriteCGIFile()</a> -&gt;<br><br>
+
+</body></html>

@@ -39,22 +39,22 @@
 </font><font color="#006666">  CreateImage</font>(<font color="#924B72">#ImageSource</font>, 136, 136)
   <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">ImageOutput</font>(<font color="#924B72">#ImageSource</font>))
 <font color="#006666">    Box</font>(0, 0, 136, 136, $FFFFFF)
-<font color="#006666">    DrawText</font>(5, 5, "Drag this image", $000000, $FFFFFF)        
+<font color="#006666">    DrawText</font>(5, 5, "Drag this image", $000000, $FFFFFF)
     <b><font color="#006666">For</font></b> i = 45 <b><font color="#006666">To</font></b> 1 <b><font color="#006666">Step</font></b> -1
 <font color="#006666">      Circle</font>(70, 80, i,<font color="#006666"> Random</font>($FFFFFF))
-    <b><font color="#006666">Next</font></b> i        
+    <b><font color="#006666">Next</font></b> i
     
 <font color="#006666">    StopDrawing</font>()
-  <b><font color="#006666">EndIf</font></b>  
+  <b><font color="#006666">EndIf</font></b>
   
 <font color="#006666">  CreateImage</font>(<font color="#924B72">#ImageTarget</font>, 136, 136)
   <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">ImageOutput</font>(<font color="#924B72">#ImageTarget</font>))
 <font color="#006666">    Box</font>(0, 0, 136, 136, $FFFFFF)
 <font color="#006666">    DrawText</font>(5, 5, "Drop images here", $000000, $FFFFFF)
 <font color="#006666">    StopDrawing</font>()
-  <b><font color="#006666">EndIf</font></b>  
+  <b><font color="#006666">EndIf</font></b>
   
-  
+
   <font color="#006666">; Create and fill the source gadgets
 </font>  <font color="#006666">;
 </font><font color="#006666">  ListIconGadget</font>(<font color="#924B72">#SourceText</font>,       10, 10, 140, 140, "Drag Text here", 130)   
@@ -104,12 +104,12 @@
 <font color="#006666">          DragImage</font>(<font color="#006666">ImageID</font>(<font color="#924B72">#ImageSource</font>))
         
         <b><font color="#006666">Case</font></b> <font color="#924B72">#SourceFiles</font>
-          Files$ = ""       
+          Files$ = ""
           <b><font color="#006666">For</font></b> i = 0 <b><font color="#006666">To</font></b> <font color="#006666">CountGadgetItems</font>(<font color="#924B72">#SourceFiles</font>)-1
             <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetItemState</font>(<font color="#924B72">#SourceFiles</font>, i) &amp; <font color="#924B72">#PB_Explorer_Selected</font>
               Files$ +<font color="#006666"> GetGadgetText</font>(<font color="#924B72">#SourceFiles</font>) +<font color="#006666"> GetGadgetItemText</font>(<font color="#924B72">#SourceFiles</font>, i) +<font color="#006666"> Chr</font>(10)
             <b><font color="#006666">EndIf</font></b>
-          <b><font color="#006666">Next</font></b> i 
+          <b><font color="#006666">Next</font></b> i
           <b><font color="#006666">If</font></b> Files$ &lt;&gt; ""
 <font color="#006666">            DragFiles</font>(Files$)
           <b><font color="#006666">EndIf</font></b>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="2.6.3_11" segtype="sentence" srclang="EN-US"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.1.9_4" segtype="sentence" srclang="EN-US"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -10,6 +10,22 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112340Z">
         <seg>1 - 蓝色</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>1 : Underline cursor (default)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140837Z">
+        <seg>1 : Underline 下划线光标 (默认)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>10: Full-height cursor</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140853Z">
+        <seg>10: Full-height 完整高度光标</seg>
       </tuv>
     </tu>
     <tu>
@@ -46,10 +62,82 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>5 : Mid-height cursor</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140844Z">
+        <seg>5 : Mid-height 中高光标</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- Alpha() - 2DDrawing Index - BackColor() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150120T142351Z" creationid="oSilas" creationdate="20150120T142351Z">
+        <seg>&lt;- Alpha() - 2DDrawing 目录 - BackColor() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- BackColor() - 2DDrawing Index - Box() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031309Z" creationid="oSilas" creationdate="20141128T031309Z">
+        <seg>&lt;- BackColor() - 2DDrawing 索引 - Box() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- Blue() - 2DDrawing Index - BoxedGradient() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T151533Z">
+        <seg>&lt;- Blue() - 2DDrawing 索引 - BoxedGradient() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- Box() - 2DDrawing Index - Circle() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031839Z" creationid="oSilas" creationdate="20141122T040952Z">
+        <seg>&lt;- Box() - 2DDrawing 索引 - Circle() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- BoxedGradient() - 2DDrawing Index - CircularGradient() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041614Z" creationid="oSilas" creationdate="20141122T041614Z">
+        <seg>&lt;- BoxedGradient() - 2DDrawing 索引 - CircularGradient() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- Circle() - 2DDrawing Index - ClipOutput() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041952Z" creationid="oSilas" creationdate="20141122T041952Z">
+        <seg>&lt;- Circle() - 2DDrawing索引 - ClipOutput() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- CircularGradient() - 2DDrawing Index - ConicalGradient() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033908Z" creationid="oSilas" creationdate="20141128T033908Z">
+        <seg>&lt;- CircularGradient() - 2DDrawing 索引 - ConicalGradient() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;- ClearConsole() - Console Index - ConsoleColor() -&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111634Z">
         <seg>&lt;- ClearConsole() - Console 目录 - ConsoleColor() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- ClipOutput() - 2DDrawing Index - CustomFilterCallback() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T035006Z" creationid="oSilas" creationdate="20141128T035006Z">
+        <seg>&lt;- ClipOutput() - 2DDrawing 索引 - CustomFilterCallback() -&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -62,10 +150,378 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;- ConicalGradient() - 2DDrawing Index - CustomGradient() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040602Z" creationid="oSilas" creationdate="20141128T040602Z">
+        <seg>&lt;- ConicalGradient() - 2DDrawing 索引 - CustomGradient() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- ConsoleColor() - Console Index - ConsoleError() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140959Z">
+        <seg>&lt;- ConsoleColor() - Console 目录 - ConsoleError() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- ConsoleCursor() - Console Index - ConsoleLocate() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T142135Z">
+        <seg>&lt;- ConsoleCursor() - Console 索引 - ConsoleLocate() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- ConsoleError() - Console Index - ConsoleTitle() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T135144Z" creationid="oSilas" creationdate="20141124T135144Z">
+        <seg>&lt;- ConsoleError() - Console 索引 - ConsoleTitle() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- ConsoleLocate() - Console Index - EnableGraphicalConsole() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T135919Z" creationid="oSilas" creationdate="20141124T135919Z">
+        <seg>&lt;- ConsoleLocate() - Console 目录 - EnableGraphicalConsole() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- CustomFilterCallback() - 2DDrawing Index - DrawAlphaImage() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041443Z" creationid="oSilas" creationdate="20141128T041443Z">
+        <seg>&lt;- CustomFilterCallback() - 2DDrawing 索引 - DrawAlphaImage() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- CustomGradient() - 2DDrawing Index - DrawImage() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041614Z" creationid="oSilas" creationdate="20141128T041614Z">
+        <seg>&lt;- CustomGradient() - 2DDrawing 索引 - DrawImage() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- DrawText() - 2DDrawing Index - DrawingBufferPitch() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043150Z" creationid="oSilas" creationdate="20150312T043150Z">
+        <seg>&lt;- DrawText() - 2DDrawing 目录 - DrawingBufferPitch() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- DrawingBuffer() - 2DDrawing Index - DrawingBufferPixelFormat() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043300Z" creationid="oSilas" creationdate="20150312T043300Z">
+        <seg>&lt;- DrawingBuffer() - 2DDrawing 目录 - DrawingBufferPixelFormat() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- DrawingBufferPitch() - 2DDrawing Index - DrawingFont() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043900Z" creationid="oSilas" creationdate="20150312T043900Z">
+        <seg>&lt;- DrawingBufferPitch() - 2DDrawing 目录 - DrawingFont() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- DrawingBufferPixelFormat() - 2DDrawing Index - DrawingMode() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043953Z" creationid="oSilas" creationdate="20150312T043953Z">
+        <seg>&lt;- DrawingBufferPixelFormat() - 2DDrawing 目录 - DrawingMode() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;- DrawingFont() - 2DDrawing Index - Ellipse() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045403Z" creationid="oSilas" creationdate="20150312T045403Z">
+        <seg>&lt;- DrawingFont() - 2DDrawing 目录 - Ellipse() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>2DDrawing Index - AlphaBlend() -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140307Z">
+        <seg>2DDrawing 目录 - AlphaBlend() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Commands Index</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142919Z" creationid="oSilas" creationdate="20151007T142919Z">
+        <seg>命令索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Console Index - CloseConsole() -&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110829Z">
         <seg>Console 索引 - CloseConsole() -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>DrawingBuffer() must be called before using this function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043657Z" creationid="oSilas" creationdate="20150312T043657Z">
+        <seg>DrawingBuffer()必须在使用此函数之前调用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Getting started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141350Z" creationid="oSilas" creationdate="20151007T141350Z">
+        <seg>入门</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>PureBasic objects overview</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142432Z" creationid="oSilas" creationdate="20151007T142432Z">
+        <seg>PureBasic 对象概览</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using the command line compiler</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141917Z" creationid="oSilas" creationdate="20151007T141917Z">
+        <seg>使用命令行编译器</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>'Include' Functions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142532Z" creationid="oSilas" creationdate="20151007T142532Z">
+        <seg>'Include' 函数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using the debugger</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141537Z" creationid="oSilas" creationdate="20151007T141537Z">
+        <seg>调试器使用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compiler Directives</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142540Z" creationid="oSilas" creationdate="20151007T142540Z">
+        <seg>编译器指令</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Form designer</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141553Z" creationid="oSilas" creationdate="20151007T141553Z">
+        <seg>窗体设计器</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compiler Functions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142550Z" creationid="oSilas" creationdate="20151007T142550Z">
+        <seg> 编译器功能</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using the debugging Tools</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141611Z" creationid="oSilas" creationdate="20151007T141611Z">
+        <seg>使用调试器工具</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Built-in Tools</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141623Z" creationid="oSilas" creationdate="20151007T141623Z">
+        <seg>内置工具</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Inlined x86 ASM</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142559Z" creationid="oSilas" creationdate="20151007T142559Z">
+        <seg>内联 x86 ASM</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Building a DLL</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142610Z" creationid="oSilas" creationdate="20151007T142610Z">
+        <seg>创建 DLL</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>External Tools</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141631Z" creationid="oSilas" creationdate="20151007T141631Z">
+        <seg>外部工具</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Getting help</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141652Z" creationid="oSilas" creationdate="20151007T141652Z">
+        <seg>获取帮助</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Customizing the IDE</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141659Z" creationid="oSilas" creationdate="20151007T141659Z">
+        <seg>自定义 IDE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>IDE Command-line options</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141711Z" creationid="oSilas" creationdate="20151007T141711Z">
+        <seg>IDE 命令行选项</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Several PureBasic versions at once</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142631Z" creationid="oSilas" creationdate="20151007T142631Z">
+        <seg>PureBasic的多版本共存 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Migrating from an old version of PureBasic</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142709Z" creationid="oSilas" creationdate="20151007T142709Z">
+        <seg>从PureBasic的旧版本迁移</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>General Syntax Rules</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141927Z" creationid="oSilas" creationdate="20151007T141927Z">
+        <seg>常规语法规则</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Handles and Numbers</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142441Z" creationid="oSilas" creationdate="20151007T142441Z">
+        <seg>句柄和编号</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>PureBasic Constants</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142924Z" creationid="oSilas" creationdate="20151007T142924Z">
+        <seg>PureBasic 常量</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Working with files</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141440Z" creationid="oSilas" creationdate="20151007T141440Z">
+        <seg>文件处理</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Editing features</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141459Z" creationid="oSilas" creationdate="20151007T141459Z">
+        <seg>编辑功能</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Platform-dependant Functions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T143017Z" creationid="oSilas" creationdate="20151007T143017Z">
+        <seg>平台相关功能</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Pointers and Memory access</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142450Z" creationid="oSilas" creationdate="20151007T142450Z">
+        <seg>指针与内存访问</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Variables, Types and Operators</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141939Z" creationid="oSilas" creationdate="20151007T141939Z">
+        <seg>变量, 类型和操作符</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Data</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142456Z" creationid="oSilas" creationdate="20151007T142456Z">
+        <seg>数据</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Managing projects</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141512Z" creationid="oSilas" creationdate="20151007T141512Z">
+        <seg>项目管理</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Color table</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T143054Z" creationid="oSilas" creationdate="20151007T143054Z">
+        <seg>颜色表</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compiling your programs</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141525Z" creationid="oSilas" creationdate="20151007T141525Z">
+        <seg>编译程序</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Debugger Commands</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142524Z" creationid="oSilas" creationdate="20151007T142505Z">
+        <seg>调试器命令</seg>
       </tuv>
     </tu>
     <tu>
@@ -86,10 +542,138 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_8Bits      : 1 byte per pixel, palletised</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043528Z" creationid="oSilas" creationdate="20150312T043528Z">
+        <seg>#PB_PixelFormat_8Bits ： 1 个字节每个像素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>; 32-bit RGB without reversed Y coordinate</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043813Z" creationid="oSilas" creationdate="20150312T043727Z">
+        <seg>;32 位 RGB 不颠倒Y 坐标</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>; 32-bit RGB, with or without reversed Y coordinate</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043805Z" creationid="oSilas" creationdate="20150312T043805Z">
+        <seg>;32 位 RGB，有或无颠倒的 Y 坐标</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_15Bits     : 2 bytes per pixel</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043540Z" creationid="oSilas" creationdate="20150312T043540Z">
+        <seg>#PB_PixelFormat_15Bits ： 2 个字节每个像素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_16Bits     : 2 bytes per pixel</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043546Z" creationid="oSilas" creationdate="20150312T043546Z">
+        <seg>#PB_PixelFormat_16Bits ： 2 个字节，每个像素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_24Bits_RGB : 3 bytes per pixel (RRGGBB)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043551Z" creationid="oSilas" creationdate="20150312T043551Z">
+        <seg>#PB_PixelFormat_24Bits_RGB ： 3 个字节，每个像素 （RRGGBB）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_24Bits_BGR : 3 bytes per pixel (BBGGRR)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043604Z" creationid="oSilas" creationdate="20150312T043604Z">
+        <seg>#PB_PixelFormat_24Bits_BGR ： 3 个字节，每个像素 （BBGGRR）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_32Bits_RGB : 4 bytes per pixel (RRGGBB)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043612Z" creationid="oSilas" creationdate="20150312T043612Z">
+        <seg>#PB_PixelFormat_32Bits_RGB ： 4 个字节，每个像素 （RRGGBB）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>; 32-bit RGB with reversed Y coordinate</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043818Z" creationid="oSilas" creationdate="20150312T043742Z">
+        <seg>;32 位 RGB 颠倒 Y 坐标</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_32Bits_BGR : 4 bytes per pixel (BBGGRR)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043618Z" creationid="oSilas" creationdate="20150312T043618Z">
+        <seg>#PB_PixelFormat_32Bits_BGR ： 4 个字节，每个像素 （BBGGRR）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#PB_PixelFormat_ReversedY  : The Y-Coordinate of the output is reversed in memory (the bottom row is stored first).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043647Z" creationid="oSilas" creationdate="20150312T043647Z">
+        <seg>#PB_PixelFormat_ReversedY ： Y 坐标输出的颠倒 （底部行先存储） 在内存中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A value of 0 means fully transparent and a value of 255 means fully opaque.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135218Z">
+        <seg>零意味着完全透明，255意味着完全不透明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Additional Information</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T143037Z" creationid="oSilas" creationdate="20151007T143037Z">
+        <seg>附加信息 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Additional colors can be added to the gradient with the GradientColor() command.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T040858Z" creationid="oSilas" creationdate="20141122T040858Z">
+        <seg>添加渐变色请使用GradientColor（）命令。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Advanced Keywords</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142312Z" creationid="oSilas" creationdate="20151007T142312Z">
+        <seg>高级关键词</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111649Z">
         <seg>所有</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Also, console functions can be really helpful to debug a program by printing out some information to the console, without stopping the program flow.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T042232Z" creationid="oSilas" creationdate="20141122T042232Z">
+        <seg>另外，控制台功能可以真正帮你在调试程序时打印出一些信息到控制台而不用停止程序。</seg>
       </tuv>
     </tu>
     <tu>
@@ -102,10 +686,58 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Any pixels drawn outside of this box will be clipped.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033311Z" creationid="oSilas" creationdate="20141128T033221Z">
+        <seg>任何绘制到封闭区域外绘制的像素将被裁剪。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Any text you print after calling this function will start from the specified coordinates.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T134818Z" creationid="oSilas" creationdate="20141124T134818Z">
+        <seg>调用这个函数后，任何你要打印的字符都会从这个坐标开始。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Basic Keywords</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141953Z" creationid="oSilas" creationdate="20151007T141953Z">
+        <seg>基础关键词</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Both colors are always 32-bit with alpha channel independent of the color depth of the output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040655Z" creationid="oSilas" creationdate="20141128T040655Z">
+        <seg>这两种颜色总是32位带alpha通道独立输出的颜色深度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Change the colors used by the text display.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112047Z">
         <seg>更改用来显示文本的颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changes the console title to the specified string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T135203Z" creationid="oSilas" creationdate="20141124T135203Z">
+        <seg>更改控制台标题为指定的字符串。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changes the display of the cursor, which is the indicator used to show where the next displayed character will be drawn.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141203Z">
+        <seg>更改光标的显示，该指示器将在设置之后显示字符时开始使用。 .</seg>
       </tuv>
     </tu>
     <tu>
@@ -126,10 +758,74 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Command Index</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T140838Z" creationid="oSilas" creationdate="20151007T140838Z">
+        <seg>命令索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Currently, 3 values are available:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140641Z">
+        <seg>目前有三个值有效：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Define a bounding box that restricts all drawing to the current drawing output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033256Z" creationid="oSilas" creationdate="20141128T033140Z">
+        <seg>在当前绘图输出中定义一个封闭区域限制所有绘图在它的范围之内。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Description</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110627Z">
         <seg>概要</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Draw a box of given dimensions on the current output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T151229Z">
+        <seg>向当前输出中绘制一个指定大小的方框。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Draw a circle on the current output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041026Z" creationid="oSilas" creationdate="20141122T041026Z">
+        <seg>在当前输出中绘制一个圆。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Drawing a line, a box, a circle or even text is considered a 2D rendering operation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T084738Z" creationid="oSilas" creationdate="20151007T084738Z">
+        <seg>画一条线,一个方块,一个圆或任何文本都被视为2D渲染操作.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Draws an image to the current drawing output using alpha-blending.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041541Z" creationid="oSilas" creationdate="20141128T041541Z">
+        <seg>绘制图像使用alpha混合当前绘图输出。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Enables the XOR mode.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045256Z" creationid="oSilas" creationdate="20150312T045256Z">
+        <seg>启用 XOR 模式。</seg>
       </tuv>
     </tu>
     <tu>
@@ -142,6 +838,86 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For an example of how the drawing buffer can be used to create a nice visual effect, take a look here:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043043Z" creationid="oSilas" creationdate="20150312T043043Z">
+        <seg>例如如何绘图缓冲区可用于创建一个很好的视觉效果的情况下，看看这里：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>General Libraries</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T143109Z" creationid="oSilas" creationdate="20151007T143109Z">
+        <seg>通用库</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>General Topics</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141851Z" creationid="oSilas" creationdate="20151007T141851Z">
+        <seg>通用概念</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If this flag is set then the background will be transparent with the DrawText() command.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045239Z" creationid="oSilas" creationdate="20150312T045239Z">
+        <seg>如果设置了此标志DrawText()函数输出的背景将透明</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If this parameter is not specified, the default color set with FrontColor() will be used.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T151432Z">
+        <seg>如果未指定此参数，将使用与FrontColor()设置的默认颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It can be a combination of the following flags: </seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T044908Z" creationid="oSilas" creationdate="20150312T044908Z">
+        <seg>它可以是下列标志的组合：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It must have the following form:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T035040Z" creationid="oSilas" creationdate="20141128T035040Z">
+        <seg>必须要具备以下形式：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Mode</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T044829Z" creationid="oSilas" creationdate="20150312T044829Z">
+        <seg>模式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>More information can be found at StartDrawing().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T084835Z" creationid="oSilas" creationdate="20151007T084835Z">
+        <seg> 详情请参考 StartDrawing().</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Moves the cursor to the given position, in character coordinates.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T134709Z" creationid="oSilas" creationdate="20141124T134709Z">
+        <seg>使用字符坐标移动光标到指定的位置。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>None.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110635Z">
@@ -150,10 +926,34 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Once the console has been closed, it's not possible to use any console-related functions unless you open the console again.</seg>
+        <seg>Note: The #PB_2DDrawing_CustomFilter drawing mode only works on ImageOutput() and CanvasOutput().</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111853Z">
-        <seg>当年你关闭控制台后，将不能使用任何与控制台有关的函数，除非你再次打开。</seg>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040643Z" creationid="oSilas" creationdate="20141128T040643Z">
+        <seg>注意： ＃PB_2DDrawing_CustomFilter绘图模式仅适用于ImageOutput()和CanvasOutput()。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: This command only has an effect with ImageOutput() and CanvasOutput().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041846Z" creationid="oSilas" creationdate="20141122T041846Z">
+        <seg>注：此命令只能与ImageOutput（）和CanvasOutput（）一起使用才有效果。。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: This mode does not work with PrinterOutput().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045455Z" creationid="oSilas" creationdate="20150312T045455Z">
+        <seg>注： 这种模式不能与PrinterOutput()同时工作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Overview</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T113211Z">
+        <seg>概要</seg>
       </tuv>
     </tu>
     <tu>
@@ -166,6 +966,38 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Procedure Support</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142255Z" creationid="oSilas" creationdate="20151007T142126Z">
+        <seg>过程支持</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Pure Basic Reference Manual</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141339Z" creationid="oSilas" creationdate="20151007T141339Z">
+        <seg>Pure Basic 参考手册</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Reference Manual - Index</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T143920Z">
+        <seg>参考手册 - 索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Remarks</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T134225Z">
+        <seg>备注</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Return value</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110643Z">
@@ -174,10 +1006,146 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the MemoryAddress of the drawing buffer for direct pixel manipulation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T042331Z" creationid="oSilas" creationdate="20150312T042331Z">
+        <seg>返回用于直接操作绘图缓存的MemoryAddress。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the address of the pixel data if direct access is possible or zero if the pixel data cannot be accessed directly.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T042510Z" creationid="oSilas" creationdate="20150312T042510Z">
+        <seg>如果能直接访问像素数据则返回地址，否则返回零。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the alpha component of a color value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T134539Z">
+        <seg>返回一个颜色值的alpha分量.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the blue component of a color value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031634Z" creationid="oSilas" creationdate="20141128T031634Z">
+        <seg>翻译一个颜色值的蓝色负分量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the combined color.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150120T142341Z" creationid="oSilas" creationdate="20150120T142341Z">
+        <seg>返回组合后的颜色.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the length in bytes of one line in the output, including any additional padding behind the pixel data of a line.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043225Z" creationid="oSilas" creationdate="20150312T043225Z">
+        <seg>返回以字节为单位的一行在输出中，包括任何额外填充后面一条线的像素数据的长度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the pixel format of the current output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043315Z" creationid="oSilas" creationdate="20150312T043315Z">
+        <seg>返回当前输出的像素格式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the real length of one line of the current drawing buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043216Z" creationid="oSilas" creationdate="20150312T043216Z">
+        <seg>返回当前绘图缓冲区的一条线的实际长度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the resulting 32-bit color from blending the two 32-bit colors.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150120T142432Z" creationid="oSilas" creationdate="20150120T142432Z">
+        <seg>返回融合了两个32位的色彩所产生的32位色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the value of the alpha component.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135129Z">
+        <seg>返回alpha分量的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the value of the blue component.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031528Z" creationid="oSilas" creationdate="20141128T031528Z">
+        <seg>返回值的蓝色分量.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>See Also</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110759Z">
         <seg>参阅</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the drawing gradient to have a box shape.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T040649Z" creationid="oSilas" creationdate="20141122T040547Z">
+        <seg>在方框中绘制渐变。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the drawing gradient to have a circular shape.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041701Z" creationid="oSilas" creationdate="20141122T041701Z">
+        <seg>绘制一个渐变的圆。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the drawing gradient to have a conical shape.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T034415Z" creationid="oSilas" creationdate="20141128T034415Z">
+        <seg>设置绘图梯度为具有圆锥形状。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the drawing gradient to have a custom shape, defined by the given callback procedure.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041348Z" creationid="oSilas" creationdate="20141128T041348Z">
+        <seg>设置绘图梯度有一个自定义形状，由给定的回调过程定义.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the font to be used for text rendering on the current output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043945Z" creationid="oSilas" creationdate="20150312T043945Z">
+        <seg>设置要用于对当前输出的文本呈现的字体。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Specifies a callback that will be called for every pixel that is part of a drawing operation in #PB_2DDrawing_CustomFilter drawing mode.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040735Z" creationid="oSilas" creationdate="20141128T040735Z">
+        <seg>指定将要求每个像素是在绘图操作的一部分回调＃PB_2DDrawing_CustomFilter绘图模式。.</seg>
       </tuv>
     </tu>
     <tu>
@@ -198,6 +1166,95 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Text is displayed with a solid background and graphic shapes are filled.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T044958Z" creationid="oSilas" creationdate="20150312T044958Z">
+        <seg>与具有纯背景显示文本和填充图形形状的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The (x, y) coordinates are always absolute and not affected by calls to SetOrigin().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033625Z" creationid="oSilas" creationdate="20141128T033625Z">
+        <seg> (x, y) 的坐标总是绝对的并且不受调用 SetOrigin()的影响。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The 2D drawing library contains all the 2D rendering operations that can be performed on a visual area.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T084813Z" creationid="oSilas" creationdate="20151007T084643Z">
+        <seg>2D绘图库包含了所有在视觉区域执行2D渲染操作.
+</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Plot() and Point() commands perform no bounds checking for performance reasons and therefore are also not affected by this command.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T034355Z" creationid="oSilas" creationdate="20141128T034355Z">
+        <seg> Plot() 和 Point() 命令因为执行无边界检查的性能原因，因此不影响此命令。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The FontID can be easily obtained with the FontID() function from the font library.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T044554Z" creationid="oSilas" creationdate="20150312T044554Z">
+        <seg>FontID 可以用字体库的FontID()函数从简单的获得。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ID of the image to draw.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041605Z" creationid="oSilas" creationdate="20141128T041605Z">
+        <seg>用来绘制的图像ID。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The PureBasic IDE</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141326Z" creationid="oSilas" creationdate="20151007T141326Z">
+        <seg> PureBasic IDE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The SourceColor parameter specifies the color given in the drawing operation and the TargetColor parameter specifies the color of the target pixel in the drawing area.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040651Z" creationid="oSilas" creationdate="20141128T040651Z">
+        <seg>所述SourceColor参数指定在拉伸操作中给出的颜色和TargetColor参数指定在绘图区域中的目标像素的颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The address of a callback function to call.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040551Z" creationid="oSilas" creationdate="20141128T040551Z">
+        <seg>这是用来调用的回调函数的地址。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The address of a callback procedure to define the gradient.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041259Z" creationid="oSilas" creationdate="20141128T041259Z">
+        <seg>回调过程的地址来定义渐变。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The angle (in degrees) at which to start the gradient.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T034538Z" creationid="oSilas" creationdate="20141128T034504Z">
+        <seg>在该角度（度）来开始渐变。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The background color is set with ConsoleColor().</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110924Z">
@@ -206,10 +1263,90 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The behavior for further drawing operations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T044857Z" creationid="oSilas" creationdate="20150312T044857Z">
+        <seg>为进一步绘图操作行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The callback has to calculate the color that the target pixel should have after the drawing and return that.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040715Z" creationid="oSilas" creationdate="20141128T040715Z">
+        <seg>回调必须计算目标像素应具有拉伸后该并返回的颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The callback must have the following form:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041249Z" creationid="oSilas" creationdate="20141128T041249Z">
+        <seg>回调必须有如下形式：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The callback will be called for every pixel that is drawn as a result of a call to drawing functions like Line(), Box() or DrawText().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040825Z" creationid="oSilas" creationdate="20141128T040825Z">
+        <seg>回调将被称为对于每个被画成一个调用的结果绘制功能，如像素Line()，Box() 或DrawText()。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The center position of the conical gradient.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T034437Z" creationid="oSilas" creationdate="20141128T034437Z">
+        <seg>锥形渐变的中心坐标。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color that will be in front.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150120T142258Z" creationid="oSilas" creationdate="20150120T142258Z">
+        <seg>此颜色用于前景色.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color that will be in the back.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150120T142313Z" creationid="oSilas" creationdate="20150120T142313Z">
+        <seg>此颜色用于背景色.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color to be used for the box.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031701Z" creationid="oSilas" creationdate="20141128T031701Z">
+        <seg>用于方框的颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The color to be used for the characters.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T112213Z">
         <seg>此颜色用于字符。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color to be used for the circle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041341Z" creationid="oSilas" creationdate="20141122T041341Z">
+        <seg>要用于该圆的颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The color value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135028Z">
+        <seg>颜色值。</seg>
       </tuv>
     </tu>
     <tu>
@@ -230,12 +1367,439 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The console has to be in graphical mode, see EnableGraphicalConsole().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140948Z">
+        <seg>控制台必须是图形模式, 请参阅 EnableGraphicalConsole().</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The console title is typically shown in the title bar of the window which the console is in (when you are viewing the console in a graphical environment such as your desktop).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T135339Z" creationid="oSilas" creationdate="20141124T135339Z">
+        <seg>控制台标题通常显示在控制台为窗口的标题栏（当你在桌面的图形环境下查看控制台时）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The console will automatically be closed when your program ends.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T111913Z">
         <seg>您的程序结束后控制台窗口会自动关闭。</seg>
       </tuv>
     </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The coordinates are not affected by any calls to SetOrigin() or ClipOutput().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041436Z" creationid="oSilas" creationdate="20141128T041436Z">
+        <seg>此坐标不受调用 SetOrigin() 或 ClipOutput()的影响。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The current output is set with StartDrawing().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041123Z">
+        <seg>开始绘制前使用 StartDrawing()设置当前输出。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The drawing origin is not modified by a call to this function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033845Z" creationid="oSilas" creationdate="20141128T033845Z">
+        <seg>图形原点不被调用此功能修改。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The filling mode is determined by DrawingMode().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041106Z">
+        <seg>使用 DrawingMode()函数设置填充模式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following examples show how to handle the result:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043711Z" creationid="oSilas" creationdate="20150312T043711Z">
+        <seg>下面的示例演示如何处理结果：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The font to be used.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043959Z" creationid="oSilas" creationdate="20150312T043959Z">
+        <seg>要使用的字体。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The gradient only affects the drawing commands when #PB_2DDrawing_Gradient is set with the DrawingMode() command.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T032734Z" creationid="oSilas" creationdate="20141128T032734Z">
+        <seg>当使用 DrawingMode() 设置了#PB_2DDrawing_Gradient时渐变只影响绘图命令。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The gradient starts with the current background color at the given angle and then changes towards the current front color counterclockwise until the angle is reached again.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T034955Z" creationid="oSilas" creationdate="20141128T034955Z">
+        <seg>使用指定的角度和背景颜色开始，然后开始使用前景色向逆时针方向的角度变化直到原来的起点。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The horizontal position in the console to move to (starting from 0)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T134854Z" creationid="oSilas" creationdate="20141124T134854Z">
+        <seg>控制台中的水平位置(从0开始)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The location at which to apply the current background color.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041759Z" creationid="oSilas" creationdate="20141122T041759Z">
+        <seg>在该位置应用当前背景颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The location of the gradient box.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T040622Z" creationid="oSilas" creationdate="20141122T040622Z">
+        <seg>渐变框位置。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The new height of the cursor indicator.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140615Z">
+        <seg>光标的新高度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The output of the drawing functions is possible on a window, a screen, a sprite, an image or the printer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T084830Z" creationid="oSilas" creationdate="20151007T084830Z">
+        <seg>T绘图函数可以输出到一个窗体, 一个屏幕, 一个画面, 一张图像, 一个纹理或者打印机上..</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The position and size of the box in the current drawing output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031724Z" creationid="oSilas" creationdate="20141128T031724Z">
+        <seg>方框在当前绘制输出中的位置和大小。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The position and size of the clipping box.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033334Z" creationid="oSilas" creationdate="20141128T033334Z">
+        <seg>封闭区域的位置和大小。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The position of the center pixel of the circle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041137Z" creationid="oSilas" creationdate="20141122T041137Z">
+        <seg>当前圆心的位置。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The radius of the circle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041245Z" creationid="oSilas" creationdate="20141122T041245Z">
+        <seg>圆的半径。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The result can be a combination (with bitwise or) of the following flags:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043333Z" creationid="oSilas" creationdate="20150312T043333Z">
+        <seg>结果可以是组合 （与按位或） 以下标志：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The result will be between 0 and 255.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135144Z">
+        <seg>结果在0至255之间。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The string to send.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141536Z">
+        <seg>要发送的字符串。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The vertical position in the console to move to (starting from 0)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T134911Z" creationid="oSilas" creationdate="20141124T134911Z">
+        <seg>控制太重的垂直位置（从0开始）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The x and y coordinate received in the callback are always relative to the upper left corner of the drawing output.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T041404Z" creationid="oSilas" creationdate="20141128T041404Z">
+        <seg>和y在回调坐标接收的X总是相对于绘图输出的左上角.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These functions are useful to perform Drawing operations.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135003Z">
+        <seg>这些函数对于执行绘图操作非常有用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These programs are not real MS-DOS programs!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T042403Z" creationid="oSilas" creationdate="20141122T042403Z">
+        <seg>这些程序不是真正的MS-DOS程序！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These programs must be executed only from the Windows function prompt.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T042439Z" creationid="oSilas" creationdate="20141122T042439Z">
+        <seg>这些程序必须只能从Windows的命令行下执行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This allows the implementation of custom drawing effects while still using the default functions to do the actual drawing.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045426Z" creationid="oSilas" creationdate="20150312T045426Z">
+        <seg>这允许执行自定义绘制效果同时仍然使用默认功能做实际的绘图。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This callback will be called many times (for every pixel to draw) so it should be very small and fast to not have a too big impact on the drawing performance.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040616Z" creationid="oSilas" creationdate="20141128T040616Z">
+        <seg>此回调将被调用多次 （用于绘制每个像素） 所以它应该是很小，速度快，对绘图的性能没有太大的影响。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This can be a 24-bit RGB or a 32-bit RGBA value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031501Z" creationid="oSilas" creationdate="20141128T031501Z">
+        <seg>可以是一个24位RGB或32位的RGBA值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This color can be in RGB or RGBA format.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T151514Z">
+        <seg>这种颜色可以使用RGB或RGBA格式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This command only has an effect on drawing outputs created by ImageOutput() or CanvasOutput().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033817Z" creationid="oSilas" creationdate="20141128T033817Z">
+        <seg>该命令只对通过 ImageOutput() or CanvasOutput()来创建绘图输出的作用.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This function allows you to change the height of the cursor.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141250Z">
+        <seg>此函数允许您更改光标的高度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This function has to be called again if other drawing commands of this library where used since the last pixel manipulation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T042915Z" creationid="oSilas" creationdate="20150312T042915Z">
+        <seg>如果此库的其他绘图命令之前使用了像素操作，那么此函数可以再次调用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This function is for advanced programmers only.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T042936Z" creationid="oSilas" creationdate="20150312T042936Z">
+        <seg>此函数仅限高级程序员使用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is the default drawing mode when the drawing starts.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T044944Z" creationid="oSilas" creationdate="20150312T044944Z">
+        <seg>当绘图开始时使用默认的绘图模式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This library allow the programmer to create console mode applications.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T042017Z" creationid="oSilas" creationdate="20141122T042017Z">
+        <seg>这个库允许程序员创建控制台模式的应用程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This mode cannot be combined with the below alpha channel modes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045336Z" creationid="oSilas" creationdate="20150312T045336Z">
+        <seg>这种模式不能结合下列 alpha 通道模式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This must be a 32-bit RGBA value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135044Z">
+        <seg>必须是一个32位RGBA值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This output can be read for example with the ReadProgramError() function of the Process library.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T134613Z" creationid="oSilas" creationdate="20141124T134613Z">
+        <seg>此输出可以读取，比如在 Process 中使用 ReadProgramError()函数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This radius does not include the center pixel.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T041500Z" creationid="oSilas" creationdate="20141122T041500Z">
+        <seg>此半径不包括圆心像素。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This value can be zero (for an invisible cursor) or range from 1 to 10 for the height of the cursor.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T140607Z">
+        <seg>光标高度值可以为0(针对隐藏鼠标)或者1至10之间。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To combine red, green and blue values in order to create a 24-bit RGB color, use the RGB() function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031442Z" creationid="oSilas" creationdate="20141128T031442Z">
+        <seg>可以使用 RGB() 函数结合红绿蓝的顺序创建一个24位RGB颜色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To combine red, green, blue and alpha values in order to create a 32-bit RGB color, use the RGBA() function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T134905Z">
+        <seg>要结合红、绿、蓝和Alpha值的顺序创建一个32位颜色，那么轻使用 RGBA() 函数.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To make all drawing relative to the upper left corner of the clipping box, a separate call to SetOrigin() must be made if this is desired.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T034129Z" creationid="oSilas" creationdate="20141128T034129Z">
+        <seg>为了使所有的绘图相对的剪取框的左上角，如果需要的话必须单独调用SetOrigin()。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To restore the default system font, #PB_Default can be used as FontID.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T044357Z" creationid="oSilas" creationdate="20150312T044357Z">
+        <seg>若要还原默认的系统字体，可以将 #PB_Default作为 FontID。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Under Windows, the console title is also the text shown in the start bar and in the task manager representing your console application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T135911Z" creationid="oSilas" creationdate="20141124T135911Z">
+        <seg>在Windows下，控制台的标题现在启动栏和任务管理器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>User guide - Overview</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141818Z" creationid="oSilas" creationdate="20151007T141818Z">
+        <seg>用户向导- 概述</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Various Topics</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T142402Z" creationid="oSilas" creationdate="20151007T142402Z">
+        <seg>相关主题</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We start programming</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141729Z" creationid="oSilas" creationdate="20151007T141729Z">
+        <seg>入门引导</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With ImageOutput() this command allows direct access to the pixels of the target image.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043021Z" creationid="oSilas" creationdate="20150312T043021Z">
+        <seg>ImageOutput()与此命令允许直接访问目标图像的像素。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Writes the Message string (plus a newline) to the standard error output of the program.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141438Z">
+        <seg>向程序的标准错误输出中写入一个字符串(具有换行符)。</seg>
+      </tuv>
+    </tu>
 <!-- Alternative translations -->
+    <tu>
+      <prop type="file">2ddrawing/drawingmode.html</prop>
+      <prop type="prev">Text is displayed with a solid background and graphic shapes are filled.</prop>
+      <prop type="next">../HelpPictures/PB_2DDrawing_Default.png</prop>
+      <tuv lang="EN-US">
+        <seg>If the current output has an alpha channel, the drawing operations will only modify the color components and leave the alpha channel unchanged.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045120Z" creationid="oSilas" creationdate="20150312T045120Z">
+        <seg>如果当前输出具有 alpha 通道，绘图操作将只修改颜色分量并离开不变的 alpha 通道。</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

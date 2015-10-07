@@ -13,7 +13,7 @@ MyLabel:
 <b>概要</b><br><blockquote>
 
 
-<b><font color="#006666">Gosub</font></b> stands for 'Go to sub routine'. A <a href="../reference/general_rules.html">label</a> must be specified after <b><font color="#006666">Gosub</font></b>, at that point 
+<b><font color="#006666">Gosub</font></b> stands for &amp;apos;Go to sub routine&amp;apos;. A <a href="../reference/general_rules.html">label</a> must be specified after <b><font color="#006666">Gosub</font></b>, at that point 
 the program execution continues immediately after the position defined by that label, and will do so until 
 encountering a <b><font color="#006666">Return</font></b>. When a return is reached, the program execution is then transferred immediately 
 below the <b><font color="#006666">Gosub</font></b>. 
@@ -33,13 +33,13 @@ is to use <a href="../reference/procedures.html">procedures</a>.
 
 <pre><font face="Courier New, Courier, mono"size="2">  a = 1
   b = 2
-  <b><font color="#006666">Gosub</font></b> ComplexOperation 
-  <b><font color="#006666">Debug</font></b> a 
-  <b><font color="#006666">End</font></b> 
+  <b><font color="#006666">Gosub</font></b> ComplexOperation
+  <b><font color="#006666">Debug</font></b> a
+  <b><font color="#006666">End</font></b>
        
-  ComplexOperation: 
-    a = b*2+a*3+(a+b) 
-    a = a+a*a 
+  ComplexOperation:
+    a = b*2+a*3+(a+b)
+    a = a+a*a
   <b><font color="#006666">Return</font></b> 
 </font></pre>
 
@@ -66,9 +66,9 @@ Note: To exit a loop safely, <a href="../reference/break_continue.html">Break</a
   SubRoutine1:
     ...
     <b><font color="#006666">If</font></b> a = 10
-      <b><font color="#006666">FakeReturn</font></b> 
-      <b><font color="#006666">Goto</font></b> Main_Loop 
-    <b><font color="#006666">EndIf</font></b> 
+      <b><font color="#006666">FakeReturn</font></b>
+      <b><font color="#006666">Goto</font></b> Main_Loop
+    <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Return</font></b>
 </font></pre>
 </body></html>

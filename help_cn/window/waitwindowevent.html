@@ -11,7 +11,7 @@ Event = <font color="#006666"><b>WaitWindowEvent</b></font>([Timeout])    </bloc
 
 
 
-Wait until an event occurs. It's the same function as <a href="windowevent.html">WindowEvent()</a> 
+Wait until an event occurs. It&amp;apos;s the same function as <a href="windowevent.html">WindowEvent()</a> 
 but locks the program execution, which is very important in a multitasking 
 environment. 
 
@@ -42,12 +42,12 @@ Return the event which occurred, see <a href="windowevent.html">WindowEvent()</a
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
 An application should always use this function instead of <a href="windowevent.html">WindowEvent()</a> 
-if possible, as it doesn't takes an CPU time while waiting for an event. 
+if possible, as it doesn&amp;apos;t takes an CPU time while waiting for an event. 
 <br>
 <br>
 The window event loop should not be processed in a <a href="../thread/index.html">thread</a>, as there is some limitation on OS X and Linux. 
@@ -55,7 +55,7 @@ A debugger error will be raised.
 <br>
 <br>
 WaitWindowEvent() can only be called once per event loop, because else events will be "lost" 
-(every event can only be processed once and isn't available anymore for a second time after first 
+(every event can only be processed once and isn&amp;apos;t available anymore for a second time after first 
 processing). 
 
  
@@ -97,8 +97,6 @@ processing).
  <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=unbindevent.html>UnbindEvent()</a> - <a href=index.html>Window Index</a> - <a href=windowbounds.html>WindowBounds()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=unbindevent.html>UnbindEvent()</a> - <a href=index.html>Window Index</a> - <a href=windowbounds.html>WindowBounds()</a> -&gt;<br><br>
 
 </body></html>

@@ -14,7 +14,7 @@ Semaphore = <font color="#006666"><b>CreateSemaphore</b></font>([InitialCount])<
 Creates a new semaphore object. 
 <br>
 <br>
-A semaphore is a thread synchronisation object that keeps an internal count. It has two kinds of operations: 
+A semaphore is a thread synchronization object that keeps an internal count. It has two kinds of operations: 
 <a href="signalsemaphore.html">signal</a> and <a href="waitsemaphore.html">wait</a>. A wait operation decreases the count 
 of the semaphore by one. If the count would drop below 0, the wait operation will block until a signal call is made. 
 A signal operation increases the count one, releasing a blocking thread if there is one. A semaphore allows 
@@ -78,7 +78,7 @@ and not just on the next time a polling loop would check the queue).
 <font color="#006666">      LastElement</font>(<font color="#006666">Queue</font>())
 <font color="#006666">      AddElement</font>(<font color="#006666">Queue</font>())
 <font color="#006666">      Queue</font>() = i
-<font color="#006666">    UnlockMutex</font>(Mutex)    
+<font color="#006666">    UnlockMutex</font>(Mutex)
 
     <font color="#006666">; Signal that there is a new queue element</font>
 <font color="#006666">    SignalSemaphore</font>(Semaphore)
@@ -88,7 +88,7 @@ and not just on the next time a polling loop would check the queue).
 
 <b><font color="#006666">If</font></b> <font color="#006666">CreateThread</font>(@Producer(), 30)
 
-  <b><font color="#006666">For</font></b> i = 1 <b><font color="#006666">To</font></b> 30  
+  <b><font color="#006666">For</font></b> i = 1 <b><font color="#006666">To</font></b> 30
     <font color="#006666">; wait for one element to be available</font>
 <font color="#006666">    WaitSemaphore</font>(Semaphore)
     
@@ -114,8 +114,6 @@ and not just on the next time a polling loop would check the queue).
 
 <a href="freesemaphore.html">FreeSemaphore()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=createmutex.html>CreateMutex()</a> - <a href=index.html>Thread Index</a> - <a href=createthread.html>CreateThread()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=createmutex.html>CreateMutex()</a> - <a href=index.html>Thread Index</a> - <a href=createthread.html>CreateThread()</a> -&gt;<br><br>
 
 </body></html>

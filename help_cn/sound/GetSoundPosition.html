@@ -34,7 +34,7 @@ The sound to use.
  
 The mode used to get the position. It can be one of the following value: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Sound_Frame</font>      : the position is returned in frame (default). 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Sound_Frame</font>      : the position is returned in frame (default).
   <font color="#924B72">#PB_Sound_Millisecond</font>: the position is returned in milliseconds.
 </font></pre>
 
@@ -42,7 +42,7 @@ The mode used to get the position. It can be one of the following value:
 <tr><td><i>Channel (optional)</i></td>
 <td> 
  
-The channel to get the position. It's the value returned by <a href="playsound.html">PlaySound()</a> when using the 
+The channel to get the position. It&amp;apos;s the value returned by <a href="playsound.html">PlaySound()</a> when using the 
 <font color="#924B72">#PB_Sound_MultiChannel</font> flag. 
 
  
@@ -57,7 +57,7 @@ The current sound position or -1 if an error occurred.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -65,12 +65,39 @@ Sounds loaded with the <font color="#924B72">#PB_Sound_Streaming</font> flag are
 
  
 
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666"> InitSound</font>()           <font color="#006666">; Initialize Sound system</font>
+<font color="#006666"> UseOGGSoundDecoder</font>()  <font color="#006666">; Use ogg files</font>
+
+ <font color="#006666">; Loads 2 sounds</font>
+<font color="#006666"> LoadSound</font>(0, <font color="#924B72">#PB_Compiler_Home</font> +"Examples\3D\Data\Siren.ogg")
+<font color="#006666"> LoadSound</font>(1, <font color="#924B72">#PB_Compiler_Home</font> +"Examples\3D\Data\Roar.ogg")
+ 
+ <font color="#006666">; The siren is playing </font>
+<font color="#006666"> PlaySound</font>(0)
+ 
+ <font color="#006666">; Display the position</font>
+  <b><font color="#006666">Repeat</font></b>
+   Pos=<font color="#006666">GetSoundPosition</font>(0, <font color="#924B72">#PB_Sound_Millisecond</font>)
+<font color="#006666">   Delay</font>(100)   <font color="#006666">; Wait 100 ms</font>
+   <b><font color="#006666">Debug</font></b> Pos    <font color="#006666">; Display the position</font>
+   <b><font color="#006666">If</font></b> Pos&gt;1000  <font color="#006666">; Stop after 1 second</font>
+     <b><font color="#006666">Break</font></b>
+   <b><font color="#006666">EndIf</font></b>
+  <b><font color="#006666">ForEver</font></b>
+ 
+ <font color="#006666">; Then 2 sounds are playing together</font>
+<font color="#006666">   PlaySound</font>(1)
+
+<font color="#006666"> MessageRequester</font>("Info", "Ok to stop.")
+ <b><font color="#006666">End</font></b> 
+</font></pre>
+
 </blockquote><p><b>参阅</b></p><blockquote>
 
 <a href="setsoundposition.html">SetSoundPosition()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=getsoundfrequency.html>GetSoundFrequency()</a> - <a href=index.html>Sound Index</a> - <a href=initsound.html>InitSound()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=getsoundfrequency.html>GetSoundFrequency()</a> - <a href=index.html>Sound Index</a> - <a href=initsound.html>InitSound()</a> -&gt;<br><br>
 
 </body></html>

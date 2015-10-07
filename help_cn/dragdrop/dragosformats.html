@@ -43,7 +43,7 @@ The structure has the following form:
 
 
 
-On Windows, the 'Format' field specifies a CLIPBOARDFORMAT value. It can be any standard clipboard format 
+On Windows, the &amp;apos;Format&amp;apos; field specifies a CLIPBOARDFORMAT value. It can be any standard clipboard format 
 (found in the Windows SDK), or a format registered with the RegisterClipboardFormat_() API. 
  
 </blockquote>
@@ -54,7 +54,7 @@ On Windows, the 'Format' field specifies a CLIPBOARDFORMAT value. It can be any 
 
 
 
-On Linux, the 'Format' field specifies a GdkAtom value. It can be created with the gdk function gdk_atom_intern_(). 
+On Linux, the &amp;apos;Format&amp;apos; field specifies a GdkAtom value. It can be created with the gdk function gdk_atom_intern_(). 
 Widely understood atoms are the common mime types (ie "text/html" for html data). The atom can also be 
 created with any string that is understood by the target application. 
  
@@ -66,8 +66,8 @@ created with any string that is understood by the target application.
 
 
 
-On MacOSX, the 'Format' field specifies a clipboard scrap type. These are 4 letter numeric character constants, 
-for example 'TEXT'. There are a number of predefined scrap types, but also custom values 
+On MacOSX, the &amp;apos;Format&amp;apos; field specifies a clipboard scrap type. These are 4 letter numeric character constants, 
+for example &amp;apos;TEXT&amp;apos;. There are a number of predefined scrap types, but also custom values 
 can be used if the target program understands them. 
  
 </blockquote>
@@ -93,7 +93,7 @@ will get the best representation of the data that it understands.
  
 A combination of the Drag &amp; Drop actions that should be allowed for the data. 
 If the parameter is not specified, <font color="#924B72">#PB_Drag_Copy</font> will be the only allowed action. 
-Possible actions are: (they can be combined with '|') 
+Possible actions are: (they can be combined with &amp;apos;|&amp;apos;) 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Drag_Copy</font>: The data can be copied
   <font color="#924B72">#PB_Drag_Move</font>: The data can be moved
@@ -123,7 +123,7 @@ dragged data from your application.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -141,8 +141,6 @@ The usual time to start a Drag &amp; Drop operation is when a <a href="../gadget
 <a href="dragtext.html">DragText()</a>, <a href="dragimage.html">DragImage()</a>, <a href="dragfiles.html">DragFiles()</a>, <a href="dragprivate.html">DragPrivate()</a>, 
 <a href="setdragcallback.html">SetDragCallback()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=dragimage.html>DragImage()</a> - <a href=index.html>DragDrop Index</a> - <a href=dragprivate.html>DragPrivate()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=dragimage.html>DragImage()</a> - <a href=index.html>DragDrop Index</a> - <a href=dragprivate.html>DragPrivate()</a> -&gt;<br><br>
 
 </body></html>

@@ -22,7 +22,7 @@
 </font><font color="#006666">;
 </font><font color="#006666">; So a rotate on the y axis will take the y axis as center. With OpenGL, we can specify
 </font><font color="#006666">; positive And negative value. Positive values are always in the same sens as the axis
-</font><font color="#006666">; (like described on the schmatic, with '+' signs)
+</font><font color="#006666">; (like described on the schmatic, with &amp;apos;+&amp;apos; signs)
 </font><font color="#006666">;
 </font>
 <b><font color="#006666">Global</font></b> RollAxisX.f
@@ -46,26 +46,27 @@
 <font color="#006666">  glRotatef_ </font>(RollAxisX, 1.0, 0, 0) <font color="#006666">; rotate around X axis
 </font><font color="#006666">  glRotatef_ </font>(RollAxisY, 0, 1.0, 0) <font color="#006666">; rotate around Y axis
 </font><font color="#006666">  glRotatef_ </font>(RollAxisZ, 0, 0, 1.0) <font color="#006666">; rotate around Z axis
-</font> 
-  RollAxisX + RotateSpeedX 
-  RollAxisY + RotateSpeedY 
-  RollAxisZ + RotateSpeedZ 
+</font>
+  RollAxisX + RotateSpeedX
+  RollAxisY + RotateSpeedY
+  RollAxisZ + RotateSpeedZ
 
   <font color="#006666">; clear framebuffer And depth-buffer
 </font>
 <font color="#006666">  glClear_ </font>(<font color="#924B72">#GL_COLOR_BUFFER_BIT</font> | <font color="#924B72">#GL_DEPTH_BUFFER_BIT</font>)
 
   <font color="#006666">; draw the faces of a cube
-</font>  
+</font>
   <font color="#006666">; draw colored faces
 </font>
 <font color="#006666">  glDisable_</font>(<font color="#924B72">#GL_LIGHTING</font>)
 <font color="#006666">  glBegin_  </font>(<font color="#924B72">#GL_QUADS</font>)
   
-  <font color="#006666">; Build a face, composed of 4 vertex !</font>  <font color="#006666">; glBegin() specify how the vertexes are considered. Here a group of
+  <font color="#006666">; Build a face, composed of 4 vertex !
+</font>  <font color="#006666">; glBegin() specify how the vertexes are considered. Here a group of
 </font>  <font color="#006666">; 4 vertexes (GL_QUADS) form a rectangular surface.
 </font>
-  <font color="#006666">; Now, the color stuff: It's r,v,b but with float values which
+  <font color="#006666">; Now, the color stuff: It&amp;apos;s r,v,b but with float values which
 </font>  <font color="#006666">; can go from 0.0 To 1.0 (0 is .. zero And 1.0 is full intensity) 
 </font>  
 <font color="#006666">  glNormal3f_ </font>(0,0,1.0)
@@ -76,7 +77,7 @@
 <font color="#006666">  glColor3f_  </font>(1.0,1.0,1.0)
 <font color="#006666">  glVertex3f_ </font>(-0.5,-0.5,0.5)
 <font color="#006666">  glColor3f_  </font>(0,0,0)
-<font color="#006666">  glVertex3f_ </font>(0.5,-0.5,0.5) 
+<font color="#006666">  glVertex3f_ </font>(0.5,-0.5,0.5)
 
   <font color="#006666">; The other face is the same than the previous one 
 </font>  <font color="#006666">; except the colour which is nice blue To white gradiant
@@ -135,14 +136,14 @@
 <b><font color="#006666">Procedure</font></b> <font color="#006666">SetupGL</font>()
     
 <font color="#006666">  glMatrixMode_</font>(<font color="#924B72">#GL_PROJECTION</font>)
-<font color="#006666">  gluPerspective_</font>(30.0, 200/200, 1.0, 10.0) 
+<font color="#006666">  gluPerspective_</font>(30.0, 200/200, 1.0, 10.0)
   
   <font color="#006666">; position viewer
 </font><font color="#006666">  glMatrixMode_</font>(<font color="#924B72">#GL_MODELVIEW</font>)
   
 <font color="#006666">  glTranslatef_</font>(0, 0, -5.0)
   
-<font color="#006666">  glEnable_</font>(<font color="#924B72">#GL_DEPTH_TEST</font>)   <font color="#006666">; Enabled, it slowdown a lot the rendering. It's to be sure than the
+<font color="#006666">  glEnable_</font>(<font color="#924B72">#GL_DEPTH_TEST</font>)   <font color="#006666">; Enabled, it slowdown a lot the rendering. It&amp;apos;s to be sure than the
 </font>                              <font color="#006666">; rendered objects are inside the z-buffer.
 </font>  
 <font color="#006666">  glEnable_</font>(<font color="#924B72">#GL_CULL_FACE</font>)    <font color="#006666">; This will enhance the rendering speed as all the back face will be

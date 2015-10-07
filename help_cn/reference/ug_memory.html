@@ -17,7 +17,7 @@ It then converts the buffer content into a hexadecimal and text display in a <a 
 as a simple hex viewer application. 
 <br>
 <br>
-An <a href="../gadget/explorerlistgadget.html">ExplorerListGadget()</a> is used to display the contents of the user's home directory, 
+An <a href="../gadget/explorerlistgadget.html">ExplorerListGadget()</a> is used to display the contents of the user&amp;apos;s home directory, 
 initially, and to allow selection of a file. Two <a href="../gadget/buttongadget.html">buttons</a> 
 are provided, one to display a file and another to clear the display. 
 <br>
@@ -36,7 +36,7 @@ the buffer.
 <br>
 <br>
 Finally, the "FileClose" procedure demonstrates the use of the <a href="../memory/fillmemory.html">FillMemory()</a> instruction 
-to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeMemory()</a> to de-allocate the memory buffer. 
+to overwrite the buffer&amp;apos;s contents and <a href="../memory/freememory.html">FreeMemory()</a> to de-allocate the memory buffer. 
 
  
 
@@ -71,7 +71,7 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
   <b><font color="#006666">Declare</font></b> <font color="#006666">FileRead</font>()
   
   <font color="#006666">;- Implementation</font>
-  <b><font color="#006666">Procedure</font></b> <font color="#006666">WindowCreate</font>()  
+  <b><font color="#006666">Procedure</font></b> <font color="#006666">WindowCreate</font>()
     <font color="#006666">; Create the window.</font>
     
     <b><font color="#006666">Protected</font></b>.l Col
@@ -82,7 +82,7 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
       <font color="#006666">; Set minimum window size.</font>
 <font color="#006666">      WindowBounds</font>(<font color="#924B72">#WindowHex</font>, 175, 175, <font color="#924B72">#PB_Ignore</font>, <font color="#924B72">#PB_Ignore</font>)
       
-      <font color="#006666">; Create Explorer List and set to user's home directory.</font>
+      <font color="#006666">; Create Explorer List and set to user&amp;apos;s home directory.</font>
 <font color="#006666">      ExplorerListGadget</font>(<font color="#924B72">#GadgetFiles</font>, 5, 5, 430, 175,<font color="#006666"> GetHomeDirectory</font>())
       
       <font color="#006666">; Buttons.</font>
@@ -181,7 +181,7 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
               
             <b><font color="#006666">Case</font></b> 0 <b><font color="#006666">To</font></b> 31, 127
               <font color="#006666">; Unprintable characters.</font>
-              String +<font color="#006666"> Chr</font>(129)   
+              String +<font color="#006666"> Chr</font>(129)
               
             <b><font color="#006666">Default</font></b>
               <font color="#006666">; Printable characters.</font>
@@ -225,7 +225,7 @@ to overwrite the buffer's contents and <a href="../memory/freememory.html">FreeM
     <font color="#006666">; Stop if file size is invalid.</font>
     Size =<font color="#006666"> FileSize</font>(File)
     <b><font color="#006666">If</font></b> Size &lt; 1
-      <b><font color="#006666">ProcedureReturn</font></b> 
+      <b><font color="#006666">ProcedureReturn</font></b>
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Open the file.</font>

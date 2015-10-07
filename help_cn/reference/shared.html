@@ -10,7 +10,7 @@
 
 <b><font color="#006666">Shared</font></b> allows a <a href="../reference/variables.html">variable</a>, an <a href="../reference/dim.html">array</a>, a <a href="../reference/newlist.html">list</a> 
 or a <a href="../reference/newmap.html">map</a> to be accessed within a <a href="../reference/procedures.html">procedure</a>. 
-When <b><font color="#006666">Shared</font></b> is used with an array, a list or a map, only the name followed by '()' must be specified. 
+When <b><font color="#006666">Shared</font></b> is used with an array, a list or a map, only the name followed by &amp;apos;()&amp;apos; must be specified. 
 
  
 
@@ -21,8 +21,8 @@ When <b><font color="#006666">Shared</font></b> is used with an array, a list or
   
   <b><font color="#006666">Procedure</font></b> <font color="#006666">Change</font>()
     <b><font color="#006666">Shared</font></b> a
-    a = 20 
-  <b><font color="#006666">EndProcedure</font></b> 
+    a = 20
+  <b><font color="#006666">EndProcedure</font></b>
   
 <font color="#006666">  Change</font>()
   <b><font color="#006666">Debug</font></b> a   <font color="#006666">; Will print 20, as the variable has been shared.</font>
@@ -40,7 +40,7 @@ When <b><font color="#006666">Shared</font></b> is used with an array, a list or
     <b><font color="#006666">Shared</font></b> <b><font color="#006666">Array</font></b>(), <b><font color="#006666">List</font></b>()
     <b><font color="#006666">Array</font></b>(0) = 1
     <b><font color="#006666">List</font></b>() = 2
-  <b><font color="#006666">EndProcedure</font></b> 
+  <b><font color="#006666">EndProcedure</font></b>
   
 <font color="#006666">  Change</font>()
   <b><font color="#006666">Debug</font></b> <b><font color="#006666">Array</font></b>(0)  <font color="#006666">; Will print 1, as the array has been shared.</font>

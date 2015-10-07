@@ -20,29 +20,49 @@
 The <b><font color="#006666">If</font></b> structure is used to achieve tests, and/or change the programmes direction, depending on whether the test is true or false. 
 <b><font color="#006666">ElseIf</font></b> optional command is used for any number of additional tests if the previous test was not true. 
 The <b><font color="#006666">Else</font></b> optional command is used to execute a part of code, if all previous tests were false. 
-Any number of <b><font color="#006666">If</font></b> structures may be nested together. 
+Any number of <b><font color="#006666">If</font></b> structures may be nested together. <br>
+<br>
+Short-circuit evaluations for expressions are supported, meaning if a test is true, all following tests will be ignored and not even run. 
 
  
 
-</blockquote><p><b>示例</b></p><blockquote>
+</blockquote><p><b>Example:</b> Basic test</p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> a=10 
-    <b><font color="#006666">Debug</font></b> "a=10"
+<pre><font face="Courier New, Courier, mono"size="2">  a = 5
+  <b><font color="#006666">If</font></b> a = 10 
+    <b><font color="#006666">Debug</font></b> "a = 10"
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "a&lt;&gt;10"
+    <b><font color="#006666">Debug</font></b> "a &lt;&gt; 10"
   <b><font color="#006666">EndIf</font></b>    
 </font></pre>
 
-</blockquote><p><b>示例</b></p><blockquote>
+</blockquote><p><b>Example:</b> Multiple test</p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">If</font></b> a=10 <b><font color="#006666">And</font></b> b&gt;=10 <b><font color="#006666">Or</font></b> c=20     
-    <b><font color="#006666">If</font></b> b=15
-      <b><font color="#006666">Debug</font></b> "b=15"
+<pre><font face="Courier New, Courier, mono"size="2">  b = 15
+  <b><font color="#006666">If</font></b> a = 10 <b><font color="#006666">And</font></b> b &gt;= 10 <b><font color="#006666">Or</font></b> c = 20     
+    <b><font color="#006666">If</font></b> b = 15
+      <b><font color="#006666">Debug</font></b> "b = 15"
     <b><font color="#006666">Else</font></b>       
       <b><font color="#006666">Debug</font></b> "Other possibility"
     <b><font color="#006666">EndIf</font></b>   
+  <b><font color="#006666">Else</font></b>     
+    <b><font color="#006666">Debug</font></b> "Test failure"
+  <b><font color="#006666">EndIf</font></b>  
+</font></pre>
+
+</blockquote><p><b>Example:</b> Short-circuit test</p><blockquote>
+
+
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">DisplayHello</font>()
+    <b><font color="#006666">Debug</font></b> "Hello"
+    <b><font color="#006666">ProcedureReturn</font></b> 1
+  <b><font color="#006666">EndProcedure</font></b>
+
+  a = 10
+  <b><font color="#006666">If</font></b> a = 10 <b><font color="#006666">Or</font></b> <font color="#006666">DisplayHello</font>() = 1 <font color="#006666">; a is equal to 10, so the second test is fully ignored</font>
+    <b><font color="#006666">Debug</font></b> "Test sucess"
   <b><font color="#006666">Else</font></b>     
     <b><font color="#006666">Debug</font></b> "Test failure"
   <b><font color="#006666">EndIf</font></b>  

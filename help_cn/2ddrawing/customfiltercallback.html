@@ -8,12 +8,7 @@
 </blockquote>
 <b>概要</b><br><blockquote>
 
-
-
-Specifies a callback that will be called for every pixel that is part of a drawing operation in 
-<font color="#924B72">#PB_2DDrawing_CustomFilter</font> <a href="drawingmode.html">drawing mode</a>. 
-
- 
+指定将要求每个像素是在绘图操作的一部分回调<font color="#924B72">＃PB_2DDrawing_CustomFilter</font><a href="drawingmode.html">绘图模式</a>。. 
 
 </blockquote><p><b>参数</b></p><blockquote>
 <style type="text/css">
@@ -23,9 +18,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <table width="90%" class="parameters">
 <tr><td width="10%"><i>@FilterCallback()</i></td>
 <td width="90%"> 
- 
-The address of a callback function to call. It must have the following form: 
- 
+这是用来调用的回调函数的地址。必须要具备以下形式： 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">CustomCallback</font>(x, y, SourceColor, TargetColor)
     <font color="#006666">;</font>
     <font color="#006666">; Calculate ResultColor from the given input</font>
@@ -34,20 +27,7 @@ The address of a callback function to call. It must have the following form:
   <b><font color="#006666">EndProcedure</font></b>
 </font></pre>
 
-
-
-The callback will be called for every pixel that is drawn as a result of a call to drawing functions 
-like <a href="line.html">Line()</a>, <a href="box.html">Box()</a> or <a href="drawtext.html">DrawText()</a>. The SourceColor 
-parameter specifies the color given in the drawing operation and the TargetColor parameter specifies 
-the color of the target pixel in the drawing area. Both colors are always 32-bit with alpha channel 
-independent of the color depth of the output. The callback has to calculate the color that the target 
-pixel should have after the drawing and return that. 
-<br>
-<br>
-The x and y coordinate received in the callback are always relative to the upper left corner of 
-the drawing output. The coordinates are not affected by any calls to <a href="setorigin.html">SetOrigin()</a> or <a href="clipoutput.html">ClipOutput()</a>. 
-
- 
+回调将被称为对于每个被画成一个调用的结果绘制功能，如像素<a href="line.html">Line()</a>，<a href="box.html">Box()</a> 或<a href="drawtext.html">DrawText()</a>。所述SourceColor参数指定在拉伸操作中给出的颜色和TargetColor参数指定在绘图区域中的目标像素的颜色。这两种颜色总是32位带alpha通道独立输出的颜色深度。回调必须计算目标像素应具有拉伸后该并返回的颜色。<br><br>和y在回调坐标接收的X总是相对于绘图输出的左上角. The coordinates are not affected by any calls to <a href="setorigin.html">SetOrigin()</a> or <a href="clipoutput.html">ClipOutput()</a>. 
 
 </td></tr>
 </table>
@@ -55,18 +35,9 @@ the drawing output. The coordinates are not affected by any calls to <a href="se
 无.
 
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
-
-
-This callback will be called many times (for every pixel to draw) so it should be very small and 
-fast to not have a too big impact on the drawing performance. 
-<br>
-<br>
-Note: The <font color="#924B72">#PB_2DDrawing_CustomFilter</font> <a href="drawingmode.html">drawing mode</a> 
-only works on <a href="../image/imageoutput.html">ImageOutput()</a> and <a href="../gadget/canvasoutput.html">CanvasOutput()</a>. 
-
- 
+此回调将被调用多次 （用于绘制每个像素） 所以它应该是很小，速度快，对绘图的性能没有太大的影响。<br><br>注意： <font color="#924B72">＃PB_2DDrawing_CustomFilter</font><a href="drawingmode.html">绘图模式</a>仅适用于<a href="../image/imageoutput.html">ImageOutput()</a>和<a href="../gadget/canvasoutput.html">CanvasOutput()</a>。 
 
 </blockquote><p><b>示例</b></p><blockquote>
 
@@ -105,8 +76,6 @@ only works on <a href="../image/imageoutput.html">ImageOutput()</a> and <a href=
 
 <a href="drawingmode.html">DrawingMode()</a>, <a href="customgradient.html">CustomGradient()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=conicalgradient.html>ConicalGradient()</a> - <a href=index.html>2DDrawing Index</a> - <a href=customgradient.html>CustomGradient()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=conicalgradient.html>ConicalGradient()</a> - <a href=index.html>2DDrawing 索引</a> - <a href=customgradient.html>CustomGradient()</a> -&gt;<br><br>
 
 </body></html>

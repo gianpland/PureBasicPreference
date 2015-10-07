@@ -19,13 +19,13 @@
 
 <b><font color="#006666">Enumeration</font></b>
   <font color="#924B72">#GADGET_Canvas</font>
-  <font color="#924B72">#GADGET_Color</font> 
+  <font color="#924B72">#GADGET_Color</font>
   <font color="#924B72">#GADGET_Brush</font>
   <font color="#924B72">#GADGET_Line</font>
   <font color="#924B72">#GADGET_Box</font>
   <font color="#924B72">#GADGET_Circle</font>
   <font color="#924B72">#GADGET_Fill</font>
-  <font color="#924B72">#GADGET_Clear</font> 
+  <font color="#924B72">#GADGET_Clear</font>
   <font color="#924B72">#GADGET_Load</font>
   <font color="#924B72">#GADGET_Save</font>
 <b><font color="#006666">EndEnumeration</font></b>
@@ -142,11 +142,11 @@ CurrentMode  = <font color="#924B72">#GADGET_Brush</font>
 
             
             <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_EventType_LeftButtonUp</font>
-<font color="#006666">              DrawAction</font>(X, Y,<font color="#006666"> EventType</font>())                        
+<font color="#006666">              DrawAction</font>(X, Y,<font color="#006666"> EventType</font>())
             
             <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_EventType_MouseMove</font>
               <b><font color="#006666">If</font></b> <font color="#006666">GetGadgetAttribute</font>(<font color="#924B72">#GADGET_Canvas</font>, <font color="#924B72">#PB_Canvas_Buttons</font>) &amp; <font color="#924B72">#PB_Canvas_LeftButton</font>
-<font color="#006666">                DrawAction</font>(X, Y,<font color="#006666"> EventType</font>())            
+<font color="#006666">                DrawAction</font>(X, Y,<font color="#006666"> EventType</font>())
               <b><font color="#006666">EndIf</font></b>
                       
           <b><font color="#006666">EndSelect</font></b>
@@ -163,12 +163,12 @@ CurrentMode  = <font color="#924B72">#GADGET_Brush</font>
           EventGadget =<font color="#006666"> EventGadget</font>()
           <b><font color="#006666">For</font></b> Gadget = <font color="#924B72">#GADGET_Brush</font> <b><font color="#006666">To</font></b> <font color="#924B72">#GADGET_Fill</font>
             <b><font color="#006666">If</font></b> Gadget = EventGadget
-<font color="#006666">              SetGadgetState</font>(Gadget, 1) 
+<font color="#006666">              SetGadgetState</font>(Gadget, 1)
             <b><font color="#006666">Else</font></b>
 <font color="#006666">              SetGadgetState</font>(Gadget, 0) <font color="#006666">; unset the state of all other gadgets
 </font>            <b><font color="#006666">EndIf</font></b>
-          <b><font color="#006666">Next</font></b> Gadget          
-          CurrentMode = EventGadget             
+          <b><font color="#006666">Next</font></b> Gadget
+          CurrentMode = EventGadget
       
         <b><font color="#006666">Case</font></b> <font color="#924B72">#GADGET_Clear</font>
           <b><font color="#006666">If</font></b> <font color="#006666">StartDrawing</font>(<font color="#006666">CanvasOutput</font>(<font color="#924B72">#GADGET_Canvas</font>))
@@ -203,7 +203,7 @@ CurrentMode  = <font color="#924B72">#GADGET_Brush</font>
               <b><font color="#006666">EndIf</font></b>
               
 <font color="#006666">              FreeImage</font>(<font color="#924B72">#IMAGE_LoadSave</font>)
-            <b><font color="#006666">EndIf</font></b>            
+            <b><font color="#006666">EndIf</font></b>
           <b><font color="#006666">EndIf</font></b>
                 
       <b><font color="#006666">EndSelect</font></b>

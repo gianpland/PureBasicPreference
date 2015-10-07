@@ -25,7 +25,7 @@ The scope of a variable is the area in which it is valid. It can be
 <a href="../reference/global.html">global</a>, <a href="../reference/procedures.html">local</a>, 
 <a href="../reference/shared.html">shared</a>, <a href="../reference/static.html">static</a> or 
 <a href="../reference/threaded.html">threaded</a>, 
-depending on how it is used in your source code. 'byref' ("by reference", i.e. using the address) is used to indicate 
+depending on how it is used in your source code. &amp;apos;byref&amp;apos; ("by reference", i.e. using the address) is used to indicate 
 an <a href="../reference/dim.html">Array</a> or <a href="../reference/newlist.html">List</a> that was passed 
 as parameter to a procedure. 
 
@@ -176,8 +176,8 @@ field and press Add.
 <pre><font face="Courier New, Courier, mono"size="2">  Examples:
   MyVariable$                 - add a normal string variable
   Array(1, 5)                 - add an array field
-  Structure\subfield[5]\value �add a variable inside a structure
-  MyList()\structuresubfield  �add a variable inside a structured list
+  Structure\subfield[5]\value � add a variable inside a structure
+  MyList()\structuresubfield  � add a variable inside a structured list
 </font></pre>
 
 
@@ -213,7 +213,7 @@ saved with the compiler options, so you do not need to repopulate this list all 
 
 
 
-The Variable viewer allows to examine the program's variables, <a href="../reference/dim.html">arrays</a>, 
+The Variable viewer allows to examine the program&amp;apos;s variables, <a href="../reference/dim.html">arrays</a>, 
 <a href="../reference/newlist.html">lists</a> and <a href="../reference/newmap.html">maps</a>. The individual tabs 
 show <a href="../reference/global.html">global</a> and <a href="../reference/threaded.html">threaded</a> items in the 
 top part and <a href="../reference/procedures.html">local</a>, <a href="../reference/shared.html">shared</a> and 
@@ -233,7 +233,7 @@ the header of the appropriate column.
 <br>
 <br>
 
-<b>The 'Variables' tab</b> 
+<b>The &amp;apos;Variables&amp;apos; tab</b> 
 <br>
 This tab, shows the variables of the program. 
 By right-clicking on a variable, it is possible to add it to the watchlist. 
@@ -241,7 +241,7 @@ By right-clicking on a variable, it is possible to add it to the watchlist.
 <br>
 <br>
 
-<b>The 'Arrays' tab</b> 
+<b>The &amp;apos;Arrays&amp;apos; tab</b> 
 <br>
 This tab shows a list of all arrays in the program and the 
 dimensions in which they are currently defined (-1 means that <a href="../reference/dim.html">Dim</a> was not called yet). 
@@ -250,7 +250,7 @@ By right-clicking on an array, the content of the array can be viewed in the "Vi
 <br>
 <br>
 
-<b>The 'Lists' tab</b> 
+<b>The &amp;apos;Lists&amp;apos; tab</b> 
 <br>
 This tab shows a list of all Lists, the number of elements they 
 currently hold ( "-" indicates that <a href="../reference/newlist.html">NewList</a> was not called yet), as well as the 
@@ -260,7 +260,7 @@ By right-clicking on a list, the content of the list can be viewed in the "View 
 <br>
 <br>
 
-<b>The 'Maps' tab</b> 
+<b>The &amp;apos;Maps&amp;apos; tab</b> 
 <br>
 This tab shows a list of all maps, the number of elements they 
 currently hold ( "-" indicates that <a href="../reference/newmap.html">NewMap</a> was not called yet), as well as the 
@@ -270,7 +270,7 @@ By right-clicking on a map, the content of the map can be viewed in the "View Ar
 <br>
 <br>
 
-<b>The 'View Array/List/Map' tab</b> 
+<b>The &amp;apos;View Array/List/Map&amp;apos; tab</b> 
 <br>
 This tab can be used to view individual entries of an array, a list or a map. This includes arrays, lists or maps 
 inside structures as well. 
@@ -439,7 +439,7 @@ while the program is not stopped. Use the Update button for that.
 
 The memory viewer lets you view a memory area in your program. 
 The range to view can be entered into the range fields as any valid PureBasic expression; 
-this can be a normal decimal value, a hex number preceded by the ��character or 
+this can be a normal decimal value, a hex number preceded by the �$� character or 
 any other valid expression, including variables or pointers from the code. 
 If the content of the second range field starts with a "+" sign, the content is 
 interpreted as relative to the first field. 
@@ -615,7 +615,7 @@ the program is compiled.
 <br>
 <br>
 
-The purifier detects these errors by placing a special 'salt'-value around global and local variables, 
+The purifier detects these errors by placing a special &amp;apos;salt&amp;apos;-value around global and local variables, 
 strings and allocated memory buffers. These salt values are then checked at regular intervals and an 
 error is displayed if they were changed. These checks slow down the program execution considerably especially 
 for large programs, which is why the rate at which the checks are performed can be specified in the 

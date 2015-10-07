@@ -64,7 +64,7 @@
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineMouse</font>()
         MouseX = -<font color="#006666">MouseDeltaX</font>() * <font color="#924B72">#CameraSpeed</font> * 0.05
         MouseY = -<font color="#006666">MouseDeltaY</font>() * <font color="#924B72">#CameraSpeed</font> * 0.05
-      <b><font color="#006666">EndIf</font></b>  
+      <b><font color="#006666">EndIf</font></b>
       
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
         
@@ -73,28 +73,28 @@
 <font color="#006666">          DisableParticleEmitter</font>(0, Disable)
         <b><font color="#006666">EndIf</font></b>
         
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_F6</font>) 
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_F6</font>)
           speedFactor = speedFactor + percent * (<font color="#924B72">#MaxSpeedFactor</font> - speedFactor)
 <font color="#006666">          ParticleSpeedFactor</font>(1, speedFactor)
         <b><font color="#006666">EndIf</font></b>
         
-        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_F7</font>) 
+        <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_F7</font>)
           speedFactor = speedFactor + percent * (<font color="#924B72">#MinSpeedFactor</font> - speedFactor)
 <font color="#006666">          ParticleSpeedFactor</font>(1, speedFactor)
         <b><font color="#006666">EndIf</font></b>
     
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
-          KeyX = -<font color="#924B72">#CameraSpeed</font> 
+          KeyX = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
-          KeyX = <font color="#924B72">#CameraSpeed</font> 
+          KeyX = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyX = 0
         <b><font color="#006666">EndIf</font></b>
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
-          KeyY = -<font color="#924B72">#CameraSpeed</font> 
+          KeyY = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
-          KeyY = <font color="#924B72">#CameraSpeed</font> 
+          KeyY = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyY = 0
         <b><font color="#006666">EndIf</font></b>
@@ -112,7 +112,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized", 0)
 <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">End</font></b></font></pre>

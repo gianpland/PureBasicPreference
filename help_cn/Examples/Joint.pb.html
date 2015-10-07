@@ -39,7 +39,7 @@
 </font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Dirt.jpg"))
 <font color="#006666">    CreateMaterial</font>(1,<font color="#006666"> LoadTexture</font>(1, "Wood.jpg"))
 <font color="#006666">    GetScriptMaterial</font>(2, "Color/Green")
-<font color="#006666">    GetScriptMaterial</font>(3, "Color/Red")  
+<font color="#006666">    GetScriptMaterial</font>(3, "Color/Red")
     
     <font color="#006666">; Meshes
 </font>    <font color="#006666">;
@@ -62,19 +62,19 @@
     
     <font color="#006666">; Bodies
 </font>    <font color="#006666">;
-</font><font color="#006666">    EntityPhysicBody</font>(0, <font color="#924B72">#PB_Entity_StaticBody</font>)
-<font color="#006666">    EntityPhysicBody</font>(1, <font color="#924B72">#PB_Entity_BoxBody</font>, 1.0)
+</font><font color="#006666">    CreateEntityBody</font>(0, <font color="#924B72">#PB_Entity_StaticBody</font>)
+<font color="#006666">    CreateEntityBody</font>(1, <font color="#924B72">#PB_Entity_BoxBody</font>, 1.0)
     
-<font color="#006666">    EntityPhysicBody</font>(3, <font color="#924B72">#PB_Entity_SphereBody</font>, 0.5)
+<font color="#006666">    CreateEntityBody</font>(3, <font color="#924B72">#PB_Entity_SphereBody</font>, 0.5)
     
-<font color="#006666">    EntityPhysicBody</font>(4, <font color="#924B72">#PB_Entity_StaticBody</font>)
-<font color="#006666">    EntityPhysicBody</font>(5, <font color="#924B72">#PB_Entity_BoxBody</font>, 0.1)
+<font color="#006666">    CreateEntityBody</font>(4, <font color="#924B72">#PB_Entity_StaticBody</font>)
+<font color="#006666">    CreateEntityBody</font>(5, <font color="#924B72">#PB_Entity_BoxBody</font>, 0.1)
     
     <font color="#006666">; SliderJoint
 </font>    <font color="#006666">;
 </font><font color="#006666">    SliderJoint  </font>(0,<font color="#006666"> EntityID</font>(0), -1, 0, 0,<font color="#006666"> EntityID</font>(1), 1, 0, 0)
 <font color="#006666">    SetJointAttribute</font>(0, <font color="#924B72">#PB_SliderJoint_LowerLimit</font>, -3)  
-<font color="#006666">    SetJointAttribute</font>(0, <font color="#924B72">#PB_SliderJoint_UpperLimit</font>,  0)   
+<font color="#006666">    SetJointAttribute</font>(0, <font color="#924B72">#PB_SliderJoint_UpperLimit</font>,  0)
     
     <font color="#006666">; HingeJoint
 </font>    <font color="#006666">;
@@ -93,16 +93,16 @@
     <b><font color="#006666">Repeat</font></b>
 <font color="#006666">      Screen3DEvents</font>()
       
-       <b><font color="#006666">If</font></b> <font color="#006666">ElapsedMilliseconds</font>() - Time &gt; 1500 <b><font color="#006666">And</font></b> <b><font color="#006666">Not</font></b> <font color="#006666">DoorClosed</font>() 
+       <b><font color="#006666">If</font></b> <font color="#006666">ElapsedMilliseconds</font>() - Time &gt; 1500 <b><font color="#006666">And</font></b> <b><font color="#006666">Not</font></b> <font color="#006666">DoorClosed</font>()
          Direction = 1 - Direction
          Time =<font color="#006666"> ElapsedMilliseconds</font>()
        <b><font color="#006666">EndIf</font></b>
 
       <b><font color="#006666">If</font></b> Direction = 1
-<font color="#006666">        ApplyEntityImpulse</font>(1, 0.3, 0, 0) 
+<font color="#006666">        ApplyEntityImpulse</font>(1, 0.3, 0, 0)
       <b><font color="#006666">Else</font></b>
-<font color="#006666">        ApplyEntityImpulse</font>(1, -0.3, 0, 0) 
-      <b><font color="#006666">EndIf</font></b> 
+<font color="#006666">        ApplyEntityImpulse</font>(1, -0.3, 0, 0)
+      <b><font color="#006666">EndIf</font></b>
       
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineMouse</font>()
         MouseX = -<font color="#006666">MouseDeltaX</font>() * <font color="#924B72">#CameraSpeed</font> * 0.05
@@ -114,25 +114,25 @@
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardReleased</font>(<font color="#924B72">#PB_Key_Space</font>)
           direction = 0
 <font color="#006666">          DisableEntityBody</font>(1, 0)
-<font color="#006666">          ApplyEntityImpulse</font>(1, -10, 0, 0) 
+<font color="#006666">          ApplyEntityImpulse</font>(1, -10, 0, 0)
           Time =<font color="#006666"> ElapsedMilliseconds</font>() 
 <font color="#006666">          FreeEntity</font>(3)
 <font color="#006666">          CreateEntity</font>(3,<font color="#006666"> MeshID</font>(1),<font color="#006666"> MaterialID</font>(3), -1, 15, 0.23)
-<font color="#006666">          EntityPhysicBody</font>(3, <font color="#924B72">#PB_Entity_SphereBody</font>, 0.5)
-        <b><font color="#006666">EndIf</font></b> 
+<font color="#006666">          CreateEntityBody</font>(3, <font color="#924B72">#PB_Entity_SphereBody</font>, 0.5)
+        <b><font color="#006666">EndIf</font></b>
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
-          KeyX = -<font color="#924B72">#CameraSpeed</font> 
+          KeyX = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
-          KeyX = <font color="#924B72">#CameraSpeed</font> 
+          KeyX = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyX = 0
         <b><font color="#006666">EndIf</font></b>
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
-          KeyY = -<font color="#924B72">#CameraSpeed</font> 
+          KeyY = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
-          KeyY = <font color="#924B72">#CameraSpeed</font> 
+          KeyY = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyY = 0
         <b><font color="#006666">EndIf</font></b>
@@ -149,7 +149,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized",0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>

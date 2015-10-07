@@ -7,23 +7,23 @@
 
 In the <a href="../reference/ug_pb_any1.html">previous article</a> we examined one way in which a program 
 can support multiple instances of a single type of <a href="../window/index.html">window</a>. In this 
-one we are going to extend this concept further �developing a program that can support 
+one we are going to extend this concept further � developing a program that can support 
 multiple instances of several different types of window, in this case three: 
  
 <blockquote>
 
 
 
-- The Button window �contains a <a href="../gadget/listviewgadget.html">list view</a> and two 
-<a href="../gadget/buttongadget.html">buttons</a> labelled 'Add' and 'Remove'. When the 'Add' button 
+- The Button window � contains a <a href="../gadget/listviewgadget.html">list view</a> and two 
+<a href="../gadget/buttongadget.html">buttons</a> labelled &amp;apos;Add&amp;apos; and &amp;apos;Remove&amp;apos;. When the &amp;apos;Add&amp;apos; button 
 is clicked a <a href="../math/random.html">random</a> integer is added to the list view, when the 
-'Remove' button is clicked the currently highlighted entry in the list view is removed. 
+&amp;apos;Remove&amp;apos; button is clicked the currently highlighted entry in the list view is removed. 
 <br>
-- The Date window �contains a list view and two buttons in the same way as the Button 
+- The Date window � contains a list view and two buttons in the same way as the Button 
 window but also contains a <a href="../gadget/calendargadget.html">calendar gadget</a> too, the 
-window layout is altered to accommodate this additional control. When the 'Add' button 
+window layout is altered to accommodate this additional control. When the &amp;apos;Add&amp;apos; button 
 is clicked, it is the currently selected date that is added to the list view. 
-- The Track window �contains two <a href="../gadget/trackbargadget.html">track bars</a>, with a 
+- The Track window � contains two <a href="../gadget/trackbargadget.html">track bars</a>, with a 
 value between 0 and 100, and a <a href="../gadget/stringgadget.html">string gadget</a>. When the 
 track bars are moved the string gadget is updated with the value of the second track 
 bar subtracted from the first. 
@@ -42,7 +42,7 @@ Things to notice about this program are:
 <br>
 <br>
 In the Structures section 4 <a href="../reference/structures.html">structures</a> are defined. The 
-first, BASEWINDOW, defines a WindowClass value and a Menu value �these values are 
+first, BASEWINDOW, defines a WindowClass value and a Menu value � these values are 
 common to each window type. 
 <br>
 <br>
@@ -53,7 +53,7 @@ unique controls that they require and which are not provided for by the BASEWIND
 In the <a href="../reference/variables.html">Variables</a> section note that again a <a href="../reference/newmap.html">map</a> 
 called ActiveWindows is created, however this time it is of integer type, it doesn抰 use 
 any of the defined structures. There is a good reason for this, we need to store three 
-different structure types to make this program work �and we can抰 do this in a single map. 
+different structure types to make this program work � and we can抰 do this in a single map. 
 <br>
 <br>
 Also notice that *EventGadgets is defined using the BASEWINDOW structure. 
@@ -72,11 +72,11 @@ able to store all three of the different structures in the same map.
 <br>
 <br>
 We also set the WindowClass value in the structure to #WindowClassButton to indicate which 
-type of window, and therefore which type of structure, has been created �we will need to 
+type of window, and therefore which type of structure, has been created � we will need to 
 know this later on. 
 <br>
 <br>
-There are two more CreateWindow procedures this time �one for each class of the other 
+There are two more CreateWindow procedures this time � one for each class of the other 
 window types. They work in a similar way to that described, differing only where the 
 window抯 gadgets are different and setting a different value in WindowClass. 
 <br>
@@ -84,7 +84,7 @@ window抯 gadgets are different and setting a different value in WindowClass.
 Similarly we provide DestroyWindow and ResizeWindow procedures to take care of these functions. 
 <br>
 <br>
-We also provide a new procedure �EventsButtonWindow. This procedure knows what to do when 
+We also provide a new procedure � EventsButtonWindow. This procedure knows what to do when 
 any of the gadgets on the window are activated by the user. Similar procedures are provided 
 for the other window types too. 
 <br>
@@ -97,7 +97,7 @@ that we need to work with in each of these procedures:
   *ThisData\ListView ...
 </font></pre>
 
-Each procedure only knows how to handle one type of window �so before we start work we 
+Each procedure only knows how to handle one type of window � so before we start work we 
 check the WindowClass value to make sure that a window of the correct type has been 
 supplied as the argument something like this: 
  
@@ -117,8 +117,8 @@ it is defined as the BASEWINDOW type and BASEWINDOW is the ancestor structure to
 structures. 
 <br>
 <br>
-Providing we don抰 attempt to change any of the stored values using *EventGadgets �and 
-we抳e no reason to do so �all should be well. 
+Providing we don抰 attempt to change any of the stored values using *EventGadgets � and 
+we抳e no reason to do so � all should be well. 
 <br>
 <br>
 Finally, we despatch the recorded event values in EventWindow, EventGadget, EventType 
@@ -130,7 +130,7 @@ straight through to the event procedures and let them worry about getting the jo
   <font color="#924B72">#DateFormat</font> = "%dd/%mm/%yyyy"
   
   <font color="#006666">;- Enumerations</font>
-  <b><font color="#006666">Enumeration</font></b> 
+  <b><font color="#006666">Enumeration</font></b>
     <font color="#924B72">#WindowClassButton</font> = 1
     <font color="#924B72">#WindowClassDate</font>
     <font color="#924B72">#WindowClassTrack</font>
@@ -146,14 +146,14 @@ straight through to the event procedures and let them worry about getting the jo
   
   <font color="#006666">;- Structures</font>
   <b><font color="#006666">Structure</font></b> BASEWINDOW
-    WindowClass.i 
-    Menu.i  
+    WindowClass.i
+    Menu.i
   <b><font color="#006666">EndStructure</font></b>
   
   <b><font color="#006666">Structure</font></b> BUTTONWINDOW <b><font color="#006666">Extends</font></b> BASEWINDOW
     ListView.i
     AddButton.i
-    RemoveButton.i  
+    RemoveButton.i
   <b><font color="#006666">EndStructure</font></b>
   
   <b><font color="#006666">Structure</font></b> DATEWINDOW <b><font color="#006666">Extends</font></b> BASEWINDOW
@@ -182,7 +182,7 @@ straight through to the event procedures and let them worry about getting the jo
   <font color="#006666">; Notice the type of *EventGadgets.</font>
   <b><font color="#006666">Define</font></b>.i Event, EventWindow, EventGadget, EventType, EventMenu, EventQuit
   <b><font color="#006666">Define</font></b>.s EventWindowKey
-  <b><font color="#006666">Define</font></b> *EventGadgets.BASEWINDOW  
+  <b><font color="#006666">Define</font></b> *EventGadgets.BASEWINDOW
   
   <font color="#006666">;- Button Window</font>
   <b><font color="#006666">Procedure</font></b>.i <font color="#006666">CreateButtonWindow</font>()
@@ -426,7 +426,7 @@ straight through to the event procedures and let them worry about getting the jo
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Set the return value.</font>
-    <b><font color="#006666">If</font></b> ThisWindow &gt; 0 <b><font color="#006666">And</font></b> *ThisData &gt; 0 
+    <b><font color="#006666">If</font></b> ThisWindow &gt; 0 <b><font color="#006666">And</font></b> *ThisData &gt; 0
       <font color="#006666">; Return the reference to the new window.</font>
       <b><font color="#006666">ProcedureReturn</font></b> ThisWindow
     <b><font color="#006666">Else</font></b>
@@ -454,7 +454,7 @@ straight through to the event procedures and let them worry about getting the jo
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
-    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can't destroy this window.</font>
+    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can&amp;apos;t destroy this window.</font>
     <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassDate</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
@@ -629,7 +629,7 @@ straight through to the event procedures and let them worry about getting the jo
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
     
-    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can't destroy this window.</font>
+    <font color="#006666">; Check that it is the correct window type, if not stop as this procedure can&amp;apos;t destroy this window.</font>
     <b><font color="#006666">If</font></b> *ThisData\WindowClass &lt;&gt; <font color="#924B72">#WindowClassTrack</font>
       <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
     <b><font color="#006666">EndIf</font></b>
@@ -813,7 +813,7 @@ straight through to the event procedures and let them worry about getting the jo
           <b><font color="#006666">EndSelect</font></b>
         <b><font color="#006666">EndIf</font></b>
         
-      <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_SizeWindow</font>     
+      <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_SizeWindow</font>
         <b><font color="#006666">If</font></b> *EventGadgets &gt; 0
           <font color="#006666">; Use *EventGadgets\WindowClass to call the correct resize window procedure.</font>
           <b><font color="#006666">Select</font></b> *EventGadgets\WindowClass

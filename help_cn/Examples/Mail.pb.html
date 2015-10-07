@@ -16,7 +16,7 @@
 
 <b><font color="#006666">If</font></b> <font color="#006666">CreateMail</font>(0, "fred@purebasic.com", "Hello !")
 
-<font color="#006666">  SetMailBody</font>(0, "Hello !" + <font color="#924B72">#CRLF$</font> + 
+<font color="#006666">  SetMailBody</font>(0, "Hello !" + <font color="#924B72">#CRLF$</font> +
                  "This is a multi-" + <font color="#924B72">#CRLF$</font> +
                  "line mail !")
   
@@ -40,7 +40,7 @@
   <b><font color="#006666">If</font></b> Progress = <font color="#924B72">#PB_Mail_Finished</font>
 <font color="#006666">    MessageRequester</font>("Information", "Mail correctly sent !")
   <b><font color="#006666">Else</font></b>
-<font color="#006666">    MessageRequester</font>("Error", "Can't sent the mail !")
+<font color="#006666">    MessageRequester</font>("Error", "Can&amp;apos;t sent the mail !")
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">EndIf</font></b>

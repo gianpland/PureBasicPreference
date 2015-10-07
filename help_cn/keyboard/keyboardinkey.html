@@ -37,13 +37,13 @@ The last typed character.
      
 <font color="#006666">      ExamineKeyboard</font>()
      
-      <font color="#006666">; If we press the 'Back' key, we will delete the last character</font>
+      <font color="#006666">; If we press the &amp;apos;Back&amp;apos; key, we will delete the last character</font>
       <font color="#006666">;</font>
       <b><font color="#006666">If</font></b> <font color="#006666">KeyboardReleased</font>(<font color="#924B72">#PB_Key_Back</font>)
         FullText$ =<font color="#006666"> Left</font>(FullText$,<font color="#006666"> Len</font>(FullText$)-1)
       <b><font color="#006666">Else</font></b>
         result$=<font color="#006666">KeyboardInkey</font>()
-        <b><font color="#006666">If</font></b> <font color="#006666">FindString</font>("1234567890 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", result$) <font color="#006666">; Or your chosen valid characters</font>
+        <b><font color="#006666">If</font></b> <font color="#006666">FindString</font>("1234567890 &amp;apos;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", result$) <font color="#006666">; Or your chosen valid characters</font>
           FullText$ + result$
         <b><font color="#006666">EndIf</font></b> <font color="#006666">; Add the new text to the current one (if any)</font>
       <b><font color="#006666">EndIf</font></b>
@@ -65,8 +65,6 @@ The last typed character.
 
 <a href="examinekeyboard.html">ExamineKeyboard()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=initkeyboard.html>InitKeyboard()</a> - <a href=index.html>Keyboard Index</a> - <a href=keyboardmode.html>KeyboardMode()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=initkeyboard.html>InitKeyboard()</a> - <a href=index.html>Keyboard Index</a> - <a href=keyboardmode.html>KeyboardMode()</a> -&gt;<br><br>
 
 </body></html>

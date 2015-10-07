@@ -29,13 +29,13 @@
 - <font color="green">Added</font>: GetWindowData(), SetWindowData() <br>
 - <font color="green">Added</font>: AllocateStructure(), FreeStructure() <br>
 - <font color="green">Added</font>: #PB_Default support to WindowBounds() to reset min/max size <br>
-- <font color="green">Added</font>: 'Format' parameter to Read/WriteProgramString(), WriteProgramStringN() and ReadProgramError() <br>
+- <font color="green">Added</font>: &amp;apos;Format&amp;apos; parameter to Read/WriteProgramString(), WriteProgramStringN() and ReadProgramError() <br>
 - <font color="green">Added</font>: /PREPROCESS compiler flag to create a big single source with all macros, compilerif and file include resolved. Can be combined with /COMMENTED to get the original source with comments as well. <br>
-- <font color="green">Added</font>: Optional '#Server' parameter to NetworkServerEvent() to check events only on a specific server <br>
+- <font color="green">Added</font>: Optional &amp;apos;#Server&amp;apos; parameter to NetworkServerEvent() to check events only on a specific server <br>
 - <font color="green">Added</font>: #PB_String_NoZero flag support to PokeS() to avoid writing the ending null character <br>
 - <font color="green">Added</font>: #PB_Enumeration support for Defined() <br>
 - <font color="green">Added</font>: #PB_Explorer_HiddenFiles to show hidden files in the explorer gadgets <br>
-- <font color="green">Added</font>: Optional 'Type' parameter to CreateBillboardGroup() <br>
+- <font color="green">Added</font>: Optional &amp;apos;Type&amp;apos; parameter to CreateBillboardGroup() <br>
 - <font color="green">Added</font>: BillboardGroupCommonDirection(), BillboardGroupCommonUpVector() <br>
 - <font color="green">Added</font>: #PB_Entity_MinVelocity and #PB_Entity_ForceVelocity to SetEntityAttribute() <br>
 - <font color="green">Added</font>: SetMaterialAttribute() with #PB_Material_DepthCheck and #PB_Material_DepthWrite constants <br>
@@ -48,7 +48,7 @@
 - <font color="green">Added</font>: Fully unicode IDE <br>
 - <font color="green">Added</font>: Highlighting of repeated occurrences of the currently selected word in the IDE <br>
 - <font color="green">Added</font>: Plain-text editing mode to edit non-PB files in the IDE <br>
-- <font color="green">Added</font>: 'Issues' IDE tool to collect and display TODO/FIXME markers inside the code <br>
+- <font color="green">Added</font>: &amp;apos;Issues&amp;apos; IDE tool to collect and display TODO/FIXME markers inside the code <br>
 - <font color="green">Added</font>: Ctrl+E and Ctrl+Shift+E shortcut to align/shift comments in a selected code block <br>
 - <font color="green">Added</font>: Ctrl+M and Ctrl+Shift+M shortcut to select the current code block (repeated presses select the next code block) <br>
 - <font color="green">Added</font>: PopupMenu to IDE error log for clear/copy operation <br>
@@ -61,7 +61,7 @@
 - <font color="orange">Changed</font>: DeleteElement() now returns the data pointer to the new current element (if any) <br>
 - <font color="orange">Changed</font>: SetXMLAttribute() to accept newline characters in attributes (will be encoded as character entities) <br>
 - <font color="orange">Changed</font>: Added a mandatory "name" parameter to CreateXMLNode() as some parser needs it at node creation time <br>
-- <font color="orange">Changed</font>: The way (X)IncludeFile and IncludeBinary works: it's now relative to the file which contains these statements (which is easier to handle) <br>
+- <font color="orange">Changed</font>: The way (X)IncludeFile and IncludeBinary works: it&amp;apos;s now relative to the file which contains these statements (which is easier to handle) <br>
 - <font color="orange">Changed</font>: #PB_Event_SizeWindow and #PB_Event_MoveWindow are no more realtime on Windows, use BindEvent() to get real time update. It should fixes ugly flickering when realtime resizing on Windows. <br>
 - <font color="orange">Changed</font>: DataSection label within Procedure are now local labels. <br>
 - <font color="orange">Changed</font>: ASM local label prefix has been changed from "l_" to "ll_" ("ll" for local label), to avoid possible clash with main labels. <br>
@@ -94,7 +94,7 @@
 
 
 
-- <font color="orange">Changed</font>: 'REQUEST' to 'AUTO' for dialog splitter automatic min size calc (old syntax still supported) <br>
+- <font color="orange">Changed</font>: &amp;apos;REQUEST&amp;apos; to &amp;apos;AUTO&amp;apos; for dialog splitter automatic min size calc (old syntax still supported) <br>
 <br>
 - <font color="blue">Fixed</font>: Some compiler and libraries related bugs 
 
@@ -111,13 +111,13 @@
 - <font color="green">Added</font>: Runtime library <br>
 - <font color="green">Added</font>: Dialog library <br>
 - <font color="green">Added</font>: GTK3 subsystem for Linux <br>
-- <font color="green">Added</font>: DirectX11 subsystem for Windows (doesn't not support the 3D engine for now) <br>
+- <font color="green">Added</font>: DirectX11 subsystem for Windows (doesn&amp;apos;t not support the 3D engine for now) <br>
 - <font color="green">Added</font>: Named enumeration support to allow continuing a previous enumeration <br>
 - <font color="green">Added</font>: JoystickName(), JoystickZ() <br>
 - <font color="green">Added</font>: Optional #PB_Relative flag to JoystickX/Y/Z() to have more precise values <br>
 - <font color="green">Added</font>: Optional pad number to JoystickX/Y/Z() to handle more complex gamepads <br>
 - <font color="green">Added</font>: ZoomSprite() now accepts #PB_Default as Width/Height to reset to initial sprite size <br>
-- <font color="green">Added</font>: 'Color' and 'Intensity' parameter to DisplayTransparentSprite() <br>
+- <font color="green">Added</font>: &amp;apos;Color&amp;apos; and &amp;apos;Intensity&amp;apos; parameter to DisplayTransparentSprite() <br>
 - <font color="green">Added</font>: ClipSprite() now support #PB_Default for individual parameter <br>
 - <font color="green">Added</font>: #PB_Sprite_PixelCollision flag to CreateSprite(), LoadSprite() to enable pixel collision <br>
 - <font color="green">Added</font>: Zoom support to SpritePixelCollision() and SpriteCollision() <br>
@@ -159,14 +159,14 @@
 - <font color="orange">Changed</font>: renamed RotateSprite3D() to RotateSprite() <br>
 - <font color="orange">Changed</font>: renamed Sprite3DQuality() to SpriteQuality()  <br>
 - <font color="orange">Changed</font>: renamed Sprite3DBlending() to SpriteBlending() <br>
-- <font color="orange">Changed</font>: renamed the whole 'Module' library to 'Music' <br>
+- <font color="orange">Changed</font>: renamed the whole &amp;apos;Module&amp;apos; library to &amp;apos;Music&amp;apos; <br>
 - <font color="orange">Changed</font>: renamed Frame3DGadget() to FrameGadget() <br>
 - <font color="orange">Changed</font>: renamed Frame3DGadget3D() to FrameGadget3D() <br>
 - <font color="orange">Changed</font>: renamed #PB_Shortcut_Prior to #PB_Shortcut_PageUp and #PB_Shortcut_Next to #PB_Shortcut_PageDown <br>
 - <font color="orange">Changed</font>: Packer plugin constant renamed to #PB_PackerPlugin_XXX <br>
 - <font color="orange">Changed</font>: RayCollide() now returns the colliding #Entity. <br>
 <br>
-- <font color="green">Updated</font>: WebGadget() on Windows doesn't needs ATL.dll anymore <br>
+- <font color="green">Updated</font>: WebGadget() on Windows doesn&amp;apos;t needs ATL.dll anymore <br>
 - <font color="green">Updated</font>: zlib to 1.2.8 <br>
 - <font color="green">Updated</font>: pqlib (PostgreSQL) to 9.2.4 <br>
 - <font color="green">Updated</font>: ziplib to 0.11.1 <br>
@@ -177,8 +177,8 @@
 - <font color="red">Removed</font>: Palette library (outdated) <br>
 - <font color="red">Removed</font>: UnPackMemory() -&gt; replaced with UnCompressMemory() <br>
 - <font color="red">Removed</font>: RenderMovieFrame() and #PB_Movie_Rendered (outdated) <br>
-- <font color="red">Removed</font>: DisplayTranslucentSprite() -&gt; replaced with 'Alpha' parameter for DisplayTransparentSprite() <br>
-- <font color="red">Removed</font>: DisplaySolidSprite() -&gt; replaced with 'Color' parameter for DisplayTransparentSprite() <br>
+- <font color="red">Removed</font>: DisplayTranslucentSprite() -&gt; replaced with &amp;apos;Alpha&amp;apos; parameter for DisplayTransparentSprite() <br>
+- <font color="red">Removed</font>: DisplaySolidSprite() -&gt; replaced with &amp;apos;Color&amp;apos; parameter for DisplayTransparentSprite() <br>
 - <font color="red">Removed</font>: DisplayRGBFilter() -&gt; can be replaced with a zoomed sprite with color <br>
 - <font color="red">Removed</font>: DisplayShadowSprite() -&gt; can be replaced with DisplayTransparentSprite() with color <br>
 - <font color="red">Removed</font>: StartSpecialFX(), StopSpecialFX(), DisplayAlphaSprite(), ChangeAlphaIntensity(), UseBuffer() <br>
@@ -210,10 +210,10 @@
 - <font color="green">Added</font>: Fully reworked Packer library with ZIP, BriefLZ, 7z (unpacker only), LZMA and JCALG1 (Windows x86 and UncompressMemory() only) support. JCALG1 support has been dropped. Archives formats for BriefLZ have been changed. <br>
 - <font color="green">Added</font>: IPv6 support to the network library. Updated IPString(), MakeIPAddress(), GetClientIP(), IPAddressField(), ExamineIPAddress() and NextIPAddress(). added #PB_Network_IPv6 flag to OpenConnection and CreateServer(). Added FreeIP() for v6 IP <br>
 - <font color="green">Added</font>: System library: ComputerName(), UserName(), MemoryStatus(), CountCPUs() <br>
-- <font color="green">Added</font>: Line continuation feature, with the following operands: ',' '|' '+' And Or XOr <br>
+- <font color="green">Added</font>: Line continuation feature, with the following operands: &amp;apos;,&amp;apos; &amp;apos;|&amp;apos; &amp;apos;+&amp;apos; And Or XOr <br>
 - <font color="green">Added</font>: Constant string comparisons are now handled at compile time, allowing use in CompilerIf for example. <br>
 - <font color="green">Added</font>: CocoaMessage() for OS X <br>
-- <font color="green">Added</font>: 'Check syntax' to only compile the code without build/running an executable (/CHECK switch or in the IDE compiler menu) <br>
+- <font color="green">Added</font>: &amp;apos;Check syntax&amp;apos; to only compile the code without build/running an executable (/CHECK switch or in the IDE compiler menu) <br>
 - <font color="green">Added</font>: Array/List/Map parameter support to Interface methods <br>
 - <font color="green">Added</font>: Support for dynamic array/list/map support in structure/interface in Residents. <br>
 - <font color="green">Added</font>: #PB_Character, #PB_Unicode, #PB_Ascii and #PB_Integer flag support to FillMemory() <br>
@@ -245,7 +245,7 @@
 - <font color="green">Added</font>: #PB_Event_DeactivateWindow support <br>
 - <font color="green">Added</font>: #PB_EventType_Change support for EditorGadget() <br>
 - <font color="green">Added</font>: #PB_Relative/#PB_Absolute flag for FileSeek() <br>
-- <font color="green">Added</font>: 'Offset' and 'Length' parameters to SHA1/MD5/CRC32FileFingerprint() <br>
+- <font color="green">Added</font>: &amp;apos;Offset&amp;apos; and &amp;apos;Length&amp;apos; parameters to SHA1/MD5/CRC32FileFingerprint() <br>
 - <font color="green">Added</font>: GetSoundPosition(), SetSoundPosition(), SoundLength(), PauseSound(), ResumeSound(), SoundStatus(), GetSoundFrequency() <br>
 - <font color="green">Added</font>: #PB_All support for SoundVolume() <br>
 - <font color="green">Added</font>: SetGadgetItemState() support for ExplorerListGadget() <br>
@@ -274,18 +274,18 @@
 - <font color="green">Added</font>: CompilerElseIf <br>
 - <font color="green">Added</font>: Local labels <br>
 - <font color="green">Added</font>: Define now behave like Global and accept Dim(), NewMap() and NewList() on the same line <br>
-- <font color="green">Added</font>: 'Align' keyword support for structure, with a special #PB_Structure_AlignC value to mimic C structures padding <br>
+- <font color="green">Added</font>: &amp;apos;Align&amp;apos; keyword support for structure, with a special #PB_Structure_AlignC value to mimic C structures padding <br>
 - <font color="green">Added</font>: autocast of numeric values when string are involved, allowing to concatenate string and numeric in constants <br>
-- <font color="green">Added</font>: 'CONSTANTLIST' to Compiler interface <br>
+- <font color="green">Added</font>: &amp;apos;CONSTANTLIST&amp;apos; to Compiler interface <br>
 - <font color="green">Added</font>: editing history recording in the IDE to recover previous code states and for crash recovery (see File -&gt; Session History) <br>
 - <font color="green">Added</font>: AffectedDatabaseRows(), CheckDatabaseNull() to database library <br>
 - <font color="green">Added</font>: new Text3D library <br>
-- <font color="green">Added</font>: 'Mode' optional parameter to all ...Yaw/Roll/Pitch() functions <br>
-- <font color="green">Added</font>: 'Type' and 'Mode' optional parameter to CreateMesh() <br>
+- <font color="green">Added</font>: &amp;apos;Mode&amp;apos; optional parameter to all ...Yaw/Roll/Pitch() functions <br>
+- <font color="green">Added</font>: &amp;apos;Type&amp;apos; and &amp;apos;Mode&amp;apos; optional parameter to CreateMesh() <br>
 - <font color="green">Added</font>: RayCast(), MouseRayCast(), NormalX(), NormalY(), NormalZ() <br>
 - <font color="green">Added</font>: UpdateMesh(), EnableManualEntityBoneControl(), MoveEntityBone(), RotateEntityBone(), MeshIndex() <br>
-- <font color="green">Added</font>: 'Type' optional parameter to AddSubMesh() <br>
-- <font color="green">Added</font>: 'Type' parameter to FinishMesh() <br>
+- <font color="green">Added</font>: &amp;apos;Type&amp;apos; optional parameter to AddSubMesh() <br>
+- <font color="green">Added</font>: &amp;apos;Type&amp;apos; parameter to FinishMesh() <br>
 - <font color="green">Added</font>: ScaleNode(), GetMaterialColor(), GetMaterialAttribute(), ConvertLocalToWorldPosition(), ConvertWorldToLocalPosition() <br>
 - <font color="green">Added</font>: MaterialCullingMode(), FetchOrientation(), SetOrientation(), GetX(), GetY(), GetZ(), GetW(), GetLightColor() <br>
 - <font color="green">Added</font>: AttachEntityObject(): bone name can be empty, so the object is added directly to the entity <br>
@@ -354,23 +354,23 @@
 - <font color="green">Added</font>: VertexAnimation library <br>
 - <font color="green">Added</font>: Spline library <br>
 - <font color="green">Added</font>: CG Toolkit support for the 3D engine (both DirectX and OpenGL), trough InitEngine3D() <br>
-- <font color="green">Added</font>: optional 'Mode' parameter to  InitEngine3D() <br>
-- <font color="green">Added</font>: 'PickMask' parameter to MousePick() and CreateEntity() <br>
-- <font color="green">Added</font>: RenderWorld() now returns 'TimeSinceLastFrame', in milliseconds <br>
+- <font color="green">Added</font>: optional &amp;apos;Mode&amp;apos; parameter to  InitEngine3D() <br>
+- <font color="green">Added</font>: &amp;apos;PickMask&amp;apos; parameter to MousePick() and CreateEntity() <br>
+- <font color="green">Added</font>: RenderWorld() now returns &amp;apos;TimeSinceLastFrame&amp;apos;, in milliseconds <br>
 - <font color="green">Added</font>: SkyBox() and SkyDome() now supports Fog() <br>
-- <font color="green">Added</font>: 'Color' and 'TextureSize' parameters to WorldShadows() <br>
+- <font color="green">Added</font>: &amp;apos;Color&amp;apos; and &amp;apos;TextureSize&amp;apos; parameters to WorldShadows() <br>
 - <font color="green">Added</font>: #PB_World_UnderWater and #PB_World_WaterGodRays flags to CreateWater() <br>
 - <font color="green">Added</font>: RayPick(), CameraViewWidth(), CameraViewHeight(), CameraViewX(), CameraViewY(), CameraDirection()  <br>
 - <font color="green">Added</font>: CameraDirectionX/Y/Z(), SetCameraFixedYawAxis() <br><br>
-- <font color="green">Added</font>: optional 'IsActive' parameter to render to texture for CreateCamera() <br>
+- <font color="green">Added</font>: optional &amp;apos;IsActive&amp;apos; parameter to render to texture for CreateCamera() <br>
 - <font color="green">Added</font>: ScaleMaterial(), MaterialFog(), ReloadMaterial(), ResetMaterial(), NodeFixedYawAxis() <br>
-- <font color="green">Added</font>: optional 'TextureCoordinateIndex' parameter to AddMaterialLayer() <br>
+- <font color="green">Added</font>: optional &amp;apos;TextureCoordinateIndex&amp;apos; parameter to AddMaterialLayer() <br>
 - <font color="green">Added</font>: #PB_Material_Anisotropic support to MaterialFilteringMode() <br>
 - <font color="green">Added</font>: #PB_Default support as #Material to set the default settings for materials. <br>
 - <font color="green">Added</font>: #PB_Material_Wireframe, #PB_Material_Point and #PB_Material_Solid to MaterialShadingMode() <br>
 - <font color="green">Added</font>: SoundListenerLocate() <br>
 - <font color="green">Added</font>: Optional DirectionX/Y/Z parameter to NodeLookAt() <br>
-- <font color="green">Added</font>: optional 'Mode' parameter to MoveLight(), MoveEntity() and MoveNode() <br>
+- <font color="green">Added</font>: optional &amp;apos;Mode&amp;apos; parameter to MoveLight(), MoveEntity() and MoveNode() <br>
 - <font color="green">Added</font>: CreateTexture() now handle alpha textures as well <br>
 - <font color="green">Added</font>: #PB_Entity_Wireframe, #PB_Entity_Solid, #PB_Entity_Point and #PB_Entity_DisplaySkeleton to EntityRenderMode() <br>
 - <font color="green">Added</font>: FreeEntityJoints(), AttachEntityObject(), DetachEntityObject(), EntityBoneX/Y/Z() <br>
@@ -388,7 +388,7 @@
 - <font color="green">Added</font>: EnableHingeJointAngularMotor() <br>
 - <font color="green">Added</font>: Joint parameter for ConeTwistJoint(), HingeJoint(), PointJoint(), SliderJoint() <br>
 - <font color="green">Added</font>: #PB_HingeJoint_LowerLimit and #PB_HingeJoint_UpperLimit to Get/SetJointAttribute() <br>
-- <font color="green">Added</font>: Optional 'Pitch', 'Yaw', 'Roll' parameters to AddStaticGeometryEntity() <br>
+- <font color="green">Added</font>: Optional &amp;apos;Pitch&amp;apos;, &amp;apos;Yaw&amp;apos;, &amp;apos;Roll&amp;apos; parameters to AddStaticGeometryEntity() <br>
 - <font color="green">Added</font>: FreeTerrain(), SetupTerrains(), CreateTerrain(), TerrainPhysicBody(), DefineTerrainTile() <br>
 - <font color="green">Added</font>: AddTerrainTexture(), BuildTerrain(), TerrainLocate(), TerrainHeight(), TerrainTileHeightAtPosition() <br>
 - <font color="green">Added</font>: TerrainTilePointX/Y(), TerrainTileSize(), GetTerrainTileHeightAtPoint(), SetTerrainTileHeightAtPoint() <br>
@@ -396,9 +396,9 @@
 - <font color="green">Added</font>: UpdateTerrainTileLayerBlend(), TerrainMousePick(), SaveTerrain(), TerrainRenderMode() <br>
 - <font color="green">Added</font>: special key handling to InputEvent3D() <br>
 <br>
-- <font color="orange">Changed</font>: CameraLookAt() doesn't change the direction anymore <br>
-- <font color="orange">Changed</font>: Attach/DetachNodeObject() removed the 'type' object <br>
-- <font color="orange">Changed</font>: 'InitialWidth' parameter has been removed for CreateRibbonEffect() <br>
+- <font color="orange">Changed</font>: CameraLookAt() doesn&amp;apos;t change the direction anymore <br>
+- <font color="orange">Changed</font>: Attach/DetachNodeObject() removed the &amp;apos;type&amp;apos; object <br>
+- <font color="orange">Changed</font>: &amp;apos;InitialWidth&amp;apos; parameter has been removed for CreateRibbonEffect() <br>
 <br>
 - <font color="red">Removed</font>: AnimateEntity() (replaced with Start/StopEntityAnimation()) <br>
 - <font color="red">Removed</font>: #PB_Entity_Wireframe, #PB_Entity_Point and #PB_Entity_Solid to EntityRenderMode() <br>
@@ -420,7 +420,7 @@
 - <font color="green">Updated</font>: SQLite version (3.7.9) <br>
 - <font color="green">Updated</font>: PCRE version (8.30) <br>
 <br>
-- <font color="orange">Changed</font>: OpenGL subsystem is now default on Linux (a new 'sdl' subsystem has appear) <br>
+- <font color="orange">Changed</font>: OpenGL subsystem is now default on Linux (a new &amp;apos;sdl&amp;apos; subsystem has appear) <br>
 <br>
 - <font color="blue">Fixed</font>: 3D examples for Linux <br>
 - <font color="blue">Fixed</font>: WinAPI 64-bit residents (by Danilo) <br>
@@ -434,10 +434,10 @@
 
 
 
-- <font color="green">Added</font>: a brand new '3D' example folder <br>
-- <font color="green">Added</font>: 'Joint' library <br>
-- <font color="green">Added</font>: 'SpecialEffect' library <br>
-- <font color="green">Added</font>: 'StaticGeometry' library <br>
+- <font color="green">Added</font>: a brand new &amp;apos;3D&amp;apos; example folder <br>
+- <font color="green">Added</font>: &amp;apos;Joint&amp;apos; library <br>
+- <font color="green">Added</font>: &amp;apos;SpecialEffect&amp;apos; library <br>
+- <font color="green">Added</font>: &amp;apos;StaticGeometry&amp;apos; library <br>
 - <font color="green">Added</font>: CameraPitch(), CameraRoll(), CameraYaw(), SwitchCamera() <br>
 - <font color="green">Added</font>: ApplyEntityForce(), ApplyEntityImpulse(), EntityPitch(), EntityRoll(), EntityYaw() <br>
 - <font color="green">Added</font>: GetEntityAttribute(), GetEntityMaterial(), SetEntityAttribute(), SetEntityMaterial() <br>
@@ -460,9 +460,9 @@
 - <font color="green">Added</font>: #PB_ListIcon_ThreeState and #PB_ListIcon_Inbetween <br>
 - <font color="green">Added</font>: #PB_Tree_ThreeState and #PB_Tree_Inbetween <br>
 - <font color="green">Added</font>: crossplatform ComboBox events <br>
-- <font color="green">Added</font>: 'DeclareC' keyword for completeness <br>
+- <font color="green">Added</font>: &amp;apos;DeclareC&amp;apos; keyword for completeness <br>
 <br>
-- <font color="orange">Changed</font>: FindString() 'StartPosition' parameter to be optional <br>
+- <font color="orange">Changed</font>: FindString() &amp;apos;StartPosition&amp;apos; parameter to be optional <br>
 - <font color="orange">Changed</font>: WebGadget to use WebKitGtk on Linux <br>
 - <font color="orange">Changed</font>: ContainerGadget with #PB_Container_Borderless to no longer add a 2px invisible border on Linux <br>
 - <font color="orange">Changed</font>: EntityPhysicBody(), CreateLight(), RenderWorld(), ShowGUI(), WorldShadows() <br>
@@ -525,7 +525,7 @@
 - <font color="green">Added</font>: Large file support to File library on Linux/OSX <br>
 - <font color="green">Added</font>: CryptRandom(), CryptRandomData(), OpenCryptRandom(), CloseCryptRandom() <br>
 - <font color="green">Added</font>: Many math functions: Exp(), ATan2(), Radian(), Degree(), [A]CosH(), [A]SinH(), [A]TanH(), IsNaN(), IsInfinity(), NaN(), Infinity(), Sign() <br>
-- <font color="green">Added</font>: 'Debugger' Library to control some debugger actions from code <br>
+- <font color="green">Added</font>: &amp;apos;Debugger&amp;apos; Library to control some debugger actions from code <br>
 <br>
 - <font color="orange">Changed</font>: The Image library now keeps images internally in 24-bit or 32-bit (loading and saving works with other bit depths) <br>
 <br>
@@ -542,7 +542,7 @@
 - <font color="green">Added</font>: Full debugger compatibility between all OS and processors <br>
 - <font color="green">Added</font>: Network debugging for the standalone debugger <br>
 - <font color="green">Added</font>: Data breakpoints for the debugger <br>
-- <font color="green">Added</font>: Support for structured items in the 'View Array/List/Map' tab of the Variable Viewer <br>
+- <font color="green">Added</font>: Support for structured items in the &amp;apos;View Array/List/Map&amp;apos; tab of the Variable Viewer <br>
 <br>
 - <font color="orange">Changed</font>: The Array, List or Map name in the Variable viewer should be entered with a "()" now to display their elements. 
 
@@ -572,7 +572,7 @@
 
 - <font color="green">Added</font>: Native Linux x64 support <br>
 - <font color="green">Added</font>: Built-in Map library for hash tables <br>
-- <font color="green">Added</font>: 'Threaded' Keyword for thread-local variables <br>
+- <font color="green">Added</font>: &amp;apos;Threaded&amp;apos; Keyword for thread-local variables <br>
 - <font color="green">Added</font>: Structure assignment copies the structure (a.point = b.point) <br>
 - <font color="green">Added</font>: ClearStructure() <br>
 - <font color="green">Added</font>: AESEncoder(), AESDecoder(), StartAESCipher(), AddCipherBuffer(), FinishCipher() <br>
@@ -585,7 +585,7 @@
 - <font color="green">Added</font>: Blob support to databases <br>
 - <font color="green">Added</font>: UsePostgreSQLDatabase(): native PostgreSQL support <br>
 - <font color="green">Added</font>: Peephole optimizer to 64-bit versions to produce better code <br>
-- <font color="green">Added</font>: '.a' (ascii) and '.u' (unicode) native type to provide native unsigned byte and word. <br>
+- <font color="green">Added</font>: &amp;apos;.a&amp;apos; (ascii) and &amp;apos;.u&amp;apos; (unicode) native type to provide native unsigned byte and word. <br>
 - <font color="green">Added</font>: FileBuffersSize() - #PB_Default support change the buffersize to the next opened files <br>
 - <font color="green">Added</font>: #PB_URL_Protocol to Get/SetURLPart() <br>
 - <font color="green">Added</font>: #PB_Shadow_TextureAdditive <br>
@@ -614,9 +614,9 @@
 <br>
 - <font color="green">Updated</font>: OGRE to 1.6.2, sqlite 3.6.14.2, PCRE to 7.9 <br>
 <br>
-- <font color="orange">Changed</font>: Call(C)Function(Fast) parameters have been changed from 'Any' to 'Integer'. <br>
+- <font color="orange">Changed</font>: Call(C)Function(Fast) parameters have been changed from &amp;apos;Any&amp;apos; to &amp;apos;Integer&amp;apos;. <br>
 - <font color="orange">Changed</font>: OpenScreen() now accepts FlipMode and RefreshRate <br>
-- <font color="orange">Changed</font>: FlipBuffers() doesn't take an optional parameter anymore <br>
+- <font color="orange">Changed</font>: FlipBuffers() doesn&amp;apos;t take an optional parameter anymore <br>
 <br>
 - <font color="red">Removed</font>: #PB_Image_DisplayFormat is now deprecated (value set to 24 to have 24-bit as default) <br>
 - <font color="red">Removed</font>: SetRefreshRate() has been removed, the parameter is in OpenScreen() now <br>
@@ -630,7 +630,7 @@
 - <font color="green">Added</font>: Edit-&gt;Goto matching keyword <br>
 - <font color="green">Added</font>: PB_TOOL_Preferences Environment variable for IDE tools <br>
 - <font color="green">Added</font>: Theme management to customize menu icons <br>
-- <font color="green">Added</font>: New 'Silk' theme based on the Iconsset by Mark James <br>
+- <font color="green">Added</font>: New &amp;apos;Silk&amp;apos; theme based on the Iconsset by Mark James <br>
 - <font color="green">Added</font>: Autocomplete scans implicit variable declaration and respects scope <br>
 - <font color="green">Added</font>: Structure item autocomplete <br>
 <br>
@@ -667,11 +667,11 @@
 
 - <font color="green">Added</font>: Full 64-bit version of PureBasic (Windows) <br>
 - <font color="green">Added</font>: MacOS X x86 support <br>
-- <font color="green">Added</font>: 'JPEG 2000' library <br>
-- <font color="green">Added</font>: 'Node' library <br>
-- <font color="green">Added</font>: 'Gadget3D' library <br>
-- <font color="green">Added</font>: 'Window3D' library <br>
-- <font color="green">Added</font>: 'Sound3D' library <br>
+- <font color="green">Added</font>: &amp;apos;JPEG 2000&amp;apos; library <br>
+- <font color="green">Added</font>: &amp;apos;Node&amp;apos; library <br>
+- <font color="green">Added</font>: &amp;apos;Gadget3D&amp;apos; library <br>
+- <font color="green">Added</font>: &amp;apos;Window3D&amp;apos; library <br>
+- <font color="green">Added</font>: &amp;apos;Sound3D&amp;apos; library <br>
 - <font color="green">Added</font>: Full unicode support to the engine3d <br>
 - <font color="green">Added</font>: MacOS X support for engine3d <br>
 - <font color="green">Added</font>: Absolute/relative rotation for all engine3d rotate commands <br>
@@ -682,11 +682,11 @@
 - <font color="green">Added</font>: CatchModule(), ArraySize(), WindowBounds(), DesktopX(), DesktopY() <br>
 - <font color="green">Added</font>: FinishDatabaseQuery(), DatabaseID() <br>
 - <font color="green">Added</font>: CreateSemaphore(), FreeSemaphore(), SignalSemaphore(), WaitSemaphore(), TrySemaphore() <br>
-- <font color="green">Added</font>: '.i' native type for 32/64-bit integer size <br>
+- <font color="green">Added</font>: &amp;apos;.i&amp;apos; native type for 32/64-bit integer size <br>
 - <font color="green">Added</font>: Read/WriteInteger(), Read/WritePreferenceInteger(), PeekI(), PokeI() <br>
 - <font color="green">Added</font>: Language support for compiler and debugger <br>
 - <font color="green">Added</font>: Style parameter to FontRequester() <br>
-- <font color="green">Added</font>: Support for 'And/Or' in CompilerIf statements <br>
+- <font color="green">Added</font>: Support for &amp;apos;And/Or&amp;apos; in CompilerIf statements <br>
 - <font color="green">Added</font>: #PB_Event_MinimizeWindow, #PB_Event_MaximizeWindow, #PB_Event_RestoreWindow <br>
 - <font color="green">Added</font>: #PB_Ignore support to AddStatusBarField() <br>
 - <font color="green">Added</font>: #PB_Explorer_DisplayMode to ExplorerListGadget() <br>
@@ -700,7 +700,7 @@
 - <font color="#924B72">Optimized</font>: XML library to handle very big files quickly <br>
 - <font color="#924B72">Optimized</font>: LinkedList library to use memory efficiently <br>
 <br>
-- <font color="orange">Changed</font>: 'Read' keyword now requires a type (Read.l, Read.q etc.) to avoid 64-bit migration problems <br>
+- <font color="orange">Changed</font>: &amp;apos;Read&amp;apos; keyword now requires a type (Read.l, Read.q etc.) to avoid 64-bit migration problems <br>
 - <font color="orange">Changed</font>: CountList() to ListSize() <br>
 - <font color="orange">Changed</font>: ClearGadgetItemList() to ClearGadgetItems() <br>
 - <font color="orange">Changed</font>: CameraProjection() to CameraProjectionMode() <br>
@@ -709,7 +709,7 @@
 - <font color="orange">Changed</font>: #Long, #Byte, #Word etc. to #PB_Long, #PB_Byte, #PB_Word etc. for consistency <br>
 - <font color="orange">Changed</font>: RotateEntity(), RotateCamera() and RotateBillboard() x,y rotation axis <br>
 - <font color="orange">Changed</font>: CameraFOV() angle from radian to degree <br>
-- <font color="orange">Changed</font>: Array and list parameter now requires the 'List' or 'Array' keyword <br>
+- <font color="orange">Changed</font>: Array and list parameter now requires the &amp;apos;List&amp;apos; or &amp;apos;Array&amp;apos; keyword <br>
 <br>
 - <font color="red">Removed</font>: StrQ(), HexQ(), BinQ(), ValQ() <br>
 - <font color="red">Removed</font>: ChangeListIconGadgetDisplay(), replaced by a gadget attribute <br>
@@ -748,7 +748,7 @@
 - <font color="green">Added</font>: Hexadecimal and binary support for Val() and ValQ() <br>
 - <font color="green">Added</font>: #PB_Compiler_Procedure compiler constant <br>
 - <font color="green">Added</font>: #PB_Round_Nearest support for Round() <br>
-- <font color="green">Added</font>: 'XOr' drawing support for Linux/SDL and MacOS X <br>
+- <font color="green">Added</font>: &amp;apos;XOr&amp;apos; drawing support for Linux/SDL and MacOS X <br>
 - <font color="green">Added</font>: New "Profiler" tool for the Debugger menu to monitor how often lines are called in the code <br>
 - <font color="green">Added</font>: Debugger can now evaluate expressions (see Debug output) <br>
 - <font color="green">Added</font>: The Memory Viewer can accept any expression as the start/end address <br>
@@ -807,8 +807,8 @@ Vista compliance, brace markers, faster coloring etc.) <br>
 - <font color="blue">Fixed</font>: Macros issues <br>
 - <font color="blue">Fixed</font>: LoadImage() with plug-ins in unicode mode <br>
 - <font color="blue">Fixed</font>: ExplorerListGadget() with over 4GB file <br>
-- <font color="blue">Fixed</font>: ExaminePreferenceKeys() didn't list the first key <br>
-- <font color="blue">Fixed</font>: ExamineDirectory() didn't handle patterns properly <br>
+- <font color="blue">Fixed</font>: ExaminePreferenceKeys() didn&amp;apos;t list the first key <br>
+- <font color="blue">Fixed</font>: ExamineDirectory() didn&amp;apos;t handle patterns properly <br>
 - <font color="blue">Fixed</font>: Several IDE problems <br>
 - <font color="blue">Fixed</font>: Some IDE and Debugger problems <br>
 - <font color="blue">Fixed</font>: Several compiler bugs 
@@ -824,10 +824,10 @@ Vista compliance, brace markers, faster coloring etc.) <br>
 
 
 
-- <font color="orange">Changed</font>: CreateThread() doesn't returns an OS thread handle anymore (use ThreadID() instead) <br>
+- <font color="orange">Changed</font>: CreateThread() doesn&amp;apos;t returns an OS thread handle anymore (use ThreadID() instead) <br>
 <br>
 - <font color="blue">Fixed</font>: Several important quad and unicode issues <br>
-- <font color="blue">Fixed</font>: Threadsafe mode wasn't properly working in some cases <br>
+- <font color="blue">Fixed</font>: Threadsafe mode wasn&amp;apos;t properly working in some cases <br>
 - <font color="blue">Fixed</font>: Nested compiler directives in macros <br>
 - <font color="blue">Fixed</font>: GetFileDate() and DirectoryEntryDate() now uses local time <br>
 - <font color="blue">Fixed</font>: OpenFileRequester() could fail with a lot of selected files <br>
@@ -855,12 +855,12 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 - <font color="green">Added</font>: Character type (.c) <br>
 - <font color="green">Added</font>: Double type (.d) <br>
 - <font color="green">Added</font>: Quad type (.q) <br>
-- <font color="green">Added</font>: 'XOr' and 'Not' logicals operators <br>
+- <font color="green">Added</font>: &amp;apos;XOr&amp;apos; and &amp;apos;Not&amp;apos; logicals operators <br>
 - <font color="green">Added</font>: Fixed string type (String${#Number}) <br>
 - <font color="green">Added</font>: Macro/EndMacro - single and complex mode <br>
 - <font color="green">Added</font>: With/EndWith for cleaner code <br>
 - <font color="green">Added</font>: Assign possibility to Static (quite important), Protected and Global: "Global a = 5" <br>
-- <font color="green">Added</font>: It's now possible to create a linked-list of pointer <br>
+- <font color="green">Added</font>: It&amp;apos;s now possible to create a linked-list of pointer <br>
 - <font color="green">Added</font>: Support for Global, Protected, Static and Shared arrays and linked-list: "Global NewList MyList.l()". NewList alone does not make the list global anymore <br>
 - <font color="green">Added</font>: #PB_Compiler_File, #PB_Compiler_Line, #PB_Compiler_Version, #PB_Compiler_Home, #PB_Compiler_Debugger, #PB_Compiler_ThreadSafe, #PB_Compiler_Unicode <br>
 - <font color="green">Added</font>: CompilerError "Message" directive <br>
@@ -868,9 +868,9 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 - <font color="green">Added</font>: optional parameters for procedures, interfaces methods, and prototypes <br>
 - <font color="green">Added</font>: /CONSTANT Test=Value switch to declare constants on the compiler line <br>
 - <font color="green">Added</font>: Swap keyword to quickly swap 2 variables or elements (Swap a,b). <br>
-- <font color="green">Added</font>: multiple 'Case' for Select/EndSelect: Case 1, 2, 6 To 20 <br>
-- <font color="green">Added</font>: 'Prototype' keyword to declare functions pointers easily <br>
-- <font color="green">Added</font>: 'ProcedureC' keyword to declare cdecl procedure easily <br>
+- <font color="green">Added</font>: multiple &amp;apos;Case&amp;apos; for Select/EndSelect: Case 1, 2, 6 To 20 <br>
+- <font color="green">Added</font>: &amp;apos;Prototype&amp;apos; keyword to declare functions pointers easily <br>
+- <font color="green">Added</font>: &amp;apos;ProcedureC&amp;apos; keyword to declare cdecl procedure easily <br>
 - <font color="green">Added</font>: Procedure parameters can now have the same name than a global variable (automatically protected) <br>
 - <font color="green">Added</font>: EnableExplicit/DisableExplicit: variables must be declared with Define, Global, Protected, Shared or Static. <br>
 - <font color="green">Added</font>: Defined(Name, Type) compiler function. Type can be #PB_Constant, #PB_Variable, #PB_Array, #PB_LinkedList, #PB_Structure, #PB_Interface <br>
@@ -884,8 +884,8 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 - <font color="green">Added</font>: full alphachannel support for Sprite3D library (trough PNG and TIFF) <br>
 - <font color="green">Added</font>: Subsystem() compiler directive to check if a subsystem is in use <br>
 - <font color="green">Added</font>: exponent form for constant float: 123.5e-20 <br>
-- <font color="green">Added</font>: local variables aliases are generated when using '!' raw assembly to ease their referencing (in form p.v_variable) <br>
-- <font color="green">Added</font>: 'Step over' and 'Step out' features to the debugger <br>
+- <font color="green">Added</font>: local variables aliases are generated when using &amp;apos;!&amp;apos; raw assembly to ease their referencing (in form p.v_variable) <br>
+- <font color="green">Added</font>: &amp;apos;Step over&amp;apos; and &amp;apos;Step out&amp;apos; features to the debugger <br>
 - <font color="green">Added</font>: Process library <br>
 <br>
 - <font color="#006666">Updated</font>: NT4 support is now done trough a subsystem (DirectX 3) <br>
@@ -900,9 +900,9 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 - <font color="#924B72">Optimized</font>: Procedures are now as small as possible, which should give some speed increase <br>
 <br>
 - <font color="orange">Changed</font>: Console library commands can now fully redirected (ie: possible to use them for CGI for example) <br>
-- <font color="orange">Changed</font>: When a numeric parameter is expected, it's not possible to pass a string anymore <br>
-- <font color="orange">Changed</font>: Temporary PureBasic.exe name aren't random anymore, because it could cause slowdown with some firewalls <br>
-- <font color="orange">Changed</font>: 'DefType' renamed to 'Define' <br>
+- <font color="orange">Changed</font>: When a numeric parameter is expected, it&amp;apos;s not possible to pass a string anymore <br>
+- <font color="orange">Changed</font>: Temporary PureBasic.exe name aren&amp;apos;t random anymore, because it could cause slowdown with some firewalls <br>
+- <font color="orange">Changed</font>: &amp;apos;DefType&amp;apos; renamed to &amp;apos;Define&amp;apos; <br>
 <br>
 - <font color="blue">Fixed</font>: Internal system functions no more trash reserved registers <br>
 - <font color="blue">Fixed</font>: Mouse is automatically released in windowed mode when the window loose focus <br>
@@ -933,15 +933,15 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 - <font color="blue">Fixed</font>: OpenScreen()/CloseScreen() could fail when using sprite3D <br>
 - <font color="blue">Fixed</font>: MovieLength() and MovieInfo() were incorrect with WMV format (thanks to Traumatic ;-) <br>
 - <font color="blue">Fixed</font>: ToolBar disable bug when mixing image and icon with XP skins <br>
-- <font color="blue">Fixed</font>: Possible crash when closing a window with a free'ed statusbar or toolbar <br>
-- <font color="blue">Fixed</font>: ImageGadget() and ButtonImageGadget() couldn't be used with AnimateWindow_() <br>
+- <font color="blue">Fixed</font>: Possible crash when closing a window with a free&amp;apos;ed statusbar or toolbar <br>
+- <font color="blue">Fixed</font>: ImageGadget() and ButtonImageGadget() couldn&amp;apos;t be used with AnimateWindow_() <br>
 - <font color="blue">Fixed</font>: ImageGadget() bug when using DisableGadget() <br>
-- <font color="blue">Fixed</font>: LineXY() didn't release memory correctly <br>
+- <font color="blue">Fixed</font>: LineXY() didn&amp;apos;t release memory correctly <br>
 - <font color="blue">Fixed</font>: Line() and LineXY() affected the DrawText() position <br>
 - <font color="blue">Fixed</font>: SortList() could crash with big already sorted lists <br>
 - <font color="blue">Fixed</font>: SetMenuItemState() did change the disable state <br>
-- <font color="blue">Fixed</font>: Editable combobox created with #PB_Any didn't handle TAB correctly <br>
-- <font color="blue">Fixed</font>: OpenFileRequester() fails if the default filename wasn't correct <br>
+- <font color="blue">Fixed</font>: Editable combobox created with #PB_Any didn&amp;apos;t handle TAB correctly <br>
+- <font color="blue">Fixed</font>: OpenFileRequester() fails if the default filename wasn&amp;apos;t correct <br>
 - <font color="blue">Fixed</font>: Compiler bug with string concatenation and procedures <br>
 - <font color="blue">Fixed</font>: Alignment problem in procedure which could makes API call fails in some case <br>
 
@@ -955,21 +955,21 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 
 - <font color="green">Added</font>: SortStructuredArray(), SortList(), SortStructuredList() <br>
 - <font color="green">Added</font>: Conditional directives to LibraryMaker <br>
-- <font color="green">Added</font>: KeyboardMode() (wasn't in the doc) <br>
-- <font color="green">Added</font>: Optional 'Color' parameter for ColorRequester() and FontRequester() <br>
+- <font color="green">Added</font>: KeyboardMode() (wasn&amp;apos;t in the doc) <br>
+- <font color="green">Added</font>: Optional &amp;apos;Color&amp;apos; parameter for ColorRequester() and FontRequester() <br>
 - <font color="green">Added</font>: SetGadgetText() can now be used on an editable ComboBoxGadget() <br>
 - <font color="green">Added</font>: #PB_Default support to ClipSprite() to remove the clipping <br>
 - <font color="green">Added</font>: #PB_FileSystem_Force to CopyDirectory() <br>
 - <font color="green">Added</font>: #PB_OS_Windows_Server_2003 support to OSVersion() <br>
 - <font color="green">Added</font>: Base64Decoder(), GetGadgetFont() <br>
-- <font color="green">Added</font>: ResizeImage() now support a 'Mode' parameter to choose the resize algorithm <br>
+- <font color="green">Added</font>: ResizeImage() now support a &amp;apos;Mode&amp;apos; parameter to choose the resize algorithm <br>
 - <font color="green">Added</font>: Event when a splitter is moved or resized so the children can be agenced <br>
 - <font color="green">Added</font>: Real-time debugger check for Plot(x,y,Color) with ScreenOutput() and SpriteOutput() <br>
 - <font color="green">Added</font>: Debugger check to DirectoryEntrySize/Name/Attributes() <br>
 - <font color="green">Added</font>: IDE enhancements by Tinman <br>
 <br>
 - <font color="#006666">Updated</font>: Interface Importer and DirectX9 interfaces in residents (thanks to Traumatic !) <br>
-- <font color="#006666">Updated</font>: Uses of Kale's icons for the IDE <br>
+- <font color="#006666">Updated</font>: Uses of Kale&amp;apos;s icons for the IDE <br>
 - <font color="#006666">Updated</font>: French documentation spellchecked and reworked by trasfract <br>
 <br>
 - <font color="#924B72">Optimized</font>: Debugger mode is smaller and allow big structured variables <br>
@@ -980,32 +980,32 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 - <font color="orange">Changed</font>: OffsetOf() syntax, to fit with the SizeOf() one (more consistent) <br>
 <br>
 - <font color="blue">Fixed</font>: A bug in ImageGadget() with XP skin activated and 32-bit bitmaps <br>
-- <font color="blue">Fixed</font>: ExplorerListGadget() didn't displayed .ico and .lnk files correctly <br>
+- <font color="blue">Fixed</font>: ExplorerListGadget() didn&amp;apos;t displayed .ico and .lnk files correctly <br>
 - <font color="blue">Fixed</font>: ButtonImageGadget() was loosing its picture in rare case with XP skins <br>
-- <font color="blue">Fixed</font>: No more 'ding' (windows sound) on click in fullscreen when ExamineMouse() wasn't used <br>
+- <font color="blue">Fixed</font>: No more &amp;apos;ding&amp;apos; (windows sound) on click in fullscreen when ExamineMouse() wasn&amp;apos;t used <br>
 - <font color="blue">Fixed</font>: When using ALT+TAB with a fullscreen application, the icon is correctly displayed <br>
 - <font color="blue">Fixed</font>: Sprites are now correctly restored when switching back from multitask <br>
 - <font color="blue">Fixed</font>: CopyDirectory() modified the input string in some case <br>
 - <font color="blue">Fixed</font>: ListIndex() was broken in some rare cases <br>
-- <font color="blue">Fixed</font>: RemoveString() and CRC32FingerPrint() couldn't be used in expressions <br>
+- <font color="blue">Fixed</font>: RemoveString() and CRC32FingerPrint() couldn&amp;apos;t be used in expressions <br>
 - <font color="blue">Fixed</font>: SetGadgetItemText() was broken for ListView() gadget <br>
 - <font color="blue">Fixed</font>: ExamineDirectory() with an uninitialized string variable <br>
 - <font color="blue">Fixed</font>: CalendarGadget() bug when multiple calendars were initialized on the same window <br>
 - <font color="blue">Fixed</font>: RSet() returned wrong result in some rare cases <br>
 - <font color="blue">Fixed</font>: CreateFile() failed on hidden files <br>
-- <font color="blue">Fixed</font>: ZeroMemory_(), FillMemory_(), MoveMemory_() and CopyMemory_() wasn't recognized <br>
+- <font color="blue">Fixed</font>: ZeroMemory_(), FillMemory_(), MoveMemory_() and CopyMemory_() wasn&amp;apos;t recognized <br>
 - <font color="blue">Fixed</font>: #PB_Event_MoveWindow is now correctly recognized <br>
-- <font color="blue">Fixed</font>: #PB_EventType_LostFocus wasn't sent if 2 stringgadgets were side by side. <br>
-- <font color="blue">Fixed</font>: Gadget's tooltips wasn't correctly displayed on NT4 when the window was always on top <br>
-- <font color="blue">Fixed</font>: OGG Plug-in wasn't working anymore and sometimes songs were cut. It's also faster to decode. <br>
-- <font color="blue">Fixed</font>: ResizeImage() doesn't change the image anymore if the same dimensions are used. <br>
-- <font color="blue">Fixed</font>: TAB in an EditorGadget() doesn't give the focus to others gadgets anymore but insert a Tab <br>
-- <font color="blue">Fixed</font>: LCase() didn't handled the '� german character correctly <br>
-- <font color="blue">Fixed</font>: SetGadgetState() wasn't working correctly for OptionGadget() <br>
-- <font color="blue">Fixed</font>: Debugger's code listing window dimensions are now saved like other windows <br>
+- <font color="blue">Fixed</font>: #PB_EventType_LostFocus wasn&amp;apos;t sent if 2 stringgadgets were side by side. <br>
+- <font color="blue">Fixed</font>: Gadget&amp;apos;s tooltips wasn&amp;apos;t correctly displayed on NT4 when the window was always on top <br>
+- <font color="blue">Fixed</font>: OGG Plug-in wasn&amp;apos;t working anymore and sometimes songs were cut. It&amp;apos;s also faster to decode. <br>
+- <font color="blue">Fixed</font>: ResizeImage() doesn&amp;apos;t change the image anymore if the same dimensions are used. <br>
+- <font color="blue">Fixed</font>: TAB in an EditorGadget() doesn&amp;apos;t give the focus to others gadgets anymore but insert a Tab <br>
+- <font color="blue">Fixed</font>: LCase() didn&amp;apos;t handled the &amp;apos;�&amp;apos; german character correctly <br>
+- <font color="blue">Fixed</font>: SetGadgetState() wasn&amp;apos;t working correctly for OptionGadget() <br>
+- <font color="blue">Fixed</font>: Debugger&amp;apos;s code listing window dimensions are now saved like other windows <br>
 - <font color="blue">Fixed</font>: EditorGadget() while using AddGadgetItem() with blank strings and -1 position <br>
 - <font color="blue">Fixed</font>: SortArray() could crash on big already sorted arrays and is now thread safe <br>
-- <font color="blue">Fixed</font>: ReceiveNetworkFile() didn't handle long filename correctly <br>
+- <font color="blue">Fixed</font>: ReceiveNetworkFile() didn&amp;apos;t handle long filename correctly <br>
 - <font color="blue">Fixed</font>: Display issues with ButtonImageGadget() and toggle mode (with API) <br>
 - <font color="blue">Fixed</font>: SpriteWidth() and SpriteHeight() returned wrong values when ClipSprite() was used <br>
 - <font color="blue">Fixed</font>: MessageRequester() over a console window sent the console window to the back <br>
@@ -1014,13 +1014,13 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 - <font color="blue">Fixed</font>: Refresh problem with FrameGadget() and #PB_Frame_Single/Double flags <br>
 - <font color="blue">Fixed</font>: GDI resource leak in ButtonImageGadget() and ImageGadget() <br>
 - <font color="blue">Fixed</font>: RotateSprite3D was using a wrong angle <br>
-- <font color="blue">Fixed</font>: DisableMenuItem() didn't work with #PB_Any <br>
-- <font color="blue">Fixed</font>: GadgetWidth() didn't work correctly for SpinGadget() <br>
+- <font color="blue">Fixed</font>: DisableMenuItem() didn&amp;apos;t work with #PB_Any <br>
+- <font color="blue">Fixed</font>: GadgetWidth() didn&amp;apos;t work correctly for SpinGadget() <br>
 - <font color="blue">Fixed</font>: Date() returned wrong result for the 1970,1,1,0,0,0 case <br>
 - <font color="blue">Fixed</font>: CallFunctionFast() accepted only 17 parameters instead of 20 <br>
 - <font color="blue">Fixed</font>: OpenWindowedScreen() with AutoStretch mode missed some pixels <br>
 - <font color="blue">Fixed</font>: Some refresh bug with PanelGadget() <br>
-- <font color="blue">Fixed</font>: Transparent color error with 32-bit screen and 'texture' sprites <br>
+- <font color="blue">Fixed</font>: Transparent color error with 32-bit screen and &amp;apos;texture&amp;apos; sprites <br>
 - <font color="blue">Fixed</font>: Some small bugs in the IDE <br>
 - <font color="blue">Fixed</font>: Several compiler bugs (string concatenation, interfaces in procedures) <br>
 
@@ -1034,37 +1034,37 @@ last stable release is available: <a href="../mainguide/changes.html">click here
 
 - <font color="green">Added</font>: CalendarGadget() and DateGadget(), thanks to Fr34k ! <br>
 - <font color="green">Added</font>: LibraryID(), SwapElements() <br>
-- <font color="green">Added</font>: SaveSprite() now have an optional 'Flags' parameter and can now save 8-bit sprite/screen <br>
+- <font color="green">Added</font>: SaveSprite() now have an optional &amp;apos;Flags&amp;apos; parameter and can now save 8-bit sprite/screen <br>
 - <font color="green">Added</font>: Double-click on Windows background now generate an event (Thanks to Rings) <br>
 <br>
-- <font color="#924B72">Optimized</font>: ListCount() and ListIndex() are now very fast (it doesn't iterate each element of the list anymore). <br>
+- <font color="#924B72">Optimized</font>: ListCount() and ListIndex() are now very fast (it doesn&amp;apos;t iterate each element of the list anymore). <br>
 <br>
 - <font color="orange">Changed</font>: DeleteElement() now always goes back to the previous element (can be outside the list if <br>
 it was the first element), to be fully compatible with ForEach. An optional flag has been added  <br>
 to preserve previous behavior. <br>
-- <font color="orange">Changed</font>: the application current directory isn't anymore touched by any PureBasic command to conform <br>
+- <font color="orange">Changed</font>: the application current directory isn&amp;apos;t anymore touched by any PureBasic command to conform <br>
 to Windows rules. <br>
 <br>
-- <font color="blue">Fixed</font>: CloseWindow() bug when using the 'ParentWindow' OpenWindow() parameter <br>
-- <font color="blue">Fixed</font>: IsSound() wasn't available in NT4 mode <br>
+- <font color="blue">Fixed</font>: CloseWindow() bug when using the &amp;apos;ParentWindow&amp;apos; OpenWindow() parameter <br>
+- <font color="blue">Fixed</font>: IsSound() wasn&amp;apos;t available in NT4 mode <br>
 - <font color="blue">Fixed</font>: AddDate() could fail depending of the computer time zone <br>
 - <font color="blue">Fixed</font>: Memory leak with linkedlists, arrays and local variables when using a structure which contained strings <br>
-- <font color="blue">Fixed</font>: SaveSprite() default value for JPEG saving is now '7'. <br>
+- <font color="blue">Fixed</font>: SaveSprite() default value for JPEG saving is now &amp;apos;7&amp;apos;. <br>
 - <font color="blue">Fixed</font>: DisplayPalette() failed on XP systems (1st and last color remained unchanged) <br>
 - <font color="blue">Fixed</font>: ImageGadget() now supports ToolTips and bitmap/icon live switching <br>
 - <font color="blue">Fixed</font>: ImageButtonGadget() now supports skinning and bitmap/icon live switching <br>
 - <font color="blue">Fixed</font>: SetGadgetItemText() for ListViewGadget() destroyed the item user data <br>
 - <font color="blue">Fixed</font>: CopyImage() failed on WinNT4 under some conditions <br>
 - <font color="blue">Fixed</font>: A memory leak in SendNetworkFile(). Now, it returns 1 on success or 0 on failure. <br>
-- <font color="blue">Fixed</font>: StatusBarText() didn't refresh the statusbar with the 'Borderless' flag <br>
+- <font color="blue">Fixed</font>: StatusBarText() didn&amp;apos;t refresh the statusbar with the &amp;apos;Borderless&amp;apos; flag <br>
 - <font color="blue">Fixed</font>: CatchImage() with #PB_any <br>
 - <font color="blue">Fixed</font>: the PNG decoder nows handle corrupted PNG safely <br>
 - <font color="blue">Fixed</font>: the JPEG encoder with quality value inferior to 3 could lead to a crash <br>
 - <font color="blue">Fixed</font>: a little TreeGadget() bug when checkboxes were activated <br>
 - <font color="blue">Fixed</font>: Packer compression routine was sometimes hanging on some files <br>
-- <font color="blue">Fixed</font>: OnError library wasn't useable in a DLL (thanks to Rings) <br>
+- <font color="blue">Fixed</font>: OnError library wasn&amp;apos;t useable in a DLL (thanks to Rings) <br>
 - <font color="blue">Fixed</font>: Literal string concatenation were wrong in some cases <br>
-- <font color="blue">Fixed</font>: The compiler didn't returned a non zero exit code if an error occurred <br>
+- <font color="blue">Fixed</font>: The compiler didn&amp;apos;t returned a non zero exit code if an error occurred <br>
 - <font color="blue">Fixed</font>: Several compiler bugs <br>
 
 </blockquote>
@@ -1078,7 +1078,7 @@ to Windows rules. <br>
 - <font color="green">Added</font>: IsDatabase(), IsFile(), IsFont(), IsDirectory(), IsGadget(), IsImage(), IsLibrary(), IsMenu(), IsModule(), <br>
 IsMovie(), IsPalette(), IsSprite(), IsSprite3D(), IsStatusBar(), IsSysTrayIcon(), IsToolBar(), IsWindow() <br>
 - <font color="green">Added</font>: Manifest file (for XP skins) is now included in the exe <br>
-- <font color="green">Added</font>: 'Main source' support in the IDE for multifile projects <br>
+- <font color="green">Added</font>: &amp;apos;Main source&amp;apos; support in the IDE for multifile projects <br>
 - <font color="green">Added</font>: Debugger check for empty list element access <br>
 <br>
 - <font color="orange">Changed</font>: WindowMouseX() and WindowMouseY() now returns the coordinates in the window client area (DesktopMouseX() now replaces the old behavior). <br>
@@ -1109,19 +1109,19 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 - <font color="green">Added</font>: VerticalBlank support for FlipBuffers() (and works in windowedmode too) <br>
 - <font color="green">Added</font>: Autosize for StatusBar and ToolBar (no more callback needed) <br>
 - <font color="green">Added</font>: New size handler by Fr34k which allow real-time window sizing (with #PB_Event_SizeWindow) without callback ! <br>
-- <font color="green">Added</font>: New 'z' optional parameter to TransformSprite3D() <br>
+- <font color="green">Added</font>: New &amp;apos;z&amp;apos; optional parameter to TransformSprite3D() <br>
 - <font color="green">Added</font>: Several new flags for SplitterGadget() for better flexibility <br>
 - <font color="green">Added</font>: SetGadgetAttribute() support for ScrollAreaGadget() to resize the inner area. <br>
 - <font color="green">Added</font>: Joystick and Module support for NT4 compatibility mode <br>
 - <font color="green">Added</font>: Hexadecimal display, clear-copy-save debug output and window position saving to the debugger <br>
 - <font color="green">Added</font>: Support for different depth icons for the default program icon <br>
 - <font color="green">Added</font>: IDE features: Interface viewer, new MS SDK support, find in files, line numbering <br>
-- <font color="green">Added</font>: 'Static' keyword for local variables (in procedures) which need to be persistent <br>
+- <font color="green">Added</font>: &amp;apos;Static&amp;apos; keyword for local variables (in procedures) which need to be persistent <br>
 - <font color="green">Added</font>: Last FAsm (assembler) version, which has some speed improvement and fix a bug on big sources <br>
 - <font color="green">Added</font>: QuickHelp support in the PureBasic IDE for most of the API functions ! <br>
 <br>
 - <font color="orange">Changed</font>: no more #Memory ID and flag for AllocateMemory() <br>
-- <font color="orange">Changed</font>: CDAudioName() doesn't need an ID anymore, as stated in the docs. <br>
+- <font color="orange">Changed</font>: CDAudioName() doesn&amp;apos;t need an ID anymore, as stated in the docs. <br>
 <br>
 - <font color="#924B72">Optimist</font>: split CDAudio, Database, File, Network, StatusBar and Systray libraries <br>
 <br>
@@ -1132,7 +1132,7 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 - <font color="blue">Fixed</font>: Bug in CreateSprite3D(), the width and height was 1 pixel wider <br>
 - <font color="blue">Fixed</font>: Bug with SpritePixelCollision if the same sprite was used for both collisions. <br>
 - <font color="blue">Fixed</font>: Bug in the debugger with win98 (application window was in background) <br>
-- <font color="blue">Fixed</font>: OpenWindowedScreen() didn't take the menu height in count (if any) <br>
+- <font color="blue">Fixed</font>: OpenWindowedScreen() didn&amp;apos;t take the menu height in count (if any) <br>
 - <font color="blue">Fixed</font>: IsFilename() missed some checks <br>
 - <font color="blue">Fixed</font>: Several expression parser bugs in the compiler <br>
 - <font color="blue">Fixed</font>: SizeOf() when used with extended structures <br>
@@ -1150,7 +1150,7 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 
 - <font color="green">Added</font>: DatabaseUpdate(), DatabaseError() <br>
 - <font color="green">Added</font>: Play/Stop/Resume/PauseMovie() support for sprite rendered movies <br>
-- <font color="green">Added</font>: 'Extends' support for 'Structure' <br>
+- <font color="green">Added</font>: &amp;apos;Extends&amp;apos; support for &amp;apos;Structure&amp;apos; <br>
 - <font color="green">Added</font>: Icon support and live image resize for DrawImage() <br>
 - <font color="green">Added</font>: 2, 16 and 256 colors BMP support for Catch/LoadSprite() <br>
 - <font color="green">Added</font>: #PB_Default support for DrawingFont() <br>
@@ -1161,18 +1161,18 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 - <font color="#924B72">Optimized</font>: ExplorerGadgets are now 5x faster for directories scanning <br>
 <br>
 - <font color="orange">Changed</font>: Labels are no more case-sensitive <br>
-- <font color="orange">Changed</font>: Default quality for SaveImage() and JPEG plug-in is now '7' <br>
-- <font color="orange">Changed</font>: InitModule() and InitPalette() doesn't need the maximum parameter anymore <br>
+- <font color="orange">Changed</font>: Default quality for SaveImage() and JPEG plug-in is now &amp;apos;7&amp;apos; <br>
+- <font color="orange">Changed</font>: InitModule() and InitPalette() doesn&amp;apos;t need the maximum parameter anymore <br>
 - <font color="orange">Changed</font>: PlayMovie() behavior has changed for rendered movies <br>
 <br>
 - <font color="blue">Fixed</font>: A memory leak in Sprite rendered movies <br>
 - <font color="blue">Fixed</font>: Requesters commands could lock other applications if no window were opened <br>
 - <font color="blue">Fixed</font>: Some interfaces definitions was wrong in the Residents <br>
 - <font color="blue">Fixed</font>: String constants with multiple constants items <br>
-- <font color="blue">Fixed</font>: KeyboardReleased(#PB_Key_All) wasn't working <br>
+- <font color="blue">Fixed</font>: KeyboardReleased(#PB_Key_All) wasn&amp;apos;t working <br>
 - <font color="blue">Fixed</font>: Compiler bug with Interface in procedure and with string returns <br>
 - <font color="blue">Fixed</font>: ProcedureDLL bug when a string return type was specified <br>
-- <font color="blue">Fixed</font>: CopySprite() didn't work with Alpha-Sprites <br>
+- <font color="blue">Fixed</font>: CopySprite() didn&amp;apos;t work with Alpha-Sprites <br>
 - <font color="blue">Fixed</font>: Bug in the compiler optimizer with bytes and word in some very rare cases <br>
 - <font color="blue">Fixed</font>: JPEG and TIFF decoder bug in rare situation <br>
 - <font color="blue">Fixed</font>: Small EditorGadget() and SpinGadget() bugs <br>
@@ -1186,7 +1186,7 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 
 - <font color="green">Added</font>: ExplorerComboBoxGadget() <br>
 - <font color="green">Added</font>: CameraProjection(), CameraBackColor() and CameraRange() <br>
-- <font color="green">Added</font>: The modulo operand: '%' <br>
+- <font color="green">Added</font>: The modulo operand: &amp;apos;%&amp;apos; <br>
 - <font color="green">Added</font>: ForEach command to iterate linkedlists quickly <br>
 - <font color="green">Added</font>: Interface/EndInterface to support object function call ! Yes, COM and DX objects are now accessible natively in PureBasic... <br>
 - <font color="green">Added</font>: Big residents files with all Windows/DirectX interfaces ready to use ! <br>
@@ -1194,19 +1194,19 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 - <font color="green">Added</font>: Enumeration/EndEnumeration to quickly declare a lot of sequential constants <br>
 - <font color="green">Added</font>: OffsetOf() to get the offset of a structure or interface field <br>
 - <font color="green">Added</font>: SizeOf() now supports variables and Interfaces  <br>
-- <font color="green">Added</font>: Interface, Float and String constants support to the 'Resident' file format <br>
+- <font color="green">Added</font>: Interface, Float and String constants support to the &amp;apos;Resident&amp;apos; file format <br>
 - <font color="green">Added</font>: Quality support for SaveImage() and the JPEG encoder <br>
-- <font color="green">Added</font>: MessageRequester() 'Flags' is now an optional parameter <br>
+- <font color="green">Added</font>: MessageRequester() &amp;apos;Flags&amp;apos; is now an optional parameter <br>
 - <font color="green">Added</font>: The Editor syntax coloring and structure viewer have been greatly enhanced <br>
 <br>
-- <font color="#924B72">Optimized</font>: Removed many OGRE's dependencies resulting in a smaller Engine3D.DLL <br>
+- <font color="#924B72">Optimized</font>: Removed many OGRE&amp;apos;s dependencies resulting in a smaller Engine3D.DLL <br>
 <br>
 - <font color="orange">Changed</font>: Constants are back real constants now (use Enumeration to have dynamic constants) <br>
 <br>
 - <font color="blue">Fixed</font>: ASM registers display in the Debugger <br>
 - <font color="blue">Fixed</font>: IncludePath problems with IncludeBinary <br>
-- <font color="blue">Fixed</font>: Couldn't use TAB inside an editable ComboBoxGadget() <br>
-- <font color="blue">Fixed</font>: DeleteDirectory() failed with a read-only directory in 'Force' mode <br>
+- <font color="blue">Fixed</font>: Couldn&amp;apos;t use TAB inside an editable ComboBoxGadget() <br>
+- <font color="blue">Fixed</font>: DeleteDirectory() failed with a read-only directory in &amp;apos;Force&amp;apos; mode <br>
 - <font color="blue">Fixed</font>: TGA decoder bug for Top/Down and RLE pictures <br>
 - <font color="blue">Fixed</font>: Possible lock in the AddPackFile() and PackMemory() routines <br>
 - <font color="blue">Fixed</font>: the structure size when the structure was very big (over 32000 bytes) <br>
@@ -1215,11 +1215,11 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 - <font color="blue">Fixed</font>: Line() and LineXY() was not drawing the last point <br>
 - <font color="blue">Fixed</font>: debugger checks: InitEngine3D() <br>
 - <font color="blue">Fixed</font>: A bug in TextLength() when an empty string was used <br>
-- <font color="blue">Fixed</font>: ProcedureReturn bug when used in 'Select String$' expression <br>
+- <font color="blue">Fixed</font>: ProcedureReturn bug when used in &amp;apos;Select String$&amp;apos; expression <br>
 - <font color="blue">Fixed</font>: Sounds were limited to 50 when debugger was activated <br>
-- <font color="blue">Fixed</font>: ClipSprite() wasn't supported by DisplayAlphaSprite(), DisplayShowSprite(), DisplaySolidSprite() and DisplayTranslucentSprite() <br>
-- <font color="blue">Fixed</font>: A reserved keyword like 'Data' couldn't be used in a Structure <br>
-- <font color="blue">Fixed</font>: CreatePack(), SaveImage() and SaveSprite() didn't work with very long filename <br>
+- <font color="blue">Fixed</font>: ClipSprite() wasn&amp;apos;t supported by DisplayAlphaSprite(), DisplayShowSprite(), DisplaySolidSprite() and DisplayTranslucentSprite() <br>
+- <font color="blue">Fixed</font>: A reserved keyword like &amp;apos;Data&amp;apos; couldn&amp;apos;t be used in a Structure <br>
+- <font color="blue">Fixed</font>: CreatePack(), SaveImage() and SaveSprite() didn&amp;apos;t work with very long filename <br>
 - <font color="blue">Fixed</font>: Inkey() was halting the program flow <br>
 - <font color="blue">Fixed</font>: FileSize() returned wrong value on Win9x for root directories <br>
 - <font color="blue">Fixed</font>: An editor bug which caused panel tab inversion <br>
@@ -1231,10 +1231,10 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 
 
 
-- <font color="orange">Changed</font>: SelectedFilePattern() and Open/SaveFileRequester pattern index is now '0' based instead of '1' based. Warning ! <br>
-- <font color="orange">Changed</font>: ListIndex() is now '0' based instead of '1' based. Warning ! <br>
+- <font color="orange">Changed</font>: SelectedFilePattern() and Open/SaveFileRequester pattern index is now &amp;apos;0&amp;apos; based instead of &amp;apos;1&amp;apos; based. Warning ! <br>
+- <font color="orange">Changed</font>: ListIndex() is now &amp;apos;0&amp;apos; based instead of &amp;apos;1&amp;apos; based. Warning ! <br>
 <br>
-- <font color="#006666">Updated</font>: IDE: find/replace updated, an '*' now identify a modified file <br>
+- <font color="#006666">Updated</font>: IDE: find/replace updated, an &amp;apos;*&amp;apos; now identify a modified file <br>
 - <font color="#006666">Updated</font>: Toolbar library has been split and optimized <br>
 - <font color="#006666">Updated</font>: all missing libraries quickhelps (status bar of the editor) <br>
 <br>
@@ -1272,8 +1272,8 @@ Module, Movie, Palette, Sprite, Sprite3D, SysTray, ToolBar, StatusBar and Window
 - <font color="green">Added</font>: PanelGadget() has been fully rewritten and is now XP theme compliant <br>
 - <font color="green">Added</font>: TreeGadget() has been rewritten to support dynamic items (add, remove..)  <br>
 - <font color="green">Added</font>: AddGadgetItem() now support picture for the PanelGadget() <br>
-- <font color="green">Added</font>: 'ParentID' optional parameter to OpenWindow() <br>
-- <font color="green">Added</font>: CDecl support for PureFunctions and procedures (Added 'ProcedureCDLL' and 'DeclareCDLL' keyword) <br>
+- <font color="green">Added</font>: &amp;apos;ParentID&amp;apos; optional parameter to OpenWindow() <br>
+- <font color="green">Added</font>: CDecl support for PureFunctions and procedures (Added &amp;apos;ProcedureCDLL&amp;apos; and &amp;apos;DeclareCDLL&amp;apos; keyword) <br>
 - <font color="green">Added</font>: End [ExitCode] optional parameter <br>
 - <font color="green">Added</font>: More precise error-message for Assembly and Linker errors <br>
 - <font color="green">Added</font>: /LINENUMBERING compiler switch <br>
@@ -1407,8 +1407,8 @@ ASM syntax coloring, Inline ASM help <br>
 - <font color="green">Added</font>: SetGadgetState() now work for ButtonImageGadget() <br>
 <br>
 - <font color="#006666">Updated</font>: CallFunction() and CallFunctionFast(): Floats can be passed directly <br>
-- <font color="#006666">Updated</font>: SetStatusBarText() 'Appearance' parameter is now optional <br>
-- <font color="#006666">Updated</font>: FrameGadget() 'Flags' parameter is now optional <br>
+- <font color="#006666">Updated</font>: SetStatusBarText() &amp;apos;Appearance&amp;apos; parameter is now optional <br>
+- <font color="#006666">Updated</font>: FrameGadget() &amp;apos;Flags&amp;apos; parameter is now optional <br>
 <br>
 - <font color="#924B72">Optimized</font>: CallFunctionFast() (2x faster) <br>
 - <font color="#924B72">Optimized</font>: the code generation: Chr(#Constant) is now considered as a literal string and some speed enhancements <br>
@@ -1436,7 +1436,7 @@ ASM syntax coloring, Inline ASM help <br>
 
 
 
-- <font color="orange">Changed</font>: Structure names aren't case sensitive anymore (could produce difficult bug to look at) <br>
+- <font color="orange">Changed</font>: Structure names aren&amp;apos;t case sensitive anymore (could produce difficult bug to look at) <br>
 <br>
 - <font color="green">Added</font>: Date library: Date(), Year(), Month(), Day(), DayOfWeek(), DayOfYear(), Hour(), Minute(), Second(), FormatDate(), AddDate(), ParseDate() <br>
 - <font color="green">Added</font>: Hostname(), ExamineIPAddresses(), NextIPAddress(), IPString() <br>
@@ -1453,11 +1453,11 @@ ASM syntax coloring, Inline ASM help <br>
 - <font color="#006666">Updated</font>: SetGadgetFont(#PB_Font_Default) now go back to default font <br>
 - <font color="#006666">Updated</font>: OpenWindow() now accepts 2 news flags: #PB_Window_WindowCentered and #PB_Window_ScreenCentered <br>
 - <font color="#006666">Updated</font>: GetGadgetItemText() and SetGadgetItemText() now works for TreeGadget() <br>
-- <font color="#006666">Updated</font>: ReplaceString now have a new 'StartFrom' optional parameter <br>
+- <font color="#006666">Updated</font>: ReplaceString now have a new &amp;apos;StartFrom&amp;apos; optional parameter <br>
 - <font color="#006666">Updated</font>: SetGadgetState() can be used with ImageGadget() to change the current image <br>
-- <font color="#006666">Updated</font>: Added 'Level' flag for PackMemory(), AddPackFile() and AddPackMemory() for faster compression <br>
-- <font color="#006666">Updated</font>: when building a DLL, AttachProcess(), DetachProcess(), AttachThread() and DetachThread() must have an 'Instance' parameter <br>
-- <font color="#006666">Updated</font>: no more '_' when creating a DLL <br>
+- <font color="#006666">Updated</font>: Added &amp;apos;Level&amp;apos; flag for PackMemory(), AddPackFile() and AddPackMemory() for faster compression <br>
+- <font color="#006666">Updated</font>: when building a DLL, AttachProcess(), DetachProcess(), AttachThread() and DetachThread() must have an &amp;apos;Instance&amp;apos; parameter <br>
+- <font color="#006666">Updated</font>: no more &amp;apos;_&amp;apos; when creating a DLL <br>
 <br>
 - <font color="blue">Fixed</font>: Debugger problem in the FileSystem library <br>
 - <font color="blue">Fixed</font>: ReadPreferenceLong() and ReadPreferenceFloat() <br>
@@ -1467,13 +1467,13 @@ ASM syntax coloring, Inline ASM help <br>
 - <font color="blue">Fixed</font>: GetPathPart(), GetFilePart() and GetExtensionPart() <br>
 - <font color="blue">Fixed</font>: SetGadgetText() when used with a ComboBox and an empty string (clear the combobox content) <br>
 - <font color="blue">Fixed</font>: SetClipboardText(), now use the TEXT instead of OEM format. <br>
-- <font color="blue">Fixed</font>: Compiler didn't warn when a Global variable was used in Procedure parameter. <br>
-- <font color="blue">Fixed</font>: Compiler bugs in InlineASM : 'MOV eax, "String"' and 'MOV eax, #CONSTANT' were badly compiled. <br>
+- <font color="blue">Fixed</font>: Compiler didn&amp;apos;t warn when a Global variable was used in Procedure parameter. <br>
+- <font color="blue">Fixed</font>: Compiler bugs in InlineASM : &amp;apos;MOV eax, "String"&amp;apos; and &amp;apos;MOV eax, #CONSTANT&amp;apos; were badly compiled. <br>
 - <font color="blue">Fixed</font>: Compiler bug when using negative float constant <br>
 - <font color="blue">Fixed</font>: Compiler bug when using float operations with API functions <br>
 - <font color="blue">Fixed</font>: Compiler bug when comparing string with numeric (now forbidden) <br>
 - <font color="blue">Fixed</font>: Compiler bug when using INCLUDEBINARY in DataSection <br>
-- <font color="blue">Fixed</font>: Compiler bug when DECLARE and PROCEDURE didn't match (no errors were generated) <br>
+- <font color="blue">Fixed</font>: Compiler bug when DECLARE and PROCEDURE didn&amp;apos;t match (no errors were generated) <br>
 - <font color="blue">Fixed</font>: Compiler bug when DEBUG was used in procedures with strings operations <br>
 <br>
 - Editor <font color="#924B72">enhanced</font> (Multi files, Procedure browser, custom tools and more...) and source code released. Thanks to Danilo ! <br>
@@ -1491,17 +1491,17 @@ ASM syntax coloring, Inline ASM help <br>
 - <font color="green">Added</font>: French help (fully translated) <br>
 <br>
 - <font color="#006666">Updated</font>: SortArray() now works with float arrays <br>
-- <font color="#006666">Updated</font>: LoadSprite(), GrabSprite(), CopySprite(), CatchSprite(), LoadJPEGSprite(), CatchJPEGSprite() have now an optional 'Mode' parameter <br>
+- <font color="#006666">Updated</font>: LoadSprite(), GrabSprite(), CopySprite(), CatchSprite(), LoadJPEGSprite(), CatchJPEGSprite() have now an optional &amp;apos;Mode&amp;apos; parameter <br>
 - <font color="#006666">Updated</font>: GetFilePart(), GetPathPart() and GetExtensionPart() now remove the surrounding quote (") if any. <br>
 - <font color="#006666">Updated</font>: SetGadgetItemState() and GetGadgetItemState() can now set/get the checkboxes state of a ListIconGadget() item <br>
 <br>
 - <font color="blue">Fixed</font>: SetClipboardText(): failed in some cases <br>
 - <font color="blue">Fixed</font>: SpritePixelCollision(): failed if sprites were of different sizes <br>
-- <font color="blue">Fixed</font>: LoadJPEGSprite was ignoring the 'Mode' parameter (not good for 3D sprites) <br>
+- <font color="blue">Fixed</font>: LoadJPEGSprite was ignoring the &amp;apos;Mode&amp;apos; parameter (not good for 3D sprites) <br>
 - <font color="blue">Fixed</font>: Bug in AddGadgetItem() with ListIconGadget() <br>
 - <font color="blue">Fixed</font>: PokeF() was missing <br>
 - <font color="blue">Fixed</font>: MovieAudio(): wrong volume ramp (now based on decibels..) <br>
-- <font color="blue">Fixed</font>: ReleaseMouse() wasn't recognized <br>
+- <font color="blue">Fixed</font>: ReleaseMouse() wasn&amp;apos;t recognized <br>
 - <font color="blue">Fixed</font>: 2DDrawing bug (again...) <br>
 - <font color="blue">Fixed</font>: LoadSprite() failed with 16-bit and 32-bit BMP. <br>
 - <font color="blue">Fixed</font>: GetGadgetText() when used with an editable ComboBoxGadget() <br>
@@ -1515,7 +1515,7 @@ ASM syntax coloring, Inline ASM help <br>
 - <font color="blue">Fixed</font>: ExamineMouse() returned always 0 <br>
 - <font color="blue">Fixed</font>: PathRequester crashed with uninitialized DefaultPath <br>
 - <font color="blue">Fixed</font>: InitSprite3D() crashed when alone <br>
-- <font color="blue">Fixed</font>: Editor: ZoomSprite3D() didn't highlight <br>
+- <font color="blue">Fixed</font>: Editor: ZoomSprite3D() didn&amp;apos;t highlight <br>
 
 </blockquote>
 <p><b>9th June 2002 : Version 3.20</b></p><blockquote>
@@ -1540,7 +1540,7 @@ ASM syntax coloring, Inline ASM help <br>
 - <font color="#006666">Updated</font>: KeyboardPushed() can now have #PB_Key_All as parameter for any pushed keys <br>
 - <font color="#006666">Updated</font>: FileSize() now returns -2 if the file is a directory <br>
 - <font color="#006666">Updated</font>: WindowID() can have an optional #Window parameter <br>
-- <font color="#006666">Updated</font>: All gadgets commands (added a 'Flags' optional parameter) which allows a full control over their look ! (See the each Gadget doc for more information) <br>
+- <font color="#006666">Updated</font>: All gadgets commands (added a &amp;apos;Flags&amp;apos; optional parameter) which allows a full control over their look ! (See the each Gadget doc for more information) <br>
 - <font color="#006666">Updated</font>: Plot(), Line(), Box(), Circle(), Ellipse() have now an optional color parameter. <br>
 - <font color="#006666">Updated</font>: Debugger has some bug fixed. When a program stop, or the debugger quit all is cleaned correctly. 
 -          This allows fullscreen game debugging easier as the screen close down before displaying the error. <br>
@@ -1548,9 +1548,9 @@ ASM syntax coloring, Inline ASM help <br>
 <br>
 - <font color="orange">Changed</font>: Renamed StripLead() and StripTrail() to RTrim() and LTrim() for other BASIC compatibility <br>
 - <font color="orange">Changed</font>: NetworkClientEvent(), CloseNetworkConnection() <br>
-- <font color="orange">Changed</font>: CreateToolBar(): added 'WindowID' parameter <br>
-- <font color="orange">Changed</font>: CreateMenu(): added 'WindowID' parameter <br>
-- <font color="orange">Changed</font>: NetworkClientEvent() and NetworkServerEvent(): no more 'String' event: could be a possible exploit. <br>
+- <font color="orange">Changed</font>: CreateToolBar(): added &amp;apos;WindowID&amp;apos; parameter <br>
+- <font color="orange">Changed</font>: CreateMenu(): added &amp;apos;WindowID&amp;apos; parameter <br>
+- <font color="orange">Changed</font>: NetworkClientEvent() and NetworkServerEvent(): no more &amp;apos;String&amp;apos; event: could be a possible exploit. <br>
 - <font color="orange">Changed</font>: OpenWindowedScreen() x,y parameters take in count the window top and left border width. <br>
 - <font color="orange">Changed</font>: ResizeWindow(), WindowWidth() and WindowHeight() now use inner area width/height to work with new OpenWindow() and skin support <br>
 <br>
@@ -1561,14 +1561,14 @@ ASM syntax coloring, Inline ASM help <br>
 - <font color="blue">Fixed</font>: FileSize() <br>
 - <font color="blue">Fixed</font>: StopDrawing(), display under win9x got corrupt after lot of calls <br>
 - <font color="blue">Fixed</font>: Debugger problems. <br>
-- <font color="blue">Fixed</font>: AddGadgetItem() with ListIconGadget() (-1 position wasn't working) <br>
+- <font color="blue">Fixed</font>: AddGadgetItem() with ListIconGadget() (-1 position wasn&amp;apos;t working) <br>
 - <font color="blue">Fixed</font>: SpritePixelCollision() with clipped sprites <br>
 - <font color="blue">Fixed</font>: Possible bug in Random() <br>
 - <font color="blue">Fixed</font>: SpritePixelCollision(), only (0,0,0) transparent color worked <br>
-- <font color="blue">Fixed</font>: InitSprite(), InitSound(), InitPalette(), InitKeyboard() don't display system request anymore if DirectX 7+ isn't found. <br>
+- <font color="blue">Fixed</font>: InitSprite(), InitSound(), InitPalette(), InitKeyboard() don&amp;apos;t display system request anymore if DirectX 7+ isn&amp;apos;t found. <br>
 - <font color="blue">Fixed</font>: RemoveGadgetItem() and ClearGadgetItemList when used with PanelGadget() <br>
 - <font color="blue">Fixed</font>: PathRequester() default path on Win9x systems <br>
-- <font color="blue">Fixed</font>: @linkedlist() with '.s' type now return correct list element pointer (instead of string pointer) <br>
+- <font color="blue">Fixed</font>: @linkedlist() with &amp;apos;.s&amp;apos; type now return correct list element pointer (instead of string pointer) <br>
 - <font color="blue">Fixed</font>: ReadPreferenceString() was faulty in some cases <br>
 - <font color="blue">Fixed</font>: Documentation: SaveImage(), ScreenID(), SelectedFontStyle() and SelectedFontColor() were missing <br>
 
@@ -1581,7 +1581,7 @@ ASM syntax coloring, Inline ASM help <br>
 
 - <font color="green">Added</font>: Preference library: OpenPreferences(), CreatePreferences(), ReadPreferenceLong/Float/String(), WritePreferenceLong/Float/String() 
 PreferenceComment(), PreferenceGroup() <br>
-- <font color="green">Added</font>: Windows XP skinning support (See 'Compiler Options' window) <br>
+- <font color="green">Added</font>: Windows XP skinning support (See &amp;apos;Compiler Options&amp;apos; window) <br>
 - <font color="green">Added</font>: GadgetX(), GadgetY(), GadgetWidth(), GadgetHeight(), GetGadgetItemState(), SetGadgetItemState(), GetGadgetItemText(), SetGadgetItemText(), CountGadgetItems(), TrackBarGadget(), IPAddressGadget() <br>
 - <font color="green">Added</font>: HideWindow(), RandomSeed(), MakeIPAddress(), IPAddressField() <br>
 - <font color="green">Added</font>: MouseWheel(), CatchSprite(), SaveSprite() <br>
@@ -1589,13 +1589,13 @@ PreferenceComment(), PreferenceGroup() <br>
 - <font color="green">Added</font>: EventType(): Return/Change/Focus can be detected in StringGadget(), ComboBox() and more <br>
 - <font color="green">Added</font>: CatchImage(), CreatePack(), ClosePack(), NextPackFile(), AddPackFile(), AddPackMemory(), PackFileSize(), OpenPack() <br>
 - <font color="green">Added</font>: DirectoryEntrySize(), DirectoryEntryAttributes() <br>
-- <font color="green">Added</font>: Full compatibility with 'WindowBlinds' on WinXP which seems to broke the event handler ! <br>
+- <font color="green">Added</font>: Full compatibility with &amp;apos;WindowBlinds&amp;apos; on WinXP which seems to broke the event handler ! <br>
 <br>
 - <font color="#924B72">Optimized</font>: PureLibraries (Only used commands included) : Image, Misc2, GadgetExtension, Requester, Sprite3D, Memory, Packer <br>
 <br>
-- <font color="#006666">Updated</font>: CompareMemoryString(): Added an optional 'Length' parameter. <br>
+- <font color="#006666">Updated</font>: CompareMemoryString(): Added an optional &amp;apos;Length&amp;apos; parameter. <br>
 - <font color="#006666">Updated</font>: DisplayPopupMenu(): (x,y) are now optional <br>
-- <font color="#006666">Updated</font>: ResizeGadget(): passing '-1' to one of the arguments make it ignored (very useful for resizable GUI) <br>
+- <font color="#006666">Updated</font>: ResizeGadget(): passing &amp;apos;-1&amp;apos; to one of the arguments make it ignored (very useful for resizable GUI) <br>
 - <font color="#006666">Updated</font>: GetGadgetText() and TextGadgetText() now works with TreeGadget() and ListIconGadget() <br>
 - <font color="#006666">Updated</font>: AddGadgetItem() now have an optional Image parameter. <br>
 - <font color="#006666">Updated</font>: OpenWindow(): now add the border size automatically, to fix skinning problem under XP <br>
@@ -1603,7 +1603,7 @@ PreferenceComment(), PreferenceGroup() <br>
 <br>
 - <font color="red">Removed</font>: InitGadget(): no more needed. <br>
 - <font color="red">Removed</font>: DoubleClick() and EventMouseButtons(): Use EventType() instead <br>
-- <font color="red">Removed</font>: OpenDefaultConsole(). Now OpenConsole() detects automatically if the program is in 'Console' or 'Windows' format. <br>
+- <font color="red">Removed</font>: OpenDefaultConsole(). Now OpenConsole() detects automatically if the program is in &amp;apos;Console&amp;apos; or &amp;apos;Windows&amp;apos; format. <br>
 - <font color="red">Removed</font>: AddListIconGadgetItem() and AddTreeGadgetItem(): AddGadgetItem() is now used <br>
 - <font color="red">Removed</font>: ExpandTreeGadgetItem() and TreeGadgetItemState(): Set/GetGadgetItemState() is now used <br>
 <br>
@@ -1638,7 +1638,7 @@ PreferenceComment(), PreferenceGroup() <br>
 - <font color="green">Added</font>: Help PureLibrary:  OpenHelp(), CloseHelp() <br>
 - <font color="green">Added</font>: Clipboard PureLibrary: ClearClipboard(), GetClipboardText(), GetClipboardData(), SetClipboardData(), SetClipboardText() <br>
 - <font color="green">Added</font>: ElseIf <br>
-- <font color="green">Added</font>: If a condition (If/While...) isn't finished before EndProcedure, the compiler display an error. <br>
+- <font color="green">Added</font>: If a condition (If/While...) isn&amp;apos;t finished before EndProcedure, the compiler display an error. <br>
 - <font color="green">Added</font>: ToolBarToolTip() <br>
 - <font color="green">Added</font>: SpritePixelCollision() <br>
 - <font color="green">Added</font>: Timer PureLibrary (Thanks to Danilo): StartTimer(), EndTimer(), GetMinTimerResolution(), GetMaxTimerResolution() <br>
@@ -1657,16 +1657,16 @@ PreferenceComment(), PreferenceGroup() <br>
 - <font color="green">Added</font>: Dutch catalog for the editor <br>
 <br>
 - <font color="#006666">Updated</font>: Brand new library architecture to allow to link ONLY needed commands to the final executable. For now, all the libraries 
-aren't optimized to use it, but it will come, in a near future :). BTW, all libraries use the standard STDCALL format, so 
+aren&amp;apos;t optimized to use it, but it will come, in a near future :). BTW, all libraries use the standard STDCALL format, so 
 no argument reversed anymore. Old libraries are still fully compatible. <br>
-- <font color="#006666">Updated</font>: StopSound(): Passing '-1' will stop playing all sounds. <br>
+- <font color="#006666">Updated</font>: StopSound(): Passing &amp;apos;-1&amp;apos; will stop playing all sounds. <br>
 - <font color="#006666">Updated</font>: PlaySound(): Flags parameter is now optional <br>
 - <font color="#006666">Updated</font>: Sort(): now a range can be specified (ex: from elements 20 to 50 of the array) <br>
 - <font color="#006666">Updated</font>: Resident file: #VK_xx constants added, some structures fixed. <br>
 <br>
 - <font color="orange">Changed</font>: Internally, procedures parameters are now pushed in the right order. Warning, all the callback must be changed to reflect this. 
 This also mean than DLL procedure parameters can be put in the right order. <br>
-- <font color="orange">Changed</font>: InitSound() doesn't require a maximum sound param anymore <br>
+- <font color="orange">Changed</font>: InitSound() doesn&amp;apos;t require a maximum sound param anymore <br>
 - <font color="orange">Changed</font>: Renamed BackColour(), FrontColour() and  TransparentSpriteColour() to BackColor(), FrontColor() and  TransparentSpriteColor() <br>
 <br>
 - <font color="blue">Fixed</font>: Compiler crash when using constant string, more check to the preprocessor <br>
@@ -1677,9 +1677,9 @@ This also mean than DLL procedure parameters can be put in the right order. <br>
 - <font color="blue">Fixed</font>: Resident problem. Now users residents are loaded. <br>
 - <font color="blue">Fixed</font>: Editor bug, which prevents to type special characters (characters over 128 in the ASCII table) and some minors other <br>
 - <font color="blue">Fixed</font>: A FPU bug which prevented OpenGL to work correctly <br>
-- <font color="blue">Fixed</font>: 'Debug' command: now accept float and string functions without problem. <br>
+- <font color="blue">Fixed</font>: &amp;apos;Debug&amp;apos; command: now accept float and string functions without problem. <br>
 <br>
-- <font color="red">Removed</font>: Mr Skunk PureLibraries, as some was bugged but we don't have the source code to fix them. <br>
+- <font color="red">Removed</font>: Mr Skunk PureLibraries, as some was bugged but we don&amp;apos;t have the source code to fix them. <br>
 
 </blockquote>
 <p><b>24 February 2002 : Version 2.95</b></p><blockquote>
@@ -1692,7 +1692,7 @@ Note:  This is a bug fix release before the major 3.0 version. Very few changes.
 <br>
 - <font color="green">Added</font>: HtmlHelp support for search in the help + other goodies. Old HTML files can be safely removed. <br>
 <br>
-- <font color="blue">Fixed</font>: Compiler bugs (Float within structure array, XIncludeFile, 'a' constants in some rare case, Expression bug, constant duplication and Image library integration when using Sprite, Memory leaks in string procedures) <br>
+- <font color="blue">Fixed</font>: Compiler bugs (Float within structure array, XIncludeFile, &amp;apos;a&amp;apos; constants in some rare case, Expression bug, constant duplication and Image library integration when using Sprite, Memory leaks in string procedures) <br>
 - <font color="blue">Fixed</font>: LoadJPGSprite bug <br>
 - <font color="blue">Fixed</font>: Editor colorize problem with normal text color <br>
 <br>
@@ -1735,7 +1735,7 @@ Note:  This is a bug fix release before the major 3.0 version. Very few changes.
 - <font color="blue">Fixed</font>: SaveImage(). Always save in 24-bit instead of 32-bit <br>
 - <font color="blue">Fixed</font>: ListViewGadget() now use the exact height gadget, not a rounded one <br>
 - <font color="blue">Fixed</font>: SysTrayIconToolTip() no more crash if specified text is over 64 characters <br>
-- <font color="blue">Fixed</font>: ListIconGadget(): Don't destroy the icons after FreeGadget() <br>
+- <font color="blue">Fixed</font>: ListIconGadget(): Don&amp;apos;t destroy the icons after FreeGadget() <br>
 - <font color="blue">Fixed</font>: ChangeListIconGadgetDisplay(): Refreshed automatically <br>
 - <font color="blue">Fixed</font>: Window background color under Windows XP <br>
 <br>
@@ -1758,7 +1758,7 @@ Note:  This is a bug fix release before the major 3.0 version. Very few changes.
 - <font color="green">Added</font>: SaveImage() <br>
 - <font color="green">Added</font>: Debugger routine for all commands <br>
 - <font color="blue">Fixed</font>: ExamineDirectory() <br>
-- <font color="blue">Fixed</font>: OpenFile() (Read wasn't working) <br>
+- <font color="blue">Fixed</font>: OpenFile() (Read wasn&amp;apos;t working) <br>
 <br>
 <u>Editor:</u> <br>
 - <font color="green">Added</font>: QuickHelp for almost all commands <br>
@@ -1776,7 +1776,7 @@ Note:  This is a bug fix release before the major 3.0 version. Very few changes.
 - <font color="green">Added</font>: UseGadgetList(), TransparentSpriteColor(), ClipSprite(), CopySprite(), GrabSprite() <br>
 - <font color="green">Added</font>: ProgramParameter() <br>
 - <font color="green">Added</font>: Thread library <br>
-- <font color="green">Added</font>: '!' support to include raw ASM command in the code source (directly managed by NAsm) <br>
+- <font color="green">Added</font>: &amp;apos;!&amp;apos; support to include raw ASM command in the code source (directly managed by NAsm) <br>
 - <font color="green">Added</font>: Multilevel (100) Undo/Redo in the editor <br>
 - <font color="green">Added</font>: Colored syntax when pasting (Yes ;-) <br>
 <br>
@@ -1815,14 +1815,14 @@ Note:  This is a bug fix release before the major 3.0 version. Very few changes.
 - <font color="orange">Changed</font>: All old MemoryBank functions renamed. <br>
 - <font color="orange">Changed</font>: ReadMemory() and WriteMemory renamed -&gt; ReadData(), WriteData() (For better logic with other commands) <br>
 - <font color="orange">Changed</font>: The PureBasic library format (see the SDK for more info) <br>
-- <font color="orange">Changed</font>: DrawingOutput() has been renamed to StartDrawing() and doesn't take a WindowID() anymore (but WindowOutput(), ScreenOutput() or ImageOutput() <br>
+- <font color="orange">Changed</font>: DrawingOutput() has been renamed to StartDrawing() and doesn&amp;apos;t take a WindowID() anymore (but WindowOutput(), ScreenOutput() or ImageOutput() <br>
 - <font color="orange">Changed</font>: Eof() take one parameter now. <br>
 <br>
 - <font color="blue">Fixed</font>: StopModule() (Removed the #Module) parameter <br>
 - <font color="blue">Fixed</font>: A small compiler bug <br>
 - <font color="blue">Fixed</font>: PlayMovie()   <br>
 - <font color="blue">Fixed</font>: Debugger while using ASM commands inside PureBasic <br>
-- <font color="blue">Fixed</font>: Clipboard PASTE within the editor doesn't change the font anymore <br>
+- <font color="blue">Fixed</font>: Clipboard PASTE within the editor doesn&amp;apos;t change the font anymore <br>
 
 </blockquote>
 <p><b>23 September 2001 : Version 2.50</b></p><blockquote>
@@ -1835,7 +1835,7 @@ Note:  This is a bug fix release before the major 3.0 version. Very few changes.
 - <font color="green">Added</font>: Movie library <br>
 - <font color="green">Added</font>: Sort library <br>
 - <font color="green">Added</font>: Procedure address (@procedurename()) <br>
-- <font color="green">Added</font>: support for 'Console' executable format <br>
+- <font color="green">Added</font>: support for &amp;apos;Console&amp;apos; executable format <br>
 - <font color="green">Added</font>: DisplayTranslucentSprite(), DisplayAlphaSprite(), DisplayShadowSprite(), DisplayRGBFilter(), ChangeAlphaIntensity(), ClearScreen() 
 OpenWindowedScreen(), DisplaySolidSprite(), CloseScreen(), SetFrameRate(), IsScreenActive(), StartSpecialFX(), StopSpecialFX(), ResizeGadget() 
 JoystickAxisX(), JoystickAxisY(), ChangeGamma(), SetWindowCallback(), Red(), Green(), Blue() <br>
@@ -1857,7 +1857,7 @@ JoystickAxisX(), JoystickAxisY(), ChangeGamma(), SetWindowCallback(), Red(), Gre
 - <font color="green">Added</font>: optional Auto-save before compiling <br>
 - <font color="green">Added</font>: Any font support <br>
 - <font color="green">Added</font>: Enable/Disable syntax coloration <br>
-- <font color="green">Added</font>: 2 new components for coloring: 'Normal Text' and 'Procedures/Commands' <br>
+- <font color="green">Added</font>: 2 new components for coloring: &amp;apos;Normal Text&amp;apos; and &amp;apos;Procedures/Commands&amp;apos; <br>
 - <font color="green">Added</font>: Real-time language, font, color changing <br>
 - <font color="green">Added</font>: new About window, much better ;-) <br>
 <br>
@@ -1883,13 +1883,13 @@ ToolBarImageButton(), EventMouseButton(), UseDirectory() <br>
 - <font color="green">Added</font>: TreeGadget(), ImageGadget(), ButtonImageGadget(), AddTreeGadgetItem() <br>
 - <font color="green">Added</font>: ListIconGadget(), AddListIconGadgetItem(), ChangeListIconGadgetDisplay(), AddGadgetColumn() <br>
 <br>
-- <font color="orange">Changed</font>: the default type from 'Word' (16-bit) to 'Long' (32-bit) <br>
+- <font color="orange">Changed</font>: the default type from &amp;apos;Word&amp;apos; (16-bit) to &amp;apos;Long&amp;apos; (32-bit) <br>
 - <font color="orange">Changed</font>: WaitWindowEvent()/WindowEvent() returns all Windows events ! <br>
 - <font color="orange">Changed</font>: ComboBoxGadget(), PanelGadget() and ListViewGadget() (removed the useless Text$ parameter) <br>
 - <font color="orange">Changed</font>: ExamineDirectory() -&gt; Number added to allow to examine several directories at the same time <br>
 <br>
-- <font color="blue">Fixed</font>: CopyFile() (Overwrite doesn't work) <br>
-- <font color="blue">Fixed</font>: FrontColour() (Text colour doesn't change..) <br>
+- <font color="blue">Fixed</font>: CopyFile() (Overwrite doesn&amp;apos;t work) <br>
+- <font color="blue">Fixed</font>: FrontColour() (Text colour doesn&amp;apos;t change..) <br>
 - <font color="blue">Fixed</font>: GetGadgetState(), SetGadgetState() and RemoveGadgetItem() to support PanelGadget <br>
 <br>
 - <font color="red">Removed</font>: InitWindow(), InitRequester(), InitToolBar(), InitFont(), InitFile() and InitMenu() (No more needed...) <br>
@@ -1906,7 +1906,7 @@ Tab/Shift+Tab when a block is selected to indent easily <br>
 - <font color="green">Added</font>: tons of new commands: GetGadgetState(), SetGadgetState(), AddGadgetItem(), RemoveGadgetItem(), ClearGadgetItemList() 
 PanelGadget(), ClosePanelGadget(), TextGadget(), SpritesCollision(), Delay(), OptionGadget(), FrameGadget() 
 Loc(), PeekW/B(), PokeW/B(), GetPathPart(), GetFilePart(), RunProgram(), DoubleClick(), PathRequester() <br>
-- <font color="green">Added</font>: 'Tab' support on Gadget lib. <br>
+- <font color="green">Added</font>: &amp;apos;Tab&amp;apos; support on Gadget lib. <br>
 - <font color="green">Added</font>: compiler directives: CompilerIf/Else/Endif, CompilerSelect/Case/Default/EndSelect <br>
 - <font color="green">Added</font>: the CD-Audio library <br>
 - <font color="green">Added</font>: the FileSystem library <br>
@@ -1930,7 +1930,7 @@ Loc(), PeekW/B(), PokeW/B(), GetPathPart(), GetFilePart(), RunProgram(), DoubleC
 
 
 
-- <font color="green">Added</font>: debugger runtime support for all pure libraries. A program no more crashes so easily. It's much 
+- <font color="green">Added</font>: debugger runtime support for all pure libraries. A program no more crashes so easily. It&amp;apos;s much 
 easier now to catch up bugs ! <br>
 - <font color="green">Added</font>: NT4.0 support for multimedia libraries (Sprite, Palette, Sound &amp; Keyboard), which allows the development 
 of games or multimedia applications running on WinNT4 too ! <br>
@@ -1959,11 +1959,11 @@ continue, quit (useful to quit an infinite loop...) and can be invoked and contr
 via the source code with the following commands: CallDebugger, EnableDebugger, DisableDebugger <br>
 - <font color="green">Added</font>: new commands: ListViewGadget(), AddListViewItem(), GetGadgetText(), SetGadgetText(), PeekS(), SizeOf() <br>
 - <font color="green">Added</font>: Multi-language to the editor (French, German, English) <br>
-- <font color="green">Added</font>: Microsoft Windows �resident file containing all the constants and structures needed for easy OS 
+- <font color="green">Added</font>: Microsoft Windows � resident file containing all the constants and structures needed for easy OS 
 programming under PureBasic. <br>
 <br>
 - <font color="#924B72">Improved</font> the editor a lot: contextual help (F1 on a keyword), Goto, Compiler Options, much better 
-syntax highlighting, '.prefs' file <br>
+syntax highlighting, &amp;apos;.prefs&amp;apos; file <br>
 <br>
 - <font color="blue">Fixed</font>: lot of bugs and improved the whole stability <br>
 

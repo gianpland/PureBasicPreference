@@ -21,12 +21,12 @@
 
 
 Modules are an easy way to isolate code part from the main code, allowing code reuse and sharing 
-without risk of name conflict. In some other programming languages, modules are known as 'namespaces'. 
+without risk of name conflict. In some other programming languages, modules are known as &amp;apos;namespaces&amp;apos;. 
 A module must have a <b><font color="#006666">DeclareModule</font></b> section (which is the public interface) and an associated 
 <b><font color="#006666">Module</font></b> section (which is the implementation). 
 Only items declared in the <b><font color="#006666">DeclareModule</font></b> section will be accessible from outside the module. All the 
 code put in the <b><font color="#006666">Module</font></b> section will be kept private to this module. Items from main code 
-like procedures, variables etc. won't be accessible inside the module, even if they are <a href="../reference/global.html">global</a>. A module can be seen 
+like procedures, variables etc. won&amp;apos;t be accessible inside the module, even if they are <a href="../reference/global.html">global</a>. A module can be seen 
 as a blackbox, an empty code sheet where item names can not conflict with the main code. It makes it easier 
 to write specific code, as simple names can be reused within each module without risk of conflict. 
 <br>
@@ -35,14 +35,14 @@ Items allowed in the <b><font color="#006666">DeclareModule</font></b> section c
 constant, enumeration, array, list, map and label. 
 <br>
 <br>
-To access a module item from outside the module, the module name has to be specified followed by the '::' separator. When explicitly specifying 
+To access a module item from outside the module, the module name has to be specified followed by the &amp;apos;::&amp;apos; separator. When explicitly specifying 
 the module name, the module item is available everywhere in the code source, even in another module. 
 All items in the <b><font color="#006666">DeclareModule</font></b> section can be automatically imported into another module or in the main code using <b><font color="#006666">UseModule</font></b>. 
-In this case, if a module name conflict, the module items won't be imported and a compiler error will be raised. 
+In this case, if a module name conflict, the module items won&amp;apos;t be imported and a compiler error will be raised. 
 <b><font color="#006666">UnuseModule</font></b> remove the module items. <b><font color="#006666">UseModule</font></b> is not mandatory to access a module item, but the module name needs to be specified. 
 <br>
 <br>
-To share information between modules, a common module can be created and then used in every modules which needs it. It's the common way 
+To share information between modules, a common module can be created and then used in every modules which needs it. It&amp;apos;s the common way 
 have global data available for all modules. 
 <br>
 <br>
@@ -85,7 +85,7 @@ for use when reusing and sharing it.
         Initialized = <font color="#924B72">#True</font>
         <b><font color="#006666">Debug</font></b> "InitFerrari()"
       <b><font color="#006666">EndIf</font></b>
-    <b><font color="#006666">EndProcedure</font></b>  
+    <b><font color="#006666">EndProcedure</font></b>
       
     <b><font color="#006666">Procedure</font></b> <font color="#006666">CreateFerrari</font>()
 <font color="#006666">      Init</font>()
@@ -94,8 +94,8 @@ for use when reusing and sharing it.
     
   <b><font color="#006666">EndModule</font></b>
   
-  
-  <b><font color="#006666">Procedure</font></b> <font color="#006666">Init</font>() <font color="#006666">; Main init procedure, doesn't conflict with the Ferrari Init() procedure</font>
+
+  <b><font color="#006666">Procedure</font></b> <font color="#006666">Init</font>() <font color="#006666">; Main init procedure, doesn&amp;apos;t conflict with the Ferrari Init() procedure</font>
     <b><font color="#006666">Debug</font></b> "Main init()"
   <b><font color="#006666">EndProcedure</font></b>
   
@@ -123,7 +123,7 @@ for use when reusing and sharing it.
     <b><font color="#006666">Global</font></b> NbCars = 0
   <b><font color="#006666">EndDeclareModule</font></b>
   
-  <b><font color="#006666">Module</font></b> Cars 
+  <b><font color="#006666">Module</font></b> Cars
   <b><font color="#006666">EndModule</font></b>
   
   <font color="#006666">; First car module</font>

@@ -11,7 +11,7 @@
 
 
 Stops and removes a sound previously loaded with <a href="loadsound.html">LoadSound()</a> or <a href="catchsound.html">CatchSound()</a> from memory. Once a sound has been 
-freed, it can't be played anymore. 
+freed, it can&amp;apos;t be played anymore. 
 
  
 
@@ -34,7 +34,7 @@ The sound to free. If <font color="#924B72">#PB_All</font> is specified, all the
 无.
 
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -42,8 +42,22 @@ All remaining sounds are automatically freed when the program ends.
 
  
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=catchsound.html>CatchSound()</a> - <a href=index.html>Sound Index</a> - <a href=getsoundfrequency.html>GetSoundFrequency()</a> -&gt;
+</blockquote><p><b>示例</b></p><blockquote>
 
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666"> InitSound</font>()           <font color="#006666">; Initialize Sound system</font>
+<font color="#006666"> UseOGGSoundDecoder</font>()  <font color="#006666">; Use ogg files</font>
 
+ <font color="#006666">; Loads a sound from a file</font>
+<font color="#006666"> LoadSound</font>(0, <font color="#924B72">#PB_Compiler_Home</font> +"Examples\3D\Data\Siren.ogg")
+ <font color="#006666">; The sound is playing </font>
+<font color="#006666"> PlaySound</font>(0, <font color="#924B72">#PB_Sound_Loop</font>)
+ 
+<font color="#006666"> MessageRequester</font>("Info", "Ok to stop.")
+ 
+<font color="#006666"> FreeSound</font>(0) <font color="#006666">; The sound is freed</font>
+ <b><font color="#006666">End</font></b>
+</font></pre>
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=catchsound.html>CatchSound()</a> - <a href=index.html>Sound Index</a> - <a href=getsoundfrequency.html>GetSoundFrequency()</a> -&gt;<br><br>
 
 </body></html>

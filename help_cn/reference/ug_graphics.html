@@ -114,14 +114,14 @@ Drawing the wave forms - demonstrates the <a href="../2ddrawing/linexy.html">Lin
     <b><font color="#006666">Protected</font></b>.s strFunc1, strFunc2, strLabel1, strLabel2, strLabel3
     
     <font color="#006666">; Set label text 1.</font>
-    <b><font color="#006666">If</font></b> alngPlot1 = 0 
+    <b><font color="#006666">If</font></b> alngPlot1 = 0
       strFunc1 = "Sin(X)"
     <b><font color="#006666">Else</font></b>
       strFunc1 = "Sin(X * " +<font color="#006666"> StrU</font>(alngPlot1 + 1) + ")"
     <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; Set label text 2.</font>
-    <b><font color="#006666">If</font></b> alngPlot2 = 0 
+    <b><font color="#006666">If</font></b> alngPlot2 = 0
       strFunc2 = "Sin(X)"
     <b><font color="#006666">Else</font></b>
       strFunc2 = "Sin(X * " +<font color="#006666"> StrU</font>(alngPlot2 + 1) + ")"
@@ -130,7 +130,7 @@ Drawing the wave forms - demonstrates the <a href="../2ddrawing/linexy.html">Lin
     <font color="#006666">; Set label text.</font>
     strLabel1 = "Y = " + strFunc1
     strLabel2 = "Y = " + strFunc2
-    strLabel3 = "Y = " + strFunc1 + " + " + strFunc2 
+    strLabel3 = "Y = " + strFunc1 + " + " + strFunc2
     
     <font color="#006666">; Draw legend.</font>
 <font color="#006666">    StartDrawing</font>(<font color="#006666">ImageOutput</font>(<font color="#924B72">#drgPlot</font>))
@@ -174,7 +174,7 @@ Drawing the wave forms - demonstrates the <a href="../2ddrawing/linexy.html">Lin
         <font color="#006666">; Sine function works in radians, so convert from degrees and calculate sine.</font>
         
         <font color="#006666">; Function 1</font>
-        <b><font color="#006666">If</font></b> alngPlot1 = 0 
+        <b><font color="#006666">If</font></b> alngPlot1 = 0
           fltRad1 =<font color="#006666"> Sin</font>(<font color="#006666">Radian</font>(lngEX))
         <b><font color="#006666">Else</font></b>
           <font color="#006666">; If the function should have a multiplier, account for this.</font>
@@ -182,7 +182,7 @@ Drawing the wave forms - demonstrates the <a href="../2ddrawing/linexy.html">Lin
         <b><font color="#006666">EndIf</font></b>
         
         <font color="#006666">; Function 2</font>
-        <b><font color="#006666">If</font></b> alngPlot2 = 0 
+        <b><font color="#006666">If</font></b> alngPlot2 = 0
           fltRad2 =<font color="#006666"> Sin</font>(<font color="#006666">Radian</font>(lngEX))
         <b><font color="#006666">Else</font></b>
           fltRad2 =<font color="#006666"> Sin</font>(<font color="#006666">Radian</font>(lngEX) * (alngPlot2 + 1))

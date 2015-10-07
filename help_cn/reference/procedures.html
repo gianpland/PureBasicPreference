@@ -15,7 +15,7 @@
 
 
 A <b><font color="#006666">Procedure</font></b> is a part of code independent from the main code which can have any parameters 
-and it's own <a href="../reference/variables.html">variables</a>. In PureBasic, a recurrence is fully supported for the procedures 
+and it&amp;apos;s own <a href="../reference/variables.html">variables</a>. In PureBasic, a recurrence is fully supported for the procedures 
 and any procedure can call it itself. At each call of the procedure the variables inside 
 will start with a value of 0 (null). To access main code variables, they have to be shared 
 them by using <a href="../reference/shared.html">Shared</a> or <a href="../reference/global.html">Global</a> keywords 
@@ -34,7 +34,7 @@ A procedure can return a value or a string if necessary. You have to set the typ
 and use the <b><font color="#006666">ProcedureReturn</font></b> keyword at any moment inside the procedure. 
 A call of <b><font color="#006666">ProcedureReturn</font></b> exits immediately the procedure, even when its called inside a loop. 
 <br>
-<b><font color="#006666">ProcedureReturn</font></b> can't be used to return an <a href="../reference/dim.html">array</a>, <a href="../reference/newlist.html">list</a> or a <a href="../reference/newmap.html">map</a>. 
+<b><font color="#006666">ProcedureReturn</font></b> can&amp;apos;t be used to return an <a href="../reference/dim.html">array</a>, <a href="../reference/newlist.html">list</a> or a <a href="../reference/newmap.html">map</a>. 
 For this purpose pass the array, the list or the map as parameter to the procedure. 
 <br>
 <br>
@@ -43,7 +43,7 @@ If no value is specified for <b><font color="#006666">ProcedureReturn</font></b>
 <br>
 <br>
 Note: To return strings from DLLs, see <a href="../reference/dll.html">DLLs</a>. For advanced programmers <b><font color="#006666">ProcedureC</font></b> is available 
-and will declare the procedure using 'CDecl' instead of 'StandardCall' calling convention. 
+and will declare the procedure using &amp;apos;CDecl&amp;apos; instead of &amp;apos;StandardCall&amp;apos; calling convention. 
 <br>
 <br>
 Selected procedures can be executed asynchronously to the main program by using of <a href="../thread/index.html">threads</a>. 
@@ -63,7 +63,7 @@ Selected procedures can be executed asynchronously to the main program by using 
     <b><font color="#006666">EndIf</font></b>
   
     <b><font color="#006666">ProcedureReturn</font></b> Result
-  <b><font color="#006666">EndProcedure</font></b> 
+  <b><font color="#006666">EndProcedure</font></b>
   
   Result =<font color="#006666"> Maximum</font>(15, 30)
   <b><font color="#006666">Debug</font></b> Result
@@ -148,14 +148,14 @@ Selected procedures can be executed asynchronously to the main program by using 
 
 
 
-Sometimes a procedure need to call another procedure which isn't declared before its definition. 
-This is annoying because the compiler will complain 'Procedure &lt;name&gt; not found'. <b><font color="#006666">Declare</font></b> can help 
+Sometimes a procedure need to call another procedure which isn&amp;apos;t declared before its definition. 
+This is annoying because the compiler will complain &amp;apos;Procedure &lt;name&gt; not found&amp;apos;. <b><font color="#006666">Declare</font></b> can help 
 in this particular case by declaring only the header of the procedure. Nevertheless, the <b><font color="#006666">Declare</font></b> 
 and real <b><font color="#006666">Procedure</font></b> declaration must be identical (including the correct type and optional parameters, if any). 
 <br>
 <br>
-For advanced programmers <b><font color="#006666">DeclareC</font></b> is available and will declare the procedure using 'CDecl' 
-instead of 'StandardCall' calling convention. 
+For advanced programmers <b><font color="#006666">DeclareC</font></b> is available and will declare the procedure using &amp;apos;CDecl&amp;apos; 
+instead of &amp;apos;StandardCall&amp;apos; calling convention. 
 
  
 

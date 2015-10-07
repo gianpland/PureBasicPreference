@@ -8,12 +8,7 @@
 </blockquote>
 <b>概要</b><br><blockquote>
 
-
-
-Define a bounding box that restricts all drawing to the current drawing 
-output. Any pixels drawn outside of this box will be clipped. 
-
- 
+在当前绘图输出中定义一个封闭区域限制所有绘图在它的范围之内。任何绘制到封闭区域外绘制的像素将被裁剪。 
 
 </blockquote><p><b>参数</b></p><blockquote>
 <style type="text/css">
@@ -23,11 +18,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <table width="90%" class="parameters">
 <tr><td width="10%"><i>x, y, Width, Height</i></td>
 <td width="90%"> 
- 
-The position and size of the clipping box. The (x, y) coordinates are always absolute 
-and not affected by calls to <a href="setorigin.html">SetOrigin()</a>. 
-
- 
+封闭区域的位置和大小。 (x, y) 的坐标总是绝对的并且不受调用 <a href="setorigin.html">SetOrigin()</a>的影响。 
 
 </td></tr>
 </table>
@@ -35,22 +26,9 @@ and not affected by calls to <a href="setorigin.html">SetOrigin()</a>.
 无.
 
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
-
-
-This command only has an effect on drawing outputs created by <a href="../image/imageoutput.html">ImageOutput()</a> or <a href="../gadget/canvasoutput.html">CanvasOutput()</a>. 
-<br>
-<br>
-The drawing origin is not modified by a call to this function. To make all drawing 
-relative to the upper left corner of the clipping box, a separate call to 
-<a href="setorigin.html">SetOrigin()</a> must be made if this is desired. 
-<br>
-<br>
-The <a href="plot.html">Plot()</a> and <a href="point.html">Point()</a> commands perform no bounds checking for performance reasons and 
-therefore are also not affected by this command. 
-
- 
+该命令只对通过 <a href="../image/imageoutput.html">ImageOutput()</a> or <a href="../gadget/canvasoutput.html">CanvasOutput()</a>来创建绘图输出的作用. <br><br>图形原点不被调用此功能修改。为了使所有的绘图相对的剪取框的左上角，如果需要的话必须单独调用<a href="setorigin.html">SetOrigin()<a href="setorigin.html">。<br><br> <a href="plot.html">Plot()</a> 和 <a href="point.html">Point()</a> 命令因为执行无边界检查的性能原因，因此不影响此命令。 
 
 </blockquote><p><b>示例</b></p><blockquote>
 
@@ -61,13 +39,13 @@ therefore are also not affected by this command.
 <font color="#006666">      Circle</font>( 50,  50, 50, $0000FF)  
 <font color="#006666">      Circle</font>( 50, 150, 50, $00FF00)  
 <font color="#006666">      Circle</font>(150,  50, 50, $FF0000)  
-<font color="#006666">      Circle</font>(150, 150, 50, $00FFFF)  
+<font color="#006666">      Circle</font>(150, 150, 50, $00FFFF)
       
 <font color="#006666">      DrawingMode</font>(<font color="#924B72">#PB_2DDrawing_Outlined</font>)
 <font color="#006666">      Box</font>(50, 50, 100, 100, $000000)
          
 <font color="#006666">      StopDrawing</font>() 
-<font color="#006666">      ImageGadget</font>(0, 0, 0, 200, 200,<font color="#006666"> ImageID</font>(0))      
+<font color="#006666">      ImageGadget</font>(0, 0, 0, 200, 200,<font color="#006666"> ImageID</font>(0))
     <b><font color="#006666">EndIf</font></b>
     
     <b><font color="#006666">Repeat</font></b>
@@ -83,8 +61,6 @@ therefore are also not affected by this command.
 
 <a href="unclipoutput.html">UnclipOutput()</a>, <a href="setorigin.html">SetOrigin()</a>, <a href="outputwidth.html">OutputWidth()</a>, <a href="outputheight.html">OutputHeight()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=circulargradient.html>CircularGradient()</a> - <a href=index.html>2DDrawing Index</a> - <a href=conicalgradient.html>ConicalGradient()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=circulargradient.html>CircularGradient()</a> - <a href=index.html>2DDrawing 索引</a> - <a href=conicalgradient.html>ConicalGradient()</a> -&gt;<br><br>
 
 </body></html>

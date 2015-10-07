@@ -15,12 +15,12 @@
 
 <b><font color="#006666">If</font></b> <font color="#006666">CreateFile</font>(0, "PureBasicTestFile.txt")
 <font color="#006666">  WriteStringN</font>(0, "         This is a PureBasic file test")
-<font color="#006666">  WriteString</font>(0, "Now it's on ")
+<font color="#006666">  WriteString</font>(0, "Now it&amp;apos;s on ")
 <font color="#006666">  WriteString</font>(0, "the same line.")
 
 <font color="#006666">  CloseFile</font>(0)
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("PureBasic", "Error: can't write the file", 0)
+<font color="#006666">  MessageRequester</font>("PureBasic", "Error: can&amp;apos;t write the file", 0)
   <b><font color="#006666">End</font></b>
 <b><font color="#006666">EndIf</font></b>
 
@@ -31,7 +31,7 @@
   
 <font color="#006666">  CloseFile</font>(0)
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("PureBasic", "Error: Can't read the file", 0)
+<font color="#006666">  MessageRequester</font>("PureBasic", "Error: Can&amp;apos;t read the file", 0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>

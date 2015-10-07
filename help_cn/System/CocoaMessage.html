@@ -11,8 +11,8 @@ Result = <font color="#006666"><b>CocoaMessage</b></font>(ReturnValueAddress, Ob
 
 
 For advanced users. Available on OS X only, it allows to easily send an Objective-C message to the OS X framework and access 
-any API. Usually Objective-C use brackets to have a clear syntax for messages. As PureBasic doesn't have built-in Objective-C 
-support, it needs to emulate it, so the syntax is a bit different. Once learnt, it's easy to call the required API. 
+any API. Usually Objective-C use brackets to have a clear syntax for messages. As PureBasic doesn&amp;apos;t have built-in Objective-C 
+support, it needs to emulate it, so the syntax is a bit different. Once learnt, it&amp;apos;s easy to call the required API. 
 To get more examples, please read the following thread on the <a href="http://www.purebasic.fr/english/viewtopic.php?f=19&amp;t=50795">forums</a>. 
 
  
@@ -26,7 +26,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <tr><td width="10%"><i>ReturnValueAddress</i></td>
 <td width="90%"> 
  
-If the API call return a structure or a type different than 'integer', this field is used to set the returning result. 
+If the API call return a structure or a type different than &amp;apos;integer&amp;apos;, this field is used to set the returning result. 
 An address to the structure or variable needs to be specified. If zero is specified, the result will be ignored. 
 
  
@@ -44,10 +44,10 @@ The object on which the Objective-C methods will be called. It can be zero if th
 <tr><td><i>Method$</i></td>
 <td> 
  
-The method to call on the object, usually followed by a semicolon (':'). If the method needs a structure as parameter, '@' 
-needs to be appended after the semicolon. If the method expect a string as parameter, '$' can be appended after the 
+The method to call on the object, usually followed by a semicolon (&amp;apos;:&amp;apos;). If the method needs a structure as parameter, &amp;apos;@&amp;apos; 
+needs to be appended after the semicolon. If the method expect a string as parameter, &amp;apos;$&amp;apos; can be appended after the 
 semicolon, so the string will be automatically converted in a temporary NSString. This is not required, but it can be useful 
-and ease the coding. If the method isn't supported by the object, a debugger message will be raised at runtime. 
+and ease the coding. If the method isn&amp;apos;t supported by the object, a debugger message will be raised at runtime. 
 
  
 
@@ -77,7 +77,7 @@ Integer return value. Useful for object creation id.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -106,7 +106,7 @@ to release big objects immediately, you will have to create a local memory pool 
   <font color="#006666">;</font>
   sx.CGFloat = 5.5
   sy.CGFloat = 20
-<font color="#006666">  CocoaMessage</font>(0, TransForm, "scaleXBy:@", @sx, "yBy:@", @sy) <font color="#006666">; Scale x by 5.5, y by 20. As sx is not an integer, '@' needs to be specified</font>
+<font color="#006666">  CocoaMessage</font>(0, TransForm, "scaleXBy:@", @sx, "yBy:@", @sy) <font color="#006666">; Scale x by 5.5, y by 20. As sx is not an integer, &amp;apos;@&amp;apos; needs to be specified</font>
   
   <font color="#006666">; Objective-C: </font>
   <font color="#006666">;   NSAffineTransform TransformStruct = [TransForm transformStruct];</font>
@@ -116,8 +116,6 @@ to release big objects immediately, you will have to create a local memory pool 
   <b><font color="#006666">Debug</font></b> TransformStruct\m11 <font color="#006666">; debug outputs 5.5</font>
 </font></pre>
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>MacOS X</Blockquote></p><center>&lt;- <a href=cpuname.html>CPUName()</a> - <a href=index.html>System Index</a> - <a href=computername.html>ComputerName()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>MacOS X</Blockquote></p><center>&lt;- <a href=cpuname.html>CPUName()</a> - <a href=index.html>System Index</a> - <a href=computername.html>ComputerName()</a> -&gt;<br><br>
 
 </body></html>

@@ -39,7 +39,7 @@ Comments are marked by <b><font color="#006666">;</font></b>. All text entered a
 
 
 All <b>keywords</b> are used for general things inside PureBasic, like creating arrays (Dim) or lists (NewList), 
-or controlling the program flow (If : Else : EndIf). They are not followed by the brackets '()', which are 
+or controlling the program flow (If : Else : EndIf). They are not followed by the brackets &amp;apos;()&amp;apos;, which are 
 typically for PureBasic <b>functions</b>. 
 
  
@@ -47,7 +47,7 @@ typically for PureBasic <b>functions</b>.
 </blockquote><p><b>示例</b></p><blockquote>
 
 
-<pre><font face="Courier New, Courier, mono"size="2">    <b><font color="#006666">If</font></b> a = 1      <font color="#006666">; If, Else and EndIf are keywords; while 'a = 1'</font>
+<pre><font face="Courier New, Courier, mono"size="2">    <b><font color="#006666">If</font></b> a = 1      <font color="#006666">; If, Else and EndIf are keywords; while &amp;apos;a = 1&amp;apos;</font>
       ...         <font color="#006666">; is a variable used inside an expression.</font>
     <b><font color="#006666">Else</font></b>
       ...
@@ -108,6 +108,33 @@ All constants are preceded by <b><font color="#006666"></font></b>#. They can on
 </font></pre>
 
 
+</blockquote>
+<p><b>Literal strings</b></p><blockquote>
+
+
+
+
+
+Literal strings are declared using the " character. Escape sequences are supported using the ~ 
+character before the literal string. The allowed escape sequences are: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  \a: alarm           <b><font color="#006666">Chr</font></b>(7)
+  \b: backspace       <b><font color="#006666">Chr</font></b>(8)
+  \f: formfeed        <b><font color="#006666">Chr</font></b>(12)
+  \n: newline         <b><font color="#006666">Chr</font></b>(10)
+  \r: carriage return <b><font color="#006666">Chr</font></b>(14)
+  \t: horizontal tab  <b><font color="#006666">Chr</font></b>(9)
+  \v: vertical tab    <b><font color="#006666">Chr</font></b>(11)
+  \": double quote    <b><font color="#006666">Chr</font></b>(34)
+  \\: backslash       <b><font color="#006666">Chr</font></b>(92)
+</font></pre>
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  a$ =  "Hello world"  <font color="#006666">; standard string</font>
+  b$ = ~"Escape\nMe !" <font color="#006666">; string with escape sequences</font>
+</font></pre>
+
 
 </blockquote>
 <p><b>Labels</b></p><blockquote>
@@ -117,7 +144,7 @@ All constants are preceded by <b><font color="#006666"></font></b>#. They can on
 
 
 All labels must be followed by a <b><font color="#006666">:</font></b> (colon). Label names may not contain any operators (+,-,...) as 
-well special characters (����...). When defined in a <a href="../reference/procedures.html">procedure</a>, the label will be only available in this 
+well special characters (�,�,�,�,...). When defined in a <a href="../reference/procedures.html">procedure</a>, the label will be only available in this 
 procedure. 
 
  

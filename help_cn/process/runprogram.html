@@ -48,7 +48,7 @@ Specifies the directory that will then be the current directory for the launched
 <tr><td><i>Flags (optional)</i></td>
 <td> 
  
-It can be a combination (using '|' OR operator) of the following values: 
+It can be a combination (using &amp;apos;|&amp;apos; OR operator) of the following values: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Program_Wait</font>   : Wait until the launched program quits
   <font color="#924B72">#PB_Program_Hide</font>   : Launch the program in invisible mode
@@ -57,19 +57,22 @@ It can be a combination (using '|' OR operator) of the following values:
   <font color="#924B72">#PB_Program_Write</font>  : Write to the input of the program. (stdin)
   <font color="#924B72">#PB_Program_Error</font>  : Read the error output of the program. (stderr)
   <font color="#924B72">#PB_Program_Connect</font>: Connect another programs output to this programs input.
+  <font color="#924B72">#PB_Program_Ascii</font>  : Default read/write operation are in ASCII mode (default in ASCII mode).
+  <font color="#924B72">#PB_Program_Unicode</font>: Default read/write operation are in Unicode mode.
+  <font color="#924B72">#PB_Program_UTF8</font>   : Default read/write operation are in UTF8 mode (default in unicode mode).
 </font></pre>
 
 
 
 A program executed with <font color="#924B72">#PB_Program_Open</font> must be closed with <a href="closeprogram.html">CloseProgram()</a>. 
-The 'Read', 'Write', 'Error' and 'Connect' flags require the <font color="#924B72">#PB_Program_Open</font> flag to be set as well. 
+The &amp;apos;Read&amp;apos;, &amp;apos;Write&amp;apos;, &amp;apos;Error&amp;apos; and &amp;apos;Connect&amp;apos; flags require the <font color="#924B72">#PB_Program_Open</font> flag to be set as well. 
 <br>
 <br>
 When using the <font color="#924B72">#PB_Program_Connect</font> flag, another program must have been started before with 
 <font color="#924B72">#PB_Program_Open</font> and <font color="#924B72">#PB_Program_Read</font>. The number returned when running this 
-program must be passed as the 'SenderProgram' parameter to RunProgram(). The output of the sender program will 
+program must be passed as the &amp;apos;SenderProgram&amp;apos; parameter to RunProgram(). The output of the sender program will 
 be sent directly to the input of the now executed program. Several programs may be connected in this way, 
-to 'pipe' data through that group of connected programs. 
+to &amp;apos;pipe&amp;apos; data through that group of connected programs. 
 <br>
 <br>
 The following functions may be used with a program that has been executed with the <font color="#924B72">#PB_Program_Open</font> flag: 
@@ -90,7 +93,7 @@ The following functions may be used with a program that has been executed with t
 - <a href="closeprogram.html">CloseProgram()</a>: close the connection to the program. 
 <br>
 <br>
-The following functions may be used for programs executed with the 'Read', 'Write' and 'Error' flags: 
+The following functions may be used for programs executed with the &amp;apos;Read&amp;apos;, &amp;apos;Write&amp;apos; and &amp;apos;Error&amp;apos; flags: 
 <br>
 <br>
 - <a href="availableprogramoutput.html">AvailableProgramOutput()</a>: check if the programs output is available. 
@@ -153,8 +156,6 @@ web sites on your system.
 
  
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=removeenvironmentvariable.html>RemoveEnvironmentVariable()</a> - <a href=index.html>Process Index</a> - <a href=setenvironmentvariable.html>SetEnvironmentVariable()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=removeenvironmentvariable.html>RemoveEnvironmentVariable()</a> - <a href=index.html>Process Index</a> - <a href=setenvironmentvariable.html>SetEnvironmentVariable()</a> -&gt;<br><br>
 
 </body></html>

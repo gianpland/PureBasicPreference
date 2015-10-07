@@ -6,7 +6,7 @@
 
 
 In addition to the <a href="../reference/ug_textoutput.html">console window</a>, PureBasic supports 
-the creation of graphical user interfaces (GUI) too. So let's revisit the file properties 
+the creation of graphical user interfaces (GUI) too. So let&amp;apos;s revisit the file properties 
 example from previous items again and turn it into a GUI application. 
 <br>
 <br>
@@ -114,15 +114,15 @@ managing GUI elements, using that gadget would defeat this object a bit.
     <font color="#006666">; Convert the attributes to a string, for now.</font>
     Attrib =<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\Attributes)
     
-    <font color="#006666">; Build a row string.�</font>
-    <font color="#006666">; The Line Feed character 'Chr(10)' tells the gadget to move to the next column.</font>
+    <font color="#006666">; Build a row string.� </font>
+    <font color="#006666">; The Line Feed character &amp;apos;Chr(10)&amp;apos; tells the gadget to move to the next column.</font>
     Msg = Num +<font color="#006666"> Chr</font>(10) +<font color="#006666"> Files</font>()\Name +<font color="#006666"> Chr</font>(10) + Create +<font color="#006666"> Chr</font>(10) + Access +<font color="#006666"> Chr</font>(10) + Modify +<font color="#006666"> Chr</font>(10) + Attrib +<font color="#006666"> Chr</font>(10) + Size
     
     <font color="#006666">; Add the row to the list view gadget.</font>
 <font color="#006666">    AddGadgetItem</font>(<font color="#924B72">#Files</font>, -1, Msg)
   <b><font color="#006666">Next</font></b> <font color="#006666">Files</font>()
   
-  <font color="#006666">; This is the event loop for the window.�</font>
+  <font color="#006666">; This is the event loop for the window.� </font>
   <font color="#006666">; It will deal with all the user interaction events that we wish to use. </font>
   
   <b><font color="#006666">Repeat</font></b>
@@ -154,16 +154,16 @@ managing GUI elements, using that gadget would defeat this object a bit.
     <b><font color="#006666">EndSelect</font></b>
     
     <font color="#006666">; Go round and do it again.</font>
-    <font color="#006666">; In practice the loop isn't infinite because it can be stopped by clicking the window's Close button.</font>
+    <font color="#006666">; In practice the loop isn&amp;apos;t infinite because it can be stopped by clicking the window&amp;apos;s Close button.</font>
   <b><font color="#006666">ForEver</font></b>
 </font></pre>
 
 
 
 At this point the application already has some useful features. However, it has some problems too: <br>
-1) You can't choose a folder to show. <br>
-2) You can't update the list contents without closing and restarting the program. <br>
-3) If you resize the window, the gadgets don't resize with it. <br>
+1) You can&amp;apos;t choose a folder to show. <br>
+2) You can&amp;apos;t update the list contents without closing and restarting the program. <br>
+3) If you resize the window, the gadgets don&amp;apos;t resize with it. <br>
 4) The attributes column is still not very useful. <br>
 We will revisit this program again later on to fix all these issues. 
 

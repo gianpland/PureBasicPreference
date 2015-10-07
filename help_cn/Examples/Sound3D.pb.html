@@ -49,13 +49,13 @@
 <font color="#006666">      SoundVolume3D</font>(0, 50)
 <font color="#006666">      SoundRange3D</font>(0, 1, 500)
 <font color="#006666">      PlaySound3D</font>(0, <font color="#924B72">#PB_Sound3D_Loop</font>)
-    <b><font color="#006666">EndIf</font></b>  
+    <b><font color="#006666">EndIf</font></b>
     
     <b><font color="#006666">If</font></b> <font color="#006666">LoadSound3D</font>(1, "Siren.ogg")
 <font color="#006666">      SoundVolume3D</font>(1, 50)
 <font color="#006666">      SoundRange3D</font>(1, 1, 500)
 <font color="#006666">      PlaySound3D</font>(1, <font color="#924B72">#PB_Sound3D_Loop</font>)
-    <b><font color="#006666">EndIf</font></b> 
+    <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">;- Node
 </font>    <font color="#006666">; Create a node, so we can link the entity and the sound
@@ -71,7 +71,7 @@
     <font color="#006666">;- Camera  
 </font><font color="#006666">    CreateCamera</font>(0, 0, 0, 100, 100)
 <font color="#006666">    MoveCamera</font>(0, -550, 70, 10, <font color="#924B72">#PB_Absolute</font>)
-<font color="#006666">    CameraLookAt</font>(0,<font color="#006666"> NodeX</font>(1),<font color="#006666"> NodeY</font>(1),<font color="#006666"> NodeZ</font>(1)) 
+<font color="#006666">    CameraLookAt</font>(0,<font color="#006666"> NodeX</font>(1),<font color="#006666"> NodeY</font>(1),<font color="#006666"> NodeZ</font>(1))
     
     <font color="#006666">;- Light
 </font><font color="#006666">    AmbientColor</font>(0)
@@ -91,17 +91,17 @@
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
-          KeyX = -<font color="#924B72">#CameraSpeed</font> 
+          KeyX = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
-          KeyX = <font color="#924B72">#CameraSpeed</font> 
+          KeyX = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyX = 0
         <b><font color="#006666">EndIf</font></b>
                   
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
-          KeyY = -<font color="#924B72">#CameraSpeed</font> 
+          KeyY = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
-          KeyY = <font color="#924B72">#CameraSpeed</font> 
+          KeyY = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyY = 0
         <b><font color="#006666">EndIf</font></b>
@@ -111,7 +111,7 @@
 <font color="#006666">      RotateCamera</font>(0, MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)
 <font color="#006666">      MoveCamera  </font>(0, KeyX, 0, KeyY)
       
-<font color="#006666">      SoundListenerLocate</font>(<font color="#006666">CameraX</font>(0),<font color="#006666"> CameraY</font>(0),<font color="#006666"> CameraZ</font>(0)) <font color="#006666">; The 'ear' follows the camera
+<font color="#006666">      SoundListenerLocate</font>(<font color="#006666">CameraX</font>(0),<font color="#006666"> CameraY</font>(0),<font color="#006666"> CameraZ</font>(0)) <font color="#006666">; The &amp;apos;ear&amp;apos; follows the camera
 </font>      
 <font color="#006666">      RenderWorld</font>()
 
@@ -120,7 +120,7 @@
   <b><font color="#006666">EndIf</font></b>
     
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized", 0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized", 0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b></font></pre>

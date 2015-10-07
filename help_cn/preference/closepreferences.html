@@ -21,12 +21,25 @@ Closes a preference file previously opened with <a href="openpreferences.html">O
 无.
 
 
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Open a preference file</font>
+<font color="#006666">  OpenPreferences</font>(<font color="#924B72">#PB_Compiler_Home</font> +"Examples\Sources\Data\test.pref")
+  
+  <font color="#006666">; Choose the group "window"</font>
+<font color="#006666">  PreferenceGroup</font>("window")
+  
+  <font color="#006666">; Display the "w" key of this group</font>
+<font color="#006666">  MessageRequester</font>("Info", "w = " +<font color="#006666"> ReadPreferenceLong </font>("w", 0))
+  
+  <font color="#006666">; Close the preference file</font>
+<font color="#006666">  ClosePreferences</font>()
+</font></pre>
+
 </blockquote><p><b>参阅</b></p><blockquote>
 
 <a href="createpreferences.html">CreatePreferences()</a>, <a href="openpreferences.html">OpenPreferences()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Preference Index</a> - <a href=createpreferences.html>CreatePreferences()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Preference Index</a> - <a href=createpreferences.html>CreatePreferences()</a> -&gt;<br><br>
 
 </body></html>

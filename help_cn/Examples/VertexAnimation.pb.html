@@ -55,19 +55,19 @@
 <font color="#006666">    LoadMesh</font>(<font color="#924B72">#Mesh</font>, "Shapekey.mesh")
     
     <font color="#006666">; Create a animation state For each vertex pose, using the pose name 
-</font>    Track     = 0 
-    KeyFrame  = 0 
+</font>    Track     = 0
+    KeyFrame  = 0
     PoseIndex = 0
     Animation$ =<font color="#006666"> MeshPoseName</font>(<font color="#924B72">#Mesh</font>, PoseIndex)
     
 <font color="#006666">    CreateVertexAnimation</font>(<font color="#924B72">#Mesh</font>, Animation$, 0)                 <font color="#006666">; Create animation just for this pose
 </font><font color="#006666">    CreateVertexTrack</font>(<font color="#924B72">#Mesh</font>, Animation$, Track)                 <font color="#006666">; Create track for this pose
 </font><font color="#006666">    CreateVertexPoseKeyFrame</font>(<font color="#924B72">#Mesh</font>, Animation$, Track, KeyFrame)<font color="#006666">; Create a keyframe for this pose.
-</font>        
+</font>
     <font color="#006666">;- Entity
 </font><font color="#006666">    CreateEntity</font>(1,<font color="#006666"> MeshID</font>(<font color="#924B72">#Mesh</font>), <font color="#924B72">#PB_Material_None</font>, 0, 50, 0)
 <font color="#006666">    ScaleEntity</font>(1, 3, 3, 3)
-<font color="#006666">    StartEntityAnimation</font>(1, Animation$)  
+<font color="#006666">    StartEntityAnimation</font>(1, Animation$)
    
     <font color="#006666">;- SkyBox
 </font><font color="#006666">    SkyBox</font>("Desert07.jpg")
@@ -85,7 +85,7 @@
 <font color="#006666">      Screen3DEvents</font>()
       
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineMouse</font>()
-        MouseX = -<font color="#006666">MouseDeltaX</font>()/10 
+        MouseX = -<font color="#006666">MouseDeltaX</font>()/10
         MouseY = -<font color="#006666">MouseDeltaY</font>()/10
       <b><font color="#006666">EndIf</font></b>
       
@@ -96,7 +96,7 @@
 <font color="#006666">          Clamp</font>(Pose, 0, 1)
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Pose &gt; 0
           Pose - 0.01
-<font color="#006666">          Clamp</font>(Pose, 0, 1) 
+<font color="#006666">          Clamp</font>(Pose, 0, 1)
         <b><font color="#006666">EndIf</font></b>
         
       <b><font color="#006666">EndIf</font></b>
@@ -104,19 +104,19 @@
       <font color="#006666">; update the pose reference
 </font><font color="#006666">      UpdateVertexPoseReference</font>(<font color="#924B72">#Mesh</font>, Animation$, Track, KeyFrame, PoseIndex, Pose)
       
-      <font color="#006666">; update animation state since we're fudging this manually
+      <font color="#006666">; update animation state since we&amp;apos;re fudging this manually
 </font><font color="#006666">      UpdateEntityAnimation</font>(1, Animation$)
       
 <font color="#006666">      RotateCamera</font>(0, MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)
       
-<font color="#006666">      RenderWorld</font>() 
+<font color="#006666">      RenderWorld</font>()
       
 <font color="#006666">      FlipBuffers</font>()
     <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>) <b><font color="#006666">Or</font></b> Quit = 1
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized",0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b></font></pre>

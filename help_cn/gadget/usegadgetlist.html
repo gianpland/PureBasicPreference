@@ -26,7 +26,7 @@ table.parameters td { border-width: 1px; padding: 6px; border-style: solid; bord
 <td width="90%"> 
  
 The new window to add gadgets to. It can be obtained with the <a href="../window/windowid.html">WindowID()</a> function. 
-If 'WindowID' is 0, the current GadgetList window will be returned and nothing will be changed. 
+If &amp;apos;WindowID&amp;apos; is 0, the current GadgetList window will be returned and nothing will be changed. 
 
  
 
@@ -52,7 +52,7 @@ gadget creation on the current window:
 <font color="#006666">    ButtonGadget</font>(0, 10, 10, 150, 25, "Button 1")
     
     <font color="#006666">; Create Window with #PB_Window_NoGadgets to prevent automatic GadgetList creation</font>
-    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(1, 0, 0, 300, 200, "Child Window", <font color="#924B72">#PB_Window_TitleBar</font> | <font color="#924B72">#PB_Window_WindowCentered</font> | <font color="#924B72">#PB_Window_NoGadgets</font>,<font color="#006666"> WindowID</font>(0))     
+    <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(1, 0, 0, 300, 200, "Child Window", <font color="#924B72">#PB_Window_TitleBar</font> | <font color="#924B72">#PB_Window_WindowCentered</font> | <font color="#924B72">#PB_Window_NoGadgets</font>,<font color="#006666"> WindowID</font>(0))
       OldGadgetList =<font color="#006666"> UseGadgetList</font>(<font color="#006666">WindowID</font>(1)) <font color="#006666">; Create GadgetList and store old GadgetList</font>
       
 <font color="#006666">      ButtonGadget</font>(10, 10, 10, 150, 25, "Child Window Button")
@@ -71,8 +71,6 @@ gadget creation on the current window:
 
 <a href="../window/openwindow.html">OpenWindow()</a>, <a href="../window/windowid.html">WindowID()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=unbindgadgetevent.html>UnbindGadgetEvent()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadget.html>WebGadget()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=unbindgadgetevent.html>UnbindGadgetEvent()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadget.html>WebGadget()</a> -&gt;<br><br>
 
 </body></html>

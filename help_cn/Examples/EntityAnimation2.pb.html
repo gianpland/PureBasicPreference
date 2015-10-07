@@ -22,7 +22,7 @@
 
 <b><font color="#006666">If</font></b> <font color="#006666">InitEngine3D</font>()
   
-  
+
 <font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Textures", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
 <font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Models", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
 <font color="#006666">  Add3DArchive</font>(<font color="#924B72">#PB_Compiler_Home</font> + "examples/3d/Data/Scripts", <font color="#924B72">#PB_3DArchive_FileSystem</font>)
@@ -62,7 +62,7 @@
 <font color="#006666">    MoveCamera</font>(0, 50, 100, 180,<font color="#924B72">#PB_Absolute</font>)
 <font color="#006666">    CameraLookAt</font>(0,<font color="#006666"> EntityX</font>(1),<font color="#006666"> EntityY</font>(1) + 40,<font color="#006666"> EntityZ</font>(1))
     
-    
+
 <font color="#006666">    CreateLight</font>(0,<font color="#006666"> RGB</font>(255, 255, 255), -40, 100, 80)
 <font color="#006666">    AmbientColor</font>(<font color="#006666">RGB</font>(80, 80, 80))
     
@@ -70,11 +70,11 @@
 <font color="#006666">      Screen3DEvents</font>()
       
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineMouse</font>()
-        MouseX = -<font color="#006666">MouseDeltaX</font>()/10 
+        MouseX = -<font color="#006666">MouseDeltaX</font>()/10
         MouseY = -<font color="#006666">MouseDeltaY</font>()/10
       <b><font color="#006666">EndIf</font></b>
       
-      RobotMove = <font color="#924B72">#False</font>    
+      RobotMove = <font color="#924B72">#False</font>
       <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
@@ -97,7 +97,7 @@
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageUp</font>) <b><font color="#006666">And</font></b> Speed &lt; 1.0
           Speed + 0.05
-        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &gt; 0.1 
+        <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_PageDown</font>) <b><font color="#006666">And</font></b> Speed &gt; 0.1
           Speed - 0.05
         <b><font color="#006666">EndIf</font></b>
         
@@ -123,7 +123,7 @@
   <b><font color="#006666">EndIf</font></b>
   
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can't be initialized",0)
+<font color="#006666">  MessageRequester</font>("Error", "The 3D Engine can&amp;apos;t be initialized",0)
 <b><font color="#006666">EndIf</font></b>
 
 <b><font color="#006666">End</font></b>

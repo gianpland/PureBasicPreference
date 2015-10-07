@@ -14,7 +14,7 @@ If a type is specified after <b><font color="#006666">Static</font></b>, the def
 <b><font color="#006666">Static</font></b> can also be used with <a href="../reference/dim.html">arrays</a>, <a href="../reference/newlist.html">lists</a> and <a href="../reference/newmap.html">maps</a>. 
 When declaring a static array, the dimension parameter has to be a constant value. <br>
 <br>
-The value of the variable isn't reinitialized at each procedure call, means you can use local 
+The value of the variable isn&amp;apos;t reinitialized at each procedure call, means you can use local 
 variables parallel to global variables (with the same name), and both will keep their values. 
 Each variable can have a default value directly assigned to it, but it has to be a constant value.<br>
 <br>
@@ -33,12 +33,12 @@ but with <a href="../reference/protected.html">Protected</a> the local variables
     <b><font color="#006666">Static</font></b> a
     a+1
     <b><font color="#006666">Debug</font></b> "In Procedure: "+<font color="#006666">Str</font>(a) <font color="#006666">; Will print 1, 2, 3 as the variable increments at each procedure call.</font>
-  <b><font color="#006666">EndProcedure</font></b> 
+  <b><font color="#006666">EndProcedure</font></b>
   
 <font color="#006666">  Change</font>()
 <font color="#006666">  Change</font>()
 <font color="#006666">  Change</font>()
-  <b><font color="#006666">Debug</font></b> a <font color="#006666">; Will print 10, as the static variable doesn't affect global one.</font>
+  <b><font color="#006666">Debug</font></b> a <font color="#006666">; Will print 10, as the static variable doesn&amp;apos;t affect global one.</font>
 </font></pre>
 
 </blockquote><p><b>Example:</b> With array</p><blockquote>
@@ -51,12 +51,12 @@ but with <a href="../reference/protected.html">Protected</a> the local variables
     <b><font color="#006666">Static</font></b> <b><font color="#006666">Dim</font></b> <b><font color="#006666">Array</font></b>(2)
     <b><font color="#006666">Array</font></b>(0)+1
     <b><font color="#006666">Debug</font></b> "In Procedure: "+<font color="#006666">Str</font>(<b><font color="#006666">Array</font></b>(0)) <font color="#006666">; Will print 1, 2, 3 as the value of the array field increments at each procedure call.</font>
-  <b><font color="#006666">EndProcedure</font></b> 
+  <b><font color="#006666">EndProcedure</font></b>
   
 <font color="#006666">  Change</font>()
 <font color="#006666">  Change</font>()
 <font color="#006666">  Change</font>()
-  <b><font color="#006666">Debug</font></b> <b><font color="#006666">Array</font></b>(0) <font color="#006666">; Will print 10, as the static array doesn't affect global one.</font>
+  <b><font color="#006666">Debug</font></b> <b><font color="#006666">Array</font></b>(0) <font color="#006666">; Will print 10, as the static array doesn&amp;apos;t affect global one.</font>
 </font></pre>
 
 </body></html>

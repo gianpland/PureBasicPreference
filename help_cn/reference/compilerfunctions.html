@@ -28,8 +28,8 @@ according to the active mode.
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Structure</font></b> Person
     Name.s
-    ForName.s 
-    Age.w 
+    ForName.s
+    Age.w
   <b><font color="#006666">EndStructure</font></b>
   
   <b><font color="#006666">Debug</font></b> "The size of my friend is "+<font color="#006666">Str</font>(<font color="#006666">Sizeof</font>(Person))+" bytes" <font color="#006666">; will be 10 (4+4+2)</font>
@@ -65,17 +65,17 @@ offset, so it will be IndexOfTheFunction*SizeOf(Integer).
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Structure</font></b> Person
     Name.s
-    ForName.s 
-    Age.w 
+    ForName.s
+    Age.w
   <b><font color="#006666">EndStructure</font></b>
   
   <b><font color="#006666">Debug</font></b> <font color="#006666">OffsetOf</font>(Person\Age) <font color="#006666">; will be 8 as a string is 4 byte in memory</font>
                              <font color="#006666">; (16 with the 64-bit compiler, as a string is 8 bytes there)</font>
   
-  
+
   <b><font color="#006666">Interface</font></b> ITest
 <font color="#006666">    Create</font>()
-<font color="#006666">    Destroy</font>(Flags) 
+<font color="#006666">    Destroy</font>(Flags)
   <b><font color="#006666">EndInterface</font></b>
   
   <b><font color="#006666">Debug</font></b> <font color="#006666">OffsetOf</font>(ITest\<font color="#006666">Destroy</font>()) <font color="#006666">; will be 4</font>
@@ -114,17 +114,17 @@ one of the following values:
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Structure</font></b> Person
     Name.s
-    ForName.s 
-    Age.w 
+    ForName.s
+    Age.w
   <b><font color="#006666">EndStructure</font></b>
   
   <b><font color="#006666">If</font></b> <font color="#006666">TypeOf</font>(Person\Age) = <font color="#924B72">#PB_Word</font>
-    <b><font color="#006666">Debug</font></b> "Age is a 'Word'"
+    <b><font color="#006666">Debug</font></b> "Age is a &amp;apos;Word&amp;apos;"
   <b><font color="#006666">EndIf</font></b>
             
-  Surface.f                 
+  Surface.f
   <b><font color="#006666">If</font></b> <font color="#006666">TypeOf</font>(Surface) = <font color="#924B72">#PB_Float</font>
-    <b><font color="#006666">Debug</font></b> "Surface is a 'Float'"
+    <b><font color="#006666">Debug</font></b> "Surface is a &amp;apos;Float&amp;apos;"
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -157,12 +157,12 @@ program being compiled. The name of the subsystem is case sensitive.
 
 <b><font color="#006666">Defined</font></b> checks if a particular object of a code source like <a href="../reference/structures.html">structure</a>, 
 <a href="../reference/interfaces.html">interface</a>, <a href="../reference/variables.html">variables</a> etc. 
-is already defined or not. The 'Name' parameter has to be specified without any extra decoration 
-(ie: without the '#' for a <a href="../reference/general_rules.html">constant</a>, without '()' for an 
+is already defined or not. The &amp;apos;Name&amp;apos; parameter has to be specified without any extra decoration 
+(ie: without the &amp;apos;#&amp;apos; for a <a href="../reference/general_rules.html">constant</a>, without &amp;apos;()&amp;apos; for an 
 <a href="../reference/dim.html">array</a>, a <a href="../reference/newlist.html">list</a> or a <a href="../reference/newmap.html">map</a>). 
 <br>
 <br>
-The 'Type' parameter can be one of the following values: 
+The &amp;apos;Type&amp;apos; parameter can be one of the following values: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Constant</font>
   <font color="#924B72">#PB_Variable</font>
@@ -186,13 +186,13 @@ The 'Type' parameter can be one of the following values:
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PureConstant</font> = 10
   
   <b><font color="#006666">CompilerIf</font></b> <font color="#006666">Defined</font>(PureConstant, <font color="#924B72">#PB_Constant</font>)
-    <b><font color="#006666">Debug</font></b> "Constant 'PureConstant' is declared"
+    <b><font color="#006666">Debug</font></b> "Constant &amp;apos;PureConstant&amp;apos; is declared"
   <b><font color="#006666">CompilerEndIf</font></b>
   
   Test = 25
   
   <b><font color="#006666">CompilerIf</font></b> <font color="#006666">Defined</font>(Test, <font color="#924B72">#PB_Variable</font>)
-    <b><font color="#006666">Debug</font></b> "Variable 'Test' is declared"
+    <b><font color="#006666">Debug</font></b> "Variable &amp;apos;Test&amp;apos; is declared"
   <b><font color="#006666">CompilerEndIf</font></b>
 </font></pre>
 
@@ -205,7 +205,7 @@ The 'Type' parameter can be one of the following values:
 
 <b><font color="#006666">InitializeStructure</font></b> initialize the specified <a href="../reference/structures.html">structured</a> memory area. 
 It initializes structure members of type Array, List and Map, other members are not affected (.s, .l, .i etc). 
-'Structure' is the name of the structure which should be used to perform the initialization. There is no internal check to ensures 
+&amp;apos;Structure&amp;apos; is the name of the structure which should be used to perform the initialization. There is no internal check to ensures 
 the structure match the memory area. Warning: multiple calls to <b><font color="#006666">InitializeStructure</font></b> create a memory leak 
 because the old members are not freed (<b><font color="#006666">ClearStructure</font></b> has to be called before calling <b><font color="#006666">InitializeStructure</font></b> 
 once more). This function is for advanced users only and should be used with care. To allocate dynamic structure, 
@@ -250,7 +250,7 @@ use <a href="../memory/allocatestructure.html">AllocateStructure()</a>().
 <b><font color="#006666">CopyStructure</font></b> copy the memory of a <a href="../reference/structures.html">structured</a> memory area to another. 
 This is useful when dealing with dynamic allocations, trough <a href="../reference/memory.html">pointers</a>. Every fields will be duplicated, even 
 <a href="../reference/dim.html">array</a>, <a href="../reference/newlist.html">list</a>, and <a href="../reference/newmap.html">map</a>. 
-The destination structure will be automatically cleared before doing the copy, it's not 
+The destination structure will be automatically cleared before doing the copy, it&amp;apos;s not 
 needed to call <b><font color="#006666">ClearStructure</font></b> before <b><font color="#006666">CopyStructure</font></b>. Warning: the destination 
 should be a valid structure memory area, or a cleared memory area. If the memory area is not cleared, 
 it could crash, as random values will be used by the clear routine. 
@@ -291,7 +291,7 @@ This function is for advanced users only and should be used with care.
 
 <b><font color="#006666">ClearStructure</font></b> free the memory of a <a href="../reference/structures.html">structured</a> memory area. 
 This is useful when the structure contains strings, array, list or map which have been allocated internally by PureBasic. 
-'Structure' is the name of the structure which should be used to perform the clearing. All the fields will be 
+&amp;apos;Structure&amp;apos; is the name of the structure which should be used to perform the clearing. All the fields will be 
 set to zero, even native type like long, integer etc. There is no internal check to ensures the structure 
 match the memory area. This function is for advanced users only 
 and should be used with care. 

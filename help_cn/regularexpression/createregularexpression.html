@@ -43,10 +43,10 @@ The regular expression which will be applied to the string to match, extract or 
  
 It can be a combination of the following values: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_RegularExpression_DotAll</font>    : '.' matches anything including newlines.
-  <font color="#924B72">#PB_RegularExpression_Extended</font>  : whitespace and '#' comments will be ignored.
-  <font color="#924B72">#PB_RegularExpression_MultiLine</font> : '^' and '$' match newlines within data.
-  <font color="#924B72">#PB_RegularExpression_AnyNewLine</font>: recognize 'CR', 'LF', and 'CRLF' as newline sequences.
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_RegularExpression_DotAll</font>    : &amp;apos;.&amp;apos; matches anything including newlines.
+  <font color="#924B72">#PB_RegularExpression_Extended</font>  : whitespace and &amp;apos;#&amp;apos; comments will be ignored.
+  <font color="#924B72">#PB_RegularExpression_MultiLine</font> : &amp;apos;^&amp;apos; and &amp;apos;$&amp;apos; match newlines within data.
+  <font color="#924B72">#PB_RegularExpression_AnyNewLine</font>: recognize &amp;apos;CR&amp;apos;, &amp;apos;LF&amp;apos;, and &amp;apos;CRLF&amp;apos; as newline sequences.
   <font color="#924B72">#PB_RegularExpression_NoCase</font>    : comparison and matching will be case-insensitive
 </font></pre>
 
@@ -63,18 +63,18 @@ information about the error, see <a href="regularexpressionerror.html">RegularEx
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
-If a regular expression isn't used anymore, use <a href="freeregularexpression.html">FreeRegularExpression()</a> to free up some resources. 
+If a regular expression isn&amp;apos;t used anymore, use <a href="freeregularexpression.html">FreeRegularExpression()</a> to free up some resources. 
 
  
 
 </blockquote><p><b>示例</b></p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; This expression will match every word of 3 letter which begin by a lower case letter,</font>
-  <font color="#006666">; followed with the character 'b' and which ends with an uppercase letter. ex: abC</font>
+  <font color="#006666">; followed with the character &amp;apos;b&amp;apos; and which ends with an uppercase letter. ex: abC</font>
   <font color="#006666">;    </font>
   <b><font color="#006666">If</font></b> <font color="#006666">CreateRegularExpression</font>(0, "[a-z]b[A-Z]")
     <b><font color="#006666">Debug</font></b> <font color="#006666">MatchRegularExpression</font>(0, "abC") <font color="#006666">; Will print 1</font>
@@ -89,8 +89,6 @@ If a regular expression isn't used anymore, use <a href="freeregularexpression.h
 
 <a href="regularexpressionerror.html">RegularExpressionError()</a>, <a href="freeregularexpression.html">FreeRegularExpression()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=countregularexpressiongroups.html>CountRegularExpressionGroups()</a> - <a href=index.html>RegularExpression Index</a> - <a href=examineregularexpression.html>ExamineRegularExpression()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=countregularexpressiongroups.html>CountRegularExpressionGroups()</a> - <a href=index.html>RegularExpression Index</a> - <a href=examineregularexpression.html>ExamineRegularExpression()</a> -&gt;<br><br>
 
 </body></html>

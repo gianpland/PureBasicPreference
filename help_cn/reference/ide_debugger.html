@@ -185,9 +185,9 @@ This will execute a number of steps that you can specify and then stop the execu
 
 <b>Step Over</b> 
 <br>
-This will execute the current line in the source and then stop again, just like the normal 'Step'. 
+This will execute the current line in the source and then stop again, just like the normal &amp;apos;Step&amp;apos;. 
 The difference is that if the current line contains calls to <a href="../reference/procedures.html">procedures</a>, the execution will not 
-stop inside these procedures like it does with the normal 'Step', but it will execute the whole 
+stop inside these procedures like it does with the normal &amp;apos;Step&amp;apos;, but it will execute the whole 
 procedure and stop after it returned. This allows to quickly skip procedures in step mode. 
 
 <br>
@@ -196,7 +196,7 @@ procedure and stop after it returned. This allows to quickly skip procedures in 
 <b>Step Out</b> 
 <br>
 This will execute the remaining code inside the current <a href="../reference/procedures.html">procedure</a> and stop again after the procedure 
-has returned. If the current line is not in any procedure, a normal 'Step' will be done. 
+has returned. If the current line is not in any procedure, a normal &amp;apos;Step&amp;apos; will be done. 
 
  
 
@@ -619,7 +619,7 @@ Type "help &lt;commandname&gt;" for a more detailed description of the command.
 
 
 
-To use the debugger with a program that creates <a href="../thread/index.html">threads</a>, the 'Create thread-safe executable' Option must be set in the 
+To use the debugger with a program that creates <a href="../thread/index.html">threads</a>, the &amp;apos;Create thread-safe executable&amp;apos; Option must be set in the 
 <a href="../reference/ide_compiler.html">Compiler options</a>, as otherwise the information displayed by the debugger concerning 
 line numbers, errors, local variables and such could be wrong due to the multiple threads. 
 
@@ -635,7 +635,7 @@ While the program is running, the variable viewer, callstack display or assembly
 display information on the main thread only. When the program is stopped, they display information 
 on the thread they were stopped in. So to examine local variables or the callstack of a thread, 
 the execution must be halted within that thread (by putting a breakpoint or a <b><font color="#006666">CallDebugger</font></b> statement there). 
-The various 'Step' options always apply to the thread where the execution was last stopped in. 
+The various &amp;apos;Step&amp;apos; options always apply to the thread where the execution was last stopped in. 
 <br>
 If an error occurs, the execution is halted within that thread, so any information displayed by the 
 variable viewer or callstack display is of the thread that caused the error. 

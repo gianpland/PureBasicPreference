@@ -82,7 +82,7 @@ NbCDDrives =<font color="#006666"> InitAudioCD</font>()
       Event =<font color="#006666"> WindowEvent</font>()  <font color="#006666">; This time we use the WindowEvent(), non-blocking command to allow time refreshing
 </font>
       <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_Gadget</font>
-        <b><font color="#006666">Select</font></b> <font color="#006666">EventGadget</font>() 
+        <b><font color="#006666">Select</font></b> <font color="#006666">EventGadget</font>()
 
           <b><font color="#006666">Case</font></b> <font color="#924B72">#GADGET_Play</font>
             CurrentTrack =<font color="#006666"> GetGadgetState</font>(4)+1
@@ -104,11 +104,11 @@ NbCDDrives =<font color="#006666"> InitAudioCD</font>()
         <b><font color="#006666">EndSelect</font></b>
 
       <b><font color="#006666">Else</font></b>
-        <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> : Quit = 1 : <b><font color="#006666">EndIf</font></b>   
+        <b><font color="#006666">If</font></b> Event = <font color="#924B72">#PB_Event_CloseWindow</font> : Quit = 1 : <b><font color="#006666">EndIf</font></b>
       <b><font color="#006666">EndIf</font></b>
     <b><font color="#006666">Until</font></b> Event = 0
 
-<font color="#006666">    Delay</font>(20) <font color="#006666">; Wait 20 ms, which is a long period for the processor, to don't steal the whole CPU power
+<font color="#006666">    Delay</font>(20) <font color="#006666">; Wait 20 ms, which is a long period for the processor, to don&amp;apos;t steal the whole CPU power
 </font>              <font color="#006666">; for our little application :)
 </font>
     CurrentTrack =<font color="#006666"> AudioCDStatus</font>()

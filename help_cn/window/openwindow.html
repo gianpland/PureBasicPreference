@@ -12,7 +12,7 @@ Result = <font color="#006666"><b>OpenWindow</b></font>(#Window, x, y, InnerWidt
 
 
 Opens a new window according to the specified parameters. The new window becomes the active window, 
-it's not needed to use <a href="setactivewindow.html">SetActiveWindow()</a> (unless the window is created as invisible). 
+it&amp;apos;s not needed to use <a href="setactivewindow.html">SetActiveWindow()</a> (unless the window is created as invisible). 
 
  
 
@@ -35,7 +35,7 @@ A number to identify the new window.
 <td> 
  
 The initial position of the window, in pixels (unless one of the center flags is used). 
-If 'x' or 'y' is set to <font color="#924B72">#PB_Ignore</font>, the OS will choose a position for the window. 
+If &amp;apos;x&amp;apos; or &amp;apos;y&amp;apos; is set to <font color="#924B72">#PB_Ignore</font>, the OS will choose a position for the window. 
 
  
 
@@ -59,7 +59,7 @@ The title of the newly created window.
 <tr><td><i>ParentWindowID (optional)</i></td>
 <td> 
  
-The WindowID the new window belongs to. 'ParentWindowID' value can be easily obtained with <a href="windowid.html">WindowID()</a>. 
+The WindowID the new window belongs to. &amp;apos;ParentWindowID&amp;apos; value can be easily obtained with <a href="windowid.html">WindowID()</a>. 
 
  
 
@@ -74,17 +74,17 @@ Can be a combination of the following values:
   <font color="#924B72">#PB_Window_MaximizeGadget</font>: Adds the maximize gadget to the window title bar. <font color="#924B72">#PB_Window_SystemMenu</font> is automatically added.
                              (MacOS only: <font color="#924B72">#PB_Window_SizeGadget</font> will be also automatically added).
   <font color="#924B72">#PB_Window_SizeGadget</font>    : Adds the sizeable feature to a window.
-  <font color="#924B72">#PB_Window_Invisible</font>     : Creates the window but don't display.
+  <font color="#924B72">#PB_Window_Invisible</font>     : Creates the window but don&amp;apos;t display.
   <font color="#924B72">#PB_Window_TitleBar</font>      : Creates a window with a titlebar.
-  <font color="#924B72">#PB_Window_Tool</font>          : Creates a window with a smaller titlebar and no taskbar entry. 
+  <font color="#924B72">#PB_Window_Tool</font>          : Creates a window with a smaller titlebar and no taskbar entry.
   <font color="#924B72">#PB_Window_BorderLess</font>    : Creates a window without any borders.
   <font color="#924B72">#PB_Window_ScreenCentered</font>: Centers the window in the middle of the screen. x,y parameters are ignored.
-  <font color="#924B72">#PB_Window_WindowCentered</font>: Centers the window in the middle of the parent window ('ParentWindowID' must be specified).
+  <font color="#924B72">#PB_Window_WindowCentered</font>: Centers the window in the middle of the parent window (&amp;apos;ParentWindowID&amp;apos; must be specified).
                                              x,y parameters are ignored.
   <font color="#924B72">#PB_Window_Maximize</font>      : Opens the window maximized. (Note: on Linux, not all Windowmanagers support this)
   <font color="#924B72">#PB_Window_Minimize</font>      : Opens the window minimized.
   <font color="#924B72">#PB_Window_NoGadgets</font>     : Prevents the creation of a GadgetList. <a href="../gadget/usegadgetlist.html">UseGadgetList()</a> can be used to do this later.
-  <font color="#924B72">#PB_Window_NoActivate</font>    : Don't activate the window after opening.
+  <font color="#924B72">#PB_Window_NoActivate</font>    : Don&amp;apos;t activate the window after opening.
 </font></pre>
 
 </td></tr>
@@ -98,7 +98,7 @@ for the #Window parameter then the generated number is returned on success.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -106,7 +106,7 @@ All possible events in a window are handled with the <a href="windowevent.html">
 <br>
 <br>
 Windows only: for special situations callbacks are used, see description at <a href="setwindowcallback.html">SetWindowCallback()</a>. On Windows, 
-the height and width of a window with a titlebar can't be less than around 100 pixels. To open smaller windows, use the <font color="#924B72"></font>
+the height and width of a window with a titlebar can&amp;apos;t be less than around 100 pixels. To open smaller windows, use the <font color="#924B72"></font>
 "#PB_Window_BorderLess" flag. 
 <br>
 <br>
@@ -119,8 +119,6 @@ A debugger error will be raised.
 
 <a href="closewindow.html">CloseWindow()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=iswindow.html>IsWindow()</a> - <a href=index.html>Window Index</a> - <a href=postevent.html>PostEvent()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=iswindow.html>IsWindow()</a> - <a href=index.html>Window Index</a> - <a href=postevent.html>PostEvent()</a> -&gt;<br><br>
 
 </body></html>

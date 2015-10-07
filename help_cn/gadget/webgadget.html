@@ -60,7 +60,7 @@ requirements for the WebGadget on each OS.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -83,8 +83,8 @@ The WebGadget uses the Internet Explorer 4.0+ ActiveX object on Windows.
 
 
 
-The WebGadget uses the WebKitGtk library on Linux. The package with this library is named 'libwebkit'. 
-Some distributions may include an old version of this package which is named 'WebKitGtk'. 
+The WebGadget uses the WebKitGtk library on Linux. The package with this library is named &amp;apos;libwebkit&amp;apos;. 
+Some distributions may include an old version of this package which is named &amp;apos;WebKitGtk&amp;apos;. 
 If your distribution does not include a package for this library, the sources can be downloaded from the 
 <a href="http://webkitgtk.org/">WebKitGtk home page</a>. 
  
@@ -121,7 +121,7 @@ The following functions can be used to act on a WebGadget:
 <br>
 <br>
 
-- <a href="setgadgetitemtext.html">SetGadgetItemText()</a>: With <font color="#924B72">#PB_Web_HtmlCode</font> as 'Item' html code can be streamed into the Gadget. (Windows only) 
+- <a href="setgadgetitemtext.html">SetGadgetItemText()</a>: With <font color="#924B72">#PB_Web_HtmlCode</font> as &amp;apos;Item&amp;apos; html code can be streamed into the Gadget. (Windows only) 
 <br>
 
 - <a href="getgadgetitemtext.html">GetGadgetItemText()</a>: The following constants can be used to get information  (Windows only): 
@@ -160,7 +160,7 @@ The Navigation callback must have the following format:
 - <a href="getgadgetattribute.html">GetGadgetAttribute()</a>: Get the following attributes  (Windows only): 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Web_ScrollX</font>       : Get the horizontal scrolling position.
-  <font color="#924B72">#PB_Web_ScrollY</font>�     : Get the vertical scrolling position.
+  <font color="#924B72">#PB_Web_ScrollY</font>�      : Get the vertical scrolling position.
   <font color="#924B72">#PB_Web_Busy</font>          : Returns nonzero if the gadget is busy loading a page.
   <font color="#924B72">#PB_Web_Progress</font>      : Returns the current (sometimes estimated) progress after a <font color="#924B72">#PB_EventType_DownloadProgress</font> event.
   <font color="#924B72">#PB_Web_ProgressMax</font>   : Returns the current (sometimes estimated) maximum progress after a <font color="#924B72">#PB_EventType_DownloadProgress</font> event.
@@ -176,7 +176,7 @@ The following <a href="../window/eventtype.html">types of events</a> can happen 
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_EventType_TitleChange</font>     : The page title changed (Windows only).
   <font color="#924B72">#PB_EventType_StatusChange</font>    : The status message changed (Windows only).
   <font color="#924B72">#PB_EventType_DownloadStart</font>   : A page download started  (Windows, OS X).
-  <font color="#924B72">#PB_EventType_DownloadProgress</font>: Progress info is available with <a href="getgadgetattribute.html">GetGadgetAttribute()</a> (Windows only). 
+  <font color="#924B72">#PB_EventType_DownloadProgress</font>: Progress info is available with <a href="getgadgetattribute.html">GetGadgetAttribute()</a> (Windows only).
   <font color="#924B72">#PB_EventType_DownloadEnd</font>     : A page download ended or aborted (Windows, OS X).
   <font color="#924B72">#PB_EventType_PopupWindow</font>     : A popup window was blocked (Windows only).
   <font color="#924B72">#PB_EventType_PopupMenu</font>       : The popup menu was blocked (display a custom menu here) (Windows only).
@@ -200,23 +200,23 @@ The following <a href="../window/eventtype.html">types of events</a> can happen 
 Example 2: (with navigation callback) 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; This example does display the PureBasic.com website. Inside the callback procedure</font>
-  <font color="#006666">; the navigation to the 'News' site will be avoided (#False returned), but allowed</font>
+  <font color="#006666">; the navigation to the &amp;apos;News&amp;apos; site will be avoided (#False returned), but allowed</font>
   <font color="#006666">; for all other sites (#True returned).</font>
     
-  <b><font color="#006666">Procedure</font></b> <font color="#006666">NavigationCallback</font>(Gadget, Url$) 
+  <b><font color="#006666">Procedure</font></b> <font color="#006666">NavigationCallback</font>(Gadget, Url$)
     <b><font color="#006666">If</font></b> Url$= "http://www.purebasic.com/news.php" 
-<font color="#006666">      MessageRequester</font>("", "No news today!") 
-      <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font> 
-    <b><font color="#006666">Else</font></b> 
-      <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#True</font> 
-    <b><font color="#006666">EndIf</font></b> 
-  <b><font color="#006666">EndProcedure</font></b> 
+<font color="#006666">      MessageRequester</font>("", "No news today!")
+      <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#False</font>
+    <b><font color="#006666">Else</font></b>
+      <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#True</font>
+    <b><font color="#006666">EndIf</font></b>
+  <b><font color="#006666">EndProcedure</font></b>
   
   <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 600, 300, "WebGadget", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_ScreenCentered</font>) 
 <font color="#006666">    WebGadget</font>(0, 10, 10, 580, 280, "http://www.purebasic.com") 
 <font color="#006666">    SetGadgetAttribute</font>(0, <font color="#924B72">#PB_Web_NavigationCallback</font>, @NavigationCallback())
-    <b><font color="#006666">Repeat</font></b> 
-    <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font> 
+    <b><font color="#006666">Repeat</font></b>
+    <b><font color="#006666">Until</font></b> <font color="#006666">WaitWindowEvent</font>() = <font color="#924B72">#PB_Event_CloseWindow</font>
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -225,8 +225,6 @@ Example 2: (with navigation callback)
 <a href="getgadgettext.html">GetGadgetText()</a>, <a href="setgadgettext.html">SetGadgetText()</a>, <a href="getgadgetitemtext.html">GetGadgetItemText()</a>, <a href="setgadgetitemtext.html">SetGadgetItemText()</a>, <a href="setgadgetstate.html">SetGadgetState()</a>, 
 <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=usegadgetlist.html>UseGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadgetpath.html>WebGadgetPath()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=usegadgetlist.html>UseGadgetList()</a> - <a href=index.html>Gadget Index</a> - <a href=webgadgetpath.html>WebGadgetPath()</a> -&gt;<br><br>
 
 </body></html>

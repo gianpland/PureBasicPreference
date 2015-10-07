@@ -5,7 +5,7 @@
 
 
 
-We're going to revisit the file properties example again. This time to introduce 
+We&amp;apos;re going to revisit the file properties example again. This time to introduce 
 <a href="../reference/procedures.html">procedures</a> and to address some of the limitations 
 identified in the program in previous items. 
 
@@ -43,7 +43,7 @@ identified in the program in previous items.
 <font color="#006666">    ClearList</font>(<font color="#006666">Files</font>())
     
     <font color="#006666">; Open the directory to enumerate its contents.</font>
-    Result =<font color="#006666"> ExamineDirectory</font>(0, Folder, "*.*")  
+    Result =<font color="#006666"> ExamineDirectory</font>(0, Folder, "*.*")
     
     <font color="#006666">; If this is ok, begin enumeration of entries.</font>
     <b><font color="#006666">If</font></b> Result
@@ -113,7 +113,7 @@ identified in the program in previous items.
       Attrib =<font color="#006666"> StrU</font>(<font color="#006666">Files</font>()\Attributes)
       
       <font color="#006666">; Build a row string.  </font>
-      <font color="#006666">; The Line Feed character 'Chr(10)' tells the gadget to move to the next column.</font>
+      <font color="#006666">; The Line Feed character &amp;apos;Chr(10)&amp;apos; tells the gadget to move to the next column.</font>
       Msg = Num +<font color="#006666"> Chr</font>(10) +<font color="#006666"> Files</font>()\Name +<font color="#006666"> Chr</font>(10) + Create +<font color="#006666"> Chr</font>(10) + Access +<font color="#006666"> Chr</font>(10) + Modify +<font color="#006666"> Chr</font>(10) + Attrib +<font color="#006666"> Chr</font>(10) + Size
       
       <font color="#006666">; Add the row to the list view gadget.</font>
@@ -212,7 +212,7 @@ identified in the program in previous items.
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_SizeWindow</font>
         <font color="#006666">; The window was moved or resized.</font>
         <b><font color="#006666">If</font></b> EventWindow = <font color="#924B72">#WindowFiles</font>
-<font color="#006666">          WindowResize</font>()  
+<font color="#006666">          WindowResize</font>()
         <b><font color="#006666">EndIf</font></b>
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_CloseWindow</font>
@@ -232,7 +232,7 @@ Previously, we mentioned four limitations to this program. This new version uses
 <a href="../reference/procedures.html">procedures</a> to address three of them. 
 <br>
 <br>
-1) You couldn't choose a folder to show. 
+1) You couldn&amp;apos;t choose a folder to show. 
 <br>
 The "FolderSelect" procedure shows a <a href="../requester/pathrequester.html">path requester</a> 
 to allow the user to select a folder. The <a href="../reference/variables.html">variable</a> "Folder" 
@@ -241,17 +241,17 @@ is updated with the result of this procedure. The button also calls "LabelUpdate
 <a href="../window/index.html">window</a>. 
 <br>
 <br>
-2) You can't update the list contents without closing and restarting the program. 
+2) You can&amp;apos;t update the list contents without closing and restarting the program. 
 <br>
 Now, when the "Update List" button is clicked, "FilesExamine" and "ListLoad" are called 
 again to update the display. 
 <br>
 <br>
-3) If you resize the window, the gadgets don't resize with it. 
+3) If you resize the window, the gadgets don&amp;apos;t resize with it. 
 <br>
 The "WindowResize" procedure is called in the event loop to resize the 
 <a href="../gadget/index.html">gadgets</a> when the form is resized. Also, although this program 
-didn't really need to, this procedure is called after calling "WindowCreate" to 
+didn&amp;apos;t really need to, this procedure is called after calling "WindowCreate" to 
 make sure the gadgets are the right size initially. 
 <br>
 <br>

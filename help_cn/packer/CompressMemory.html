@@ -4,7 +4,7 @@
 <font face="Arial" size="2"><p align="center"><b><font size="4">CompressMemory()</font></b></p>
 <p><b>语法</b></p><blockquote>
 
-Result = <font color="#006666"><b>CompressMemory</b></font>(*Buffer, Size, *Output, OutputSize [, PluginID])</blockquote>
+Result = <font color="#006666"><b>CompressMemory</b></font>(*Buffer, Size, *Output, OutputSize [, Plugin])</blockquote>
 
 </blockquote>
 <b>概要</b><br><blockquote>
@@ -54,7 +54,7 @@ The memory buffer size to store the compressed data.
  
 
 </td></tr>
-<tr><td><i>PluginID (optional)</i></td>
+<tr><td><i>Plugin (optional)</i></td>
 <td> 
  
 The plugin to use, if more than one packer plugin has been registered. It can be one of the following value: 
@@ -71,7 +71,7 @@ The plugin to use, if more than one packer plugin has been registered. It can be
 
 
 Return the compressed size if the buffer has been successfully compressed, zero otherwise. 
-If the buffer data can't be compressed (already compressed data generally don't compress anymore), it will return zero. 
+If the buffer data can&amp;apos;t be compressed (already compressed data generally don&amp;apos;t compress anymore), it will return zero. 
 
  
 
@@ -79,8 +79,6 @@ If the buffer data can't be compressed (already compressed data generally don't 
 
 <a href="uncompressmemory.html">UncompressMemory()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=closepack.html>ClosePack()</a> - <a href=index.html>Packer Index</a> - <a href=createpack.html>CreatePack()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=closepack.html>ClosePack()</a> - <a href=index.html>Packer Index</a> - <a href=createpack.html>CreatePack()</a> -&gt;<br><br>
 
 </body></html>

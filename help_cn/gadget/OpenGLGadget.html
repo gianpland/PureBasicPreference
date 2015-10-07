@@ -13,7 +13,7 @@ Result = <font color="#006666"><b>OpenGLGadget</b></font>(#Gadget, x, y, Width, 
 
 Creates an OpenGL gadget in the current GadgetList. This gadget provides an OpenGL drawing context and events for mouse 
 and keyboard interaction to easily create 3D opengl view. Most of the OpenGL commands are directly available in PureBasic 
-using the underscore API notation (command ending with an underscore, like 'glBegin_()'). 
+using the underscore API notation (command ending with an underscore, like &amp;apos;glBegin_()&amp;apos;). 
 
  
 
@@ -45,7 +45,17 @@ The position and dimensions of the new gadget (in pixels). The maximum width and
  
 Flags to modify the gadget behavior. It can be a combination of the following constants: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_OpenGL_Keyboard</font> : Allows the gadget to receive the keyboard focus and keyboard events.
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_OpenGL_Keyboard</font>               : allows the gadget to receive the keyboard focus and keyboard events.
+  <font color="#924B72">#PB_OpenGL_NoFlipSynchronization</font>  : disables the vsync synchronization.
+  <font color="#924B72">#PB_OpenGL_FlipSynchronization</font>    : enables the vsync synchronization (default).
+  <font color="#924B72">#PB_OpenGL_NoDepthBuffer</font>          : disables the depth buffer.
+  <font color="#924B72">#PB_OpenGL_16BitDepthBuffer</font>       : creates a 16-bit depth buffer (default).
+  <font color="#924B72">#PB_OpenGL_24BitDepthBuffer</font>       : creates a 24-bit depth buffer.
+  <font color="#924B72">#PB_OpenGL_NoStencilBuffer</font>        : disables the stencil buffer (default).
+  <font color="#924B72">#PB_OpenGL_8BitStencilBuffer</font>      : creates a 8-bit stencil buffer.
+  <font color="#924B72">#PB_OpenGL_NoAccumulationBuffer</font>   : disables the accumulation buffer (default).
+  <font color="#924B72">#PB_OpenGL_32BitAccumulationBuffer</font>: creates a 32-bit accumulation buffer.
+  <font color="#924B72">#PB_OpenGL_64BitAccumulationBuffer</font>: creates a 64-bit accumulation buffer.
 </font></pre>
 
 The <font color="#924B72">#PB_OpenGL_Keyboard</font> flag is required to receive any keyboard events in the gadget. If you include this flag, you should 
@@ -65,7 +75,7 @@ then the return-value is the auto-generated gadget number on success.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -145,10 +155,10 @@ Returns the state of the mouse buttons for the event. The result is a combinatio
 
 Returns the state of the keyboard modifiers for the event. The result is a combination (using bitwise or) of the following values: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_OpenGL_Shift</font>  : The 'shift' key is currently pressed.
-  <font color="#924B72">#PB_OpenGL_Alt</font>    : The 'alt' key is currently pressed.
-  <font color="#924B72">#PB_OpenGL_Control</font>: The 'control' key is currently pressed.
-  <font color="#924B72">#PB_OpenGL_Command</font>: The 'command' (or "apple") key is currently pressed. (Mac OSX only)
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_OpenGL_Shift</font>  : The &amp;apos;shift&amp;apos; key is currently pressed.
+  <font color="#924B72">#PB_OpenGL_Alt</font>    : The &amp;apos;alt&amp;apos; key is currently pressed.
+  <font color="#924B72">#PB_OpenGL_Control</font>: The &amp;apos;control&amp;apos; key is currently pressed.
+  <font color="#924B72">#PB_OpenGL_Command</font>: The &amp;apos;command&amp;apos; (or "apple") key is currently pressed. (Mac OSX only)
 </font></pre>
 </blockquote>
 
@@ -248,7 +258,7 @@ visible, the buffers needs to be flipped, so the back becomes the front one (the
 which is displayed). 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#True</font>  : flips the buffers
-  <font color="#924B72">#False</font> : don't flip the buffers (no use for now).
+  <font color="#924B72">#False</font> : don&amp;apos;t flip the buffers (no use for now).
 </font></pre>
 </blockquote>
 
@@ -302,7 +312,7 @@ Mac OSX: a pointer to a Cursor structure
 
 
 
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
+A &amp;apos;mini help&amp;apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. 
 
  
 
@@ -313,8 +323,6 @@ A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">Gad
 
 <a href="getgadgetattribute.html">GetGadgetAttribute()</a>, <a href="setgadgetattribute.html">SetGadgetAttribute()</a>, <a href="../window/eventtype.html">EventType()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=mdigadget.html>MDIGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=opengadgetlist.html>OpenGadgetList()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=mdigadget.html>MDIGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=opengadgetlist.html>OpenGadgetList()</a> -&gt;<br><br>
 
 </body></html>

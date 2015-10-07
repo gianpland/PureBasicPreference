@@ -4,7 +4,7 @@
 <font face="Arial" size="2"><p align="center"><b><font size="4">WriteCharacter()</font></b></p>
 <p><b>语法</b></p><blockquote>
 
-Result = <font color="#006666"><b>WriteCharacter</b></font>(#File, Number.c)</blockquote>
+Result = <font color="#006666"><b>WriteCharacter</b></font>(#File, Character.c [, Format])</blockquote>
 
 </blockquote>
 <b>概要</b><br><blockquote>
@@ -29,7 +29,7 @@ The file to write to.
  
 
 </td></tr>
-<tr><td><i>Number</i></td>
+<tr><td><i>Character</i></td>
 <td> 
  
 The character value to write. 
@@ -37,16 +37,27 @@ The character value to write.
  
 
 </td></tr>
+<tr><td><i>Format (optional)</i></td>
+<td> 
+ 
+The format of the character to write. It can be one of the following value: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Ascii</font>  : 1 byte character (default in ASCII mode).
+  <font color="#924B72">#PB_Unicode</font>: 2 bytes character (default in <a href="../reference/unicode.html">unicode</a> mode).
+  <font color="#924B72">#PB_UTF8</font>   : multi-bytes character (from 1 to 4 bytes).
+</font></pre>
+
+</td></tr>
 </table>
 </blockquote><p><b>返回值</b></p><blockquote>
 
 
 
-Returns nonzero if the operation was successful and zero if it failed. 
+Returns nonzero if the operation was successful or zero if it failed. 
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -64,8 +75,6 @@ For an example see the <a href="createfile.html">CreateFile()</a> function - wit
 
 <a href="readcharacter.html">ReadCharacter()</a>, <a href="writeasciicharacter.html">WriteAsciiCharacter()</a>, <a href="writeunicodecharacter.html">WriteUnicodeCharacter()</a>, <a href="createfile.html">CreateFile()</a>, <a href="openfile.html">OpenFile()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=writebyte.html>WriteByte()</a> - <a href=index.html>File Index</a> - <a href=writedata.html>WriteData()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=writebyte.html>WriteByte()</a> - <a href=index.html>File Index</a> - <a href=writedata.html>WriteData()</a> -&gt;<br><br>
 
 </body></html>

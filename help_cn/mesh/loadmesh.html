@@ -13,11 +13,47 @@ Result = <font color="#006666"><b>LoadMesh</b></font>(#Mesh, Filename$)</blockqu
 
 
 
-Loads a new #Mesh. If <a href="../reference/purebasic_objects.html">#PB_Any</a> is used 
-as the '#Mesh' parameter, then the new mesh number will be returned as 'Result'. Before loading 
-a mesh, an archive must be specified with <a href="../engine3d/add3darchive.html">Add3DArchive()</a>. 
-<br>
-<br>
+Loads a new mesh. Before loading a mesh, an archive must be specified with <a href="../engine3d/add3darchive.html">Add3DArchive()</a>. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+<style type="text/css">
+table.parameters { border-spacing: 0px; border-style: none; border-collapse: collapse; }
+table.parameters td { border-width: 1px; padding: 6px; border-style: solid; border-color: gray; vertical-align: top; font-family:Arial; font-size:10pt; }
+</style>
+<table width="90%" class="parameters">
+<tr><td width="10%"><i>#Mesh</i></td>
+<td width="90%"> 
+ 
+A number to identify the new mesh. <a href="../reference/purebasic_objects.html">#PB_Any</a> can 
+be used to auto-generate this number. 
+
+ 
+
+</td></tr>
+<tr><td><i>Filename$</i></td>
+<td> 
+ 
+The filename of the mesh. 
+
+ 
+
+</td></tr>
+</table>
+</blockquote><p><b>返回值</b></p><blockquote>
+
+
+
+Nonzero if the mesh was successfully loaded, zero otherwise. If <font color="#924B72">#PB_Any</font> was used 
+for the #Texture parameter then the generated number is returned on success. 
+
+ 
+
+</blockquote><p><b>备注</b></p><blockquote>
+
+
+
 Mesh is required to be in the OGRE .mesh format. A command-line tool based on <a href="http://assimp.sourceforge.net/main_features_formats.html">assimp</a> is available to convert 
 many 3d formats into the OGRE mesh, including materials and animations. It can be downloaded 
 here: <a href="http://www.purebasic.com/download/OgreAssimpConverter.zip">OgreAssimpConverter.zip</a> (Windows only). Some problems 
@@ -26,15 +62,13 @@ it. <br>
 <br>
 It is also possible to use existing exporter for Milkshape, Lightwave, Blender or 3DS Max. More 
 information may be found on the <a href="http://www.ogre3d.org/">OGRE website</a>. 
-<br>
-<br>
-If Result equals 0, then the Mesh may not be loaded. 
-If the #Mesh already exists, then it is freed and replaced by a new one. 
 
  
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=ismesh.html>IsMesh()</a> - <a href=index.html>Mesh Index</a> - <a href=meshface.html>MeshFace()</a> -&gt;
+</blockquote><p><b>参阅</b></p><blockquote>
 
+<a href="freemesh.html">FreeMesh()</a> 
 
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=ismesh.html>IsMesh()</a> - <a href=index.html>Mesh Index</a> - <a href=meshface.html>MeshFace()</a> -&gt;<br><br>
 
 </body></html>

@@ -31,9 +31,9 @@ DatabaseFile$ =<font color="#006666"> GetTemporaryDirectory</font>()+"Database.s
    
 <font color="#006666">      CheckDatabaseUpdate</font>(0, "CREATE TABLE food (name CHAR(50), weight INT)")
 
-<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES ('apple', '10')")
-<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES ('pear', '5')")
-<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES ('banana', '20')")
+<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES (&amp;apos;apple&amp;apos;, &amp;apos;10&amp;apos;)")
+<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES (&amp;apos;pear&amp;apos;, &amp;apos;5&amp;apos;)")
+<font color="#006666">      CheckDatabaseUpdate</font>(0, "INSERT INTO food (name, weight) VALUES (&amp;apos;banana&amp;apos;, &amp;apos;20&amp;apos;)")
       
       <b><font color="#006666">If</font></b> <font color="#006666">DatabaseQuery</font>(0, "SELECT * FROM food WHERE weight &gt; 7")
       
@@ -46,10 +46,10 @@ DatabaseFile$ =<font color="#006666"> GetTemporaryDirectory</font>()+"Database.s
       
 <font color="#006666">      CloseDatabase</font>(0)
    <b><font color="#006666">Else</font></b>
-      <b><font color="#006666">Debug</font></b> "Can't open database !"
+      <b><font color="#006666">Debug</font></b> "Can&amp;apos;t open database !"
    <b><font color="#006666">EndIf</font></b>
 <b><font color="#006666">Else</font></b>
-   <b><font color="#006666">Debug</font></b> "Can't create the database file !"
+   <b><font color="#006666">Debug</font></b> "Can&amp;apos;t create the database file !"
 <b><font color="#006666">EndIf</font></b>
 </font></pre>
 </body></html>

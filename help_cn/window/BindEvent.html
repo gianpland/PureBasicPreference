@@ -10,7 +10,7 @@
 
 
 
-Bind an event to a callback. It's an additional way to handle events in PureBasic, 
+Bind an event to a callback. It&amp;apos;s an additional way to handle events in PureBasic, 
 which works without problem with the regulars <a href="windowevent.html">WindowEvent()</a> / <a href="waitwindowevent.html">WaitWindowEvent()</a> 
 commands. It also allows to have real-time event notifications as 
 the callback can be invoked as soon as the event occurs (useful for 
@@ -44,16 +44,22 @@ The callback procedure to call when the event occurs. It has to be declared like
 </font></pre>
 
 Regular functions like <a href="eventgadget.html">EventGadget()</a>, <a href="eventwindow.html">EventWindow()</a>, <a href="eventmenu.html">EventMenu()</a>, <a href="eventtype.html">EventType()</a> and <a href="eventdata.html">EventData()</a> are 
-available within the callback to get more information about the event. 
+available within the callback to get more information about the event. <br>
+<br>
+Note: <a href="windowevent.html">WindowEvent()</a> and <a href="waitwindowevent.html">WaitWindowEvent()</a> should never be called from inside the callback 
+or the program can be locked or have wrong behavior. 
+
 
  
+
 
 </td></tr>
 <tr><td><i>Window (optional)</i></td>
 <td> 
  
 The #Window number to bind the event to. The event will be dispatched only when occurring on this 
-window. <font color="#924B72">#PB_All</font> can be specified to bind the event to all windows. 
+window. <font color="#924B72">#PB_All</font> can be specified to bind the event to all windows (if specified, &amp;apos;Object&amp;apos; and 
+&amp;apos;EventType&amp;apos; parameters have to be set to <font color="#924B72">#PB_All</font> as well). 
 
  
 
@@ -63,7 +69,8 @@ window. <font color="#924B72">#PB_All</font> can be specified to bind the event 
  
 The object number to bind the event to. It can be a <a href="../gadget/index.html">gadget</a>, 
 <a href="../menu/index.html">menuitem</a> or <a href="../systray/index.html">systray</a> number. <font color="#924B72">#PB_All</font> 
-can be used to bind the event to any objects. 
+can be used to bind the event to any objects (if specified, &amp;apos;EventType&amp;apos; parameter 
+has to be set to <font color="#924B72">#PB_All</font> as well). 
 
  
 
@@ -88,7 +95,7 @@ The event type to bind the event to. For a full list of supported type, see <a h
     <b><font color="#006666">Debug</font></b> "Size event on window #" +<font color="#006666"> EventWindow</font>()
   <b><font color="#006666">EndProcedure</font></b>
   
-  
+
 <font color="#006666">  OpenWindow</font>(0, 100, 100, 200, 200, "Resize test", <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_SystemMenu</font>)
   
 <font color="#006666">  BindEvent</font>(<font color="#924B72">#PB_Event_SizeWindow</font>, @SizeWindowHandler())
@@ -101,8 +108,6 @@ The event type to bind the event to. For a full list of supported type, see <a h
 </blockquote><p><b>参阅</b></p><blockquote>
 <a href="../gadget/bindgadgetevent.html">BindGadgetEvent()</a>, <a href="../menu/bindmenuevent.html">BindMenuEvent()</a>, <a href="unbindevent.html">UnbindEvent()</a>, <a href="windowevent.html">WindowEvent()</a>, <a href="waitwindowevent.html">WaitWindowEvent()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addwindowtimer.html>AddWindowTimer()</a> - <a href=index.html>Window Index</a> - <a href=closewindow.html>CloseWindow()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addwindowtimer.html>AddWindowTimer()</a> - <a href=index.html>Window Index</a> - <a href=closewindow.html>CloseWindow()</a> -&gt;<br><br>
 
 </body></html>

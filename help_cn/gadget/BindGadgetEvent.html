@@ -10,7 +10,7 @@
 
 
 
-Bind a gadget event to a callback. It's an additional way to handle events in PureBasic, 
+Bind a gadget event to a callback. It&amp;apos;s an additional way to handle events in PureBasic, 
 which works without problem with the regulars <a href="../window/windowevent.html">WindowEvent()</a> / <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> 
 commands. It also allows to have real-time event notifications as 
 the callback can be invoked as soon as the event occurs (useful for 
@@ -43,7 +43,10 @@ The callback procedure to call when the event occurs. It has to be declared like
 </font></pre>
 
 Regular functions like <a href="../window/eventgadget.html">EventGadget()</a>, <a href="../window/eventwindow.html">EventWindow()</a>, <a href="../window/eventmenu.html">EventMenu()</a>, <a href="../window/eventtype.html">EventType()</a> and <a href="../window/eventdata.html">EventData()</a> are 
-available within the callback to get more information about the event. 
+available within the callback to get more information about the event. <br>
+<br>
+Note: <a href="../window/windowevent.html">WindowEvent()</a> and <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> should never be called from inside the callback 
+or the program can be locked or have wrong behavior. 
 
  
 
@@ -82,8 +85,6 @@ The event type to bind the event to. For a full list of supported types, see <a 
 </blockquote><p><b>参阅</b></p><blockquote>
 <a href="bindgadgetevent.html">BindGadgetEvent()</a>, <a href="../menu/bindmenuevent.html">BindMenuEvent()</a>, <a href="../window/unbindevent.html">UnbindEvent()</a>, <a href="../window/windowevent.html">WindowEvent()</a>, <a href="../window/waitwindowevent.html">WaitWindowEvent()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addgadgetitem.html>AddGadgetItem()</a> - <a href=index.html>Gadget Index</a> - <a href=buttongadget.html>ButtonGadget()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addgadgetitem.html>AddGadgetItem()</a> - <a href=index.html>Gadget Index</a> - <a href=buttongadget.html>ButtonGadget()</a> -&gt;<br><br>
 
 </body></html>

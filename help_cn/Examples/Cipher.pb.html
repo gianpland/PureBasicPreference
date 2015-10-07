@@ -16,10 +16,12 @@
   <b><font color="#006666">CompilerError</font></b> "This program should be compiled in ASCII mode (see Compiler/Compiler Option window)"
 <b><font color="#006666">CompilerEndIf</font></b>
 
+<font color="#006666">UseCRC32Fingerprint</font>()
+<font color="#006666">UseMD5Fingerprint</font>()
 
-<font color="#006666">MessageRequester</font>("CRC32 Test", "Should be 352441C2 : "+<font color="#006666">Hex</font>(<font color="#006666">CRC32Fingerprint</font>(@"abc", 3)), 0)
+<font color="#006666">MessageRequester</font>("CRC32 Test", "Should be 352441c2 : "+<font color="#006666">StringFingerprint</font>("abc", <font color="#924B72">#PB_Ascii</font>, <font color="#924B72">#PB_Cipher_CRC32</font>), 0)
 
-<font color="#006666">MessageRequester</font>("MD5 Test"  , "Should be ed50deb5bb795508b8a5c8e50dafa954 : "+<font color="#006666">MD5Fingerprint</font>(@"PureBasic",<font color="#006666"> Len</font>("PureBasic")), 0)
+<font color="#006666">MessageRequester</font>("MD5 Test"  , "Should be ed50deb5bb795508b8a5c8e50dafa954 : "+<font color="#006666">StringFingerprint</font>("PureBasic", <font color="#924B72">#PB_Ascii</font>, <font color="#924B72">#PB_Cipher_MD5</font>), 0)
 
 <font color="#006666">MessageRequester</font>("DES Test"  , "Should be FrfWXJ4yTjycc : "+<font color="#006666">DESFingerprint</font>("1Fr", "Fr"), 0)
 

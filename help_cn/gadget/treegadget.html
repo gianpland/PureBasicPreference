@@ -43,9 +43,9 @@ The position and dimensions of the new gadget.
  
 Flags to modify the gadget behavior. It can be a combination of the following values: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Tree_AlwaysShowSelection</font> : Even if the gadget isn't activated, the selection is still visible.
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Tree_AlwaysShowSelection</font> : Even if the gadget isn&amp;apos;t activated, the selection is still visible.
   <font color="#924B72">#PB_Tree_NoLines</font>             : Hide the little lines between each nodes.
-  <font color="#924B72">#PB_Tree_NoButtons</font>           : Hide the '+' node buttons.
+  <font color="#924B72">#PB_Tree_NoButtons</font>           : Hide the &amp;apos;+&amp;apos; node buttons.
   <font color="#924B72">#PB_Tree_CheckBoxes</font>          : Add a checkbox before each item.
   <font color="#924B72">#PB_Tree_ThreeState</font>          : The checkboxes can have an "in between" state.
 </font></pre>
@@ -67,19 +67,19 @@ then the return-value is the auto-generated gadget number on success.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
 Each item in the tree has a sublevel value assigned to it, that determines its relation with the item above and below it. 
 Items with the same sublevel belong to the same node, items with a higher sublevel are child-items and so on. This sublevel 
-value can be used to determine the relation between two items by comparing their sublevel values. The 'Flags' parameter of 
+value can be used to determine the relation between two items by comparing their sublevel values. The &amp;apos;Flags&amp;apos; parameter of 
 <a href="addgadgetitem.html">AddGadgetItem()</a> is always required for TreeGadget items and is used to set the sublevel at which the 
 new item should be added. Note that if the function is called with a sublevel at which the item cannot be added, the 
 item will be added at the sublevel where it is possible to add it. 
 <br>
 <br>
-A 'mini help' can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. <br>
+A &amp;apos;mini help&amp;apos; can be added to this gadget using <a href="gadgettooltip.html">GadgetToolTip()</a>. <br>
 <br>
 <br>
 
@@ -128,7 +128,7 @@ The following functions can be used to act on the tree content: <br>
 <br>
 <br>
 This gadget supports the <a href="setgadgetcolor.html">SetGadgetColor()</a> and <a href="getgadgetcolor.html">GetGadgetColor()</a> functions with 
-the following values as 'ColorType': 
+the following values as &amp;apos;ColorType&amp;apos;: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Gadget_FrontColor</font>: Textcolor
   <font color="#924B72">#PB_Gadget_BackColor</font> : Backgroundcolor
@@ -180,8 +180,6 @@ a Drag &amp; Drop operation.
 <a href="getgadgettext.html">GetGadgetText()</a>, <a href="setgadgettext.html">SetGadgetText()</a>, <a href="getgadgetitemattribute.html">GetGadgetItemAttribute()</a>, <a href="gadgetitemid.html">GadgetItemID()</a>, <a href="getgadgetcolor.html">GetGadgetColor()</a>, <a href="setgadgetcolor.html">SetGadgetColor()</a>, 
 <a href="explorertreegadget.html">ExplorerTreeGadget()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=trackbargadget.html>TrackBarGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=unbindgadgetevent.html>UnbindGadgetEvent()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=trackbargadget.html>TrackBarGadget()</a> - <a href=index.html>Gadget Index</a> - <a href=unbindgadgetevent.html>UnbindGadgetEvent()</a> -&gt;<br><br>
 
 </body></html>

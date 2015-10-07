@@ -4,7 +4,7 @@
 <font face="Arial" size="2"><p align="center"><b><font size="4">ReceiveHTTPFile()</font></b></p>
 <p><b>语法</b></p><blockquote>
 
-Result = <font color="#006666"><b>ReceiveHTTPFile</b></font>(URL$, Filename$)</blockquote>
+Result = <font color="#006666"><b>ReceiveHTTPFile</b></font>(URL$, Filename$ [, Flags])</blockquote>
 
 </blockquote>
 <b>概要</b><br><blockquote>
@@ -39,16 +39,28 @@ If the file exists, it will be overwritten.
  
 
 </td></tr>
+<tr><td><i>Flags (optional)</i></td>
+<td> 
+ 
+It can be a combination of the following value: 
+ 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_HTTP_Asynchronous</font>: starts the download asynchronously.
+  <font color="#924B72">#PB_HTTP_NoRedirect</font>  : don&amp;apos;t follow automatic redirections.
+</font></pre>
+
+</td></tr>
 </table>
 </blockquote><p><b>返回值</b></p><blockquote>
 
 
 
-Returns nonzero if the download was successful or zero if not. 
+Returns nonzero if the download was successful, zero otherwise. If <font color="#924B72">#PB_HTTP_Asynchronous</font> 
+was specified, it returns the &amp;apos;HttpConnection&amp;apos; value needed for <a href="httpprogress.html">HTTPProgress()</a>, 
+<a href="aborthttp.html">AbortHTTP()</a> and <a href="finishhttp.html">FinishHTTP()</a>. 
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 <a href="../network/initnetwork.html">InitNetwork()</a> has to be called before using this command. 
 
@@ -58,9 +70,9 @@ Returns nonzero if the download was successful or zero if not.
 
 <pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  InitNetwork</font>()
 
-  Filename$ =<font color="#006666"> SaveFileRequester</font>("Where to save index.php3 ?", "", "", 0)
+  Filename$ =<font color="#006666"> SaveFileRequester</font>("Where to save index.php ?", "", "", 0)
 
-  <b><font color="#006666">If</font></b> <font color="#006666">ReceiveHTTPFile</font>("http://www.purebasic.com/index.php3", Filename$)
+  <b><font color="#006666">If</font></b> <font color="#006666">ReceiveHTTPFile</font>("http://www.purebasic.com/index.php", Filename$)
     <b><font color="#006666">Debug</font></b> "Success"
   <b><font color="#006666">Else</font></b>
     <b><font color="#006666">Debug</font></b> "Failed"
@@ -71,8 +83,6 @@ Returns nonzero if the download was successful or zero if not.
 
 <a href="gethttpheader.html">GetHTTPHeader()</a>, <a href="urlencoder.html">URLEncoder()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=geturlpart.html>GetURLPart()</a> - <a href=index.html>Http Index</a> - <a href=seturlpart.html>SetURLPart()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=httpprogress.html>HTTPProgress()</a> - <a href=index.html>Http Index</a> - <a href=receivehttpmemory.html>ReceiveHTTPMemory()</a> -&gt;<br><br>
 
 </body></html>

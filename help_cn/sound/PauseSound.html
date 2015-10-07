@@ -31,7 +31,7 @@ The sound to use. If <font color="#924B72">#PB_All</font> is specified, all the 
 <tr><td><i>Channel (optional)</i></td>
 <td> 
  
-The channel to use. It's the value returned by <a href="playsound.html">PlaySound()</a> when using the 
+The channel to use. It&amp;apos;s the value returned by <a href="playsound.html">PlaySound()</a> when using the 
 <font color="#924B72">#PB_Sound_MultiChannel</font> flag. If <font color="#924B72">#PB_All</font> is specified, all the channels of the sound are paused. 
 
  
@@ -42,7 +42,7 @@ The channel to use. It's the value returned by <a href="playsound.html">PlaySoun
 无.
 
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
@@ -50,12 +50,32 @@ Sounds loaded with the <font color="#924B72">#PB_Sound_Streaming</font> flag are
 
  
 
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666"> InitSound</font>()           <font color="#006666">; Initialize Sound system</font>
+<font color="#006666"> UseOGGSoundDecoder</font>()  <font color="#006666">; Use ogg files</font>
+
+ <font color="#006666">; Loads a sound from a file</font>
+<font color="#006666"> LoadSound</font>(0, <font color="#924B72">#PB_Compiler_Home</font> +"Examples\3D\Data\Siren.ogg")
+ <font color="#006666">; The sound is playing</font>
+<font color="#006666"> PlaySound</font>(0, <font color="#924B72">#PB_Sound_Loop</font>)
+ 
+<font color="#006666"> MessageRequester</font>("Info", "Ok to pause.")
+<font color="#006666"> PauseSound</font>(0)  <font color="#006666">; Pause</font>
+ 
+<font color="#006666"> MessageRequester</font>("Info", "Ok to resume.")
+<font color="#006666"> ResumeSound</font>(0)  <font color="#006666">; Resume</font>
+ 
+<font color="#006666"> MessageRequester</font>("Info", "Ok to stop.")
+ 
+<font color="#006666"> FreeSound</font>(0) <font color="#006666">; The sound is freed</font>
+ <b><font color="#006666">End</font></b>
+</font></pre>
+
 </blockquote><p><b>参阅</b></p><blockquote>
 
 <a href="loadsound.html">LoadSound()</a>, <a href="resumesound.html">ResumeSound()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=loadsound.html>LoadSound()</a> - <a href=index.html>Sound Index</a> - <a href=playsound.html>PlaySound()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=loadsound.html>LoadSound()</a> - <a href=index.html>Sound Index</a> - <a href=playsound.html>PlaySound()</a> -&gt;<br><br>
 
 </body></html>

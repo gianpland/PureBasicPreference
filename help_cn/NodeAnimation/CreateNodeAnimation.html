@@ -10,7 +10,7 @@ Result = <font color="#006666"><b>CreateNodeAnimation</b></font>(#NodeAnimation,
 
 
 
-Creates a new node animation of the specified length. A node animation doesn't exist physically in the 
+Creates a new node animation of the specified length. A node animation doesn&amp;apos;t exist physically in the 
 3D world, it is an virtual track to move a node (and its attached object) easily around the world. 
 
  
@@ -52,17 +52,17 @@ The length of the new animation (in milliseconds).
 The type of interpolation to apply between points. It can be one of the following value: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_NodeAnimation_Linear</font>: each points will be linked together using a straight line, which can result to abrupt direction change
-  <font color="#924B72">#PB_NodeAnimation_Spline</font>: each points will be linked together using a spline, which results in smooth direction change
+  <font color="#924B72">#PB_NodeAnimation_Spline</font>: each points will be linked together using a spline, which results in smooth direction change, but is also slower.
 </font></pre>
 
 </td></tr>
 <tr><td><i>RotationInterpolation</i></td>
 <td> 
  
-The type of interpolation to apply between points. It can be one of the following value: 
+The type of interpolation for the rotation to apply between points. It can be one of the following value: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_NodeAnimation_LinearRotation</font>:    
-  <font color="#924B72">#PB_NodeAnimation_SphericalRotation</font>: 
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_NodeAnimation_LinearRotation</font>:    each points will be linked together using a straight line, which can result to abrupt rotation
+  <font color="#924B72">#PB_NodeAnimation_SphericalRotation</font>: each points will be linked together using a curve, which results in smoother rotation, but is also slower.
 </font></pre>
 
 </td></tr>
@@ -71,8 +71,8 @@ The type of interpolation to apply between points. It can be one of the followin
 
 
 
-Returns zero if the #NodeAnimation can't be created. If <a href="../reference/purebasic_objects.html">#PB_Any</a> is used 
-as '#NodeAnimation' parameter, the new node animation number is returned. 
+Returns zero if the #NodeAnimation can&amp;apos;t be created. If <a href="../reference/purebasic_objects.html">#PB_Any</a> is used 
+as &amp;apos;#NodeAnimation&amp;apos; parameter, the new node animation number is returned. 
 
  
 
@@ -80,8 +80,6 @@ as '#NodeAnimation' parameter, the new node animation number is returned.
 
 <a href="freenodeanimation.html">FreeNodeAnimation()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addnodeanimationtime.html>AddNodeAnimationTime()</a> - <a href=index.html>NodeAnimation Index</a> - <a href=createnodeanimationkeyframe.html>CreateNodeAnimationKeyFrame()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addnodeanimationtime.html>AddNodeAnimationTime()</a> - <a href=index.html>NodeAnimation Index</a> - <a href=createnodeanimationkeyframe.html>CreateNodeAnimationKeyFrame()</a> -&gt;<br><br>
 
 </body></html>

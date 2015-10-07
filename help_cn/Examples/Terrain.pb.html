@@ -54,7 +54,7 @@
 <font color="#006666">    MoveCamera</font>(0,  800, 400, 80, <font color="#924B72">#PB_Absolute</font>)
 <font color="#006666">    CameraBackColor</font>(0,<font color="#006666"> RGB</font>(5, 5, 10))
     
-    
+
     <font color="#006666">;- Terrain definition
 </font><font color="#006666">    SetupTerrains</font>(<font color="#006666">LightID</font>(Light), 3000, <font color="#924B72">#PB_Terrain_NormalMapping</font>)
     <font color="#006666">; initialize terrain
@@ -67,10 +67,10 @@
     <font color="#006666">; Build terrains
 </font>    <b><font color="#006666">For</font></b> ty = <font color="#924B72">#TerrainMiniY</font> <b><font color="#006666">To</font></b> <font color="#924B72">#TerrainMaxiY</font>
       <b><font color="#006666">For</font></b> tx = <font color="#924B72">#TerrainMiniX</font> <b><font color="#006666">To</font></b> <font color="#924B72">#TerrainMaxiX</font>
-        Imported =<font color="#006666"> DefineTerrainTile</font>(0, tx, ty, "terrain513.png", ty % 2, tx % 2)  
+        Imported =<font color="#006666"> DefineTerrainTile</font>(0, tx, ty, "terrain513.png", ty % 2, tx % 2)
       <b><font color="#006666">Next</font></b>
     <b><font color="#006666">Next</font></b>  
-<font color="#006666">    BuildTerrain</font>(0)  
+<font color="#006666">    BuildTerrain</font>(0)
     
     <b><font color="#006666">If</font></b> imported = <font color="#924B72">#True</font>
 <font color="#006666">      InitBlendMaps</font>() 
@@ -78,7 +78,7 @@
       
       <font color="#006666">; If enabled, it will save the terrain as a (big) cache for a faster load next time the program is executed
 </font>      <font color="#006666">; SaveTerrain(0, #False)
-</font>    <b><font color="#006666">EndIf</font></b>  
+</font>    <b><font color="#006666">EndIf</font></b>
     
     <font color="#006666">; SkyBox
 </font>    <font color="#006666">;
@@ -87,20 +87,20 @@
     <b><font color="#006666">Repeat</font></b>
 <font color="#006666">      Screen3DEvents</font>()
       
-      <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()       
+      <b><font color="#006666">If</font></b> <font color="#006666">ExamineKeyboard</font>()
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Left</font>)
-          KeyX = -<font color="#924B72">#CameraSpeed</font> 
+          KeyX = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Right</font>)
-          KeyX = <font color="#924B72">#CameraSpeed</font> 
+          KeyX = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyX = 0
         <b><font color="#006666">EndIf</font></b>
         
         <b><font color="#006666">If</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Up</font>)
-          KeyY = -<font color="#924B72">#CameraSpeed</font> 
+          KeyY = -<font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">ElseIf</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Down</font>)
-          KeyY = <font color="#924B72">#CameraSpeed</font> 
+          KeyY = <font color="#924B72">#CameraSpeed</font>
         <b><font color="#006666">Else</font></b>
           KeyY = 0
         <b><font color="#006666">EndIf</font></b>
@@ -113,14 +113,14 @@
       <b><font color="#006666">EndIf</font></b>
 <font color="#006666">      MoveCamera</font>(0,<font color="#006666"> CameraX</font>(0),<font color="#006666"> TerrainHeight</font>(0,<font color="#006666"> CameraX</font>(0),<font color="#006666"> CameraZ</font>(0)) + 20,<font color="#006666"> CameraZ</font>(0), <font color="#924B72">#PB_Absolute</font>)
 <font color="#006666">      MoveCamera  </font>(0, KeyX, 0, KeyY)
-<font color="#006666">      RotateCamera</font>(0,  MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)  
+<font color="#006666">      RotateCamera</font>(0,  MouseY, MouseX, 0, <font color="#924B72">#PB_Relative</font>)
       
 <font color="#006666">      RenderWorld</font>()
 <font color="#006666">      FlipBuffers</font>()
       
-    <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)   
+    <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)
     
-    <b><font color="#006666">End</font></b> 
+    <b><font color="#006666">End</font></b>
     
   <b><font color="#006666">EndIf</font></b> 
 <b><font color="#006666">Else</font></b>
@@ -129,9 +129,9 @@
 </font>    <font color="#006666">; Terrain on Linux/OSX and Windows with OpenGL needs CG toolkit from nvidia
 </font>    <font color="#006666">; It can be freely downloaded and installed from this site: https://developer.nvidia.com/cg-toolkit-download
 </font>    <font color="#006666">;
-</font><font color="#006666">    MessageRequester</font>("Error","Can't initialize engine3D (Please ensures than CG Toolkit from nvidia is correcly installed)")
+</font><font color="#006666">    MessageRequester</font>("Error","Can&amp;apos;t initialize engine3D (Please ensures than CG Toolkit from nvidia is correcly installed)")
   <b><font color="#006666">CompilerElse</font></b>
-<font color="#006666">    MessageRequester</font>("Error","Can't initialize engine3D")
+<font color="#006666">    MessageRequester</font>("Error","Can&amp;apos;t initialize engine3D")
   <b><font color="#006666">CompilerEndIf</font></b>
 <b><font color="#006666">EndIf</font></b> 
 
@@ -147,7 +147,7 @@
   minHeight1.f = 70
   fadeDist1.f = 40
   minHeight2.f = 70
-  fadeDist2.f = 15    
+  fadeDist2.f = 15
   <b><font color="#006666">For</font></b> ty = <font color="#924B72">#TerrainMiniY</font> <b><font color="#006666">To</font></b> <font color="#924B72">#TerrainMaxiY</font>
     <b><font color="#006666">For</font></b> tx = <font color="#924B72">#TerrainMiniX</font> <b><font color="#006666">To</font></b> <font color="#924B72">#TerrainMaxiX</font>
       Size =<font color="#006666"> TerrainTileLayerMapSize</font>(0, tx, ty)

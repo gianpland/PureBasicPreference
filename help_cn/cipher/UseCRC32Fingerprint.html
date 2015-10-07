@@ -1,0 +1,50 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>UseCRC32Fingerprint</title></head>
+<body bgcolor="#FFFFDF" link="#009999" vlink="#006666" alink="#006666">
+<font face="Arial" size="2"><p align="center"><b><font size="4">UseCRC32Fingerprint()</font></b></p>
+<p><b>语法</b></p><blockquote>
+<font color="#006666"><b>UseCRC32Fingerprint</b></font>()</blockquote>
+
+</blockquote>
+<b>概要</b><br><blockquote>
+
+
+
+Register the CRC32 fingerprint plugin for future use. 
+
+ 
+
+</blockquote><p><b>参数</b></p><blockquote>
+无.
+
+</blockquote><p><b>返回值</b></p><blockquote>
+无.
+
+
+</blockquote><p><b>备注</b></p><blockquote>
+
+
+
+CRC32 is a 32-bit fingerprint not intended for password 
+storage as it&amp;apos;s easily crackable, but for quick data integrity check. For example, zip files have a CRC32 
+checksum at the end of each file to be sure that the zip is not corrupted. The main advantage of CRC32 
+over MD5 or other fingerprint algorithm is its very high speed. 
+
+ 
+
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2"><font color="#006666">  UseCRC32Fingerprint</font>()
+
+  <b><font color="#006666">Debug</font></b> <font color="#006666">StringFingerprint</font>("any text", <font color="#924B72">#PB_Cipher_CRC32</font>)
+</font></pre>
+
+</blockquote><p><b>参阅</b></p><blockquote>
+
+<a href="usemd5fingerprint.html">UseMD5Fingerprint()</a>(), <a href="usesha1fingerprint.html">UseSHA1Fingerprint()</a>(), <a href="usesha2fingerprint.html">UseSHA2Fingerprint()</a>(), <a href="usesha3fingerprint.html">UseSHA3Fingerprint()</a>() 
+
+ 
+
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=stringfingerprint.html>StringFingerprint()</a> - <a href=index.html>Cipher Index</a> - <a href=usemd5fingerprint.html>UseMD5Fingerprint()</a> -&gt;<br><br>
+
+</body></html>

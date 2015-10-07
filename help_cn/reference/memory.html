@@ -9,7 +9,7 @@
 
 
 
-Using pointers is possible by placing one '*' (asterix) in front of the name of a <a href="../reference/variables.html">variable</a>, <a href="../reference/dim.html">array</a>, 
+Using pointers is possible by placing one &amp;apos;*&amp;apos; (asterix) in front of the name of a <a href="../reference/variables.html">variable</a>, <a href="../reference/dim.html">array</a>, 
 <a href="../reference/newlist.html">list</a> or <a href="../reference/newmap.html">map</a>. 
 A pointer is a placeholder for a memory address which is usually associated to a <a href="../reference/structures.html">structure</a>. 
 
@@ -29,9 +29,9 @@ There are only three valid methods to set the value of a pointer: <br>
 - Copy the value from another pointer <br>
 - Find the address of a variable, procedure or label (as shown below) <br>
 <br>
-Note: unlike C/C++, in PureBasic the '*' is <b>always</b> part of the item name. 
-Therefore '*ptr' and 'ptr' are two different variables. 
-'ptr' is a variable (regular one) storing a value, '*ptr' is another variable of pointer type storing an address. 
+Note: unlike C/C++, in PureBasic the &amp;apos;*&amp;apos; is <b>always</b> part of the item name. 
+Therefore &amp;apos;*ptr&amp;apos; and &amp;apos;ptr&amp;apos; are two different variables. 
+&amp;apos;ptr&amp;apos; is a variable (regular one) storing a value, &amp;apos;*ptr&amp;apos; is another variable of pointer type storing an address. 
 
 <br>
 <br>
@@ -42,14 +42,14 @@ Because pointers receive only addresses as values, the memory size of a pointer 
 space allowing to store an absolute address of the processor: 
 <br>
 - On 32-bit processors the address space is limited to 32-bit, so a 
-pointer takes 32-bit (4 bytes, like a 'long') in memory 
+pointer takes 32-bit (4 bytes, like a &amp;apos;long&amp;apos;) in memory 
 <br>
-- On 64-bit processors it takes 64-bit (8 bytes, like a 'quad') in memory, because 
+- On 64-bit processors it takes 64-bit (8 bytes, like a &amp;apos;quad&amp;apos;) in memory, because 
 the absolute address is on a 64-bit range. 
 <br>
 <br>
-As a consequence the type of a pointer depends of the CPU address mode, (憀ong' on 32-bit CPU 
-and 憅uad' on 64-bit one for example), so a pointer is a variable of type pointer. 
+As a consequence the type of a pointer depends of the CPU address mode, (憀ong&amp;apos; on 32-bit CPU 
+and 憅uad&amp;apos; on 64-bit one for example), so a pointer is a variable of type pointer. 
 <br>
 It results from this that assigning a native type to a pointer (*Pointer.l, *Pointer.b ...) makes no sense. 
 <br>
@@ -67,14 +67,14 @@ with this, the system grants them only an addressing with 32-bit pointers.
 <br>
 <br>
 By assigning a structure to a pointer (for example *MyPointer.Point) it allows to access any memory 
-address in a structured way (with the operator 慭'). 
+address in a structured way (with the operator 慭&amp;apos;). 
 <br>
 </blockquote><p><b>Example:</b> Pointers and variables</p><blockquote>
 
 <pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Define</font></b> Point1.Point, Point2.Point
-  *CurrentPoint.Point = @Point1  <font color="#006666">; Pointer declaration, associated to a structure and initialized with Point1's address</font>
+  *CurrentPoint.Point = @Point1  <font color="#006666">; Pointer declaration, associated to a structure and initialized with Point1&amp;apos;s address</font>
   *CurrentPoint \x = 10          <font color="#006666">; Assign value 10 to Point1\x</font>
-  *CurrentPoint.Point = @Point2  <font color="#006666">; move to Point2's address</font>
+  *CurrentPoint.Point = @Point2  <font color="#006666">; move to Point2&amp;apos;s address</font>
   *CurrentPoint \x = 20          <font color="#006666">; Assign value 20 to Point2\x</font>
   <b><font color="#006666">Debug</font></b> Point1\x
   <b><font color="#006666">Debug</font></b> Point2\x
@@ -133,7 +133,7 @@ Arithmetic operations on the pointers are possible and practical by using <a hre
  
   *Pointer.Point = @Array()  <font color="#006666">; Store the array address</font>
   *Pointer\x = 10            <font color="#006666">; Change the first array element values</font>
-  *Pointer\y = 15   
+  *Pointer\y = 15
 
   *Pointer +<font color="#006666"> SizeOf</font>(Point)   <font color="#006666">; Move to the next array element </font>
 

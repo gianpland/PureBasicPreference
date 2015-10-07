@@ -15,7 +15,7 @@ going to look into this a little further to find out why its so important.
 So far all of our examples have used a group of constants, an <a href="../reference/enumerations.html">enumeration</a>, 
 to identify a single <a href="../window/index.html">window</a> and each <a href="../gadget/index.html">gadget</a> 
 on that window. This is fine in the simple programs we抳e demonstrated so far but presents 
-a problem in more complex programs �only one of each of these windows can exist at the 
+a problem in more complex programs � only one of each of these windows can exist at the 
 same time. 
 <br>
 <br>
@@ -29,7 +29,7 @@ generated and returned as a result of the function.
 <br>
 <br>
 Providing we keep track of all these references we can use this to our advantage. 
-Organising this is a little more complex than the examples we抳e seen so far �but the 
+Organising this is a little more complex than the examples we抳e seen so far � but the 
 increased flexibility that it can provide makes this well worth the effort. 
 <br>
 <br>
@@ -46,7 +46,7 @@ There are several things to notice about this program:
 
 
 In the Enumerations section, note that there are only enumerations for the 
-<a href="../menu/index.html">menu items</a>. These will be shared on all the windows �although 
+<a href="../menu/index.html">menu items</a>. These will be shared on all the windows � although 
 each window will have its own menu bar. 
 <br>
 <br>
@@ -79,15 +79,15 @@ references are then used to <a href="../gadget/resizegadget.html">resize</a> the
 <br>
 Look at the DestroyPolygonWindow procedure. <br>
 Here the child control references are removed from the map when a window is closed. 
-If the map size reaches zero �there are no more open windows and DestroyPolygonWindow 
+If the map size reaches zero � there are no more open windows and DestroyPolygonWindow 
 sets an event flag to tell the program to end. 
 <br>
 <br>
 Start the program up. <br>
 - Use the New Window menu item to open up two or three new polygon windows. <br>
-- Use the combo box in each one to select a different shape �notice that each window 
+- Use the combo box in each one to select a different shape � notice that each window 
 works independently of all the others. <br>
-- Resize some of the windows �notice that they can all be resized independently of 
+- Resize some of the windows � notice that they can all be resized independently of 
 each other and that the polygon resizes with the window too. <br>
 </blockquote>
 
@@ -144,7 +144,7 @@ the way those collections work.
     <b><font color="#006666">Protected</font></b>.i ThisWindow
     <b><font color="#006666">Protected</font></b>.s ThisKey
     
-    ThisWindow =<font color="#006666"> OpenWindow</font>(<font color="#924B72">#PB_Any</font>, 50, 50, 300, 300, "Polygon", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)  
+    ThisWindow =<font color="#006666"> OpenWindow</font>(<font color="#924B72">#PB_Any</font>, 50, 50, 300, 300, "Polygon", <font color="#924B72">#PB_Window_SystemMenu</font> | <font color="#924B72">#PB_Window_SizeGadget</font> | <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_TitleBar</font>)
     
 <font color="#006666">    WindowBounds</font>(ThisWindow, 250, 250, <font color="#924B72">#PB_Ignore</font>, <font color="#924B72">#PB_Ignore</font>)
     
@@ -266,7 +266,7 @@ the way those collections work.
       
       <font color="#006666">; Calculate side start point.</font>
       StartX =  OriginX + (Radius *<font color="#006666"> Cos</font>(2 * <font color="#924B72">#PI</font> * Vertex/Sides))
-      StartY = OriginY + (Radius *<font color="#006666"> Sin</font>(2 * <font color="#924B72">#PI</font> * Vertex/Sides)) 
+      StartY = OriginY + (Radius *<font color="#006666"> Sin</font>(2 * <font color="#924B72">#PI</font> * Vertex/Sides))
       
       <font color="#006666">; and end point.</font>
       EndX = OriginX + (Radius *<font color="#006666"> Cos</font>(2 * <font color="#924B72">#PI</font> * (Vertex + 1)/Sides))
@@ -336,7 +336,7 @@ the way those collections work.
         <b><font color="#006666">EndIf</font></b>
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_Repaint</font>
-        <font color="#006666">; A window's content has been invalidated.</font>
+        <font color="#006666">; A window&amp;apos;s content has been invalidated.</font>
 <font color="#006666">        PlotPolygon</font>(EventWindow)
         
       <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_SizeWindow</font>

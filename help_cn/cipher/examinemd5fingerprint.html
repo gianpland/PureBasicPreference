@@ -41,7 +41,7 @@ Returns the #FingerPrint value if <font color="#924B72">#PB_Any</font> was used 
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 <a href="nextfingerprint.html">NextFingerprint()</a> can be used to add memory blocks into the calculation 
 and <a href="finishfingerprint.html">FinishFingerprint()</a> to finish the calculation and read the MD5 hash. 
@@ -66,7 +66,7 @@ See <a href="md5fingerprint.html">MD5Fingerprint()</a> for more information on t
       <b><font color="#006666">Debug</font></b> "MD5 checksum = " + MD5$
       
       MD5$ =<font color="#006666"> MD5Fingerprint</font>(*Buffer, Length)     <font color="#006666">; compare to a calculation in 1 step</font>
-      <b><font color="#006666">Debug</font></b> "MD5 checksum = " + MD5$      
+      <b><font color="#006666">Debug</font></b> "MD5 checksum = " + MD5$
     <b><font color="#006666">EndIf</font></b>
 
 <font color="#006666">    FreeMemory</font>(*Buffer)

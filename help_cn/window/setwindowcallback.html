@@ -10,7 +10,7 @@
 
 
 
-For experienced programmers only. It's only supported on Microsoft Windows. 
+For experienced programmers only. It&amp;apos;s only supported on Microsoft Windows. 
 <br>
 <br>
 Normal events should be handled with the regular <a href="waitwindowevent.html">WaitWindowEvent()</a> or 
@@ -26,7 +26,7 @@ To remove/disable a previous set Callback just call SetWindowCallback(0 [, #Wind
 <br>
 <br>
 <b>Warning: </b> this way is lowlevel. Incorrect handling of the messages in the callback can 
-interfere with PB's own message processing. 
+interfere with PB&amp;apos;s own message processing. 
 
  
 
@@ -56,34 +56,34 @@ Here is a sample code to use a callback correctly:
 Here you see a working example checking some window parameters 
 (using <a href="http://msdn.microsoft.com/library">Windows API</a> constants): 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">WinCallback</font>(hWnd, uMsg, WParam, LParam) 
+<pre><font face="Courier New, Courier, mono"size="2">  <b><font color="#006666">Procedure</font></b> <font color="#006666">WinCallback</font>(hWnd, uMsg, WParam, LParam)
     <font color="#006666">; Windows fills the parameter automatically, which we will use in the callback...</font>
     
-    <b><font color="#006666">If</font></b> uMsg = <font color="#924B72">#WM_SIZE</font> 
-      <b><font color="#006666">Select</font></b> WParam 
-        <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_MINIMIZED</font> 
-          <b><font color="#006666">Debug</font></b> "Window was minimized" 
-        <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_RESTORED</font> 
-          <b><font color="#006666">Debug</font></b> "Window was restored" 
-        <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_MAXIMIZED</font> 
-          <b><font color="#006666">Debug</font></b> "Window was maximized" 
-      <b><font color="#006666">EndSelect</font></b> 
-    <b><font color="#006666">EndIf</font></b> 
+    <b><font color="#006666">If</font></b> uMsg = <font color="#924B72">#WM_SIZE</font>
+      <b><font color="#006666">Select</font></b> WParam
+        <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_MINIMIZED</font>
+          <b><font color="#006666">Debug</font></b> "Window was minimized"
+        <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_RESTORED</font>
+          <b><font color="#006666">Debug</font></b> "Window was restored"
+        <b><font color="#006666">Case</font></b> <font color="#924B72">#SIZE_MAXIMIZED</font>
+          <b><font color="#006666">Debug</font></b> "Window was maximized"
+      <b><font color="#006666">EndSelect</font></b>
+    <b><font color="#006666">EndIf</font></b>
   
-    <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#PB_ProcessPureBasicEvents</font> 
-  <b><font color="#006666">EndProcedure</font></b> 
+    <b><font color="#006666">ProcedureReturn</font></b> <font color="#924B72">#PB_ProcessPureBasicEvents</font>
+  <b><font color="#006666">EndProcedure</font></b>
   
-  
-  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 100, "Messages", <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_MaximizeGadget</font>) 
+
+  <b><font color="#006666">If</font></b> <font color="#006666">OpenWindow</font>(0, 0, 0, 200, 100, "Messages", <font color="#924B72">#PB_Window_MinimizeGadget</font> | <font color="#924B72">#PB_Window_MaximizeGadget</font>)
     
 <font color="#006666">    SetWindowCallback</font>(@WinCallback())    <font color="#006666">; activate the callback</font>
     
-    <b><font color="#006666">Repeat</font></b> 
-      <b><font color="#006666">Select</font></b> <font color="#006666">WaitWindowEvent</font>() 
-        <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_CloseWindow</font> 
-          <b><font color="#006666">End</font></b> 
-      <b><font color="#006666">EndSelect</font></b> 
-    <b><font color="#006666">ForEver</font></b> 
+    <b><font color="#006666">Repeat</font></b>
+      <b><font color="#006666">Select</font></b> <font color="#006666">WaitWindowEvent</font>()
+        <b><font color="#006666">Case</font></b> <font color="#924B72">#PB_Event_CloseWindow</font>
+          <b><font color="#006666">End</font></b>
+      <b><font color="#006666">EndSelect</font></b>
+    <b><font color="#006666">ForEver</font></b>
     
   <b><font color="#006666">EndIf</font></b> 
 </font></pre>
@@ -102,8 +102,6 @@ A specific window to associate the callback to. If omitted the callback will be 
 无.
 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>Windows</Blockquote></p><center>&lt;- <a href=setactivewindow.html>SetActiveWindow()</a> - <a href=index.html>Window Index</a> - <a href=setwindowcolor.html>SetWindowColor()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>Windows</Blockquote></p><center>&lt;- <a href=setactivewindow.html>SetActiveWindow()</a> - <a href=index.html>Window Index</a> - <a href=setwindowcolor.html>SetWindowColor()</a> -&gt;<br><br>
 
 </body></html>

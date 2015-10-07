@@ -34,7 +34,7 @@ The size in bytes for the new memory area.
  
 It can be one of the following values: 
  
-<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Memory_NoClear</font>: don't fill the new memory area with zeros. It can help to have faster allocation if the
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Memory_NoClear</font>: don&amp;apos;t fill the new memory area with zeros. It can help to have faster allocation if the
                       allocated memory is used immediately.
 </font></pre>
 
@@ -48,7 +48,7 @@ Returns the address of the allocated memory, or zero if the memory cannot be all
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 <a href="freememory.html">FreeMemory()</a> can be used to return the allocated memory back to the system. 
 <a href="reallocatememory.html">ReAllocateMemory()</a> can be used to change the size of the allocated area. 
@@ -71,7 +71,7 @@ Such an error can be narrowed down to the real cause using the
 <font color="#006666">    PokeS</font>(*MemoryID, "Store this string in the memory area")
 <font color="#006666">    FreeMemory</font>(*MemoryID)  <font color="#006666">; will also be done automatically at the end of program</font>
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "Couldn't allocate the requested memory!"
+    <b><font color="#006666">Debug</font></b> "Couldn&amp;apos;t allocate the requested memory!"
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -79,8 +79,6 @@ Such an error can be narrowed down to the real cause using the
 
 <a href="reallocatememory.html">ReAllocateMemory()</a>, <a href="freememory.html">FreeMemory()</a>, <a href="memorysize.html">MemorySize()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Memory Index</a> - <a href=allocatestructure.html>AllocateStructure()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center><a href=index.html>Memory Index</a> - <a href=allocatestructure.html>AllocateStructure()</a> -&gt;<br><br>
 
 </body></html>

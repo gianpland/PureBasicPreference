@@ -38,18 +38,18 @@ Returns nonzero if the operation succeeded or zero if it failed.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
-For now, only Unix-like servers are supported for directory listing. The FTP protocol doesn't specify 
+For now, only Unix-like servers are supported for directory listing. The FTP protocol doesn&amp;apos;t specify 
 how a directory listing has to be returned, so every server has its own way to returns the directory information. 
 Fortunately, most of the world servers are running under Unix/Linux and uses the same way to return the 
 data. That said, there is no warranty that the listing works on every servers. This command will be updated 
-on demand to automatically handle more servers type. If the server isn't supported, please use <a href="ftpdirectoryentryraw.html">FTPDirectoryEntryRaw()</a> 
+on demand to automatically handle more servers type. If the server isn&amp;apos;t supported, please use <a href="ftpdirectoryentryraw.html">FTPDirectoryEntryRaw()</a> 
 to get back the raw information about each entry. 
-@linebreaks
-@linebreaks
+<br>
+<br>
 The functions 
 <a href="nextftpdirectoryentry.html">NextFTPDirectoryEntry()</a>, <a href="ftpdirectoryentryname.html">FTPDirectoryEntryName()</a>, <a href="ftpdirectoryentrytype.html">FTPDirectoryEntryType()</a>, 
 <a href="ftpdirectoryentryattributes.html">FTPDirectoryEntryAttributes()</a>, <a href="ftpdirectoryentrydate.html">FTPDirectoryEntryDate()</a> and <a href="ftpdirectoryentrysize.html">FTPDirectoryEntrySize()</a> 
@@ -68,7 +68,7 @@ can be used to read the directory entries. To change the current directory, use 
       <b><font color="#006666">Wend</font></b>
     <b><font color="#006666">EndIf</font></b>
   <b><font color="#006666">Else</font></b>
-    <b><font color="#006666">Debug</font></b> "Can't connect to ftp.free.fr"
+    <b><font color="#006666">Debug</font></b> "Can&amp;apos;t connect to ftp.free.fr"
   <b><font color="#006666">EndIf</font></b>
 </font></pre>
 
@@ -77,8 +77,6 @@ can be used to read the directory entries. To change the current directory, use 
 <a href="nextftpdirectoryentry.html">NextFTPDirectoryEntry()</a>, 
 <a href="finishftpdirectory.html">FinishFTPDirectory()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=deleteftpfile.html>DeleteFTPFile()</a> - <a href=index.html>Ftp Index</a> - <a href=ftpdirectoryentryattributes.html>FTPDirectoryEntryAttributes()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=deleteftpfile.html>DeleteFTPFile()</a> - <a href=index.html>Ftp Index</a> - <a href=ftpdirectoryentryattributes.html>FTPDirectoryEntryAttributes()</a> -&gt;<br><br>
 
 </body></html>

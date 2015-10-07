@@ -52,7 +52,7 @@ The size of the output buffer.
 <br>
 <br>
 The output buffer can be up to 33% smaller than the input buffer, with a minimum size of 64 bytes. 
-It's recommended to get a slightly larger buffer, like 30% smaller to avoid overflows. 
+It&amp;apos;s recommended to get a slightly larger buffer, like 30% smaller to avoid overflows. 
 
  
 
@@ -68,12 +68,12 @@ Returns the length of the decoded data in bytes.
 
 </blockquote><p><b>示例</b></p><blockquote>
 
-<pre><font face="Courier New, Courier, mono"size="2">  Example$ = "This is a test string!" 
-  Decoded$ =<font color="#006666"> Space</font>(1024) 
-  Encoded$ =<font color="#006666"> Space</font>(1024) 
+<pre><font face="Courier New, Courier, mono"size="2">  Example$ = "This is a test string!"
+  Decoded$ =<font color="#006666"> Space</font>(1024)
+  Encoded$ =<font color="#006666"> Space</font>(1024)
     
   <b><font color="#006666">Debug</font></b> <font color="#006666">Base64Encoder</font>(@Example$,<font color="#006666"> StringByteLength</font>(Example$), @Encoded$, 1024)
-  <b><font color="#006666">Debug</font></b> Encoded$ 
+  <b><font color="#006666">Debug</font></b> Encoded$
     
   <b><font color="#006666">Debug</font></b> <font color="#006666">Base64Decoder</font>(@Encoded$,<font color="#006666"> StringByteLength</font>(Encoded$), @Decoded$, 1024)
   <b><font color="#006666">Debug</font></b> Decoded$
@@ -83,8 +83,6 @@ Returns the length of the decoded data in bytes.
 
 <a href="base64encoder.html">Base64Encoder()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addcipherbuffer.html>AddCipherBuffer()</a> - <a href=index.html>Cipher Index</a> - <a href=base64encoder.html>Base64Encoder()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=addfingerprintbuffer.html>AddFingerprintBuffer()</a> - <a href=index.html>Cipher Index</a> - <a href=base64encoder.html>Base64Encoder()</a> -&gt;<br><br>
 
 </body></html>

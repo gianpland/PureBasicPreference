@@ -33,7 +33,7 @@
     
 <font color="#006666">    WorldShadows</font>(<font color="#924B72">#PB_Shadow_Modulative</font>, 0,<font color="#006666"> RGB</font>(175, 175, 175))
     
-    
+
     <font color="#006666">;- Ground
 </font><font color="#006666">    CreateMaterial</font>(0,<font color="#006666"> LoadTexture</font>(0, "Dirt.jpg"))
 <font color="#006666">    CreatePlane</font>(0, 1200, 1200, 1, 1, 5, 5)
@@ -109,7 +109,7 @@
       
       <b><font color="#006666">If</font></b> time &gt; 1
         Time = 0
-      <b><font color="#006666">EndIf</font></b>  
+      <b><font color="#006666">EndIf</font></b>
       
       <font color="#006666">; Ninja
 </font><font color="#006666">      ComputeSpline</font>(splineN, TimeSinceLastFrame/2) <font color="#006666">; Should be called before using SplineX(); SplineY() and SplineZ()
@@ -127,13 +127,13 @@
       TimeSinceLastFrame =<font color="#006666"> RenderWorld</font>() / 1000
       
 <font color="#006666">      FlipBuffers</font>()
-    <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)   
+    <b><font color="#006666">Until</font></b> <font color="#006666">KeyboardPushed</font>(<font color="#924B72">#PB_Key_Escape</font>)
     
-    <b><font color="#006666">End</font></b> 
+    <b><font color="#006666">End</font></b>
     
   <b><font color="#006666">EndIf</font></b> 
 <b><font color="#006666">Else</font></b>
-<font color="#006666">  MessageRequester</font>("Error","Can't initialize engine3D")
+<font color="#006666">  MessageRequester</font>("Error","Can&amp;apos;t initialize engine3D")
 <b><font color="#006666">EndIf</font></b> 
 </font></pre>
 </body></html>

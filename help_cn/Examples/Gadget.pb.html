@@ -33,7 +33,7 @@
 <font color="#006666">      ListViewGadget</font>(4, 6, 10, 230, 148)
 
       <b><font color="#006666">For</font></b> k=0 <b><font color="#006666">To</font></b> 30
-<font color="#006666">        AddGadgetItem</font>(4, -1, "Music Song n�"+<font color="#006666">Str</font>(k))
+<font color="#006666">        AddGadgetItem</font>(4, -1, "Music Song n� "+<font color="#006666">Str</font>(k))
       <b><font color="#006666">Next</font></b>
 
 <font color="#006666">      ButtonGadget</font>(5,  250, 10, 80, GadgetHeight, "Add")
@@ -80,13 +80,13 @@
           <b><font color="#006666">EndIf</font></b>
           
         <b><font color="#006666">Case</font></b> 1 <font color="#006666">; Play
-</font><font color="#006666">          DisableGadget</font>(2,0)  <font color="#006666">; Enable the 'Stop' gadget
-</font><font color="#006666">          DisableGadget</font>(1,1)  <font color="#006666">; Disable the 'Play' Gadget
-</font>      
+</font><font color="#006666">          DisableGadget</font>(2,0)  <font color="#006666">; Enable the &amp;apos;Stop&amp;apos; gadget
+</font><font color="#006666">          DisableGadget</font>(1,1)  <font color="#006666">; Disable the &amp;apos;Play&amp;apos; Gadget
+</font>
         <b><font color="#006666">Case</font></b> 2 <font color="#006666">; Stop
-</font><font color="#006666">          DisableGadget</font>(1,0)  <font color="#006666">; Enable the 'Play' gadget
-</font><font color="#006666">          DisableGadget</font>(2,1)  <font color="#006666">; Disable the 'Stop' Gadget
-</font>        
+</font><font color="#006666">          DisableGadget</font>(1,0)  <font color="#006666">; Enable the &amp;apos;Play&amp;apos; gadget
+</font><font color="#006666">          DisableGadget</font>(2,1)  <font color="#006666">; Disable the &amp;apos;Stop&amp;apos; Gadget
+</font>
         <b><font color="#006666">Case</font></b> 4
           <b><font color="#006666">If</font></b> <font color="#006666">EventType</font>() = 2
 <font color="#006666">            SetGadgetText</font>(0,<font color="#006666"> GetGadgetText</font>(4)) <font color="#006666">; Get the current item from the ListView..
@@ -100,7 +100,7 @@
 </font>
         <b><font color="#006666">Case</font></b> 7 <font color="#006666">; Select
 </font><font color="#006666">          SetGadgetText</font>(0,<font color="#006666"> GetGadgetText</font>(4)) <font color="#006666">; Get the current item from the ListView..
-</font>  
+</font>
         <b><font color="#006666">Case</font></b> 8 <font color="#006666">; Quit...
 </font>          Event = <font color="#924B72">#PB_Event_CloseWindow</font>
 

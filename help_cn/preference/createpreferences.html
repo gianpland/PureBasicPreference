@@ -35,7 +35,7 @@ The filename of the new preference file.
 It can be a combination of the following values: 
  
 <pre><font face="Courier New, Courier, mono"size="2">  <font color="#924B72">#PB_Preference_NoSpace</font>: no spaces will be put around the equal sign joining key and values.
-                          It can be useful when dealing with external preferences files which doesn't
+                          It can be useful when dealing with external preferences files which doesn&amp;apos;t
                           accept spaces around equal sign.
   <font color="#924B72">#PB_Preference_GroupSeparator</font>: add an empty line between the groups to ease readability of the file.
 </font></pre>
@@ -50,12 +50,12 @@ Nonzero if the file has been successfully created, zero otherwise.
 
  
 
-</blockquote><p><b>Remarks</b></p><blockquote>
+</blockquote><p><b>备注</b></p><blockquote>
 
 
 
 Once created, the functions like <a href="writepreferencestring.html">WritePreferenceString()</a> can be used to write data. When values are written in preferences, 
-it's possible to read them back with the functions like <a href="readpreferencestring.html">ReadPreferenceString()</a>. 
+it&amp;apos;s possible to read them back with the functions like <a href="readpreferencestring.html">ReadPreferenceString()</a>. 
 <br>
 <br>
 To remove a key or a group, use <a href="removepreferencekey.html">RemovePreferenceKey()</a> and <a href="removepreferencegroup.html">RemovePreferenceGroup()</a>. 
@@ -66,12 +66,28 @@ Once all write operations are done, <a href="closepreferences.html">ClosePrefere
 
  
 
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Create a preference file nammed Setup.ini</font>
+<font color="#006666">  CreatePreferences</font>(<font color="#006666">GetTemporaryDirectory</font>()+"Setup.ini")
+  
+  <font color="#006666">; Create a group named "Window"</font>
+<font color="#006666">  PreferenceGroup</font>("Window")
+<font color="#006666">    WritePreferenceLong </font>("X", 10)     <font color="#006666">; X = 10</font>
+<font color="#006666">    WritePreferenceLong </font>("Y", 10)     <font color="#006666">; Y = 10</font>
+<font color="#006666">    WritePreferenceLong</font>("W", 800)     <font color="#006666">; W = 800</font>
+<font color="#006666">    WritePreferenceLong</font>("H", 600)     <font color="#006666">; H = 600</font>
+<font color="#006666">    WritePreferenceFloat</font>("%", 20)     <font color="#006666">; % = 20.000000</font>
+<font color="#006666">    WritePreferenceString</font>("Title", "PureNote") <font color="#006666">; Title = "PureNote"</font>
+  
+  <font color="#006666">; Close the preference file</font>
+<font color="#006666">  ClosePreferences</font>()
+</font></pre>
+
 </blockquote><p><b>参阅</b></p><blockquote>
 
 <a href="closepreferences.html">ClosePreferences()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=closepreferences.html>ClosePreferences()</a> - <a href=index.html>Preference Index</a> - <a href=examinepreferencegroups.html>ExaminePreferenceGroups()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=closepreferences.html>ClosePreferences()</a> - <a href=index.html>Preference Index</a> - <a href=examinepreferencegroups.html>ExaminePreferenceGroups()</a> -&gt;<br><br>
 
 </body></html>

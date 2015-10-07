@@ -13,13 +13,13 @@
 </font> 
 <b><font color="#006666">Procedure</font></b> <font color="#006666">ErrorHandler</font>()
  
-  ErrorMessage$ = "A program error was detected:" +<font color="#006666"> Chr</font>(13) 
+  ErrorMessage$ = "A program error was detected:" +<font color="#006666"> Chr</font>(13)
   ErrorMessage$ +<font color="#006666"> Chr</font>(13)
   ErrorMessage$ + "Error Message:   " +<font color="#006666"> ErrorMessage</font>()      +<font color="#006666"> Chr</font>(13)
-  ErrorMessage$ + "Error Code:      " +<font color="#006666"> Str</font>(<font color="#006666">ErrorCode</font>())    +<font color="#006666"> Chr</font>(13)  
+  ErrorMessage$ + "Error Code:      " +<font color="#006666"> Str</font>(<font color="#006666">ErrorCode</font>())    +<font color="#006666"> Chr</font>(13)
   ErrorMessage$ + "Code Address:    " +<font color="#006666"> Str</font>(<font color="#006666">ErrorAddress</font>()) +<font color="#006666"> Chr</font>(13)
  
-  <b><font color="#006666">If</font></b> <font color="#006666">ErrorCode</font>() = <font color="#924B72">#PB_OnError_InvalidMemory</font>   
+  <b><font color="#006666">If</font></b> <font color="#006666">ErrorCode</font>() = <font color="#924B72">#PB_OnError_InvalidMemory</font>
     ErrorMessage$ + "Target Address:  " +<font color="#006666"> Str</font>(<font color="#006666">ErrorTargetAddress</font>()) +<font color="#006666"> Chr</font>(13)
   <b><font color="#006666">EndIf</font></b>
  
@@ -33,7 +33,7 @@
   ErrorMessage$ +<font color="#006666"> Chr</font>(13)
   ErrorMessage$ + "Register content:" +<font color="#006666"> Chr</font>(13)
  
-  <b><font color="#006666">CompilerSelect</font></b> <font color="#924B72">#PB_Compiler_Processor</font> 
+  <b><font color="#006666">CompilerSelect</font></b> <font color="#924B72">#PB_Compiler_Processor</font>
     <b><font color="#006666">CompilerCase</font></b> <font color="#924B72">#PB_Processor_x86</font>
       ErrorMessage$ + "EAX = " +<font color="#006666"> Str</font>(<font color="#006666">ErrorRegister</font>(<font color="#924B72">#PB_OnError_EAX</font>)) +<font color="#006666"> Chr</font>(13)
       ErrorMessage$ + "EBX = " +<font color="#006666"> Str</font>(<font color="#006666">ErrorRegister</font>(<font color="#924B72">#PB_OnError_EBX</font>)) +<font color="#006666"> Chr</font>(13)
@@ -79,7 +79,7 @@
  
 <font color="#006666">MessageRequester</font>("OnError example", "Executing some code with errors. The debugger should be turned off.")
  
- 
+
 <font color="#006666">; Write to protected memory
 </font><font color="#006666">;
 </font><font color="#006666">PokeS</font>(123, "The quick brown fox jumped over the lazy dog.")
@@ -93,7 +93,7 @@ a = 1 / a
 </font><font color="#006666">;
 </font><font color="#006666">RaiseError</font>(<font color="#924B72">#PB_OnError_IllegalInstruction</font>)
  
- 
+
 <font color="#006666">; This should not be displayed
 </font><font color="#006666">;
 </font><font color="#006666">MessageRequester</font>("OnError example", "Execution finished normally.")

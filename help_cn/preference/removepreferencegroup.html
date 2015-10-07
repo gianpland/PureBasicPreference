@@ -10,7 +10,7 @@
 
 
 
-Removes the specified 'Group$' and all its keys. 
+Removes the specified &amp;apos;Group$&amp;apos; and all its keys. 
 
  
 
@@ -33,12 +33,42 @@ The group name to remove.
 无.
 
 
+</blockquote><p><b>示例</b></p><blockquote>
+
+<pre><font face="Courier New, Courier, mono"size="2">  <font color="#006666">; Create the preference file prefs.txt</font>
+  <b><font color="#006666">If</font></b> <font color="#006666">CreatePreferences</font>(<font color="#006666">GetTemporaryDirectory</font>()+"Prefs.txt", <font color="#924B72">#PB_Preference_GroupSeparator</font>)
+
+<font color="#006666">    PreferenceGroup</font>("Window")
+<font color="#006666">      WritePreferenceLong </font>("X", 100)
+<font color="#006666">      WritePreferenceLong </font>("Y", 125)
+<font color="#006666">      WritePreferenceString</font>("Title", "PureNote")
+      
+<font color="#006666">      PreferenceGroup</font>("event")
+<font color="#006666">      WritePreferenceString</font>("percentage", "percentage")
+<font color="#006666">      WritePreferenceFloat</font>("%", 100)
+      
+<font color="#006666">      ClosePreferences</font>()
+    
+<font color="#006666">      RunProgram</font>(<font color="#006666">GetTemporaryDirectory</font>()+"Prefs.txt")
+    <b><font color="#006666">EndIf</font></b>
+    
+<font color="#006666">    MessageRequester</font>("Info", "Delete the group &amp;apos;event&amp;apos; ")
+    
+  <font color="#006666">; Open a preference file</font>
+<font color="#006666">    OpenPreferences</font>(<font color="#006666">GetTemporaryDirectory</font>()+"Prefs.txt")
+    
+  <font color="#006666">; Delete the group &amp;apos;event&amp;apos;  </font>
+<font color="#006666">    RemovePreferenceGroup</font>("event")
+    
+<font color="#006666">    ClosePreferences</font>()
+      
+<font color="#006666">    RunProgram</font>(<font color="#006666">GetTemporaryDirectory</font>()+"Prefs.txt")
+</font></pre>
+
 </blockquote><p><b>参阅</b></p><blockquote>
 
 <a href="preferencegroup.html">PreferenceGroup()</a>, <a href="examinepreferencegroups.html">ExaminePreferenceGroups()</a> 
 
-</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=readpreferencestring.html>ReadPreferenceString()</a> - <a href=index.html>Preference Index</a> - <a href=removepreferencekey.html>RemovePreferenceKey()</a> -&gt;
-
-
+</Blockquote><p><b>已支持操作系统 </b><Blockquote>所有</Blockquote></p><center>&lt;- <a href=readpreferencestring.html>ReadPreferenceString()</a> - <a href=index.html>Preference Index</a> - <a href=removepreferencekey.html>RemovePreferenceKey()</a> -&gt;<br><br>
 
 </body></html>
