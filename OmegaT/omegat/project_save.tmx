@@ -254,6 +254,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Alpha&lt;/a0&gt;&lt;br1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040600Z" creationid="oSilas" creationdate="20151013T040600Z">
+        <seg>取得Alpha颜色分量&lt;a0&gt;Alpha&lt;/a0&gt;&lt;br1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;Console Index&lt;/a0&gt; - &lt;a1&gt;CloseConsole()&lt;/a1&gt; -&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T110829Z">
@@ -666,6 +674,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T040643Z" creationid="oSilas" creationdate="20141128T040643Z">
         <seg>注意： &lt;f2&gt;＃PB_2DDrawing_CustomFilter&lt;/f2&gt;&lt;a3&gt;绘图模式&lt;/a3&gt;仅适用于&lt;a4&gt;ImageOutput()&lt;/a4&gt;和&lt;a5&gt;CanvasOutput()&lt;/a5&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: The drawing process starts after calling &lt;a5&gt;StartDrawing()&lt;/a5&gt; and must end with &lt;a6&gt;StopDrawing()&lt;/a6&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040550Z" creationid="oSilas" creationdate="20151013T040550Z">
+        <seg>注意：绘制过程必须在调用 &lt;a5&gt;StartDrawing()&lt;/a5&gt; 开始并以调用 &lt;a6&gt;StopDrawing()&lt;/a6&gt;结束.</seg>
       </tuv>
     </tu>
     <tu>
