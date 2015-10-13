@@ -1607,6 +1607,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The size with which the image will be drawn.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T050316Z" creationid="oSilas" creationdate="20151013T050316Z">
+        <seg>将要绘制图像的大小.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The string to send.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T141536Z">
