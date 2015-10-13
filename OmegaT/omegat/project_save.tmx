@@ -78,6 +78,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;- &lt;a0&gt;AlphaBlend()&lt;/a0&gt; - &lt;a1&gt;2DDrawing Index&lt;/a1&gt; - &lt;a2&gt;Blue()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041732Z" creationid="oSilas" creationdate="20151013T041732Z">
+        <seg>&lt;- &lt;a0&gt;AlphaBlend()&lt;/a0&gt; - &lt;a1&gt;2DDrawing 目录&lt;/a1&gt; - &lt;a2&gt;Blue()&lt;/a2&gt; -&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;- &lt;a0&gt;BackColor()&lt;/a0&gt; - &lt;a1&gt;2DDrawing Index&lt;/a1&gt; - &lt;a2&gt;Box()&lt;/a2&gt; -&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T031309Z" creationid="oSilas" creationdate="20141128T031309Z">
