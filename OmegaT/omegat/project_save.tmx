@@ -662,6 +662,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A color table with common colors is available &lt;a5&gt;here&lt;/a5&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041716Z" creationid="oSilas" creationdate="20151013T041716Z">
+        <seg>&lt;a5&gt;这里&lt;/a5&gt;有一个通用的颜色参照表.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A value of 0 means fully transparent and a value of 255 means fully opaque.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T135218Z">
@@ -1655,6 +1663,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This color can be in &lt;a0&gt;RGB&lt;/a0&gt; or &lt;a1&gt;RGBA&lt;/a1&gt; format.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041558Z" creationid="oSilas" creationdate="20151013T041558Z">
+        <seg>这个颜色可以是 &lt;a0&gt;RGB&lt;/a0&gt; 或 &lt;a1&gt;RGBA&lt;/a1&gt; 格式.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This color can be in &lt;a1&gt;RGB&lt;/a1&gt; or &lt;a2&gt;RGBA&lt;/a2&gt; format.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141121T151514Z">
@@ -1803,6 +1819,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141124T135911Z" creationid="oSilas" creationdate="20141124T135911Z">
         <seg>在Windows下，控制台的标题现在启动栏和任务管理器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Whether or not the alpha channel is used depends on the &lt;a2&gt;drawing mode&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041622Z" creationid="oSilas" creationdate="20151013T041622Z">
+        <seg>是否使用alpha通道取决于 &lt;a2&gt;绘图模式&lt;/a2&gt;.</seg>
       </tuv>
     </tu>
     <tu>
