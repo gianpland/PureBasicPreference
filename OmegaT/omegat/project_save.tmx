@@ -878,6 +878,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Editor - Coloring</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T052123Z" creationid="oSilas" creationdate="20151013T052123Z">
+        <seg>编辑器 - 着色</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Editor - Folding</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T052154Z" creationid="oSilas" creationdate="20151013T052154Z">
+        <seg>编辑器 - 折叠</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Enables the XOR mode.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045256Z" creationid="oSilas" creationdate="20150312T045256Z">
