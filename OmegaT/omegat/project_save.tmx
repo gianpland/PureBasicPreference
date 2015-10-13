@@ -878,6 +878,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If these parameters are not specified then the image will be drawn in its original size.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T050427Z" creationid="oSilas" creationdate="20151013T050427Z">
+        <seg>如果不指定这些参数绘制图像则会使用其原始尺寸</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If this flag is set then the background will be transparent with the &lt;a0&gt;DrawText()&lt;/a0&gt; command.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T045239Z" creationid="oSilas" creationdate="20150312T045239Z">
