@@ -286,10 +286,274 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a10&gt;BoxedGradient&lt;/a10&gt;&lt;br11&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040709Z" creationid="oSilas" creationdate="20151013T040709Z">
+        <seg>矩形梯度&lt;a10&gt;BoxedGradient&lt;/a10&gt;&lt;br11&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a12&gt;Circle&lt;/a12&gt;&lt;br13&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040751Z" creationid="oSilas" creationdate="20151013T040751Z">
+        <seg>绘制圆&lt;a12&gt;Circle&lt;/a12&gt;&lt;br13&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a14&gt;CircularGradient&lt;/a14&gt;&lt;br15&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040802Z" creationid="oSilas" creationdate="20151013T040802Z">
+        <seg>锥形梯度&lt;a14&gt;CircularGradient&lt;/a14&gt;&lt;br15&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a16&gt;ClipOutput&lt;/a16&gt;&lt;br17&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040825Z" creationid="oSilas" creationdate="20151013T040825Z">
+        <seg>设置绘图区域&lt;a16&gt;ClipOutput&lt;/a16&gt;&lt;br17&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a20&gt;CustomFilterCallback&lt;/a20&gt;&lt;br21&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040924Z" creationid="oSilas" creationdate="20151013T040924Z">
+        <seg>自定义筛选回调&lt;a20&gt;CustomFilterCallback&lt;/a20&gt;&lt;br21&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a22&gt;CustomGradient&lt;/a22&gt;&lt;br23&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040828Z" creationid="oSilas" creationdate="20151013T040828Z">
+        <seg>自定义梯度&lt;a22&gt;CustomGradient&lt;/a22&gt;&lt;br23&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a24&gt;DrawAlphaImage&lt;/a24&gt;&lt;br25&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040931Z" creationid="oSilas" creationdate="20151013T040931Z">
+        <seg>绘制α图&lt;a24&gt;DrawAlphaImage&lt;/a24&gt;&lt;br25&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a26&gt;DrawImage&lt;/a26&gt;&lt;br27&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040942Z" creationid="oSilas" creationdate="20151013T040942Z">
+        <seg>绘制图像&lt;a26&gt;DrawImage&lt;/a26&gt;&lt;br27&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a28&gt;DrawRotatedText&lt;/a28&gt;&lt;br29&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040950Z" creationid="oSilas" creationdate="20151013T040950Z">
+        <seg>绘制旋转文本&lt;a28&gt;DrawRotatedText&lt;/a28&gt;&lt;br29&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a2&gt;AlphaBlend&lt;/a2&gt;&lt;br3&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040635Z" creationid="oSilas" creationdate="20151013T040635Z">
+        <seg>Alpha混合颜色&lt;a2&gt;AlphaBlend&lt;/a2&gt;&lt;br3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a2&gt;Working with files&lt;/a2&gt;&lt;br3&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20151007T141440Z" creationid="oSilas" creationdate="20151007T141440Z">
         <seg>&lt;a2&gt;文件处理&lt;/a2&gt;&lt;br3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a30&gt;DrawText&lt;/a30&gt;&lt;br31&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040956Z" creationid="oSilas" creationdate="20151013T040956Z">
+        <seg>绘制文本&lt;a30&gt;DrawText&lt;/a30&gt;&lt;br31&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a32&gt;DrawingBuffer&lt;/a32&gt;&lt;br33&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041003Z" creationid="oSilas" creationdate="20151013T041003Z">
+        <seg>绘图缓冲区&lt;a32&gt;DrawingBuffer&lt;/a32&gt;&lt;br33&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a34&gt;DrawingBufferPitch&lt;/a34&gt;&lt;br35&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041010Z" creationid="oSilas" creationdate="20151013T041010Z">
+        <seg>绘图缓冲区间距&lt;a34&gt;DrawingBufferPitch&lt;/a34&gt;&lt;br35&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a36&gt;DrawingBufferPixelFormat&lt;/a36&gt;&lt;br37&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041019Z" creationid="oSilas" creationdate="20151013T041019Z">
+        <seg>图形缓冲区像素格式&lt;a36&gt;DrawingBufferPixelFormat&lt;/a36&gt;&lt;br37&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a38&gt;DrawingFont&lt;/a38&gt;&lt;br39&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041031Z" creationid="oSilas" creationdate="20151013T041031Z">
+        <seg>绘图字体&lt;a38&gt;DrawingFont&lt;/a38&gt;&lt;br39&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a40&gt;DrawingMode&lt;/a40&gt;&lt;br41&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041038Z" creationid="oSilas" creationdate="20151013T041038Z">
+        <seg>绘图模式&lt;a40&gt;DrawingMode&lt;/a40&gt;&lt;br41&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a42&gt;Ellipse&lt;/a42&gt;&lt;br43&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041045Z" creationid="oSilas" creationdate="20151013T041045Z">
+        <seg>椭圆&lt;a42&gt;Ellipse&lt;/a42&gt;&lt;br43&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a44&gt;EllipticalGradient&lt;/a44&gt;&lt;br45&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041052Z" creationid="oSilas" creationdate="20151013T041052Z">
+        <seg>椭圆梯度&lt;a44&gt;EllipticalGradient&lt;/a44&gt;&lt;br45&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a46&gt;FillArea&lt;/a46&gt;&lt;br47&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041059Z" creationid="oSilas" creationdate="20151013T041059Z">
+        <seg>填充区域&lt;a46&gt;FillArea&lt;/a46&gt;&lt;br47&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a48&gt;FrontColor&lt;/a48&gt;&lt;br49&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041107Z" creationid="oSilas" creationdate="20151013T041107Z">
+        <seg>字体颜色&lt;a48&gt;FrontColor&lt;/a48&gt;&lt;br49&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a4&gt;BackColor&lt;/a4&gt;&lt;br5&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040644Z" creationid="oSilas" creationdate="20151013T040644Z">
+        <seg>设置背景色&lt;a4&gt;BackColor&lt;/a4&gt;&lt;br5&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a50&gt;GetOriginX&lt;/a50&gt;&lt;br51&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041126Z" creationid="oSilas" creationdate="20151013T041126Z">
+        <seg>原点X&lt;a50&gt;GetOriginX&lt;/a50&gt;&lt;br51&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a52&gt;GetOriginY&lt;/a52&gt;&lt;br53&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041139Z" creationid="oSilas" creationdate="20151013T041139Z">
+        <seg>原点Y&lt;a52&gt;GetOriginY&lt;/a52&gt;&lt;br53&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a54&gt;GrabDrawingImage&lt;/a54&gt;&lt;br55&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041157Z" creationid="oSilas" creationdate="20151013T041157Z">
+        <seg>抓取图形图像&lt;a54&gt;GrabDrawingImage&lt;/a54&gt;&lt;br55&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a56&gt;GradientColor&lt;/a56&gt;&lt;br57&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041230Z" creationid="oSilas" creationdate="20151013T041230Z">
+        <seg>渐变颜色&lt;a56&gt;GradientColor&lt;/a56&gt;&lt;br57&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a6&gt;Blue&lt;/a6&gt;&lt;br7&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040652Z" creationid="oSilas" creationdate="20151013T040652Z">
+        <seg>取得蓝色分量值&lt;a6&gt;Blue&lt;/a6&gt;&lt;br7&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a86&gt;SetOrigin&lt;/a86&gt;&lt;br87&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041345Z" creationid="oSilas" creationdate="20151013T041345Z">
+        <seg>设置原点&lt;a86&gt;SetOrigin&lt;/a86&gt;&lt;br87&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a88&gt;StartDrawing&lt;/a88&gt;&lt;br89&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041257Z" creationid="oSilas" creationdate="20151013T041257Z">
+        <seg>开始绘图&lt;a88&gt;StartDrawing&lt;/a88&gt;&lt;br89&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a8&gt;Box&lt;/a8&gt;&lt;br9&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T040658Z" creationid="oSilas" creationdate="20151013T040658Z">
+        <seg>绘制矩形&lt;a8&gt;Box&lt;/a8&gt;&lt;br9&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a90&gt;StopDrawing&lt;/a90&gt;&lt;br91&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041340Z" creationid="oSilas" creationdate="20151013T041340Z">
+        <seg>停止绘图&lt;a90&gt;StopDrawing&lt;/a90&gt;&lt;br91&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a92&gt;TextHeight&lt;/a92&gt;&lt;br93&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041249Z" creationid="oSilas" creationdate="20151013T041249Z">
+        <seg>文本高度&lt;a92&gt;TextHeight&lt;/a92&gt;&lt;br93&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a94&gt;TextWidth&lt;/a94&gt;&lt;br95&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041242Z" creationid="oSilas" creationdate="20151013T041242Z">
+        <seg>文本宽度&lt;a94&gt;TextWidth&lt;/a94&gt;&lt;br95&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a96&gt;UnclipOutput&lt;/a96&gt;&lt;br97&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041235Z" creationid="oSilas" creationdate="20151013T041235Z">
+        <seg>取消绘图区限制&lt;a96&gt;UnclipOutput&lt;/a96&gt;&lt;br97&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -854,6 +1118,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Set the default background color for graphic functions and text display.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041451Z" creationid="oSilas" creationdate="20151013T041451Z">
+        <seg>设置图形功能和文本显示的默认背景色。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sets the drawing gradient to have a box shape.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T040649Z" creationid="oSilas" creationdate="20141122T040547Z">
@@ -1235,6 +1507,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141122T040622Z" creationid="oSilas" creationdate="20141122T040622Z">
         <seg>渐变框位置。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The new color to be used as the background color.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T041535Z" creationid="oSilas" creationdate="20151013T041535Z">
+        <seg>被用作背景色的颜色。</seg>
       </tuv>
     </tu>
     <tu>
