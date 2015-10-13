@@ -566,6 +566,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b2&gt;Run only one Instance&lt;/b2&gt; &lt;br3&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T051040Z" creationid="oSilas" creationdate="20151013T051040Z">
+        <seg>&lt;b2&gt;只允许一个实例&lt;/b2&gt; &lt;br3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b4&gt;&lt;f5&gt;If&lt;/f5&gt;&lt;/b4&gt; &lt;f6&gt;OpenConsole&lt;/f6&gt;()
 &lt;f7&gt;      PrintN&lt;/f7&gt;("This is console #"+&lt;f8&gt;Str&lt;/f8&gt;(i))
 &lt;f9&gt;      PrintN&lt;/f9&gt;("Press return to close console")
@@ -578,6 +586,14 @@
 &lt;f9&gt;      PrintN&lt;/f9&gt;("按回车键关闭控制台")
 &lt;f10&gt;      Input&lt;/f10&gt;()
 &lt;f11&gt;      CloseConsole&lt;/f11&gt;()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b6&gt;Disable Splash screen&lt;/b6&gt; &lt;br7&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T051137Z" creationid="oSilas" creationdate="20151013T051137Z">
+        <seg>&lt;b6&gt;禁止欢迎界面&lt;/b6&gt; &lt;br7&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -806,6 +822,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Customizing the IDE</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T050955Z" creationid="oSilas" creationdate="20151013T050955Z">
+        <seg>自定义 IDE</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Define a bounding box that restricts all drawing to the current drawing output.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20141128T033256Z" creationid="oSilas" creationdate="20141128T033140Z">
@@ -874,6 +898,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20150312T043043Z" creationid="oSilas" creationdate="20150312T043043Z">
         <seg>例如如何绘图缓冲区可用于创建一个很好的视觉效果的情况下，看看这里：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>General</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T051017Z" creationid="oSilas" creationdate="20151013T051017Z">
+        <seg>常规</seg>
       </tuv>
     </tu>
     <tu>
