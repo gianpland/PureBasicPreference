@@ -910,6 +910,30 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>General - Language</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T052041Z" creationid="oSilas" creationdate="20151013T052041Z">
+        <seg>常规 - 语言</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>General - Shortcuts</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T052054Z" creationid="oSilas" creationdate="20151013T052054Z">
+        <seg>常规 - 快捷方式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>General - Themes</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T052104Z" creationid="oSilas" creationdate="20151013T052104Z">
+        <seg>常规 - 主题</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If these parameters are not specified then the image will be drawn in its original size.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="oSilas" changedate="20151013T050427Z" creationid="oSilas" creationdate="20151013T050427Z">
